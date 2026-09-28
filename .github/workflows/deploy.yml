@@ -1,0 +1,83 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'index.html'
+      - '404.html'
+      - 'topics/**'
+      - 'css/**'
+      - 'js/**'
+      - 'robots.txt'
+      - 'sitemap.xml'
+      - 'og-image.png'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  SITE_URL: https://4bzdog.github.io/HSC_EnterpriseComputing/
+
+jobs:
+  deploy:
+    name: Deploy to GitHub Pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Validate HTML structure
+        run: |
+          echo "Validating HTML files..."
+          for file in index.html 404.html topics/*.html; do
+            if head -n 1 "$file" | grep -qi "<!DOCTYPE html>"; then
+              echo "  ok  $file"
+            else
+              echo "  FAIL  $file must open with <!DOCTYPE html>"
+              exit 1
+            fi
+          done
+
+      # Publish only the public site files. reference/ (working notes and screenshots),
+      # resources/ (NESA source text, the course-specification PDF and its page images),
+      # scripts/ and the build tooling stay in the repository and are never uploaded.
+      - name: Stage public files
+        run: |
+          rm -rf _site
+          mkdir -p _site
+          cp index.html 404.html robots.txt sitemap.xml og-image.png _site/
+          cp -r topics css js _site/
+          echo "Staged files:"
+          find _site -type f | sort | sed 's/^/  /'
+          for banned in reference resources scripts .github; do
+            if [ -e "_site/$banned" ]; then echo "FAIL: _site/$banned must not be published"; exit 1; fi
+          done
+          if find _site -name '*.pdf' -o -name 'spec-pages' | grep -q .; then
+            echo "FAIL: PDFs and NESA page images must not be published"; exit 1
+          fi
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
+          retention-days: 5
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

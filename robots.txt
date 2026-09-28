@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://4bzdog.github.io/HSC_EnterpriseComputing/sitemap.xml

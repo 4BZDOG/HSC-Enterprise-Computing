@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Visualisation | HSC Enterprise Computing</title>
+  <!-- ── SEO ── -->
+  <link rel="canonical" href="https://4bzdog.github.io/HSC_EnterpriseComputing/topics/data-visualisation.html" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Data Visualisation | HSC Enterprise Computing" />
+  <meta property="og:description" content="HSC Enterprise Computing notes on Data Visualisation (Telling stories with data). NESA NSW Year 12 HSC syllabus, dot point by dot point." />
+  <meta property="og:url" content="https://4bzdog.github.io/HSC_EnterpriseComputing/topics/data-visualisation.html" />
+  <meta property="og:image" content="https://4bzdog.github.io/HSC_EnterpriseComputing/og-image.png" />
+  <meta property="og:image:alt" content="HSC Enterprise Computing Notes: NESA NSW" />
+  <meta property="og:site_name" content="HSC Enterprise Computing Notes" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Data Visualisation | HSC Enterprise Computing" />
+  <meta name="twitter:description" content="HSC Enterprise Computing notes on Data Visualisation (Telling stories with data). NESA NSW Year 12 HSC syllabus, dot point by dot point." />
+  <meta name="twitter:image" content="https://4bzdog.github.io/HSC_EnterpriseComputing/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://4bzdog.github.io/HSC_EnterpriseComputing/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Year 12",
+        "item": "https://4bzdog.github.io/HSC_EnterpriseComputing/#year12"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Data Visualisation",
+        "item": "https://4bzdog.github.io/HSC_EnterpriseComputing/topics/data-visualisation.html"
+      }
+    ]
+  }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230A7C86'/><rect x='20' y='52' width='16' height='30' rx='3' fill='%23fff'/><rect x='42' y='32' width='16' height='50' rx='3' fill='%23E8A317'/><rect x='64' y='18' width='16' height='64' rx='3' fill='%23fff'/></svg>" />
+  <meta name="theme-color" content="#0B1B2E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- CONTENT: rewrite the meta description (and the two social descriptions above) in 120 to 160 characters. -->
+  <meta name="description" content="HSC Enterprise Computing notes on Data Visualisation (Telling stories with data). NESA NSW Year 12 HSC syllabus, dot point by dot point." />
+  <!-- Theme init: prevents flash of wrong theme. The ec- prefix keeps this site's storage apart from sister sites on the same origin. -->
+  <script>(function(){try{var t=localStorage.getItem('ec-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
+  <link rel="stylesheet" href="../css/styles.css?v=eaa2e127" />
+  <link rel="stylesheet" href="../css/theme.css?v=ea1ce127" />
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-brand">
+        <div class="nav-logo" aria-hidden="true"><svg class="brand-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="12" width="4.5" height="8" rx="1"/><rect x="9.75" y="7" width="4.5" height="13" rx="1"/><rect x="16" y="3.5" width="4.5" height="16.5" rx="1"/></svg></div>
+        <div>
+          <div class="nav-title">EntComp Notes</div>
+          <div class="nav-subtitle">NESA NSW HSC</div>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="../index.html" class="nav-home"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5.5h4V20"/></svg></span>Home</a></li>
+        <li class="nav-dropdown nav-dropdown-y11">
+          <button type="button" class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+            Year 11
+            <span class="badge badge-11">Prelim</span>
+            <svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="currentColor"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="interactive-media.html" role="menuitem" class="nav-item nav-item-y11"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8.5h18"/><path d="M10.5 11.5l6 2.4-2.6 1.2-1.2 2.7z"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Interactive Media and the User Experience</span><span class="nav-item-desc">UX, UI and digital media</span></span></a>
+            <a href="networking-systems.html" role="menuitem" class="nav-item nav-item-y11"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="6" r="2.5"/><circle cx="5.5" cy="18" r="2.5"/><circle cx="18.5" cy="18" r="2.5"/><path d="M10.9 8.2 6.6 15.8M13.1 8.2l4.3 7.6M8 18h8"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Networking Systems and Social Computing</span><span class="nav-item-desc">Networks, cloud and IoT</span></span></a>
+            <a href="cybersecurity.html" role="menuitem" class="nav-item nav-item-y11"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z"/><circle cx="12" cy="10.5" r="2"/><path d="M12 12.5V16"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Principles of Cybersecurity</span><span class="nav-item-desc">Privacy, threats and risk</span></span></a>
+          </div>
+        </li>
+        <li class="nav-dropdown nav-dropdown-y12">
+          <button type="button" class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+            Year 12
+            <span class="badge badge-12">HSC</span>
+            <svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="currentColor"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="data-science.html" role="menuitem" class="nav-item nav-item-y12"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Data Science</span><span class="nav-item-desc">Collect, analyse and store data</span></span></a>
+            <a href="data-visualisation.html" role="menuitem" class="nav-item nav-item-y12"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 3.5V20.5h16.5"/><path d="M7 18v-4.5M11.5 18v-7M16 18v-9.5"/><path d="M5.5 10.5 9.5 7l3.5 1.5 6-5"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Data Visualisation</span><span class="nav-item-desc">Telling stories with data</span></span></a>
+            <a href="intelligent-systems.html" role="menuitem" class="nav-item nav-item-y12"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="6" y="6" width="12" height="12" rx="2.5"/><circle cx="9.5" cy="9.5" r="1.1"/><circle cx="14.5" cy="9.5" r="1.1"/><circle cx="12" cy="14.5" r="1.1"/><path d="M10.4 10.3l1.1 3.1M13.6 10.3l-1.1 3.1M10.6 9.5h2.8"/><path d="M9.5 6V3.5M14.5 6V3.5M9.5 18v2.5M14.5 18v2.5M6 9.5H3.5M6 14.5H3.5M18 9.5h2.5M18 14.5h2.5"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Intelligent Systems</span><span class="nav-item-desc">Expert systems, AI and IoT</span></span></a>
+            <a href="enterprise-project.html" role="menuitem" class="nav-item nav-item-y12"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5V3h6v1.5"/><path d="M8.5 9H12M10.5 12.5H15.5"/><path d="M8.5 16l1.4 1.4 2.4-2.8"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Enterprise Project</span><span class="nav-item-desc">Define, plan, build and evaluate</span></span></a>
+          </div>
+        </li>
+        <li class="nav-dropdown">
+          <button type="button" class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+            Resources
+            <span class="badge badge-all">Guides</span>
+            <svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="currentColor"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="toolkit.html" role="menuitem" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 17.5 17.5 3 21 6.5 6.5 21z"/><path d="M6.6 13.9l1.7 1.7M9.4 11.1l1.2 1.2M12.1 8.4l1.7 1.7M14.9 5.6l1.2 1.2"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Course Toolkit</span><span class="nav-item-desc">Diagrams, spreadsheets, SQL and design tools</span></span></a>
+            <a href="project-guide.html" role="menuitem" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M6 21V3.5"/><path d="M6 5h11.5L15 8.5 17.5 12H6"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Project Management Guide</span><span class="nav-item-desc">Approaches, planning and implementation</span></span></a>
+            <a href="example-project.html" role="menuitem" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/><circle cx="12" cy="17" r="1.2"/><path d="M4 20.5h16"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Example Enterprise Project</span><span class="nav-item-desc">A worked project with a live dashboard</span></span></a>
+            <a href="glossary.html" role="menuitem" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 5.5c3-1.3 6-1.3 9 .5 3-1.8 6-1.8 9-.5V19c-3-1.3-6-1.3-9 .5-3-1.8-6-1.8-9-.5z"/><path d="M12 6v13.5"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Glossary</span><span class="nav-item-desc">Every syllabus keyword</span></span></a>
+            <a href="resources.html" role="menuitem" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M6.5 3h11v18l-5.5-3.8L6.5 21z"/><path d="M9.5 9.5l2 2 3.5-3.5"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Certified Resources</span><span class="nav-item-desc">Official NESA documents</span></span></a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <button type="button" class="btn-icon" id="theme-toggle" aria-label="Toggle theme"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button type="button" class="btn-icon hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Mobile Menu ── -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigation menu">
+    <a href="../index.html" class="nav-item mobile-home"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5.5h4V20"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Home</span><span class="nav-item-desc">All topics and study tips</span></span></a>
+    <div class="mobile-menu-section mobile-menu-y11">
+      <div class="mobile-menu-label">Year 11 <span class="badge badge-11">Prelim</span></div>
+      <a href="interactive-media.html" class="nav-item nav-item-y11"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8.5h18"/><path d="M10.5 11.5l6 2.4-2.6 1.2-1.2 2.7z"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Interactive Media and the User Experience</span><span class="nav-item-desc">UX, UI and digital media</span></span></a>
+      <a href="networking-systems.html" class="nav-item nav-item-y11"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="6" r="2.5"/><circle cx="5.5" cy="18" r="2.5"/><circle cx="18.5" cy="18" r="2.5"/><path d="M10.9 8.2 6.6 15.8M13.1 8.2l4.3 7.6M8 18h8"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Networking Systems and Social Computing</span><span class="nav-item-desc">Networks, cloud and IoT</span></span></a>
+      <a href="cybersecurity.html" class="nav-item nav-item-y11"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z"/><circle cx="12" cy="10.5" r="2"/><path d="M12 12.5V16"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Principles of Cybersecurity</span><span class="nav-item-desc">Privacy, threats and risk</span></span></a>
+    </div>
+    <div class="mobile-menu-section mobile-menu-y12">
+      <div class="mobile-menu-label">Year 12 <span class="badge badge-12">HSC</span></div>
+      <a href="data-science.html" class="nav-item nav-item-y12"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Data Science</span><span class="nav-item-desc">Collect, analyse and store data</span></span></a>
+      <a href="data-visualisation.html" class="nav-item nav-item-y12"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 3.5V20.5h16.5"/><path d="M7 18v-4.5M11.5 18v-7M16 18v-9.5"/><path d="M5.5 10.5 9.5 7l3.5 1.5 6-5"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Data Visualisation</span><span class="nav-item-desc">Telling stories with data</span></span></a>
+      <a href="intelligent-systems.html" class="nav-item nav-item-y12"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="6" y="6" width="12" height="12" rx="2.5"/><circle cx="9.5" cy="9.5" r="1.1"/><circle cx="14.5" cy="9.5" r="1.1"/><circle cx="12" cy="14.5" r="1.1"/><path d="M10.4 10.3l1.1 3.1M13.6 10.3l-1.1 3.1M10.6 9.5h2.8"/><path d="M9.5 6V3.5M14.5 6V3.5M9.5 18v2.5M14.5 18v2.5M6 9.5H3.5M6 14.5H3.5M18 9.5h2.5M18 14.5h2.5"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Intelligent Systems</span><span class="nav-item-desc">Expert systems, AI and IoT</span></span></a>
+      <a href="enterprise-project.html" class="nav-item nav-item-y12"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5V3h6v1.5"/><path d="M8.5 9H12M10.5 12.5H15.5"/><path d="M8.5 16l1.4 1.4 2.4-2.8"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Enterprise Project</span><span class="nav-item-desc">Define, plan, build and evaluate</span></span></a>
+    </div>
+    <div class="mobile-menu-section mobile-menu-core">
+      <div class="mobile-menu-label">Resources <span class="badge badge-all">Guides</span></div>
+      <a href="toolkit.html" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 17.5 17.5 3 21 6.5 6.5 21z"/><path d="M6.6 13.9l1.7 1.7M9.4 11.1l1.2 1.2M12.1 8.4l1.7 1.7M14.9 5.6l1.2 1.2"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Course Toolkit</span><span class="nav-item-desc">Diagrams, spreadsheets, SQL and design tools</span></span></a>
+      <a href="project-guide.html" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M6 21V3.5"/><path d="M6 5h11.5L15 8.5 17.5 12H6"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Project Management Guide</span><span class="nav-item-desc">Approaches, planning and implementation</span></span></a>
+      <a href="example-project.html" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/><circle cx="12" cy="17" r="1.2"/><path d="M4 20.5h16"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Example Enterprise Project</span><span class="nav-item-desc">A worked project with a live dashboard</span></span></a>
+      <a href="glossary.html" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 5.5c3-1.3 6-1.3 9 .5 3-1.8 6-1.8 9-.5V19c-3-1.3-6-1.3-9 .5-3-1.8-6-1.8-9-.5z"/><path d="M12 6v13.5"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Glossary</span><span class="nav-item-desc">Every syllabus keyword</span></span></a>
+      <a href="resources.html" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M6.5 3h11v18l-5.5-3.8L6.5 21z"/><path d="M9.5 9.5l2 2 3.5-3.5"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Certified Resources</span><span class="nav-item-desc">Official NESA documents</span></span></a>
+    </div>
+    <div class="mobile-menu-section mobile-menu-theme">
+      <button id="theme-toggle-mobile" class="btn btn-mobile-theme" type="button">Toggle theme</button>
+    </div>
+  </div>
+
+  <header class="topic-header">
+    <div class="topic-header-inner">
+      <nav class="topic-breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a> <span>›</span>
+        <a href="../index.html#year12">Year 12</a> <span>›</span>
+        <span>Data Visualisation</span>
+      </nav>
+      <div class="topic-title-row"><span class="topic-hero-icon ti-y12" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 3.5V20.5h16.5"/><path d="M7 18v-4.5M11.5 18v-7M16 18v-9.5"/><path d="M5.5 10.5 9.5 7l3.5 1.5 6-5"/></svg></span><h1>Data Visualisation</h1></div>
+      <p class="text-muted-dark max-w-600 mt-2 fs-sm lh-base">
+        <!-- CONTENT: one or two sentences introducing the topic, with the key ideas in <strong>. -->
+        Notes for the NESA focus area <strong>Data visualisation</strong>, following the syllabus in order: Using data to tell a story, Interpreting data visualisations, Designing for user experience and Creating data visualisations.
+      </p>
+      <div class="topic-header-meta">
+        <span class="meta-pill year12">Year 12 — HSC</span>
+        <span class="meta-pill">30 hours</span>
+        <span class="meta-pill">Outcomes: EC-12-01 to 08, 10, 11</span>
+      </div>
+      <div class="callout exam-tip curriculum-banner yr12">
+        <strong>Curriculum aligned</strong>
+        <span class="kpi-num">18</span>
+        <span class="kpi-unit">NESA dot points, in order</span>
+        <span class="kpi-text">This page follows every dot point of the focus area against outcomes <strong>EC-12-01 to 08, 10, 11</strong>.</span>
+        <a href="https://github.com/4BZDOG/HSC_EnterpriseComputing/blob/main/resources/Syllabus-Mapping.md" target="_blank" rel="noopener">View full mapping →</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-layout">
+    <aside class="sidebar">
+      <div class="toc-title"><span class="toc-ico ti-y12" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 3.5V20.5h16.5"/><path d="M7 18v-4.5M11.5 18v-7M16 18v-9.5"/><path d="M5.5 10.5 9.5 7l3.5 1.5 6-5"/></svg></span>Contents</div>
+      <ul class="toc-list">
+        <li class="sidebar-label">Part 1 — Using data to tell a story</li>
+        <li><a href="#dv-purposes"><span class="toc-num">1</span>Purposes of Data Visualisation</a></li>
+        <li><a href="#dv-software-features"><span class="toc-num">2</span>Software Features for Understanding Data</a></li>
+        <li><a href="#dv-patterns"><span class="toc-num">3</span>Identifying Patterns and Trends</a></li>
+        <li><a href="#analytics-evolution"><span class="toc-num">4</span>Evolution of Hardware and Software</a></li>
+        <li><a href="#olap"><span class="toc-num">5</span>Online Analytical Processing (OLAP)</a></li>
+        <li><a href="#data-integrity"><span class="toc-num">6</span>Data Integrity</a></li>
+        <li><a href="#dv-warehousing"><span class="toc-num">7</span>Data Warehousing and Visualisation</a></li>
+        <li><a href="#dv-big-data"><span class="toc-num">8</span>Big Data and Visualisation Design</a></li>
+        <li><a href="#dv-bias"><span class="toc-num">9</span>Bias in Visualisations</a></li>
+        <li class="sidebar-label">Part 2 — Interpreting data visualisations</li>
+        <li><a href="#dv-tools"><span class="toc-num">10</span>Evaluating Visualisation Tools</a></li>
+        <li><a href="#interrogate-data"><span class="toc-num">11</span>Interrogating a Visualisation</a></li>
+        <li class="sidebar-label">Part 3 — Designing for user experience</li>
+        <li><a href="#graphic-design-tools"><span class="toc-num">12</span>Graphic Design Tools</a></li>
+        <li><a href="#dv-ux"><span class="toc-num">13</span>User Experience and Visualisation</a></li>
+        <li><a href="#ux-criteria"><span class="toc-num">14</span>Criteria for Evaluating User Experience</a></li>
+        <li><a href="#emerging-ui-ux"><span class="toc-num">15</span>Emerging Technologies in UI and UX</a></li>
+        <li class="sidebar-label">Part 4 — Creating data visualisations</li>
+        <li><a href="#source-data"><span class="toc-num">16</span>Sourcing and Organising Data</a></li>
+        <li><a href="#develop-visualisation"><span class="toc-num">17</span>Designing and Developing a Visualisation</a></li>
+        <li><a href="#dv-data-security"><span class="toc-num">18</span>Maintaining Data Security</a></li>
+      </ul>
+    </aside>
+
+    <main class="page-content">
+      <div class="content-body">
+
+        <aside class="yr12 topic-breakout" aria-label="Topic introduction">
+          <span class="breakout-label">Why this matters now</span>
+          <!-- CONTENT: topic introduction. Two short paragraphs linking the topic to students' lives, then a closing question in .breakout-question with a .bq-lead label. -->
+          <p>This page covers the Data visualisation focus area of the NESA Enterprise Computing syllabus.</p>
+        </aside>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  USING DATA TO TELL A STORY                            -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Syllabus Part 1</span>
+          <span class="part-name">Using data to tell a story</span>
+        </div>
+
+        <aside class="yr12 topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
+          <p>This part covers 9 NESA dot points: using data to tell a story.</p>
+        </aside>
+
+        <section id="dv-purposes">
+          <h2 class="syllabus-phase">Purposes of Data Visualisation</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-12-02, EC-12-11)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Explain</strong> the purposes of data visualisation</em></p>
+          <ul class="syllabus-including" aria-label="Including"><li>simplifying understanding</li><li>telling a story</li><li>highlighting significant results</li></ul>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (explain). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="dv-software-features">
+          <h2 class="syllabus-phase">Software Features for Understanding Data</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-12-05, EC-12-08)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Describe</strong> how features of software contribute to a better understanding of datasets through data visualisation, including spreadsheets, creative design applications and combining applications to track trends and forecast</em></p>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (describe). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="dv-patterns">
+          <h2 class="syllabus-phase">Identifying Patterns and Trends</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-12-04, EC-12-05)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Identify</strong> patterns in data by interpreting and comparing datasets for an enterprise, social or ethical issue to highlight trends and for predictive data analytics</em></p>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (identify). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="analytics-evolution">
+          <h2 class="syllabus-phase">Evolution of Hardware and Software</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-12-06)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Investigate</strong> the impact of the evolution of hardware and software on the field of data analytics</em></p>
+          <ul class="syllabus-including" aria-label="Including"><li>processing power</li><li>storage/memory</li><li>communication media</li></ul>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="olap">
+          <h2 class="syllabus-phase">Online Analytical Processing (OLAP)</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-12-04, EC-12-05)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Describe</strong> online analytical processing (OLAP)</em></p>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (describe). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="data-integrity">
+          <h2 class="syllabus-phase">Data Integrity</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-12-03, EC-12-10)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Assess</strong> data integrity in the development of a data visualisation</em></p>
+          <ul class="syllabus-including" aria-label="Including"><li>ownership</li><li>source</li><li>validation</li><li>risk</li></ul>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (assess). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="dv-warehousing">
+          <h2 class="syllabus-phase">Data Warehousing and Visualisation</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-12-02, EC-12-04)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Explain</strong> the impact of enterprise data warehousing on data visualisation</em></p>
+          <ul class="syllabus-including" aria-label="Including"><li>analysis and use of historical data trends and patterns</li><li>correlation with current data</li><li>data refinement/optimisation</li></ul>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (explain). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="dv-big-data">
+          <h2 class="syllabus-phase">Big Data and Visualisation Design</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-12-04, EC-12-06)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Explain</strong> how big data affects the design and development of data visualisation</em></p>
+          <ul class="syllabus-including" aria-label="Including"><li>scope of visible information</li><li>types and depth of insight provided by the data</li></ul>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (explain). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="dv-bias">
+          <h2 class="syllabus-phase">Bias in Visualisations</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-12-03, EC-12-07)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Evaluate</strong> bias in data collection, storage and analysis when developing visualisations</em></p>
+          <ul class="syllabus-including" aria-label="Including"><li>accuracy</li><li>audience</li><li>data source</li><li>unconscious bias</li></ul>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (evaluate). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <div class="quiz" data-quiz="dv-1"></div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  INTERPRETING DATA VISUALISATIONS                      -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Syllabus Part 2</span>
+          <span class="part-name">Interpreting data visualisations</span>
+        </div>
+
+        <aside class="yr12 topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
+          <p>This part covers 2 NESA dot points: interpreting data visualisations.</p>
+        </aside>
+
+        <section id="dv-tools">
+          <h2 class="syllabus-phase">Evaluating Visualisation Tools</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-12-08, EC-12-10)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Evaluate</strong> the effectiveness of software tools used to develop data visualisations</em></p>
+          <ul class="syllabus-including" aria-label="Including"><li>spreadsheets used to develop dashboards</li><li>presentation software used to present data analysis</li><li>business analytics services, including ‘as a service’ products</li><li>custom software solutions</li></ul>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (evaluate). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="interrogate-data">
+          <h2 class="syllabus-phase">Interrogating a Visualisation</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-12-05, EC-12-10)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Interrogate</strong> data from a data visualisation</em></p>
+          <ul class="syllabus-including" aria-label="Including"><li>interpreting what you see</li><li>aggregation</li><li>filtering</li><li>the effect of outliers</li><li>reasoning</li></ul>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (interrogate). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <div class="quiz" data-quiz="dv-2"></div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  DESIGNING FOR USER EXPERIENCE                         -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Syllabus Part 3</span>
+          <span class="part-name">Designing for user experience</span>
+        </div>
+
+        <aside class="yr12 topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
+          <p>This part covers 4 NESA dot points: designing for user experience.</p>
+        </aside>
+
+        <section id="graphic-design-tools">
+          <h2 class="syllabus-phase">Graphic Design Tools</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-12-08, EC-12-11)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Use</strong> graphic design tools to assist in the graphic development of a data visualisation</em></p>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (use). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="dv-ux">
+          <h2 class="syllabus-phase">User Experience and Visualisation</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-12-10, EC-12-11)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Explain</strong> how user experience (UX) influences the development of effective data visualisations</em></p>
+          <ul class="syllabus-including" aria-label="Including"><li>relevance to the audience</li><li>audience interpretation</li><li>customisation</li><li>live analysis</li></ul>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (explain). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="ux-criteria">
+          <h2 class="syllabus-phase">Criteria for Evaluating User Experience</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-12-10)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Develop and implement</strong> criteria for evaluating the effectiveness of user experiences</em></p>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (develop). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="emerging-ui-ux">
+          <h2 class="syllabus-phase">Emerging Technologies in UI and UX</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-12-06)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Investigate</strong> the impact of emerging hardware and software technologies on user interface (UI) and UX design and development</em></p>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <div class="quiz" data-quiz="dv-3"></div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  CREATING DATA VISUALISATIONS                          -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Syllabus Part 4</span>
+          <span class="part-name">Creating data visualisations</span>
+        </div>
+
+        <aside class="yr12 topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
+          <p>This part covers 3 NESA dot points: creating data visualisations.</p>
+        </aside>
+
+        <section id="source-data">
+          <h2 class="syllabus-phase">Sourcing and Organising Data</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-12-03, EC-12-04)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Research, source, organise and store</strong> data appropriate for a data visualisation</em></p>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (research,). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="develop-visualisation">
+          <h2 class="syllabus-phase">Designing and Developing a Visualisation</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-12-05, EC-12-08, EC-12-11)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Design and develop</strong> a data visualisation for a specific scenario to represent trends, patterns and relationships, and illustrate predictive analysis incorporating big data</em></p>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (design). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="dv-data-security">
+          <h2 class="syllabus-phase">Maintaining Data Security</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-12-03)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Investigate and implement</strong> methods to maintain data security</em></p>
+          <ul class="syllabus-including" aria-label="Including"><li>cybersecurity</li><li>data backup</li></ul>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <div class="quiz" data-quiz="dv-4"></div>
+      </div>
+
+        <nav class="topic-pager" aria-label="Previous and next topic">
+          <a class="pager-card pager-prev nav-item-y12" href="data-science.html" rel="prev"><span class="pager-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span><span class="pager-text"><span class="pager-dir">Previous topic</span><span class="pager-title">Data Science</span><span class="pager-desc">Collect, analyse and store data</span></span></a>
+          <a class="pager-card pager-next nav-item-y12" href="intelligent-systems.html" rel="next"><span class="pager-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="6" y="6" width="12" height="12" rx="2.5"/><circle cx="9.5" cy="9.5" r="1.1"/><circle cx="14.5" cy="9.5" r="1.1"/><circle cx="12" cy="14.5" r="1.1"/><path d="M10.4 10.3l1.1 3.1M13.6 10.3l-1.1 3.1M10.6 9.5h2.8"/><path d="M9.5 6V3.5M14.5 6V3.5M9.5 18v2.5M14.5 18v2.5M6 9.5H3.5M6 14.5H3.5M18 9.5h2.5M18 14.5h2.5"/></svg></span><span class="pager-text"><span class="pager-dir">Next topic</span><span class="pager-title">Intelligent Systems</span><span class="pager-desc">Expert systems, AI and IoT</span></span></a>
+        </nav>
+    </main>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <a href="../index.html" class="footer-brand">
+          <div class="footer-logo" aria-hidden="true"><svg class="brand-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="12" width="4.5" height="8" rx="1"/><rect x="9.75" y="7" width="4.5" height="13" rx="1"/><rect x="16" y="3.5" width="4.5" height="16.5" rx="1"/></svg></div>
+          <span class="footer-name">EntComp Notes</span>
+        </a>
+        <p class="footer-desc">Notes for every dot point of the NSW HSC Enterprise Computing syllabus, from Year 11 foundations to the Year 12 exam.</p>
+      </div>
+      <div class="footer-col footer-col-y11">
+        <h4>Year 11</h4>
+        <a href="interactive-media.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8.5h18"/><path d="M10.5 11.5l6 2.4-2.6 1.2-1.2 2.7z"/></svg></span>Interactive Media and the User Experience</a>
+        <a href="networking-systems.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="6" r="2.5"/><circle cx="5.5" cy="18" r="2.5"/><circle cx="18.5" cy="18" r="2.5"/><path d="M10.9 8.2 6.6 15.8M13.1 8.2l4.3 7.6M8 18h8"/></svg></span>Networking Systems and Social Computing</a>
+        <a href="cybersecurity.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z"/><circle cx="12" cy="10.5" r="2"/><path d="M12 12.5V16"/></svg></span>Principles of Cybersecurity</a>
+      </div>
+      <div class="footer-col footer-col-y12">
+        <h4>Year 12</h4>
+        <a href="data-science.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span>Data Science</a>
+        <a href="data-visualisation.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 3.5V20.5h16.5"/><path d="M7 18v-4.5M11.5 18v-7M16 18v-9.5"/><path d="M5.5 10.5 9.5 7l3.5 1.5 6-5"/></svg></span>Data Visualisation</a>
+        <a href="intelligent-systems.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="6" y="6" width="12" height="12" rx="2.5"/><circle cx="9.5" cy="9.5" r="1.1"/><circle cx="14.5" cy="9.5" r="1.1"/><circle cx="12" cy="14.5" r="1.1"/><path d="M10.4 10.3l1.1 3.1M13.6 10.3l-1.1 3.1M10.6 9.5h2.8"/><path d="M9.5 6V3.5M14.5 6V3.5M9.5 18v2.5M14.5 18v2.5M6 9.5H3.5M6 14.5H3.5M18 9.5h2.5M18 14.5h2.5"/></svg></span>Intelligent Systems</a>
+        <a href="enterprise-project.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5V3h6v1.5"/><path d="M8.5 9H12M10.5 12.5H15.5"/><path d="M8.5 16l1.4 1.4 2.4-2.8"/></svg></span>Enterprise Project</a>
+      </div>
+      <div class="footer-col footer-col-core">
+        <h4>Resources</h4>
+        <a href="toolkit.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 17.5 17.5 3 21 6.5 6.5 21z"/><path d="M6.6 13.9l1.7 1.7M9.4 11.1l1.2 1.2M12.1 8.4l1.7 1.7M14.9 5.6l1.2 1.2"/></svg></span>Course Toolkit</a>
+        <a href="project-guide.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M6 21V3.5"/><path d="M6 5h11.5L15 8.5 17.5 12H6"/></svg></span>Project Management Guide</a>
+        <a href="example-project.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/><circle cx="12" cy="17" r="1.2"/><path d="M4 20.5h16"/></svg></span>Example Enterprise Project</a>
+        <a href="glossary.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 5.5c3-1.3 6-1.3 9 .5 3-1.8 6-1.8 9-.5V19c-3-1.3-6-1.3-9 .5-3-1.8-6-1.8-9-.5z"/><path d="M12 6v13.5"/></svg></span>Glossary</a>
+        <a href="resources.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M6.5 3h11v18l-5.5-3.8L6.5 21z"/><path d="M9.5 9.5l2 2 3.5-3.5"/></svg></span>Certified Resources</a>
+        <a href="https://curriculum.nsw.edu.au/learning-areas/tas/enterprise-computing-11-12-2022" target="_blank" rel="noopener">NESA Syllabus ↗</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 HSC EntComp Notes · Data Visualisation</span>
+      <span>Aligned to the NESA syllabus · For educational purposes only</span>
+    </div>
+  </footer>
+
+  <script src="../js/glossary-data.js?v=8f2b4607"></script>
+  <script src="../js/quizzes/data-visualisation.js?v=acca7325"></script>
+  <script src="../js/quiz.js?v=3e6185a0" defer></script>
+  <script src="../js/nesa-diagram-data.js?v=33ff129d"></script>
+  <script src="../js/nesa-diagrams.js?v=6bab3032" defer></script>
+  <script src="../js/main.js?v=28275053"></script>
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- Diagram Lightbox Modal -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div class="lightbox-modal" id="diagram-lightbox" role="dialog" aria-labelledby="lightbox-title" aria-hidden="true">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-container">
+      <div class="lightbox-header">
+        <h2 id="lightbox-title" class="lightbox-title">Diagram View</h2>
+        <button type="button" class="lightbox-close" aria-label="Close diagram view">✕</button>
+      </div>
+      <div class="lightbox-canvas">
+        <div class="lightbox-content" id="lightbox-content"></div>
+      </div>
+      <div class="lightbox-controls">
+        <button type="button" class="lightbox-btn" id="zoom-out" aria-label="Zoom out">−</button>
+        <span class="lightbox-zoom-level" id="zoom-level">100%</span>
+        <button type="button" class="lightbox-btn" id="zoom-in" aria-label="Zoom in">+</button>
+        <button type="button" class="lightbox-btn" id="reset-view" aria-label="Reset view">⟲</button>
+      </div>
+      <div class="lightbox-info">
+        <p>Scroll to zoom • Drag to pan • <kbd>Esc</kbd> to close</p>
+      </div>
+    </div>
+  </div>
+  <script src="../js/progress.js?v=40b8096b" defer></script>
+</body>
+</html>

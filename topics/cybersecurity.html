@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Principles of Cybersecurity | HSC Enterprise Computing</title>
+  <!-- ── SEO ── -->
+  <link rel="canonical" href="https://4bzdog.github.io/HSC_EnterpriseComputing/topics/cybersecurity.html" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Principles of Cybersecurity | HSC Enterprise Computing" />
+  <meta property="og:description" content="HSC Enterprise Computing notes on Principles of Cybersecurity (Privacy, threats and risk). NESA NSW Year 11 Preliminary syllabus, dot point by dot point." />
+  <meta property="og:url" content="https://4bzdog.github.io/HSC_EnterpriseComputing/topics/cybersecurity.html" />
+  <meta property="og:image" content="https://4bzdog.github.io/HSC_EnterpriseComputing/og-image.png" />
+  <meta property="og:image:alt" content="HSC Enterprise Computing Notes: NESA NSW" />
+  <meta property="og:site_name" content="HSC Enterprise Computing Notes" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Principles of Cybersecurity | HSC Enterprise Computing" />
+  <meta name="twitter:description" content="HSC Enterprise Computing notes on Principles of Cybersecurity (Privacy, threats and risk). NESA NSW Year 11 Preliminary syllabus, dot point by dot point." />
+  <meta name="twitter:image" content="https://4bzdog.github.io/HSC_EnterpriseComputing/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://4bzdog.github.io/HSC_EnterpriseComputing/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Year 11",
+        "item": "https://4bzdog.github.io/HSC_EnterpriseComputing/#year11"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Principles of Cybersecurity",
+        "item": "https://4bzdog.github.io/HSC_EnterpriseComputing/topics/cybersecurity.html"
+      }
+    ]
+  }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230A7C86'/><rect x='20' y='52' width='16' height='30' rx='3' fill='%23fff'/><rect x='42' y='32' width='16' height='50' rx='3' fill='%23E8A317'/><rect x='64' y='18' width='16' height='64' rx='3' fill='%23fff'/></svg>" />
+  <meta name="theme-color" content="#0B1B2E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- CONTENT: rewrite the meta description (and the two social descriptions above) in 120 to 160 characters. -->
+  <meta name="description" content="HSC Enterprise Computing notes on Principles of Cybersecurity (Privacy, threats and risk). NESA NSW Year 11 Preliminary syllabus, dot point by dot point." />
+  <!-- Theme init: prevents flash of wrong theme. The ec- prefix keeps this site's storage apart from sister sites on the same origin. -->
+  <script>(function(){try{var t=localStorage.getItem('ec-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
+  <link rel="stylesheet" href="../css/styles.css?v=eaa2e127" />
+  <link rel="stylesheet" href="../css/theme.css?v=ea1ce127" />
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-brand">
+        <div class="nav-logo" aria-hidden="true"><svg class="brand-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="12" width="4.5" height="8" rx="1"/><rect x="9.75" y="7" width="4.5" height="13" rx="1"/><rect x="16" y="3.5" width="4.5" height="16.5" rx="1"/></svg></div>
+        <div>
+          <div class="nav-title">EntComp Notes</div>
+          <div class="nav-subtitle">NESA NSW HSC</div>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="../index.html" class="nav-home"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5.5h4V20"/></svg></span>Home</a></li>
+        <li class="nav-dropdown nav-dropdown-y11">
+          <button type="button" class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+            Year 11
+            <span class="badge badge-11">Prelim</span>
+            <svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="currentColor"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="interactive-media.html" role="menuitem" class="nav-item nav-item-y11"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8.5h18"/><path d="M10.5 11.5l6 2.4-2.6 1.2-1.2 2.7z"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Interactive Media and the User Experience</span><span class="nav-item-desc">UX, UI and digital media</span></span></a>
+            <a href="networking-systems.html" role="menuitem" class="nav-item nav-item-y11"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="6" r="2.5"/><circle cx="5.5" cy="18" r="2.5"/><circle cx="18.5" cy="18" r="2.5"/><path d="M10.9 8.2 6.6 15.8M13.1 8.2l4.3 7.6M8 18h8"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Networking Systems and Social Computing</span><span class="nav-item-desc">Networks, cloud and IoT</span></span></a>
+            <a href="cybersecurity.html" role="menuitem" class="nav-item nav-item-y11"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z"/><circle cx="12" cy="10.5" r="2"/><path d="M12 12.5V16"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Principles of Cybersecurity</span><span class="nav-item-desc">Privacy, threats and risk</span></span></a>
+          </div>
+        </li>
+        <li class="nav-dropdown nav-dropdown-y12">
+          <button type="button" class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+            Year 12
+            <span class="badge badge-12">HSC</span>
+            <svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="currentColor"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="data-science.html" role="menuitem" class="nav-item nav-item-y12"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Data Science</span><span class="nav-item-desc">Collect, analyse and store data</span></span></a>
+            <a href="data-visualisation.html" role="menuitem" class="nav-item nav-item-y12"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 3.5V20.5h16.5"/><path d="M7 18v-4.5M11.5 18v-7M16 18v-9.5"/><path d="M5.5 10.5 9.5 7l3.5 1.5 6-5"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Data Visualisation</span><span class="nav-item-desc">Telling stories with data</span></span></a>
+            <a href="intelligent-systems.html" role="menuitem" class="nav-item nav-item-y12"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="6" y="6" width="12" height="12" rx="2.5"/><circle cx="9.5" cy="9.5" r="1.1"/><circle cx="14.5" cy="9.5" r="1.1"/><circle cx="12" cy="14.5" r="1.1"/><path d="M10.4 10.3l1.1 3.1M13.6 10.3l-1.1 3.1M10.6 9.5h2.8"/><path d="M9.5 6V3.5M14.5 6V3.5M9.5 18v2.5M14.5 18v2.5M6 9.5H3.5M6 14.5H3.5M18 9.5h2.5M18 14.5h2.5"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Intelligent Systems</span><span class="nav-item-desc">Expert systems, AI and IoT</span></span></a>
+            <a href="enterprise-project.html" role="menuitem" class="nav-item nav-item-y12"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5V3h6v1.5"/><path d="M8.5 9H12M10.5 12.5H15.5"/><path d="M8.5 16l1.4 1.4 2.4-2.8"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Enterprise Project</span><span class="nav-item-desc">Define, plan, build and evaluate</span></span></a>
+          </div>
+        </li>
+        <li class="nav-dropdown">
+          <button type="button" class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+            Resources
+            <span class="badge badge-all">Guides</span>
+            <svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="currentColor"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="toolkit.html" role="menuitem" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 17.5 17.5 3 21 6.5 6.5 21z"/><path d="M6.6 13.9l1.7 1.7M9.4 11.1l1.2 1.2M12.1 8.4l1.7 1.7M14.9 5.6l1.2 1.2"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Course Toolkit</span><span class="nav-item-desc">Diagrams, spreadsheets, SQL and design tools</span></span></a>
+            <a href="project-guide.html" role="menuitem" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M6 21V3.5"/><path d="M6 5h11.5L15 8.5 17.5 12H6"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Project Management Guide</span><span class="nav-item-desc">Approaches, planning and implementation</span></span></a>
+            <a href="example-project.html" role="menuitem" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/><circle cx="12" cy="17" r="1.2"/><path d="M4 20.5h16"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Example Enterprise Project</span><span class="nav-item-desc">A worked project with a live dashboard</span></span></a>
+            <a href="glossary.html" role="menuitem" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 5.5c3-1.3 6-1.3 9 .5 3-1.8 6-1.8 9-.5V19c-3-1.3-6-1.3-9 .5-3-1.8-6-1.8-9-.5z"/><path d="M12 6v13.5"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Glossary</span><span class="nav-item-desc">Every syllabus keyword</span></span></a>
+            <a href="resources.html" role="menuitem" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M6.5 3h11v18l-5.5-3.8L6.5 21z"/><path d="M9.5 9.5l2 2 3.5-3.5"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Certified Resources</span><span class="nav-item-desc">Official NESA documents</span></span></a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <button type="button" class="btn-icon" id="theme-toggle" aria-label="Toggle theme"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button type="button" class="btn-icon hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Mobile Menu ── -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigation menu">
+    <a href="../index.html" class="nav-item mobile-home"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5.5h4V20"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Home</span><span class="nav-item-desc">All topics and study tips</span></span></a>
+    <div class="mobile-menu-section mobile-menu-y11">
+      <div class="mobile-menu-label">Year 11 <span class="badge badge-11">Prelim</span></div>
+      <a href="interactive-media.html" class="nav-item nav-item-y11"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8.5h18"/><path d="M10.5 11.5l6 2.4-2.6 1.2-1.2 2.7z"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Interactive Media and the User Experience</span><span class="nav-item-desc">UX, UI and digital media</span></span></a>
+      <a href="networking-systems.html" class="nav-item nav-item-y11"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="6" r="2.5"/><circle cx="5.5" cy="18" r="2.5"/><circle cx="18.5" cy="18" r="2.5"/><path d="M10.9 8.2 6.6 15.8M13.1 8.2l4.3 7.6M8 18h8"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Networking Systems and Social Computing</span><span class="nav-item-desc">Networks, cloud and IoT</span></span></a>
+      <a href="cybersecurity.html" class="nav-item nav-item-y11"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z"/><circle cx="12" cy="10.5" r="2"/><path d="M12 12.5V16"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Principles of Cybersecurity</span><span class="nav-item-desc">Privacy, threats and risk</span></span></a>
+    </div>
+    <div class="mobile-menu-section mobile-menu-y12">
+      <div class="mobile-menu-label">Year 12 <span class="badge badge-12">HSC</span></div>
+      <a href="data-science.html" class="nav-item nav-item-y12"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Data Science</span><span class="nav-item-desc">Collect, analyse and store data</span></span></a>
+      <a href="data-visualisation.html" class="nav-item nav-item-y12"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 3.5V20.5h16.5"/><path d="M7 18v-4.5M11.5 18v-7M16 18v-9.5"/><path d="M5.5 10.5 9.5 7l3.5 1.5 6-5"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Data Visualisation</span><span class="nav-item-desc">Telling stories with data</span></span></a>
+      <a href="intelligent-systems.html" class="nav-item nav-item-y12"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="6" y="6" width="12" height="12" rx="2.5"/><circle cx="9.5" cy="9.5" r="1.1"/><circle cx="14.5" cy="9.5" r="1.1"/><circle cx="12" cy="14.5" r="1.1"/><path d="M10.4 10.3l1.1 3.1M13.6 10.3l-1.1 3.1M10.6 9.5h2.8"/><path d="M9.5 6V3.5M14.5 6V3.5M9.5 18v2.5M14.5 18v2.5M6 9.5H3.5M6 14.5H3.5M18 9.5h2.5M18 14.5h2.5"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Intelligent Systems</span><span class="nav-item-desc">Expert systems, AI and IoT</span></span></a>
+      <a href="enterprise-project.html" class="nav-item nav-item-y12"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5V3h6v1.5"/><path d="M8.5 9H12M10.5 12.5H15.5"/><path d="M8.5 16l1.4 1.4 2.4-2.8"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Enterprise Project</span><span class="nav-item-desc">Define, plan, build and evaluate</span></span></a>
+    </div>
+    <div class="mobile-menu-section mobile-menu-core">
+      <div class="mobile-menu-label">Resources <span class="badge badge-all">Guides</span></div>
+      <a href="toolkit.html" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 17.5 17.5 3 21 6.5 6.5 21z"/><path d="M6.6 13.9l1.7 1.7M9.4 11.1l1.2 1.2M12.1 8.4l1.7 1.7M14.9 5.6l1.2 1.2"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Course Toolkit</span><span class="nav-item-desc">Diagrams, spreadsheets, SQL and design tools</span></span></a>
+      <a href="project-guide.html" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M6 21V3.5"/><path d="M6 5h11.5L15 8.5 17.5 12H6"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Project Management Guide</span><span class="nav-item-desc">Approaches, planning and implementation</span></span></a>
+      <a href="example-project.html" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/><circle cx="12" cy="17" r="1.2"/><path d="M4 20.5h16"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Example Enterprise Project</span><span class="nav-item-desc">A worked project with a live dashboard</span></span></a>
+      <a href="glossary.html" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 5.5c3-1.3 6-1.3 9 .5 3-1.8 6-1.8 9-.5V19c-3-1.3-6-1.3-9 .5-3-1.8-6-1.8-9-.5z"/><path d="M12 6v13.5"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Glossary</span><span class="nav-item-desc">Every syllabus keyword</span></span></a>
+      <a href="resources.html" class="nav-item nav-item-core"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M6.5 3h11v18l-5.5-3.8L6.5 21z"/><path d="M9.5 9.5l2 2 3.5-3.5"/></svg></span><span class="nav-item-text"><span class="nav-item-title">Certified Resources</span><span class="nav-item-desc">Official NESA documents</span></span></a>
+    </div>
+    <div class="mobile-menu-section mobile-menu-theme">
+      <button id="theme-toggle-mobile" class="btn btn-mobile-theme" type="button">Toggle theme</button>
+    </div>
+  </div>
+
+  <header class="topic-header">
+    <div class="topic-header-inner">
+      <nav class="topic-breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a> <span>›</span>
+        <a href="../index.html#year11">Year 11</a> <span>›</span>
+        <span>Principles of Cybersecurity</span>
+      </nav>
+      <div class="topic-title-row"><span class="topic-hero-icon ti-y11" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z"/><circle cx="12" cy="10.5" r="2"/><path d="M12 12.5V16"/></svg></span><h1>Principles of Cybersecurity</h1></div>
+      <p class="text-muted-dark max-w-600 mt-2 fs-sm lh-base">
+        <!-- CONTENT: one or two sentences introducing the topic, with the key ideas in <strong>. -->
+        Notes for the NESA focus area <strong>Principles of cybersecurity</strong>, following the syllabus in order: Understanding privacy and security, Security awareness and Cyber law and ethics.
+      </p>
+      <div class="topic-header-meta">
+        <span class="meta-pill year11">Year 11 — Preliminary</span>
+        <span class="meta-pill">40 hours</span>
+        <span class="meta-pill">Outcomes: EC-11-01, 03, 04, 06, 07, 09</span>
+      </div>
+      <div class="callout exam-tip curriculum-banner yr11">
+        <strong>Curriculum aligned</strong>
+        <span class="kpi-num">13</span>
+        <span class="kpi-unit">NESA dot points, in order</span>
+        <span class="kpi-text">This page follows every dot point of the focus area against outcomes <strong>EC-11-01, 03, 04, 06, 07, 09</strong>.</span>
+        <a href="https://github.com/4BZDOG/HSC_EnterpriseComputing/blob/main/resources/Syllabus-Mapping.md" target="_blank" rel="noopener">View full mapping →</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-layout">
+    <aside class="sidebar">
+      <div class="toc-title"><span class="toc-ico ti-y11" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z"/><circle cx="12" cy="10.5" r="2"/><path d="M12 12.5V16"/></svg></span>Contents</div>
+      <ul class="toc-list">
+        <li class="sidebar-label">Part 1 — Understanding privacy and security</li>
+        <li><a href="#privacy-trust-foi"><span class="toc-num">1</span>Privacy, Trust and Freedom of Information</a></li>
+        <li><a href="#privacy-principles"><span class="toc-num">2</span>Privacy and Security Principles</a></li>
+        <li><a href="#personal-privacy"><span class="toc-num">3</span>Protecting Your Own Data</a></li>
+        <li><a href="#social-vulnerabilities"><span class="toc-num">4</span>Social Networking Vulnerabilities</a></li>
+        <li><a href="#breach-attributes"><span class="toc-num">5</span>Attributes of a Cybersecurity Breach</a></li>
+        <li><a href="#threat-actors"><span class="toc-num">6</span>Threat Actors and Vulnerabilities</a></li>
+        <li class="sidebar-label">Part 2 — Security awareness</li>
+        <li><a href="#cybercrime-threats"><span class="toc-num">7</span>Cybercrime Threats</a></li>
+        <li><a href="#protect-data"><span class="toc-num">8</span>Hardware and Software Protection</a></li>
+        <li><a href="#risk-management"><span class="toc-num">9</span>Cyber Risk Management</a></li>
+        <li><a href="#risk-matrix"><span class="toc-num">10</span>Assessing Risk with a Risk Matrix</a></li>
+        <li class="sidebar-label">Part 3 — Cyber law and ethics</li>
+        <li><a href="#breach-impacts"><span class="toc-num">11</span>Impacts of Cybersecurity Breaches</a></li>
+        <li><a href="#cyber-law"><span class="toc-num">12</span>Cybersecurity Law and Legislation</a></li>
+        <li><a href="#emerging-threats"><span class="toc-num">13</span>Current and Emerging Cybercrime</a></li>
+      </ul>
+    </aside>
+
+    <main class="page-content">
+      <div class="content-body">
+
+        <aside class="yr11 topic-breakout" aria-label="Topic introduction">
+          <span class="breakout-label">Why this matters now</span>
+          <!-- CONTENT: topic introduction. Two short paragraphs linking the topic to students' lives, then a closing question in .breakout-question with a .bq-lead label. -->
+          <p>This page covers the Principles of cybersecurity focus area of the NESA Enterprise Computing syllabus.</p>
+        </aside>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  UNDERSTANDING PRIVACY AND SECURITY                    -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Syllabus Part 1</span>
+          <span class="part-name">Understanding privacy and security</span>
+        </div>
+
+        <aside class="yr11 topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
+          <p>This part covers 6 NESA dot points: understanding privacy and security.</p>
+        </aside>
+
+        <section id="privacy-trust-foi">
+          <h2 class="syllabus-phase">Privacy, Trust and Freedom of Information</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-11-03, EC-11-07)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Explain</strong> privacy, trust and freedom of information with respect to people, systems and data</em></p>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (explain). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="privacy-principles">
+          <h2 class="syllabus-phase">Privacy and Security Principles</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-11-03, EC-11-04)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Describe</strong> privacy and security principles associated with access, storage and permissions used by enterprises to collect and interpret data</em></p>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (describe). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="personal-privacy">
+          <h2 class="syllabus-phase">Protecting Your Own Data</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-11-03, EC-11-07)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Investigate</strong> how an individual can contribute to maintaining the privacy of their own data</em></p>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="social-vulnerabilities">
+          <h2 class="syllabus-phase">Social Networking Vulnerabilities</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-11-03, EC-11-07)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Explore</strong> security vulnerabilities of social networking to both an individual and an enterprise</em></p>
+          <ul class="syllabus-including" aria-label="Including"><li>account access</li><li>account behaviour</li><li>hosting platform security</li><li>identity theft</li><li>phishing</li><li>evil twins</li></ul>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (explore). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="breach-attributes">
+          <h2 class="syllabus-phase">Attributes of a Cybersecurity Breach</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-11-03, EC-11-04)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Describe</strong> the attributes of a cybersecurity breach</em></p>
+          <ul class="syllabus-including" aria-label="Including"><li>confidentiality of information</li><li>integrity of information</li><li>availability of information</li><li>privacy implications</li></ul>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (describe). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="threat-actors">
+          <h2 class="syllabus-phase">Threat Actors and Vulnerabilities</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-11-01, EC-11-03)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Investigate</strong> vulnerabilities exploited by the threat actor involved in a breach, such as the impact on various elements</em></p>
+          <ul class="syllabus-including" aria-label="Including"><li>data</li><li>people</li><li>processes</li><li>technology</li></ul>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <div class="quiz" data-quiz="cyber-1"></div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  SECURITY AWARENESS                                    -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Syllabus Part 2</span>
+          <span class="part-name">Security awareness</span>
+        </div>
+
+        <aside class="yr11 topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
+          <p>This part covers 4 NESA dot points: security awareness.</p>
+        </aside>
+
+        <section id="cybercrime-threats">
+          <h2 class="syllabus-phase">Cybercrime Threats</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-11-01, EC-11-07)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Investigate</strong> cybercrime threats to an enterprise</em></p>
+          <ul class="syllabus-including" aria-label="Including"><li>hacking</li><li>phishing, including smishing</li><li>scamming</li><li>bots and botnets</li><li>employee action causing a vulnerability</li></ul>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="protect-data">
+          <h2 class="syllabus-phase">Hardware and Software Protection</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-11-03, EC-11-06)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Research</strong> hardware and software strategies used to protect data</em></p>
+          <ul class="syllabus-including" aria-label="Including"><li>isolation</li><li>physical security</li><li>biometrics</li><li>password protection, encryption and permissions</li><li>multi-factor authentication</li><li>back up and disaster recovery</li><li>firewalls</li><li>antivirus and anti-malware</li></ul>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (research). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="risk-management">
+          <h2 class="syllabus-phase">Cyber Risk Management</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-11-03, EC-11-09)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Investigate</strong> cyber risk management</em></p>
+          <ul class="syllabus-including" aria-label="Including"><li>implementing a cybersecurity strategy with ongoing training</li><li>identifying and managing vulnerabilities</li><li>assessing the impact of a breach</li><li>controlling damage and loss</li></ul>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="risk-matrix">
+          <h2 class="syllabus-phase">Assessing Risk with a Risk Matrix</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-11-03, EC-11-09)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Assess</strong> cyber risk by implementing risk-management strategies using a risk matrix</em></p>
+          <ul class="syllabus-including" aria-label="Including"><li>internal and external vulnerabilities</li><li>threat landscape</li><li>impact of exposure</li><li>likelihood of exploitation</li></ul>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (assess). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <div class="quiz" data-quiz="cyber-2"></div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  CYBER LAW AND ETHICS                                  -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Syllabus Part 3</span>
+          <span class="part-name">Cyber law and ethics</span>
+        </div>
+
+        <aside class="yr11 topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
+          <p>This part covers 3 NESA dot points: cyber law and ethics.</p>
+        </aside>
+
+        <section id="breach-impacts">
+          <h2 class="syllabus-phase">Impacts of Cybersecurity Breaches</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-11-01, EC-11-07)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Explain</strong> impacts of cybersecurity breaches on the individual, organisation and society</em></p>
+          <ul class="syllabus-including" aria-label="Including"><li>financial loss</li><li>reputational damage</li><li>operational disruptions</li><li>legal and regulatory ramifications</li></ul>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (explain). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="cyber-law">
+          <h2 class="syllabus-phase">Cybersecurity Law and Legislation</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-11-07)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Identify</strong> laws and legislation associated with cybersecurity</em></p>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (identify). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="emerging-threats">
+          <h2 class="syllabus-phase">Current and Emerging Cybercrime</h2>
+          <p class="outcome-subtitle">🎯 <em>(EC-11-06, EC-11-07)</em></p>
+          <p class="syllabus-concept">📌 <em><strong>Explore</strong> current and emerging cybercrime threats to an enterprise</em></p>
+
+          <!-- CONTENT: explain this dot point at the depth its verb asks for (explore). -->
+          <p class="content-placeholder">Notes for this dot point are being written.</p>
+        </section>
+
+        <div class="quiz" data-quiz="cyber-3"></div>
+      </div>
+
+        <nav class="topic-pager" aria-label="Previous and next topic">
+          <a class="pager-card pager-prev nav-item-y11" href="networking-systems.html" rel="prev"><span class="pager-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="6" r="2.5"/><circle cx="5.5" cy="18" r="2.5"/><circle cx="18.5" cy="18" r="2.5"/><path d="M10.9 8.2 6.6 15.8M13.1 8.2l4.3 7.6M8 18h8"/></svg></span><span class="pager-text"><span class="pager-dir">Previous topic</span><span class="pager-title">Networking Systems and Social Computing</span><span class="pager-desc">Networks, cloud and IoT</span></span></a>
+          <a class="pager-card pager-next nav-item-y12" href="data-science.html" rel="next"><span class="pager-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span><span class="pager-text"><span class="pager-dir">Next topic</span><span class="pager-title">Data Science</span><span class="pager-desc">Collect, analyse and store data</span></span></a>
+        </nav>
+    </main>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <a href="../index.html" class="footer-brand">
+          <div class="footer-logo" aria-hidden="true"><svg class="brand-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="12" width="4.5" height="8" rx="1"/><rect x="9.75" y="7" width="4.5" height="13" rx="1"/><rect x="16" y="3.5" width="4.5" height="16.5" rx="1"/></svg></div>
+          <span class="footer-name">EntComp Notes</span>
+        </a>
+        <p class="footer-desc">Notes for every dot point of the NSW HSC Enterprise Computing syllabus, from Year 11 foundations to the Year 12 exam.</p>
+      </div>
+      <div class="footer-col footer-col-y11">
+        <h4>Year 11</h4>
+        <a href="interactive-media.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8.5h18"/><path d="M10.5 11.5l6 2.4-2.6 1.2-1.2 2.7z"/></svg></span>Interactive Media and the User Experience</a>
+        <a href="networking-systems.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="6" r="2.5"/><circle cx="5.5" cy="18" r="2.5"/><circle cx="18.5" cy="18" r="2.5"/><path d="M10.9 8.2 6.6 15.8M13.1 8.2l4.3 7.6M8 18h8"/></svg></span>Networking Systems and Social Computing</a>
+        <a href="cybersecurity.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z"/><circle cx="12" cy="10.5" r="2"/><path d="M12 12.5V16"/></svg></span>Principles of Cybersecurity</a>
+      </div>
+      <div class="footer-col footer-col-y12">
+        <h4>Year 12</h4>
+        <a href="data-science.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span>Data Science</a>
+        <a href="data-visualisation.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 3.5V20.5h16.5"/><path d="M7 18v-4.5M11.5 18v-7M16 18v-9.5"/><path d="M5.5 10.5 9.5 7l3.5 1.5 6-5"/></svg></span>Data Visualisation</a>
+        <a href="intelligent-systems.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="6" y="6" width="12" height="12" rx="2.5"/><circle cx="9.5" cy="9.5" r="1.1"/><circle cx="14.5" cy="9.5" r="1.1"/><circle cx="12" cy="14.5" r="1.1"/><path d="M10.4 10.3l1.1 3.1M13.6 10.3l-1.1 3.1M10.6 9.5h2.8"/><path d="M9.5 6V3.5M14.5 6V3.5M9.5 18v2.5M14.5 18v2.5M6 9.5H3.5M6 14.5H3.5M18 9.5h2.5M18 14.5h2.5"/></svg></span>Intelligent Systems</a>
+        <a href="enterprise-project.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5V3h6v1.5"/><path d="M8.5 9H12M10.5 12.5H15.5"/><path d="M8.5 16l1.4 1.4 2.4-2.8"/></svg></span>Enterprise Project</a>
+      </div>
+      <div class="footer-col footer-col-core">
+        <h4>Resources</h4>
+        <a href="toolkit.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 17.5 17.5 3 21 6.5 6.5 21z"/><path d="M6.6 13.9l1.7 1.7M9.4 11.1l1.2 1.2M12.1 8.4l1.7 1.7M14.9 5.6l1.2 1.2"/></svg></span>Course Toolkit</a>
+        <a href="project-guide.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M6 21V3.5"/><path d="M6 5h11.5L15 8.5 17.5 12H6"/></svg></span>Project Management Guide</a>
+        <a href="example-project.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/><circle cx="12" cy="17" r="1.2"/><path d="M4 20.5h16"/></svg></span>Example Enterprise Project</a>
+        <a href="glossary.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 5.5c3-1.3 6-1.3 9 .5 3-1.8 6-1.8 9-.5V19c-3-1.3-6-1.3-9 .5-3-1.8-6-1.8-9-.5z"/><path d="M12 6v13.5"/></svg></span>Glossary</a>
+        <a href="resources.html"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M6.5 3h11v18l-5.5-3.8L6.5 21z"/><path d="M9.5 9.5l2 2 3.5-3.5"/></svg></span>Certified Resources</a>
+        <a href="https://curriculum.nsw.edu.au/learning-areas/tas/enterprise-computing-11-12-2022" target="_blank" rel="noopener">NESA Syllabus ↗</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 HSC EntComp Notes · Principles of Cybersecurity</span>
+      <span>Aligned to the NESA syllabus · For educational purposes only</span>
+    </div>
+  </footer>
+
+  <script src="../js/glossary-data.js?v=8f2b4607"></script>
+  <script src="../js/quizzes/cybersecurity.js?v=38a4be7d"></script>
+  <script src="../js/quiz.js?v=3e6185a0" defer></script>
+  <script src="../js/nesa-diagram-data.js?v=33ff129d"></script>
+  <script src="../js/nesa-diagrams.js?v=6bab3032" defer></script>
+  <script src="../js/main.js?v=28275053"></script>
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- Diagram Lightbox Modal -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div class="lightbox-modal" id="diagram-lightbox" role="dialog" aria-labelledby="lightbox-title" aria-hidden="true">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-container">
+      <div class="lightbox-header">
+        <h2 id="lightbox-title" class="lightbox-title">Diagram View</h2>
+        <button type="button" class="lightbox-close" aria-label="Close diagram view">✕</button>
+      </div>
+      <div class="lightbox-canvas">
+        <div class="lightbox-content" id="lightbox-content"></div>
+      </div>
+      <div class="lightbox-controls">
+        <button type="button" class="lightbox-btn" id="zoom-out" aria-label="Zoom out">−</button>
+        <span class="lightbox-zoom-level" id="zoom-level">100%</span>
+        <button type="button" class="lightbox-btn" id="zoom-in" aria-label="Zoom in">+</button>
+        <button type="button" class="lightbox-btn" id="reset-view" aria-label="Reset view">⟲</button>
+      </div>
+      <div class="lightbox-info">
+        <p>Scroll to zoom • Drag to pan • <kbd>Esc</kbd> to close</p>
+      </div>
+    </div>
+  </div>
+  <script src="../js/progress.js?v=40b8096b" defer></script>
+</body>
+</html>

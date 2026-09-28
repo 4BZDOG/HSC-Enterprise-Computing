@@ -1,0 +1,490 @@
+/* ============================================================
+   Animated diagrams (js/anim.js): the player and the diagram kit.
+   Every colour comes from the --pc-* tokens (defined for this site in
+   css/theme.css, section 11b), so scenes re-theme for dark mode
+   without any per-scene rules.
+
+   Ported from the sister HSC SE site. Differences from
+   that copy, so it can be re-synced:
+     * a few extra optional tokens (--pc-paper, --pc-stage, --pc-on,
+       --pc-fixed-*, --pc-sky, --pc-shadow-*) are read with the SE
+       colours as fallbacks, so the file still works without them;
+     * labels are upright (Space Grotesk / IBM Plex have no italics);
+     * Enterprise Computing symbols: search "EC symbols" (end of file).
+   ============================================================ */
+
+.anim, .anim-svg {
+  --pa-ink:      var(--pc-ink, #1c1a17);
+  --pa-soft:     var(--pc-ink-soft, #4a443b);
+  --pa-muted:    var(--pc-muted, #6c6558);
+  --pa-rule:     var(--pc-rule, #d8ccb4);
+  --pa-rule-2:   var(--pc-rule-strong, #b9ab8f);
+  --pa-paper:    var(--pc-paper, #fffdf8);
+  --pa-cream:    var(--pc-cream, #fbf7ee);
+  --pa-sheet:    var(--pc-sheet, #f4ecdb);
+  --pa-kraft:    var(--pc-kraft, #e9dcc3);
+  --pa-stage:    var(--pc-stage, #fffdf8);
+  --pa-teal:     var(--pc-teal, #2a6f73);
+  --pa-terra:    var(--pc-terracotta, #c4553b);
+  --pa-sage:     var(--pc-sage, #3f7d5c);
+  --pa-mustard:  var(--pc-mustard, #e0a93b);
+  --pa-plum:     var(--pc-plum, #5b4bdb);
+  --pa-blush:    var(--pc-blush, #f2c6b4);
+  --pa-sky:      var(--pc-sky, #8cc7e6);
+  --pa-cookie:   #d9a45b;
+  --pa-choc:     #6b4226;
+  --pa-fixed-ink:var(--pc-fixed-ink, #1c1a17);       /* eyes, mouths: dark in both themes */
+  --pa-fixed-paper:var(--pc-fixed-paper, #fbf7ee);
+  --pa-on:       var(--pc-on, #fbf7ee);       /* text on teal, terracotta, sage, plum */
+  --pa-shadow:   var(--pc-shadow-flood, rgba(70,45,15,.30));
+  --pa-accent:   var(--pc-accent, var(--pc-plum, #5b4bdb));
+  --pa-step:     var(--pc-step, var(--pa-terra));   /* step counter and active dot */
+}
+.anim {
+  position: relative;
+  margin: 0;
+  background: var(--pa-stage);
+  border: 1px solid var(--pa-rule);
+  border-radius: 6px;
+  color: var(--pa-ink);
+  overflow: hidden;
+}
+:root[data-theme="dark"] .anim,
+:root[data-theme="dark"] .anim-svg {
+  --pa-paper:    var(--pc-paper, #2b2721);
+  --pa-stage:    var(--pc-stage, #1f1c18);
+  --pa-on:       var(--pc-on, #1b1916);
+  --pa-blush:    var(--pc-blush, #d99c86);
+  --pa-sky:      var(--pc-sky, #7fb6d4);
+  --pa-cookie:   #d6a15a;
+  --pa-shadow:   var(--pc-shadow-flood, rgba(0,0,0,.55));
+}
+.anim:focus-visible { outline: 2px solid var(--pa-accent); outline-offset: 3px; }
+
+/* Shadow colour for every paper cut-out (defs live in #pa-defs) */
+#pa-defs .pa-shadow { flood-color: var(--pc-shadow-flood, rgb(70,45,15)); flood-opacity: var(--pc-shadow-op, .28); }
+#pa-defs .pa-shadow-lift { flood-opacity: var(--pc-shadow-lift-op, .24); }
+:root[data-theme="dark"] #pa-defs .pa-shadow { flood-color: var(--pc-shadow-flood, #000); flood-opacity: var(--pc-shadow-op, .6); }
+#pa-defs .pa-hatch-bg { fill: var(--pc-sheet, #f4ecdb); }
+#pa-defs .pa-hatch-ink { fill: var(--pc-rule-strong, #b9ab8f); }
+#pa-defs .pa-outage-bg { fill: var(--pc-blush, #f2c6b4); }
+#pa-defs .pa-outage-ink { fill: var(--pc-terracotta, #c4553b); }
+#pa-defs .pa-arrowhead { fill: var(--pc-ink-soft, #4a443b); }
+
+/* ── Scenario tabs: paper index tabs along the top edge ── */
+.anim-tabs {
+  display: flex; flex-wrap: wrap; align-items: flex-end; gap: 4px 6px;
+  padding: .55rem .75rem 0;
+  background: var(--pa-sheet);
+  border-bottom: 1px solid var(--pa-rule);
+}
+.anim-tabs-label {
+  align-self: center;
+  margin-right: .25rem;
+  font: 600 .68rem var(--font-body);
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--pa-muted);
+}
+.anim-tab {
+  position: relative; top: 1px;
+  padding: .42rem .85rem .5rem;
+  min-height: 36px;
+  font: 600 .82rem var(--font-body);
+  color: var(--pa-soft);
+  background: transparent;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+.anim-tab:hover { background: color-mix(in srgb, var(--pa-stage) 60%, transparent); color: var(--pa-ink); }
+.anim-tab[aria-pressed="true"] {
+  background: var(--pa-stage);
+  color: var(--pa-ink);
+  border-color: var(--pa-rule);
+  box-shadow: inset 0 3px 0 var(--pa-teal);
+}
+.anim-tab:focus-visible { outline: 2px solid var(--pa-accent); outline-offset: -2px; }
+
+/* ── Stage ── */
+.anim-stage {
+  position: relative;
+  background-color: var(--pa-stage);
+  background-image: var(--pc-grain);
+}
+.anim-svg { display: block; width: 100%; height: auto; max-height: 720px; margin: 0 auto; overflow: visible; }
+
+/* ── Caption strip ── */
+.anim-caption {
+  display: flex; gap: .75rem; align-items: flex-start;
+  min-height: 4.6rem;
+  padding: .75rem 1rem .7rem;
+  background: var(--pa-cream);
+  border-top: 1px dashed var(--pa-rule-2);
+}
+.anim-step {
+  flex: none;
+  margin-top: .12rem;
+  padding: .12rem .5rem;
+  font: 700 .72rem var(--font-mono);
+  color: var(--pa-on);
+  background: var(--pa-step);
+  border-radius: 999px;
+  box-shadow: 1px 1px 0 var(--pa-mustard);
+  white-space: nowrap;
+}
+.anim-say { margin: 0; font-size: .95rem; line-height: 1.55; color: var(--pa-ink); }
+.anim-say strong { font-weight: 700; color: var(--pa-ink); }
+.anim-say code, .anim-transcript code {
+  font: 500 .85em var(--font-mono);
+  padding: .05em .35em;
+  background: var(--pa-sheet);
+  border: 1px solid var(--pa-rule);
+  border-radius: 4px;
+}
+
+/* ── Controls ── */
+.anim-controls {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px;
+  padding: .6rem .75rem;
+  background: var(--pa-cream);
+  border-top: 1px solid var(--pa-rule);
+}
+.anim-btn {
+  min-height: 36px;
+  padding: .35rem .8rem;
+  font: 600 .82rem var(--font-body);
+  color: var(--pa-ink);
+  background: var(--pa-paper);
+  border: 1px solid var(--pa-rule-2);
+  border-radius: 8px;
+  box-shadow: 0 1px 0 var(--pc-btn-hi, rgba(255,255,255,.5)) inset, 0 1px 2px var(--pc-btn-shadow, rgba(70,45,15,.12));
+  cursor: pointer;
+  transition: background 140ms ease, transform 140ms ease;
+}
+.anim-btn:hover:not(:disabled) { background: var(--pa-sheet); }
+.anim-btn:active:not(:disabled) { transform: translateY(1px); }
+.anim-btn:disabled { opacity: .45; cursor: default; }
+.anim-btn:focus-visible { outline: 2px solid var(--pa-accent); outline-offset: 2px; }
+.anim-play { min-width: 6.6em; color: #fff; background: var(--pa-accent); border-color: var(--pa-accent); }
+.anim-play:hover:not(:disabled) { background: color-mix(in srgb, var(--pa-accent) 85%, #000); }
+:root[data-theme="dark"] .anim-play { color: var(--pc-on, #1b1916); }
+.anim-reset { margin-left: auto; min-width: 36px; font-size: 1rem; padding: .3rem .6rem; }
+
+.anim-dots { display: flex; flex-wrap: wrap; gap: 0; margin: 0 0 0 .25rem; padding: 0; list-style: none; }
+.anim-dots li { display: flex; }
+.anim-dot {
+  position: relative;
+  width: 22px; height: 28px;
+  padding: 0;
+  background: none; border: 0; cursor: pointer;
+}
+.anim-dot::before {
+  content: '';
+  position: absolute; left: 50%; top: 50%;
+  width: 9px; height: 9px;
+  margin: -4.5px 0 0 -4.5px;
+  border-radius: 50%;
+  background: var(--pa-rule);
+  box-shadow: inset 0 0 0 1px var(--pa-rule-2);
+  transition: transform 220ms var(--pc-spring, ease), background 160ms ease;
+}
+.anim-dot.is-past::before { background: var(--pa-teal); box-shadow: none; }
+.anim-dot.is-on::before { background: var(--pa-step); box-shadow: 0 0 0 3px color-mix(in srgb, var(--pa-step) 25%, transparent); transform: scale(1.3); }
+.anim-dot:hover::before { transform: scale(1.35); }
+.anim-dot:focus-visible { outline: 2px solid var(--pa-accent); outline-offset: -3px; border-radius: 6px; }
+
+/* ── Transcript ── */
+.anim-transcript {
+  padding: 0 1rem;
+  background: var(--pa-cream);
+  border-top: 1px solid var(--pa-rule);
+  font-size: .88rem;
+}
+.anim-transcript summary {
+  padding: .5rem 0;
+  font: 600 .78rem var(--font-body);
+  letter-spacing: .04em;
+  color: var(--pa-muted);
+  cursor: pointer;
+}
+.anim-transcript summary:hover { color: var(--pa-ink); }
+.anim-transcript ol { margin: 0 0 .8rem; padding-left: 1.3rem; line-height: 1.55; }
+.anim-transcript li { margin: .2rem 0; }
+
+@media (max-width: 560px) {
+  .anim-caption { padding: .65rem .75rem; min-height: 5.8rem; }
+  .anim-say { font-size: .9rem; }
+  .anim-controls { padding: .5rem; }
+  .anim-btn { padding: .35rem .6rem; }
+  .anim-dots { order: 5; flex-basis: 100%; justify-content: center; margin: 0; }
+  .anim-tab { padding: .38rem .6rem .45rem; font-size: .78rem; }
+}
+
+/* ── The figure around it ── */
+.figure-canvas--anim { padding: 0; background: none; border: 0; overflow: visible; }
+.figure-canvas--anim .anim { margin: 0; }
+
+/* ============================================================
+   Paper kit (SVG)
+   ============================================================ */
+.anim-svg text { font-family: var(--font-body); }
+.pa-t      { font: 500 13px var(--font-body); fill: var(--pa-ink); }
+.pa-t-sm   { font: 500 11.5px var(--font-body); fill: var(--pa-ink); }
+.pa-t-xs   { font: 500 10.5px var(--font-body); fill: var(--pa-ink); }
+.pa-t-lg   { font: 600 15px var(--font-body); fill: var(--pa-ink); }
+.pa-title  { font: 600 16px var(--font-display); fill: var(--pa-ink); }
+.pa-name   { font: 600 13.5px var(--font-display); fill: var(--pa-soft); }
+.pa-mono   { font: 500 11.5px var(--font-mono); fill: var(--pa-ink); }
+.pa-sign   { font: 700 13px var(--font-display); fill: var(--pa-on); letter-spacing: .02em; }
+.pa-muted  { fill: var(--pa-muted); }
+.pa-soft   { fill: var(--pa-soft); }
+.pa-on     { fill: var(--pa-on); }
+.pa-ink-fixed { fill: var(--pa-fixed-ink); }
+.pa-strong { font-weight: 700; }
+.anim-svg .is-bad  { fill: var(--pa-terra); }
+.anim-svg .is-good { fill: var(--pa-sage); }
+
+.f-teal    { fill: var(--pa-teal); }
+.f-terra   { fill: var(--pa-terra); }
+.f-sage    { fill: var(--pa-sage); }
+.f-mustard { fill: var(--pa-mustard); }
+.f-plum    { fill: var(--pa-plum); }
+.f-blush   { fill: var(--pa-blush); }
+.f-sky     { fill: var(--pa-sky); }
+.f-paper   { fill: var(--pa-paper); }
+.f-cream   { fill: var(--pa-cream); }
+.f-sheet   { fill: var(--pa-sheet); }
+.f-kraft   { fill: var(--pa-kraft); }
+.f-ink     { fill: var(--pa-ink); }
+.f-ink-fixed { fill: var(--pa-fixed-ink); }
+.f-paper-fixed { fill: var(--pa-fixed-paper); }
+.f-cookie  { fill: var(--pa-cookie); }
+.f-choc    { fill: var(--pa-choc); }
+.f-shade   { fill: var(--pa-fixed-ink); opacity: .13; }
+.f-hatch   { fill: url(#pa-hatch); }
+.f-outage  { fill: url(#pa-outage); }
+
+.pa-floor  { fill: var(--pa-fixed-ink); opacity: .10; }
+:root[data-theme="dark"] .pa-floor { fill: #000; opacity: .35; }
+.pa-shine  { fill: none; stroke: #fff; stroke-width: 3; stroke-linecap: round; opacity: .45; }
+.pa-blush  { fill: var(--pa-blush); opacity: .75; }
+.pa-mouth  { fill: none; stroke: var(--pa-fixed-ink); stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round; }
+.pa-mouth.is-filled { fill: var(--pa-fixed-ink); }
+.pa-band   { fill: none; stroke: var(--pa-fixed-ink); stroke-width: 3.5; stroke-linecap: round; }
+.pa-line-ink { fill: none; stroke: var(--pa-fixed-ink); stroke-width: 2.4; stroke-linecap: round; }
+.pa-fold   { fill: none; stroke: var(--pa-rule-2); stroke-width: 1.2; }
+.pa-flap   { fill: none; stroke: var(--pa-rule-2); stroke-width: 1.6; stroke-linejoin: round; }
+.pa-tag-hole { fill: var(--pa-stage); stroke: var(--pa-rule-2); stroke-width: .8; }
+.pa-shackle { fill: none; stroke: var(--pa-soft); stroke-width: 3.6; stroke-linecap: round; }
+.pa-key-hole { fill: var(--pa-stage); }
+.pa-coin-rim { fill: none; stroke: #1c1a17; stroke-opacity: .25; stroke-width: 1; }
+.pa-coin-t { font: 700 10px var(--font-body); fill: #1c1a17; }
+.pa-mark-ink { fill: none; stroke: var(--pa-on); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.pa-bug-legs { fill: none; stroke: var(--pa-fixed-ink); stroke-width: 1.6; stroke-linecap: round; }
+.pa-bug-seam { stroke: var(--pa-fixed-ink); stroke-width: 1.2; opacity: .6; }
+.pa-arrow  { fill: none; stroke: var(--pa-soft); stroke-width: 1.8; stroke-linecap: round; }
+.pa-arrow.is-dashed { stroke-dasharray: 5 5; }
+.pa-ring   { fill: none; stroke: var(--pa-accent); stroke-width: 2.5; }
+.pa-ring.is-bad  { stroke: var(--pa-terra); }
+.pa-ring.is-good { stroke: var(--pa-sage); }
+.pa-wire   { fill: none; stroke: var(--pa-rule-2); stroke-width: 3; stroke-dasharray: 2 7; stroke-linecap: round; }
+
+/* Small shared details */
+.pa-glass   { fill: var(--pa-sky); fill-opacity: .22; stroke: var(--pa-rule-2); stroke-width: 1.5; }
+.pa-field   { stroke: var(--pa-rule-2); stroke-width: 1; }
+.pa-margin  { stroke: var(--pa-terra); stroke-width: 1; opacity: .5; }
+.pa-code    { fill: var(--pa-fixed-paper); }
+.pa-thin    { stroke-width: 1.4; }
+.pa-whisker { fill: none; stroke: var(--pa-fixed-ink); stroke-width: 1; stroke-linecap: round; opacity: .7; }
+
+.pa-cert-border { fill: none; stroke: var(--pa-mustard); stroke-width: 1.2; }
+.pa-cert-title { font: 600 12px var(--font-display); fill: var(--pa-ink); }
+.pa-tap { fill: none; stroke: var(--pa-mustard); stroke-width: 2; stroke-dasharray: 3 4; }
+.anim-svg text.is-bad { fill: var(--pa-terra); }
+
+/* Regression plots */
+.pa-square { fill: var(--pa-mustard); fill-opacity: .28; stroke: var(--pa-mustard); stroke-width: 1.2; }
+.pa-fit    { stroke: var(--pa-terra); stroke-width: 5; stroke-linecap: round; }
+.pa-resid  { stroke: var(--pa-soft); stroke-width: 1.4; stroke-dasharray: 3 3; }
+.pa-loss   { fill: none; stroke: var(--pa-plum); stroke-width: 2.4; stroke-linejoin: round; stroke-linecap: round; }
+.pa-eq     { font: 600 17px var(--font-display); fill: var(--pa-ink); }
+
+.pa-knn-ring { fill: var(--pa-plum); fill-opacity: .07; stroke: var(--pa-plum); stroke-width: 2; stroke-dasharray: 6 5; }
+
+.pa-fall  { fill: none; stroke: var(--pa-sky); stroke-width: 4; stroke-linecap: round; opacity: .8; }
+.pa-loop  { fill: none; stroke: var(--pa-rule-2); stroke-width: 3; stroke-dasharray: 2 7; stroke-linecap: round; }
+.pa-value { fill: var(--pa-teal); fill-opacity: .25; stroke: var(--pa-teal); stroke-width: 2.4; stroke-linejoin: round; }
+
+/* Timelines */
+.pa-week { stroke: var(--pa-rule); stroke-width: 1; stroke-dasharray: 2 4; }
+.pa-lane { fill: var(--pa-sheet); }
+.pa-key  { stroke: var(--pa-rule-2); stroke-width: .8; }
+.pa-playhead-line { stroke: var(--pa-terra); stroke-width: 2; }
+.pa-flagpole { stroke: var(--pa-soft); stroke-width: 2; stroke-linecap: round; }
+
+/* Browser tabs */
+.pa-tab .pa-tab-shape { fill: var(--pa-kraft); transition: fill 200ms ease; }
+.pa-tab.is-active .pa-tab-shape { fill: var(--pa-paper); }
+.pa-tab .pa-tab-label { fill: var(--pa-muted); }
+.pa-tab.is-active .pa-tab-label { fill: var(--pa-ink); font-weight: 600; }
+
+/* Rubber stamps */
+.pa-stamp-frame { fill: none; stroke-width: 3; }
+.pa-stamp-frame.is-thin { stroke-width: 1.2; }
+.pa-stamp-t { font: 800 15px var(--font-body); letter-spacing: .08em; }
+.pa-stamp.is-terra .pa-stamp-frame { stroke: var(--pa-terra); }
+.pa-stamp.is-terra .pa-stamp-t { fill: var(--pa-terra); }
+.pa-stamp.is-sage .pa-stamp-frame { stroke: var(--pa-sage); }
+.pa-stamp.is-sage .pa-stamp-t { fill: var(--pa-sage); }
+.pa-stamp { mix-blend-mode: multiply; }
+:root[data-theme="dark"] .pa-stamp { mix-blend-mode: normal; }
+
+/* Plots */
+.pa-grid line { stroke: var(--pa-rule); stroke-width: 1; opacity: .75; }
+.pa-axis { fill: none; stroke: var(--pa-soft); stroke-width: 1.6; }
+
+/* ── Idle life: blinking, breathing, wiggling ──
+   Only on inner groups: the engine positions outer groups with
+   the transform attribute, which a CSS transform would override. */
+.pa-eyes, .pa-idle-breathe, .pa-idle-wiggle, .pa-idle-bob, .pa-idle-sway, .pa-idle-twinkle, .pa-window-eyes circle {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.pa-eyes { animation: pa-blink 5.2s infinite; }
+@keyframes pa-blink { 0%, 93%, 100% { transform: scaleY(1); } 95.5% { transform: scaleY(.12); } }
+.pa-idle-breathe { transform-origin: center bottom; animation: pa-breathe 3.6s ease-in-out infinite; }
+@keyframes pa-breathe { 0%, 100% { transform: scale(1, 1); } 50% { transform: scale(1.012, 1.03); } }
+.pa-idle-wiggle { animation: pa-wiggle .5s ease-in-out infinite alternate; }
+@keyframes pa-wiggle { from { transform: rotate(-6deg); } to { transform: rotate(6deg); } }
+.pa-idle-bob { animation: pa-bob 2.4s ease-in-out infinite; }
+@keyframes pa-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+.pa-idle-sway { transform-origin: center bottom; animation: pa-sway 2.8s ease-in-out infinite; }
+@keyframes pa-sway { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+.pa-idle-twinkle { animation: pa-twinkle 1.6s ease-in-out infinite; }
+@keyframes pa-twinkle { 0%, 100% { transform: scale(.7) rotate(0deg); opacity: .6; } 50% { transform: scale(1.1) rotate(20deg); opacity: 1; } }
+.pa-sweat { animation: pa-bob 1.2s ease-in-out infinite; }
+.pa-window-eyes circle { transition: transform 260ms ease; }
+.pa-window-eyes.is-squint circle { transform: scaleY(.4); }
+.pa-window-eyes.is-wide circle { transform: scale(1.3); }
+
+.anim.is-offscreen * { animation-play-state: paused; }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim *, .anim *::before { animation: none !important; transition: none !important; }
+}
+
+@media print {
+  .anim-tabs, .anim-controls { display: none; }
+  .anim-transcript summary { list-style: none; }
+}
+
+/* ============================================================
+   Still diagrams (HSCAnim scenes with still: true)
+   ============================================================ */
+.anim.anim-still { border: 0; border-radius: 0; background: none; overflow: visible; }
+.anim-still .anim-stage { background: none; }
+.anim-still .anim-svg { max-height: none; }
+.anim-still * { animation: none !important; }
+.figure-canvas--still { padding: .75rem .5rem; }
+.figure-canvas--still .anim-svg { margin: 0 auto; }
+
+/* Course notation: a clear ink outline on paper */
+.pa-outline      { stroke: var(--pa-ink); stroke-width: 1.6; stroke-linejoin: round; }
+.pa-outline-line { fill: none; stroke: var(--pa-ink); stroke-width: 1.6; stroke-linejoin: round; }
+.pa-card-edge    { stroke: var(--pa-rule-2); stroke-width: 1; }
+.pa-node-t       { font: 500 14px var(--font-body); fill: var(--pa-ink); }
+.pa-link         { fill: none; stroke: var(--pa-soft); stroke-width: 1.8; stroke-linejoin: round; stroke-linecap: round; }
+.pa-link.is-dashed { stroke-dasharray: 6 5; }
+.anim-svg .pa-link.is-good { fill: none; stroke: var(--pa-sage); }
+.anim-svg .pa-link.is-bad  { fill: none; stroke: var(--pa-terra); }
+.pa-chip-bg      { fill: var(--pa-stage, #fffdf8); stroke: var(--pa-rule-2); stroke-width: 1; }
+.pa-chip-t       { font: 500 12.5px var(--font-body); fill: var(--pa-soft); }
+.pa-lifeline     { fill: none; stroke: var(--pa-rule-2); stroke-width: 1.5; stroke-dasharray: 3 5; }
+.pa-section-line { fill: none; stroke: var(--pa-rule-2); stroke-width: 1.2; stroke-dasharray: 8 6; }
+.pa-seq-t        { font: 500 12.5px var(--font-body); fill: var(--pa-ink); }
+.pa-num-t        { font: 700 10.5px var(--font-body); fill: var(--pa-on); }
+.pa-group        { fill: var(--pa-sheet); stroke: var(--pa-rule-2); stroke-width: 1.2; stroke-dasharray: 6 4; }
+.pa-group-t      { font: 600 14px var(--font-display); fill: var(--pa-soft); }
+
+/* Soft tints of the palette for large shapes; text stays in theme ink */
+.f-teal-t    { fill: color-mix(in srgb, var(--pa-teal) 22%, var(--pa-paper)); }
+.f-sage-t    { fill: color-mix(in srgb, var(--pa-sage) 22%, var(--pa-paper)); }
+.f-terra-t   { fill: color-mix(in srgb, var(--pa-terra) 20%, var(--pa-paper)); }
+.f-mustard-t { fill: color-mix(in srgb, var(--pa-mustard) 34%, var(--pa-paper)); }
+.f-plum-t    { fill: color-mix(in srgb, var(--pa-plum) 18%, var(--pa-paper)); }
+.f-sky-t     { fill: color-mix(in srgb, var(--pa-sky) 30%, var(--pa-paper)); }
+.f-blush-t   { fill: color-mix(in srgb, var(--pa-blush) 55%, var(--pa-paper)); }
+.anim-svg text.pa-on { fill: var(--pa-on); }
+.anim-svg text.pa-ink-fixed { fill: var(--pa-fixed-ink); }
+.pa-gantt-band { fill: var(--pa-sheet); opacity: .7; }
+.pa-dep { fill: none; stroke: var(--pa-soft); stroke-width: 1.4; stroke-dasharray: 3 3; }
+.pa-weight { stroke: var(--pa-rule-2); stroke-width: 1; opacity: .55; }
+.pa-cycle  { fill: none; stroke: var(--pa-terra); stroke-width: 2.4; stroke-dasharray: 2 0; opacity: .55; }
+
+/* NESA structure charts and DFDs (js/nesa-diagrams.js) in the paper style.
+   The symbols stay exactly as specified; they gain paper fills and a cut shadow. */
+.nesa-diagram .nd-svg { --nd-paper: var(--pc-paper, #fffdf8); }
+:root[data-theme="dark"] .nesa-diagram .nd-svg { --nd-paper: var(--pc-paper, #2b2721); }
+.nesa-diagram .nd-box, .nesa-diagram .nd-store-fill, .nesa-diagram .nd-diamond {
+  filter: drop-shadow(0 1.5px 1.2px var(--pc-shadow-drop, rgba(70,45,15,.28)));
+}
+:root[data-theme="dark"] .nesa-diagram .nd-box { filter: drop-shadow(0 1.5px 1.5px var(--pc-shadow-drop, rgba(0,0,0,.6))); }
+.nesa-diagram .nd-box { fill: var(--nd-paper); stroke-width: 1.6; }
+.nesa-diagram .nd-root { fill: color-mix(in srgb, var(--pc-teal, #2a6f73) 22%, var(--nd-paper)); }
+.nesa-diagram .nd-module { rx: 4px; }
+.nesa-diagram .nd-process { fill: color-mix(in srgb, var(--pc-teal, #2a6f73) 20%, var(--nd-paper)); }
+.nesa-diagram .nd-entity { fill: var(--pc-sheet, #f4ecdb); }
+.nesa-diagram .nd-store-fill { fill: color-mix(in srgb, var(--pc-mustard, #e0a93b) 26%, var(--nd-paper)); }
+.nesa-diagram .nd-text { font: 500 14px var(--font-body); }
+.nesa-diagram .nd-note, .nesa-diagram .nd-flow-label { font: 500 13px var(--font-body); fill: var(--pc-ink-soft, #4a443b); }
+.nesa-diagram .nd-flow { stroke-width: 1.6; }
+.nesa-diagram .nd-data { fill: var(--nd-paper); }
+#pa-defs .pa-inherit-head { fill: var(--pc-paper, #fbf7ee); stroke: var(--pc-ink, #1c1a17); stroke-width: 1.5; stroke-linejoin: round; }
+.pa-mult { font: 600 12.5px var(--font-mono); fill: var(--pa-ink); }
+
+/* ============================================================
+   EC symbols: Enterprise Computing notation (js/anim.js, "EC extensions")
+   System flowchart shapes reuse .pa-outline; these classes cover the
+   rest: graph edges, storyboards, schemas, network devices, Gantt tables.
+   ============================================================ */
+.pa-outline-thin { stroke: var(--pa-ink); stroke-width: 1.2; stroke-linejoin: round; }
+.pa-dots         { fill: none; stroke: var(--pa-muted); stroke-width: 1.5; stroke-dasharray: 1.5 3; stroke-linecap: round; }
+.pa-link.is-telecom { stroke-linejoin: miter; }
+.pa-link.pa-nav  { stroke: var(--pa-ink); stroke-width: 1.3; }
+.pa-link.is-net  { stroke: var(--pa-plum); stroke-width: 1.7; stroke-dasharray: 1.5 4.5; }
+.pa-edge         { stroke: var(--pa-soft); stroke-width: 1.5; }
+.pa-edge-bg      { fill: var(--pa-stage); }
+.pa-dev          { stroke: var(--pa-ink); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.pa-dev.is-line  { fill: none; }
+.pa-dev.is-bold  { stroke-width: 2.8; }
+
+/* Gantt tables (s.ganttTable) */
+.pa-ghead        { fill: var(--pc-head, #1c1a17); }
+.pa-ghead-cell   { fill: none; stroke: var(--pc-head-line, rgba(251,247,238,.35)); stroke-width: 1; }
+.pa-ghead-t      { font: 500 13px var(--font-body); fill: var(--pc-head-on, #fbf7ee); }
+.pa-gshade       { fill: var(--pa-rule); opacity: .6; }
+.pa-grow         { fill: none; stroke: var(--pa-rule); stroke-width: 1; }
+.pa-grow.is-frame { stroke: var(--pa-rule-2); }
+.pa-gbox         { fill: var(--pa-paper); stroke: var(--pa-soft); stroke-width: 1; }
+.pa-gbox-line    { fill: none; stroke: var(--pa-ink); stroke-width: 1.5; stroke-linecap: round; }
+.pa-gmile        { fill: var(--pa-paper); stroke-width: 2; stroke-linejoin: round; }
+.pa-gmile.pa-tone-teal { stroke: var(--pa-teal); } .pa-gmile.pa-tone-plum { stroke: var(--pa-plum); }
+.pa-gmile.pa-tone-sage { stroke: var(--pa-sage); } .pa-gmile.pa-tone-terra { stroke: var(--pa-terra); }
+.pa-gmile.pa-tone-mustard { stroke: var(--pa-mustard); }
+.pa-dep.is-solid { stroke-dasharray: none; stroke: var(--pa-ink); stroke-width: 1.2; stroke-linejoin: miter; }
+.anim-svg text.pa-tx-teal { fill: var(--pa-teal); } .anim-svg text.pa-tx-plum { fill: var(--pa-plum); }
+.anim-svg text.pa-tx-sage { fill: var(--pa-sage); } .anim-svg text.pa-tx-terra { fill: var(--pa-terra); }
+.anim-svg text.pa-tx-mustard { fill: var(--pa-ink); }
+.anim-svg tspan.pa-tx-ink { fill: var(--pa-ink); font-weight: 600; }
+.pa-gbody         { fill: var(--pa-paper); }
+.f-teal-r    { fill: color-mix(in srgb, var(--pa-teal) 30%, var(--pa-paper)); }
+.f-plum-r    { fill: color-mix(in srgb, var(--pa-plum) 30%, var(--pa-paper)); }
+.f-sage-r    { fill: color-mix(in srgb, var(--pa-sage) 30%, var(--pa-paper)); }
+.f-terra-r   { fill: color-mix(in srgb, var(--pa-terra) 30%, var(--pa-paper)); }
+.f-mustard-r { fill: color-mix(in srgb, var(--pa-mustard) 45%, var(--pa-paper)); }
+.pa-glyph        { fill: none; stroke: var(--pa-ink); stroke-width: 1.4; stroke-linecap: round; }
+/* Small labels in still diagrams stay legible */
+.anim-still .pa-t-sm { font-size: 12.5px; }
+.anim-still .pa-t-xs { font-size: 12px; }
