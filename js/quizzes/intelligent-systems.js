@@ -1,27 +1,71 @@
 /* Quiz bank for Intelligent Systems (topics/intelligent-systems.html).
    One entry per data-quiz key on the page: is-1, is-2, is-3.
-   Each question: { q: "…", options: ["…", "…", "…"], answer: <index of the right option>, why: "…" }.
-   The samples below only prove the machinery works: replace each with 4 to 6 real questions. */
+   Each question: { q: "…", options: ["…", "…", "…", "…"], answer: <index of the right option>, why: "…" }. */
 window.HSC_QUIZZES = Object.assign(window.HSC_QUIZZES || {}, {
-  // CONTENT: replace this sample with 4 to 6 questions on part 1 (Systems and their applications).
   'is-1': [
-    { q: 'Sample question: which NESA part of this topic does this quiz belong to?',
-      options: ['Systems and their applications', 'Data and intelligent systems', 'Creating intelligent systems'],
-      answer: 0,
-      why: 'This placeholder shows the quiz machinery working. It belongs to Part 1, Systems and their applications.' },
-  ],
-  // CONTENT: replace this sample with 4 to 6 questions on part 2 (Data and intelligent systems).
-  'is-2': [
-    { q: 'Sample question: which NESA part of this topic does this quiz belong to?',
-      options: ['Systems and their applications', 'Data and intelligent systems', 'Creating intelligent systems'],
+    { q: "A loan officer receives a risk score calculated by fixed rules, but may approve an exception for a long-standing customer. In NESA's terms, which category of decision is this?",
+      options: ["Unstructured", "Semi-structured", "Structured", "Heuristic"],
       answer: 1,
-      why: 'This placeholder shows the quiz machinery working. It belongs to Part 2, Data and intelligent systems.' },
-  ],
-  // CONTENT: replace this sample with 4 to 6 questions on part 3 (Creating intelligent systems).
-  'is-3': [
-    { q: 'Sample question: which NESA part of this topic does this quiz belong to?',
-      options: ['Systems and their applications', 'Data and intelligent systems', 'Creating intelligent systems'],
+      why: "Semi-structured decisions follow a specified set of finite instructions but still need a person to review or approve. Unstructured decisions have no complete procedure, and structured decisions are fully automated." },
+    { q: "A help-desk expert system wants to confirm one hypothesis, power_problem. It finds the rules that conclude power_problem and then checks whether their conditions are true. Which technique is this?",
+      options: ["Forward chaining", "Fuzzy logic", "Backward chaining", "Ontology classification"],
       answer: 2,
-      why: 'This placeholder shows the quiz machinery working. It belongs to Part 3, Creating intelligent systems.' },
+      why: "Backward chaining is goal-driven: it starts from the goal and works back to the facts needed to prove it. Forward chaining starts from the known facts." },
+    { q: "The rules are R1: IF A AND B THEN C; R2: IF C THEN D; R3: IF D AND E THEN F. The facts given are A, B and E. Which new facts does forward chaining add?",
+      options: ["C, D and F", "C and D", "C only", "None, because F is not given"],
+      answer: 0,
+      why: "R1 fires and adds C. R2 then fires and adds D. R3 now has D and E, so it fires and adds F." },
+    { q: "In a greenhouse, a temperature of 24 degrees is Warm to degree 0.6 and Hot to degree 0.4. The rules are Warm gives fan 50% and Hot gives fan 100%. Using a weighted average, what is the fan speed?",
+      options: ["60%", "75%", "80%", "70%"],
+      answer: 3,
+      why: "(0.6 × 50 + 0.4 × 100) ÷ (0.6 + 0.4) = (30 + 40) ÷ 1 = 70%. Fuzzy logic gives a smooth output instead of a sudden jump between two settings." },
+    { q: "Which statement defines webometrics accurately?",
+      options: ["The quantitative study of web resources, including links, content and usage", "Measuring how fast one website loads", "Encrypting traffic between a browser and a website", "Predicting which websites will fail"],
+      answer: 0,
+      why: "Webometrics applies quantitative methods to the web, for example analysing links between pages. It is one of the data sources that helped move web ranking from fixed rules towards probability." }
+  ],
+  'is-2': [
+    { q: "A fruit-packing shed wants its intelligent system to keep controlling equipment when the internet link drops, while still using cloud analytics. Which design best meets this?",
+      options: ["Send every reading straight to a cloud server and wait for a reply", "Use a local server and edge gateway for control, with the cloud for storage and analytics", "Store all data on the end-point devices only", "Use Bluetooth for every connection"],
+      answer: 1,
+      why: "Local processing keeps working without the internet, and the cloud adds capacity and AI services. Depending on the cloud alone would stop the shed when the link fails." },
+    { q: "A soil probe reports every second, but the system only needs 15-minute averages and an alert when moisture leaves a safe band. What is the best way to handle the surplus data?",
+      options: ["Store every reading forever in case it is useful", "Turn the probe off overnight", "Filter and average at an edge gateway and send only averages and alerts", "Send every reading to the cloud and delete it after a year"],
+      answer: 2,
+      why: "Filtering at the edge keeps the relevant data and removes the surplus, saving bandwidth, storage and privacy risk. Keeping everything just in case adds cost and risk with no decision value." },
+    { q: "Which is the best example of simulation being used in a high-risk application?",
+      options: ["A fire agency models how a bushfire could spread in given weather to plan warnings", "A spreadsheet that lists staff birthdays", "A loyalty card that records customer purchases", "A form that checks an email address has an @ symbol"],
+      answer: 0,
+      why: "Simulation lets an organisation test dangerous scenarios without harm. The other options are records or validation, not simulation of a risky situation." },
+    { q: "Which of these is an example of sniffing?",
+      options: ["A retailer analysing loyalty-card purchases to target offers", "A bank blocking an unusual card payment", "A user posting abusive comments to provoke others", "Capturing packets on an open Wi-Fi network to read unencrypted passwords"],
+      answer: 3,
+      why: "Sniffing is capturing and inspecting network traffic. The first is a loyalty scheme, the second is fraud prevention and the third is trolling." },
+    { q: "How does AI support efficiency in an IoT network through predictive maintenance?",
+      options: ["It sends every sensor reading to a person to check", "It replaces the sensors with cameras", "It learns a pump's normal readings, flags drift early and lets a repair be scheduled before a breakdown", "It stops the pump every night to save power"],
+      answer: 2,
+      why: "A model that learns what normal looks like can spot early signs of failure, reducing unplanned downtime. The efficiency gain comes from the mechanism, not just from using AI." }
+  ],
+  'is-3': [
+    { q: "A rule has a certainty factor of 0.8. It needs two conditions joined by AND, and the evidence for them has certainty factors of 0.9 and 0.6. Using the minimum for AND, what is the certainty factor of the conclusion?",
+      options: ["0.72", "0.60", "0.54", "0.48"],
+      answer: 3,
+      why: "The evidence is min(0.9, 0.6) = 0.6. The conclusion is 0.8 × 0.6 = 0.48." },
+    { q: "Two separate rules support the same conclusion with certainty factors of 0.6 and 0.5. What is the combined certainty factor using CF1 + CF2 × (1 − CF1)?",
+      options: ["1.10", "0.80", "0.30", "0.55"],
+      answer: 1,
+      why: "0.6 + 0.5 × (1 − 0.6) = 0.6 + 0.2 = 0.8. Combining supporting evidence raises the certainty but never above 1." },
+    { q: "A flowchart has three decisions, each with a Yes and a No exit, and its paths finish at four different actions. How many IF–THEN rules will the knowledge base need?",
+      options: ["4", "3", "6", "8"],
+      answer: 0,
+      why: "Each complete path from START to an action becomes one rule, and there are four actions reached by four paths." },
+    { q: "A student compares three prices in a supplier's emailed price list with recent invoices and confirms the differences with the supplier. Which describes this?",
+      options: ["Validation, because the values were checked for format", "Verification, because the values were checked against independent evidence of the source", "Simulation, because made-up data was used", "Automation, because no user was involved"],
+      answer: 1,
+      why: "Verification checks that data is true and comes from a trustworthy source. Validation is an automatic check that a value has the right type, format or range." },
+    { q: "A decision support system proposed an order of 100 units and 120 units actually sold. What is the error as a percentage of actual sales?",
+      options: ["20%", "12%", "16.7%", "83.3%"],
+      answer: 2,
+      why: "The error is 20 units, and 20 ÷ 120 = 0.167, or 16.7% of actual sales. That is outside a tolerance of plus or minus 10%." }
   ],
 });
