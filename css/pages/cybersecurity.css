@@ -1,0 +1,109 @@
+/* Principles of Cybersecurity: the risk-matrix explorer and the passphrase estimator.
+   Uses the theme's custom properties so light and dark mode both work. */
+.cy-widget {
+  --risk-low: #cfe8d6;   --risk-low-ink: #123d26;
+  --risk-med: #f6e0a8;   --risk-med-ink: #4a3300;
+  --risk-high: #f6c4bd;  --risk-high-ink: #5c1410;
+  --risk-ext: #c8372d;   --risk-ext-ink: #ffffff;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem 1.1rem 1.2rem;
+  margin: 1.5rem 0;
+  box-shadow: var(--shadow-sm);
+}
+[data-theme="dark"] .cy-widget {
+  --risk-low: #21503a;   --risk-low-ink: #d8f3e3;
+  --risk-med: #5d4a12;   --risk-med-ink: #fdecb8;
+  --risk-high: #6b2a26;  --risk-high-ink: #fde0dc;
+  --risk-ext: #d9443a;   --risk-ext-ink: #ffffff;
+}
+.cy-widget h4 { margin: 0 0 .25rem; font-size: 1.05rem; }
+.cy-widget .cy-lead { margin: 0 0 1rem; color: var(--text-secondary); font-size: .92rem; }
+.cy-widget label, .cy-widget .cy-label { font-weight: 600; font-size: .85rem; color: var(--text-primary); display: block; margin-bottom: .25rem; }
+.cy-widget select, .cy-widget input[type="range"] { width: 100%; }
+.cy-widget select {
+  font: inherit; font-size: .9rem; padding: .45rem .55rem; color: var(--text-primary);
+  background: var(--bg-tertiary); border: 1px solid var(--border-strong); border-radius: var(--radius-md);
+}
+.cy-widget button:focus-visible, .cy-widget select:focus-visible, .cy-widget input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Risk matrix explorer */
+.cy-risk { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 1.25rem; align-items: start; }
+.cy-grid-wrap { display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); grid-template-rows: 1fr auto; gap: .35rem; }
+.cy-axis-y { writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; font-weight: 700; font-size: .82rem; color: var(--text-secondary); }
+.cy-axis-x { grid-column: 2; text-align: center; font-weight: 700; font-size: .82rem; color: var(--text-secondary); }
+.cy-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; min-width: 0; }
+.cy-cell {
+  position: relative; aspect-ratio: 1 / .78; min-height: 46px; min-width: 0; padding: 2px; cursor: pointer; overflow: hidden;
+  border: 2px solid transparent; border-radius: var(--radius-md);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  font: 600 .85rem var(--font-display); transition: transform var(--transition), border-color var(--transition);
+}
+.cy-cell:hover { transform: translateY(-1px); border-color: var(--text-secondary); }
+.cy-cell[aria-pressed="true"] { border-color: var(--text-primary); box-shadow: 0 0 0 2px var(--accent); }
+.cy-cell.is-low  { background: var(--risk-low);  color: var(--risk-low-ink); }
+.cy-cell.is-med  { background: var(--risk-med);  color: var(--risk-med-ink); }
+.cy-cell.is-high { background: var(--risk-high); color: var(--risk-high-ink); }
+.cy-cell.is-ext  { background: var(--risk-ext);  color: var(--risk-ext-ink); }
+.cy-marks { display: flex; flex-wrap: wrap; gap: 2px; justify-content: center; }
+.cy-mark {
+  font: 700 .72rem var(--font-display); padding: 1px 5px; border-radius: 10px;
+  background: var(--year12, #6D3FD9); color: #fff; line-height: 1.35;
+}
+.cy-scale { display: flex; justify-content: space-between; font-size: .72rem; color: var(--text-muted); margin-top: .2rem; }
+.cy-out { border: 1px solid var(--border); border-radius: var(--radius-md); padding: .9rem 1rem; background: var(--bg-tertiary); }
+.cy-score { display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; margin: .5rem 0; }
+.cy-score b { font: 700 2rem var(--font-display); line-height: 1; }
+.cy-badge { padding: .15rem .6rem; border-radius: 999px; font: 700 .85rem var(--font-display); }
+.cy-badge.is-low  { background: var(--risk-low);  color: var(--risk-low-ink); }
+.cy-badge.is-med  { background: var(--risk-med);  color: var(--risk-med-ink); }
+.cy-badge.is-high { background: var(--risk-high); color: var(--risk-high-ink); }
+.cy-badge.is-ext  { background: var(--risk-ext);  color: var(--risk-ext-ink); }
+.cy-out p { margin: .35rem 0; font-size: .9rem; }
+.cy-fields { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; margin-bottom: .6rem; }
+.cy-toggle { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-md); overflow: hidden; margin: .25rem 0 .75rem; }
+.cy-toggle button {
+  font: 600 .85rem var(--font-body); padding: .45rem .8rem; border: 0; cursor: pointer;
+  background: var(--bg-tertiary); color: var(--text-secondary);
+}
+.cy-toggle button[aria-pressed="true"] { background: var(--primary); color: #fff; }
+.cy-register { margin-top: 1rem; }
+.cy-register table { width: 100%; font-size: .85rem; }
+.cy-register td, .cy-register th { vertical-align: top; }
+.cy-register tr.is-active td { background: color-mix(in srgb, var(--accent) 16%, transparent); }
+.cy-register .cy-badge { font-size: .75rem; padding: .05rem .5rem; white-space: nowrap; }
+
+/* Passphrase estimator */
+.cy-pass { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; margin-bottom: .9rem; }
+.cy-pass output { font-weight: 700; }
+.cy-meter { height: 12px; border-radius: 6px; background: var(--bg-secondary); overflow: hidden; margin: .4rem 0 .2rem; }
+.cy-meter > span { display: block; height: 100%; width: 0; background: var(--risk-ext); transition: width 220ms ease, background-color 220ms ease; }
+.cy-meter > span.is-med  { background: #d9a020; }
+.cy-meter > span.is-high { background: #7fb069; }
+.cy-meter > span.is-ext  { background: var(--success); }
+.cy-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .6rem; margin: .8rem 0 .4rem; }
+.cy-fact { border: 1px solid var(--border); border-radius: var(--radius-md); padding: .55rem .7rem; background: var(--bg-tertiary); }
+.cy-fact span { display: block; font-size: .75rem; color: var(--text-muted); }
+.cy-fact b { font: 700 1.05rem var(--font-display); overflow-wrap: anywhere; }
+.cy-note { font-size: .82rem; color: var(--text-muted); margin: .5rem 0 0; }
+
+/* Content helpers used on this page */
+.cy-rating { display: inline-block; padding: .05rem .5rem; border-radius: 999px; font-weight: 700; font-size: .78rem; }
+.cy-rating.is-low  { background: #cfe8d6; color: #123d26; }
+.cy-rating.is-med  { background: #f6e0a8; color: #4a3300; }
+.cy-rating.is-high { background: #f6c4bd; color: #5c1410; }
+.cy-rating.is-ext  { background: #c8372d; color: #fff; }
+
+@media (max-width: 720px) {
+  .cy-risk { grid-template-columns: minmax(0, 1fr); }
+  .cy-pass { grid-template-columns: minmax(0, 1fr); }
+  .cy-cell { min-height: 44px; font-size: .78rem; }
+  .cy-mark { font-size: .66rem; padding: 0 4px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cy-cell, .cy-meter > span { transition: none; }
+  .cy-cell:hover { transform: none; }
+}
+.cy-risk > div, .cy-pass > div { min-width: 0; }
+.cy-widget { min-width: 0; max-width: 100%; }

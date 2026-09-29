@@ -1,0 +1,218 @@
+[
+  {
+    "id": "term-privacy-act",
+    "name": "Privacy Act 1988",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "Australian Commonwealth law that regulates how agencies and many organisations collect, use, store and disclose personal information, through the Australian Privacy Principles.",
+    "example": "A retailer with $20 million annual turnover must follow the Privacy Act when it stores customer addresses."
+  },
+  {
+    "id": "term-personal-information",
+    "name": "Personal Information",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "Information or an opinion about an identified individual, or an individual who is reasonably identifiable.",
+    "example": "A customer's name, email address and delivery address."
+  },
+  {
+    "id": "term-least-privilege",
+    "name": "Least Privilege",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "The principle that users and programs receive only the minimum access needed to do their job.",
+    "example": "A receptionist can read appointments but cannot open clinical notes."
+  },
+  {
+    "id": "term-rbac",
+    "name": "Role-Based Access Control",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "A method of granting permissions to roles, then assigning people to roles, instead of granting rights person by person.",
+    "example": "A clinic gives the Doctor role write access to clinical notes and the Receptionist role none."
+  },
+  {
+    "id": "term-cia-triad",
+    "name": "CIA Triad",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "The three attributes of information security: confidentiality, integrity and availability.",
+    "example": "Ransomware that locks files breaches availability; a leaked database breaches confidentiality."
+  },
+  {
+    "id": "term-vulnerability",
+    "name": "Vulnerability",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "A weakness in data, people, processes or technology that a threat actor can exploit.",
+    "example": "An internet-facing server that has not been patched."
+  },
+  {
+    "id": "term-social-engineering",
+    "name": "Social Engineering",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "Manipulating people, rather than technology, into revealing information or giving access.",
+    "example": "A caller pretending to be IT support asks an employee to read out a login code."
+  },
+  {
+    "id": "term-smishing",
+    "name": "Smishing",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "Phishing carried out by SMS text message, tricking the recipient into following a link or giving information.",
+    "example": "A text claiming to be a toll operator with a link to a fake payment page."
+  },
+  {
+    "id": "term-botnet",
+    "name": "Botnet",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "A network of infected devices (bots) controlled remotely by an attacker, often to run a DDoS attack or send spam.",
+    "example": "Thousands of infected home routers flood a website with requests at once."
+  },
+  {
+    "id": "term-evil-twin",
+    "name": "Evil Twin",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "A rogue Wi-Fi access point that copies a legitimate network's name so nearby devices connect to it and their traffic can be intercepted.",
+    "example": "An attacker broadcasts 'Cafe_Free_WiFi' next to a real cafe network."
+  },
+  {
+    "id": "term-credential-stuffing",
+    "name": "Credential Stuffing",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "An attack that automatically tries username and password pairs leaked from one breach on other sites, relying on password reuse.",
+    "example": "Stolen email and password pairs are tested against a streaming service login."
+  },
+  {
+    "id": "term-mfa",
+    "name": "Multi-Factor Authentication",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "Verifying identity with two or more different types of proof: something you know, have or are.",
+    "example": "A password plus a code from an authenticator app."
+  },
+  {
+    "id": "term-air-gap",
+    "name": "Air Gap",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "Keeping a system physically or logically disconnected from other networks so it cannot be reached across them.",
+    "example": "An offline backup server that is never connected to the office network."
+  },
+  {
+    "id": "term-3-2-1-backup",
+    "name": "3-2-1 Backup Rule",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "A backup guideline of keeping three copies of data on two types of media, with one copy offsite.",
+    "example": "Live data on a server, a copy on a storage device, and a copy on tape at another site."
+  },
+  {
+    "id": "term-firewall",
+    "name": "Firewall",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "Hardware or software that filters network traffic against a set of rules, allowing or blocking it.",
+    "example": "A firewall that denies all traffic from guest Wi-Fi to the staff network."
+  },
+  {
+    "id": "term-risk-matrix",
+    "name": "Risk Matrix",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "A grid that rates a risk by combining its likelihood and its consequence, usually as a score with bands such as Low, Medium, High and Extreme.",
+    "example": "Likelihood 4 times consequence 5 gives a score of 20, rated Extreme."
+  },
+  {
+    "id": "term-residual-risk",
+    "name": "Residual Risk",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "The level of risk that remains after treatments and controls have been applied.",
+    "example": "Full-disk encryption reduces the risk of a lost laptop from High to Low."
+  },
+  {
+    "id": "term-notifiable-data-breach",
+    "name": "Notifiable Data Breach",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "A breach involving personal information that is likely to result in serious harm and must be reported to the OAIC and affected individuals under the Privacy Act.",
+    "example": "A misdirected spreadsheet of customers' identity documents that cannot be recovered."
+  },
+  {
+    "id": "term-essential-eight",
+    "name": "Essential Eight",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "A set of eight mitigation strategies published by the Australian Signals Directorate, with maturity levels, to help organisations defend against cyber threats.",
+    "example": "Multi-factor authentication and regular backups are two of the eight."
+  },
+  {
+    "id": "term-ransomware",
+    "name": "Ransomware",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "Malicious software that encrypts files or locks systems and demands payment, often also threatening to publish stolen data.",
+    "example": "Warehouse systems locked until a ransom is paid."
+  },
+  {
+    "id": "term-business-email-compromise",
+    "name": "Business Email Compromise",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "A scam that takes over or imitates a business email account to trick staff into sending payments or data to a criminal.",
+    "example": "An email that appears to be from a supplier asks for a payment to a new bank account."
+  },
+  {
+    "id": "term-supply-chain-attack",
+    "name": "Supply-Chain Attack",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "An attack that compromises a supplier, software update or service that the real target trusts.",
+    "example": "Malicious code hidden in a software update that customers install."
+  },
+  {
+    "id": "term-deepfake",
+    "name": "Deepfake",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "Synthetic audio, image or video created with artificial intelligence to imitate a real person.",
+    "example": "A cloned voice of a manager asking for an urgent payment."
+  },
+  {
+    "id": "term-data-minimisation",
+    "name": "Data Minimisation",
+    "topics": [
+      "cyber"
+    ],
+    "definition": "The principle of collecting and keeping only the personal information that is needed for a stated purpose.",
+    "example": "A quiz app that asks only for an email address, not a birth date."
+  }
+]
