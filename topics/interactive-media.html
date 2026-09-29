@@ -9,14 +9,14 @@
   <meta name="robots" content="index, follow" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Interactive Media and the User Experience | HSC Enterprise Computing" />
-  <meta property="og:description" content="HSC Enterprise Computing notes on Interactive Media and the User Experience (UX, UI and digital media). NESA NSW Year 11 Preliminary syllabus, dot point by dot point." />
+  <meta property="og:description" content="Year 11 Enterprise Computing notes on interactive media and UX: UI design, file formats, compression, design thinking, data journalism and ICIP." />
   <meta property="og:url" content="https://4bzdog.github.io/HSC-Enterprise-Computing/topics/interactive-media.html" />
   <meta property="og:image" content="https://4bzdog.github.io/HSC-Enterprise-Computing/og-image.png" />
   <meta property="og:image:alt" content="HSC Enterprise Computing Notes: NESA NSW" />
   <meta property="og:site_name" content="HSC Enterprise Computing Notes" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Interactive Media and the User Experience | HSC Enterprise Computing" />
-  <meta name="twitter:description" content="HSC Enterprise Computing notes on Interactive Media and the User Experience (UX, UI and digital media). NESA NSW Year 11 Preliminary syllabus, dot point by dot point." />
+  <meta name="twitter:description" content="Year 11 Enterprise Computing notes on interactive media and UX: UI design, file formats, compression, design thinking, data journalism and ICIP." />
   <meta name="twitter:image" content="https://4bzdog.github.io/HSC-Enterprise-Computing/og-image.png" />
   <script type="application/ld+json">
   {
@@ -48,12 +48,13 @@
   <meta name="theme-color" content="#0B1B2E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- CONTENT: rewrite the meta description (and the two social descriptions above) in 120 to 160 characters. -->
-  <meta name="description" content="HSC Enterprise Computing notes on Interactive Media and the User Experience (UX, UI and digital media). NESA NSW Year 11 Preliminary syllabus, dot point by dot point." />
+  <meta name="description" content="Year 11 Enterprise Computing notes on interactive media and UX: UI design, file formats, compression, design thinking, data journalism and ICIP." />
   <!-- Theme init: prevents flash of wrong theme. The ec- prefix keeps this site's storage apart from sister sites on the same origin. -->
   <script>(function(){try{var t=localStorage.getItem('ec-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
   <link rel="stylesheet" href="../css/styles.css?v=eaa2e127" />
   <link rel="stylesheet" href="../css/theme.css?v=ea1ce127" />
+  <link rel="stylesheet" href="../css/anim.css?v=22e246f7" />
+  <link rel="stylesheet" href="../css/pages/interactive-media.css?v=13071842" />
 </head>
 <body>
 
@@ -158,8 +159,7 @@
       </nav>
       <div class="topic-title-row"><span class="topic-hero-icon ti-y11" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8.5h18"/><path d="M10.5 11.5l6 2.4-2.6 1.2-1.2 2.7z"/></svg></span><h1>Interactive Media and the User Experience</h1></div>
       <p class="text-muted-dark max-w-600 mt-2 fs-sm lh-base">
-        <!-- CONTENT: one or two sentences introducing the topic, with the key ideas in <strong>. -->
-        Notes for the NESA focus area <strong>Interactive media and the user experience</strong>, following the syllabus in order: Ubiquity of interactive media, Capture, store and integrate data and Create interactive media systems.
+        How does a message become an <strong>experience</strong>? Work through every dot point of <strong>interactive media and the user experience</strong>: UX and UI design, file formats and compression, design thinking, data journalism, and the privacy, copyright and Indigenous cultural rights issues that come with publishing media.
       </p>
       <div class="topic-header-meta">
         <span class="meta-pill year11">Year 11 — Preliminary</span>
@@ -210,8 +210,9 @@
 
         <aside class="yr11 topic-breakout" aria-label="Topic introduction">
           <span class="breakout-label">Why this matters now</span>
-          <!-- CONTENT: topic introduction. Two short paragraphs linking the topic to students' lives, then a closing question in .breakout-question with a .bq-lead label. -->
-          <p>This page covers the Interactive media and the user experience focus area of the NESA Enterprise Computing syllabus.</p>
+          <p>Every scroll, tap and swipe on your phone is interactive media: a team decided where the button sits, how big the text is, what happens when you press it and what the app learns from you. Those decisions decide whether you finish a task, feel respected or quietly give away more data than you meant to.</p>
+          <p>In this topic you will investigate how interactive media communicates, judge its social, ethical and legal issues (including Indigenous Cultural and Intellectual Property), choose file formats and compression, design a user interface with real design tools, and build and publish your own front-end and data journalism projects.</p>
+          <p class="breakout-question"><span class="bq-lead">Try this as you learn</span> Pick one app you use daily and list three design decisions that keep you using it. Which of them serve you, and which serve the company?</p>
         </aside>
 
         <!-- ═══════════════════════════════════════════════════════ -->
@@ -223,8 +224,8 @@
         </div>
 
         <aside class="yr11 topic-breakout subtopic-breakout" aria-label="Part introduction">
-          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
-          <p>This part covers 10 NESA dot points: ubiquity of interactive media.</p>
+          <p>Interactive media is everywhere, from the streaming service you watch to the game you play with friends, and each example makes choices about your data, your attention and your access. This part looks at how it communicates, its legal and ethical issues, where it came from and how it shapes behaviour, marketing and identity.</p>
+          <p class="breakout-question">Who benefits when a website makes it easier to click "Accept all" than "Reject"?</p>
         </aside>
 
         <section id="ux-communicate">
@@ -232,8 +233,69 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-01, EC-11-11)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Investigate</strong> how interactive media and the user experience (UX) is used to communicate information to an audience</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>Interactive media is a two-way conversation</h3>
+          <p>NESA defines <strong>interactive media</strong> as the use of digital technologies to present combinations of text, graphics, video, animation and/or sound in an integrated way, where the user can interact with the result. Games, media-rich websites and e-books are all examples. A poster or a radio broadcast sends a message one way. Interactive media sends a message and then <em>listens</em>: every tap, search, pause, share and abandoned form tells the sender something about whether the message worked.</p>
+          <p>To investigate how it communicates, break any example into five parts: the <strong>sender</strong> and its purpose, the <strong>message</strong> and the media used to encode it, the <strong>channel and device</strong>, the <strong>audience</strong>, and the <strong>feedback</strong> that returns to the sender. Anything that gets in the way of the message between sender and audience (slow loading, tiny text, no captions, confusing navigation) is a barrier. Removing barriers is the job of user experience design.</p>
+
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Process diagram</span></p>
+              <h4 class="figure-title">Interactive media as a conversation with an audience</h4>
+              <p class="figure-lead">A message travels to the audience, and their behaviour travels back as feedback that improves the next version.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="im-communication"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>The loop is what makes the media <em>interactive</em>: the audience is not only a receiver.</li><li>Barriers sit on the channel, between the message and the audience. They are usability and accessibility problems, not content problems.</li><li>Feedback can be explicit (comments, ratings) or implicit (where people click, how long they stay).</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Pick a website you used today. Name its sender, its purpose, one barrier you noticed and one piece of feedback you gave it without meaning to.</p>
+            </div>
+          </figure>
+
+          <h3>Matching the medium to the audience and purpose</h3>
+          <p>No single medium suits every message. Effective communication starts by asking <em>who</em> the audience is (age, language, prior knowledge, devices, abilities, connection speed) and <em>what</em> they should know or do afterwards.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Purpose</th><th>Interactive media choice</th><th>Why it communicates well</th><th>Risk to manage</th></tr></thead>
+              <tbody>
+                <tr><td>Explain a process (booking a driving test)</td><td>Step-by-step page with a short captioned video</td><td>Text for scanning, video for demonstration, captions for sound-off viewing</td><td>Video autoplay and large files on slow connections</td></tr>
+                <tr><td>Warn people quickly (a bushfire alert)</td><td>Push notification, SMS and a plain-text page</td><td>Reaches people immediately with little bandwidth</td><td>Alert fatigue; must work without images or scripts</td></tr>
+                <tr><td>Train new staff</td><td>Simulation or scenario quiz with instant feedback</td><td>Learners practise decisions safely and see consequences</td><td>Production cost; needs testing with real learners</td></tr>
+                <tr><td>Sell a product</td><td>Product page with photos, reviews, filters and a fast checkout</td><td>Reduces uncertainty and effort</td><td>Manipulative design (see digital marketing)</td></tr>
+                <tr><td>Tell a story with data</td><td>Interactive chart or map with explanatory text</td><td>The audience explores the pattern themselves</td><td>Misleading scales; inaccessible charts</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>What user experience (UX) adds</h3>
+          <p>NESA's glossary defines <strong>user experience (UX)</strong> as "the usability, ease of use, and enjoyment provided in the interaction between the customer and the product". Good UX means people can reach their goal, with little effort and few errors, and feel positive about it. International standard ISO 9241-210 describes this way of working as <em>human-centred design</em>: involve real users early, understand the context of use, and iterate from evidence. UX is broader than how a screen looks. It includes speed, clarity of wording, error messages, accessibility and support.</p>
+
+          <h3>Usability heuristics as investigation criteria</h3>
+          <p>To investigate an interface systematically, use published criteria rather than personal taste. The best known are the <strong>ten usability heuristics</strong> developed by usability researcher Jakob Nielsen in the 1990s and published by the Nielsen Norman Group. A <strong>heuristic evaluation</strong> has one or more reviewers work through an interface and record which heuristics it breaks, where, and how serious the problem is.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Heuristic (Nielsen)</th><th>In plain words</th><th>Interactive media example</th></tr></thead>
+              <tbody>
+                <tr><td>Visibility of system status</td><td>Keep users informed about what is happening</td><td>A progress bar while a video uploads</td></tr>
+                <tr><td>Match between the system and the real world</td><td>Use the user's language and familiar ideas</td><td>A shopping "cart" icon, not "order aggregation"</td></tr>
+                <tr><td>User control and freedom</td><td>Give an obvious way to undo or exit</td><td>An "Undo" after deleting a photo</td></tr>
+                <tr><td>Consistency and standards</td><td>Same words and actions mean the same thing</td><td>Buttons in the same place on every page</td></tr>
+                <tr><td>Error prevention</td><td>Design so mistakes are less likely</td><td>Greying out "Submit" until required fields are complete</td></tr>
+                <tr><td>Recognition rather than recall</td><td>Show options instead of making users remember</td><td>Recent searches shown under the search box</td></tr>
+                <tr><td>Flexibility and efficiency of use</td><td>Shortcuts for experts, simple paths for novices</td><td>Keyboard shortcuts and a tap-to-reorder button</td></tr>
+                <tr><td>Aesthetic and minimalist design</td><td>Show only what is relevant</td><td>A checkout page without distracting ads</td></tr>
+                <tr><td>Help users recognise, diagnose and recover from errors</td><td>Plain-language error messages that suggest a fix</td><td>"That email needs an @ symbol" beside the field</td></tr>
+                <tr><td>Help and documentation</td><td>Searchable, task-focused help when needed</td><td>A short "How do I return an item?" guide</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="key-terms">
+            <div class="key-term"><dt>Interactive media</dt><dd>The use of digital technologies to present text, graphics, video, animation and/or sound in an integrated way that the user can interact with (NESA glossary).</dd></div>
+            <div class="key-term"><dt>User experience (UX)</dt><dd>The usability, ease of use and enjoyment provided in the interaction between the customer and the product (NESA glossary).</dd></div>
+            <div class="key-term"><dt>Audience</dt><dd>The people a message is designed for, defined by needs, abilities, language and devices.</dd></div>
+            <div class="key-term"><dt>Heuristic evaluation</dt><dd>A review of an interface against recognised usability principles to find problems.</dd></div>
+          </div>
+
+          <div class="callout info"><strong>Scenario</strong> A regional council's event page loads slowly on phones, hides the date in an image with no alternative text, and gives no confirmation after "Register". Against the heuristics: <em>visibility of system status</em> (no confirmation), <em>error prevention and recovery</em> (no message when the form fails), and, for accessibility, a missing text alternative. Fixes are cheap: real text for the date, a clear confirmation message and compressed images.</div>
+          <div class="callout assessor"><strong>HSC exam focus</strong> "Investigate" asks you to look closely at evidence and reach a supported conclusion. Name the audience and purpose, then judge the interface against <em>named</em> criteria such as visibility of system status, consistency or accessibility. A full-mark answer links each judgement to something specific you can see in the example, and says how it changes what the audience understands or does.</div>
         </section>
 
         <hr class="divider" />
@@ -243,8 +305,42 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-07)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Investigate</strong> social, ethical and legal issues when developing and implementing interactive media systems</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>Three lenses on the same decision</h3>
+          <p>Every interactive media project raises questions that are <strong>legal</strong> (what the law requires), <strong>ethical</strong> (what is right, even if it is legal) and <strong>social</strong> (how the system affects people and communities). The lenses often disagree. A tracking script may be legal and still be ethically doubtful if users cannot understand it. Investigating means examining each issue from the point of view of the people affected, not only the developer.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Issue</th><th>Social question</th><th>Ethical question</th><th>Legal anchor (Australia)</th></tr></thead>
+              <tbody>
+                <tr><td>Privacy and data collection</td><td>Who is watched, profiled or excluded?</td><td>Is collection necessary, and did people really agree?</td><td>Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs); NSW public sector agencies, including public schools, are covered by NSW privacy law instead</td></tr>
+                <tr><td>Data security</td><td>What harm follows a breach?</td><td>Are we keeping only what we need?</td><td>Notifiable Data Breaches (NDB) scheme; OAIC oversight</td></tr>
+                <tr><td>Copyright and licensing</td><td>Who gets credit and payment for creative work?</td><td>Is "free to copy" really free?</td><td>Copyright Act 1968 (Cth); licence terms</td></tr>
+                <tr><td>Indigenous Cultural and Intellectual Property (ICIP)</td><td>Whose stories, art and knowledge are these?</td><td>Have the right people been consulted and agreed?</td><td>Not well protected by copyright law; protocols and consent are the safeguard</td></tr>
+                <tr><td>Accessibility and inclusion</td><td>Who is shut out by the design?</td><td>Is access a feature or a right?</td><td>Disability Discrimination Act 1992 (Cth); WCAG as the technical benchmark</td></tr>
+                <tr><td>Honesty and manipulation</td><td>Are people steered against their interests?</td><td>Would users endorse the nudge if they understood it?</td><td>Australian Consumer Law (misleading or deceptive conduct); Spam Act 2003</td></tr>
+                <tr><td>Safety and wellbeing</td><td>What does heavy use do to young people?</td><td>Are we designing to keep people engaged or to help them?</td><td>Online Safety Act 2021; eSafety Commissioner; the social media minimum age law for under-16s</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Issues arise at different stages</h3>
+          <p><strong>When developing</strong> a system the questions are about inputs: Do we have the right to use these images, fonts, music and data? Have the people in our photos and videos agreed, and are they old enough to agree? Are we testing with people who use assistive technology? <strong>When implementing</strong> (releasing and running) the system the questions are about ongoing effects: What data do we keep, for how long and who can see it? How will we respond to a breach, a complaint or a takedown request? Who moderates user comments?</p>
+
+          <div class="callout info"><strong>Scenario</strong> A NSW public high school builds a showcase site for Year 11 multimedia projects. Before launch the team checks: <em>consent</em> (written permission for every student's name and photo, with a way to withdraw); <em>copyright</em> (every song, image and font is original, licensed or Creative Commons with attribution); <em>ICIP</em> (any use of Aboriginal or Torres Strait Islander art, language or stories has been discussed with the local community and the school's Aboriginal education staff, with permission recorded); <em>accessibility</em> (captions, alt text and keyboard navigation); and <em>security</em> (comments moderated; no personal details in file names). None of this is optional decoration. Each item prevents a specific harm.</div>
+
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Before you publish, ask</th><th>Evidence to keep</th></tr></thead>
+              <tbody>
+                <tr><td>Do I have permission to use every asset?</td><td>Licence or permission for each item, in an asset register</td></tr>
+                <tr><td>Have people in the media agreed?</td><td>Signed consent (a guardian's for under 18s)</td></tr>
+                <tr><td>Is any cultural material involved?</td><td>Consultation notes and permission from the right custodians</td></tr>
+                <tr><td>What personal data does the system collect?</td><td>A short privacy statement and a data list</td></tr>
+                <tr><td>Can everyone use it?</td><td>An accessibility check (keyboard, contrast, captions, alt text)</td></tr>
+                <tr><td>What happens if something goes wrong?</td><td>A reporting contact and a response plan</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout assessor"><strong>HSC exam focus</strong> Use the precise term for each issue (privacy, copyright, ICIP, accessibility) and give a <em>consequence</em> for a named group, not just a definition. Distinguish "the law says" from "it would be more ethical to". When asked about development <em>and</em> implementation, show at least one issue from each stage.</div>
         </section>
 
         <hr class="divider" />
@@ -255,8 +351,46 @@
           <p class="syllabus-concept">📌 <em><strong>Research</strong> the evolution of interactive media</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>prevalence of blogs, online video and digital radio</li><li>privacy issues and the use of intellectual property, including Indigenous Cultural and Intellectual Property (ICIP)</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (research). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>A short history of interactive media</h3>
+          <p>Interactive media has changed because three things changed together: <strong>bandwidth</strong> (from dial-up to broadband and mobile data), <strong>devices</strong> (from desktop computers to smartphones, tablets and headsets) and <strong>tools</strong> (from hand-coded pages to platforms that let anyone publish). Each shift lowered the cost of creating and sharing media and raised the number of people who can take part.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Phase</th><th>What changed</th><th>Typical interactive media</th></tr></thead>
+              <tbody>
+                <tr><td>Early web (1990s)</td><td>Pages published by specialists; slow connections; mostly text and small images</td><td>Static websites, email, early online games, CD-ROMs</td></tr>
+                <tr><td>Participatory web (2000s)</td><td>Publishing tools for everyone; users create the content</td><td>Blogs, wikis, photo sharing, video sites, podcasts</td></tr>
+                <tr><td>Mobile and social (from about 2007)</td><td>Smartphones, app stores, always-on connections, social feeds</td><td>Apps, short video, live streaming, location-aware services</td></tr>
+                <tr><td>Streaming and immersive (2010s onward)</td><td>Fast broadband and 4G/5G; cloud services; headsets and AR on phones</td><td>On-demand video and audio, multiplayer online games, AR and VR experiences</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Prevalence of blogs, online video and digital radio</h3>
+          <p><strong>Blogs</strong> (from "weblog") began as personal online journals in the late 1990s. Easy platforms such as Blogger (launched 1999) and WordPress (2003) let people publish without writing HTML. Blogs turned readers into publishers, gave niche communities and independent journalists a voice, and led to the comment sections, feeds and subscriptions that later social media adopted. Many organisations now run blogs to communicate news and build trust.</p>
+          <p><strong>Online video</strong> became mainstream once broadband and better compression (see <a href="#digitise-assets">digitising assets</a>) made streaming practical. YouTube, founded in 2005, made it easy for anyone to upload and share video. Streaming services, live streaming and short-form video followed. Video is now a main way audiences learn, shop and are entertained, which is why captions, file formats and performance matter.</p>
+          <p><strong>Digital radio</strong> moves audio from analogue broadcast to digital delivery. In Australia, DAB+ digital radio began broadcasting in the capital cities in 2009, offering more stations and extra data such as station and song details. Radio also moved online through internet streaming and <strong>podcasts</strong>: audio files delivered by subscription that people play when and where they choose. This on-demand model changed radio from a schedule to a library.</p>
+          <div class="callout tip"><strong>Research tip</strong> When you research, record the source and date for every fact, prefer primary or official sources (a company's own announcement, a regulator, a national broadcaster), and cross-check dates in two places. Treat statistics about audience size as "reported by" a named source, because figures vary and go out of date.</div>
+
+          <h3>Privacy issues and the use of intellectual property</h3>
+          <p>As media became participatory, two problems grew: personal information became valuable, and it became easy to copy other people's work.</p>
+          <h4>Privacy issues</h4>
+          <p>Early websites collected little. Modern interactive media collects <strong>data trails</strong>: accounts, cookies, device and location data, purchases and behaviour. That data enables personalisation but also profiling, targeted advertising and identity theft after a breach. In Australia the <strong>Privacy Act 1988 (Cth)</strong> and the <strong>Australian Privacy Principles (APPs)</strong> set rules for how covered organisations collect, use, store and disclose personal information. Under the <strong>Notifiable Data Breaches (NDB) scheme</strong> they must notify affected people and the Office of the Australian Information Commissioner (OAIC) about eligible breaches likely to cause serious harm. The 2022 breaches at Optus and Medibank, in which customers' personal information was accessed by criminals, made many Australians more aware of how much data organisations hold and how long they keep it. Since then, changes such as the Privacy and Other Legislation Amendment Act 2024, which created a statutory tort for serious invasions of privacy, have increased the pressure on organisations.</p>
+          <h4>Intellectual property (IP)</h4>
+          <p><strong>Copyright</strong> is a form of intellectual property. Under the <strong>Copyright Act 1968 (Cth)</strong>, copyright arises automatically when an original work (text, image, music, film, software) is created and recorded. There is no registration. The owner, usually the creator unless an employment contract or assignment says otherwise, controls copying, publishing and adapting the work. Copyright lasts for a long time (for most works, the life of the creator plus 70 years), so most media found online is <em>not</em> free to reuse. Creators also have <strong>moral rights</strong>: to be attributed, not to be falsely credited and not to have the work treated in a derogatory way.</p>
+          <p>Australia does not have a general "fair use" rule. It has specific <strong>fair dealing</strong> exceptions, such as research or study, criticism or review, parody or satire, and reporting news, each with limits. "It's for a school project" does not automatically make copying legal. Instead, choose media with a clear <strong>licence</strong>: your own work, work you have permission to use, public-domain work, or work under an open licence such as <a href="https://creativecommons.org/share-your-work/cclicenses/" target="_blank" rel="noopener">Creative Commons</a> (see <a href="#creative-processes">supporting creative processes</a>). The <a href="https://www.legislation.gov.au/C1968A00063/latest/text" target="_blank" rel="noopener">Copyright Act 1968</a> is on the Federal Register of Legislation, and the Australian Copyright Council explains it in plain language at <a href="https://www.copyright.org.au/" target="_blank" rel="noopener">copyright.org.au</a>.</p>
+
+          <h4>Indigenous Cultural and Intellectual Property (ICIP)</h4>
+          <p><strong>Indigenous Cultural and Intellectual Property (ICIP)</strong> is the term used for the rights that Aboriginal and Torres Strait Islander Peoples hold in their cultural heritage: for example their knowledge, stories, languages, art, designs, music, dance, ceremonies and cultural sites. ICIP belongs to communities and is connected to Country, kinship and cultural responsibility. It is not simply a resource for other people to use.</p>
+          <p>Copyright law fits ICIP poorly. Copyright generally protects an individual creator's original work for a limited time. ICIP is often <em>communal</em>, passed down through generations, and continues to live in the community. As Dr Terri Janke, an Indigenous Australian solicitor who has led this work for many years, and others have explained, Australian copyright law does not on its own prevent the misuse, distortion or alteration of communally owned cultural material. That is why ethical protocols matter.</p>
+          <p>The <em>Protocols for using First Nations Cultural and Intellectual Property in the Arts</em>, authored by Dr Terri Janke and published through the Australia Council for the Arts (now Creative Australia), guide artists, designers and media makers. Its principles include <strong>respect</strong> for cultural heritage, <strong>self-determination</strong>, <strong>communication, consultation and consent</strong>, correct <strong>interpretation</strong>, cultural integrity, protection of <strong>secret or sacred</strong> material, <strong>attribution</strong>, <strong>benefit sharing</strong> and the <strong>recognition and protection</strong> of cultures. (Check the current edition for the exact wording.) Terri Janke and Company's <a href="https://www.terrijanke.com.au/true-tracks" target="_blank" rel="noopener">True Tracks</a> framework applies similar ideas to business and organisations.</p>
+          <div class="callout warning"><strong>Practical rules for your projects</strong> Do not copy Aboriginal or Torres Strait Islander art, designs, stories, language or music from the internet into your media. Ask who the custodians are, contact them (through the school's Aboriginal education staff, a local Aboriginal Education Consultative Group or an Aboriginal community organisation) and get permission for the specific use. Credit the community and the artist. Share any benefit fairly. Some communities have protocols about showing the names or images of people who have passed away, so check the guidance that comes with the material.</div>
+          <div class="key-terms">
+            <div class="key-term"><dt>Blog</dt><dd>A regularly updated website of dated entries, usually shown with the newest first and often open to comments.</dd></div>
+            <div class="key-term"><dt>Podcast</dt><dd>A series of audio (or video) episodes delivered by subscription for on-demand listening.</dd></div>
+            <div class="key-term"><dt>Copyright</dt><dd>The legal right, arising automatically under the Copyright Act 1968 (Cth), that gives the owner of an original work control over how it is copied and shared.</dd></div>
+            <div class="key-term"><dt>Indigenous Cultural and Intellectual Property (ICIP)</dt><dd>The rights of Aboriginal and Torres Strait Islander Peoples in their cultural heritage, including knowledge, art, stories and languages.</dd></div>
+          </div>
+          <div class="callout assessor"><strong>HSC exam focus</strong> "Research" is not a memory test; expect to show what you found <em>and</em> where it came from. A strong answer on privacy or IP names the correct Australian instrument (Privacy Act 1988, Copyright Act 1968), states one specific issue and gives a real or realistic example. When ICIP appears, say clearly that the issue is <em>consultation and consent</em> with the relevant community, not only "giving credit".</div>
         </section>
 
         <hr class="divider" />
@@ -267,8 +401,30 @@
           <p class="syllabus-concept">📌 <em><strong>Describe</strong> the contribution of interactive media systems to a range of enterprises</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>how simulation, gamification and augmented reality (AR) support online training and learning</li><li>how streaming services, gaming and virtual reality (VR) improve access to entertainment</li><li>how specialist apps support delivery tracking, advertising and communication</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (describe). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>An <strong>enterprise</strong> is an activity that produces goods or services, from a corner shop to a national broadcaster. Interactive media contributes to enterprises by reaching customers, training staff, delivering services and gathering data. The three groups below correspond to the three NESA "including" points.</p>
+
+          <h3>Simulation, gamification and AR in online training and learning</h3>
+          <p>A <strong>simulation</strong> is a digital model that lets people practise a task and see the results without real-world risk or cost. Flight, driving and machinery simulators, and clinical simulations that let nursing students practise patient assessment, are common examples. Learners can repeat difficult or dangerous tasks as often as they need, and the system can record every decision for feedback.</p>
+          <p><strong>Gamification</strong> is, in NESA's words, the adjustment of a task using digital technologies into a computer game in an attempt to make it more appealing. Points, badges, levels, streaks and leaderboards add motivation to routine training such as safety modules or language practice. It works best when the game elements reward genuine learning; it can backfire if learners chase points and ignore content.</p>
+          <p><strong>Augmented reality (AR)</strong> overlays computer-generated information on the real environment, through a phone camera or smart glasses. In training, AR can label the parts of a machine as a trainee looks at it or show a repair step in place, so that instructions appear where they are needed. Because AR relies on a camera, location and sensors, it also raises privacy questions about what is being captured.</p>
+
+          <h3>Streaming, gaming and VR improving access to entertainment</h3>
+          <p><strong>Streaming services</strong> deliver video and audio over the internet on demand, so viewers watch when and where they like without buying a disc or waiting for a broadcast. Australian audiences use national broadcasters' catch-up services and commercial and international subscription services. Streaming reduces the barriers of distance, timing and cost: a viewer in a remote town can watch the same programs as a viewer in the city, provided they have a reliable connection. <strong>Video games</strong>, from phone games to console and PC titles, bring interactive stories and shared play to people of all ages, and online play lets friends in different places play together.</p>
+          <p><strong>Virtual reality (VR)</strong> places the user inside a simulated three-dimensional environment using a headset and motion tracking. It can give access to experiences that are otherwise out of reach, such as touring a museum, sitting in a concert audience or exploring a place without travelling, and it can be a comfortable way to take part for people with limited mobility. Its limits are cost, the need for space and powerful hardware, and motion discomfort for some users.</p>
+
+          <h3>Specialist apps: delivery tracking, advertising and communication</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Purpose</th><th>How the app works</th><th>Benefit to the enterprise</th><th>Concern</th></tr></thead>
+              <tbody>
+                <tr><td>Delivery tracking</td><td>Scans and GPS locations from couriers update a parcel's status and estimated arrival; the app pushes notifications</td><td>Fewer "where is my order?" calls; happier customers; route data for planning</td><td>Location data about drivers and customers must be protected</td></tr>
+                <tr><td>Advertising</td><td>Retail and loyalty apps send offers based on purchase history and location; ads can be displayed inside other apps</td><td>Direct, measurable contact with customers</td><td>Profiling, over-messaging, consent under the Spam Act 2003</td></tr>
+                <tr><td>Communication</td><td>Messaging, video meetings and team chat apps connect staff and customers in real time</td><td>Faster decisions; remote and regional staff included</td><td>Information overload; security of confidential messages</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout info"><strong>Scenario</strong> A regional hospital trains nursing students with a clinical simulation and gives them a points-and-badges quiz for medication safety (gamification). A logistics firm's app shows a parcel's status and estimated arrival on a map, and messages the customer if it is delayed. A farm co-op's app lets members receive market price alerts and message the co-op's buyers. In each case the enterprise gains reach and speed, and the users need clear privacy information and a way to opt out of alerts.</div>
+          <div class="callout assessor"><strong>HSC exam focus</strong> "Describe" needs the <em>contribution</em>, not just the technology: say what the media does for the enterprise or its customers (reach, cost, safety, speed, access) and give a specific example. A mark is usually earned for each correct link between a technology and an outcome, so name both.</div>
         </section>
 
         <hr class="divider" />
@@ -278,8 +434,49 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-08, EC-11-10)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Evaluate</strong> the performance requirements of hardware for specific interactive media projects</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (evaluate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>Evaluating means judging against criteria</h3>
+          <p>To evaluate hardware for an interactive media project, first list what the project must do, then compare hardware against those requirements, then make a justified judgement. NESA's glossary defines <em>evaluate</em> as making a judgement based on criteria and determining value. The wrong question is "What is the best computer?" The right question is "What is the <em>cheapest hardware that reliably meets this project's requirements, including for the audience's devices?</em>"</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Component</th><th>What to measure</th><th>Why it matters for interactive media</th></tr></thead>
+              <tbody>
+                <tr><td>Processor (CPU)</td><td>Number of cores, clock speed</td><td>Encoding video, running scripts and physics, multitasking</td></tr>
+                <tr><td>Graphics processor (GPU)</td><td>Dedicated or integrated, video memory</td><td>3D graphics, games, VR, video effects, hardware video encoding</td></tr>
+                <tr><td>Memory (RAM)</td><td>Capacity</td><td>Large images, layers and timelines are held in memory; too little causes slow, stuttering work</td></tr>
+                <tr><td>Storage</td><td>Capacity, speed (SSD or HDD), backup</td><td>Raw media is large; fast drives speed up loading and scrubbing video</td></tr>
+                <tr><td>Display</td><td>Resolution, refresh rate, colour accuracy, size</td><td>Judging colour and detail; smooth motion in games and VR</td></tr>
+                <tr><td>Audio and input devices</td><td>Microphone quality, audio interface, touch, controllers, graphics tablet, cameras and sensors</td><td>Quality of captured assets; suitability for the interaction</td></tr>
+                <tr><td>Network</td><td>Bandwidth, latency, reliability</td><td>Streaming, multiplayer response time, cloud tools and asset sharing</td></tr>
+                <tr><td>Portability and power</td><td>Weight, battery life, cooling</td><td>Fieldwork, mobile use; overheating reduces performance</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Requirements differ by project</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Project</th><th>Demanding on</th><th>Reason</th></tr></thead>
+              <tbody>
+                <tr><td>Podcast or digital radio show</td><td>Microphone and audio interface, storage; modest CPU</td><td>Clean capture matters more than processing power</td></tr>
+                <tr><td>Video editing and effects</td><td>CPU and GPU, RAM, fast storage, colour-accurate display</td><td>Large files, real-time playback and long export times</td></tr>
+                <tr><td>Interactive data story or website</td><td>Little on the author's side; the <em>audience's</em> devices and network are the constraint</td><td>Must load quickly on low-end phones and slow connections</td></tr>
+                <tr><td>Mobile AR training app</td><td>Phone camera, sensors, GPU, battery</td><td>Tracks the environment continuously and draws in real time</td></tr>
+                <tr><td>VR safety training</td><td>Headset with tracking, powerful GPU, space, low latency, high steady frame rate</td><td>Delays and dropped frames cause discomfort and break immersion</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Working out storage and bandwidth</h3>
+          <p>Calculating file sizes turns "large" into evidence. The examples below show why compression is essential.</p>
+          <ul>
+            <li><strong>One uncompressed 1080p frame:</strong> 1920 × 1080 pixels × 3 bytes (24-bit colour) = 6,220,800 bytes, about 6.2 MB.</li>
+            <li><strong>One second at 30 frames per second:</strong> 6,220,800 × 30 = 186,624,000 bytes, about 187 MB. One minute is about 11.2 GB. Editing and streaming video are only practical because of compression.</li>
+            <li><strong>CD-quality stereo audio:</strong> 44,100 samples/s × 16 bits × 2 channels = 1,411,200 bits per second, about 10.6 MB per minute.</li>
+          </ul>
+
+          <h3>Making the judgement</h3>
+          <div class="callout info"><strong>Scenario</strong> A school's media club will edit short documentaries in full HD. Option A is a standard laptop with 8 GB RAM, integrated graphics and a 256 GB drive. Option B is a laptop with 32 GB RAM, a dedicated GPU and a 1 TB SSD. Against the requirements: Option A can edit, but timelines will stutter, exports will be slow and 256 GB fills after a few projects, so storage would need to be added. Option B meets the need with room to grow but costs more and is heavier. <strong>Judgement:</strong> Option B, or A with extra fast external storage if the budget is tight, because the club's requirement is smooth editing of large files; RAM and storage matter more than display size. Note the trade-off explicitly and state the assumptions (these specifications are examples only).</div>
+          <div class="callout assessor"><strong>HSC exam focus</strong> "Evaluate" needs criteria, evidence and a <em>judgement</em>. State the project's requirements first, compare at least two options against them, weigh cost, performance, portability and the audience's devices, and finish with a clear recommendation with a reason. Listing components without a decision earns few marks.</div>
         </section>
 
         <hr class="divider" />
@@ -290,8 +487,38 @@
           <p class="syllabus-concept">📌 <em><strong>Explain</strong> how interactive media systems can support creative processes</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>sandbox gaming</li><li>social media</li><li>digital creative commons</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (explain). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>A <strong>creative process</strong> moves from an idea to a finished work through cycles of making, sharing, feedback and improving. Interactive media systems support that process by lowering the cost of trying ideas, letting creators show work-in-progress to an audience, and letting others build on it. The three NESA examples show three different supports.</p>
+
+          <h3>Sandbox gaming</h3>
+          <p>NESA describes <strong>sandbox gaming</strong> as a virtual world where players can build their playscapes, invite other players to play and test game play. Games such as Minecraft and platforms such as Roblox give players building blocks, scripting tools and a shared world rather than a fixed storyline. They support creative processes in these ways:</p>
+          <ul>
+            <li><strong>Ideate and prototype:</strong> players sketch a build or a mini-game quickly and change it instantly.</li>
+            <li><strong>Test with an audience:</strong> friends play the creation and the creator sees where they get stuck, which is usability testing in miniature.</li>
+            <li><strong>Learn design and coding:</strong> logic blocks, redstone circuits or a scripting language teach systems thinking. Education editions of these games are used in classrooms for design and history projects.</li>
+            <li><strong>Collaborate:</strong> several players build one world together, dividing roles as a real production team would.</li>
+          </ul>
+          <p>The issues to weigh are moderation of user-made content, protection of young players in shared spaces, and who owns what players create. That last point is set by each platform's terms of use.</p>
+
+          <h3>Social media</h3>
+          <p>Social media supports creative work at every stage: finding inspiration and references, sharing drafts for feedback, collaborating across distance, building a portfolio and reaching an audience. A student filmmaker can post a trailer, read the comments and re-cut the ending. Remix features (duets, stitching, sharing a template) let creators build on each other's work, which raises questions of permission and credit. Algorithms decide what is seen, so reach is not a fair measure of quality.</p>
+
+          <h3>Digital creative commons</h3>
+          <p><strong>Creative Commons (CC)</strong> is a non-profit organisation that enables the sharing of creative content without the need to seek legal approval each time (NESA glossary). Creators choose a standard licence that tells everyone in advance what they may do. Because permission is built in, others can legally reuse, adapt and combine work, which is a creative process in its own right.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Licence element</th><th>Symbol</th><th>What it means for a reuser</th></tr></thead>
+              <tbody>
+                <tr><td>Attribution</td><td>BY</td><td>You must credit the creator. Every CC licence except CC0 requires this.</td></tr>
+                <tr><td>ShareAlike</td><td>SA</td><td>If you adapt the work, you must share your new work under the same licence.</td></tr>
+                <tr><td>NonCommercial</td><td>NC</td><td>You may not use the work mainly for commercial advantage or payment.</td></tr>
+                <tr><td>NoDerivatives</td><td>ND</td><td>You may share the work unchanged, but not modify it or share modified versions.</td></tr>
+                <tr><td>Public domain dedication</td><td>CC0</td><td>The creator waives rights as far as the law allows; no conditions.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>The elements combine into six licences, from the most open (CC BY) to the most restrictive (CC BY-NC-ND). Good practice is <strong>TASL</strong> attribution: <em>Title, Author, Source, Licence</em>. For example (a made-up credit): "Reading Room" by Jordan Lee, from example.org/reading-room, licensed CC BY 4.0. Check that the person offering the work actually owns it, and check the licence version and its link. A CC licence does not remove other rights such as privacy or ICIP. A CC licence on a photo of a person does not give you permission to use their image in an advertisement, and material based on Aboriginal or Torres Strait Islander cultural heritage may need community consent even when it appears online with a CC label.</p>
+          <div class="callout info"><strong>Scenario</strong> A Year 11 group is making an interactive tour of their town. They build the base map in a sandbox game, ask followers on social media for old photos, and use only CC BY or CC0 images from a public collection, crediting each with TASL. They share the finished tour under CC BY-NC so other classes can reuse it for free but not sell it.</div>
+          <div class="callout assessor"><strong>HSC exam focus</strong> "Explain" asks how and why. For each example give the mechanism (for instance, sandbox play lets creators test ideas on real players) and the effect on the creative process. When Creative Commons appears, name at least two licence elements and what each allows or restricts.</div>
         </section>
 
         <hr class="divider" />
@@ -301,8 +528,40 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-01, EC-11-07)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Examine</strong> how human behaviour may be influenced by interactive media, including opportunities for people with disability to explore and participate in their environment</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (examine). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>How interactive media influences behaviour</h3>
+          <p>Designers use knowledge of how people think and feel to shape what they do. This is called <strong>persuasive design</strong> when it helps people reach their own goals and <strong>manipulative design</strong> when it works against them. Most techniques can be used either way. What separates them is transparency and whose interests they serve.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Technique</th><th>How it influences behaviour</th><th>Helpful use</th><th>Harmful use</th></tr></thead>
+              <tbody>
+                <tr><td>Notifications and reminders</td><td>Prompt an action at a chosen moment</td><td>A medication or study reminder</td><td>Constant alerts that pull attention away from other tasks</td></tr>
+                <tr><td>Streaks, badges and points (gamification)</td><td>Reward repeated action and make people reluctant to break a chain</td><td>Daily language practice</td><td>Pressure to log in daily or lose progress</td></tr>
+                <tr><td>Social proof and likes</td><td>People copy what others do and seek approval</td><td>"12 classmates have joined"</td><td>Comparison, anxiety about status</td></tr>
+                <tr><td>Variable rewards</td><td>Unpredictable rewards, such as a new feed item, keep people checking</td><td>Discovering new music</td><td>Compulsive refreshing</td></tr>
+                <tr><td>Autoplay and infinite scroll</td><td>Remove natural stopping points</td><td>Continuous playlists for a long journey</td><td>Watching or scrolling far longer than intended</td></tr>
+                <tr><td>Personalised recommendations</td><td>Predict what will hold attention</td><td>Relevant courses or news</td><td>Narrow "filter bubbles" and repeated exposure to the same views</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Interactive media also shapes behaviour positively. Fitness apps encourage movement, learning platforms build study habits, and civic tools help people find services or take part in consultations. The <strong>eSafety Commissioner</strong> provides guidance on online wellbeing and safety, and Australian law now sets a minimum age for holding an account on certain social media platforms (the <a href="https://www.legislation.gov.au/C2024A00127/asmade" target="_blank" rel="noopener">Online Safety Amendment (Social Media Minimum Age) Act 2024</a>, in effect from December 2025), reflecting community concern about the effect of design on young people.</p>
+          <div class="callout tip"><strong>A test you can apply</strong> Ask three questions. Is the influence <em>disclosed</em> or hidden? Does it <em>serve the user's own goals</em>? Is it <em>easy to say no</em> or stop? A "yes, yes, yes" design is persuasion. Several "no" answers point to manipulation.</div>
+
+          <h3>Opportunities for people with disability</h3>
+          <p>Well-designed interactive media can remove barriers that the physical world puts in the way, so that people with disability can explore their environment and take part in study, work, culture and social life. The key is that <strong>accessibility is designed in</strong> and that people with disability are involved in designing and testing. The technical benchmark is the W3C's <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">Web Content Accessibility Guidelines (WCAG) 2.2</a>, and in Australia the <a href="https://www.legislation.gov.au/C2004A04426/latest/text" target="_blank" rel="noopener">Disability Discrimination Act 1992 (Cth)</a> makes disability discrimination unlawful, including in the provision of services online.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Access need</th><th>Technology or design feature</th><th>What it makes possible</th></tr></thead>
+              <tbody>
+                <tr><td>Low vision or blindness</td><td>Screen readers (such as NVDA, VoiceOver, TalkBack), text alternatives for images, magnification, high contrast, audio description</td><td>Reading news, shopping, studying and using maps independently</td></tr>
+                <tr><td>Deaf or hard of hearing</td><td>Captions, transcripts, live captions, sign-language video, visual alerts</td><td>Following video, lectures, meetings and games</td></tr>
+                <tr><td>Limited movement or dexterity</td><td>Voice control, switch access, eye tracking, adaptive controllers, large touch targets, keyboard-only operation</td><td>Playing games, controlling devices and using every feature without a mouse</td></tr>
+                <tr><td>Cognitive, learning or neurodivergent needs</td><td>Plain language, predictable layouts, text-to-speech, reduced motion and quiet modes, clear step-by-step tasks</td><td>Understanding and completing tasks with less overload</td></tr>
+                <tr><td>Exploring the environment</td><td>Maps and journey planners with accessibility information, virtual tours, remote participation, smart-home control</td><td>Planning a trip, visiting a place virtually or taking part from home</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>For example, an interactive museum tour with captions, audio description and keyboard navigation lets a visitor who cannot travel, or who cannot see the exhibits, take part. Voice control and adaptive input devices allow gaming with limited hand movement. The same features often help everyone: captions are used on noisy trains and clear layouts help tired or distracted users.</p>
+          <div class="callout assessor"><strong>HSC exam focus</strong> "Examine" means to inquire into, considering more than one side. For influence, give one technique with a positive and a negative effect. For disability, match a <em>specific</em> need to a <em>specific</em> feature and say what it lets the person do (explore, learn, work or connect). Avoid vague answers such as "it helps disabled people".</div>
         </section>
 
         <hr class="divider" />
@@ -313,8 +572,63 @@
           <p class="syllabus-concept">📌 <em><strong>Investigate</strong> how digital marketing techniques influence consumer behaviour</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>guided choice (nudging)</li><li>default settings, including cookies</li><li>autofill</li><li>pop-ups promoting online shopping</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p><strong>Digital marketing</strong> promotes products and services through online channels such as search, social media, email, apps and websites. Because every click is measurable, marketers can test small design changes and keep the ones that increase sales. Understanding these techniques lets you use them responsibly and recognise when you are being steered.</p>
+
+          <h3>Guided choice (nudging)</h3>
+          <p>A <strong>nudge</strong> is a design choice that steers people towards an option without forbidding any other. The idea comes from behavioural economics and was popularised by Richard Thaler and Cass Sunstein in their book <em>Nudge</em> (2008). The way options are arranged is the <strong>choice architecture</strong>. Examples in online shopping include:</p>
+          <ul>
+            <li>a "Recommended" or "Most popular" badge on one product (social proof);</li>
+            <li>listing a mid-priced plan between a very cheap and a very expensive one so that it looks reasonable;</li>
+            <li>a "Frequently bought together" bundle;</li>
+            <li>a pre-selected delivery option.</li>
+          </ul>
+          <p>A nudge can serve the user (a default that protects privacy, a healthy option placed first) or the seller only (an expensive add-on ticked by default). A fair test: would the user be comfortable if they understood exactly what the nudge was doing?</p>
+
+          <h3>Default settings, including cookies</h3>
+          <p>Most people never change a default, a tendency called the <strong>default effect</strong> (or status quo bias). Whoever chooses the default therefore makes the decision for most users. Defaults appear in settings such as location sharing, marketing emails, auto-renewing subscriptions, and pre-ticked boxes for optional extras.</p>
+          <p><strong>Cookies</strong> are small pieces of data a website stores in your browser. <em>Session</em> cookies last until you close the browser and keep you logged in or hold your cart. <em>Persistent</em> cookies last longer and remember preferences. <em>Third-party</em> cookies, set by advertising or analytics companies embedded in the page, can follow you across many sites and build a profile. Essential cookies are needed for the site to work; analytics and advertising cookies are optional. Cookie banners exist because some regions, notably the European Union, require consent before setting non-essential cookies. Australia has no single "cookie law", but the Privacy Act 1988 and the APPs apply when cookies and similar identifiers relate to an identifiable person, so notice and transparency still matter. The <strong>default</strong> in the banner matters: an unticked box and an equal-weight "Reject" button respect the user, while pre-ticked boxes and a hidden "Manage options" link steer them.</p>
+
+          <div class="im-demo" id="im-nudge">
+            <p class="im-demo-kicker">Try it</p>
+            <h4 class="im-demo-title">Say no to cookies: count your clicks</h4>
+            <p class="im-demo-lead">A made-up shop shows a cookie banner. Pick a design, then try to <strong>refuse the optional cookies</strong>. Compare how many clicks each design asks of you.</p>
+            <fieldset class="im-mode">
+              <legend>Banner design</legend>
+              <label><input type="radio" name="im-design" value="A" checked> Design A (nudged)</label>
+              <label><input type="radio" name="im-design" value="B"> Design B (neutral)</label>
+            </fieldset>
+            <div id="im-nudge-stage"></div>
+            <p class="im-status" id="im-nudge-status" role="status" aria-live="polite"></p>
+            <p>Clicks so far: <span class="im-clicks" id="im-nudge-clicks">0</span></p>
+            <button type="button" class="im-b im-reset" data-a="reset">Start again</button>
+            <p><strong>What this design used</strong></p>
+            <ul class="im-why" id="im-nudge-why"></ul>
+            <noscript><p>This demo needs JavaScript. In design A the “Accept all” button is large and refusing takes four clicks; in design B accepting and refusing take one click each.</p></noscript>
+          </div>
+
+          <h3>Autofill</h3>
+          <p><strong>Autofill</strong> lets a browser or password manager fill in saved names, addresses, card details and passwords. It reduces typing and errors, and is a real accessibility gain for people who find typing difficult. It is also a marketing tool, because every removed step makes it easier to complete a purchase. The risks: a shared device can expose saved details, and a malicious form can include hidden fields that quietly collect autofilled data. Good practice is to use a reputable password manager, keep card autofill for trusted sites, use a device lock, and turn autofill off on shared computers. Designers should mark fields with the correct <code>autocomplete</code> attributes so autofill works, and ask only for what is needed.</p>
+
+          <h3>Pop-ups promoting online shopping</h3>
+          <p>Pop-ups appear over a page to grab attention. Common shopping examples are a "10% off if you subscribe" window, an <em>exit-intent</em> pop-up when the cursor heads for the tab bar, a reminder of items left in the cart, a countdown timer, and "Sam from Parramatta just bought this" notices. They work because they interrupt at a decision point. They also annoy users, cover content, and can trap keyboard and screen-reader users if they are not built correctly. Sending marketing email or SMS to people who sign up needs their consent and a working unsubscribe under the <strong>Spam Act 2003</strong>.</p>
+
+          <h3>Dark patterns and the law</h3>
+          <p>Design that steers people into choices that are not in their interests is called a <strong>dark pattern</strong> (a term coined by user experience designer Harry Brignull), also called deceptive design. Examples include confirmshaming ("No thanks, I don't like saving money"), extra fees revealed only at the last step, a subscription that is easy to start and hard to cancel, and fake scarcity or fake countdowns.</p>
+          <p>In Australia, the <strong>Australian Consumer Law</strong> prohibits misleading or deceptive conduct in trade or commerce and false representations, and the Australian Competition and Consumer Commission (ACCC) enforces it. In 2022 the Federal Court ordered Google to pay $60 million in penalties after the ACCC showed that Google had misled some Android users about what location data it collected. Google said one setting controlled this when another also enabled collection (see the <a href="https://www.accc.gov.au/media-release/google-llc-to-pay-60-million-for-misleading-representations" target="_blank" rel="noopener">ACCC media release</a>). The case shows that how a settings screen is worded can be a legal matter.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Technique</th><th>Example</th><th>Effect on the consumer</th><th>Ethical check</th></tr></thead>
+              <tbody>
+                <tr><td>Social proof</td><td>"Bestseller", customer reviews</td><td>Makes a choice feel safer</td><td>Are the claims true and verifiable?</td></tr>
+                <tr><td>Scarcity and urgency</td><td>"Only 2 left", countdown timer</td><td>Encourages quick decisions</td><td>Is the scarcity real? A fake timer is misleading.</td></tr>
+                <tr><td>Default</td><td>Pre-ticked marketing emails or extras</td><td>Most people accept it unchanged</td><td>Is the user's interest or the seller's served?</td></tr>
+                <tr><td>Friction asymmetry</td><td>One click to accept, several to refuse</td><td>Makes refusing harder than agreeing</td><td>Are accept and refuse equally easy?</td></tr>
+                <tr><td>Autofill and one-click buy</td><td>Saved card and address</td><td>Removes steps from purchase</td><td>Is it easy to review and cancel?</td></tr>
+                <tr><td>Interrupting pop-up</td><td>Discount for an email address</td><td>Captures attention and data</td><td>Easy to close, honest about use of the email?</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout assessor"><strong>HSC exam focus</strong> "Investigate" wants examination of <em>how</em> each technique changes behaviour. For a nudge, name the mechanism (default effect, social proof, friction) and both a benefit and a harm. Refer to the Australian Consumer Law or the Spam Act 2003 where a technique becomes misleading or non-consensual, and use the correct term (default settings, cookies, autofill, pop-up).</div>
         </section>
 
         <hr class="divider" />
@@ -325,8 +639,43 @@
           <p class="syllabus-concept">📌 <em><strong>Evaluate</strong> social media applications that encourage human connections</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>crowdsourcing through a social media app</li><li>learning via massive online open courses (MOOCs)</li><li>gaming platforms that encourage massive multiplayer online games (MMOGs)</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (evaluate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>Criteria for evaluating a connection platform</h3>
+          <p>Evaluating means judging value against criteria. For a platform that is meant to connect people, useful criteria are:</p>
+          <ul>
+            <li><strong>Quality of connection:</strong> does it help people form real relationships, share knowledge or work together?</li>
+            <li><strong>Inclusion and accessibility:</strong> who can join (cost, age limits, language, disability)?</li>
+            <li><strong>Safety and moderation:</strong> can users report abuse, and does the platform act?</li>
+            <li><strong>Privacy and data use:</strong> what does it collect, and can users control it?</li>
+            <li><strong>Wellbeing and design:</strong> does it help users stop, or keep them hooked?</li>
+            <li><strong>Reliability and reach:</strong> does it work well on ordinary devices and connections?</li>
+          </ul>
+
+          <h3>Crowdsourcing through a social media app</h3>
+          <p><strong>Crowdsourcing</strong> uses a large group of people to contribute information, ideas or work, usually online. Social media makes it fast: a community page asks residents to report potholes, a fan group identifies a song, and during a flood or bushfire people share observations and photos. Citizen-science apps, where users upload photos of plants and animals for experts to identify, collect far more sightings than a few researchers could.</p>
+          <p><em>Strengths:</em> speed, scale, local knowledge and low cost. <em>Weaknesses:</em> accuracy and bias (who takes part, who does not), rumours spreading as fact, privacy of people in photos, and no accountability. Organisations reduce these risks by verifying reports, using moderators and showing sources.</p>
+
+          <h3>Learning through massive online open courses (MOOCs)</h3>
+          <p>A <strong>massive online open course (MOOC)</strong> is an online course open to a very large number of learners, often free to start. Coursera, edX, FutureLearn and Open Universities Australia host courses from universities and other providers. Learners use videos, readings, quizzes and discussion forums, and peers connect in those forums.</p>
+          <p><em>Strengths:</em> access regardless of location, flexible pace, low or no cost, and courses in specialist topics. <em>Weaknesses:</em> many learners do not finish, there is little individual support, a reliable internet connection is needed, discussion can be uneven, and employers and institutions vary in how much they recognise a certificate.</p>
+
+          <h3>Gaming platforms and massive multiplayer online games (MMOGs)</h3>
+          <p>A <strong>massive multiplayer online game (MMOG)</strong> lets very large numbers of players share one persistent online world. Players form teams and guilds, trade, chat by voice and text, and take on shared goals. For many players, especially those who are isolated or live in remote areas, these communities offer friendships and a sense of belonging. Skills such as teamwork, leadership and problem solving develop through play.</p>
+          <p>The risks are contact with strangers, bullying and harassment, exposure to inappropriate content, in-game spending (including "loot box" mechanics that resemble gambling), and time displacing sleep and study. Platforms respond with parental controls, chat filters, reporting tools and spending limits. The eSafety Commissioner publishes guidance for young people and families.</p>
+
+          <h3>Making the judgement</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Criterion</th><th>Crowdsourcing via social app</th><th>MOOC</th><th>MMOG platform</th></tr></thead>
+              <tbody>
+                <tr><td>Quality of connection</td><td>Strong for a shared local aim; shallow for individuals</td><td>Moderate: forums, little personal contact</td><td>High for teams that play together regularly</td></tr>
+                <tr><td>Inclusion and access</td><td>Wide reach, but only those online and confident are heard</td><td>Wide reach; needs connection and language skills</td><td>Cost of hardware and subscriptions; accessibility varies by game</td></tr>
+                <tr><td>Safety and moderation</td><td>Misinformation and privacy risks</td><td>Low risk, moderated forums</td><td>Higher risk of contact with strangers; depends on tools</td></tr>
+                <tr><td>Wellbeing</td><td>Neutral if used for a purpose</td><td>Positive if paced well; isolation possible</td><td>Positive with balance; risk of overuse and spending</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Sample judgement:</strong> For building human connection, an MMOG platform is the strongest of the three because it produces repeated, shared activity, but only if safety tools are used and time is balanced. Crowdsourcing is best for a specific community task, and a MOOC is best for learning but weakest for personal connection. Your own judgement may differ if you weight the criteria differently. What matters is that you state your criteria and support your conclusion. Also note the current law: from December 2025 certain social media platforms must take reasonable steps to prevent under-16s holding accounts, which affects who can take part.</p>
+          <div class="callout assessor"><strong>HSC exam focus</strong> "Evaluate" needs criteria, evidence and a <em>judgement</em>. Choose at least two criteria, give a strength and a limitation for the named application, and end with a conclusion such as "on balance, effective because…, provided that…". Use the correct terms: crowdsourcing, MOOC, MMOG.</div>
         </section>
 
         <hr class="divider" />
@@ -337,8 +686,55 @@
           <p class="syllabus-concept">📌 <em><strong>Explore</strong> how interactive media platforms support the creation of digital identities</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>personal e-profiles</li><li>identifier versus identity</li><li>profiling and auto-profiling</li><li>privacy settings</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (explore). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Concept diagram</span></p>
+              <h4 class="figure-title">How a digital identity is built</h4>
+              <p class="figure-lead">You build an e-profile on purpose, while your data trail, identifiers and algorithms add a second, automatic layer.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="im-identity"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Two routes lead to the same digital identity: one chosen by you, one inferred about you.</li><li>Identifiers are what let separate pieces of data be joined to one account.</li><li>Privacy settings sit underneath because they control both collection and visibility.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>List three things an app could infer about you without you ever typing them, then find the setting that limits it.</p>
+            </div>
+          </figure>
+
+          <h3>Personal e-profiles</h3>
+          <p>A <strong>personal e-profile</strong> is the account page you build on a platform: display name, photo, biography, links, interests, and sometimes date of birth, school or workplace. You choose these details, so a profile is a deliberate presentation of yourself. People use different profiles for different audiences: a professional one, a gaming one, a school one. Interactive media platforms support profile creation with templates, prompts, verified badges, follower counts and portfolios. What you put in a profile is durable and searchable, and can be copied or screenshotted, so consider what a future employer or university might see.</p>
+
+          <h3>Identifier versus identity</h3>
+          <p>An <strong>identifier</strong> is a value that points to one account, person or device: a username, email address, phone number, IP address, device ID or cookie ID (and in the offline world, a student number or a Medicare number). An <strong>identity</strong> is richer: the collection of characteristics, behaviours, relationships and reputation that makes up who you are online and how others and systems see you.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th></th><th>Identifier</th><th>Identity</th></tr></thead>
+              <tbody>
+                <tr><td>What it is</td><td>A label or code that singles out one account or device</td><td>The picture built from what you say, do, like and own</td></tr>
+                <tr><td>Examples</td><td><code>jordan_lee07</code>, an email address, a device ID</td><td>"Keen cyclist and gamer who follows local news"</td></tr>
+                <tr><td>Who controls it</td><td>Often you choose it, or a system assigns it</td><td>Partly you, partly others and algorithms</td></tr>
+                <tr><td>Can one person have several?</td><td>Yes: many usernames and emails</td><td>Yes: different personas for different audiences</td></tr>
+                <tr><td>Risk</td><td>Used to link data across services</td><td>Judged, profiled and targeted</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Your <strong>digital footprint</strong> is the data you leave behind (NESA glossary). The <em>active</em> part is what you post and submit. The <em>passive</em> part is collected without you doing anything: your IP address, device details and browsing history. Identifiers connect these traces so they add up to a profile, even if you never give your name. Government "digital ID" systems, such as myID used with Australian Government services, are a different use of the words: a way to prove who you are to a service under a legal framework, the Digital ID Act 2024.</p>
+
+          <h3>Profiling and auto-profiling</h3>
+          <p><strong>Profiling</strong> is building a description of a person from data, in order to predict what they want, like or will do. It can be done by people (a manager checking your public posts) or systems. <strong>Auto-profiling</strong> means the system does it automatically, by inferring characteristics from your behaviour without you entering them: your likely age range, interests, income or life events, from what you watch, buy, search and where you go.</p>
+          <p>Profiles power the "For you" page, product recommendations, personalised prices and offers, and the ads you see. They are useful, but they can be wrong, can lock in stereotypes and bias, can feel intrusive, and can be exposed in a breach. Individuals can ask organisations covered by the Privacy Act what personal information they hold about them, and can generally ask for it to be corrected. The OAIC explains those rights and the APPs on its website (see <a href="https://www.oaic.gov.au/privacy/australian-privacy-principles" target="_blank" rel="noopener">Australian Privacy Principles</a>).</p>
+
+          <h3>Privacy settings</h3>
+          <p><strong>Privacy settings</strong> are the controls that let you decide what data is collected, who can see your profile and content, and how your information is used. Defaults are often more open than you might choose, so check them rather than assume. A short audit:</p>
+          <ol>
+            <li>Set the profile and posts to <strong>private</strong> or friends-only where possible.</li>
+            <li>Turn off <strong>location sharing</strong> and remove location from photos you share.</li>
+            <li>Limit who can <strong>tag</strong>, message or find you by phone number or email.</li>
+            <li>Review <strong>ad personalisation</strong> and turn off cross-site tracking if offered.</li>
+            <li>Check which <strong>apps and games</strong> have access to your account and remove those you no longer use.</li>
+            <li>Use unique passwords, a password manager and multi-factor authentication.</li>
+            <li>Repeat every few months, because platforms change their settings.</li>
+          </ol>
+          <div class="callout info"><strong>Scenario</strong> Jordan, 16, joins a new video app with the school email address. The app asks for a name and photo (an e-profile), sets the account to public by default, and starts recommending videos based on watch time (auto-profiling). Jordan switches the account to private, disables contact syncing, turns off personalised ads and reviews the settings again next term. Nothing about the app changed, but Jordan's identity is now more under Jordan's control.</div>
+          <div class="callout assessor"><strong>HSC exam focus</strong> "Explore" rewards breadth with accuracy. Define each term precisely: identifier (a value that points to an account or device) versus identity (the broader picture of who you are online), and show the difference with an example. For profiling, distinguish a profile you create from one the system infers, and give a benefit and a risk.</div>
         </section>
 
         <div class="quiz" data-quiz="im-1"></div>
@@ -352,8 +748,8 @@
         </div>
 
         <aside class="yr11 topic-breakout subtopic-breakout" aria-label="Part introduction">
-          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
-          <p>This part covers 5 NESA dot points: capture, store and integrate data.</p>
+          <p>Behind every image, song and video is a file format and a compression choice, and behind every screen is a design decision about how it feels to use. This part covers formats, software, digitising and compression, and the tools that turn an idea into an interface.</p>
+          <p class="breakout-question">Why does a photo of your friend look fine as a JPEG, but a screenshot of text look fuzzy?</p>
         </aside>
 
         <section id="file-formats">
@@ -361,8 +757,66 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-02, EC-11-08)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Select and use</strong> appropriate file formats for a defined purpose</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (select). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>A <strong>file format</strong> defines how data is organised inside a file. Choosing a format is a trade-off between <strong>quality</strong>, <strong>file size</strong>, <strong>features</strong> (such as transparency or animation) and <strong>compatibility</strong> with the devices and software your audience uses. Two ideas underpin the tables below: <em>bitmap</em> images store a grid of coloured pixels, while <em>vector</em> images store shapes as mathematical descriptions; and <em>lossy</em> compression discards some data to save space while <em>lossless</em> compression keeps everything (explained in full under <a href="#digitise-assets">digitising assets and compression</a>).</p>
+
+          <h3>Image formats</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Format</th><th>Type and compression</th><th>Key features</th><th>Best for</th><th>Avoid for</th></tr></thead>
+              <tbody>
+                <tr><td>JPEG (.jpg)</td><td>Bitmap; lossy</td><td>Small files for photos; no transparency; no animation</td><td>Photographs</td><td>Logos, text, screenshots (edges blur); repeated re-saving</td></tr>
+                <tr><td>PNG (.png)</td><td>Bitmap; lossless</td><td>Sharp edges; full transparency</td><td>Screenshots, logos, diagrams, images needing a transparent background</td><td>Large photos (big files)</td></tr>
+                <tr><td>GIF (.gif)</td><td>Bitmap; lossless but limited to 256 colours per frame</td><td>Simple animation; widely supported</td><td>Tiny looping graphics</td><td>Photos and long animations (poor quality, large)</td></tr>
+                <tr><td>SVG (.svg)</td><td>Vector (text-based XML)</td><td>Scales to any size without blur; small for simple shapes; can be styled and animated with CSS or scripts</td><td>Logos, icons, charts and diagrams</td><td>Photographs</td></tr>
+                <tr><td>WebP (.webp)</td><td>Bitmap; lossy or lossless</td><td>Usually smaller than JPEG or PNG at similar quality; transparency and animation</td><td>Photos and graphics on modern websites</td><td>Very old software that cannot open it</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Audio formats</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Format</th><th>Compression</th><th>Key features</th><th>Best for</th></tr></thead>
+              <tbody>
+                <tr><td>WAV (.wav)</td><td>Usually uncompressed (PCM)</td><td>Exact copy of the recording; very large files</td><td>Recording and editing; master copies</td></tr>
+                <tr><td>FLAC (.flac)</td><td>Lossless</td><td>Smaller than WAV yet restores the original exactly</td><td>Archiving and high-quality listening</td></tr>
+                <tr><td>MP3 (.mp3)</td><td>Lossy</td><td>Small files; plays almost everywhere</td><td>Podcasts, music downloads, sound effects for the web</td></tr>
+                <tr><td>AAC (.m4a, .aac)</td><td>Lossy</td><td>Often better quality than MP3 at a similar file size; common on mobile and in streaming</td><td>Streaming audio; audio track for video</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Video and other formats</h3>
+          <p>A video file has two layers. The <strong>codec</strong> compresses the video and sound, and the <strong>container</strong> packages the video, audio, subtitles and metadata into one file. MP4 is a container that most commonly holds H.264 video and AAC audio. This combination plays on almost every phone, browser and television, which is why it is the safe default for interactive media.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Format</th><th>What it is</th><th>Best for</th><th>Note</th></tr></thead>
+              <tbody>
+                <tr><td>MP4 with H.264 (.mp4)</td><td>Container with lossy H.264 video and AAC audio</td><td>General web and mobile video; maximum compatibility</td><td>Balances quality, size and support</td></tr>
+                <tr><td>WebM (.webm)</td><td>Open container for web video (VP8, VP9 or AV1 video; Vorbis or Opus audio)</td><td>Web video and short looping clips; smaller files</td><td>Needs modern browsers; provide MP4 as backup if unsure</td></tr>
+                <tr><td>PDF (.pdf)</td><td>Fixed-layout document</td><td>Printable guides and forms</td><td>Must be tagged to be accessible</td></tr>
+                <tr><td>HTML, CSS, JavaScript</td><td>Text files that describe a web page, its style and its behaviour</td><td>Interactive web-based systems</td><td>Human-readable and tiny; compress when serving</td></tr>
+                <tr><td>CSV and JSON</td><td>Plain-text data formats</td><td>Datasets for data journalism and web apps</td><td>Easy to check and share; no formatting</td></tr>
+                <tr><td>ZIP (.zip)</td><td>Lossless archive</td><td>Bundling many files for sending</td><td>Does not shrink already compressed media much</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Choosing a format for a defined purpose</h3>
+          <p>Work from the purpose to the format by asking five questions in order: <em>What is it?</em> (photo, drawing, sound, moving image, data); <em>Will it be edited again?</em> (keep a lossless master); <em>What must it do?</em> (transparency, animation, scaling); <em>Where will it be used?</em> (web, mobile, print, email); and <em>How large can it be?</em> (connection speed, storage, load time).</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Asset for the "Our Local Park" interactive site</th><th>Format chosen</th><th>Reason</th></tr></thead>
+              <tbody>
+                <tr><td>Park logo that must look sharp at any size</td><td>SVG</td><td>Vector: scales without blur; tiny file</td></tr>
+                <tr><td>Photos of the walking track</td><td>JPEG or WebP</td><td>Photographs compress well with lossy compression</td></tr>
+                <tr><td>Map screenshot with fine text</td><td>PNG</td><td>Lossless keeps text edges sharp</td></tr>
+                <tr><td>Bird calls collected on site</td><td>Master in WAV; published as MP3 or AAC</td><td>Keep the exact recording, publish a small copy</td></tr>
+                <tr><td>Interview with the ranger</td><td>MP4 (H.264 + AAC) with captions</td><td>Plays on all devices; captions for accessibility</td></tr>
+                <tr><td>Trail data (length, difficulty)</td><td>CSV or JSON</td><td>Easy for a script to read</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout tip"><strong>Using formats well</strong> Keep an uncompressed or lossless <em>master</em> (WAV, PNG or original camera file) and export a smaller copy for each use. Never edit a JPEG or MP3 again and again, because each save loses more quality. Resize images to the size they are shown before you upload them. Give files clear, lowercase names without spaces (<code>ranger-interview.mp4</code>), and always add alternative text for images and captions for video.</div>
+          <div class="callout assessor"><strong>HSC exam focus</strong> "Select" questions give a purpose and ask for a format <em>with a reason</em>. Reasons that earn marks are specific: "PNG because the logo needs a transparent background and sharp edges", "MP3 because the podcast needs small files that play on any device". Naming only a format, or saying "because it is better", does not.</div>
         </section>
 
         <hr class="divider" />
@@ -372,8 +826,69 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-08)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Use</strong> software to develop elements of interactive media in a project</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (use). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>Choosing software for each type of element</h3>
+          <p>Interactive media combines several kinds of element, and each is made with software suited to it. A project usually uses one tool per element and a way of assembling them (a web page, a game engine or presentation software).</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Element</th><th>Examples of software</th><th>Typical tasks</th></tr></thead>
+              <tbody>
+                <tr><td>Bitmap images</td><td>GIMP, Krita, Photoshop</td><td>Crop, resize, correct colour, remove backgrounds, layers and filters</td></tr>
+                <tr><td>Vector graphics</td><td>Inkscape, Illustrator</td><td>Draw logos and icons from shapes and paths; export SVG</td></tr>
+                <tr><td>Audio</td><td>Audacity, GarageBand</td><td>Record, trim, reduce noise, balance levels, export MP3 or AAC</td></tr>
+                <tr><td>Video and animation</td><td>DaVinci Resolve, Clipchamp, Blender</td><td>Arrange clips on a timeline, add titles and captions, export MP4</td></tr>
+                <tr><td>Screen design and prototypes</td><td>Figma, Penpot, or pen and paper</td><td>Wireframes, mock-ups and clickable prototypes</td></tr>
+                <tr><td>Interactive pages</td><td>HTML, CSS and JavaScript in a code editor; H5P for quizzes and hotspots</td><td>Buttons, forms, reveal panels, navigation, responsive layout</td></tr>
+                <tr><td>Games and simulations</td><td>Scratch, Twine, Godot, Unity</td><td>Sprites, scenes, rules, scoring, branching stories</td></tr>
+                <tr><td>Charts and data</td><td>Spreadsheet software, Datawrapper, Flourish</td><td>Clean and summarise data; build charts and maps</td></tr>
+                <tr><td>Presentation</td><td>PowerPoint, Google Slides</td><td>Slides with linked navigation, embedded audio and video, templates</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Choose tools by what your school provides, what is free and what you already know. Many of these are free and open source. Whatever you use, keep original files (for example a layered image or an audio project file) separate from exported files.</p>
+
+          <h3>Features you should be able to use</h3>
+          <p>The NESA Course Specifications (p.21) describe the features of two types of application software you should be familiar with. <strong>Graphics software</strong> should allow you to create and manipulate bitmapped images; create and manipulate vector graphics as geometric shapes; rotate, crop, resize and distort images; import and export graphic data in a variety of formats; apply textures, patterns and transparent backgrounds; and use templates, colour themes and animations. <strong>Presentation software</strong> should allow you to create and manipulate text; apply editing and formatting features; insert and display text, images, audio, video and animations; import and export data; embed objects such as charts and tables from other applications; use hyperlinks within and outside the presentation; and use templates and themes.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Graphics software feature</th><th>Project use</th></tr></thead>
+              <tbody>
+                <tr><td>Crop, resize, rotate</td><td>Make a 4000-pixel photo fit an 800-pixel page area; straighten a horizon</td></tr>
+                <tr><td>Transparent background</td><td>Place a cut-out logo over any coloured page; save as PNG or WebP</td></tr>
+                <tr><td>Vector shapes</td><td>Build a scalable icon from circles and paths; save as SVG</td></tr>
+                <tr><td>Import and export formats</td><td>Open a camera JPEG, edit as a layered file, export PNG and WebP</td></tr>
+                <tr><td>Templates and colour themes</td><td>Keep a consistent look across all screens and slides</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>A worked example: an interactive "click to reveal" element</h3>
+          <p>Interactive elements do not need heavy software. A reveal button is a common pattern in learning media: the user thinks first, then checks. The steps are to (1) design the element on a wireframe, (2) write the HTML for the button and the hidden content, (3) write JavaScript to toggle it, (4) test with mouse and keyboard, and (5) check with a screen reader. The code below is accessible because it uses a real <code>&lt;button&gt;</code> (focusable and operable with the keyboard) and <code>aria-expanded</code> to announce whether the content is open.</p>
+          <div class="code-block"><pre><code class="language-html">&lt;button type="button" id="hint-btn" aria-expanded="false" aria-controls="hint"&gt;Show a hint&lt;/button&gt;
+&lt;p id="hint" hidden&gt;The Sydney Harbour Bridge opened in 1932.&lt;/p&gt;
+
+&lt;script&gt;
+  const btn = document.getElementById('hint-btn');
+  const hint = document.getElementById('hint');
+  btn.addEventListener('click', () =&gt; {
+    const wasOpen = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!wasOpen));   // tells screen readers the state
+    btn.textContent = wasOpen ? 'Show a hint' : 'Hide the hint';
+    hint.hidden = wasOpen;                                   // shows or hides the paragraph
+  });
+&lt;/script&gt;</code></pre></div>
+          <p>Try it: save the code as <code>reveal.html</code> and open it in a browser. Press <kbd>Tab</kbd> to reach the button and <kbd>Enter</kbd> or <kbd>Space</kbd> to use it. Then extend it: add a second hint, or use the same pattern for a glossary term.</p>
+
+          <h3>Workflow for using software in a project</h3>
+          <ol>
+            <li><strong>Plan:</strong> list every asset in an asset register (name, type, source, licence, format, status).</li>
+            <li><strong>Create or capture:</strong> record, photograph, draw or write the source material.</li>
+            <li><strong>Edit:</strong> improve each asset in the right tool, saving the master first.</li>
+            <li><strong>Export:</strong> save each asset in the format and size chosen for its purpose.</li>
+            <li><strong>Assemble:</strong> combine assets and add interaction (navigation, buttons, forms).</li>
+            <li><strong>Test:</strong> on different devices, with keyboard only, and with a real user.</li>
+            <li><strong>Document:</strong> record your progress and decisions in a process diary.</li>
+          </ol>
+          <div class="callout assessor"><strong>HSC exam focus</strong> "Use" is practical: expect to say <em>which</em> feature of the software you used for a stated task ("I used a transparent background so the logo sits on any colour") and what the result was. Practical work is also assessed through your project and process diary, so record the tool, the step and the result as you go.</div>
         </section>
 
         <hr class="divider" />
@@ -383,8 +898,90 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-02, EC-11-08)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Use</strong> hardware and software to digitise assets for use in interactive media systems, including lossy and lossless data compression</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (use). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>NESA's glossary defines <strong>assets</strong> as the digital elements that can be used or incorporated into a multimedia production: graphics, photographs, video, audio, animations and other artistic data. To <strong>digitise</strong> means to convert something analogue (a printed photo, a voice, a hand drawing) into digital data using a combination of hardware that captures it and software that stores and refines it.</p>
+
+          <h3>Hardware and software for digitising</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Asset</th><th>Capture hardware</th><th>Software</th><th>Key settings</th></tr></thead>
+              <tbody>
+                <tr><td>Printed photo or drawing</td><td>Flatbed scanner, phone camera</td><td>Scanner software, then an image editor</td><td>Resolution in dots per inch (dpi), colour depth</td></tr>
+                <tr><td>Sound (voice, instrument)</td><td>Microphone and audio interface (an analogue-to-digital converter)</td><td>Audio editor such as Audacity</td><td>Sampling rate, bit depth, channels</td></tr>
+                <tr><td>Video</td><td>Camera, phone, capture card</td><td>Video editor</td><td>Resolution, frame rate, codec, bitrate</td></tr>
+                <tr><td>Hand drawing for an icon</td><td>Graphics tablet or scanner</td><td>Vector or bitmap editor</td><td>Canvas size, colour mode</td></tr>
+                <tr><td>Text and documents</td><td>Scanner</td><td>Optical character recognition (OCR) software</td><td>Resolution, output format</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Digitising images: resolution and colour depth</h3>
+          <p>A bitmap image is a grid of <strong>pixels</strong>. <strong>Resolution</strong> is how many pixels there are (for example 1920 × 1080), or for scanning and print, how many dots per inch (dpi). More pixels capture more detail and make larger files. <strong>Colour depth</strong> (bit depth per pixel) is how many bits describe each pixel's colour: 1 bit gives 2 colours (black and white), 8 bits give 256 colours, and 24 bits (8 each for red, green and blue) give 2<sup>24</sup> = 16,777,216 colours.</p>
+          <p><strong>Uncompressed size</strong> = width × height × colour depth ÷ 8 (bytes). <em>Worked example:</em> an A4 page (8.27 × 11.69 inches) scanned at 300 dpi is about 2481 × 3507 pixels = 8,700,867 pixels. At 24-bit colour that is 8,700,867 × 3 bytes = 26,102,601 bytes, about 26 MB before compression. Scanning at 600 dpi would multiply the pixel count by four. Use the resolution you need: about 300 dpi is common for print; a screen usually needs far fewer pixels than a print scan.</p>
+
+          <h3>Digitising sound: sampling rate and bit depth</h3>
+          <p>Sound is a continuous wave. Digitising <strong>samples</strong> it: measuring the wave's height many times per second. The <strong>sampling rate</strong> (in hertz) is how many measurements per second; the <strong>bit depth</strong> is how many bits record each measurement, which sets how many different heights can be stored. A higher sampling rate captures faster changes; a higher bit depth captures finer differences in loudness. To capture a frequency correctly you need to sample at more than twice that frequency (the Nyquist rule). People hear up to about 20 kHz, so audio CDs use 44,100 samples per second (44.1 kHz) with 16 bits (65,536 possible heights) per sample per channel. Video production commonly uses 48 kHz.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Concept diagram</span></p>
+              <h4 class="figure-title">Sampling rate and bit depth</h4>
+              <p class="figure-lead">The same wave measured too rarely, or recorded with too few possible heights, gives a rough copy.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="im-sampling"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Top row: a low sampling rate misses the peaks and troughs. A higher rate follows the wave closely.</li><li>Bottom row: bit depth is the fineness of each measurement. 2 bits allow only four heights, so the copy is a coarse staircase.</li><li>Real audio is far finer: CD audio uses 44,100 samples per second and 65,536 heights.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Which would you increase to fix a copy that looks jagged along the time axis, and which to fix one that looks like steps?</p>
+            </div>
+          </figure>
+          <p><em>Worked example:</em> a 3-minute (180 s) stereo recording at 44,100 Hz and 16 bits: 44,100 × 16 × 2 = 1,411,200 bits per second; × 180 seconds = 254,016,000 bits, which is 31,752,000 bytes, about 31.8 MB uncompressed. An MP3 of the same track is a small fraction of that size.</p>
+
+          <h3>Digitising video</h3>
+          <p>Video is a sequence of images (<strong>frames</strong>) plus sound. Its size depends on resolution, <strong>frame rate</strong> (frames per second), colour depth and length, and then on the <strong>bitrate</strong> chosen by the codec. As calculated earlier, uncompressed high-definition video is enormous, so video is <em>always</em> compressed for storage and streaming.</p>
+
+          <h3>Data compression</h3>
+          <p>NESA's glossary defines <strong>data compression</strong> as a reduction in the number of bits needed to represent data. It saves storage and speeds up transmission. There are two families.</p>
+          <h4>Lossless compression</h4>
+          <p><strong>Lossless compression</strong> finds and removes <em>redundancy</em> (repeated patterns) but keeps every bit of information, so the original can be perfectly rebuilt. A simple technique is run-length encoding: <code>WWWWWWBBBW</code> can be stored as <code>6W3B1W</code>. Real formats use more advanced methods. PNG, FLAC and ZIP are lossless. <em>What is discarded:</em> nothing. <em>Artefacts:</em> none. <em>Trade-off:</em> the saving is limited, especially for detailed photographs and natural sound. <em>Use it when</em> exactness matters: text, code, logos and screenshots, master copies, and archives.</p>
+          <h4>Lossy compression</h4>
+          <p><strong>Lossy compression</strong> permanently discards information that people are unlikely to notice. The discarded data cannot be recovered. It can shrink files a great deal, which is why photographs, music and video are delivered this way.</p>
+          <ul>
+            <li><strong>JPEG</strong> splits an image into small blocks, then reduces fine detail and colour resolution that the eye is less sensitive to. Too much compression produces <strong>artefacts</strong>: blocky squares, blurred edges and ringing around sharp lines such as text.</li>
+            <li><strong>MP3 and AAC</strong> remove sounds masked by louder ones and frequencies most people cannot hear. At low bitrates you may hear a thin, watery sound or smeared sharp sounds.</li>
+            <li><strong>H.264 video</strong> stores full frames only occasionally and then just the <em>changes</em> between frames. At low bitrates you see blocks in fast motion and smearing or banding in smooth gradients.</li>
+          </ul>
+          <p>Every re-save of a lossy file discards more, called <strong>generation loss</strong>. Edit from a lossless master and export a lossy copy once, at the end. <em>Use lossy compression when</em> the audience cannot notice the loss and file size or speed matters most: web photos, streaming audio and video, and mobile delivery.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th></th><th>Lossless</th><th>Lossy</th></tr></thead>
+              <tbody>
+                <tr><td>Original data recovered?</td><td>Yes, exactly</td><td>No, only an approximation</td></tr>
+                <tr><td>What is discarded?</td><td>Nothing (only redundancy is removed)</td><td>Detail unlikely to be noticed</td></tr>
+                <tr><td>Size reduction</td><td>Moderate</td><td>Large, adjustable by a quality setting</td></tr>
+                <tr><td>Possible artefacts</td><td>None</td><td>Blocks, blur, banding, distortion</td></tr>
+                <tr><td>Examples</td><td>PNG, GIF, FLAC, ZIP, WAV (uncompressed)</td><td>JPEG, MP3, AAC, H.264, lossy WebP</td></tr>
+                <tr><td>Best for</td><td>Text, logos, screenshots, masters, archives</td><td>Photos, streaming audio and video, web delivery</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="im-demo" id="im-compress">
+            <p class="im-demo-kicker">Try it</p>
+            <h4 class="im-demo-title">Lossless against lossy, on one image</h4>
+            <p class="im-demo-lead">The same drawing is saved by your browser as a PNG (lossless) and as a JPEG (lossy). The file sizes are real. Lower the JPEG quality and tick the zoom box to see what is thrown away.</p>
+            <div class="im-demo-controls">
+              <label for="im-q">JPEG quality: <output id="im-q-out" for="im-q">40</output></label>
+              <input type="range" id="im-q" min="5" max="95" step="5" value="40">
+              <label class="im-check"><input type="checkbox" id="im-zoom"> Zoom in on the letter edges</label>
+            </div>
+            <div class="im-compare">
+              <figure><canvas id="im-cv-png" width="320" height="200" role="img" aria-label="The image saved as a lossless PNG: a sky, hills and a yellow sign that reads OPEN"></canvas><figcaption>Lossless (PNG)</figcaption></figure>
+              <figure><canvas id="im-cv-jpg" width="320" height="200" role="img" aria-label="The same image saved as a lossy JPEG at the chosen quality"></canvas><figcaption id="im-cap-jpg">Lossy (JPEG)</figcaption></figure>
+            </div>
+            <p class="im-readout" id="im-readout" role="status" aria-live="polite">Loading the comparison…</p>
+            <noscript><p>This demo needs JavaScript. In general, a JPEG of a photograph is much smaller than a PNG of it, but a JPEG of text or a logo shows blur and blocks around the edges.</p></noscript>
+          </div>
+
+          <div class="callout tip"><strong>Digitising a printed photo, step by step</strong> (1) Clean the scanner glass and place the photo squarely. (2) Scan at 300 dpi, or 600 dpi if you plan to enlarge, in 24-bit colour. (3) Save a master as PNG or TIFF and do not edit that file. (4) Crop, straighten and correct colour in an image editor. (5) Resize to the display size. (6) Export a web copy as JPEG or WebP at a moderate quality. (7) Add alt text and record the source and permissions.</div>
+          <div class="callout assessor"><strong>HSC exam focus</strong> Learn one precise contrast: lossless keeps all the data and can be restored exactly, while lossy permanently removes data that is unlikely to be noticed. Then attach an example and a reason: "lossy JPEG for a photograph on a website, because the file is much smaller and the loss is not noticeable; lossless PNG for a logo, because sharp edges must be preserved." Calculations such as width × height × colour depth ÷ 8 are also fair game.</div>
         </section>
 
         <hr class="divider" />
@@ -394,8 +991,65 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-08, EC-11-10)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Explain</strong> how the user interface (UI) impacts on the user experience (UX)</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (explain). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>The relationship</h3>
+          <p>NESA's glossary defines the <strong>user interface (UI)</strong> as the means by which users interact with computer hardware or software. In software this is fields for text and number entry, mouse pointers, buttons and other graphical elements; in hardware it is switches, dials and lights. The <strong>user experience (UX)</strong> is the whole result of that interaction: usability, ease of use and enjoyment. The UI is what the user meets; the UX is what the user goes through and feels. A UI is therefore one of the biggest influences on UX, but not the only one, because speed, content, reliability and support also count.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Concept diagram</span></p>
+              <h4 class="figure-title">The UI is one part of the UX</h4>
+              <p class="figure-lead">The interface is the surface a person touches on the way to a goal; the experience includes everything around it.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="im-ux-ui"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>A beautiful UI on a slow or unreliable system still gives a poor UX.</li><li>A UI decision (colour, layout, wording) changes how easily the goal is reached.</li><li>The outcome includes how the user <em>feels</em>, not just whether the task was finished.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Describe an app you like using. Which parts of that experience are the UI, and which are not?</p>
+            </div>
+          </figure>
+
+          <h3>How UI decisions change the UX</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>UI decision</th><th>Effect on the UX</th><th>Example</th></tr></thead>
+              <tbody>
+                <tr><td>Clear layout and visual hierarchy</td><td>Users find what matters first and spend less effort</td><td>A large "Book now" button above smaller secondary links</td></tr>
+                <tr><td>Consistent navigation and controls</td><td>Users learn once and predict where things are</td><td>The menu in the same place on every page</td></tr>
+                <tr><td>Immediate feedback</td><td>Users know their action worked</td><td>A button changes colour when pressed and a message says "Added to cart"</td></tr>
+                <tr><td>Affordances and signifiers</td><td>Users can tell what is clickable</td><td>Buttons look raised; links are underlined</td></tr>
+                <tr><td>Readable text and sufficient contrast</td><td>Users read comfortably, including in sunlight or with low vision</td><td>Dark text on a light background at a comfortable size</td></tr>
+                <tr><td>Forgiving controls</td><td>Users recover from mistakes without frustration</td><td>Undo and a confirmation before deleting</td></tr>
+                <tr><td>Cluttered screens and tiny targets</td><td>Errors, delay and abandonment</td><td>Five competing banners around a checkout</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>UI design principles</h3>
+          <ul>
+            <li><strong>Consistency:</strong> use the same colours, wording, icons and layout for the same things, both within your system and following common conventions (a magnifying glass means search).</li>
+            <li><strong>Visual hierarchy:</strong> use size, weight, colour, contrast, position and white space to show what matters most. People scan pages, so the first things noticed should be the important ones.</li>
+            <li><strong>Feedback:</strong> respond to every action within a moment: a pressed state, a spinner, a success or error message.</li>
+            <li><strong>Affordance and signifiers:</strong> an <em>affordance</em> is what an object allows you to do; a <em>signifier</em> is the visible clue that tells you (a raised button, a text cursor). Design so that the clue is obvious.</li>
+            <li><strong>Simplicity:</strong> remove what does not help the task. Hick's law observes that decision time grows with the number of choices, so fewer, clearer options are faster.</li>
+            <li><strong>Target size and distance:</strong> Fitts's law observes that a target is quicker to hit if it is larger and closer, so make touch targets comfortably large, especially on phones.</li>
+            <li><strong>Error prevention and recovery:</strong> design so mistakes are unlikely, and make recovery easy.</li>
+            <li><strong>Accessibility:</strong> design for the widest range of users from the start.</li>
+          </ul>
+
+          <h3>Accessibility: WCAG 2.2</h3>
+          <p>The World Wide Web Consortium (W3C) publishes the <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">Web Content Accessibility Guidelines (WCAG) 2.2</a>, a W3C Recommendation released in October 2023. It sets testable success criteria at three levels (A, AA and AAA) and is organised under four principles, remembered as <strong>POUR</strong>. Level AA is the usual target for websites.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Principle</th><th>Meaning</th><th>Examples of what to do</th></tr></thead>
+              <tbody>
+                <tr><td><strong>P</strong>erceivable</td><td>Users can perceive the content with the senses they have</td><td>Text alternatives (alt text) for images; captions for video; do not use colour alone to convey meaning; text contrast of at least 4.5:1 (3:1 for large text)</td></tr>
+                <tr><td><strong>O</strong>perable</td><td>Users can operate every control</td><td>Everything works by keyboard; visible focus; no flashing content; touch targets not too small (WCAG 2.2 adds a minimum target size of 24 by 24 CSS pixels)</td></tr>
+                <tr><td><strong>U</strong>nderstandable</td><td>Content and behaviour are predictable and clear</td><td>Plain language; labelled form fields; helpful error messages; consistent navigation</td></tr>
+                <tr><td><strong>R</strong>obust</td><td>Content works with current and future technology, including assistive tools</td><td>Valid, semantic HTML; correct roles and names for controls</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Accessibility is also a legal matter. The Disability Discrimination Act 1992 (Cth) makes discrimination on the basis of disability unlawful in the provision of services, and inaccessible websites can breach it. WCAG is the accepted technical measure. Accessible design also helps many people without disability: captions in noisy places, high contrast in bright light, and keyboard shortcuts for speed.</p>
+          <div class="callout info"><strong>Scenario</strong> A local pool's booking page uses pale grey text on white, a "Book" icon with no label, and a date picker that can only be operated with a mouse. Fixes: darken the text to meet the 4.5:1 contrast ratio, add a text label to the icon, use a standard date input that also works with the keyboard, and provide visible focus outlines. Each change improves the UX for everyone and removes a barrier for some.</div>
+          <div class="callout assessor"><strong>HSC exam focus</strong> "Explain how the UI impacts the UX" wants cause and effect: name a UI feature, say what the user experiences as a result, and say why. For example, "consistent navigation lets users predict where to find things, which reduces errors and effort, so the experience is more efficient". Keep the two terms distinct: UI is the interface, UX is the overall experience.</div>
         </section>
 
         <hr class="divider" />
@@ -405,8 +1059,92 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-08, EC-11-11)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Apply</strong> design tools and techniques to develop an engaging UI</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (apply). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>From idea to interface: the design tools</h3>
+          <p>Designers do not start by building. They use a sequence of <strong>design tools</strong> that get more detailed, and more expensive to change, at each step. Finding a problem on paper costs minutes. Finding it after coding costs days.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Tool</th><th>What it is</th><th>Answers the question</th><th>Fidelity</th></tr></thead>
+              <tbody>
+                <tr><td>Site map or navigation structure</td><td>A diagram of pages and how they connect</td><td>Where does everything live?</td><td>Structure only</td></tr>
+                <tr><td>Storyboard</td><td>A set of screens with the links between them (NESA notation, next section)</td><td>How does a user move through the system?</td><td>Low</td></tr>
+                <tr><td>Wireframe</td><td>A simple layout of one screen with boxes and labels; no colour or final content</td><td>What goes where?</td><td>Low</td></tr>
+                <tr><td>Style guide (or style tile)</td><td>Chosen colours, fonts, spacing, icons and button styles</td><td>What will it look like everywhere?</td><td>Design system</td></tr>
+                <tr><td>Mock-up</td><td>A realistic picture of the finished screen with real text, images and colours</td><td>What will it look like?</td><td>High (looks real, does nothing)</td></tr>
+                <tr><td>Prototype</td><td>A clickable model that behaves like the system</td><td>How does it feel to use?</td><td>Interactive</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Concept diagram</span></p>
+              <h4 class="figure-title">Wireframe, mock-up and prototype of one screen</h4>
+              <p class="figure-lead">The same ordering screen shown three ways: structure, appearance and behaviour.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="im-fidelity"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>The wireframe is deliberately plain so people discuss layout, not colours.</li><li>The mock-up adds real wording, colour and images, and tests the visual hierarchy.</li><li>The prototype adds behaviour: the ring shows a tap that opens the next screen.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Sketch a wireframe of your school's home page on paper in two minutes, then say what a mock-up would add.</p>
+            </div>
+          </figure>
+
+          <h3>Storyboards using NESA notation</h3>
+          <p>NESA's Course Specifications (p.9) describe a <strong>storyboard</strong> as showing the various interfaces (screens) as well as the links between them. Each screen is drawn as a rectangle containing a title, a <em>Help</em> button, a column of navigation buttons (the button for the current page is highlighted) and a content panel. A small dot on a button with an arrow means "this button opens that screen". The example below is NESA's own: three pages promoting a school canteen.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Storyboard</span></p>
+              <h4 class="figure-title">NESA storyboard: three linked pages for a school canteen website</h4>
+              <p class="figure-lead">Redrawn from NESA Enterprise Computing Course Specifications, page 9.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="spec-storyboard"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Every screen has the same layout: title, Help, navigation column, content panel. That is consistency.</li><li>The highlighted button tells you which page you are on.</li><li>A dot on a button with an arrow shows where that button leads. Home links to Prices and Specials, and each of those links back.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>List every link on this storyboard as "from screen, button, to screen". How many are there?</p>
+            </div>
+          </figure>
+          <p>In the exam, apply the same conventions to a new scenario. The storyboard below is a new example that follows the same notation: three pages for a community library events website.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Storyboard</span></p>
+              <h4 class="figure-title">Applying the notation: a community library events website</h4>
+              <p class="figure-lead">A worked example in NESA's notation: home, bookings and events pages, with the links between them.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="im-storyboard-events"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>The content differs but the layout and notation are identical to NESA's example.</li><li>Screens are numbered and captioned so they can be referred to in the answer.</li><li>The Bookings screen contains a table, showing that a screen's content panel can hold different content types.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Add a fourth screen, "Contact us", and show which buttons should link to it.</p>
+            </div>
+          </figure>
+
+          <h3>Form controls</h3>
+          <p>Screen design questions often ask you to choose controls for input. Choose the control that matches the data and limits mistakes.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Control</th><th>Use when</th><th>Example</th></tr></thead>
+              <tbody>
+                <tr><td>Text box</td><td>Free text of any content</td><td>Name, comment</td></tr>
+                <tr><td>Radio buttons</td><td>Choose <em>one</em> from a few visible options</td><td>Delivery: pick-up or delivery</td></tr>
+                <tr><td>Check boxes</td><td>Choose <em>any number</em> of options, or a yes/no</td><td>Extras: sauce, drink</td></tr>
+                <tr><td>Drop-down list</td><td>Choose one from many options in little space</td><td>State or territory</td></tr>
+                <tr><td>Date picker or number field</td><td>Restrict input to valid values</td><td>Booking date, quantity</td></tr>
+                <tr><td>Button</td><td>Trigger an action (verbs on the label)</td><td>Order now, Cancel</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Applying the tools: an engaging UI for the library events site</h3>
+          <ol>
+            <li><strong>Define the audience and tasks.</strong> Residents of all ages need to find an event, see if seats are left, and book a seat. Some use screen readers; many use phones.</li>
+            <li><strong>Site map.</strong> Home → Events, Bookings, Contact; each event page links to Bookings.</li>
+            <li><strong>Storyboard</strong> the key path (Home → Events → Bookings) using NESA notation, as above.</li>
+            <li><strong>Wireframe</strong> each screen with paper or a tool such as Figma or Penpot. Check hierarchy: the event name and date first, then the Book button.</li>
+            <li><strong>Style guide.</strong> Choose two colours with sufficient contrast, one readable font, a spacing scale, and one button style used everywhere.</li>
+            <li><strong>Mock-up</strong> with real event names and photos. Check contrast and text size.</li>
+            <li><strong>Prototype</strong> the booking flow and <strong>test</strong> it with a few users, from young to old, including one using a screen reader or keyboard only.</li>
+            <li><strong>Refine</strong> from what you saw, not what you assumed.</li>
+          </ol>
+          <p>An <em>engaging</em> UI is one people want to use, not one that is merely decorated. It has a clear purpose on each screen, a strong visual hierarchy, quick feedback, a consistent style and small touches of delight (a friendly confirmation message) that never get in the way. Techniques that support this include a layout grid, generous white space, limited colours, a clear type scale, meaningful images, and responsive design so that the layout adapts to phones and tablets.</p>
+          <div class="callout tip"><strong>Screen design checklist</strong> Title and purpose obvious? Navigation in the same place on every screen? Current page highlighted? The most important action stands out? Every control the right type for the data? Labels visible and clear? Enough contrast and text size? Feedback for each action? A way back or to undo? Screens numbered, and links between screens shown?</div>
+          <div class="callout assessor"><strong>HSC exam focus</strong> NESA's 2025 online exam included interface and screen design with form controls. For a screen design answer, label each element, choose controls that match the data (radio buttons for one choice, check boxes for several), keep navigation consistent, and add a sentence justifying a design decision using a principle (for example "the Order button is large and contrasting to create a visual hierarchy"). For a storyboard, use NESA's notation: a title, Help button, navigation with the current page highlighted, a content panel and dot-and-arrow links.</div>
         </section>
 
         <div class="quiz" data-quiz="im-2"></div>
@@ -420,8 +1158,8 @@
         </div>
 
         <aside class="yr11 topic-breakout subtopic-breakout" aria-label="Part introduction">
-          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
-          <p>This part covers 4 NESA dot points: create interactive media systems.</p>
+          <p>This is where you make something real: apply design thinking to a front-end web system, publish a piece of data journalism, choose how to manage the project, and apply user interaction features in social, retail and gaming contexts.</p>
+          <p class="breakout-question">What would you build if you could ask ten real users what they wanted first?</p>
         </aside>
 
         <section id="design-thinking-ux">
@@ -429,8 +1167,78 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-08, EC-11-09, EC-11-11)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Apply</strong> design thinking to develop a front-end, web-based interactive media system incorporating UX and UI principles</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (apply). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>NESA's glossary describes <strong>design thinking</strong> as a process where a need or opportunity is identified and a design solution is developed, with economic, environmental and social impacts core to it. It can be used to understand a problem, generate ideas and refine a design based on evaluation and testing. The stages below (empathise, define, ideate, prototype, test) are applied here to a <strong>front-end web-based system</strong>: the part of a web system that users see and use, built with HTML, CSS and JavaScript. The running example is a lunch pre-ordering website for a school canteen.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Process diagram</span></p>
+              <h4 class="figure-title">Five design thinking stages for a canteen ordering website</h4>
+              <p class="figure-lead">Each stage produces something the next one uses, and testing sends you back to earlier stages.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="im-design-thinking"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>The stages are a loop, not a straight line. Real projects revisit earlier stages.</li><li>Empathise and Test both involve real users; Define, Ideate and Prototype are where the team works.</li><li>Each stage has an output: insights, a problem statement, ideas, a prototype, and findings.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Choose a problem at your school (queues, finding room changes, booking a laptop). Write its problem statement in one sentence, starting "How might we…".</p>
+            </div>
+          </figure>
+
+          <h3>1. Empathise</h3>
+          <p>Understand the people you are designing for. Interview students, staff and canteen volunteers, observe the lunch queue, and survey people about how they currently order. Build a short <strong>persona</strong> (a fictional but evidence-based user: for example "Sam, Year 8, orders on a phone on the bus") and an <strong>empathy map</strong> (what they say, think, do and feel). Include users with different abilities and devices, for example a student who uses a screen reader. <em>Outputs:</em> notes, quotes and observed pain points (for example, "the queue is too long and I miss out on my order").</p>
+
+          <h3>2. Define</h3>
+          <p>Turn what you learned into a clear <strong>problem statement</strong> and measurable goals. Example: "Students need a fast, easy way to order lunch before school so they can avoid queues, and volunteers need orders arranged in advance." Add success criteria you can test: "A new user can place an order in under a minute without help", and "The site meets WCAG 2.2 level AA". <em>Output:</em> problem statement, requirements and success criteria.</p>
+
+          <h3>3. Ideate</h3>
+          <p>Generate many possible solutions before choosing one. Use brainstorming, sketching several layouts quickly, and mapping the user's journey. Then choose ideas using criteria such as <em>desirable</em> (users want it), <em>feasible</em> (we can build it) and <em>viable</em> (it is sustainable within the time and budget). <em>Output:</em> a chosen concept, a site map and a storyboard of the main path (see <a href="#ui-design-tools">design tools</a>).</p>
+
+          <h3>4. Prototype</h3>
+          <p>Build a cheap, quick model to test. Start with paper or wireframes, move to a clickable mock-up, and for a front-end web system build a working page in HTML, CSS and JavaScript. A prototype can be incomplete because its purpose is learning. Incorporate UX and UI principles from the start: semantic HTML (headings, labels, buttons), consistent layout, a clear hierarchy, immediate feedback, adequate contrast and keyboard access. A small front-end prototype of the ordering screen:</p>
+          <div class="code-block"><pre><code class="language-html">&lt;main&gt;
+  &lt;h1&gt;Order lunch&lt;/h1&gt;
+  &lt;form id="order"&gt;
+    &lt;p id="order-help"&gt;Order before 10:30 am to collect at first break.&lt;/p&gt;
+    &lt;fieldset&gt;
+      &lt;legend&gt;Choose your lunch&lt;/legend&gt;
+      &lt;label&gt;&lt;input type="radio" name="item" value="6.50" checked&gt; Chicken wrap ($6.50)&lt;/label&gt;
+      &lt;label&gt;&lt;input type="radio" name="item" value="3.00"&gt; Fruit cup ($3.00)&lt;/label&gt;
+      &lt;label&gt;&lt;input type="radio" name="item" value="5.00"&gt; Veggie roll ($5.00)&lt;/label&gt;
+    &lt;/fieldset&gt;
+    &lt;label for="qty"&gt;Quantity&lt;/label&gt;
+    &lt;input id="qty" name="qty" type="number" min="1" max="5" value="1" inputmode="numeric"&gt;
+    &lt;p id="total" role="status"&gt;Total: $6.50&lt;/p&gt;
+    &lt;button type="submit"&gt;Order now&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/main&gt;
+
+&lt;script&gt;
+  const form = document.getElementById('order');
+  const total = document.getElementById('total');
+  form.addEventListener('input', () =&gt; {
+    const price = Number(form.item.value);
+    const qty = Number(form.qty.value) || 1;
+    total.textContent = 'Total: $' + (price * qty).toFixed(2);
+  });
+&lt;/script&gt;</code></pre></div>
+          <p>Notice which UX and UI principles this code applies. A <code>&lt;label&gt;</code> and <code>&lt;fieldset&gt;</code>/<code>&lt;legend&gt;</code> tell screen-reader users what each control is (perceivable, understandable). Radio buttons enforce one choice (error prevention). The <code>role="status"</code> total is announced as it changes (feedback). The <code>type="number"</code> field with <code>min</code> and <code>max</code> limits valid input. Native controls are keyboard operable by default (operable). Add responsive CSS so the layout works on a phone.</p>
+
+          <h3>5. Test</h3>
+          <p>Watch real users try the prototype. Give each a realistic task ("Order a chicken wrap for first break"), ask them to think aloud, and observe without helping. Record <strong>task success</strong>, <strong>time taken</strong>, <strong>errors</strong> and comments. Five users will usually reveal most serious problems. Then decide what to change. This might mean fixing a label, redesigning a screen, or going back to Define if you discover you solved the wrong problem. Repeat until the success criteria are met, then evaluate against the requirements and accessibility guidelines.</p>
+
+          <h3>Mapping the stages to UX and UI principles</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Stage</th><th>UX and UI principles applied</th><th>Evidence you keep</th></tr></thead>
+              <tbody>
+                <tr><td>Empathise</td><td>Human-centred design; inclusion of people with disability</td><td>Interview notes, persona, observations</td></tr>
+                <tr><td>Define</td><td>Clear goals; measurable usability and accessibility targets</td><td>Problem statement, success criteria</td></tr>
+                <tr><td>Ideate</td><td>Simplicity; consistent navigation; visual hierarchy</td><td>Sketches, site map, storyboard</td></tr>
+                <tr><td>Prototype</td><td>Feedback, affordance, contrast, semantic HTML</td><td>Wireframes, mock-up, working page</td></tr>
+                <tr><td>Test</td><td>Usability heuristics; WCAG checks</td><td>Test plan, results table, list of changes</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Record decisions in a <strong>process diary</strong> (NESA Course Specifications, p.13). Each entry should include the date, who made the entry, progress since the last entry, tasks achieved, stumbling blocks and how they were managed, possible approaches for the next tasks, reflective comments and resources used. For example: "12 Feb, Priya. Tested the paper prototype with three Year 8 students; two missed the quantity field. Moved it beside the item and retested. Next: contrast check on the colour palette."</p>
+          <div class="callout info"><strong>Scenario</strong> Testing the canteen prototype, two of five users tap the wrong button because "Order now" and "Cancel" look alike and sit close together. Following the loop, the team increases the space between buttons, gives Cancel a plain outline style and retests. All five users then complete the order, and the change is recorded in the process diary. That is design thinking in one cycle.</div>
+          <div class="callout assessor"><strong>HSC exam focus</strong> "Apply" wants the stages used on a <em>given</em> context. For a scenario, walk through each stage with a specific activity and output for that scenario (not general definitions). Mention that the process is iterative and that testing uses real users. Where a UX or UI principle is named, say which feature applies it.</div>
         </section>
 
         <hr class="divider" />
@@ -440,8 +1248,93 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-04, EC-11-05, EC-11-11)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Develop and publish</strong> an interactive work of data journalism</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (develop). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>What is data journalism?</h3>
+          <p><strong>Data journalism</strong> finds, analyses and presents data to tell a news story or explain an issue. The story is built from evidence in a dataset, such as government statistics, and is often presented with interactive charts, maps or searchable tables so the audience can explore the evidence for themselves. For example, instead of writing "rents rose", an interactive graphic lets each reader look up their own suburb. Interactive data journalism combines skills you already use: research, data handling, visualisation, front-end development and writing.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Process diagram</span></p>
+              <h4 class="figure-title">The data journalism workflow</h4>
+              <p class="figure-lead">Question, data, clean and analyse, visualise, publish, with ethics checked at every step and updates after publication.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="im-data-journalism"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>It starts with a <em>question</em>, not a chart. The question decides which data you need.</li><li>Cleaning and checking take a large share of the time.</li><li>Publishing is not the end: corrections and feedback loop back to the question.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Write one question about your school or suburb that data could answer, and name a possible source.</p>
+            </div>
+          </figure>
+
+          <h3>Workflow, step by step</h3>
+          <ol>
+            <li><strong>Question.</strong> Ask something specific and answerable: "Has the share of students who walk or ride to school changed since 2019?" Identify the audience and what they need to know.</li>
+            <li><strong>Data.</strong> Find trustworthy data: national statistics from the Australian Bureau of Statistics (<a href="https://www.abs.gov.au/" target="_blank" rel="noopener">abs.gov.au</a>), the government data portal <a href="https://www.data.gov.au/" target="_blank" rel="noopener">data.gov.au</a>, or <a href="https://opendata.transport.nsw.gov.au/" target="_blank" rel="noopener">Transport for NSW open data</a>. Record the source, date, licence and definitions. Check whether you may reuse it and how to credit it. Or collect your own data by survey, and record how.</li>
+            <li><strong>Clean and analyse.</strong> Remove duplicates and errors, make units and dates consistent, and handle missing values openly. Then calculate the summaries that answer the question (totals, percentages, change over time) in a spreadsheet or code. Check results against a second source, and ask whether the data could tell a different story.</li>
+            <li><strong>Visualise.</strong> Choose the chart that suits the question: lines for change over time, bars for comparing categories, maps for location. Label axes and units, start bar-chart scales at zero, use a colour scheme that works for colour-blind readers, and add alt text and a data table.</li>
+            <li><strong>Publish.</strong> Build the interactive page, test it on phones and with a keyboard, and publish it to your school's web space or a free static host so your audience can read it. State the source, the date and the method, and give a way to send corrections.</li>
+          </ol>
+
+          <h3>Ethics of data journalism</h3>
+          <ul>
+            <li><strong>Accuracy and honesty:</strong> report what the data shows. Do not cherry-pick, and do not imply that correlation proves cause.</li>
+            <li><strong>Context and fair scales:</strong> a truncated axis or unlabelled units can make small changes look dramatic. Present the numbers in context, such as rates per 1,000 people rather than raw counts when populations differ.</li>
+            <li><strong>Privacy:</strong> small groups can be re-identified from data that looks anonymous. Publish only what is needed and never expose personal details.</li>
+            <li><strong>Consent and sources:</strong> if you collect data from people, explain the purpose and get consent (and a guardian's if under 18).</li>
+            <li><strong>Bias and representativeness:</strong> ask who is missing from the data. A survey of 20 friends does not represent a school.</li>
+            <li><strong>Indigenous data:</strong> data about Aboriginal and Torres Strait Islander Peoples raises data sovereignty. NESA describes data sovereignty as the right of Indigenous Peoples to determine the creation, collection, ownership and application of data that is for and about them. Frameworks such as the CARE Principles for Indigenous Data Governance (collective benefit, authority to control, responsibility, ethics) and Maiam nayri Wingara are guides to good practice; involve the communities concerned rather than speaking for them.</li>
+            <li><strong>Accessibility and transparency:</strong> make the story usable by everyone, share the method and correct mistakes openly.</li>
+          </ul>
+
+          <h3>A worked mini-example you can build</h3>
+          <p><strong>Story:</strong> "How do students get to school?" The dataset below is <em>invented for practice</em> and is not real. For a real story you would use a published dataset or your own survey. The interactive page has a slider to choose a year; the bars update, a sentence summarises the biggest mode for screen-reader users, and a table gives the underlying data.</p>
+          <ol>
+            <li><strong>Question:</strong> Which way of getting to school is most common, and how has that changed?</li>
+            <li><strong>Data:</strong> percentages for four travel modes in four years, stored in a small JavaScript object (a real project would load a CSV or JSON file and record the source).</li>
+            <li><strong>Analyse:</strong> find the largest value in each year; check that each year sums to 100%.</li>
+            <li><strong>Visualise:</strong> bars of equal thickness with one colour (length carries the data), value labels, and a table.</li>
+            <li><strong>Publish:</strong> save the file as <code>index.html</code>, upload it, and add a source line and a contact for corrections.</li>
+          </ol>
+          <div class="code-block"><pre><code class="language-html">&lt;h1&gt;How do students get to school?&lt;/h1&gt;
+&lt;p&gt;Practice data made up for this exercise. Not real figures.&lt;/p&gt;
+&lt;label for="year"&gt;Year: &lt;output id="yr"&gt;2025&lt;/output&gt;&lt;/label&gt;
+&lt;input id="year" type="range" min="0" max="3" value="3" step="1"&gt;
+&lt;div id="chart" role="img" aria-label="Bar chart of travel modes"&gt;&lt;/div&gt;
+&lt;p id="summary" aria-live="polite"&gt;&lt;/p&gt;
+&lt;table id="table"&gt;&lt;caption&gt;Data behind the chart (% of students)&lt;/caption&gt;&lt;/table&gt;
+
+&lt;style&gt;
+  .row { display: flex; align-items: center; gap: .5rem; margin: .3rem 0; }
+  .row span:first-child { width: 4rem; }
+  .bar { height: 1.4rem; background: #0a7c86; }   /* one colour: length, not colour, carries the data */
+&lt;/style&gt;
+
+&lt;script&gt;
+  const years = [2019, 2021, 2023, 2025];
+  const data = {                       // % of students; invented for practice
+    Walk: [22, 24, 26, 27], Bike: [6, 7, 9, 11],
+    Bus:  [28, 22, 24, 25], Car:  [44, 47, 41, 37]
+  };
+  const slider = document.getElementById('year');
+
+  function draw() {
+    const i = Number(slider.value);
+    document.getElementById('yr').textContent = years[i];
+    document.getElementById('chart').innerHTML = Object.entries(data).map(([mode, v]) =&gt;
+      `&lt;div class="row"&gt;&lt;span&gt;${mode}&lt;/span&gt;&lt;span class="bar" style="width:${v[i] * 4}px"&gt;&lt;/span&gt;&lt;span&gt;${v[i]}%&lt;/span&gt;&lt;/div&gt;`
+    ).join('');
+    const top = Object.entries(data).sort((a, b) =&gt; b[1][i] - a[1][i])[0];
+    document.getElementById('summary').textContent =
+      `In ${years[i]}, ${top[0]} was the most common way to get to school (${top[1][i]}%).`;
+  }
+
+  document.getElementById('table').innerHTML = '&lt;caption&gt;Data behind the chart (% of students)&lt;/caption&gt;' +
+    '&lt;tr&gt;&lt;th&gt;Mode&lt;/th&gt;' + years.map(y =&gt; `&lt;th&gt;${y}&lt;/th&gt;`).join('') + '&lt;/tr&gt;' +
+    Object.entries(data).map(([m, v]) =&gt; `&lt;tr&gt;&lt;th&gt;${m}&lt;/th&gt;${v.map(n =&gt; `&lt;td&gt;${n}&lt;/td&gt;`).join('')}&lt;/tr&gt;`).join('');
+
+  slider.addEventListener('input', draw);
+  draw();
+&lt;/script&gt;</code></pre></div>
+          <p>Extend it: add a "Year" label to the table, replace the data with a real dataset from data.gov.au (recording its licence), add a second chart, or add tooltips. Test that it works with the keyboard only, at phone width, and at 200% zoom.</p>
+          <div class="callout info"><strong>Scenario</strong> A regional newspaper wants a piece about local swimming pool visits. The reporter gets open council data, finds that several months are missing, and says so in the story rather than guessing. The interactive chart has alt text, a data table and a note describing the source. After publication a reader points out a mislabelled month. The paper corrects it, records the change and thanks the reader. That is data journalism done ethically.</div>
+          <div class="callout assessor"><strong>HSC exam focus</strong> "Develop and publish" is practical. You should be able to describe your own project's workflow, choose a suitable visualisation, and say how you handled ethics (source, privacy, bias, accessibility). Keep a process diary with dated entries. In writing, use the sequence question, data, analysis, visualisation, publication and give a specific ethical decision you made and why.</div>
         </section>
 
         <hr class="divider" />
@@ -451,8 +1344,68 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-08, EC-11-09)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Select</strong> an appropriate project management approach to develop an interactive media-based solution</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (select). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>NESA's glossary defines <strong>project management</strong> as the process of planning, organising, controlling resources, monitoring timelines and activities, and completing a project to achieve a goal that meets identified criteria. The <em>approach</em> you choose sets how the work is organised over time. Three are common for interactive media projects.</p>
+
+          <h3>Three approaches</h3>
+          <ul>
+            <li><strong>Waterfall</strong> completes the stages in order (requirements, design, development, testing, installation, maintenance). Each stage is finished and signed off before the next starts, and the client sees a working system near the end. It emphasises planning and documentation.</li>
+            <li><strong>Agile</strong> works in short cycles (often one to four weeks, called sprints in Scrum). Each cycle plans, builds, tests and reviews a small working piece, with the client giving feedback each time. Work is prioritised from a backlog, and the plan changes as learning arrives.</li>
+            <li><strong>Prototyping</strong> builds a quick, cut-down version early so users can react to it, then refines it (or throws it away and builds properly). It focuses on discovering what users need before committing to a full build. Prototyping is often used <em>inside</em> waterfall or agile projects.</li>
+          </ul>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Animated diagram</span></p>
+              <h4 class="figure-title">Waterfall and agile: when does the client get a working system?</h4>
+              <p class="figure-lead">The same project delivered two ways, with the amount of working system the client can use shown week by week.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--anim"><div class="anim" data-anim="waterfall-agile"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Waterfall delivers everything at the end; agile delivers usable parts along the way.</li><li>In waterfall a late request from the client is expensive; in agile it becomes the next item on the backlog.</li><li>The picture simplifies real projects, which usually mix the two.</li></ul><p class="figure-controls">Choose Waterfall or Agile with the tabs. Step with ◀ and ▶ (or the arrow keys), play or pause with Space.</p></div>
+              <p class="figure-try"><strong>Try this</strong>For each approach, name a project where a late change would be a serious problem and one where it would be welcome.</p>
+            </div>
+          </figure>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Process diagram</span></p>
+              <h4 class="figure-title">An agile sprint cycle</h4>
+              <p class="figure-lead">A prioritised backlog feeds a short sprint that ends in a demonstrable increment, a review and a retrospective.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="agile-sprint"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>The client is involved at the review, every sprint.</li><li>The retrospective improves the team's process, not just the product.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>What would go on the backlog for a school events app? Order the first five items by priority.</p>
+            </div>
+          </figure>
+
+          <h3>Selecting an approach: criteria</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Criterion</th><th>Waterfall</th><th>Agile</th><th>Prototyping</th></tr></thead>
+              <tbody>
+                <tr><td>Requirements</td><td>Clear and stable</td><td>Unclear or changing</td><td>Unclear; users must see something first</td></tr>
+                <tr><td>Client involvement</td><td>At the start and end</td><td>Continuous</td><td>Frequent demonstration and feedback</td></tr>
+                <tr><td>First working version</td><td>Late</td><td>Early, then regular</td><td>Very early (limited)</td></tr>
+                <tr><td>Cost of change</td><td>High once a stage is signed off</td><td>Low</td><td>Low early on</td></tr>
+                <tr><td>Documentation and control</td><td>Heavy; strong milestones</td><td>Lighter; working system valued</td><td>Varies; risk of a prototype becoming the product</td></tr>
+                <tr><td>Fixed deadline and budget</td><td>Suits fixed scope</td><td>Fix time; flex scope</td><td>Supports early decisions on scope</td></tr>
+                <tr><td>Main risk</td><td>Building the wrong thing</td><td>Scope creep; less predictable finish</td><td>Users expect the prototype to be finished</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Applying the criteria</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Project</th><th>Approach</th><th>Justification</th></tr></thead>
+              <tbody>
+                <tr><td>A museum kiosk with fixed content and a fixed opening date</td><td>Waterfall, with some early prototyping of screens</td><td>Requirements and deadline are fixed, and hardware and content must be delivered together</td></tr>
+                <tr><td>A student-led school events app when no one is sure what users want</td><td>Agile with prototypes</td><td>Needs are unclear; short cycles let users steer the design and change is expected</td></tr>
+                <tr><td>An interactive data story for a newsroom deadline</td><td>Agile (a simple task board) with a minimal first version</td><td>A basic, correct version can publish early and be improved if time allows</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Whatever the approach, use the same planning and tracking tools: a <strong>Gantt chart</strong> for tasks, durations and dependencies (NESA Course Specifications, p.12), and a <strong>process diary</strong> for progress and decisions (p.13). Year 12's Enterprise project covers these in more depth; see the <a href="enterprise-project.html">Enterprise Project</a> notes.</p>
+          <div class="callout assessor"><strong>HSC exam focus</strong> "Select" needs an approach <em>and</em> a justification tied to the scenario. Say what makes the project suit it (clear or unclear requirements, deadline, client availability) and name a limitation you will manage. Avoid the claim that one approach is simply "better".</div>
         </section>
 
         <hr class="divider" />
@@ -463,8 +1416,87 @@
           <p class="syllabus-concept">📌 <em><strong>Apply</strong> features of user interaction and UX within web-based systems</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>communication processes via social media</li><li>search, sort and selection processes via online retail services</li><li>online gaming platforms</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (apply). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>Applying features of user interaction and UX means choosing interface features and processes for a real system so people can reach their goals quickly and safely. The three contexts below appear in the syllabus. In each, ask what the user is trying to do, which features help, and which UX principles those features apply.</p>
+
+          <h3>Communication processes via social media</h3>
+          <p>Social media communication follows a repeatable process: <em>compose</em> (write, add media, add alt text and captions), <em>publish</em> (choose the audience), <em>notify</em> (followers see it in a feed or notification), <em>react and reply</em> (likes, comments, shares, direct messages), and <em>moderate</em> (report, hide, block, remove). Each stage relies on a UI feature and a UX principle:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Stage</th><th>Interaction features</th><th>UX principle applied</th></tr></thead>
+              <tbody>
+                <tr><td>Compose</td><td>Text box, emoji picker, upload, alt-text field, draft saving</td><td>Accessibility; forgiveness (drafts are not lost)</td></tr>
+                <tr><td>Publish</td><td>Audience selector (public, friends, private), preview, Post button</td><td>User control; clear visibility of who will see it</td></tr>
+                <tr><td>Notify</td><td>Notifications with counts, muting, quiet hours</td><td>Feedback; user control over interruptions</td></tr>
+                <tr><td>Reply</td><td>Threaded comments, mentions, reactions</td><td>Recognition; low effort to respond</td></tr>
+                <tr><td>Moderate</td><td>Report, block, hide, edit and delete</td><td>Safety; error recovery; user control</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><em>Design a class discussion board:</em> require a name (or a chosen display name), allow replies within a topic, let teachers pin announcements and hide inappropriate comments, notify users of replies only, and show a clear "Report" option on every post. Consider privacy (who can see the board) and accessibility (keyboard-operable reply buttons).</p>
+
+          <h3>Search, sort and selection processes via online retail services</h3>
+          <p>Online retail depends on helping people find the right item among many. The typical path is search, filter, sort, compare and select, then add to cart. Each step reduces the number of choices, which speeds decisions. The flowchart shows the logic, using NESA's flowchart symbols.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Flowchart</span></p>
+              <h4 class="figure-title">Searching, filtering and selecting a product</h4>
+              <p class="figure-lead">The logic behind a shop's search, with a loop for no results and a loop for refining until an item suits.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="im-search-flow"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Two decisions: "Any results?" and "Suitable item found?". Every decision exit is labelled Yes or No.</li><li>An empty result does not end the process: it returns suggestions and lets the user try again (help recovering from errors).</li><li>Filtering and sorting are a loop that continues until the user is satisfied.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Add a step to the flowchart so the user can view a single product's details before adding it to the cart.</p>
+            </div>
+          </figure>
+          <p>Good retail interaction features include a search box that suggests terms as you type and tolerates spelling mistakes; filters shown as check boxes or sliders (category, size, price); a sort menu; a results count; clear product cards with price and image; and a cart that always shows what is in it. Here is a small working example of search, filter and sort in JavaScript:</p>
+          <div class="code-block"><pre><code class="language-html">&lt;label for="q"&gt;Search&lt;/label&gt; &lt;input id="q" type="search"&gt;
+&lt;label for="cat"&gt;Category&lt;/label&gt;
+&lt;select id="cat"&gt;&lt;option value=""&gt;All&lt;/option&gt;&lt;option&gt;Shirts&lt;/option&gt;&lt;option&gt;Shoes&lt;/option&gt;&lt;option&gt;Bags&lt;/option&gt;&lt;/select&gt;
+&lt;label for="sort"&gt;Sort by&lt;/label&gt;
+&lt;select id="sort"&gt;&lt;option value="name"&gt;Name (A to Z)&lt;/option&gt;&lt;option value="low"&gt;Price (low to high)&lt;/option&gt;&lt;option value="high"&gt;Price (high to low)&lt;/option&gt;&lt;/select&gt;
+&lt;p id="count" role="status"&gt;&lt;/p&gt;
+&lt;ul id="results"&gt;&lt;/ul&gt;
+
+&lt;script&gt;
+  const products = [
+    { name: 'Polo shirt', category: 'Shirts', price: 24 },
+    { name: 'Sports shirt', category: 'Shirts', price: 19 },
+    { name: 'Leather shoes', category: 'Shoes', price: 65 },
+    { name: 'Sneakers', category: 'Shoes', price: 48 },
+    { name: 'School bag', category: 'Bags', price: 39 }
+  ];
+  const q = document.getElementById('q'), cat = document.getElementById('cat'), sort = document.getElementById('sort');
+
+  function show() {
+    let list = products
+      .filter(p =&gt; p.name.toLowerCase().includes(q.value.trim().toLowerCase()))   // search
+      .filter(p =&gt; !cat.value || p.category === cat.value);                        // filter
+    if (sort.value === 'name') list.sort((a, b) =&gt; a.name.localeCompare(b.name));  // sort
+    if (sort.value === 'low') list.sort((a, b) =&gt; a.price - b.price);
+    if (sort.value === 'high') list.sort((a, b) =&gt; b.price - a.price);
+    document.getElementById('count').textContent = list.length + ' items found';
+    document.getElementById('results').innerHTML = list.map(p =&gt; `&lt;li&gt;${p.name}: $${p.price}&lt;/li&gt;`).join('')
+      || '&lt;li&gt;No matches. Try a different word or clear the filters.&lt;/li&gt;';
+  }
+  [q, cat, sort].forEach(el =&gt; el.addEventListener('input', show));
+  show();
+&lt;/script&gt;</code></pre></div>
+          <p>Notice that every control has a visible <code>&lt;label&gt;</code>, the item count is announced (<code>role="status"</code>), and an empty search tells the user what to do next. Try searching "shirt", choosing a category and sorting by price.</p>
+          <div class="callout warning"><strong>Ethics of retail interaction</strong> Ranking results to promote products that pay the shop the most, or hiding a cheaper option, may steer buyers unfairly. Say when results are sponsored, and let users sort by price.</div>
+
+          <h3>Online gaming platforms</h3>
+          <p>A gaming platform combines a store, a social network and a match-making service. The interaction features that shape the UX include:</p>
+          <ul>
+            <li><strong>Onboarding and tutorials:</strong> teach the controls in play rather than in a manual, with adjustable difficulty.</li>
+            <li><strong>Lobbies and match-making:</strong> match players by skill and connection quality, and show waiting time (visibility of status).</li>
+            <li><strong>Immediate feedback:</strong> sound, animation and vibration confirm actions; health and score are always visible.</li>
+            <li><strong>Social features:</strong> friends lists, party chat, quick text phrases, and leaderboards that motivate without shaming.</li>
+            <li><strong>Performance indicators:</strong> a visible ping or connection warning, because delay damages the experience.</li>
+            <li><strong>Accessibility options:</strong> remappable controls, subtitles, colour-blind modes, adjustable text size and reduced-motion settings.</li>
+            <li><strong>Safety and control:</strong> report and mute buttons, parental controls, spending limits and clear age ratings.</li>
+          </ul>
+          <div class="callout info"><strong>Scenario</strong> A Year 11 group prototypes a "study lobby" for a school gaming club. Players choose a role, see who is waiting, and start when four have joined. They use a countdown and a sound cue (feedback), offer a text-size setting and a mute button (accessibility and safety), and test with a beginner who cannot find the Leave button. Moving that button to the same place as on every other screen (consistency) fixes it.</div>
+          <div class="callout assessor"><strong>HSC exam focus</strong> "Apply" means using a feature in a specified system. Choose a context from the question, name a specific interaction feature (search filters, report button, match-making lobby), and state the UX principle it supports and the outcome for the user. A short annotated screen design or flowchart with a clear justification can earn more than a paragraph of description.</div>
         </section>
 
         <div class="quiz" data-quiz="im-3"></div>
@@ -517,7 +1549,7 @@
   </footer>
 
   <script src="../js/glossary-data.js?v=8f2b4607"></script>
-  <script src="../js/quizzes/interactive-media.js?v=ce3507bf"></script>
+  <script src="../js/quizzes/interactive-media.js?v=2ad6ef5d"></script>
   <script src="../js/quiz.js?v=3e6185a0" defer></script>
   <script src="../js/nesa-diagram-data.js?v=33ff129d"></script>
   <script src="../js/nesa-diagrams.js?v=6bab3032" defer></script>
@@ -546,6 +1578,8 @@
       </div>
     </div>
   </div>
+  <script src="../js/anim.js?v=2eeed270" defer></script>
+  <script src="../js/pages/interactive-media.js?v=42dceaa2" defer></script>
   <script src="../js/progress.js?v=40b8096b" defer></script>
 </body>
 </html>

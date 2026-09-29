@@ -1,0 +1,227 @@
+[
+  {
+    "id": "term-node-vertex",
+    "name": "Node (Vertex)",
+    "topics": [
+      "net"
+    ],
+    "definition": "An individual, device or category represented as a circle in a graph.",
+    "example": "In a social network graph each person is a node; in a network diagram each router or computer is a node."
+  },
+  {
+    "id": "term-edge-link",
+    "name": "Edge (Link)",
+    "topics": [
+      "net"
+    ],
+    "definition": "A line in a graph that joins two nodes and may carry a label or a weight.",
+    "example": "A friendship between two users, or a cable of 25 m between two buildings."
+  },
+  {
+    "id": "term-adjacency-matrix",
+    "name": "Adjacency Matrix",
+    "topics": [
+      "net"
+    ],
+    "definition": "A grid that records which nodes in a graph are directly linked, using 1 (or a weight) for a link and 0 for none.",
+    "example": "Row A of a friendship matrix reads 0 1 1 1 0 0, so A is linked to B, C and D."
+  },
+  {
+    "id": "term-degree-centrality",
+    "name": "Degree Centrality",
+    "topics": [
+      "net"
+    ],
+    "definition": "A measure of a node's importance based on the number of edges connected to it.",
+    "example": "A user with 3 friends in a six-person network has degree 3 and normalised degree centrality 3 ÷ 5 = 0.6."
+  },
+  {
+    "id": "term-betweenness-centrality",
+    "name": "Betweenness Centrality",
+    "topics": [
+      "net"
+    ],
+    "definition": "A measure of how often a node lies on the shortest paths between other pairs of nodes, showing which nodes act as bridges.",
+    "example": "A switch that joins two office floors carries most cross-floor traffic, so it has high betweenness."
+  },
+  {
+    "id": "term-connectedness",
+    "name": "Connectedness",
+    "topics": [
+      "net"
+    ],
+    "definition": "The property of a graph in which there is a path between every pair of nodes; a graph that is not connected splits into separate components.",
+    "example": "Cutting the only cable to a building leaves the network disconnected."
+  },
+  {
+    "id": "term-weighted-graph",
+    "name": "Weighted Graph",
+    "topics": [
+      "net"
+    ],
+    "definition": "A graph in which each edge has a number, such as a distance, cost or delay.",
+    "example": "Cable lengths in metres on the links between five sites."
+  },
+  {
+    "id": "term-shortest-path",
+    "name": "Shortest Path",
+    "topics": [
+      "net"
+    ],
+    "definition": "The route between two nodes in a weighted graph with the smallest total weight, which can be found with Dijkstra's algorithm.",
+    "example": "A to E across cables of 25, 20 and 10 m gives a shortest path of 55 m."
+  },
+  {
+    "id": "term-disruptive-technology",
+    "name": "Disruptive Technology",
+    "topics": [
+      "net"
+    ],
+    "definition": "A technology that changes how people or organisations do something so much that established products, services or business models are displaced.",
+    "example": "Streaming services displaced most DVD rental shops."
+  },
+  {
+    "id": "term-internet-of-things",
+    "name": "Internet of Things (IoT)",
+    "topics": [
+      "net"
+    ],
+    "definition": "Smart devices and smart objects that send and receive information using the internet and communication infrastructure.",
+    "example": "A soil moisture sensor that reports readings to a farm's irrigation system."
+  },
+  {
+    "id": "term-internet-of-me",
+    "name": "Internet of Me (IoMe)",
+    "topics": [
+      "net"
+    ],
+    "definition": "Technology that connects our minds and bodies with the online world, turning biological and cognitive life into streams of data that can be monitored, shared and shaped.",
+    "example": "A smartwatch that records heart rate and sleep and shares them with a health app."
+  },
+  {
+    "id": "term-edge-computing",
+    "name": "Edge Computing",
+    "topics": [
+      "net"
+    ],
+    "definition": "A computing framework that distributes processing capabilities and hardware so applications can be closer to their data source.",
+    "example": "A gateway on a farm that decides when to switch a pump on without waiting for the cloud."
+  },
+  {
+    "id": "term-scada",
+    "name": "SCADA",
+    "topics": [
+      "net"
+    ],
+    "definition": "Supervisory control and data acquisition: a system of sensors, controllers, networks and operator screens used to monitor and control industrial and infrastructure processes.",
+    "example": "A water utility monitoring reservoir levels and pump stations from a control centre."
+  },
+  {
+    "id": "term-interoperability",
+    "name": "Interoperability",
+    "topics": [
+      "net"
+    ],
+    "definition": "The ability of devices and systems from different makers to work together and exchange data.",
+    "example": "A light bulb from one brand and a hub from another both supporting the Matter standard."
+  },
+  {
+    "id": "term-mqtt",
+    "name": "MQTT",
+    "topics": [
+      "net"
+    ],
+    "definition": "A lightweight publish/subscribe messaging protocol in which devices publish to topics on a broker and others subscribe to those topics.",
+    "example": "A sensor publishes to farm/paddock3/soil/moisture and an irrigation controller subscribes."
+  },
+  {
+    "id": "term-iaas",
+    "name": "Infrastructure as a Service (IaaS)",
+    "topics": [
+      "net"
+    ],
+    "definition": "A cloud service in which the provider supplies virtual servers, storage and networking and the customer manages the operating system and software.",
+    "example": "Renting a virtual server in a Sydney cloud region to run a legacy program."
+  },
+  {
+    "id": "term-paas",
+    "name": "Platform as a Service (PaaS)",
+    "topics": [
+      "net"
+    ],
+    "definition": "A cloud service in which the provider supplies the operating system, runtime and tools so developers deploy their own code without managing servers.",
+    "example": "Deploying a web app to a hosted platform such as Azure App Service."
+  },
+  {
+    "id": "term-saas",
+    "name": "Software as a Service (SaaS)",
+    "topics": [
+      "net"
+    ],
+    "definition": "A cloud service in which the provider runs a complete application that users access over the internet, usually by subscription.",
+    "example": "Microsoft 365 email and documents, or MYOB accounting."
+  },
+  {
+    "id": "term-hybrid-cloud",
+    "name": "Hybrid Cloud",
+    "topics": [
+      "net"
+    ],
+    "definition": "A combination of private (or on-premises) infrastructure and public cloud, connected so data and applications can move between them.",
+    "example": "A clinic keeps active records on its own server and copies encrypted backups to a public cloud region."
+  },
+  {
+    "id": "term-data-sovereignty",
+    "name": "Data Sovereignty",
+    "topics": [
+      "net"
+    ],
+    "definition": "The principle that data is subject to the laws of the country where it is stored; NESA also uses the term for the right of Indigenous Peoples to determine the creation, collection, ownership and application of data about them.",
+    "example": "Choosing a cloud region in Australia so Australian law applies to customer records."
+  },
+  {
+    "id": "term-attenuation",
+    "name": "Attenuation",
+    "topics": [
+      "net"
+    ],
+    "definition": "The weakening of a signal as it travels through a medium or across distance.",
+    "example": "An Ethernet cable run beyond about 100 m loses too much signal to work reliably."
+  },
+  {
+    "id": "term-latency",
+    "name": "Latency",
+    "topics": [
+      "net"
+    ],
+    "definition": "The time a signal takes to travel from sender to receiver, usually measured in milliseconds.",
+    "example": "A geostationary satellite link has noticeably higher latency than a fibre connection."
+  },
+  {
+    "id": "term-bandwidth",
+    "name": "Bandwidth",
+    "topics": [
+      "net"
+    ],
+    "definition": "The maximum amount of data a connection can carry per second, usually measured in megabits per second.",
+    "example": "A 100 Mbps nbn plan can carry up to 100 megabits each second."
+  },
+  {
+    "id": "term-qos",
+    "name": "Quality of Service (QoS)",
+    "topics": [
+      "net"
+    ],
+    "definition": "Rules that give priority to important or time-sensitive network traffic over less urgent traffic.",
+    "example": "A router that prioritises video calls over a large file download."
+  },
+  {
+    "id": "term-tpm",
+    "name": "Trusted Platform Module (TPM)",
+    "topics": [
+      "net"
+    ],
+    "definition": "A dedicated security chip that stores cryptographic keys in hardware and helps verify that a device started with trusted software.",
+    "example": "BitLocker uses a TPM to keep a laptop's drive encryption key safe."
+  }
+]

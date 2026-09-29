@@ -1,34 +1,97 @@
 /* Quiz bank for Networking Systems and Social Computing (topics/networking-systems.html).
    One entry per data-quiz key on the page: net-1, net-2, net-3, net-4.
-   Each question: { q: "…", options: ["…", "…", "…"], answer: <index of the right option>, why: "…" }.
-   The samples below only prove the machinery works: replace each with 4 to 6 real questions. */
+   Each question: { q: "…", options: ["…", "…", "…", "…"], answer: <index of the right option>, why: "…" }. */
 window.HSC_QUIZZES = Object.assign(window.HSC_QUIZZES || {}, {
-  // CONTENT: replace this sample with 4 to 6 questions on part 1 (Introduction to human-centric computing).
+  // Part 1: Introduction to human-centric computing
   'net-1': [
-    { q: 'Sample question: which NESA part of this topic does this quiz belong to?',
-      options: ['Introduction to human-centric computing', 'Storage and workflow in enterprise networks', 'Network architecture and infrastructure', 'Creating a network'],
-      answer: 0,
-      why: 'This placeholder shows the quiz machinery working. It belongs to Part 1, Introduction to human-centric computing.' },
-  ],
-  // CONTENT: replace this sample with 4 to 6 questions on part 2 (Storage and workflow in enterprise networks).
-  'net-2': [
-    { q: 'Sample question: which NESA part of this topic does this quiz belong to?',
-      options: ['Introduction to human-centric computing', 'Storage and workflow in enterprise networks', 'Network architecture and infrastructure', 'Creating a network'],
+    { q: 'Which statement best describes a disruptive technology?',
+      options: ['Any new gadget released by a large company', 'A technology that changes how people or organisations do something so much that older products or business models are displaced', 'A technology that causes a computer network to fail', 'A technology that is illegal to use in Australia'],
       answer: 1,
-      why: 'This placeholder shows the quiz machinery working. It belongs to Part 2, Storage and workflow in enterprise networks.' },
-  ],
-  // CONTENT: replace this sample with 4 to 6 questions on part 3 (Network architecture and infrastructure).
-  'net-3': [
-    { q: 'Sample question: which NESA part of this topic does this quiz belong to?',
-      options: ['Introduction to human-centric computing', 'Storage and workflow in enterprise networks', 'Network architecture and infrastructure', 'Creating a network'],
-      answer: 2,
-      why: 'This placeholder shows the quiz machinery working. It belongs to Part 3, Network architecture and infrastructure.' },
-  ],
-  // CONTENT: replace this sample with 4 to 6 questions on part 4 (Creating a network).
-  'net-4': [
-    { q: 'Sample question: which NESA part of this topic does this quiz belong to?',
-      options: ['Introduction to human-centric computing', 'Storage and workflow in enterprise networks', 'Network architecture and infrastructure', 'Creating a network'],
+      why: 'Disruptive technologies such as streaming and smartphones replaced established products and services. Newness alone or a network failure does not make a technology disruptive.' },
+    { q: 'In an adjacency matrix for an undirected social network graph, what does the total of one person\'s row show?',
+      options: ['How many people are in the whole network', 'The weight of the strongest friendship', 'The number of paths in the graph', 'That person\'s degree: the number of direct connections they have'],
       answer: 3,
-      why: 'This placeholder shows the quiz machinery working. It belongs to Part 4, Creating a network.' },
+      why: 'Each 1 in a row is a link to another node, so the row total is the node\'s degree, used for degree centrality.' },
+    { q: 'A social network has six people. One person is friends with three of the others. What is that person\'s normalised degree centrality?',
+      options: ['3 ÷ 5 = 0.6', '3 ÷ 6 = 0.5', '3 × 5 = 15', '5 ÷ 3 ≈ 1.67'],
+      answer: 0,
+      why: 'Normalised degree centrality is the degree divided by the maximum possible degree, n − 1. Here that is 3 ÷ (6 − 1) = 0.6.' },
+    { q: 'A farm co-op installs soil sensors. The irrigation pump must switch on within a second even if the internet drops. Which design suits this best?',
+      options: ['Send every reading to a distant cloud server and wait for its reply', 'Use a printed report reviewed once a week', 'Post the readings to a social network', 'Process readings on a local edge gateway that controls the pump and sends summaries to the cloud'],
+      answer: 3,
+      why: 'Edge computing puts processing close to the data source, so decisions are fast and continue when the internet is unavailable.' },
+    { q: 'A start-up releases a simple first version of its app, collects feedback from users and then changes its main feature. Which two start-up characteristics does this show?',
+      options: ['Fixed planning and avoiding feedback', 'Testing with a minimum viable product and being willing to pivot', 'Copying a competitor exactly and cutting all costs', 'Waiting until the product is perfect before any release'],
+      answer: 1,
+      why: 'Releasing an MVP to gather feedback, then changing direction (pivoting) based on evidence, is a core business characteristic of successful start-ups.' }
   ],
+  // Part 2: Storage and workflow in enterprise networks
+  'net-2': [
+    { q: 'A council replaces a paper permit form with an online workflow. Which is a limitation of digital workflows?',
+      options: ['Requests can never be tracked', 'Every request now takes longer', 'The process depends on the network and system being available, and unusual cases may not fit the rules', 'An audit trail is impossible'],
+      answer: 2,
+      why: 'Digital workflows give speed and audit trails but depend on systems being online, need set-up and training, and can be rigid with exceptional cases.' },
+    { q: 'A school holds 4 000 student folders averaging 5 MB each and keeps three copies (the 3-2-1 rule). About how much storage is needed in total? (Use 1 GB = 1 000 MB.)',
+      options: ['20 GB', '6 GB', '60 GB', '600 GB'],
+      answer: 2,
+      why: '4 000 × 5 MB = 20 000 MB = 20 GB for one copy. Three copies need 20 GB × 3 = 60 GB.' },
+    { q: 'A company stores customers\' personal information on servers in another country. Which storage requirement does this mainly raise?',
+      options: ['Capacity, because the data is larger', 'Location, because the laws of the country where data is stored can apply (data sovereignty)', 'Accessibility, because the data cannot be read', 'Colour depth of the stored images'],
+      answer: 1,
+      why: 'Where data is held affects which laws apply and what obligations exist for cross-border disclosure, so it is a location and data sovereignty issue.' },
+    { q: 'A developer wants to deploy a web app without managing servers or the operating system. Which cloud service model fits best?',
+      options: ['Infrastructure as a Service (IaaS)', 'Software as a Service (SaaS)', 'Non-cloud on premises', 'Platform as a Service (PaaS)'],
+      answer: 3,
+      why: 'PaaS supplies the operating system, runtime and tools so developers manage only their code and data. With IaaS they would manage the operating system; SaaS is a finished application.' },
+    { q: 'A clinic keeps active patient records on a server in its building and copies encrypted backups to a public cloud region in Australia. What type of storage arrangement is this?',
+      options: ['Public cloud only', 'Hybrid', 'Private cloud only', 'SaaS'],
+      answer: 1,
+      why: 'Combining on-premises (or private) storage with public cloud is a hybrid arrangement.' }
+  ],
+  // Part 3: Network architecture and infrastructure
+  'net-3': [
+    { q: 'Compared with geostationary satellites, low Earth orbit (LEO) satellites mainly offer',
+      options: ['Lower latency, because they are much closer to Earth', 'Coverage from a single satellite over the whole planet', 'Immunity from all weather', 'Higher latency, because they move faster'],
+      answer: 0,
+      why: 'LEO satellites are a few hundred kilometres up, not about 36 000 km, so signals make a shorter trip and latency is lower. More satellites are needed for continuous coverage.' },
+    { q: 'Five sites are joined by cables with these lengths in metres: A–B 40, A–C 25, B–C 15, B–D 30, C–D 20, C–E 45, D–E 10. What is the shortest cable route from A to E?',
+      options: ['A → C → E, 70 m', 'A → B → D → E, 80 m', 'A → C → D → E, 55 m', 'A → B → C → E, 100 m'],
+      answer: 2,
+      why: 'A to C is 25, C to D is 20 and D to E is 10, a total of 55 m. The direct-looking route A → C → E is 70 m.' },
+    { q: 'A microwave link is planned between two farms, but a ridge rises between the two dishes and blocks the direct path. Which interference factor is most directly involved?',
+      options: ['Topography and physical obstruction of line of sight', 'A shortage of storage capacity', 'Weak passwords', 'Incorrect file permissions'],
+      answer: 0,
+      why: 'Microwave links need a clear line of sight, so hills and other obstructions block the signal. This is the topography factor.' },
+    { q: 'A vineyard wants battery-powered sensors that send a few small readings an hour over several kilometres. Which communication technology is designed for this?',
+      options: ['Bluetooth Low Energy', 'Wired Ethernet', 'LoRaWAN', 'A 5G millimetre-wave link on every sensor'],
+      answer: 2,
+      why: 'LoRaWAN is a low-power wide-area network protocol that carries small messages over long distances with very low power use. Bluetooth Low Energy has a short range.' },
+    { q: 'Which statement about protecting a smart home network is correct?',
+      options: ['Hiding the Wi-Fi network name makes the network secure', 'UPnP lets devices ask the router to open ports automatically, which can be a security risk', 'Default passwords on cameras are safe because they are unique to each device', 'A VPN makes you completely anonymous online'],
+      answer: 1,
+      why: 'UPnP convenience can allow malware or insecure devices to expose ports to the internet. A hidden SSID gives little security, default passwords are published, and a VPN does not guarantee anonymity.' }
+  ],
+  // Part 4: Creating a network
+  'net-4': [
+    { q: 'On a Gantt chart, an elbow arrow from the end of Task 2 to the start of Task 3 shows that',
+      options: ['Task 3 is a milestone', 'Both tasks were done by the same person', 'Task 3 is 100% complete', 'Task 3 depends on Task 2 and cannot start until it finishes'],
+      answer: 3,
+      why: 'Arrows join a task to its dependent task. Milestones are hollow diamonds, and percentage complete is shown by shading the bar.' },
+    { q: 'A technician is setting up a new router. Which is the most important first security change?',
+      options: ['Replace the default administrator password with a unique, long passphrase', 'Rename the device to match the manufacturer\'s model', 'Turn off the firewall to improve speed', 'Turn on UPnP so that all devices work automatically'],
+      answer: 0,
+      why: 'Default passwords are published online, so leaving them unchanged is an easy way in for attackers. The firewall should stay on and UPnP is best turned off.' },
+    { q: 'A small office network uses the address range 192.168.10.0/24 with the router at 192.168.10.1 and a DHCP pool of 192.168.10.100 to 192.168.10.199. What is the DHCP pool used for?',
+      options: ['Encrypting data on the Wi-Fi network', 'Storing backups of files', 'Blocking visitors from the internet', 'Giving addresses automatically to devices that join the network'],
+      answer: 3,
+      why: 'DHCP hands out IP addresses from a range to devices as they connect. Fixed devices such as printers and servers use reserved addresses outside the pool.' },
+    { q: 'What is the difference between a driver and firmware?',
+      options: ['A driver is software that lets the operating system control a hardware device; firmware is software stored inside the device itself', 'A driver is hardware and firmware is software', 'Firmware is only used in cloud servers', 'There is no difference'],
+      answer: 0,
+      why: 'Drivers sit in the operating system and control a device such as a network adapter. Firmware runs inside the device, such as a router. Both should be kept updated.' },
+    { q: 'A clinic must send client records to a cloud service over the internet. Which is the best evaluation?',
+      options: ['Send it unencrypted, because encryption is too slow to notice', 'Send it unencrypted, because the data is only text', 'Use HTTPS or a VPN, because encrypting data in transit protects confidentiality at little cost to performance', 'Do not use the internet at all'],
+      answer: 2,
+      why: 'Encryption in transit (TLS/HTTPS or a VPN) protects sensitive records from eavesdropping, and the performance cost is small on modern devices.' }
+  ]
 });

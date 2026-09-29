@@ -9,14 +9,14 @@
   <meta name="robots" content="index, follow" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Course Toolkit | HSC Enterprise Computing" />
-  <meta property="og:description" content="The diagrams, spreadsheet features, SQL and design tools the syllabus asks you to use, explained step by step: data flow diagrams, flowcharts, decision trees, dashboards and relational database design." />
+  <meta property="og:description" content="Every tool in the NESA Enterprise Computing Course Specifications: DFDs, flowcharts, SQL, spreadsheet functions and more, with worked examples and practice." />
   <meta property="og:url" content="https://4bzdog.github.io/HSC-Enterprise-Computing/topics/toolkit.html" />
   <meta property="og:image" content="https://4bzdog.github.io/HSC-Enterprise-Computing/og-image.png" />
   <meta property="og:image:alt" content="HSC Enterprise Computing Notes: NESA NSW" />
   <meta property="og:site_name" content="HSC Enterprise Computing Notes" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Course Toolkit | HSC Enterprise Computing" />
-  <meta name="twitter:description" content="The diagrams, spreadsheet features, SQL and design tools the syllabus asks you to use, explained step by step: data flow diagrams, flowcharts, decision trees, dashboards and relational database design." />
+  <meta name="twitter:description" content="Every tool in the NESA Enterprise Computing Course Specifications: DFDs, flowcharts, SQL, spreadsheet functions and more, with worked examples and practice." />
   <meta name="twitter:image" content="https://4bzdog.github.io/HSC-Enterprise-Computing/og-image.png" />
   <script type="application/ld+json">
   {
@@ -48,11 +48,13 @@
   <meta name="theme-color" content="#0B1B2E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <meta name="description" content="The diagrams, spreadsheet features, SQL and design tools the syllabus asks you to use, explained step by step: data flow diagrams, flowcharts, decision trees, dashboards and relational database design." />
+  <meta name="description" content="Every tool in the NESA Enterprise Computing Course Specifications: DFDs, flowcharts, SQL, spreadsheet functions and more, with worked examples and practice." />
   <!-- Theme init: prevents flash of wrong theme. The ec- prefix keeps this site's storage apart from sister sites on the same origin. -->
   <script>(function(){try{var t=localStorage.getItem('ec-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
   <link rel="stylesheet" href="../css/styles.css?v=eaa2e127" />
   <link rel="stylesheet" href="../css/theme.css?v=ea1ce127" />
+  <link rel="stylesheet" href="../css/anim.css?v=22e246f7" />
+  <link rel="stylesheet" href="../css/pages/toolkit.css?v=78488493" />
 </head>
 <body>
 
@@ -157,11 +159,11 @@
       </nav>
       <div class="topic-title-row"><span class="topic-hero-icon ti-core" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 17.5 17.5 3 21 6.5 6.5 21z"/><path d="M6.6 13.9l1.7 1.7M9.4 11.1l1.2 1.2M12.1 8.4l1.7 1.7M14.9 5.6l1.2 1.2"/></svg></span><h1>Course Toolkit</h1></div>
       <p class="text-muted-dark max-w-600 mt-2 fs-sm lh-base">
-        The diagrams, spreadsheet features, SQL and design tools the syllabus asks you to use, explained step by step: data flow diagrams, flowcharts, decision trees, dashboards and relational database design.
+        The diagrams, SQL, spreadsheet functions, testing and implementation methods and software features that NESA&rsquo;s Course Specifications name, explained one by one with worked examples. Notation and lists from the NESA Enterprise Computing Course Specifications (&copy; NESA); a study aid, not a replacement.
       </p>
       <div class="topic-header-meta">
         <span class="meta-pill">Resources</span>
-        <span class="meta-pill">Coming soon</span>
+        <span class="meta-pill">Course Specifications pp.4&ndash;21</span>
       </div>
     </div>
   </header>
@@ -170,23 +172,1978 @@
     <aside class="sidebar">
       <div class="toc-title"><span class="toc-ico ti-core" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 17.5 17.5 3 21 6.5 6.5 21z"/><path d="M6.6 13.9l1.7 1.7M9.4 11.1l1.2 1.2M12.1 8.4l1.7 1.7M14.9 5.6l1.2 1.2"/></svg></span>Contents</div>
       <ul class="toc-list">
-        <li><a href="#coming-soon"><span class="toc-num">1</span>Coming soon</a></li>
+        <li class="sidebar-label">Start here</li>
+        <li><a href="#how-to-use"><span class="toc-num">1</span>Specifications at a Glance</a></li>
+        <li class="sidebar-label">Part 1 — System and data modelling tools</li>
+        <li><a href="#dfd"><span class="toc-num">2</span>Data Flow Diagrams</a></li>
+        <li><a href="#flowcharts"><span class="toc-num">3</span>Flowcharts</a></li>
+        <li><a href="#system-flowcharts"><span class="toc-num">4</span>System Flowcharts</a></li>
+        <li><a href="#decision-trees"><span class="toc-num">5</span>Decision Trees</a></li>
+        <li><a href="#data-dictionary"><span class="toc-num">6</span>Data Dictionary</a></li>
+        <li><a href="#storyboards"><span class="toc-num">7</span>Storyboards</a></li>
+        <li><a href="#network-diagrams"><span class="toc-num">8</span>Network Diagrams</a></li>
+        <li><a href="#graph-theory"><span class="toc-num">9</span>Graph and Network Theory</a></li>
+        <li class="sidebar-label">Part 2 — Project management tools</li>
+        <li><a href="#gantt-charts"><span class="toc-num">10</span>Gantt Charts</a></li>
+        <li><a href="#process-diaries"><span class="toc-num">11</span>Process Diaries and Log Books</a></li>
+        <li class="sidebar-label">Part 3 — Implementing and testing</li>
+        <li><a href="#implementation-methods"><span class="toc-num">12</span>Implementation Methods</a></li>
+        <li><a href="#testing-methods"><span class="toc-num">13</span>Methods for Testing</a></li>
+        <li class="sidebar-label">Part 4 — Relational databases and SQL</li>
+        <li><a href="#relational-databases"><span class="toc-num">14</span>Normalisation and Schemas</a></li>
+        <li><a href="#sql-syntax"><span class="toc-num">15</span>SQL Syntax</a></li>
+        <li class="sidebar-label">Part 5 — Machine learning and software</li>
+        <li><a href="#machine-learning"><span class="toc-num">16</span>Machine Learning</a></li>
+        <li><a href="#database-software"><span class="toc-num">17</span>Database Software</a></li>
+        <li><a href="#spreadsheet-software"><span class="toc-num">18</span>Spreadsheet Software</a></li>
+        <li><a href="#expert-system-software"><span class="toc-num">19</span>Expert System Software</a></li>
+        <li><a href="#graphics-presentation"><span class="toc-num">20</span>Graphics and Presentation</a></li>
       </ul>
     </aside>
 
     <main class="page-content">
       <div class="content-body">
-        <section id="coming-soon" class="coming-soon">
-          <p class="cs-label">Coming soon</p>
-          <h2>Course Toolkit is being written</h2>
-          <p>The diagrams, spreadsheet features, SQL and design tools the syllabus asks you to use, explained step by step: data flow diagrams, flowcharts, decision trees, dashboards and relational database design.</p>
-          <p>In the meantime, the focus-area pages already follow every NESA dot point in order, and the glossary defines the syllabus keywords.</p>
-          <div class="cs-links">
-            <a class="btn btn-primary" href="../index.html#year11">Browse Year 11</a>
-            <a class="btn btn-outline" href="../index.html#year12">Browse Year 12</a>
-            <a class="btn btn-outline" href="glossary.html">Open the glossary</a>
+
+        <aside class="topic-breakout" aria-label="Topic introduction">
+          <span class="breakout-label">Why this matters now</span>
+          <p>Some of the marks in the HSC Enterprise Computing exam do not come from the focus-area dot points at all. They come from the Course Specifications, a short NESA document that spells out exactly how you must draw a data flow diagram, which SQL keywords you must know and which spreadsheet functions you must be able to use. NESA calls it &ldquo;an integral part of the course content&rdquo;, so a question can assume you know it.</p>
+          <p>The 2025 HSC did exactly that: students were asked to compare Level 0 and Level 1 data flow diagrams, write an SQL query with a join, build spreadsheet formulas, design a screen and schedule a team with a Gantt chart. Every one of those tools is on this page, in the order NESA lists them, with the page number so you can check it against the official document.</p>
+          <p class="breakout-question"><span class="bq-lead">Try this as you learn</span> Pick one thing you did today, such as buying lunch or booking a class. Sketch what data moved, who or what sent it and where it was kept. You have just started a data flow diagram.</p>
+        </aside>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  START HERE                                            -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Start here</span>
+          <span class="part-name">How to use this toolkit</span>
+        </div>
+
+        <section id="how-to-use">
+          <h2 class="syllabus-phase">The Course Specifications at a Glance</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications pp.4&ndash;21</strong> Every tool, notation and list NESA names, and where it turns up in the exam</em></p>
+
+          <div class="callout info">
+            <strong>Source and acknowledgement</strong>
+            The notation, symbol names, SQL keywords, spreadsheet function lists and method names on this page come from NESA&rsquo;s <em>Enterprise Computing Higher School Certificate Course Specifications</em> (&copy; NSW Education Standards Authority, 2023). We have redrawn the diagrams from NESA&rsquo;s descriptions and written every explanation, example and question ourselves. This page is a <strong>study aid, not a replacement</strong>: NESA&rsquo;s website holds the only official and up-to-date version, so read it for yourself and follow it if anything here differs.
+            <a href="https://library.curriculum.nsw.edu.au/341419dc-8ec2-0289-7225-6db7f2d751ef/1299d565-a98e-4578-a5c6-53262a5ecc08/enterprise-computing-11-12-higher-school-certificate-course-specifications.PDF" target="_blank" rel="noopener">Open the official Course Specifications (PDF) &#8599;</a>
+            &middot; <a href="https://curriculum.nsw.edu.au/learning-areas/tas/enterprise-computing-11-12-2022/content" target="_blank" rel="noopener">NESA syllabus content page &#8599;</a>
+          </div>
+
+          <h3>Why the specifications are examinable</h3>
+          <p>NESA states on page 4 that the specifications &ldquo;indicate the depth of study required for some concepts&rdquo; and that the syllabus &ldquo;must be applied in conjunction with&rdquo; them. In practice this means three things. First, the symbols are fixed: a data store is an open-ended rectangle, not a cylinder. Second, the lists are fixed: NESA names four SQL keywords, and those are the ones you are expected to know. Third, some depth is fixed: for machine learning you only need to know what it is used for, not how it works.</p>
+
+          <h3>Where each tool sits, and what the 2025 HSC asked</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Specifications section</th><th>Page</th><th>On this page</th><th>Seen in the 2025 HSC</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Data flow diagrams</td><td>4&ndash;5</td><td><a href="#dfd">Data flow diagrams</a></td><td>Level 0 versus Level 1 DFD using the correct symbols</td></tr>
+                <tr><td>Flowcharts; system flowcharts</td><td>6&ndash;7</td><td><a href="#flowcharts">Flowcharts</a>, <a href="#system-flowcharts">System flowcharts</a></td><td>Drawing tasks, including DFDs and flowcharts</td></tr>
+                <tr><td>Decision trees; data dictionary</td><td>8&ndash;9</td><td><a href="#decision-trees">Decision trees</a>, <a href="#data-dictionary">Data dictionary</a></td><td></td></tr>
+                <tr><td>Storyboards</td><td>9</td><td><a href="#storyboards">Storyboards</a></td><td>Interface (screen) design with form controls</td></tr>
+                <tr><td>Network diagrams; graph and network theory</td><td>10&ndash;11</td><td><a href="#network-diagrams">Network diagrams</a>, <a href="#graph-theory">Graph and network theory</a></td><td></td></tr>
+                <tr><td>Gantt charts; process diaries</td><td>12&ndash;13</td><td><a href="#gantt-charts">Gantt charts</a>, <a href="#process-diaries">Process diaries</a></td><td>A Gantt chart to schedule and track a team&rsquo;s activities</td></tr>
+                <tr><td>Implementation and testing methods</td><td>14&ndash;15</td><td><a href="#implementation-methods">Implementation</a>, <a href="#testing-methods">Testing</a></td><td></td></tr>
+                <tr><td>Normalisation and schemas</td><td>16</td><td><a href="#relational-databases">Relational databases</a></td><td></td></tr>
+                <tr><td>SQL syntax</td><td>17</td><td><a href="#sql-syntax">SQL syntax</a></td><td>A query using four SQL keywords and a join</td></tr>
+                <tr><td>Machine learning and statistical modelling</td><td>18</td><td><a href="#machine-learning">Machine learning</a></td><td></td></tr>
+                <tr><td>Database, spreadsheet, expert system, graphics and presentation software</td><td>19&ndash;21</td><td><a href="#database-software">Database</a>, <a href="#spreadsheet-software">Spreadsheet</a>, <a href="#expert-system-software">Expert system</a>, <a href="#graphics-presentation">Graphics and presentation</a></td><td>Formulas with SUM, LOOKUP and IF, checked with test data; conditional formatting, pivot tables and chart choice</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>The last column is our summary of NESA&rsquo;s 2025 marking feedback. NESA&rsquo;s own wording is on its <a href="https://www.nsw.gov.au/education-and-training/nesa/curriculum/hsc-exam-papers/enterprise-computing/2025" target="_blank" rel="noopener">2025 HSC exam page &#8599;</a>.</p>
+
+          <h3>How each tool is laid out</h3>
+          <p>Each section follows the same routine so you can revise quickly: what the tool is for, NESA&rsquo;s notation, how to draw or use it step by step, a warning about common exam mistakes, an exam tip and a short &ldquo;Try this&rdquo; task with a model answer you can reveal after you have had a go. Symbol keys and worked examples are redrawn from NESA&rsquo;s own; the extra examples (a school canteen, a games database) are ours.</p>
+          <div class="callout tip">
+            <strong>Use it actively</strong>
+            Cover the diagram and redraw it from the description. Draw with the notation NESA prints, on paper, with a ruler. You will not have time to work out a symbol during the exam, so make the notation automatic beforehand.
           </div>
         </section>
+
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  PART 1: SYSTEM AND DATA MODELLING TOOLS               -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Part 1</span>
+          <span class="part-name">System and data modelling tools</span>
+        </div>
+
+        <aside class="topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <p>Before anyone builds a system they draw it: what data moves, what logic runs, which devices are involved, what the screens look like and how the network is joined up. These eight tools (Course Specifications pp.4&ndash;11) are the drawings NESA expects, and each has a fixed set of symbols.</p>
+          <p class="breakout-question"><span class="bq-lead">Ask yourself</span> If you had to explain your school&rsquo;s canteen ordering to a new developer, which of these drawings would you reach for first, and why?</p>
+        </aside>
+
+        <section id="dfd">
+          <h2 class="syllabus-phase">Data Flow Diagrams (DFDs)</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications pp.4&ndash;5</strong> Four symbols, the voting-system example and the Level 0 diagram</em></p>
+
+          <h3>What it is for</h3>
+          <p>A data flow diagram shows <em>what data moves</em> between the people and organisations outside a system, the processes inside it and the places data is kept. It does not show when things happen or how they are coded, which makes it the standard tool for agreeing requirements with a client. In NESA&rsquo;s own Gantt chart example (p.12) &ldquo;Produce a data flow diagram&rdquo; is a task in requirements gathering.</p>
+
+          <h3>NESA&rsquo;s symbols (p.4)</h3>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Symbol key</span></p>
+              <h4 class="figure-title">Data flow diagram symbols</h4>
+              <p class="figure-lead">The four symbols NESA uses, with what each one means.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="spec-dfd-symbols"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>A process is a <strong>circle</strong>. A data store is a rectangle that is <strong>open on one side</strong>. An external entity is a closed, near-square rectangle.</li><li>Every data flow is a curved arrow with a label.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Close the page and draw all four symbols from memory, with a one-line meaning beside each.</p>
+            </div>
+          </figure>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Symbol</th><th>Shape</th><th>Meaning (in our words)</th><th>Example</th></tr></thead>
+              <tbody>
+                <tr><td>Process</td><td>Circle</td><td>Takes in data and turns it into different data (an output).</td><td>Voting</td></tr>
+                <tr><td>Data store</td><td>Rectangle, open on one side</td><td>Anywhere data is kept between processes: an electronic file or non-computer storage such as a filing cabinet.</td><td>Electoral roll</td></tr>
+                <tr><td>External entity</td><td>Closed, near-square rectangle</td><td>Any person, organisation or element outside the system that supplies data to it or receives data from it.</td><td>Voters</td></tr>
+                <tr><td>Data flow</td><td>Labelled, curved arrow</td><td>Data moving between processes, data stores and external entities. The label names the data, and the arrowhead shows the direction.</td><td>Confirmation</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Level 0 and Level 1 (p.5)</h3>
+          <p>NESA describes a Level 0 diagram as an overview of the entire system that shows <strong>no data stores and no internal processes</strong>. The diagram above it on p.5, with three processes and two stores, shows the detail behind that overview. NESA does not name it, but the 2025 HSC called it a <strong>Level 1</strong> diagram, so we do too.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th></th><th>Level 0 (context diagram)</th><th>Level 1</th></tr></thead>
+              <tbody>
+                <tr><td>Shows</td><td>The whole system as a single process and the data crossing its boundary</td><td>The main processes inside the system and how data moves between them</td></tr>
+                <tr><td>Processes</td><td>One circle, named for the system</td><td>Several circles, one per major function</td></tr>
+                <tr><td>Data stores</td><td>None</td><td>Shown</td></tr>
+                <tr><td>External entities</td><td>All of them</td><td>The same ones</td></tr>
+                <tr><td>Best for</td><td>Agreeing the scope: who and what the system talks to</td><td>Explaining how the system works and what it must remember</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Data flow diagram</span></p>
+              <h4 class="figure-title">Level 0 data flow diagram: a voting system</h4>
+              <p class="figure-lead">NESA&rsquo;s voting system as one process, with three external entities and no data stores.</p>
+            </figcaption>
+            <div class="figure-canvas"><div class="nesa-diagram" data-diagram="spec-dfd-voting-l0"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Only four flows cross the boundary: Candidates&rsquo; details, Voters&rsquo; details and vote, Confirmation, and Election results.</li><li>Nothing is stored here. The Electoral roll and Endorsed candidates appear only in Level 1.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>List the four boundary flows, then find each one again in the Level 1 diagram below.</p>
+            </div>
+          </figure>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Data flow diagram</span></p>
+              <h4 class="figure-title">Data flow diagram (Level 1): a voting system</h4>
+              <p class="figure-lead">The detail inside the voting system: three processes and two data stores.</p>
+            </figcaption>
+            <div class="figure-canvas"><div class="nesa-diagram" data-diagram="spec-dfd-voting"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Pairs of flows between the same two symbols curve to opposite sides, each with its own label.</li><li>Data moves between entities and processes, or between processes and stores. No flow joins two stores or two entities directly.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Which process changes the Endorsed candidates store, and which one only reads it?</p>
+            </div>
+          </figure>
+
+          <h3>How to draw one, step by step</h3>
+          <p>We will build a diagram for an online ordering system in a school canteen. Students place an order and the canteen manager sets the menu and receives the order list.</p>
+          <ol>
+            <li><strong>List the external entities</strong>: everyone and everything outside the system that sends or receives data. Here: Student and Canteen manager.</li>
+            <li><strong>Draw Level 0</strong>. Put one circle in the centre, name it for the whole system, place the entities around it and add a labelled flow for every piece of data that crosses the boundary.</li>
+            <li><strong>Break the system into processes</strong>. Name each circle for a job the system does, with a verb: Manage menu, Take order, Prepare order list.</li>
+            <li><strong>Add data stores</strong> wherever data has to be kept for a later process to use: Menu and Orders.</li>
+            <li><strong>Connect and label every flow</strong>. Label each arrow with the data itself (Order request, not &ldquo;send&rdquo;).</li>
+            <li><strong>Check the balance</strong>: every flow that crosses the boundary in Level 0 must appear, with the same label, in Level 1. Every process needs at least one flow in and one flow out.</li>
+          </ol>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Data flow diagram</span></p>
+              <h4 class="figure-title">Level 0 data flow diagram: a school canteen ordering system</h4>
+              <p class="figure-lead">Step 2: the whole system as one process, with four labelled flows crossing its boundary.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="tk-dfd-canteen-l0"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Two entities and one process. No stores, no internal processes.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Add a third entity, Parents, who pay a top-up into a student&rsquo;s canteen account. Which new flows would appear?</p>
+            </div>
+          </figure>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Data flow diagram</span></p>
+              <h4 class="figure-title">Level 1 data flow diagram: a school canteen ordering system</h4>
+              <p class="figure-lead">Steps 3 to 6: the same system opened up into three processes and two data stores.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="tk-dfd-canteen-l1"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>The four Level 0 flows (Order request, Order confirmation, Menu and prices, Daily order list) are all still here, unchanged.</li><li>The Menu and Orders stores are new: they hold data between processes.</li><li>Every store is joined to a process, never straight to an entity.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Where would a Payments store fit if students paid online, and which process would write to it?</p>
+            </div>
+          </figure>
+
+          <div class="callout warning">
+            <strong>Common exam mistakes</strong>
+            Drawing data stores or several processes on a Level 0 diagram. Using a cylinder for a store or a rounded box for a process. Labelling flows with actions (&ldquo;send&rdquo;, &ldquo;process&rdquo;) instead of the data that moves. Leaving arrowheads or labels off. Joining two external entities or two stores directly. Showing a two-way exchange with one double-headed arrow instead of two labelled flows, as NESA does.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            The 2025 question on Level 0 versus Level 1 asked for the correct symbols. Award yourself marks for each thing a marker can see: correct symbol shapes, labelled arrows with heads, one process and no stores at Level 0, several processes and at least one store at Level 1. Then add one sentence saying what each level is for. If a question says &ldquo;distinguish&rdquo;, name a difference for each level rather than describing only one.
+          </div>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            A gym lets members book classes online. Members send a booking request and get a confirmation. Instructors receive a class list. The system keeps a Classes store and a Bookings store. Draw the Level 0 diagram, then the Level 1 diagram with at least three processes.
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer</summary>
+            <p><strong>Level 0:</strong> one circle (Class booking) with entities Member and Instructor. Flows: Booking request (Member to system), Booking confirmation (system to Member), Class list (system to Instructor). If instructors also set up the timetable, add Class details from Instructor.</p>
+            <p><strong>Level 1:</strong> processes Set up class (Instructor sends Class details, written to the Classes store), Make booking (Member sends Booking request, reads Classes for Available classes, writes to the Bookings store, returns Booking confirmation) and Produce class list (reads Bookings for Booked members, sends Class list to Instructor). Check that all Level 0 flows appear in Level 1 with the same labels.</p>
+          </details>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="flowcharts">
+          <h2 class="syllabus-phase">Flowcharts</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications p.6</strong> Four symbols, read top to bottom and left to right</em></p>
+
+          <h3>What it is for</h3>
+          <p>A flowchart represents <em>logic</em>: the steps a process follows and the decisions along the way. It is what you draw when you must show how a rule works, such as when a delivery charge applies, before writing the program or formula that carries it out.</p>
+
+          <h3>NESA&rsquo;s symbols (p.6)</h3>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Symbol key</span></p>
+              <h4 class="figure-title">Flowchart symbols</h4>
+              <p class="figure-lead">The four symbols in NESA&rsquo;s Enterprise Computing flowcharts.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="spec-flowchart-symbols"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>There are only four symbols. Do not add others, such as a subprogram box or connector circles.</li><li>Arrows show the direction of flow.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Name the symbol for each step: &ldquo;Enter the student&rsquo;s mark&rdquo;, &ldquo;Add 5 to the mark&rdquo;, &ldquo;Is the mark over 50?&rdquo;, &ldquo;Finish&rdquo;.</p>
+            </div>
+          </figure>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Symbol</th><th>Use it for</th><th>Text inside</th></tr></thead>
+              <tbody>
+                <tr><td>Terminator (rounded ends)</td><td>The start and the end. NESA&rsquo;s example starts with START and ends with END.</td><td>START, END</td></tr>
+                <tr><td>Input or output (parallelogram)</td><td>Data coming in or going out</td><td>Enter the delivery distance</td></tr>
+                <tr><td>Process (rectangle)</td><td>An action or calculation</td><td>No delivery charge</td></tr>
+                <tr><td>Decision (diamond)</td><td>A question with two possible answers, each leaving on a labelled arrow</td><td>Delivery distance &gt;10km?</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>NESA&rsquo;s worked example</h3>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Flowchart</span></p>
+              <h4 class="figure-title">Flowchart: delivery charge for perishable and non-perishable items</h4>
+              <p class="figure-lead">Logic that decides whether a delivery charge applies.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="spec-flowchart-delivery"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Every arrow leaving a decision is labelled Yes or No.</li><li>Two different paths lead to the same process, Delivery charge applies, and the paths join before END.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Trace an order for non-perishable items, 12 km away, worth $150. What does the flowchart output?</p>
+            </div>
+          </figure>
+          <p>To trace a flowchart, put your finger on START and follow the arrows, answering each decision with test data. The table shows four tests on NESA&rsquo;s example.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Perishable?</th><th>Distance</th><th>Order value</th><th>Path taken</th><th>Result</th></tr></thead>
+              <tbody>
+                <tr><td>Yes</td><td>(not asked)</td><td>(not asked)</td><td>First decision: Yes</td><td>Delivery charge applies</td></tr>
+                <tr><td>No</td><td>8 km</td><td>(not asked)</td><td>First: No, second: No</td><td>No delivery charge</td></tr>
+                <tr><td>No</td><td>12 km</td><td>$80</td><td>No, Yes, third: Yes</td><td>Delivery charge applies</td></tr>
+                <tr><td>No</td><td>12 km</td><td>$150</td><td>No, Yes, third: No</td><td>No delivery charge</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>How to draw one, step by step</h3>
+          <ol>
+            <li>Write the rule in plain words and list every input the logic needs.</li>
+            <li>Draw a START terminator at the top, then an input for each value you need.</li>
+            <li>For each condition, draw a decision diamond with the question inside, using the same wording and symbols as the rule (&ldquo;&gt;10km?&rdquo;).</li>
+            <li>Draw two exits from each diamond and label both (Yes and No). Follow each one to a process or another decision.</li>
+            <li>Bring separate paths back together where the logic joins, then finish with one END terminator.</li>
+            <li>Trace the chart with test data for every path, including the boundary values.</li>
+          </ol>
+          <div class="callout warning">
+            <strong>Common exam mistakes</strong>
+            Leaving a decision exit unlabelled. Using symbols NESA does not list for flowcharts (a subprogram box, connector circles, a system flowchart cylinder). Forgetting START or END, or drawing two ENDs. Putting a question in a process rectangle. Using a process box for something entered by the user, which belongs in an input/output parallelogram. Arrows without heads, so the direction is unclear.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            Test the boundaries. NESA&rsquo;s example uses &ldquo;&gt;10km&rdquo; for one decision and &ldquo;&le;$100&rdquo; for another, so an order of exactly 10 km goes down the No path and an order of exactly $100 goes down the Yes path. Markers check that your comparison matches the rule.
+          </div>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            Draw a flowchart for a school library fine. Enter the number of days a book is overdue. If it is 0 or less, there is no fine. If it is more than 10 days, the fine is $5.00. Otherwise the fine is 50 cents for each day overdue. Output the fine.
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer</summary>
+            <p>START, then input &ldquo;Enter days overdue&rdquo;. Decision &ldquo;Days overdue &le; 0?&rdquo;. Yes leads to the process &ldquo;Fine = $0&rdquo;. No leads to a second decision &ldquo;Days overdue &gt; 10?&rdquo;: Yes leads to &ldquo;Fine = $5.00&rdquo;, and No leads to &ldquo;Fine = days overdue &times; $0.50&rdquo;. All three processes flow into one output &ldquo;Display the fine&rdquo;, then END. Test with 0 days (no fine), 3 days ($1.50), exactly 10 days (No path: 10 &times; $0.50 = $5.00) and 11 days (Yes path: $5.00). Both paths give $5.00 at the boundary, which confirms the cap is applied consistently.</p>
+          </details>
+        </section>
+
+
+        <hr class="divider" />
+
+        <section id="system-flowcharts">
+          <h2 class="syllabus-phase">System Flowcharts</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications p.7</strong> Nine symbols for the main processes and devices in a system</em></p>
+
+          <h3>What it is for</h3>
+          <p>A system flowchart shows the <em>main processes and devices</em> in a system: what is typed in, what is stored, what is displayed or printed and where data travels over a network. Where a flowchart shows the order of decisions, a system flowchart shows <em>where the data goes</em>. NESA says its arrows show &ldquo;the direction of data between each of the symbols&rdquo;.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th></th><th>Flowchart (p.6)</th><th>System flowchart (p.7)</th></tr></thead>
+              <tbody>
+                <tr><td>Shows</td><td>Logic and decisions</td><td>Processes, devices and storage</td></tr>
+                <tr><td>Arrows mean</td><td>Direction of flow through the logic</td><td>Direction of data between symbols</td></tr>
+                <tr><td>Decisions</td><td>Yes/No diamonds</td><td>None: the decision-making sits inside a process</td></tr>
+                <tr><td>Symbols</td><td>Four</td><td>Nine</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>NESA&rsquo;s symbols (p.7)</h3>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Symbol key</span></p>
+              <h4 class="figure-title">System flowchart symbols</h4>
+              <p class="figure-lead">The nine symbols NESA lists for system flowcharts.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="spec-sysflow-symbols"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>The telecommunications link is a zig-zag line, not a closed shape.</li><li>NESA prints &ldquo;Online dispay&rdquo; (a typing slip in the original). The symbol is the online display.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Cover the labels and name each symbol from its shape alone.</p>
+            </div>
+          </figure>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Symbol</th><th>Typically stands for</th><th>Example</th></tr></thead>
+              <tbody>
+                <tr><td>Paper document</td><td>A printed or handwritten document</td><td>Patient account</td></tr>
+                <tr><td>Process</td><td>A program, procedure or operation that changes data</td><td>Billing</td></tr>
+                <tr><td>Direct access storage</td><td>A database or disk where any record can be reached directly</td><td>Patient file</td></tr>
+                <tr><td>Online display</td><td>Output shown on a screen</td><td>Patient confirmation</td></tr>
+                <tr><td>Manual operation</td><td>A step a person does by hand</td><td>Checking a signature</td></tr>
+                <tr><td>Telecommunications link</td><td>Data sent over a communication link</td><td>Link to a cloud service</td></tr>
+                <tr><td>Online input</td><td>Data entered directly, for example by keyboard or touchscreen</td><td>Visit details</td></tr>
+                <tr><td>Magnetic tape</td><td>Tape storage, often used for backups</td><td>Overnight backup</td></tr>
+                <tr><td>Cloud</td><td>Storage or a service on the internet</td><td>Health data</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>NESA only names each symbol. The &ldquo;typically stands for&rdquo; column is our explanation.</p>
+
+          <h3>NESA&rsquo;s worked example</h3>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">System flowchart</span></p>
+              <h4 class="figure-title">System flowchart: a doctor managing patient information</h4>
+              <p class="figure-lead">Devices, storage and processes in a medical practice.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="spec-sysflow-doctor"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>The double-headed arrow between Add a new patient and Patient file means the process both reads and writes the file.</li><li>Consultation sends data to a second file and on to the Health data cloud through a telecommunications link. It also feeds Billing, which produces a paper Patient account.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Trace the data from &ldquo;Visit details&rdquo; to the paper Patient account, naming each symbol on the way.</p>
+            </div>
+          </figure>
+
+          <h3>How to draw one, step by step</h3>
+          <ol>
+            <li>List the <strong>processes</strong> the system carries out, in the order the data reaches them.</li>
+            <li>For each process, list where its data comes from (online input, paper document, storage) and where its results go (storage, display, printout, cloud).</li>
+            <li>Choose the correct symbol for each device or store and write a short name inside it: what the data is, or what the process does.</li>
+            <li>Join symbols with arrows that point the way the <em>data</em> moves. Use a double-headed arrow when a process reads and writes the same store.</li>
+            <li>Insert the telecommunications link where data crosses a network, for example to reach a cloud service.</li>
+            <li>Check that every process has an input and an output and that every store is joined to a process.</li>
+          </ol>
+          <div class="callout warning">
+            <strong>Common exam mistakes</strong>
+            Using flowchart symbols such as the decision diamond or terminator in a system flowchart. Arrows pointing the way the process happens rather than the way data travels. Labelling a symbol with a device (&ldquo;hard drive&rdquo;) when the question wants the data or file (&ldquo;Customer file&rdquo;). Drawing a plain arrow where data crosses a network instead of the telecommunications link. Using a symbol the question did not need, such as a magnetic tape, because it looked impressive.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            Match each part of the scenario to a symbol before you draw: typed by a person (online input), kept for later lookup (direct access storage), shown to someone (online display), printed (paper document), held on the internet (cloud). A marker is looking for the right symbol for each device and arrows in the right direction.
+          </div>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            A farm co-op takes orders online. A staff member types each order into the system. The system saves it to a customer file, shows a confirmation on screen and prints a packing list. Order totals are sent over the internet to an accounting service in the cloud. Draw the system flowchart.
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer</summary>
+            <p>Online input &ldquo;Order details&rdquo; &rarr; process &ldquo;Record order&rdquo; (double-headed arrow to direct access storage &ldquo;Customer file&rdquo; if it checks the customer&rsquo;s details) &rarr; online display &ldquo;Order confirmation&rdquo;, and &rarr; paper document &ldquo;Packing list&rdquo;. Process &ldquo;Record order&rdquo; &rarr; telecommunications link &rarr; cloud &ldquo;Accounting service&rdquo;. Only the nine NESA symbols are used and every arrow points the way the data travels.</p>
+          </details>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="decision-trees">
+          <h2 class="syllabus-phase">Decision Trees</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications p.8</strong> All the combinations of decisions and their resulting actions, in two layouts</em></p>
+
+          <h3>What it is for</h3>
+          <p>A decision tree lays out <em>every possible combination</em> of conditions and the action that results from each. NESA adds that each decision path leads either to another decision or to a final action. It is the tool for rules with several factors, such as the settings for a smart house or whether to buy a car.</p>
+
+          <h3>NESA&rsquo;s two forms (p.8)</h3>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Decision tree</span></p>
+              <h4 class="figure-title">Decision tree (horizontal): comfort control in a smart house</h4>
+              <p class="figure-lead">Read left to right: three temperature ranges, two humidity ranges, then the settings.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="spec-dt-smart-house"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Three temperature branches each split into two humidity branches, giving 3 &times; 2 = 6 paths.</li><li>Each path ends in a set of final actions: fan, cooling, heating and window.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>The house is 22&deg;C and 40% humidity. Read off the fan, cooling, heating and window settings.</p>
+            </div>
+          </figure>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Decision tree</span></p>
+              <h4 class="figure-title">Decision tree (vertical): buying a car</h4>
+              <p class="figure-lead">Read top to bottom: each rectangle is a condition or a final action, and each branch is labelled Yes or No.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="spec-dt-buy-car"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Rectangles, not diamonds. Every branch is labelled.</li><li>Different branches ask different follow-up questions: a car over 10 000 km is judged on accessories, not on colour.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>A silver hatchback with 6 000 km on it: does the tree say buy or do not buy?</p>
+            </div>
+          </figure>
+
+          <h3>How to draw one, step by step</h3>
+          <ol>
+            <li>List the conditions (inputs) and the actions (outputs) the rule involves.</li>
+            <li>Choose the first condition and make it the root. Each answer becomes a labelled branch.</li>
+            <li>From each branch, add the next condition that matters <em>for that branch</em>, or a final action if the answer is settled.</li>
+            <li>Make sure the branches from any one condition cover every possible value once: no gaps and no overlaps (for example &gt;30, 15&ndash;30 and &lt;15).</li>
+            <li>Trace at least one path to every final action to confirm the tree gives the outcome the rule requires.</li>
+          </ol>
+          <div class="callout warning">
+            <strong>Common exam mistakes</strong>
+            Drawing diamonds (NESA&rsquo;s decision trees use rectangles). Leaving branches unlabelled. Ranges that overlap or leave a value out, so a reading of exactly 15&deg;C fits two branches or none. A path that ends on a question instead of an action. Repeating a condition on a path that has already settled it.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            Give each path a quick check by reading it aloud as a sentence: &ldquo;If the temperature is over 30 and the humidity is over 50%, then the fan is high.&rdquo; If it does not read as a sensible rule, redraw that branch. The same tree can be written as IF&ndash;THEN rules, which is how the <a href="#expert-system-software">expert system</a> section uses it.
+          </div>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            A school lends laptops. A student in Year 11 or 12 who has returned a signed agreement is issued a laptop. A student in Year 11 or 12 without an agreement is asked to sign one. A student in a younger year needs a teacher&rsquo;s approval first; with approval they are issued a laptop, without it they are refused. Draw a vertical decision tree.
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer</summary>
+            <p>Root: &ldquo;Year 11 or 12?&rdquo;. Yes leads to &ldquo;Signed agreement returned?&rdquo;, where Yes gives &ldquo;Issue laptop&rdquo; and No gives &ldquo;Ask student to sign&rdquo;. No (younger year) leads to &ldquo;Teacher approval?&rdquo;, where Yes gives &ldquo;Issue laptop&rdquo; and No gives &ldquo;Refuse&rdquo;. There are four paths, every branch is labelled and every path ends in a final action.</p>
+          </details>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="data-dictionary">
+          <h2 class="syllabus-phase">Data Dictionary</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications p.9</strong> A comprehensive description of each field in a database</em></p>
+
+          <h3>What it is for</h3>
+          <p>A data dictionary describes <em>every field</em> in a database in enough detail that a developer could build the table and a data-entry operator could fill it in correctly. NESA says it commonly includes six things, and its table has exactly these six columns: <strong>field name</strong>, <strong>data type</strong>, <strong>data format</strong>, <strong>field size</strong>, <strong>description</strong> and <strong>example</strong>.</p>
+
+          <h3>NESA&rsquo;s example (p.9)</h3>
+          <div class="table-wrap tk-wide">
+            <table>
+              <caption>NESA&rsquo;s example data dictionary for an employee table</caption>
+              <thead>
+                <tr><th>Field name</th><th>Data type</th><th>Data format</th><th>Field size</th><th>Description</th><th>Example</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>UserID</td><td>Text</td><td>XXXNNNN</td><td>7</td><td>Unique seven-character field with 4 digits</td><td>XYZ1539</td></tr>
+                <tr><td>FirstName</td><td>Text</td><td>XXX&hellip;XXX</td><td>25</td><td>First name of employee</td><td>Jo</td></tr>
+                <tr><td>Surname</td><td>Text</td><td>XXX&hellip;XXX</td><td>25</td><td>Surname of employee</td><td>Smith</td></tr>
+                <tr><td>DOB</td><td>Date</td><td>DD/MM/YYYY</td><td>10</td><td>Date of birth</td><td>15/07/1982</td></tr>
+                <tr><td>HourlyPayRate</td><td>Currency</td><td>$#####.##</td><td>9</td><td>Rate of pay expressed in dollars per hour</td><td>$34.50</td></tr>
+                <tr><td>Height</td><td>Real</td><td>#.##</td><td>3</td><td>Height in metres, with two decimal places</td><td>1.58</td></tr>
+                <tr><td>FeesPaid</td><td>Boolean</td><td></td><td>1</td><td>Y or N for Yes or No</td><td>Y</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="key-terms">
+            <div class="key-term-item"><strong>X</strong><span>One character (a letter, digit or symbol). XXXNNNN is three characters followed by four digits.</span></div>
+            <div class="key-term-item"><strong>N</strong><span>One digit. It must be a digit in that position.</span></div>
+            <div class="key-term-item"><strong>#</strong><span>A numeric digit. A currency or decimal format such as $#####.## shows the symbol and the decimal point.</span></div>
+            <div class="key-term-item"><strong>XXX&hellip;XXX</strong><span>Any text up to the field size, used when a value has no fixed pattern such as a name.</span></div>
+          </div>
+          <p>NESA&rsquo;s own examples count field size slightly differently: the pay rate counts every character including the dollar sign and point, while the height counts only the digits. Whichever you choose, apply it consistently and say what you counted.</p>
+
+          <h3>How to build one, step by step</h3>
+          <ol>
+            <li>List each table, then every field in it. Use one row per field.</li>
+            <li>Choose the <strong>data type</strong> by how the field is used. Text for names and for numbers you will never calculate with (phone numbers, postcodes). Date, Currency, Real and Boolean, as in NESA&rsquo;s table, for the rest. Whole numbers are usually called Integer.</li>
+            <li>Write the <strong>data format</strong> with X, N and #, or DD/MM/YYYY for dates, so the layout is unambiguous.</li>
+            <li>Set the <strong>field size</strong> to the longest value the field must hold.</li>
+            <li>Write a <strong>description</strong> that adds information, such as units or rules, rather than repeating the name.</li>
+            <li>Give a realistic <strong>example</strong> that matches the format.</li>
+          </ol>
+          <p>If a question also asks for validation, add a column for it. It is not one of NESA&rsquo;s six, so treat it as an extension, as in our canteen example below.</p>
+          <div class="table-wrap tk-wide">
+            <table>
+              <caption>Our example: canteen orders, with a validation column added</caption>
+              <thead>
+                <tr><th>Field name</th><th>Data type</th><th>Data format</th><th>Field size</th><th>Description</th><th>Example</th><th>Validation (extension)</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>OrderID</td><td>Text</td><td>CNNNN</td><td>5</td><td>Unique order number: the letter C then four digits</td><td>C0417</td><td>Presence check; must match format</td></tr>
+                <tr><td>ItemName</td><td>Text</td><td>XXX&hellip;XXX</td><td>30</td><td>Name of the menu item ordered</td><td>Chicken wrap</td><td>Presence check</td></tr>
+                <tr><td>Price</td><td>Currency</td><td>$#.##</td><td>5</td><td>Price of one item in dollars</td><td>$5.50</td><td>Range check: $0.50 to $20.00</td></tr>
+                <tr><td>OrderDate</td><td>Date</td><td>DD/MM/YYYY</td><td>10</td><td>Date the order was placed</td><td>12/08/2026</td><td>Not later than today</td></tr>
+                <tr><td>Collected</td><td>Boolean</td><td></td><td>1</td><td>Y if the student has collected the order, otherwise N</td><td>N</td><td>Only Y or N</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout warning">
+            <strong>Common exam mistakes</strong>
+            Missing columns or inventing different ones instead of NESA&rsquo;s six. A description that only repeats the field name (&ldquo;Surname: the surname&rdquo;). An example that does not fit the stated format. Storing phone numbers as numbers, which loses the leading zero. Writing a date with no format, so 03/04 could mean either month.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            When the scenario names a field, decide its type by asking what you would do with it. A value you might add up (price) is Currency or Real. A value you only display or match (student ID, postcode) is Text. Give the format, not just the type, and choose an example that fits it exactly.
+          </div>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            Write the data dictionary rows for a Members table in a sports club: MemberID (three letters then three digits), Name, Date joined, Annual fee (in dollars and cents), Junior member (yes or no).
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer</summary>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Field name</th><th>Data type</th><th>Data format</th><th>Field size</th><th>Description</th><th>Example</th></tr></thead>
+                <tbody>
+                  <tr><td>MemberID</td><td>Text</td><td>XXXNNN</td><td>6</td><td>Unique member code: three letters then three digits</td><td>SMI042</td></tr>
+                  <tr><td>Name</td><td>Text</td><td>XXX&hellip;XXX</td><td>40</td><td>Member&rsquo;s full name</td><td>Sam Nguyen</td></tr>
+                  <tr><td>DateJoined</td><td>Date</td><td>DD/MM/YYYY</td><td>10</td><td>Date the member first joined the club</td><td>01/02/2024</td></tr>
+                  <tr><td>AnnualFee</td><td>Currency</td><td>$###.##</td><td>7</td><td>Fee for one year, in dollars</td><td>$120.00</td></tr>
+                  <tr><td>Junior</td><td>Boolean</td><td></td><td>1</td><td>Y if under 18, otherwise N</td><td>Y</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="storyboards">
+          <h2 class="syllabus-phase">Storyboards</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications p.9</strong> The screens of an interface and the links between them</em></p>
+
+          <h3>What it is for</h3>
+          <p>A storyboard shows the <em>various interfaces (screens)</em> of a product <em>and the links between them</em>. You draw one before building a website or app so that the client and the team can agree on what each screen contains and how a user moves around.</p>
+
+          <h3>NESA&rsquo;s notation (p.9)</h3>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Storyboard</span></p>
+              <h4 class="figure-title">Storyboard: three pages promoting a school canteen</h4>
+              <p class="figure-lead">Three screens and the navigation buttons that link them.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="spec-storyboard"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Each screen has a title, a Help button at the top right, a column of navigation buttons and a content panel.</li><li>The button for the screen you are on is highlighted. A dot on a button with an arrow means &ldquo;this button opens that screen&rdquo;.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>From the Prices screen, list every screen you can reach in one click.</p>
+            </div>
+          </figure>
+
+          <h3>How to draw one, step by step</h3>
+          <ol>
+            <li>List the screens the user needs and give each a title.</li>
+            <li>Draw each screen as a rectangle with the same layout: title, Help button, navigation column, content panel.</li>
+            <li>Sketch the content in each panel: headings, text lines, image boxes, tables. Detail is not needed; positions are.</li>
+            <li>Show the navigation. Highlight the current screen&rsquo;s button and draw an arrow from every button to the screen it opens.</li>
+            <li>Number the screens and check every screen can be left: there must be a way back and an Exit.</li>
+          </ol>
+          <div class="callout warning">
+            <strong>Common exam mistakes</strong>
+            Drawing screens with no links between them, which is a page of sketches rather than a storyboard. A different layout on each screen. No way home or to exit. Unlabelled buttons and controls. Spending the time on artwork instead of on labelled content areas and links.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            The 2025 HSC included an interface design question with form controls. Label every control by type (text box, drop-down list, check box, option buttons, button) and say what data it collects. Keep the layout consistent, and show navigation so a marker can follow the user from one screen to the next.
+          </div>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            Storyboard a three-screen app for a school library: Home, Search results and Book details. Show the buttons, which screen each one opens and where the Help button sits.
+          </div>
+          <details class="tk-answer">
+            <summary>Checklist for your storyboard</summary>
+            <p>Three screens with the same frame. Home has a search box and a Search button linked to Search results. Search results lists titles with a link to Book details on each. Book details shows the cover image box, the author, the availability and a Home button. Every screen has Help and Exit, and the current screen&rsquo;s button is highlighted.</p>
+          </details>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="network-diagrams">
+          <h2 class="syllabus-phase">Network Diagrams</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications p.10</strong> Symbols for the devices (nodes) and how they are connected</em></p>
+
+          <h3>What it is for</h3>
+          <p>A network diagram, also called a network map, documents a network: the devices (nodes) and how they connect. It is what you would give a technician who has to set up, extend or fix the network.</p>
+
+          <h3>NESA&rsquo;s notation (p.10)</h3>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Network diagram</span></p>
+              <h4 class="figure-title">Network diagram: devices joined to a router and two hubs</h4>
+              <p class="figure-lead">A router links the internet to two hubs, a wireless device and the devices behind them.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="spec-network"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Every device has a label. NESA says students should clearly label all devices, and that different software draws devices with different symbols.</li><li>Dotted lines show the connections. The router is the link between the internet and everything else.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Which devices lose their connection to the internet if the left-hand hub fails?</p>
+            </div>
+          </figure>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Device</th><th>Role in the network (our explanation)</th></tr></thead>
+              <tbody>
+                <tr><td>Router</td><td>Joins networks together and passes traffic between the local network and the internet</td></tr>
+                <tr><td>Hub</td><td>A simple connection point that repeats what it receives to every device plugged into it</td></tr>
+                <tr><td>Switch</td><td>A connection point that sends data only to the device it is meant for. Most modern networks use switches where NESA&rsquo;s example shows hubs.</td></tr>
+                <tr><td>Wireless device</td><td>A device that connects without a cable, for example by Bluetooth or Wi-Fi</td></tr>
+                <tr><td>Computer, laptop, tablet, smart phone, printer</td><td>End devices (nodes) that send or receive data</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>How to draw one, step by step</h3>
+          <ol>
+            <li>List every device on the network, including the connection to the internet.</li>
+            <li>Place the central device (usually the router) in the middle, and the internet above it.</li>
+            <li>Add the hubs or switches, then group the end devices around the one they connect through.</li>
+            <li>Draw a line for each connection. Use a different line style for wireless connections and add a small key if you use more than one line style.</li>
+            <li>Label every device with its type, and its name or purpose where that helps (for example &ldquo;Printer &ndash; front office&rdquo;).</li>
+          </ol>
+          <div class="callout warning">
+            <strong>Common exam mistakes</strong>
+            Icons with no labels. Devices left floating with no connection. Connecting every device straight to the router when the scenario says they share a hub or switch. Leaving out the internet connection. Mixing up wired and wireless devices with no key.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            The marker cares about correct devices, correct connections and clear labels, not about artistic icons. A labelled box for each device is fine. Draw the topology exactly as the scenario describes.
+          </div>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            A small office has a router connected to the internet. A switch connects a printer and four desktop computers. Two laptops and a phone connect to the router by Wi-Fi. Draw and label the network diagram.
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer</summary>
+            <p>Internet at the top, joined to Router. From Router: one wired line to Switch and three dotted wireless lines to Laptop 1, Laptop 2 and Phone. From Switch: five wired lines to Printer and Computer 1 to 4. Every device is labelled and a small key shows wired (solid) and wireless (dotted) lines.</p>
+          </details>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="graph-theory">
+          <h2 class="syllabus-phase">Graph and Network Theory</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications p.11</strong> Nodes and links, applied to the design of social networks</em></p>
+
+          <h3>What it is for</h3>
+          <p>Graph and network theory represents things and the relationships between them. NESA says it can be applied in the design of social networks: people and groups become circles, and their connections become lines. Drawing the network makes it easy to see who or what is central and which groups cluster together.</p>
+
+          <h3>NESA&rsquo;s notation (p.11)</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Symbol</th><th>Name</th><th>Represents</th></tr></thead>
+              <tbody>
+                <tr><td>Circle</td><td>Node (vertex)</td><td>An individual or a category. Its size may show the size of a dataset, where appropriate.</td></tr>
+                <tr><td>Straight line</td><td>Link (edge)</td><td>A connection between nodes, groups of nodes or clusters. A label on the link names the relationship.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Graph</span></p>
+              <h4 class="figure-title">Graph: VB&rsquo;s social network</h4>
+              <p class="figure-lead">Individuals and categories linked to VB, with the relationship written on each link.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="spec-graph-weighted"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>VB is the largest circle: size shows importance or the amount of activity in the network.</li><li>The link labels (Friend, Listen, Watch, Group) tell you the relationship between VB and each node.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>How many nodes are directly linked to VB, and which of them are categories rather than individuals?</p>
+            </div>
+          </figure>
+          <p>Reading the graph: the number of links at a node shows how connected it is, a cluster is a group of nodes mostly linked to each other, and a node that joins two clusters is a bridge between them. NESA does not name these ideas, but they are how a graph is interpreted.</p>
+          <div class="callout info">
+            <strong>Extension: numbers on links</strong>
+            Some graphs put a number, called a weight, on each link, such as the cable length between two sites. NESA&rsquo;s symbols do not include weights, so use them only if a question asks.
+          </div>
+
+          <h3>How to draw one, step by step</h3>
+          <ol>
+            <li>List the nodes: the individuals and the categories in the network.</li>
+            <li>Decide which links exist and what each relationship is called.</li>
+            <li>Place the most important node in the centre and draw it largest if size is used to show importance.</li>
+            <li>Draw straight lines between related nodes and write the relationship on each line.</li>
+            <li>Group related nodes near each other so clusters are visible.</li>
+          </ol>
+          <div class="callout warning">
+            <strong>Common exam mistakes</strong>
+            Circles with no labels. Links with no relationship written on them. Varying node size without saying what it means. Using arrows, boxes or other shapes (NESA&rsquo;s symbols are circles and straight lines). Confusing a network diagram of devices with a graph of relationships.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            Say what each node represents and what a link means, then interpret: name the most connected node and explain why that matters for the design of the social network, for example who to notify or which group to promote to.
+          </div>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            Draw a graph of your class group chat. Put yourself in the centre, link to four classmates and two categories (a sport and a subject) and label each link with the relationship.
+          </div>
+          <details class="tk-answer">
+            <summary>What a good answer shows</summary>
+            <p>Your circle is the largest. Four individual nodes and two category nodes each have a straight link to you, labelled (for example Friend, Plays, Studies). Any two classmates who also know each other are linked, forming a cluster. You can explain which node has the most links and what that tells you.</p>
+          </details>
+        </section>
+
+        <div class="quiz" data-quiz="tk-1"></div>
+
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  PART 2: PROJECT MANAGEMENT TOOLS                      -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Part 2</span>
+          <span class="part-name">Project management tools</span>
+        </div>
+
+        <aside class="topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <p>A project runs late one day at a time. NESA lists two tools for staying in control (Course Specifications pp.12&ndash;13): a Gantt chart, which plans and tracks the work, and a process diary, which records what actually happened.</p>
+          <p class="breakout-question"><span class="bq-lead">Think about a group project</span> How would you know, halfway through, whether your team is on schedule? What would you look at?</p>
+        </aside>
+
+        <section id="gantt-charts">
+          <h2 class="syllabus-phase">Gantt Charts</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications p.12</strong> Tasks on a dated timeline, with dependencies, milestones, resources and progress</em></p>
+
+          <h3>What it is for</h3>
+          <p>A Gantt chart displays each component task of a proposed system development on an estimated timeline. It answers: what has to be done, how long each task should take, which tasks depend on others, who is doing them and how far along they are. NESA says other formats are acceptable, so what matters is that the main elements are present.</p>
+
+          <h3>The main elements (NESA example 1)</h3>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Gantt chart</span></p>
+              <h4 class="figure-title">Gantt chart: requirements gathering</h4>
+              <p class="figure-lead">Eight tasks on a dated timeline, with dependencies and a milestone.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="spec-gantt-requirements"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Task names are self-explanatory. The time scale shows months and dates, and weekends are shaded.</li><li>Elbow arrows show dependencies: the report cannot start until the data flow diagram is finished.</li><li>The hollow diamond is a milestone, a point in time rather than a task with a duration.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Which task must finish before task 6, Produce a data flow diagram, can begin?</p>
+            </div>
+          </figure>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Element</th><th>What NESA asks for</th><th>How it appears</th></tr></thead>
+              <tbody>
+                <tr><td>Task names</td><td>Self-explanatory titles</td><td>&ldquo;Interview participants&rdquo;, not &ldquo;Phase 1&rdquo;</td></tr>
+                <tr><td>Estimated time</td><td>The time each task needs</td><td>Bar length on the timeline</td></tr>
+                <tr><td>Dependent tasks</td><td>Clearly shown</td><td>An arrow from the end of one bar to the start of the next</td></tr>
+                <tr><td>Time scale</td><td>Clearly indicated with dates</td><td>Months and day numbers across the top</td></tr>
+                <tr><td>Milestones</td><td>Important ones clearly marked</td><td>A hollow diamond</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Resources and percentage completion (NESA example 2)</h3>
+          <p>NESA&rsquo;s second example allocates <strong>team members</strong> to tasks and shows the <strong>percentage complete</strong> of each. It also says the chart should be regularly updated during development to reflect <em>actual versus estimated</em> times.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Gantt chart</span></p>
+              <h4 class="figure-title">Gantt chart: resources and percentage completion</h4>
+              <p class="figure-lead">Tasks grouped into Analysis, Design and Development, with people and progress on each bar.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="spec-gantt-resources"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>The darker part of each bar is the work done. The lighter part is the work still to do.</li><li>Summary tasks (Analysis, Design, Development) group the smaller tasks, and milestones carry dates.</li><li>Team members&rsquo; names sit beside the tasks they are responsible for.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Which phase is furthest through, and which team members have work allocated to them in the Design phase?</p>
+            </div>
+          </figure>
+
+          <h3>How to build one, step by step</h3>
+          <ol>
+            <li><strong>List the tasks</strong> the project needs, with names that explain themselves. Group them into phases if there are many.</li>
+            <li><strong>Estimate a duration</strong> for each task in days or weeks.</li>
+            <li><strong>Find the dependencies</strong>: which tasks cannot start until another finishes. Tasks with no dependency between them can run in parallel.</li>
+            <li><strong>Draw the timeline</strong> with dates, then place each bar so it starts after the tasks it depends on. Add arrows for the dependencies.</li>
+            <li><strong>Mark milestones</strong>: the points that matter, such as &ldquo;Requirements approved&rdquo; or &ldquo;Testing complete&rdquo;.</li>
+            <li><strong>Allocate people</strong> to tasks and check nobody is double-booked at the same time.</li>
+            <li><strong>Track and update</strong>: shade each bar to the percentage complete and revise the plan when actual times differ from the estimates.</li>
+          </ol>
+          <p>One useful reading skill, though NESA does not name it: the longest chain of dependent tasks decides the earliest finish date. In example 1, tasks 1, 2, 5, 6 and 7 form that chain, so a delay to any of them delays the milestone.</p>
+          <div class="callout warning">
+            <strong>Common exam mistakes</strong>
+            No dates on the time scale (only &ldquo;Week 1, Week 2&rdquo; is weaker than actual dates). Dependencies missing, so a task starts before the one it needs has finished. No milestone. Vague task names such as &ldquo;Do the coding&rdquo;. Nobody named as responsible. A chart drawn once and never updated, so it no longer shows actual against estimated time.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            The 2025 HSC asked students to use a Gantt chart to schedule and track a team&rsquo;s allocated activities. A full answer names the tasks, gives durations and dates, shows dependencies, allocates each task to a team member, marks a milestone and describes how the chart is updated with percentage complete as work is done.
+          </div>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            Plan a three-week project to build a booking form for a local sports club. The tasks are: interview the club secretary (2 days), design the form (3 days, after the interview), build the form (5 days, after the design), test the form (3 days, after the build) and hand over to the club (1 day, after testing). Two team members, Ana and Ben, share the work. Show the schedule and a milestone.
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer</summary>
+            <p>Start on Monday 3 August. Interview the club secretary (Ana): 3&ndash;4 Aug. Design the form (Ben): 5&ndash;7 Aug, starting after the interview. Build the form (Ben and Ana): 10&ndash;14 Aug. Test the form (Ana): 17&ndash;19 Aug. Milestone &ldquo;Form approved&rdquo; on 19 Aug. Hand over to the club (Ana): 20 Aug. Each task has an arrow from the one before it. Week-by-week you would shade each bar to the percentage complete and record any difference between the estimate and the actual time.</p>
+          </details>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="process-diaries">
+          <h2 class="syllabus-phase">Process Diaries and Log Books</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications p.13</strong> Documenting the progress of a project at regular intervals</em></p>
+
+          <h3>What it is for</h3>
+          <p>A process diary (or log book) documents the <em>progress</em> of a project as it happens. Where a Gantt chart shows the plan, the diary records what was done, what went wrong and what you learned. It is also evidence of your own work when a project is marked.</p>
+
+          <h3>What NESA says an entry should include (p.13)</h3>
+          <p>Entries are made by team members at regular intervals and should include the following eight items.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Item</th><th>What to write</th><th>Example</th></tr></thead>
+              <tbody>
+                <tr><td>Date</td><td>The day of the entry</td><td>Thursday 13 August</td></tr>
+                <tr><td>Person making the entry</td><td>Your name, so that each member&rsquo;s contribution can be seen</td><td>Sam Nguyen</td></tr>
+                <tr><td>Progress since the last entry</td><td>What has changed since you last wrote</td><td>Menu screen is built and linked to the order screen</td></tr>
+                <tr><td>Tasks achieved</td><td>The specific tasks completed</td><td>Finished the Menu and Orders tables</td></tr>
+                <tr><td>Stumbling blocks or issues and how they were managed</td><td>What went wrong and what you did about it</td><td>Prices displayed with one decimal place; changed the field format to $#.##</td></tr>
+                <tr><td>Possible approaches for upcoming tasks</td><td>Options you are considering for the next steps</td><td>Either a drop-down list or option buttons for choosing a lunch item</td></tr>
+                <tr><td>Reflective comments</td><td>What you learned and what you would change</td><td>Testing the form earlier would have caught this sooner</td></tr>
+                <tr><td>Resources used</td><td>Tools, data, people and sources you used</td><td>Spreadsheet software; feedback from the canteen manager</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout info">
+            <strong>A model entry</strong>
+            <em>13 August &ndash; Sam Nguyen.</em> Since Tuesday I finished the Menu and Orders tables and linked the order screen to the menu. Prices showed as $5.5, so I changed the field format to $#.## and retested. Next I will decide between a drop-down list and option buttons for choosing items. Testing earlier would have caught the price format sooner. Used: database software and the canteen manager&rsquo;s feedback.
+          </div>
+
+          <h3>How to keep one, step by step</h3>
+          <ol>
+            <li>Decide the interval (for example after every lesson or work session) and stick to it.</li>
+            <li>Write the entry as soon as you finish, while the detail is fresh.</li>
+            <li>Cover every item in the list, even briefly. If nothing went wrong, say so.</li>
+            <li>Record problems honestly: what happened, how you found it, what you did and whether it worked.</li>
+            <li>Read back over earlier entries when you plan the next one, so your reflections shape what you do.</li>
+          </ol>
+          <div class="callout warning">
+            <strong>Common exam mistakes</strong>
+            A vague entry such as &ldquo;worked on the project&rdquo;. Leaving out stumbling blocks, so it reads as if nothing went wrong. Writing everything at once at the end rather than at regular intervals. No name on the entry. No reflection. No resources listed.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            If you are asked to write or evaluate a diary entry, tick off the eight items. A short entry that covers all eight is stronger than a long entry that covers three. Where a question asks how a diary supports project management, link it to the Gantt chart: the diary records why the actual times differed from the plan.
+          </div>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            Write today&rsquo;s process diary entry for this study session, with all eight items. Treat your revision as the project.
+          </div>
+          <details class="tk-answer">
+            <summary>What a good answer shows</summary>
+            <p>Your name and today&rsquo;s date. What you covered since your last session. The specific tasks you finished (for example redrew the voting Level 0 DFD). A problem you hit (mixing up the process and data store symbols) and how you fixed it. Your plan for next time. A reflection on how you learn best. The resources you used, such as this page.</p>
+          </details>
+        </section>
+
+        <div class="quiz" data-quiz="tk-2"></div>
+
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  PART 3: IMPLEMENTING AND TESTING                      -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Part 3</span>
+          <span class="part-name">Implementing and testing a system</span>
+        </div>
+
+        <aside class="topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <p>A system that passes every test in the workshop can still fail on its first morning in the real world. NESA names four ways to switch a new system on and six ways to test it (Course Specifications pp.14&ndash;15), and expects you to recognise each one and understand it.</p>
+          <p class="breakout-question"><span class="bq-lead">Think about it</span> If your school replaced its timetable system overnight, what would you want tested first, and what would you want to keep as a fallback?</p>
+        </aside>
+
+        <section id="implementation-methods">
+          <h2 class="syllabus-phase">System Implementation Methods</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications p.14</strong> Recognise and understand: direct, parallel, pilot and phased</em></p>
+
+          <div class="callout info">
+            <strong>NESA names, we define</strong>
+            NESA lists these four methods by name only and gives no definitions. The definitions, comparisons and examples below are ours, written to match how the methods are normally described.
+          </div>
+
+          <h3>What it is for</h3>
+          <p>Implementation is the step where a new or redesigned system replaces the old one, or is put into use for the first time. The method you choose decides how much risk you take, how much it costs and how long the changeover lasts.</p>
+
+          <h3>The four methods</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Method</th><th>How it works</th><th>Strengths</th><th>Weaknesses</th></tr></thead>
+              <tbody>
+                <tr><td>Direct</td><td>The old system is switched off and the new one switched on at an agreed moment.</td><td>Fastest and cheapest. Everyone moves at once.</td><td>Highest risk. If the new system fails there is nothing to fall back on.</td></tr>
+                <tr><td>Parallel</td><td>Old and new systems run side by side for a period. Outputs are compared before the old system is retired.</td><td>Lowest risk. The old system is a safety net and results can be checked.</td><td>Costs the most and takes longer: staff enter data twice and run two systems.</td></tr>
+                <tr><td>Pilot</td><td>The complete new system is introduced in one location or one group first. If it works, it is rolled out to everyone else.</td><td>Problems are found on a small scale. Feedback shapes the wider rollout.</td><td>Slower overall. The organisation runs two systems for a while, and the pilot group may not represent everyone.</td></tr>
+                <tr><td>Phased</td><td>The new system is introduced one part (module or function) at a time, for everyone, until all of it is live.</td><td>Spreads the risk and the training load. Each stage can be fixed before the next.</td><td>Old and new must work together during the changeover, which can be complicated. Full benefits come late.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Animated diagram</span></p>
+              <h4 class="figure-title">Implementation methods: switching from the old system to the new</h4>
+              <p class="figure-lead">Watch the steps, or step through with the arrow keys.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--anim">
+              <div class="anim" data-anim="implementation-methods"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Direct switches every office at once, so a fault hits everyone. Parallel keeps the old system running as a fallback.</li><li>Pilot moves one office first. Phased moves one module at a time across all offices.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Use the tabs to compare how each method behaves when the new system has a fault.</p>
+            </div>
+          </figure>
+
+          <h3>Choosing a method for a scenario</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Scenario</th><th>Best fit</th><th>Why</th></tr></thead>
+              <tbody>
+                <tr><td>A regional hospital changes its patient records system</td><td>Parallel</td><td>Failure is unacceptable, so the old system stays as a fallback while results are compared.</td></tr>
+                <tr><td>A retail chain with 40 stores introduces new point-of-sale software</td><td>Pilot</td><td>Trial in one store, fix the problems, then roll out to the rest.</td></tr>
+                <tr><td>A council adds new modules to its system: rates, then permits, then libraries</td><td>Phased</td><td>Each module goes live in turn and staff are trained a module at a time.</td></tr>
+                <tr><td>A small sports club replaces its membership spreadsheet with a simple app</td><td>Direct</td><td>Low risk, cheap, and the old spreadsheet can be kept as a backup copy.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>How to choose, step by step</h3>
+          <ol>
+            <li>Ask how critical the system is. If failure is costly or dangerous, lean towards parallel or pilot.</li>
+            <li>Ask how many users and locations are involved. Many sites suggest pilot or phased.</li>
+            <li>Ask whether the system splits into independent modules. If it does, phased is possible.</li>
+            <li>Weigh cost and time. Parallel is safest but most expensive, and direct is cheapest but riskiest.</li>
+            <li>Justify the choice with a reason drawn from the scenario, and name the disadvantage you are accepting.</li>
+          </ol>
+          <div class="callout warning">
+            <strong>Common exam mistakes</strong>
+            Mixing up pilot and phased. Pilot means the <em>whole</em> system in <em>one place</em> first, while phased means <em>one part</em> at a time <em>everywhere</em>. Calling parallel &ldquo;cheap&rdquo;. Naming a method with no reason from the scenario. Ignoring the drawback of the method you chose.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            For a &ldquo;recommend&rdquo; or &ldquo;justify&rdquo; question, name one method, give a reason from the scenario (risk, cost, number of users or whether the system is critical), and acknowledge one disadvantage. Two or three connected sentences earn more than a list of all four methods.
+          </div>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            A logistics firm with depots in five towns is replacing its parcel-tracking system. Drivers rely on it every hour, and the firm cannot afford lost parcels. Recommend an implementation method and justify it.
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer</summary>
+            <p>A pilot in one depot, followed by a rollout, is a sound choice. It limits the damage if the system has faults, because only one depot is affected, and drivers&rsquo; feedback can be used to fix problems before the other four depots switch. The trade-off is a slower changeover and running two systems at once. Running the old system in parallel at the pilot depot would reduce the risk further, at extra cost.</p>
+          </details>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="testing-methods">
+          <h2 class="syllabus-phase">Methods for Testing a System</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications p.15</strong> Recognise and understand: functional, acceptance, live data, simulated data, beta and volume testing</em></p>
+
+          <div class="callout info">
+            <strong>NESA names, we define</strong>
+            NESA lists these six methods by name only and gives no definitions. The definitions below are ours. Live data and simulated data describe <em>what data is used</em>. The other four describe <em>what is being checked and by whom</em>.
+          </div>
+
+          <h3>What it is for</h3>
+          <p>Testing checks that a system does what it should before people rely on it. Different methods find different kinds of problems, so a project normally uses several.</p>
+
+          <h3>The six methods</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Method</th><th>What it checks</th><th>Who and how</th><th>Example</th></tr></thead>
+              <tbody>
+                <tr><td>Functional testing</td><td>Each function works as the requirements say</td><td>Developers or testers give inputs and compare results with what is expected</td><td>Enter a $150 order and check that no delivery charge is added</td></tr>
+                <tr><td>Acceptance testing</td><td>The finished system meets the client&rsquo;s agreed needs</td><td>The client or user runs it against agreed criteria, and decides whether to accept it</td><td>The canteen manager tries her daily tasks and signs off</td></tr>
+                <tr><td>Live data</td><td>The system copes with real data from the organisation</td><td>Real records are used in the test, with care for privacy</td><td>Last term&rsquo;s actual orders are loaded into the new ordering system</td></tr>
+                <tr><td>Simulated data</td><td>The system handles chosen cases, including unusual and invalid ones</td><td>Testers make up data on purpose, so results can be predicted</td><td>A test order with a price of $0.00 or a date in the future</td></tr>
+                <tr><td>Beta testing</td><td>Faults that appear in real use, by real users</td><td>A near-final version is released to a limited group outside the development team for feedback</td><td>Fifty students use the new app for a fortnight and report problems</td></tr>
+                <tr><td>Volume testing</td><td>Performance under a large amount of data or many users</td><td>Testers load the system with large quantities of data or many simultaneous users</td><td>Ten thousand orders are loaded to see whether searches slow down</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Testing with simulated data: a worked example</h3>
+          <p>Here is a functional test plan with simulated data for NESA&rsquo;s <a href="#flowcharts">delivery charge flowchart</a>. The <em>expected</em> column is worked out from the rule before the test is run. The <em>actual</em> column is filled in during testing.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Test</th><th>Perishable?</th><th>Distance</th><th>Order value</th><th>Expected result</th><th>Purpose</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>Yes</td><td>2 km</td><td>$40</td><td>Delivery charge applies</td><td>Normal data, perishable path</td></tr>
+                <tr><td>2</td><td>No</td><td>5 km</td><td>$40</td><td>No delivery charge</td><td>Normal data, short distance</td></tr>
+                <tr><td>3</td><td>No</td><td>10 km</td><td>$40</td><td>No delivery charge</td><td>Boundary: exactly 10 km is not more than 10</td></tr>
+                <tr><td>4</td><td>No</td><td>11 km</td><td>$100</td><td>Delivery charge applies</td><td>Boundary: exactly $100 is not more than $100</td></tr>
+                <tr><td>5</td><td>No</td><td>11 km</td><td>$101</td><td>No delivery charge</td><td>Boundary: just over $100</td></tr>
+                <tr><td>6</td><td>No</td><td>&minus;3 km</td><td>$40</td><td>Rejected as invalid</td><td>Invalid data: a negative distance. The flowchart has no check for this, so the test would fail and reveal a missing validation step</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>How to plan testing, step by step</h3>
+          <ol>
+            <li>List what the system must do (its functions) from the requirements.</li>
+            <li>For each function, choose test data: normal values, boundary values and invalid values.</li>
+            <li>Work out the expected result <em>before</em> testing, so you are checking the system rather than believing it.</li>
+            <li>Run the tests and record the actual result, then fix and retest anything that fails.</li>
+            <li>Move on to the client&rsquo;s acceptance test, a beta release if the system will be used widely, and a volume test if it must handle a lot of data or users.</li>
+          </ol>
+          <div class="callout warning">
+            <strong>Common exam mistakes</strong>
+            Saying live data is &ldquo;made-up data&rdquo;. It is real data, and simulated data is the made-up kind. Confusing beta testing (real users, near-final version, wide feedback) with acceptance testing (the client checks against agreed criteria). Testing only normal values and never boundaries or invalid ones. Writing tests with no expected results.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            The 2025 HSC included spreadsheet formulas checked with test data. When you produce test data, give a set that covers normal, boundary and invalid cases, and state the expected result for each. If asked why simulated data is used first, say it is safe, predictable and can include rare cases. If asked why live data is used later, say it reflects the real mix of records.
+          </div>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            A school is about to launch a new ordering app for the canteen. Match each activity to a method: (a) a group of 60 students use the app for a fortnight and send feedback; (b) testers load 20 000 orders to check that it stays fast; (c) the canteen manager completes her tasks against the agreed checklist; (d) testers enter a price of $0.00 and a date in the future to see what happens.
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer</summary>
+            <p>(a) Beta testing. (b) Volume testing. (c) Acceptance testing. (d) Functional testing using simulated data.</p>
+          </details>
+        </section>
+
+        <div class="quiz" data-quiz="tk-3"></div>
+
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  PART 4: RELATIONAL DATABASES AND SQL                  -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Part 4</span>
+          <span class="part-name">Relational databases and SQL</span>
+        </div>
+
+        <aside class="topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <p>Every app that remembers you, from your school login to your streaming history, keeps its data in tables. NESA asks you to know how to design those tables so data is not repeated (Course Specifications p.16) and how to ask them questions in SQL (p.17).</p>
+          <p class="breakout-question"><span class="bq-lead">Ask yourself</span> If a game&rsquo;s publisher changed its name, how many places in a database would need to change? What would go wrong if one were missed?</p>
+        </aside>
+
+        <section id="relational-databases">
+          <h2 class="syllabus-phase">Relational Databases: Normalisation and Schemas</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications p.16</strong> Minimising duplication with linked tables, and drawing the schema</em></p>
+
+          <h3>Normalisation</h3>
+          <p>NESA describes normalisation as a process in relational database design where <strong>data duplication is minimised</strong> by separating the database into a number of smaller, linked tables. Each table should include fields that are solely dependent on the primary key in that table. NESA gives the reason: if a database contains redundant data, the copies may not be updated consistently, which leads to a <strong>data integrity</strong> problem. NESA does not ask you to name normal forms such as 1NF, 2NF or 3NF.</p>
+
+          <h4 class="tk-query-title">The problem: one flat table</h4>
+          <p>Suppose the games database began as one flat file. The publisher&rsquo;s name and the developer&rsquo;s name are typed again on every row.</p>
+
+<div class="table-wrap"><table>
+<caption>A flat table: the publisher and developer are repeated</caption>
+<thead><tr><th>ID</th><th>Name</th><th>Release_date</th><th>Cost</th><th>Publisher_name</th><th>Developer_first_name</th><th>Developer_last_name</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Reef Runner</td><td>15/03/2022</td><td>19.95</td><td>Games Inc</td><td>Mia</td><td>Nguyen</td></tr>
+<tr><td>3</td><td>Star Harbour</td><td>21/11/2022</td><td>39.95</td><td>Games Inc</td><td>Priya</td><td>Patel</td></tr>
+<tr><td>6</td><td>Tidal Trader</td><td>05/09/2023</td><td>29.95</td><td>Games Inc</td><td>Tom</td><td>Walker</td></tr>
+<tr><td>8</td><td>Night Market</td><td>30/03/2023</td><td>34.95</td><td>Games Inc</td><td>Liam</td><td>O&rsquo;Brien</td></tr>
+<tr><td>4</td><td>Kelp Quest</td><td>10/03/2023</td><td>14.95</td><td>Southern Cross Games</td><td>Mia</td><td>Nguyen</td></tr>
+</tbody></table></div>
+
+          <p>&ldquo;Games Inc&rdquo; is stored four times and Mia Nguyen twice. If the publisher renames itself, four rows must be edited. If one is missed, the database now holds two versions of the same publisher, and a search for &ldquo;Games Inc&rdquo; misses some of its games. This is the data integrity problem NESA describes.</p>
+
+          <h4 class="tk-query-title">The fix: separate, linked tables</h4>
+          <p>Move each repeating group into its own table, give each table a <strong>primary key</strong> and link the tables with a <strong>foreign key</strong>. Now &ldquo;Games Inc&rdquo; is stored once, and each game holds only the Publisher_ID that points to it.</p>
+          <div class="key-terms">
+            <div class="key-term-item"><strong>Primary key</strong><span>A field whose value is different for every record in the table, so it identifies that record. It is marked (P) in NESA&rsquo;s schema.</span></div>
+            <div class="key-term-item"><strong>Foreign key</strong><span>A field in one table that holds the primary key value of a record in another table, forming the link. It is marked (F).</span></div>
+            <div class="key-term-item"><strong>Relationship</strong><span>The link between two tables. One publisher has many games, so the relationship is one-to-many, written 1 at the one end and &infin; at the many end.</span></div>
+            <div class="key-term-item"><strong>Schema</strong><span>NESA: it shows the organisational structure of a database: the entities and their attributes, the primary key in each table, and the links between tables.</span></div>
+          </div>
+
+          <h3>NESA&rsquo;s schema (p.16)</h3>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Schema</span></p>
+              <h4 class="figure-title">Schema: a games database</h4>
+              <p class="figure-lead">Three tables, with primary keys (P), foreign keys (F) and one-to-many relationships.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="spec-schema-games"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Each table is a rectangle with its bold name in a header box and one field per line.</li><li>Games holds two foreign keys, Publisher_ID and Developer_ID, so it links to both other tables.</li><li>1 sits at the Publishers and Developers ends of the lines and &infin; at the Games end: one publisher can have many games.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Which field links a game to its publisher, and which table is that field the primary key of?</p>
+            </div>
+          </figure>
+          <p>NESA says there are other acceptable ways to represent a schema, so a different notation (for example crow&rsquo;s foot lines for the many end) is fine if it clearly shows the tables, the fields, the primary keys and the relationships.</p>
+
+          <h3>The sample data we use for SQL</h3>
+          <p>The queries in the next section run on this data. The tables follow NESA&rsquo;s schema. The rows and the dates (day/month/year, as in NESA&rsquo;s example) are ours.</p>
+
+<div class="table-wrap"><table>
+<caption>Publishers</caption>
+<thead><tr><th>Publisher_ID (P)</th><th>Name</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Games Inc</td></tr>
+<tr><td>2</td><td>PixelWorks</td></tr>
+<tr><td>3</td><td>Southern Cross Games</td></tr>
+</tbody></table></div>
+<div class="table-wrap"><table>
+<caption>Developers</caption>
+<thead><tr><th>Developer_ID (P)</th><th>First_name</th><th>Last_name</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Mia</td><td>Nguyen</td></tr>
+<tr><td>2</td><td>Liam</td><td>O&rsquo;Brien</td></tr>
+<tr><td>3</td><td>Priya</td><td>Patel</td></tr>
+<tr><td>4</td><td>Tom</td><td>Walker</td></tr>
+</tbody></table></div>
+<div class="table-wrap"><table>
+<caption>Games</caption>
+<thead><tr><th>ID (P)</th><th>Name</th><th>Release_date</th><th>Cost</th><th>Publisher_ID (F)</th><th>Developer_ID (F)</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Reef Runner</td><td>15/03/2022</td><td>19.95</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Outback Dash</td><td>02/06/2022</td><td>9.99</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>Star Harbour</td><td>21/11/2022</td><td>39.95</td><td>1</td><td>3</td></tr>
+<tr><td>4</td><td>Kelp Quest</td><td>10/03/2023</td><td>14.95</td><td>3</td><td>1</td></tr>
+<tr><td>5</td><td>Dingo Derby</td><td>27/03/2023</td><td>24.95</td><td>2</td><td>4</td></tr>
+<tr><td>6</td><td>Tidal Trader</td><td>05/09/2023</td><td>29.95</td><td>1</td><td>4</td></tr>
+<tr><td>7</td><td>Coral Code</td><td>18/01/2022</td><td>12.50</td><td>3</td><td>3</td></tr>
+<tr><td>8</td><td>Night Market</td><td>30/03/2023</td><td>34.95</td><td>1</td><td>2</td></tr>
+</tbody></table></div>
+
+          <h3>How to normalise, step by step</h3>
+          <ol>
+            <li>Start with the flat table and look for values repeated across rows (a publisher, a customer, a supplier).</li>
+            <li>Move each repeating group into its own table, and give the new table a primary key.</li>
+            <li>Check that every other field in a table depends only on that table&rsquo;s primary key. A game&rsquo;s cost belongs in Games. A publisher&rsquo;s name belongs in Publishers.</li>
+            <li>In the original table, replace the repeated details with a foreign key that holds the other table&rsquo;s primary key value.</li>
+            <li>Draw the schema: tables, fields, (P) and (F) markers and a 1 and &infin; on each relationship line.</li>
+          </ol>
+          <div class="callout warning">
+            <strong>Common exam mistakes</strong>
+            Leaving the foreign key out, so the tables are not linked. Writing the publisher&rsquo;s name in the Games table instead of its ID. Marking the wrong field as the primary key, or forgetting (P) and (F) altogether. Putting 1 and &infin; at the wrong ends of a relationship. Describing normalisation as &ldquo;making the database faster&rdquo;: NESA&rsquo;s reason is reducing duplication and protecting data integrity.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            To explain the benefit of normalisation in a scenario, follow NESA&rsquo;s chain: duplicated data means copies can be updated inconsistently, which causes a data integrity problem, and separating the data into linked tables means each fact is stored once and only needs to change in one place. Use a specific example from the question.
+          </div>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            A school canteen stores each order on one row: OrderID, Date, StudentName, StudentHomeroom, ItemName, ItemPrice. Identify the repeated data, then propose three tables with their primary and foreign keys.
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer</summary>
+            <p>Student details repeat for every order, and item details repeat for every sale. Three tables: <strong>Students</strong> (StudentID (P), StudentName, Homeroom), <strong>Items</strong> (ItemID (P), ItemName, ItemPrice) and <strong>Orders</strong> (OrderID (P), Date, StudentID (F), ItemID (F)). One student has many orders and one item appears in many orders, so both relationships are one-to-many with the &infin; end at Orders. Changing an item&rsquo;s price now means editing a single row.</p>
+          </details>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="sql-syntax">
+          <h2 class="syllabus-phase">SQL Syntax</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications p.17</strong> SELECT, FROM, WHERE and ORDER BY, applied to the games schema</em></p>
+
+          <h3>What it is for</h3>
+          <p>NESA describes Structured Query Language (SQL) as a language used to access and manipulate data in relational databases. For the HSC Enterprise Computing course, NESA lists exactly four pieces of standard syntax:</p>
+          <ul>
+            <li><strong>SELECT</strong> (what is to be displayed)</li>
+            <li><strong>FROM</strong> (the tables to be used)</li>
+            <li><strong>WHERE</strong> (the search criteria which may come from multiple tables)</li>
+            <li><strong>ORDER BY</strong> (the sequence in which the results are displayed)</li>
+          </ul>
+          <p>NESA&rsquo;s own examples also use <code>AND</code> to combine criteria, the comparison operators <code>=</code>, <code>&gt;=</code> and <code>&lt;=</code>, <code>ASC</code> and <code>DESC</code> after ORDER BY, and the <code>Table.Field</code> form for naming a field. The database software specification (p.19) adds the logical operators AND, OR and NOT, which you can use in a WHERE clause.</p>
+          <div class="callout info">
+            <strong>What NESA does not list</strong>
+            The specifications do not list JOIN&hellip;ON, COUNT, SUM, AVG, GROUP BY or statements that change data such as INSERT, UPDATE and DELETE. In NESA&rsquo;s examples a join is written by listing the tables in FROM and matching the linked fields in WHERE. Stick to the four keywords; anything else on this page is labelled as an extension.
+          </div>
+
+          <h3>The shape of a query</h3>
+
+<div class="code-block">
+<div class="code-header"><span class="code-lang">Pattern</span></div>
+<pre><code class="language-sql">SELECT   the fields to display
+FROM     the table or tables that hold them
+WHERE    the criteria a record must meet          (optional)
+ORDER BY the field to sort on, then ASC or DESC   (optional)</code></pre>
+</div>
+
+          <p>The clauses always come in this order. Text and dates go inside single quotes. Numbers do not. If two tables have a field with the same name (Name appears in Games and Publishers), write <code>Table.Field</code> so the database knows which you mean. ASC (A to Z, smallest first) is the default, and DESC reverses it.</p>
+          <p>All the results below were checked by running the queries on the sample data, with the dates compared as real dates.</p>
+
+          <h3>Worked queries on the games schema</h3>
+
+<h4 class="tk-query-title">1. SELECT and FROM: display chosen fields</h4>
+<p>List the name and cost of every game. With no WHERE clause, every record is returned.</p>
+<div class="code-block">
+<div class="code-header"><span class="code-lang">SQL</span></div>
+<pre><code class="language-sql">SELECT Name, Cost
+FROM Games</code></pre>
+</div>
+<p class="tk-result-label">Result (8 rows)</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Name</th><th>Cost</th></tr></thead>
+<tbody>
+<tr><td>Reef Runner</td><td>19.95</td></tr>
+<tr><td>Outback Dash</td><td>9.99</td></tr>
+<tr><td>Star Harbour</td><td>39.95</td></tr>
+<tr><td>Kelp Quest</td><td>14.95</td></tr>
+<tr><td>Dingo Derby</td><td>24.95</td></tr>
+<tr><td>Tidal Trader</td><td>29.95</td></tr>
+<tr><td>Coral Code</td><td>12.50</td></tr>
+<tr><td>Night Market</td><td>34.95</td></tr>
+</tbody></table></div>
+
+<h4 class="tk-query-title">2. WHERE: choose which records</h4>
+<p>Only records that meet the criterion appear. Here, games that cost less than $15.</p>
+<div class="code-block">
+<div class="code-header"><span class="code-lang">SQL</span></div>
+<pre><code class="language-sql">SELECT Name, Cost
+FROM Games
+WHERE Cost &lt; 15</code></pre>
+</div>
+<p class="tk-result-label">Result (3 rows)</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Name</th><th>Cost</th></tr></thead>
+<tbody>
+<tr><td>Outback Dash</td><td>9.99</td></tr>
+<tr><td>Kelp Quest</td><td>14.95</td></tr>
+<tr><td>Coral Code</td><td>12.50</td></tr>
+</tbody></table></div>
+
+<h4 class="tk-query-title">3. WHERE with text</h4>
+<p>Text criteria go in quotes. Here, the developers whose last name is Patel.</p>
+<div class="code-block">
+<div class="code-header"><span class="code-lang">SQL</span></div>
+<pre><code class="language-sql">SELECT First_name, Last_name
+FROM Developers
+WHERE Last_name = &#x27;Patel&#x27;</code></pre>
+</div>
+<p class="tk-result-label">Result (1 row)</p>
+<div class="table-wrap"><table>
+<thead><tr><th>First_name</th><th>Last_name</th></tr></thead>
+<tbody>
+<tr><td>Priya</td><td>Patel</td></tr>
+</tbody></table></div>
+
+<h4 class="tk-query-title">4. ORDER BY: put results in order</h4>
+<p>Sort by cost with the most expensive first. DESC reverses the default ascending order.</p>
+<div class="code-block">
+<div class="code-header"><span class="code-lang">SQL</span></div>
+<pre><code class="language-sql">SELECT Name, Cost
+FROM Games
+ORDER BY Cost DESC</code></pre>
+</div>
+<p class="tk-result-label">Result (8 rows)</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Name</th><th>Cost</th></tr></thead>
+<tbody>
+<tr><td>Star Harbour</td><td>39.95</td></tr>
+<tr><td>Night Market</td><td>34.95</td></tr>
+<tr><td>Tidal Trader</td><td>29.95</td></tr>
+<tr><td>Dingo Derby</td><td>24.95</td></tr>
+<tr><td>Reef Runner</td><td>19.95</td></tr>
+<tr><td>Kelp Quest</td><td>14.95</td></tr>
+<tr><td>Coral Code</td><td>12.50</td></tr>
+<tr><td>Outback Dash</td><td>9.99</td></tr>
+</tbody></table></div>
+
+<h4 class="tk-query-title">5. Sorting on more than one field</h4>
+<p>List games by publisher, and within each publisher alphabetically by game name. The first field decides the main order and the second breaks ties.</p>
+<div class="code-block">
+<div class="code-header"><span class="code-lang">SQL</span></div>
+<pre><code class="language-sql">SELECT Publisher_ID, Name
+FROM Games
+ORDER BY Publisher_ID ASC, Name ASC</code></pre>
+</div>
+<p class="tk-result-label">Result (8 rows)</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Publisher_ID</th><th>Name</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Night Market</td></tr>
+<tr><td>1</td><td>Reef Runner</td></tr>
+<tr><td>1</td><td>Star Harbour</td></tr>
+<tr><td>1</td><td>Tidal Trader</td></tr>
+<tr><td>2</td><td>Dingo Derby</td></tr>
+<tr><td>2</td><td>Outback Dash</td></tr>
+<tr><td>3</td><td>Coral Code</td></tr>
+<tr><td>3</td><td>Kelp Quest</td></tr>
+</tbody></table></div>
+
+<h4 class="tk-query-title">6. NESA example 1: WHERE with AND, and ORDER BY</h4>
+<p>NESA&rsquo;s first example displays the name and release date of all games released from 1 March 2022 to 31 March 2023, in alphabetical order by name.</p>
+<div class="code-block">
+<div class="code-header"><span class="code-lang">SQL</span></div>
+<pre><code class="language-sql">SELECT Name, Release_date
+FROM Games
+WHERE Release_date &gt;= &#x27;01/03/2022&#x27; AND Release_date &lt;= &#x27;31/03/2023&#x27;
+ORDER BY Name ASC</code></pre>
+</div>
+<p class="tk-result-label">Result (6 rows)</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Name</th><th>Release_date</th></tr></thead>
+<tbody>
+<tr><td>Dingo Derby</td><td>27/03/2023</td></tr>
+<tr><td>Kelp Quest</td><td>10/03/2023</td></tr>
+<tr><td>Night Market</td><td>30/03/2023</td></tr>
+<tr><td>Outback Dash</td><td>02/06/2022</td></tr>
+<tr><td>Reef Runner</td><td>15/03/2022</td></tr>
+<tr><td>Star Harbour</td><td>21/11/2022</td></tr>
+</tbody></table></div>
+<p>The two conditions are joined with AND, so a game must satisfy both. Tidal Trader (September 2023) and Coral Code (January 2022) fall outside the range.</p>
+
+<h4 class="tk-query-title">7. OR and brackets</h4>
+<p>Use OR when either condition is enough. Put brackets around the OR so it is worked out before the AND. Here, games from publisher 2 or 3 that cost less than $20.</p>
+<div class="code-block">
+<div class="code-header"><span class="code-lang">SQL</span></div>
+<pre><code class="language-sql">SELECT Name, Cost
+FROM Games
+WHERE (Publisher_ID = 2 OR Publisher_ID = 3) AND Cost &lt; 20</code></pre>
+</div>
+<p class="tk-result-label">Result (3 rows)</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Name</th><th>Cost</th></tr></thead>
+<tbody>
+<tr><td>Outback Dash</td><td>9.99</td></tr>
+<tr><td>Kelp Quest</td><td>14.95</td></tr>
+<tr><td>Coral Code</td><td>12.50</td></tr>
+</tbody></table></div>
+
+
+          <h3>Joining tables</h3>
+          <p>Data about a game and its publisher are in different tables, so a query that shows both must <strong>join</strong> them. NESA&rsquo;s method has two parts: list every table in FROM, separated by commas, then add a WHERE condition that makes the primary key equal the matching foreign key.</p>
+
+<h4 class="tk-query-title">8. A join of two tables</h4>
+<p>Show each game with its publisher. The condition <code>Games.Publisher_ID = Publishers.Publisher_ID</code> pairs each game with only its own publisher. Both tables have a Name field, so each is written as Table.Field.</p>
+<div class="code-block">
+<div class="code-header"><span class="code-lang">SQL</span></div>
+<pre><code class="language-sql">SELECT Games.Name, Publishers.Name
+FROM Games, Publishers
+WHERE Games.Publisher_ID = Publishers.Publisher_ID
+ORDER BY Games.Name ASC</code></pre>
+</div>
+<p class="tk-result-label">Result (8 rows)</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Games.Name</th><th>Publishers.Name</th></tr></thead>
+<tbody>
+<tr><td>Coral Code</td><td>Southern Cross Games</td></tr>
+<tr><td>Dingo Derby</td><td>PixelWorks</td></tr>
+<tr><td>Kelp Quest</td><td>Southern Cross Games</td></tr>
+<tr><td>Night Market</td><td>Games Inc</td></tr>
+<tr><td>Outback Dash</td><td>PixelWorks</td></tr>
+<tr><td>Reef Runner</td><td>Games Inc</td></tr>
+<tr><td>Star Harbour</td><td>Games Inc</td></tr>
+<tr><td>Tidal Trader</td><td>Games Inc</td></tr>
+</tbody></table></div>
+
+<h4 class="tk-query-title">9. NESA example 2: a join of three tables</h4>
+<p>NESA&rsquo;s second example shows each developer&rsquo;s name and the games they developed for the publisher &ldquo;Games Inc&rdquo;, in descending order of the developer&rsquo;s last name. It needs two join conditions, one for each foreign key, plus the search criterion.</p>
+<div class="code-block">
+<div class="code-header"><span class="code-lang">SQL</span></div>
+<pre><code class="language-sql">SELECT Developers.First_name, Developers.Last_name, Games.Name
+FROM Games, Developers, Publishers
+WHERE Publishers.Name = &#x27;Games Inc&#x27;
+AND Publishers.Publisher_ID = Games.Publisher_ID
+AND Developers.Developer_ID = Games.Developer_ID
+ORDER BY Developers.Last_name DESC</code></pre>
+</div>
+<p class="tk-result-label">Result (4 rows)</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Developers.First_name</th><th>Developers.Last_name</th><th>Games.Name</th></tr></thead>
+<tbody>
+<tr><td>Tom</td><td>Walker</td><td>Tidal Trader</td></tr>
+<tr><td>Priya</td><td>Patel</td><td>Star Harbour</td></tr>
+<tr><td>Liam</td><td>O&#x27;Brien</td><td>Night Market</td></tr>
+<tr><td>Mia</td><td>Nguyen</td><td>Reef Runner</td></tr>
+</tbody></table></div>
+<p>The order is Walker, Patel, O&rsquo;Brien, Nguyen: last names in reverse alphabetical order.</p>
+
+
+          <h3>How to write a query, step by step</h3>
+          <ol>
+            <li>Underline what the question wants <em>displayed</em>. Those fields go after SELECT.</li>
+            <li>Find which tables hold those fields and any field named in the criteria. Those tables go after FROM.</li>
+            <li>If you need more than one table, add a WHERE condition for each link: the primary key of one table equals the foreign key of the other. You need one fewer join condition than tables.</li>
+            <li>Add the search criteria with AND (both must be true), OR (either) or NOT, using brackets when you mix them.</li>
+            <li>Add ORDER BY with the field and ASC or DESC.</li>
+            <li>Read the query back in words and check it against the question.</li>
+          </ol>
+          <div class="callout info">
+            <strong>Extension (not in NESA&rsquo;s list): JOIN&hellip;ON</strong>
+            Many database programs also accept a JOIN keyword. This query returns the same rows as query 8. You will not be required to write it, but you may meet it in real software:
+          </div>
+
+<div class="code-block">
+<div class="code-header"><span class="code-lang">SQL (extension)</span></div>
+<pre><code class="language-sql">SELECT Games.Name, Publishers.Name
+FROM Games JOIN Publishers ON Games.Publisher_ID = Publishers.Publisher_ID
+ORDER BY Games.Name ASC</code></pre>
+</div>
+
+          <div class="callout warning">
+            <strong>Common exam mistakes</strong>
+            Forgetting the join condition. <code>FROM Games, Publishers</code> on its own pairs every game with every publisher: 8 games &times; 3 publishers = 24 rows, most of them wrong. Writing <code>Name</code> when two tables have a Name field. Writing the clauses in the wrong order (WHERE must come before ORDER BY). Missing quotes around text and dates. Forgetting the <code>AND</code> between conditions. Leaving out brackets when mixing AND with OR. Using a date format different from the one in the question&rsquo;s tables, for example &ldquo;-&rdquo; instead of &ldquo;/&rdquo;.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            The 2025 HSC asked for a query using four SQL keywords and a join. Marks were for: the four keywords SELECT, FROM, WHERE and ORDER BY in the right order; a correct join condition linking related fields in the tables; the correct search criteria; and the correct sort order. Copy the table and field names and date format exactly as they appear in the question.
+          </div>
+
+          <h3>Exam-style practice</h3>
+          <p>Use the games tables above. Write each query first, then check your answer.</p>
+          <div class="callout tip">
+            <strong>Question 1 (four keywords and a join)</strong>
+            Display the name of each game that costs more than $20 and the name of its publisher, with the most expensive game first.
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer and result</summary>
+
+<div class="code-block">
+<div class="code-header"><span class="code-lang">SQL</span></div>
+<pre><code class="language-sql">SELECT Games.Name, Publishers.Name
+FROM Games, Publishers
+WHERE Games.Publisher_ID = Publishers.Publisher_ID
+AND Games.Cost &gt; 20
+ORDER BY Games.Cost DESC</code></pre>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Games.Name</th><th>Publishers.Name</th></tr></thead>
+<tbody>
+<tr><td>Star Harbour</td><td>Games Inc</td></tr>
+<tr><td>Night Market</td><td>Games Inc</td></tr>
+<tr><td>Tidal Trader</td><td>Games Inc</td></tr>
+<tr><td>Dingo Derby</td><td>PixelWorks</td></tr>
+</tbody></table></div>
+            <p>Award yourself a mark for each of: SELECT with both fields, FROM with both tables, the join condition, the cost criterion, and ORDER BY with DESC.</p>
+          </details>
+          <div class="callout tip">
+            <strong>Question 2 (three tables)</strong>
+            Display each developer&rsquo;s first and last names and the games they developed for the publisher &ldquo;Southern Cross Games&rdquo;, in ascending order of the developer&rsquo;s last name.
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer and result</summary>
+
+<div class="code-block">
+<div class="code-header"><span class="code-lang">SQL</span></div>
+<pre><code class="language-sql">SELECT Developers.First_name, Developers.Last_name, Games.Name
+FROM Games, Developers, Publishers
+WHERE Publishers.Name = &#x27;Southern Cross Games&#x27;
+AND Publishers.Publisher_ID = Games.Publisher_ID
+AND Developers.Developer_ID = Games.Developer_ID
+ORDER BY Developers.Last_name ASC</code></pre>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Developers.First_name</th><th>Developers.Last_name</th><th>Games.Name</th></tr></thead>
+<tbody>
+<tr><td>Mia</td><td>Nguyen</td><td>Kelp Quest</td></tr>
+<tr><td>Priya</td><td>Patel</td><td>Coral Code</td></tr>
+</tbody></table></div>
+          </details>
+          <div class="callout tip">
+            <strong>Question 3 (a range)</strong>
+            Display the name and cost of every game that costs from $10 to $30 inclusive, in alphabetical order by name.
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer and result</summary>
+
+<div class="code-block">
+<div class="code-header"><span class="code-lang">SQL</span></div>
+<pre><code class="language-sql">SELECT Name, Cost
+FROM Games
+WHERE Cost &gt;= 10 AND Cost &lt;= 30
+ORDER BY Name ASC</code></pre>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Name</th><th>Cost</th></tr></thead>
+<tbody>
+<tr><td>Coral Code</td><td>12.50</td></tr>
+<tr><td>Dingo Derby</td><td>24.95</td></tr>
+<tr><td>Kelp Quest</td><td>14.95</td></tr>
+<tr><td>Reef Runner</td><td>19.95</td></tr>
+<tr><td>Tidal Trader</td><td>29.95</td></tr>
+</tbody></table></div>
+            <p>&ldquo;Inclusive&rdquo; means the end values count, so use <code>&gt;=</code> and <code>&lt;=</code> rather than <code>&gt;</code> and <code>&lt;</code>.</p>
+          </details>
+          <div class="callout tip">
+            <strong>Question 4 (find the errors)</strong>
+            A student wrote this query to list game names with their publishers for games costing over $20. Find two mistakes.
+          </div>
+
+<div class="code-block">
+<div class="code-header"><span class="code-lang">SQL</span></div>
+<pre><code class="language-sql">SELECT Name, Name
+FROM Games, Publishers
+WHERE Cost &gt; 20
+ORDER BY Cost</code></pre>
+</div>
+          <details class="tk-answer">
+            <summary>Model answer</summary>
+            <p>First, <code>Name</code> exists in both Games and Publishers and is not qualified, so the database cannot tell which is meant: write <code>Games.Name, Publishers.Name</code>. Second, there is no join condition, so every game is paired with every publisher: add <code>WHERE Games.Publisher_ID = Publishers.Publisher_ID AND Games.Cost &gt; 20</code>. Also, the sort should be written <code>ORDER BY Games.Cost DESC</code> if the most expensive is to come first, because ASC is the default.</p>
+          </details>
+        </section>
+
+        <div class="quiz" data-quiz="tk-4"></div>
+
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  PART 5: MACHINE LEARNING AND APPLICATION SOFTWARE     -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Part 5</span>
+          <span class="part-name">Machine learning and application software</span>
+        </div>
+
+        <aside class="topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <p>The last part of the specifications is a checklist of what the software you use should be able to do (Course Specifications pp.18&ndash;21): database, spreadsheet, expert system, graphics and presentation software, plus a short note on machine learning. NESA introduces it with &ldquo;students should be familiar with the use of the following features&rdquo;, so a question can use any of them.</p>
+          <p class="breakout-question"><span class="bq-lead">Check yourself</span> Which of these features have you used in a real task, and which have you only read about? Aim to use each one at least once before the exam.</p>
+        </aside>
+
+        <section id="machine-learning">
+          <h2 class="syllabus-phase">Machine Learning and Statistical Modelling</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications p.18</strong> Know what they are used for; the underlying logic is not required</em></p>
+
+          <h3>What NESA expects</h3>
+          <p>NESA says that machine learning and statistical modelling can be used independently or together to analyse datasets and make predictions. Students are <strong>not</strong> required to understand the underlying logic of either, but should be aware of their use in real-world scenarios. So the exam tests whether you can recognise a suitable use and describe it, not whether you can calculate a model.</p>
+
+          <div class="callout info">
+            <strong>NESA names, we describe</strong>
+            NESA gives no definitions here. The descriptions below are ours, kept to the depth NESA asks for.
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th></th><th>Statistical modelling</th><th>Machine learning</th></tr></thead>
+              <tbody>
+                <tr><td>Idea</td><td>Fit a chosen mathematical model to data to describe the relationship between variables and to estimate or predict a value.</td><td>A program learns patterns from example data, then uses them to predict or classify new cases.</td></tr>
+                <tr><td>Typical use</td><td>Estimating how one thing changes with another, with a measure of uncertainty.</td><td>Sorting or predicting from many inputs, especially when the patterns are hard to write as rules.</td></tr>
+                <tr><td>Example</td><td>A council predicts next month&rsquo;s water use from temperature and rainfall.</td><td>A bank system flags card transactions that look unusual compared with past ones.</td></tr>
+                <tr><td>Used together</td><td colspan="2">A hospital could use a statistical model to estimate a patient&rsquo;s risk from age and test results, and a machine learning model to spot patterns in scans, then combine both to support a clinician&rsquo;s decision.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Both depend on the quality of the data they are given. Poor, biased or out-of-date data leads to poor predictions, which is why the ethical use of these tools is covered under <a href="intelligent-systems.html">Intelligent Systems</a> and data quality under <a href="data-science.html">Data Science</a>.</p>
+          <div class="callout warning">
+            <strong>Common exam mistakes</strong>
+            Writing about how the algorithms work when the question only asks for a use. Saying machine learning &ldquo;thinks&rdquo; or is always correct. Treating a prediction as a certainty. Forgetting that the two can be used independently or together.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            For a scenario question, name the technique (statistical modelling, machine learning or both), say what data it analyses, and say what it predicts and who uses the prediction. One sentence for each is enough.
+          </div>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            A farm co-op wants to predict next season&rsquo;s wheat yield from rainfall records, and also to sort photos of grain samples by quality. Which task suits statistical modelling, which suits machine learning, and could the two be combined?
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer</summary>
+            <p>Predicting yield from rainfall suits statistical modelling: it estimates how yield changes with rainfall. Sorting photos by quality suits machine learning, because a model can learn from labelled examples. They can be combined: the predicted yield and the quality mix together help plan sales.</p>
+          </details>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="database-software">
+          <h2 class="syllabus-phase">Database Software</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications p.19</strong> What database software should allow you to do</em></p>
+
+          <h3>What NESA lists</h3>
+          <p>NESA says database software should allow you to do the following. The right-hand column is our explanation.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>NESA feature</th><th>What it means in practice</th></tr></thead>
+              <tbody>
+                <tr><td>Create flat file databases and relational databases</td><td>A flat file keeps everything in one table. A relational database splits data into linked tables with primary and foreign keys (see <a href="#relational-databases">normalisation</a>).</td></tr>
+                <tr><td>Use relational operators</td><td>Compare a field with a value in a search. See the table below.</td></tr>
+                <tr><td>Use logical operators (AND, OR and NOT)</td><td>Combine several criteria into one search. See the table below.</td></tr>
+                <tr><td>Create queries and use a query language to search on single and multiple fields across one or more tables</td><td>Ask the database a question, using <a href="#sql-syntax">SQL</a> or the software&rsquo;s query designer, with criteria on one field or several, and data from one table or joined tables.</td></tr>
+                <tr><td>Sort data using multiple fields to specify the sequence</td><td>Order by one field, then a second to break ties: by publisher, then by name.</td></tr>
+                <tr><td>Design forms and reports</td><td>A form is a screen for entering, viewing or editing records. A report is a formatted output of data or query results, for reading or printing, often with headings and totals.</td></tr>
+                <tr><td>Implement and display a schema</td><td>Build the tables, fields, keys and relationships, and show them as a diagram of the structure.</td></tr>
+                <tr><td>Import and export data</td><td>Bring data in from, or send data out to, other files such as a CSV file or a spreadsheet.</td></tr>
+                <tr><td>Apply security to the database</td><td>Control who can see or change data: user accounts and passwords, permissions (for example read-only), encryption and backups.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Operators, with the games table</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Relational operator (NESA)</th><th>Symbol</th><th>Example criterion</th><th>Records returned</th></tr></thead>
+              <tbody>
+                <tr><td>EQUALS</td><td>=</td><td>Publisher_ID = 3</td><td>Kelp Quest, Coral Code</td></tr>
+                <tr><td>NOT EQUAL TO</td><td>&lt;&gt;</td><td>Publisher_ID &lt;&gt; 1</td><td>Outback Dash, Kelp Quest, Dingo Derby, Coral Code</td></tr>
+                <tr><td>GREATER THAN</td><td>&gt;</td><td>Cost &gt; 34.95</td><td>Star Harbour</td></tr>
+                <tr><td>GREATER THAN OR EQUAL TO</td><td>&gt;=</td><td>Cost &gt;= 34.95</td><td>Star Harbour, Night Market</td></tr>
+                <tr><td>LESS THAN</td><td>&lt;</td><td>Cost &lt; 12.50</td><td>Outback Dash</td></tr>
+                <tr><td>LESS THAN OR EQUAL TO</td><td>&lt;=</td><td>Cost &lt;= 12.50</td><td>Outback Dash, Coral Code</td></tr>
+                <tr><td>CONTAINS</td><td>(text search)</td><td>Name CONTAINS &ldquo;Run&rdquo;</td><td>Reef Runner</td></tr>
+                <tr><td>DOES NOT CONTAIN</td><td>(text search)</td><td>Publishers.Name DOES NOT CONTAIN &ldquo;Inc&rdquo;</td><td>PixelWorks, Southern Cross Games</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Logical operator</th><th>Meaning</th><th>Example</th><th>Records returned</th></tr></thead>
+              <tbody>
+                <tr><td>AND</td><td>Both conditions must be true</td><td>Publisher_ID = 1 AND Cost &lt; 30</td><td>Reef Runner, Tidal Trader</td></tr>
+                <tr><td>OR</td><td>Either condition may be true</td><td>Cost &lt; 10 OR Cost &gt; 35</td><td>Outback Dash, Star Harbour</td></tr>
+                <tr><td>NOT</td><td>Reverses a condition</td><td>NOT Publisher_ID = 1</td><td>Outback Dash, Kelp Quest, Dingo Derby, Coral Code</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>NESA gives CONTAINS and DOES NOT CONTAIN as operators in the database software list but does not include them in its SQL syntax. In many products they are written as a pattern search, for example <code>LIKE '%Run%'</code>. Treat that spelling as an extension.</p>
+
+          <div class="callout warning">
+            <strong>Common exam mistakes</strong>
+            Mixing up flat file and relational databases. Describing a form as a report (a form is for entering and viewing data, a report is for presenting results). Using OR when both conditions must be true. Saying &ldquo;apply security&rdquo; without naming a measure such as passwords, permissions or backups. Forgetting that a search across tables needs the tables to be linked.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            In a scenario question, say which feature solves the problem and why. &ldquo;A report grouped by publisher with a total for each&rdquo; is stronger than &ldquo;use a report&rdquo;. For security questions, pair each measure with the risk it reduces: passwords stop unauthorised access and read-only permissions stop accidental changes.
+          </div>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            A school stores library loans in a database. Explain how you would (a) find every overdue book borrowed by Year 9 students, (b) print a list for each teacher, and (c) stop students from editing records.
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer</summary>
+            <p>(a) Create a query with criteria on multiple fields joined with AND: Due date less than today AND Year equals 9, across the Loans and Students tables linked by StudentID. (b) Design a report from that query, sorted or grouped by teacher. (c) Apply security: give students accounts with read-only permissions, and give only library staff permission to edit.</p>
+          </details>
+        </section>
+
+
+        <hr class="divider" />
+
+        <section id="spreadsheet-software">
+          <h2 class="syllabus-phase">Spreadsheet Software</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications p.20</strong> Formulas, functions, referencing, charts and the other features spreadsheet software should provide</em></p>
+
+          <h3>Our worked spreadsheet</h3>
+          <p>All the examples use a school canteen&rsquo;s sales sheet. Column D holds revenue, which is price times quantity, and the loyalty table in J1:K5 gives a discount by points. The GST rate sits in its own cell, H1.</p>
+          <div class="table-wrap tk-wide">
+            <table>
+              <caption>Sheet &ldquo;Sales&rdquo; (column letters and row numbers shown so cell references can be read)</caption>
+              <thead>
+                <tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>Item</td><td>Price</td><td>Qty sold</td><td>Revenue</td><td>GST</td><td></td><td>GST rate</td><td>10%</td><td></td><td>Points</td><td>Discount</td></tr>
+                <tr><td>2</td><td>Sandwich</td><td>5.50</td><td>42</td><td>231.00</td><td>23.10</td><td></td><td></td><td></td><td></td><td>0</td><td>0%</td></tr>
+                <tr><td>3</td><td>Pie</td><td>4.80</td><td>35</td><td>168.00</td><td>16.80</td><td></td><td></td><td></td><td></td><td>50</td><td>5%</td></tr>
+                <tr><td>4</td><td>Juice</td><td>3.20</td><td>60</td><td>192.00</td><td>19.20</td><td></td><td></td><td></td><td></td><td>100</td><td>10%</td></tr>
+                <tr><td>5</td><td>Salad</td><td>6.50</td><td>18</td><td>117.00</td><td>11.70</td><td></td><td></td><td></td><td></td><td>200</td><td>15%</td></tr>
+                <tr><td>6</td><td>Fruit cup</td><td>2.50</td><td>25</td><td>62.50</td><td>6.25</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Entering formulas and copying them</h3>
+          <p>A formula starts with <code>=</code>. NESA lists these skills: enter text, numeric values and formulas; copy cells using both <strong>absolute and relative referencing</strong>; and fill down and across.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Cell</th><th>Formula</th><th>What happens when you fill down</th></tr></thead>
+              <tbody>
+                <tr><td>D2</td><td><code>=B2*C2</code></td><td>Relative references move with the row: D3 becomes <code>=B3*C3</code>, D4 becomes <code>=B4*C4</code>.</td></tr>
+                <tr><td>E2</td><td><code>=D2*$H$1</code></td><td><code>D2</code> is relative and moves to D3, D4&hellip;. <code>$H$1</code> is absolute, so it stays locked on the GST rate. E3 becomes <code>=D3*$H$1</code>.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>The dollar signs lock a reference. <code>$H$1</code> locks column and row, <code>H$1</code> locks only the row and <code>$H1</code> locks only the column. Without the dollar signs, the GST reference would slide to H2, H3&hellip; when copied, and the results would be wrong.</p>
+
+          <h3>The functions NESA lists</h3>
+          <div class="callout info">
+            <strong>NESA names, we show the syntax</strong>
+            NESA writes the function names as descriptions (MAXIMUM, SQUARE ROOT, MEAN) and does not give product syntax. The syntax below is the form used by common spreadsheet software (Excel and Google Sheets). The examples use the sheet above. Use whichever spelling your software uses: the idea is what is marked.
+          </div>
+          <div class="table-wrap tk-wide tk-fn">
+            <table>
+              <thead><tr><th>NESA name</th><th>Syntax</th><th>What it does</th><th>Worked example on the sheet</th></tr></thead>
+              <tbody>
+                <tr class="tk-group"><td colspan="4">Arithmetic</td></tr>
+                <tr><td><strong>SUM</strong></td><td><code>SUM(range)</code></td><td>Adds the numbers</td><td><code>=SUM(D2:D6)</code> gives 770.50</td></tr>
+                <tr><td><strong>MAXIMUM</strong></td><td><code>MAX(range)</code></td><td>Largest value</td><td><code>=MAX(B2:B6)</code> gives 6.50</td></tr>
+                <tr><td><strong>MINIMUM</strong></td><td><code>MIN(range)</code></td><td>Smallest value</td><td><code>=MIN(B2:B6)</code> gives 2.50</td></tr>
+                <tr><td><strong>COUNT</strong></td><td><code>COUNT(range)</code></td><td>How many cells hold numbers</td><td><code>=COUNT(B2:B6)</code> gives 5</td></tr>
+                <tr><td><strong>ABSOLUTE VALUE</strong></td><td><code>ABS(number)</code></td><td>The value without its sign, so the size of a difference</td><td><code>=ABS(C3-40)</code> gives 5 (pies sold compared with a target of 40)</td></tr>
+                <tr><td><strong>SQUARE ROOT</strong></td><td><code>SQRT(number)</code></td><td>The number that multiplied by itself gives the value</td><td><code>=SQRT(144)</code> gives 12 (side of a square sign with area 144 cm&sup2;)</td></tr>
+                <tr><td><strong>INTEGER</strong></td><td><code>INT(number)</code></td><td>Rounds down to a whole number</td><td><code>=INT(D2/5)</code> gives 46 (whole $5 vouchers that $231 buys)</td></tr>
+                <tr><td><strong>PART</strong></td><td><code>LEFT(text, n)</code> <code>RIGHT(text, n)</code> <code>MID(text, start, n)</code></td><td>Takes part of a text value</td><td><code>=LEFT(A2,3)</code> gives San; <code>=MID(A2,2,3)</code> gives and</td></tr>
+                <tr class="tk-group"><td colspan="4">Statistical</td></tr>
+                <tr><td><strong>MEAN</strong></td><td><code>AVERAGE(range)</code></td><td>The sum divided by the count</td><td><code>=AVERAGE(C2:C6)</code> gives 36</td></tr>
+                <tr><td><strong>STANDARD DEVIATION</strong></td><td><code>STDEV.S(range)</code> <code>STDEV.P(range)</code></td><td>How spread out values are around the mean (a sample, or the whole population)</td><td><code>=STDEV.S(C2:C6)</code> gives 16.26; <code>=STDEV.P(C2:C6)</code> gives 14.55</td></tr>
+                <tr class="tk-group"><td colspan="4">Logical</td></tr>
+                <tr><td><strong>IF</strong></td><td><code>IF(condition, value_if_true, value_if_false)</code></td><td>Chooses a value depending on whether the condition is TRUE or FALSE</td><td><code>=IF(C2&gt;=40,"Best seller","Standard")</code> gives Best seller</td></tr>
+                <tr class="tk-group"><td colspan="4">Other</td></tr>
+                <tr><td><strong>LOOKUP</strong></td><td><code>LOOKUP(value, search_range, result_range)</code></td><td>Finds the value in one range and returns the matching entry from another</td><td><code>=LOOKUP(120,J2:J5,K2:K5)</code> gives 10%</td></tr>
+                <tr><td><strong>VLOOKUP</strong></td><td><code>VLOOKUP(value, table, column, match)</code></td><td>Looks down the first column of a table and returns a value from a column across</td><td><code>=VLOOKUP("Pie",A2:D6,2,FALSE)</code> gives 4.80; <code>=VLOOKUP(120,J2:K5,2,TRUE)</code> gives 10%</td></tr>
+                <tr><td><strong>HLOOKUP</strong></td><td><code>HLOOKUP(value, table, row, match)</code></td><td>The same, for a table laid out across rows</td><td><code>=HLOOKUP("Pie",B1:F2,2,FALSE)</code> if item names run across B1:F1 and prices are in row 2: gives the price under Pie</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout warning">
+            <strong>Uncertain: what NESA means by PART</strong>
+            NESA lists &ldquo;PART&rdquo; among the arithmetic functions without defining it. Our reading is that it means taking part of a value, the way LEFT, RIGHT and MID take part of a piece of text. If your teacher reads it differently, follow your teacher.
+          </div>
+
+          <h3>Relational operators and IF</h3>
+          <p>NESA lists the relational operators <strong>less than or equal to</strong> (<code>&lt;=</code>), <strong>equal to</strong> (<code>=</code>), <strong>not equal to</strong> (<code>&lt;&gt;</code>), <strong>greater than</strong> (<code>&gt;</code>) and <strong>greater than or equal to</strong> (<code>&gt;=</code>). Less than (<code>&lt;</code>) works the same way. They give TRUE or FALSE, which is what IF tests. IF can be nested to handle more than two outcomes, and it can be combined with the other functions:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Formula</th><th>Reads as</th><th>Result</th></tr></thead>
+              <tbody>
+                <tr><td><code>=IF(B2&lt;&gt;5.5,"Changed","Same")</code></td><td>If the price is not 5.50, show Changed</td><td>Same</td></tr>
+                <tr><td><code>=IF(D2&gt;=200,"High",IF(D2&gt;=100,"Medium","Low"))</code></td><td>Nested IF: 200 or more is High, otherwise 100 or more is Medium, otherwise Low</td><td>D2 (231.00) gives High; D6 (62.50) gives Low</td></tr>
+                <tr><td><code>=SUM(D2:D6)*(1-VLOOKUP(120,J2:K5,2,TRUE))</code></td><td>Total revenue after the discount for 120 points (10%)</td><td>693.45</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Two things to remember about lookups. With <code>FALSE</code> as the last input, VLOOKUP needs an <em>exact</em> match and gives an error if there is none. With <code>TRUE</code>, the first column must be sorted in ascending order, and it returns the row for the largest value that is not more than the one you are looking up. That is why 120 points falls in the 100-point band.</p>
+
+          <h3>The other features NESA lists</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Feature</th><th>What it does</th><th>Example</th></tr></thead>
+              <tbody>
+                <tr><td>Print all or parts of a spreadsheet</td><td>Set a print area, add headings and print only what is needed</td><td>Print just the Revenue column for the manager</td></tr>
+                <tr><td>Import and export data</td><td>Bring data in from files, databases or the web, and save it in other formats such as CSV</td><td>Import last term&rsquo;s sales from a CSV file</td></tr>
+                <tr><td>Manipulate rows and columns; apply formats</td><td>Insert, delete, hide, resize, and format numbers, dates and cells</td><td>Show prices as currency</td></tr>
+                <tr><td>Record, run and edit macros</td><td>Record a series of actions, replay them to automate a task and edit the recorded steps</td><td>A macro that formats and prints the weekly report</td></tr>
+                <tr><td>Sort selected areas</td><td>Reorder the rows of a chosen range by one or more columns</td><td>Sort items by revenue, largest first</td></tr>
+                <tr><td>Configure page layouts; manipulate page breaks</td><td>Set orientation, margins and where a page ends</td><td>Landscape, with a page break before each category</td></tr>
+                <tr><td>Work with data across multiple sheets</td><td>Refer to cells on other sheets in formulas</td><td><code>=Prices!B2*C2</code> uses a price stored on a sheet named Prices</td></tr>
+                <tr><td>Conditional formatting</td><td>Automatically changes a cell&rsquo;s appearance when its value meets a rule</td><td>Shade the cell red when stock is below 10</td></tr>
+                <tr><td>Filters</td><td>Hide rows that do not meet a condition, without deleting them</td><td>Show only items with revenue over $150</td></tr>
+                <tr><td>Pivot tables</td><td>Summarise a large table by grouping and totalling, for example total revenue by category</td><td>Revenue for Drinks against Food, by month</td></tr>
+                <tr><td>Generate and configure charts</td><td>Turn ranges into a chart, then set its title, axis labels, scale and colours</td><td>See the chart choices below</td></tr>
+                <tr><td>Save a chart to a file format</td><td>Export a chart as an image or PDF for use in other software</td><td>A PNG chart placed in a presentation</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Choosing a chart (NESA lists five)</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Chart</th><th>Best for</th><th>Canteen example</th></tr></thead>
+              <tbody>
+                <tr><td>Bar chart</td><td>Comparing categories, especially with long labels</td><td>Revenue by item</td></tr>
+                <tr><td>Column chart</td><td>Comparing categories or a few time periods, drawn vertically</td><td>Quantity sold per item</td></tr>
+                <tr><td>Line chart</td><td>Showing a trend over time</td><td>Weekly sales across a term</td></tr>
+                <tr><td>Scatter graph</td><td>Showing whether two numeric variables are related</td><td>Daily temperature against cold-drink sales</td></tr>
+                <tr><td>Pie chart</td><td>Showing parts of a whole, with only a few categories</td><td>Share of total revenue by item</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>How to build a formula, step by step</h3>
+          <ol>
+            <li>Say in words what the cell must show, for example &ldquo;total revenue after the loyalty discount&rdquo;.</li>
+            <li>Choose the function or operator that does each part: SUM for the total, VLOOKUP for the discount, IF for any condition.</li>
+            <li>Decide which references must stay fixed when copied. Put dollar signs on those (an absolute reference) and leave the rest relative.</li>
+            <li>Type the formula, then check it on test data whose answer you already know.</li>
+            <li>Fill down or across, then spot-check the last row to confirm the references moved as intended.</li>
+          </ol>
+          <div class="callout warning">
+            <strong>Common exam mistakes</strong>
+            Forgetting the <code>=</code>. Using a relative reference for a fixed value such as a rate, so the answer changes as you fill down. Range typos such as <code>SUM(D2:D5)</code> that miss the last row. Using COUNT on text (it counts numbers only). A lookup with the wrong match type: <code>FALSE</code> for an exact match, <code>TRUE</code> for a band. Putting text in a formula without quotation marks. Typing a value into a formula instead of referring to its cell.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            The 2025 HSC asked for formulas using SUM, LOOKUP and IF, and tested them with test data, and it asked about conditional formatting, pivot tables and choice of chart. Write the formula exactly, with the cell references from the question. Then show the value it would produce for a row of test data to prove it works. For chart questions, match the chart to the data: trend over time is a line, parts of a whole is a pie.
+          </div>
+
+          <h3>Exam-style practice</h3>
+          <p>Use the sales sheet above.</p>
+          <div class="callout tip">
+            <strong>Question 1</strong>
+            Write a formula for E2 that calculates the GST on the sandwich revenue, so that it can be filled down to E6. Explain why one of the references needs dollar signs.
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer</summary>
+            <p><code>=D2*$H$1</code>. The revenue reference D2 must be relative so it moves to D3, D4&hellip; as the formula is filled down. The GST rate is in one cell, H1, so its reference must be absolute (<code>$H$1</code>), otherwise it would slide down to H2, H3&hellip;. Check: E2 = 231.00 &times; 10% = 23.10.</p>
+          </details>
+          <div class="callout tip">
+            <strong>Question 2</strong>
+            Write a formula for F2 that shows &ldquo;Reorder&rdquo; if fewer than 30 have been sold and &ldquo;OK&rdquo; otherwise. Give the results for the sandwich (42 sold) and the salad (18 sold).
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer</summary>
+            <p><code>=IF(C2&lt;30,"Reorder","OK")</code>. Sandwich: 42 is not less than 30, so OK. Salad: 18 is less than 30, so Reorder.</p>
+          </details>
+          <div class="callout tip">
+            <strong>Question 3</strong>
+            A student has 120 loyalty points. Write a single formula that displays the discount from the table in J1:K5, and another that gives the total revenue after that discount.
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer</summary>
+            <p><code>=VLOOKUP(120,J2:K5,2,TRUE)</code> returns 10%, because 120 points falls in the band that starts at 100. Total after discount: <code>=SUM(D2:D6)*(1-VLOOKUP(120,J2:K5,2,TRUE))</code>, which is 770.50 &times; 0.90 = 693.45. (A formula using <code>LOOKUP(120,J2:J5,K2:K5)</code> also works.)</p>
+          </details>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="expert-system-software">
+          <h2 class="syllabus-phase">Expert System Software</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications p.20</strong> Develop IF&ndash;THEN rules, change them, and display the rules used as text and as a decision tree</em></p>
+
+          <h3>What NESA lists</h3>
+          <p>Expert system software should allow you to <strong>develop a set of IF&ndash;THEN rules</strong>, <strong>add, remove and edit rules</strong> and <strong>display the rules the system has used to reach a conclusion</strong>, both in a text format and as a decision tree. An expert system stores the knowledge of a human specialist as rules and applies them to the facts a user provides, so a non-expert can get expert-style advice. The rules and the reasoning make it different from a database: it draws a conclusion, it does not just retrieve a record.</p>
+
+          <h3>Rules, and the tree they make</h3>
+          <p>Here are five IF&ndash;THEN rules for a laptop help-desk expert system:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Rule</th><th>IF</th><th>THEN</th></tr></thead>
+              <tbody>
+                <tr><td>R1</td><td>Power light is on AND screen shows a picture AND Wi-Fi is connected</td><td>No fault found</td></tr>
+                <tr><td>R2</td><td>Power light is on AND screen shows a picture AND Wi-Fi is not connected</td><td>Restart the Wi-Fi adapter</td></tr>
+                <tr><td>R3</td><td>Power light is on AND screen does not show a picture</td><td>Connect to an external screen</td></tr>
+                <tr><td>R4</td><td>Power light is off AND charger is plugged in</td><td>Try a different charger</td></tr>
+                <tr><td>R5</td><td>Power light is off AND charger is not plugged in</td><td>Plug in the charger</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Decision tree</span></p>
+              <h4 class="figure-title">Decision tree: diagnosing a laptop fault</h4>
+              <p class="figure-lead">The same five rules, drawn as a decision tree in NESA&rsquo;s style.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="tk-dt-helpdesk"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Each path from the top to an action is one rule: the questions on the path are the IF part, and the action at the end is the THEN part.</li><li>The tree has five paths and there are five rules. None is missing and none overlaps.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>The laptop&rsquo;s power light is on and the screen is blank. Which rule fires, and what does the tree advise?</p>
+            </div>
+          </figure>
+          <p>When the user answers the questions, the system can show <strong>why</strong> it reached its conclusion. In text: &ldquo;Power light on = Yes. Screen shows a picture = Yes. Wi-Fi connected = No. Rule R2 fired: restart the Wi-Fi adapter.&rdquo; As a decision tree, it highlights the path that was followed.</p>
+
+          <h3>How to build and maintain a rule set, step by step</h3>
+          <ol>
+            <li>Identify the decision the system must support and the questions the user can answer.</li>
+            <li>Write each rule as IF conditions THEN conclusion, with one rule for each possible outcome.</li>
+            <li>Check that every combination of answers fires exactly one rule: no gaps and no conflicts.</li>
+            <li>Test with real cases and compare the system&rsquo;s advice with what an expert would say.</li>
+            <li>Edit as needed: <strong>add</strong> a rule for a new case, <strong>edit</strong> a rule whose advice is wrong and <strong>remove</strong> a rule that no longer applies. For example, add R6: IF the battery is swollen THEN stop using the laptop and take it to IT.</li>
+          </ol>
+          <div class="callout warning">
+            <strong>Common exam mistakes</strong>
+            Rules with the same conditions but different conclusions, so the system contradicts itself. Gaps where a combination of answers matches no rule. Writing conclusions as questions. A displayed explanation that does not match the rules used. Forgetting to check the whole rule set after an edit.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            If a question gives you a decision tree, you can write the rules by reading each path. If it gives you rules, you can draw the tree. Show both forms when asked to &ldquo;display&rdquo; how a conclusion was reached, and mention that being able to add, remove and edit rules keeps the system up to date. See <a href="intelligent-systems.html">Intelligent Systems</a> for how expert systems fit into decision-making.
+          </div>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            A farm co-op wants an irrigation adviser. Write four IF&ndash;THEN rules using soil moisture (dry or moist) and rain forecast (rain or no rain). Then add a rule for very high temperatures.
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer</summary>
+            <p>R1: IF soil is dry AND rain is forecast THEN wait and re-check tomorrow. R2: IF soil is dry AND no rain is forecast THEN irrigate. R3: IF soil is moist AND rain is forecast THEN do not irrigate. R4: IF soil is moist AND no rain is forecast THEN check again in two days. New rule R5: IF temperature is above 35&deg;C AND soil is dry THEN irrigate even if rain is forecast. Because R1 and R5 now overlap, edit R1 to say AND temperature is 35&deg;C or lower, so the rules do not conflict.</p>
+          </details>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="graphics-presentation">
+          <h2 class="syllabus-phase">Graphics and Presentation Software</h2>
+          <p class="syllabus-concept"><em><strong>Course Specifications p.21</strong> Bitmap and vector images, and the features of presentation software</em></p>
+
+          <h3>Graphics software: what NESA lists</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>NESA feature</th><th>What it means in practice</th></tr></thead>
+              <tbody>
+                <tr><td>Create and manipulate bitmapped images</td><td>Work with images made of a grid of pixels, such as photos. Editing changes the colour of individual pixels.</td></tr>
+                <tr><td>Create and manipulate vector graphics as geometric shapes</td><td>Work with images built from shapes (lines, curves, rectangles) described by mathematics. Each shape can be selected and edited on its own.</td></tr>
+                <tr><td>Rotate, crop, resize and distort images</td><td>Turn an image, cut away the parts you do not want, change its size and stretch or skew it out of proportion.</td></tr>
+                <tr><td>Import and export graphic data in a variety of formats</td><td>Open images from other software and save them in formats that suit their use, for example PNG or JPEG for bitmaps and SVG for vectors.</td></tr>
+                <tr><td>Apply textures, patterns and a transparent background</td><td>Fill shapes with a texture or pattern, and remove the background so that what is behind shows through (PNG and SVG support this, JPEG does not).</td></tr>
+                <tr><td>Use templates, colour themes and animations</td><td>Start from a ready-made layout, apply a consistent colour scheme and add movement.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th></th><th>Bitmap</th><th>Vector</th></tr></thead>
+              <tbody>
+                <tr><td>Made of</td><td>A grid of pixels</td><td>Geometric shapes and paths</td></tr>
+                <tr><td>Enlarging</td><td>Becomes blocky and blurred</td><td>Stays sharp at any size</td></tr>
+                <tr><td>Best for</td><td>Photographs and detailed images</td><td>Logos, icons and diagrams</td></tr>
+                <tr><td>File size</td><td>Grows with the number of pixels</td><td>Usually small for simple images</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Presentation software: what NESA lists</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>NESA feature</th><th>What it means in practice</th></tr></thead>
+              <tbody>
+                <tr><td>Create and manipulate text; apply editing and formatting features</td><td>Type text, then change font, size, colour, alignment and spacing consistently.</td></tr>
+                <tr><td>Insert and display text, images, audio, video and animations</td><td>Add media to slides and control how it appears, plays or moves.</td></tr>
+                <tr><td>Import and export data</td><td>Bring in content from other files and save the presentation as PDF, video or other formats.</td></tr>
+                <tr><td>Embed objects such as charts and tables from other applications</td><td>Place a chart or table made in a spreadsheet inside a slide.</td></tr>
+                <tr><td>Use hyperlinks within and outside the presentation</td><td>A link that jumps to another slide (for example a menu slide) or to a web page or file.</td></tr>
+                <tr><td>Use templates and themes</td><td>A master layout and colour scheme so every slide looks consistent.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout warning">
+            <strong>Common exam mistakes</strong>
+            Saying vector images are made of pixels. Choosing JPEG when a transparent background is needed. Enlarging a small bitmap and being surprised when it blurs. Writing a slide full of text instead of key points. Using hyperlinks with no way back to the menu. Colours and fonts that change from slide to slide because no theme was applied.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            When a question asks you to choose an image type or format, give the property that matters (scalable, transparent, photographic) and link it to the scenario: a logo that must print on both a badge and a banner suits vector; a photo of the school suits a bitmap. For presentations, link each feature to the audience: templates give consistency, and embedding a chart keeps the data connected to its source.
+          </div>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            A sports club needs a logo that works on a small membership card and a large banner, with a transparent background. It also needs a photo gallery in a presentation for parents. Choose an image type and format for each, and say how you would link the gallery to a menu slide.
+          </div>
+          <details class="tk-answer">
+            <summary>Model answer</summary>
+            <p>The logo should be a vector graphic, saved as SVG (or exported as PNG with a transparent background), because it can be enlarged for the banner without losing sharpness. The photos should be bitmaps, saved as JPEG for small file sizes. On the menu slide, insert a hyperlink on each gallery name to the matching slide, and put a Back to menu hyperlink on each gallery slide.</p>
+          </details>
+        </section>
+
+        <div class="quiz" data-quiz="tk-5"></div>
+
+
       </div>
     </main>
   </div>
@@ -231,6 +2188,36 @@
   </footer>
 
   <script src="../js/glossary-data.js?v=8f2b4607"></script>
+  <script src="../js/quizzes/toolkit.js?v=5c27cb72"></script>
+  <script src="../js/quiz.js?v=3e6185a0" defer></script>
+  <script src="../js/nesa-diagram-data.js?v=33ff129d"></script>
+  <script src="../js/nesa-diagrams.js?v=6bab3032" defer></script>
+  <script src="../js/anim.js?v=2eeed270" defer></script>
   <script src="../js/main.js?v=28275053"></script>
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- Diagram Lightbox Modal -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div class="lightbox-modal" id="diagram-lightbox" role="dialog" aria-labelledby="lightbox-title" aria-hidden="true">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-container">
+      <div class="lightbox-header">
+        <h2 id="lightbox-title" class="lightbox-title">Diagram View</h2>
+        <button type="button" class="lightbox-close" aria-label="Close diagram view">✕</button>
+      </div>
+      <div class="lightbox-canvas">
+        <div class="lightbox-content" id="lightbox-content"></div>
+      </div>
+      <div class="lightbox-controls">
+        <button type="button" class="lightbox-btn" id="zoom-out" aria-label="Zoom out">−</button>
+        <span class="lightbox-zoom-level" id="zoom-level">100%</span>
+        <button type="button" class="lightbox-btn" id="zoom-in" aria-label="Zoom in">+</button>
+        <button type="button" class="lightbox-btn" id="reset-view" aria-label="Reset view">⟲</button>
+      </div>
+      <div class="lightbox-info">
+        <p>Scroll to zoom • Drag to pan • <kbd>Esc</kbd> to close</p>
+      </div>
+    </div>
+  </div>
+  <script src="../js/progress.js?v=40b8096b" defer></script>
 </body>
 </html>

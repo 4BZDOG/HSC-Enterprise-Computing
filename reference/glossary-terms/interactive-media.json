@@ -1,0 +1,227 @@
+[
+  {
+    "id": "term-interactive-media-systems",
+    "name": "Interactive Media System",
+    "topics": [
+      "im"
+    ],
+    "definition": "The use of digital technologies to present combinations of text, graphics, video, animation and/or sound in an integrated way that the user can interact with.",
+    "example": "An interactive game, a media-rich website or an e-book."
+  },
+  {
+    "id": "term-user-interface",
+    "name": "User Interface (UI)",
+    "topics": [
+      "im"
+    ],
+    "definition": "The means by which users interact with computer hardware or software, such as fields, buttons and pointers in software, or switches and dials in hardware.",
+    "example": "The buttons, menus and text fields on a school canteen ordering page."
+  },
+  {
+    "id": "term-assets",
+    "name": "Assets",
+    "topics": [
+      "im"
+    ],
+    "definition": "The digital elements that can be used in a multimedia production, including graphics, photographs, video, audio and animations.",
+    "example": "A logo in SVG, a photo in JPEG and an interview in MP4 used on one website."
+  },
+  {
+    "id": "term-data-compression",
+    "name": "Data Compression",
+    "topics": [
+      "im"
+    ],
+    "definition": "A reduction in the number of bits needed to represent data, saving storage and transmission time.",
+    "example": "Saving a photo as a JPEG so it downloads faster."
+  },
+  {
+    "id": "term-lossless-compression",
+    "name": "Lossless Compression",
+    "topics": [
+      "im"
+    ],
+    "definition": "Compression that keeps enough information to rebuild the original data exactly.",
+    "example": "A PNG screenshot or a FLAC audio file."
+  },
+  {
+    "id": "term-lossy-compression",
+    "name": "Lossy Compression",
+    "topics": [
+      "im"
+    ],
+    "definition": "Compression that permanently discards information unlikely to be noticed, so the original cannot be restored.",
+    "example": "An MP3 or a JPEG at low quality that shows blocky artefacts."
+  },
+  {
+    "id": "term-sampling-rate",
+    "name": "Sampling Rate",
+    "topics": [
+      "im"
+    ],
+    "definition": "The number of times per second a sound wave is measured when it is digitised.",
+    "example": "CD audio uses 44,100 samples per second."
+  },
+  {
+    "id": "term-bit-depth",
+    "name": "Bit Depth",
+    "topics": [
+      "im"
+    ],
+    "definition": "The number of bits used to record each sample or pixel, which sets how many different values can be stored.",
+    "example": "16-bit audio allows 65,536 possible heights per sample; 24-bit colour allows about 16.7 million colours."
+  },
+  {
+    "id": "term-wireframe",
+    "name": "Wireframe",
+    "topics": [
+      "im"
+    ],
+    "definition": "A simple, low-fidelity layout of a screen that shows structure and placement without colour or final content.",
+    "example": "Grey boxes labelled Header, Image and Button on a sketch of a home page."
+  },
+  {
+    "id": "term-storyboard",
+    "name": "Storyboard",
+    "topics": [
+      "im"
+    ],
+    "definition": "A diagram showing the screens of an interface and the links between them; in NESA notation, buttons with a dot and arrow show which screen they open.",
+    "example": "Three linked screens for a school canteen website: Home, Prices and Specials."
+  },
+  {
+    "id": "term-prototype",
+    "name": "Prototype",
+    "topics": [
+      "im"
+    ],
+    "definition": "A trial product or model built to test an idea and inform further design, which can be physical or digital.",
+    "example": "A clickable model of an ordering screen tested with five students."
+  },
+  {
+    "id": "term-design-thinking",
+    "name": "Design Thinking",
+    "topics": [
+      "im"
+    ],
+    "definition": "A process of identifying a need and developing a design solution, considering economic, environmental and social impacts, using empathise, define, ideate, prototype and test.",
+    "example": "Interviewing students about lunch queues, then testing a paper prototype of an ordering site."
+  },
+  {
+    "id": "term-nudging",
+    "name": "Nudging (Guided Choice)",
+    "topics": [
+      "im"
+    ],
+    "definition": "A design choice that steers people towards an option without removing other options.",
+    "example": "A \"Most popular\" badge on one product or a pre-selected delivery option."
+  },
+  {
+    "id": "term-dark-pattern",
+    "name": "Dark Pattern",
+    "topics": [
+      "im"
+    ],
+    "definition": "A deceptive design technique that steers users into choices that are not in their interest.",
+    "example": "A cancel link hidden behind five clicks while sign-up takes one."
+  },
+  {
+    "id": "term-cookie",
+    "name": "Cookie",
+    "topics": [
+      "im"
+    ],
+    "definition": "A small piece of data a website stores in the browser to keep a session, remember preferences or track activity.",
+    "example": "A shopping cart that remembers items after you close the tab."
+  },
+  {
+    "id": "term-digital-footprint",
+    "name": "Digital Footprint",
+    "topics": [
+      "im"
+    ],
+    "definition": "The traces of data left behind by a person using a digital system, both actively given and passively collected.",
+    "example": "Posts you share (active) and your IP address in server logs (passive)."
+  },
+  {
+    "id": "term-auto-profiling",
+    "name": "Auto-profiling",
+    "topics": [
+      "im"
+    ],
+    "definition": "The automatic building of a picture of a person by inferring interests and characteristics from their behaviour without them entering it.",
+    "example": "A video app recommending content based on what you watched, not on what you said you liked."
+  },
+  {
+    "id": "term-creative-commons",
+    "name": "Creative Commons",
+    "topics": [
+      "im"
+    ],
+    "definition": "A non-profit organisation whose standard licences let creators share work while stating how others may reuse it.",
+    "example": "A photo licensed CC BY 4.0 that you can reuse if you credit the creator."
+  },
+  {
+    "id": "term-icip",
+    "name": "Indigenous Cultural and Intellectual Property (ICIP)",
+    "topics": [
+      "im"
+    ],
+    "definition": "The rights of Aboriginal and Torres Strait Islander Peoples in their cultural heritage, including knowledge, art, stories, languages and designs.",
+    "example": "Asking the relevant community for permission before using traditional artwork on a website."
+  },
+  {
+    "id": "term-crowdsourcing",
+    "name": "Crowdsourcing",
+    "topics": [
+      "im"
+    ],
+    "definition": "Using a large group of people, usually online, to contribute information, ideas or work.",
+    "example": "Residents reporting flood levels through a community social media page."
+  },
+  {
+    "id": "term-mooc",
+    "name": "Massive Open Online Course (MOOC)",
+    "topics": [
+      "im"
+    ],
+    "definition": "An online course open to very large numbers of learners, often free to start.",
+    "example": "A free university course delivered by video, quizzes and forums."
+  },
+  {
+    "id": "term-mmog",
+    "name": "Massive Multiplayer Online Game (MMOG)",
+    "topics": [
+      "im"
+    ],
+    "definition": "An online game in which very large numbers of players share one persistent world.",
+    "example": "Guilds of players completing a shared quest in a persistent online world."
+  },
+  {
+    "id": "term-sandbox-gaming",
+    "name": "Sandbox Gaming",
+    "topics": [
+      "im"
+    ],
+    "definition": "A virtual world where players build their own playscapes, invite others to play and test game play.",
+    "example": "Building and sharing a mini-game in Minecraft."
+  },
+  {
+    "id": "term-data-journalism",
+    "name": "Data Journalism",
+    "topics": [
+      "im"
+    ],
+    "definition": "Finding, analysing and presenting data to tell a news story, often using interactive charts or maps.",
+    "example": "An interactive map letting readers look up rainfall in their own town."
+  },
+  {
+    "id": "term-wcag",
+    "name": "Web Content Accessibility Guidelines (WCAG)",
+    "topics": [
+      "im"
+    ],
+    "definition": "The W3C's internationally recognised guidelines for making web content accessible, organised under four principles: perceivable, operable, understandable and robust.",
+    "example": "Providing alt text for images and at least 4.5:1 contrast for body text."
+  }
+]

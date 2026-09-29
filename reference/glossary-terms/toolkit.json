@@ -1,0 +1,227 @@
+[
+  {
+    "id": "term-data-flow-diagram",
+    "name": "Data Flow Diagram (DFD)",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "A diagram that shows how data moves between external entities, processes and data stores, using circles for processes, open-ended rectangles for data stores, closed rectangles for external entities and labelled curved arrows for data flows.",
+    "example": "A voting system DFD showing Voters sending their details and vote to the Voting process."
+  },
+  {
+    "id": "term-level-0-dfd",
+    "name": "Level 0 Data Flow Diagram",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "An overview (context) data flow diagram that shows the whole system as one process with its external entities, and no data stores or internal processes.",
+    "example": "A canteen ordering system drawn as one circle between Student and Canteen manager."
+  },
+  {
+    "id": "term-external-entity",
+    "name": "External Entity",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "A person, organisation or element outside a system that provides data to it or receives data from it.",
+    "example": "Students who place orders in a canteen ordering system."
+  },
+  {
+    "id": "term-data-store",
+    "name": "Data Store",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "A place where data is kept between processes, either an electronic file or non-computer storage; drawn as a rectangle open on one side in a DFD.",
+    "example": "An Electoral roll in a voting system."
+  },
+  {
+    "id": "term-system-flowchart",
+    "name": "System Flowchart",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "A diagram that represents the main processes and devices in a system, using symbols such as online input, direct access storage and cloud, with arrows showing the direction of data.",
+    "example": "A doctor's system where visit details are entered, stored in a consultation file and sent to the cloud."
+  },
+  {
+    "id": "term-decision-tree",
+    "name": "Decision Tree",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "A diagram that represents all possible combinations of decisions and their resulting actions, where each path leads to another decision or a final action.",
+    "example": "A tree that decides whether to buy a car from its mileage, type and colour."
+  },
+  {
+    "id": "term-data-dictionary",
+    "name": "Data Dictionary",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "A comprehensive description of each field in a database, commonly listing the field name, data type, data format, field size, description and an example.",
+    "example": "UserID: Text, XXXNNNN, size 7, example XYZ1539."
+  },
+  {
+    "id": "term-storyboard",
+    "name": "Storyboard",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "A diagram that shows the various interfaces (screens) of a product and the links between them.",
+    "example": "Three canteen website pages joined by navigation buttons."
+  },
+  {
+    "id": "term-network-diagram",
+    "name": "Network Diagram",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "A diagram, also called a network map, that documents a network using labelled symbols for the devices (nodes) and lines for how they are connected.",
+    "example": "A router joined to the internet, two hubs and several labelled computers."
+  },
+  {
+    "id": "term-graph-network-theory",
+    "name": "Graph and Network Theory",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "The representation of individuals or categories as nodes and their relationships as links, applied to the design of social networks.",
+    "example": "A graph of VB's social network with links labelled Friend, Listen and Watch."
+  },
+  {
+    "id": "term-gantt-chart",
+    "name": "Gantt Chart",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "A chart that displays each task of a project on an estimated, dated timeline, showing dependencies, milestones and, where used, resources and percentage complete.",
+    "example": "A requirements-gathering chart from 30 August to 16 September with a milestone diamond."
+  },
+  {
+    "id": "term-process-diary",
+    "name": "Process Diary (Log Book)",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "A record of a project's progress made at regular intervals, including the date, the person, progress, tasks achieved, stumbling blocks, next approaches, reflections and resources used.",
+    "example": "An entry recording that a price format was fixed and how it was tested."
+  },
+  {
+    "id": "term-live-data",
+    "name": "Live Data",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "Real data from an organisation's actual operation that is used when testing a system.",
+    "example": "Last term's real canteen orders loaded into a new ordering system."
+  },
+  {
+    "id": "term-simulated-data",
+    "name": "Simulated Data",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "Data made up by testers to mimic real data or to target particular cases, including boundary and invalid values.",
+    "example": "A test order with a price of $0.00."
+  },
+  {
+    "id": "term-beta-testing",
+    "name": "Beta Testing",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "Testing a near-final version of a system with a limited group of real users outside the development team to find remaining faults.",
+    "example": "Fifty students trial a new school app for a fortnight."
+  },
+  {
+    "id": "term-volume-testing",
+    "name": "Volume Testing",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "Testing how a system performs with a large amount of data or many users.",
+    "example": "Loading ten thousand orders to check searches stay fast."
+  },
+  {
+    "id": "term-acceptance-testing",
+    "name": "Acceptance Testing",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "Testing in which the client or users check the finished system against agreed criteria to decide whether to accept it.",
+    "example": "The canteen manager completes her daily tasks and signs off."
+  },
+  {
+    "id": "term-normalisation",
+    "name": "Normalisation",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "A relational database design process that minimises data duplication by separating data into smaller linked tables whose fields depend solely on each table's primary key.",
+    "example": "Moving publisher names out of a Games table into a Publishers table."
+  },
+  {
+    "id": "term-schema",
+    "name": "Schema",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "A diagram of the organisational structure of a database showing the tables, their fields, the primary keys and the relationships between tables.",
+    "example": "Games, Publishers and Developers tables joined by one-to-many lines."
+  },
+  {
+    "id": "term-foreign-key",
+    "name": "Foreign Key",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "A field in one table that holds the primary key value of a record in another table, creating a link between the tables.",
+    "example": "Publisher_ID in the Games table."
+  },
+  {
+    "id": "term-sql",
+    "name": "Structured Query Language (SQL)",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "A language used to access and manipulate data in relational databases, using clauses such as SELECT, FROM, WHERE and ORDER BY.",
+    "example": "SELECT Name FROM Games WHERE Cost > 20 ORDER BY Cost DESC"
+  },
+  {
+    "id": "term-absolute-reference",
+    "name": "Absolute Reference",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "A spreadsheet cell reference, written with dollar signs such as $H$1, that does not change when the formula is copied or filled.",
+    "example": "=D2*$H$1 keeps pointing at the GST rate cell."
+  },
+  {
+    "id": "term-pivot-table",
+    "name": "Pivot Table",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "A spreadsheet tool that summarises a large table by grouping and totalling its data.",
+    "example": "Total canteen revenue by item category."
+  },
+  {
+    "id": "term-conditional-formatting",
+    "name": "Conditional Formatting",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "A spreadsheet feature that changes how a cell looks automatically when its value meets a rule.",
+    "example": "Shading a stock cell red when it falls below 10."
+  },
+  {
+    "id": "term-bitmap-vector-graphics",
+    "name": "Bitmap and Vector Graphics",
+    "topics": [
+      "toolkit"
+    ],
+    "definition": "Bitmap images are grids of pixels that blur when enlarged, while vector graphics are built from geometric shapes and stay sharp at any size.",
+    "example": "A photo is a bitmap; a club logo is best as a vector."
+  }
+]
