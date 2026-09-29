@@ -16,8 +16,8 @@ _spec = importlib.util.spec_from_file_location('site_chrome', os.path.join(ROOT,
 chrome = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(chrome)
 
-SITE_URL = 'https://4bzdog.github.io/HSC_EnterpriseComputing/'
-REPO_URL = 'https://github.com/4BZDOG/HSC_EnterpriseComputing'
+SITE_URL = 'https://4bzdog.github.io/HSC-Enterprise-Computing/'
+REPO_URL = 'https://github.com/4BZDOG/HSC-Enterprise-Computing'
 MAPPING_URL = REPO_URL + '/blob/main/resources/Syllabus-Mapping.md'
 FULL_NAME = 'HSC Enterprise Computing Notes'
 TITLE_SUFFIX = 'HSC Enterprise Computing'

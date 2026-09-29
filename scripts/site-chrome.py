@@ -68,7 +68,7 @@ BRAND_GLYPH = ('<svg class="brand-glyph" viewBox="0 0 24 24" aria-hidden="true" 
                '<rect x="16" y="3.5" width="4.5" height="16.5" rx="1"/></svg>')
 SITE_NAME = 'EntComp Notes'
 NESA_URL = 'https://curriculum.nsw.edu.au/learning-areas/tas/enterprise-computing-11-12-2022'
-BASE_PATH = '/HSC_EnterpriseComputing/'
+BASE_PATH = '/HSC-Enterprise-Computing/'
 
 # slug: (group, title, summary)
 PAGES = {
@@ -182,7 +182,7 @@ def versioned(text, base_dir):
         if not os.path.exists(target):
             return m.group(0)
         return f'{m.group(1)}="{rel}?v={asset_version(target)}"'
-    return re.sub(r'\b(href|src)="((?:\.\./|/HSC_EnterpriseComputing/)?(?:css|js)/[^"?#]+\.(?:css|js))(?:\?v=[^"]*)?"', one, text)
+    return re.sub(r'\b(href|src)="((?:\.\./|/HSC-Enterprise-Computing/)?(?:css|js)/[^"?#]+\.(?:css|js))(?:\?v=[^"]*)?"', one, text)
 
 
 def footer(prefix, home, page_title):

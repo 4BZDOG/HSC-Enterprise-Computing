@@ -2,7 +2,7 @@
 
 > Study notes for NSW HSC Enterprise Computing (Year 11 and 12), following the NESA Enterprise Computing 11–12 Syllabus (2022) dot point by dot point.
 
-**Live:** https://4bzdog.github.io/HSC_EnterpriseComputing/
+**Live:** https://4bzdog.github.io/HSC-Enterprise-Computing/
 
 ---
 
@@ -47,7 +47,7 @@ Pages still being written show `<!-- CONTENT: … -->` placeholders (see [Checks
 ## Project structure
 
 ```
-HSC_EnterpriseComputing/
+hsc-enterprise-computing/
 ├── index.html                  # Home page
 ├── 404.html                    # Not-found page (site-absolute paths)
 ├── robots.txt                  # Crawl directives
@@ -178,7 +178,7 @@ bash scripts/validate-alignment.sh      # syllabus alignment report
 
 ## Deployment
 
-The site is hosted on **GitHub Pages** at https://4bzdog.github.io/HSC_EnterpriseComputing/.
+The site is hosted on **GitHub Pages** at https://4bzdog.github.io/HSC-Enterprise-Computing/.
 
 - `.github/workflows/deploy.yml` runs on every push to `main` that changes a public file (`index.html`, `404.html`, `topics/**`, `css/**`, `js/**`, `robots.txt`, `sitemap.xml`, `og-image.png`), or manually from the Actions tab.
 - It checks that each page opens with `<!DOCTYPE html>`, then copies **only the public files** into a `_site/` folder and uploads that. `reference/`, `resources/` (including the Course Specifications PDF and page images), `scripts/` and `.github/` are never published.

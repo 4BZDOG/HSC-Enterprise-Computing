@@ -26,7 +26,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  SITE_URL: https://4bzdog.github.io/HSC_EnterpriseComputing/
+  SITE_URL: https://4bzdog.github.io/HSC-Enterprise-Computing/
 
 jobs:
   deploy:

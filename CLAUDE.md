@@ -3,7 +3,7 @@
 Guide for Claude Code sessions working on **HSC Enterprise Computing Notes ("EntComp Notes")**. Read this first, then `CONTRIBUTING.md` and (when writing a page) `reference/CONTENT_BRIEF.md`.
 
 ## Purpose and audience
-A free static study-notes site for NSW HSC Enterprise Computing (NESA Enterprise Computing 11–12 Syllabus, 2022), for students aged 16 to 18 and their teachers. One page per focus area, one section per NESA dot point. Live at https://4bzdog.github.io/HSC_EnterpriseComputing/ ; repo https://github.com/4BZDOG/HSC_EnterpriseComputing ; deployed by GitHub Pages (`.github/workflows/deploy.yml`).
+A free static study-notes site for NSW HSC Enterprise Computing (NESA Enterprise Computing 11–12 Syllabus, 2022), for students aged 16 to 18 and their teachers. One page per focus area, one section per NESA dot point. Live at https://4bzdog.github.io/HSC-Enterprise-Computing/ ; repo https://github.com/4BZDOG/HSC-Enterprise-Computing ; deployed by GitHub Pages (`.github/workflows/deploy.yml`).
 
 - **UK / Australian English** everywhere (organisation, visualisation, analyse, behaviour; licence as a noun; program for software).
 - Accuracy over flourish: no invented statistics, dates, quotes, company claims or legislation. Australian context first. Respectful, specific Indigenous content (ICIP, Indigenous Data Sovereignty); do not invent protocols.

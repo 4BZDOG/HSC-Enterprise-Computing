@@ -13,7 +13,7 @@ category: content
 
 Use this skill when asked to add, scaffold, regenerate or fill in a topic page for **HSC Enterprise Computing Notes** (NESA Enterprise Computing 11–12 Syllabus, 2022). Read `CLAUDE.md`, `CONTRIBUTING.md` and `reference/CONTENT_BRIEF.md` first.
 
-Site: https://4bzdog.github.io/HSC_EnterpriseComputing/ (a sister of the Software Engineering site, which is read-only reference: never modify it).
+Site: https://4bzdog.github.io/HSC-Enterprise-Computing/ (a sister of the Software Engineering site, which is read-only reference: never modify it).
 
 ---
 
@@ -101,7 +101,7 @@ This fills the navigation dropdowns, mobile menu, footer, icons, pager and `?v=`
 ### 5  Home page and sitemap
 
 - **`index.html`**: add a `.topic-card` to `#year11` or `#year12` (or the Resources grid), using the same inline SVG as `ICONS['<slug>']` in `.card-icon`, a "Focus area NN" kicker with hours, a description, the outcome range and dot-point count, and three `.topic-tag` items. Update the section's `.topic-count`, and the hero and "Course at a glance" figures if totals change (currently 7 focus areas, 140 dot points, 22 outcomes, 240 hours).
-- **`sitemap.xml`**: add a `<url>` with `https://4bzdog.github.io/HSC_EnterpriseComputing/topics/<slug>.html`, today's date as `<lastmod>`, `<changefreq>monthly</changefreq>` and `<priority>0.9</priority>`.
+- **`sitemap.xml`**: add a `<url>` with `https://4bzdog.github.io/HSC-Enterprise-Computing/topics/<slug>.html`, today's date as `<lastmod>`, `<changefreq>monthly</changefreq>` and `<priority>0.9</priority>`.
 
 ### 6  Write the content
 
@@ -152,7 +152,7 @@ Every diagram sits in a numbered `<figure class="figure">` (kicker, title, lead 
 
 - Any `localStorage` / `sessionStorage` key starts with **`ec-`**; wrap access in try/catch. (The site shares an origin with the Software Engineering site.)
 - No external JS or CSS libraries and no CDNs. Optional page-specific styles or scripts go in `css/pages/<slug>.css` and `js/pages/<slug>.js`, linked only from your page and using the theme's custom properties.
-- Keep to relative paths: pages in `topics/` use `../css/`, `../js/`, `../index.html`; the home page uses bare `css/`, `js/`; `404.html` uses site-absolute `/HSC_EnterpriseComputing/…` paths. Never use bare `/css/` paths.
+- Keep to relative paths: pages in `topics/` use `../css/`, `../js/`, `../index.html`; the home page uses bare `css/`, `js/`; `404.html` uses site-absolute `/HSC-Enterprise-Computing/…` paths. Never use bare `/css/` paths.
 
 ---
 

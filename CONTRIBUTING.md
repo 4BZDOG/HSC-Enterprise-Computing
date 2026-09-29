@@ -14,9 +14,9 @@ Thank you for helping improve these notes. The site is written for Year 11 and 1
 ### Local setup
 1. Fork the repository on GitHub, then clone your fork:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/HSC_EnterpriseComputing.git
-   cd HSC_EnterpriseComputing
-   git remote add upstream https://github.com/4BZDOG/HSC_EnterpriseComputing.git
+   git clone https://github.com/YOUR_USERNAME/HSC-Enterprise-Computing.git
+   cd HSC-Enterprise-Computing
+   git remote add upstream https://github.com/4BZDOG/HSC-Enterprise-Computing.git
    ```
 2. Preview with a local server (opening `index.html` directly can break the theme and storage):
    ```bash

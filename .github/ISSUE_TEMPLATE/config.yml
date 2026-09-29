@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
   - name: Discussions
-    url: https://github.com/4BZDOG/HSC_EnterpriseComputing/discussions
+    url: https://github.com/4BZDOG/HSC-Enterprise-Computing/discussions
     about: Ask questions or discuss ideas with the community
   - name: Documentation
-    url: https://github.com/4BZDOG/HSC_EnterpriseComputing/blob/main/README.md
+    url: https://github.com/4BZDOG/HSC-Enterprise-Computing/blob/main/README.md
     about: Read the README for setup, structure and checks
   - name: Contributing
-    url: https://github.com/4BZDOG/HSC_EnterpriseComputing/blob/main/CONTRIBUTING.md
+    url: https://github.com/4BZDOG/HSC-Enterprise-Computing/blob/main/CONTRIBUTING.md
     about: Learn how to contribute to this project

@@ -10,7 +10,7 @@ from page_specs import SPECS
 
 # Focus areas in course order (Year 11 then Year 12), taken from scripts/page_specs.py.
 ORDER = [(spec['focus_area'], f'{slug}.html', f'Year {spec["year"]}') for slug, spec in SPECS.items()]
-SITE = 'https://4bzdog.github.io/HSC_EnterpriseComputing/topics/'
+SITE = 'https://4bzdog.github.io/HSC-Enterprise-Computing/topics/'
 
 syl = load_syllabus()
 out = ['# NESA Syllabus Mapping', '',
