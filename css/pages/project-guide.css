@@ -1,0 +1,93 @@
+/* Project Management Guide (topics/project-guide.html): checklists, approach chooser, copyable templates.
+   Uses the theme's custom properties so light and dark mode both work. */
+
+/* Reveal-on-demand model answers */
+.pg-answer {
+  margin: .25rem 0 1.5rem;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  background: var(--surface);
+}
+.pg-answer > summary { cursor: pointer; padding: .7rem 1rem; font-weight: 700; font-size: .9rem; color: var(--primary); list-style: none; }
+.pg-answer > summary::-webkit-details-marker { display: none; }
+.pg-answer > summary::before { content: '\25B8'; display: inline-block; margin-right: .55rem; transition: transform .15s ease; }
+.pg-answer[open] > summary::before { transform: rotate(90deg); }
+.pg-answer > summary:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 6px; }
+.pg-answer[open] > summary { border-bottom: 1px solid var(--border); }
+.pg-answer > :not(summary) { margin-left: 1rem; margin-right: 1rem; }
+.pg-answer > p { margin-top: .85rem; }
+.pg-answer > :last-child { margin-bottom: 1rem; }
+@media (prefers-reduced-motion: reduce) { .pg-answer > summary::before { transition: none; } }
+
+/* Copyable templates */
+.pg-template { margin: 1.25rem 0 1.5rem; border: 1px solid var(--border-strong); border-top: 4px solid var(--primary); border-radius: 8px; background: var(--surface); overflow: hidden; }
+.pg-template-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem .75rem; padding: .6rem .9rem; background: var(--bg-tertiary); border-bottom: 1px solid var(--border); }
+.pg-template-title { font: 600 .74rem/1.3 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--text-secondary); }
+.pg-copy { font: 600 .78rem/1 var(--font-body); padding: .45rem .8rem; border: 1px solid var(--primary); border-radius: 6px; background: transparent; color: var(--primary); cursor: pointer; }
+.pg-copy:hover { background: var(--primary-light); }
+.pg-copy:focus-visible, .pg-clear:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.pg-template .table-wrap { margin: 0; border: 0; border-radius: 0; }
+.pg-template tbody tr.pg-eg td { color: var(--text-secondary); font-style: italic; }
+.pg-template tbody tr.pg-total td { font-weight: 700; font-style: normal; color: var(--text-primary); }
+/* Empty cells are the fill-in spaces: keep them wide enough to type in */
+.pg-template tbody td:empty { min-width: 11rem; height: 2.4rem; background: var(--bg-tertiary); }
+.pg-template td, .pg-template th { vertical-align: top; }
+
+/* Stage checklists */
+.pg-checklist { margin: 1.5rem 0; }
+.pg-checklist h3 { margin-bottom: .5rem; }
+.pg-checklist td:first-child { width: 3.2rem; text-align: center; }
+.pg-checklist input[type="checkbox"] { width: 1.15rem; height: 1.15rem; accent-color: var(--primary); cursor: pointer; }
+.pg-checklist tr.is-done td:not(:first-child) { color: var(--text-muted); }
+.pg-checklist tr.is-done td:nth-child(2) { text-decoration: line-through; text-decoration-color: var(--border-strong); }
+.pg-clear-wrap { margin: .5rem 0 1.25rem; }
+
+/* Approach chooser */
+.pg-chooser { margin: 1.25rem 0 1.5rem; border: 1px solid var(--border-strong); border-radius: 10px; background: var(--surface); overflow: hidden; }
+.pg-chooser-form { padding: 1rem 1rem .25rem; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.pg-q { border: 1px solid var(--border); border-radius: 8px; padding: .75rem .9rem .85rem; margin: 0; min-width: 0; background: var(--bg-tertiary); }
+.pg-q legend { font-weight: 700; font-size: .95rem; padding: 0 .35rem; color: var(--text-primary); }
+.pg-qn { display: inline-flex; align-items: center; justify-content: center; width: 1.5rem; height: 1.5rem; margin-right: .3rem; border-radius: 50%; background: var(--primary); color: var(--text-inverse); font: 700 .78rem/1 var(--font-mono); }
+.pg-q label { display: flex; align-items: flex-start; gap: .55rem; padding: .4rem .3rem; border-radius: 6px; cursor: pointer; font-size: .92rem; line-height: 1.4; }
+.pg-q label:hover { background: var(--surface-hover); }
+.pg-q input { margin-top: .22rem; accent-color: var(--primary); flex: 0 0 auto; }
+.pg-q label:has(input:checked) { background: var(--primary-light); }
+.pg-q label:has(input:focus-visible) { outline: 2px solid var(--primary); outline-offset: 1px; }
+.pg-chooser-reset { grid-column: 1 / -1; justify-self: start; margin-bottom: .75rem; }
+.pg-result { border-top: 1px solid var(--border); padding: 1rem 1.1rem 1.2rem; background: var(--surface); }
+.pg-result-empty { margin: 0; color: var(--text-muted); font-style: italic; }
+.pg-result h4 { margin: 0 0 .25rem; font-size: 1.1rem; }
+.pg-result .pg-kicker { font: 600 .72rem/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 .35rem; }
+.pg-result h5 { margin: 1rem 0 .35rem; font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; color: var(--text-secondary); }
+.pg-result ul { margin: 0 0 .25rem 1.1rem; padding: 0; }
+.pg-result li { margin: .2rem 0; }
+.pg-tag { display: inline-block; padding: .05rem .5rem; margin-right: .3rem; border-radius: 999px; font: 700 .68rem/1.5 var(--font-mono); letter-spacing: .04em; text-transform: uppercase; }
+.pg-tag.pro { background: rgba(34,197,94,.16); color: #166534; }
+.pg-tag.con { background: rgba(245,158,11,.2); color: #92400E; }
+[data-theme="dark"] .pg-tag.pro { color: #86EFAC; }
+[data-theme="dark"] .pg-tag.con { color: #FCD34D; }
+.pg-bars { list-style: none; margin: .25rem 0 0; padding: 0; display: grid; gap: .45rem; }
+.pg-bars li { display: grid; grid-template-columns: minmax(7.5rem, 11rem) 1fr 2.6rem; align-items: center; gap: .6rem; margin: 0; font-size: .9rem; }
+.pg-track { height: .7rem; border-radius: 4px; background: var(--bg-secondary); overflow: hidden; }
+.pg-track > span { display: block; height: 100%; background: var(--border-strong); border-radius: 4px; }
+.pg-bars li.is-top .pg-track > span { background: var(--primary); }
+.pg-bars li.is-top { font-weight: 700; }
+.pg-score { text-align: right; font-family: var(--font-mono); font-size: .8rem; color: var(--text-secondary); }
+@media (max-width: 480px) { .pg-bars li { grid-template-columns: 1fr 2.4rem; } .pg-bars .pg-track { grid-column: 1 / -1; grid-row: 2; } }
+
+/* Good versus weak diary entries */
+.pg-compare { align-items: start; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); margin: 1.25rem 0; }
+.pg-compare > div { border: 1px solid var(--border); border-radius: 8px; padding: .9rem 1rem; background: var(--surface); }
+.pg-compare h4 { margin: 0 0 .5rem; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; }
+.pg-weak { border-left: 4px solid #C8382F !important; }
+.pg-strong { border-left: 4px solid #1B7F46 !important; }
+.pg-weak h4 { color: #B42E26; }
+.pg-strong h4 { color: #17703E; }
+[data-theme="dark"] .pg-weak { border-left-color: #F0705F !important; }
+[data-theme="dark"] .pg-strong { border-left-color: #4CC985 !important; }
+[data-theme="dark"] .pg-weak h4 { color: #F0705F; }
+[data-theme="dark"] .pg-strong h4 { color: #4CC985; }
+.pg-compare p { margin: 0 0 .5rem; font-size: .93rem; }
+.pg-compare ul { margin: 0 0 0 1.1rem; padding: 0; font-size: .88rem; color: var(--text-secondary); }
+.pg-template thead th { white-space: normal; }

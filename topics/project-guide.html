@@ -9,14 +9,14 @@
   <meta name="robots" content="index, follow" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Project Management Guide | HSC Enterprise Computing" />
-  <meta property="og:description" content="How to choose and run a project management approach: waterfall, agile, prototyping, end-user development and outsourcing, plus Gantt charts, process diaries and implementation planning." />
+  <meta property="og:description" content="A practical guide to running your enterprise project: stage checklists, an approach chooser, planning, risk and test templates, and assessment facts." />
   <meta property="og:url" content="https://4bzdog.github.io/HSC-Enterprise-Computing/topics/project-guide.html" />
   <meta property="og:image" content="https://4bzdog.github.io/HSC-Enterprise-Computing/og-image.png" />
   <meta property="og:image:alt" content="HSC Enterprise Computing Notes: NESA NSW" />
   <meta property="og:site_name" content="HSC Enterprise Computing Notes" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Project Management Guide | HSC Enterprise Computing" />
-  <meta name="twitter:description" content="How to choose and run a project management approach: waterfall, agile, prototyping, end-user development and outsourcing, plus Gantt charts, process diaries and implementation planning." />
+  <meta name="twitter:description" content="A practical guide to running your enterprise project: stage checklists, an approach chooser, planning, risk and test templates, and assessment facts." />
   <meta name="twitter:image" content="https://4bzdog.github.io/HSC-Enterprise-Computing/og-image.png" />
   <script type="application/ld+json">
   {
@@ -48,11 +48,13 @@
   <meta name="theme-color" content="#0B1B2E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <meta name="description" content="How to choose and run a project management approach: waterfall, agile, prototyping, end-user development and outsourcing, plus Gantt charts, process diaries and implementation planning." />
+  <meta name="description" content="A practical guide to running your enterprise project: stage checklists, an approach chooser, planning, risk and test templates, and assessment facts." />
   <!-- Theme init: prevents flash of wrong theme. The ec- prefix keeps this site's storage apart from sister sites on the same origin. -->
   <script>(function(){try{var t=localStorage.getItem('ec-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
   <link rel="stylesheet" href="../css/styles.css?v=eaa2e127" />
   <link rel="stylesheet" href="../css/theme.css?v=ea1ce127" />
+  <link rel="stylesheet" href="../css/anim.css?v=22e246f7" />
+  <link rel="stylesheet" href="../css/pages/project-guide.css?v=96570977" />
 </head>
 <body>
 
@@ -157,11 +159,11 @@
       </nav>
       <div class="topic-title-row"><span class="topic-hero-icon ti-core" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M6 21V3.5"/><path d="M6 5h11.5L15 8.5 17.5 12H6"/></svg></span><h1>Project Management Guide</h1></div>
       <p class="text-muted-dark max-w-600 mt-2 fs-sm lh-base">
-        How to choose and run a project management approach: waterfall, agile, prototyping, end-user development and outsourcing, plus Gantt charts, process diaries and implementation planning.
+        A practical guide to running your enterprise project: stage checklists, an approach chooser, planning, risk and test templates, and assessment facts.
       </p>
       <div class="topic-header-meta">
         <span class="meta-pill">Resources</span>
-        <span class="meta-pill">Coming soon</span>
+        <span class="meta-pill">Templates and checklists</span>
       </div>
     </div>
   </header>
@@ -169,24 +171,1009 @@
   <div class="page-layout">
     <aside class="sidebar">
       <div class="toc-title"><span class="toc-ico ti-core" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M6 21V3.5"/><path d="M6 5h11.5L15 8.5 17.5 12H6"/></svg></span>Contents</div>
-      <ul class="toc-list">
-        <li><a href="#coming-soon"><span class="toc-num">1</span>Coming soon</a></li>
+            <ul class="toc-list">
+        <li class="sidebar-label">Part 1 — Project life cycle</li>
+        <li><a href="#lifecycle"><span class="toc-num">1</span>The Four Stages at a Glance</a></li>
+        <li><a href="#stage-checklists"><span class="toc-num">2</span>Checklists for Each Stage</a></li>
+        <li class="sidebar-label">Part 2 — Development approach</li>
+        <li><a href="#approach-chooser"><span class="toc-num">3</span>Approach Chooser</a></li>
+        <li><a href="#approach-profiles"><span class="toc-num">4</span>The Five Approaches Compared</a></li>
+        <li class="sidebar-label">Part 3 — Planning tools in practice</li>
+        <li><a href="#gantt-practice"><span class="toc-num">5</span>Gantt Chart Walkthrough</a></li>
+        <li><a href="#action-plans"><span class="toc-num">6</span>Time/Task Action Plans</a></li>
+        <li><a href="#process-diary-practice"><span class="toc-num">7</span>Process Diary Templates</a></li>
+        <li><a href="#budgets"><span class="toc-num">8</span>Budgets</a></li>
+        <li class="sidebar-label">Part 4 — Client and team</li>
+        <li><a href="#requirements-gathering"><span class="toc-num">9</span>Interview and Survey Templates</a></li>
+        <li><a href="#needs-wants"><span class="toc-num">10</span>Needs and Wants (MoSCoW)</a></li>
+        <li><a href="#team-collaboration"><span class="toc-num">11</span>Collaboration and Roles</a></li>
+        <li class="sidebar-label">Part 5 — Risk, feasibility, implementation</li>
+        <li><a href="#risk-register"><span class="toc-num">12</span>Risk Register</a></li>
+        <li><a href="#feasibility"><span class="toc-num">13</span>Feasibility Checklist</a></li>
+        <li><a href="#implementation-plan-template"><span class="toc-num">14</span>Implementation Plan</a></li>
+        <li><a href="#training-documentation"><span class="toc-num">15</span>Training and Documentation</a></li>
+        <li class="sidebar-label">Part 6 — Testing and evaluation</li>
+        <li><a href="#test-plan"><span class="toc-num">16</span>Test Plan Template</a></li>
+        <li><a href="#verify-validate-practice"><span class="toc-num">17</span>Verification and Validation</a></li>
+        <li><a href="#evaluation-maintenance"><span class="toc-num">18</span>Evaluation and Maintenance</a></li>
+        <li class="sidebar-label">Part 7 — Assessment and integrity</li>
+        <li><a href="#assessment-facts"><span class="toc-num">19</span>How It Is Assessed</a></li>
+        <li><a href="#academic-integrity"><span class="toc-num">20</span>Academic Integrity and AI</a></li>
       </ul>
     </aside>
 
     <main class="page-content">
       <div class="content-body">
-        <section id="coming-soon" class="coming-soon">
-          <p class="cs-label">Coming soon</p>
-          <h2>Project Management Guide is being written</h2>
-          <p>How to choose and run a project management approach: waterfall, agile, prototyping, end-user development and outsourcing, plus Gantt charts, process diaries and implementation planning.</p>
-          <p>In the meantime, the focus-area pages already follow every NESA dot point in order, and the glossary defines the syllabus keywords.</p>
-          <div class="cs-links">
-            <a class="btn btn-primary" href="../index.html#year11">Browse Year 11</a>
-            <a class="btn btn-outline" href="../index.html#year12">Browse Year 12</a>
-            <a class="btn btn-outline" href="glossary.html">Open the glossary</a>
+
+        <aside class="topic-breakout" aria-label="Topic introduction">
+          <span class="breakout-label">Why this matters now</span>
+          <p>A project is judged by more than the thing you build. The plan you made, the evidence that you followed it, the way you handled a client who changed their mind and the honesty of your evaluation all count. Students who skip the planning usually discover the problem in the last two weeks, when there is no time left to fix it.</p>
+          <p>This guide is the practical companion to the <a href="enterprise-project.html">Enterprise Project</a> syllabus page and the <a href="toolkit.html">Course Toolkit</a>. Those pages explain the theory and the notation NESA expects. This one gives you checklists, a chooser for picking a development approach, and templates you can copy into your own documents. It follows NESA&rsquo;s four stages of the design and production process, in order.</p>
+          <p class="breakout-question"><span class="bq-lead">Try this as you learn</span> Think of a group task that went wrong, such as a group assignment or a club event. At which of the four stages (identify, plan, produce, test) did the trouble really start?</p>
+        </aside>
+
+        <div class="callout info">
+          <strong>How this page relates to the rest of the site</strong>
+          The syllabus wording and the NESA Course Specifications notation live on the <a href="enterprise-project.html">Enterprise Project</a> page and in the <a href="toolkit.html">Course Toolkit</a>; this guide links to them rather than repeating them. Where we describe a technique that NESA does not name (the critical path, MoSCoW, the four feasibility checks, risk registers), it is labelled as a <em>common technique</em>. Assessment facts in Part 7 come only from NESA pages checked on 28 September 2026. Your school&rsquo;s own schedule always comes first.
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  PART 1: LIFE CYCLE                                    -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Part 1</span>
+          <span class="part-name">The project life cycle at a glance</span>
+        </div>
+
+        <aside class="topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <p>NESA organises the Enterprise Project around four stages: identifying and defining, researching and planning, producing and implementing, and testing and evaluating. Every project you will ever meet, from a school canteen app to a hospital records system, moves through them, usually more than once.</p>
+          <p class="breakout-question"><span class="bq-lead">Ask yourself</span> If you had to hand your project to another student halfway through, which documents would they need in order to carry on?</p>
+        </aside>
+
+        <section id="lifecycle">
+          <h2 class="syllabus-phase">The Four Stages at a Glance</h2>
+          <p class="syllabus-concept"><em><strong>Design and production process</strong> Identifying and defining, researching and planning, producing and implementing, testing and evaluating</em></p>
+
+          <h3>The stages and what each one leaves behind</h3>
+          <p>The four stage names are NESA&rsquo;s subheadings for the Year 12 Enterprise Project. Each stage ends with something you can point to. If you cannot point to it, the stage is not finished, however busy you have been. The theory for each stage is on the <a href="enterprise-project.html">Enterprise Project</a> page; this guide is about doing the work.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Concept diagram</span></p>
+              <h4 class="figure-title">The project life cycle, with tools and evidence</h4>
+              <p class="figure-lead">Four stages, the tools you will use in each, and the evidence each one should leave behind.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="pg-lifecycle"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>The arrows run forwards, but the dashed arrow runs back: test results and client feedback send you to earlier stages.</li><li>Every stage produces documents as well as work. The process diary runs through all four.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Choose one tool from stage 2 and say which stage 4 activity would show whether it worked.</p>
+            </div>
+          </figure>
+
+          <h3>Stage summary table</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Stage</th><th>The question it answers</th><th>Main tools</th><th>Typical evidence</th></tr></thead>
+              <tbody>
+                <tr><td>1. Identifying and defining</td><td>What is the problem, for whom, and how will we know it is solved?</td><td>Problem definition, interview or survey, success criteria</td><td>Signed-off problem definition, interview notes, list of stakeholders</td></tr>
+                <tr><td>2. Researching and planning</td><td>What will we build, in what order, with what time, money and risks?</td><td>Gantt chart, action plan, budget, <a href="toolkit.html#dfd">DFD</a>, <a href="toolkit.html#system-flowcharts">system flowchart</a>, <a href="toolkit.html#storyboards">storyboard</a>, risk register</td><td>Dated plan, design documents, requirements list, feasibility notes</td></tr>
+                <tr><td>3. Producing and implementing</td><td>Are we building what we planned, and how will the client start using it?</td><td>Development approach, prototype, implementation plan, <a href="toolkit.html#process-diaries">process diary</a></td><td>Working versions, diary entries, version history, training and documentation</td></tr>
+                <tr><td>4. Testing and evaluating</td><td>Does it work, and does it meet the criteria we set?</td><td>Test plan, test data, client feedback, evaluation table</td><td>Test results, evaluation against criteria, maintenance notes, reflection</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Why the cycle repeats</h3>
+          <p>NESA lists <em>an iterative approach</em> as part of managing a project. In practice that means you do not finish stage 1 and never look at it again. A client interview in stage 1 gives you a problem definition; a prototype in stage 3 shows the client something new; they change their mind; and you go back to update the requirements and the plan. This is normal, and a record of it in your process diary is strong evidence that you managed the project rather than just built it.</p>
+          <div class="callout tip">
+            <strong>Work at the right size</strong>
+            NESA gives the Enterprise Project focus area 30 indicative hours in Year 12 (&ldquo;indicative&rdquo; is NESA&rsquo;s word: it is a guide, not a fixed limit). Choose a problem you can genuinely finish. A small system that is defined, planned, tested and evaluated well beats an ambitious one that is half built.
           </div>
         </section>
+
+        <hr class="divider" />
+
+        <section id="stage-checklists">
+          <h2 class="syllabus-phase">One-Page Checklists for Each Stage</h2>
+          <p class="syllabus-concept"><em><strong>Use as you go</strong> What to produce, which tool to use and what evidence to keep</em></p>
+          <p>Tick items as you complete them. The ticks are saved in your own browser (nothing is sent anywhere), so you can come back to this page during the project. Tool names link to the <a href="toolkit.html">Course Toolkit</a> for NESA&rsquo;s notation. Your teacher or your school&rsquo;s task notification decides what is actually required, so treat this as a thorough starting list rather than a rule.</p>
+
+          <div class="pg-checklist" data-pg-check="s1">
+            <h3>Stage 1: Identifying and defining</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Done</th><th>Produce</th><th>Tool</th><th>Typical evidence</th></tr></thead>
+                <tbody>
+                  <tr><td><input type="checkbox" data-k="s1-1" aria-label="Problem definition done" /></td><td>A problem definition: who has the problem, what it is, why it matters and what is out of scope</td><td>Problem definition statement</td><td>One paragraph that the client has read and agreed</td></tr>
+                  <tr><td><input type="checkbox" data-k="s1-2" aria-label="Stakeholder list done" /></td><td>A list of the people involved: client, users, team members, anyone affected</td><td>Stakeholder table (<a href="#team-roles">roles</a>)</td><td>Names, roles and how you will contact each one</td></tr>
+                  <tr><td><input type="checkbox" data-k="s1-3" aria-label="Success criteria done" /></td><td>Success criteria you can measure, such as &ldquo;staff can enter an order in under a minute&rdquo;</td><td>Criteria list</td><td>A numbered list you will use again in stage 4</td></tr>
+                  <tr><td><input type="checkbox" data-k="s1-4" aria-label="Initial research done" /></td><td>First research into the problem and existing solutions</td><td>Interview or survey (<a href="#requirements-gathering">templates</a>)</td><td>Questions, notes or responses, and what you learned</td></tr>
+                  <tr><td><input type="checkbox" data-k="s1-5" aria-label="Constraints done" /></td><td>Constraints: time, money, skills, hardware, software, privacy</td><td>Constraints list</td><td>A short table that feeds the <a href="#feasibility">feasibility check</a></td></tr>
+                  <tr><td><input type="checkbox" data-k="s1-6" aria-label="Approach chosen" /></td><td>A chosen development approach with reasons</td><td><a href="#approach-chooser">Approach chooser</a></td><td>Two or three sentences justifying the choice</td></tr>
+                  <tr><td><input type="checkbox" data-k="s1-7" aria-label="Diary started" /></td><td>The first process diary entry</td><td><a href="#process-diary-practice">Process diary template</a></td><td>A dated entry, made before you start building</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="pg-checklist" data-pg-check="s2">
+            <h3>Stage 2: Researching and planning</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Done</th><th>Produce</th><th>Tool</th><th>Typical evidence</th></tr></thead>
+                <tbody>
+                  <tr><td><input type="checkbox" data-k="s2-1" aria-label="Requirements list done" /></td><td>A prioritised requirements list separating needs from wants</td><td><a href="#needs-wants">MoSCoW table</a></td><td>Requirements the client has seen and agreed</td></tr>
+                  <tr><td><input type="checkbox" data-k="s2-2" aria-label="Gantt chart done" /></td><td>A dated schedule with dependencies and milestones</td><td><a href="toolkit.html#gantt-charts">Gantt chart</a></td><td>The chart, updated as work is done</td></tr>
+                  <tr><td><input type="checkbox" data-k="s2-3" aria-label="Action plan done" /></td><td>A time/task action plan for the next few weeks</td><td><a href="#action-plans">Action plan template</a></td><td>Tasks, owners, due dates and status</td></tr>
+                  <tr><td><input type="checkbox" data-k="s2-4" aria-label="Budget done" /></td><td>A budget of time, money and resources</td><td><a href="#budgets">Budget template</a></td><td>Itemised costs with a stated contingency</td></tr>
+                  <tr><td><input type="checkbox" data-k="s2-5" aria-label="Design documents done" /></td><td>Design documents for the parts of the system that need them</td><td><a href="toolkit.html#dfd">DFD</a>, <a href="toolkit.html#system-flowcharts">system flowchart</a>, <a href="toolkit.html#decision-trees">decision tree</a>, <a href="toolkit.html#storyboards">storyboard</a>, <a href="toolkit.html#data-dictionary">data dictionary</a></td><td>Diagrams drawn in NESA notation</td></tr>
+                  <tr><td><input type="checkbox" data-k="s2-6" aria-label="Risk register done" /></td><td>A risk register with a response for each serious risk</td><td><a href="#risk-register">Risk register template</a></td><td>Risks rated by likelihood and consequence</td></tr>
+                  <tr><td><input type="checkbox" data-k="s2-7" aria-label="Feasibility done" /></td><td>A feasibility check that the plan can really be delivered</td><td><a href="#feasibility">Feasibility checklist</a></td><td>A yes, no or &ldquo;with changes&rdquo; for each check, with reasons</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="pg-checklist" data-pg-check="s3">
+            <h3>Stage 3: Producing and implementing</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Done</th><th>Produce</th><th>Tool</th><th>Typical evidence</th></tr></thead>
+                <tbody>
+                  <tr><td><input type="checkbox" data-k="s3-1" aria-label="Working version done" /></td><td>Working versions of the solution, built in planned steps</td><td>Your development approach; a <a href="enterprise-project.html#requirements-tools">prototype</a> where it helps</td><td>Dated versions with a version history</td></tr>
+                  <tr><td><input type="checkbox" data-k="s3-2" aria-label="Client check-ins done" /></td><td>Regular check-ins with the client</td><td>Meeting notes, feedback log</td><td>What the client said and what you changed</td></tr>
+                  <tr><td><input type="checkbox" data-k="s3-3" aria-label="Diary kept" /></td><td>Process diary entries at regular intervals</td><td><a href="toolkit.html#process-diaries">Process diary</a></td><td>Entries covering all eight items NESA lists</td></tr>
+                  <tr><td><input type="checkbox" data-k="s3-4" aria-label="Implementation plan done" /></td><td>An implementation plan with a preferred changeover method</td><td><a href="#implementation-plan-template">Implementation plan template</a></td><td>Method, dates, responsibilities and a fallback</td></tr>
+                  <tr><td><input type="checkbox" data-k="s3-5" aria-label="Training done" /></td><td>Training and documentation for the people who will use and maintain it</td><td><a href="#training-documentation">Training and documentation checklist</a></td><td>A user guide, a quick reference and a training outline</td></tr>
+                  <tr><td><input type="checkbox" data-k="s3-6" aria-label="Plan updated" /></td><td>An updated Gantt chart and risk register</td><td>Gantt chart (percentage complete), risk register</td><td>Actual times beside estimated times</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="pg-checklist" data-pg-check="s4">
+            <h3>Stage 4: Testing and evaluating</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Done</th><th>Produce</th><th>Tool</th><th>Typical evidence</th></tr></thead>
+                <tbody>
+                  <tr><td><input type="checkbox" data-k="s4-1" aria-label="Test plan done" /></td><td>A test plan written before testing starts</td><td><a href="#test-plan">Test plan template</a></td><td>Tests with expected results worked out in advance</td></tr>
+                  <tr><td><input type="checkbox" data-k="s4-2" aria-label="Tests run" /></td><td>Test results, with failures fixed and retested</td><td>Normal, boundary and erroneous data; <a href="toolkit.html#testing-methods">NESA&rsquo;s testing methods</a></td><td>A results table with the actual result and a pass or fail</td></tr>
+                  <tr><td><input type="checkbox" data-k="s4-3" aria-label="Client trial done" /></td><td>A client trial and their sign-off or list of changes</td><td>Acceptance testing</td><td>Client comments and your response</td></tr>
+                  <tr><td><input type="checkbox" data-k="s4-4" aria-label="Evaluation done" /></td><td>An evaluation of the solution and of your own process against the success criteria</td><td><a href="#evaluation-maintenance">Evaluation table</a></td><td>Each criterion judged, with evidence and a next step</td></tr>
+                  <tr><td><input type="checkbox" data-k="s4-5" aria-label="Maintenance plan done" /></td><td>Notes on how the system will be maintained and improved</td><td>Maintenance notes</td><td>Who does what, how often and how a fault is reported</td></tr>
+                  <tr><td><input type="checkbox" data-k="s4-6" aria-label="Final reflection done" /></td><td>A final reflective entry in the process diary</td><td><a href="#process-diary-practice">Process diary</a></td><td>What went well, what you would change, what you learned</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p class="pg-clear-wrap"><button type="button" class="btn btn-outline pg-clear" data-pg-reset hidden>Clear all ticks</button></p>
+
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            The four stage names are NESA&rsquo;s own, so use them. If an exam question asks how a project should be managed, organise your answer by stage and name a specific tool and piece of evidence for each, rather than writing a general paragraph about &ldquo;planning&rdquo;.
+          </div>
+        </section>
+
+        <div class="quiz" data-quiz="pg-1"></div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  PART 2: DEVELOPMENT APPROACH                          -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Part 2</span>
+          <span class="part-name">Choosing a development approach</span>
+        </div>
+
+        <aside class="topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <p>NESA names five development approaches: waterfall (structured), agile, prototyping, end-user and outsourcing. No approach is best in general. The right one depends on your client, your requirements, your team, your time and your budget, and a good project report says which of those facts drove the choice.</p>
+          <p class="breakout-question"><span class="bq-lead">Ask yourself</span> If your client could only be reached at the start and the end of the project, which approach would worry you most, and why?</p>
+        </aside>
+
+        <section id="approach-chooser">
+          <h2 class="syllabus-phase">Approach Chooser</h2>
+          <p class="syllabus-concept"><em><strong>Explore and apply</strong> Answer five questions about your project to see which approaches fit, and why</em></p>
+          <p>This chooser turns the usual rules of thumb into a score. Answer the five questions about <em>your</em> project. Each answer adds points to each approach, and the result explains which of your answers pointed towards the top choice and which ones are a risk you would need to manage. It is a thinking aid built on common project-management advice, not a NESA rule, and real projects often mix approaches. The theory behind each approach is on the <a href="enterprise-project.html#development-approaches">Enterprise Project</a> page.</p>
+
+          <noscript><div class="callout warning"><strong>JavaScript is off</strong> The interactive chooser needs JavaScript. The comparison table in the next section gives the same advice in a table.</div></noscript>
+
+          <div class="pg-chooser" id="pg-chooser" data-pg-chooser>
+            <form class="pg-chooser-form" aria-label="Development approach chooser" onsubmit="return false">
+              <fieldset class="pg-q" data-q="client">
+                <legend><span class="pg-qn">1</span> How available is your client?</legend>
+                <label><input type="radio" name="client" value="high" /> <span>Weekly or more: they can review work and answer questions quickly</span></label>
+                <label><input type="radio" name="client" value="some" /> <span>Occasionally: a few meetings across the project</span></label>
+                <label><input type="radio" name="client" value="low" /> <span>Rarely: mainly at the start and the end</span></label>
+              </fieldset>
+              <fieldset class="pg-q" data-q="reqs">
+                <legend><span class="pg-qn">2</span> How stable are the requirements?</legend>
+                <label><input type="radio" name="reqs" value="stable" /> <span>Clear and unlikely to change</span></label>
+                <label><input type="radio" name="reqs" value="evolving" /> <span>Mostly clear, but some parts will probably change</span></label>
+                <label><input type="radio" name="reqs" value="unclear" /> <span>Unclear: the client will only know once they see something</span></label>
+              </fieldset>
+              <fieldset class="pg-q" data-q="build">
+                <legend><span class="pg-qn">3</span> Who will build the system?</legend>
+                <label><input type="radio" name="build" value="team" /> <span>Our team, and we have the skills we need</span></label>
+                <label><input type="radio" name="build" value="users" /> <span>The people who will use it, with tools they already know (for example spreadsheets)</span></label>
+                <label><input type="radio" name="build" value="external" /> <span>A specialist or another company, because we lack a key skill</span></label>
+              </fieldset>
+              <fieldset class="pg-q" data-q="time">
+                <legend><span class="pg-qn">4</span> How firm is the deadline?</legend>
+                <label><input type="radio" name="time" value="fixed" /> <span>Fixed date and everything must be included</span></label>
+                <label><input type="radio" name="time" value="scope" /> <span>Fixed date, but we can drop lower-priority features</span></label>
+                <label><input type="radio" name="time" value="flexible" /> <span>Flexible: quality matters more than the date</span></label>
+              </fieldset>
+              <fieldset class="pg-q" data-q="budget">
+                <legend><span class="pg-qn">5</span> What is the budget?</legend>
+                <label><input type="radio" name="budget" value="tight" /> <span>Very little or none</span></label>
+                <label><input type="radio" name="budget" value="moderate" /> <span>Moderate: some money for tools or help</span></label>
+                <label><input type="radio" name="budget" value="generous" /> <span>Enough to pay for specialist work</span></label>
+              </fieldset>
+              <button type="button" class="btn btn-outline pg-chooser-reset" data-pg-chooser-reset>Start again</button>
+            </form>
+            <div class="pg-result" role="status" aria-live="polite" data-pg-result>
+              <p class="pg-result-empty">Answer all five questions to see a recommendation.</p>
+            </div>
+          </div>
+
+          <div class="callout tip">
+            <strong>Try this</strong>
+            Answer the chooser for a school canteen ordering app with an available canteen manager and unclear requirements. Then change only question 4 to &ldquo;fixed date and everything must be included&rdquo;. Does the top choice change, and what does the result tell you to watch out for?
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="approach-profiles">
+          <h2 class="syllabus-phase">The Five Approaches Compared</h2>
+          <p class="syllabus-concept"><em><strong>Explore and apply</strong> How each approach works, when it fits and when it goes wrong</em></p>
+
+          <h3>Side by side</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Approach</th><th>How it works</th><th>Fits best when</th><th>Goes wrong when</th></tr></thead>
+              <tbody>
+                <tr><td>Waterfall (structured)</td><td>Stages are completed in order: requirements, design, development, testing, installation, maintenance. Each is documented and signed off before the next begins.</td><td>Requirements are clear and stable, the client is hard to reach, and a fixed date and scope must be met.</td><td>The client changes their mind late. A working system may appear only near the end, so misunderstandings are found late too.</td></tr>
+                <tr><td>Agile</td><td>Short cycles (sprints in Scrum) each plan, build, test and review a small working piece. The client gives feedback every cycle and work is taken from a prioritised backlog.</td><td>Requirements will evolve, the client can give frequent feedback and the team can adapt the plan.</td><td>The client is rarely available, the scope and price must be fixed in advance, or the team drops the planning and records altogether.</td></tr>
+                <tr><td>Prototyping</td><td>A quick, cut-down version is built early so users can react to it, then refined or replaced.</td><td>Nobody can describe what they want until they see something, especially for screens and workflows.</td><td>The prototype is mistaken for the finished product, or the client keeps asking for &ldquo;one more version&rdquo; and the project never ends.</td></tr>
+                <tr><td>End-user development</td><td>The people who will use the system build or adapt it themselves, using accessible tools such as spreadsheets or simple app builders.</td><td>The need is small and specific, the users know their own process best and the budget is tight.</td><td>The system grows beyond what the tool can safely do, the builder leaves and nobody understands it, or data security and backups are ignored.</td></tr>
+                <tr><td>Outsourcing</td><td>Another organisation, sometimes in another country, is paid to build part or all of the system to an agreed specification.</td><td>You lack a key skill, there is budget, and the requirements can be written down clearly.</td><td>The specification is vague, communication is slow, or the client loses control of quality, data and the schedule.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Waterfall and agile in motion</h3>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Animated diagram</span></p>
+              <h4 class="figure-title">Waterfall and agile: when does the client get a working system?</h4>
+              <p class="figure-lead">The same project delivered two ways, with the amount of working system the client can use shown week by week.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--anim"><div class="anim" data-anim="waterfall-agile"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Waterfall delivers everything at the end; agile delivers usable parts along the way.</li><li>A late change is expensive in waterfall and is just the next backlog item in agile.</li></ul><p class="figure-controls">Choose Waterfall or Agile with the tabs. Step with the arrow buttons or keys, play or pause with Space.</p></div>
+              <p class="figure-try"><strong>Try this</strong>Which approach would you want for a system that must be signed off against a written specification? Which for one where the client says &ldquo;I&rsquo;ll know it when I see it&rdquo;?</p>
+            </div>
+          </figure>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Process diagram</span></p>
+              <h4 class="figure-title">An agile sprint cycle</h4>
+              <p class="figure-lead">A prioritised backlog feeds a short sprint that ends in a working increment, a review with the client and a retrospective.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="agile-sprint"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>The client sees working software at every sprint review.</li><li>The retrospective improves how the team works, not only what it builds.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Write the first five backlog items for a club booking app, in priority order.</p>
+            </div>
+          </figure>
+
+          <h3>Combining approaches</h3>
+          <p>Real projects rarely use one approach in pure form. A common pattern is a short waterfall-style start (define the problem and agree the scope), agile sprints for the build, and prototyping inside the sprints to test screens with the client. A school project might be end-user built (the club secretary&rsquo;s spreadsheet) with outsourced help for one difficult feature. Whatever you choose, name it, give the reasons drawn from your own project and state the drawback you are accepting and how you will manage it.</p>
+          <div class="callout warning">
+            <strong>Common mistakes</strong>
+            Choosing agile because it sounds modern, with no client feedback in the plan. Choosing waterfall and then having no written requirements to sign off. Treating a prototype as the finished system. Describing an approach in general terms without a single reason from your own project.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            NESA&rsquo;s syllabus asks you to &ldquo;explore and apply the most suitable development approach&rdquo;. In an exam scenario, name one approach, give two reasons taken from the scenario (client availability, stability of requirements, budget, skills, deadline) and acknowledge one weakness. Question 24 of the 2025 HSC asked about offshore development and freelance work, which links to outsourcing and end-user development in this list.
+          </div>
+        </section>
+
+        <div class="quiz" data-quiz="pg-2"></div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  PART 3: PLANNING TOOLS                                -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Part 3</span>
+          <span class="part-name">Planning tools in practice</span>
+        </div>
+
+        <aside class="topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <p>The <a href="toolkit.html#gantt-charts">Toolkit</a> shows NESA&rsquo;s notation for a Gantt chart and a process diary. This part is about using them: how to build a schedule that holds up, how to break the next fortnight into tasks, how to write diary entries that count as evidence, and how to put a price on a project.</p>
+          <p class="breakout-question"><span class="bq-lead">Ask yourself</span> If you lost a week to illness, which tasks in your plan could slip without moving your final date, and which could not?</p>
+        </aside>
+
+        <section id="gantt-practice">
+          <h2 class="syllabus-phase">Gantt Chart Walkthrough</h2>
+          <p class="syllabus-concept"><em><strong>Time and resource management</strong> Dependencies, milestones, the critical path and percentage complete</em></p>
+
+          <h3>Start from the tasks, not the chart</h3>
+          <p>The chart is the last step. First list the tasks in words a stranger would understand (&ldquo;Interview the canteen manager&rdquo;, not &ldquo;Phase 1&rdquo;), estimate each in days, and ask of every task: <em>what must be finished before this can start?</em> The answers are your dependencies. NESA&rsquo;s required elements are on the <a href="toolkit.html#gantt-charts">Toolkit Gantt page</a>: self-explanatory task names, estimated times, clearly shown dependencies, a dated time scale and marked milestones. The example below groups a library booking app project under NESA&rsquo;s four stage names.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Gantt chart</span></p>
+              <h4 class="figure-title">A project plan grouped by stage</h4>
+              <p class="figure-lead">Seven weeks of work, in the four stages, with two milestones.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="gantt-project"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Each task starts when the one before it finishes, shown by the elbow arrows.</li><li>The two milestones (specifications signed off, client evaluation) are points in time, not tasks.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Which task would you split into smaller pieces if you wanted to track progress week by week?</p>
+            </div>
+          </figure>
+
+          <h3>The critical path, explained simply</h3>
+          <p>Some tasks can run at the same time; some cannot. Follow the dependencies from the first task to the last and add up the days along each route. The <strong>longest route</strong> decides the earliest possible finish date. That route is called the <strong>critical path</strong>: a delay to any task on it delays the whole project. Tasks off the path have <strong>float</strong>, spare days they can slip without moving the end date. (The critical path is a common project-management technique. NESA&rsquo;s Course Specifications do not name it, but it explains why some delays matter and others do not.)</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Gantt chart</span></p>
+              <h4 class="figure-title">The critical path of a canteen ordering app</h4>
+              <p class="figure-lead">Five tasks and a milestone, with the longest chain of dependent tasks in red and one task that has float.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="pg-critical-path"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Designing the database (B) takes 3 days and designing the screens (C) takes 5. The build (D) needs both, so it waits for C.</li><li>A, C, D and E add up to 16 days: that is the critical path. B has 2 days of float.</li><li>If B slips by 2 days nothing changes. If C slips by 1 day, the handover moves by 1 day.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Testing (E) is cut from 3 days to 2. What is the new finish date? Then suppose C grows from 5 to 8 days. Which task is now off the critical path?</p>
+            </div>
+          </figure>
+          <details class="pg-answer">
+            <summary>Answers</summary>
+            <p>Cutting E to 2 days gives 2 + 5 + 6 + 2 = 15 days. If C grows to 8 days, the route A, C, D, E becomes 2 + 8 + 6 + 3 = 19 days and is still critical, while B (3 days) gets even more float. B never becomes critical unless it grows past the length of C.</p>
+          </details>
+
+          <h3>Milestones and percentage complete</h3>
+          <ul>
+            <li><strong>Milestones</strong> are decision or delivery points: &ldquo;Requirements approved&rdquo;, &ldquo;Prototype shown to client&rdquo;, &ldquo;Testing complete&rdquo;. Add one at the end of each stage and treat it as a checkpoint: are we really done?</li>
+            <li><strong>Percentage complete</strong> shows how much of a task is finished. Be honest: count finished work, not time spent. A task is 80% complete when 80% of the work is done, not when 80% of the days have passed.</li>
+            <li><strong>Actual versus estimated</strong>: NESA says the chart should be updated during development. Keep the original plan and note the actual dates beside it. The differences are the material for your diary reflections and your evaluation.</li>
+          </ul>
+
+          <h3>Keeping the chart alive</h3>
+          <ol>
+            <li>Update the chart at the same time each week, and note the date of the update.</li>
+            <li>Move any task that has slipped, then check whether the critical path changed.</li>
+            <li>If the end date moves, decide what to do: drop a low-priority requirement (see <a href="#needs-wants">MoSCoW</a>), add time, or ask the client.</li>
+            <li>Record the reason in your process diary.</li>
+          </ol>
+          <div class="callout warning">
+            <strong>Common mistakes</strong>
+            Estimating every task at &ldquo;a week&rdquo;. Leaving out testing, training and documentation, which always take longer than expected. Planning to work every day with no spare time. Never updating the chart, so it shows the plan and not what happened.
+          </div>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            Question 22 of the 2025 HSC asked about project management tools. When a question gives you tasks and durations, work out the dependencies first, then place the bars, mark a milestone and say who is doing each task. Note the longest chain: it explains which delays matter.
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="action-plans">
+          <h2 class="syllabus-phase">Time/Task Action Plans</h2>
+          <p class="syllabus-concept"><em><strong>Researching and planning</strong> Turning the Gantt chart into what each person does this week</em></p>
+          <p>A Gantt chart shows the whole project. An action plan is the short-range view: the tasks for the next week or two, who owns each, when it is due and whether it is done. Keep it beside your Gantt chart, and rewrite it each week from the chart. One task, one owner, one date: if two people own a task, nobody does.</p>
+          <div class="pg-template" data-pg-template>
+            <div class="pg-template-head"><span class="pg-template-title">Template: weekly action plan</span><button type="button" class="pg-copy" hidden>Copy as text</button></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Task</th><th>Owner</th><th>Due</th><th>Depends on</th><th>Status</th><th>Notes</th></tr></thead>
+                <tbody>
+                  <tr class="pg-eg"><td>Draw Level 0 DFD for canteen ordering</td><td>Ana</td><td>Tue 4 Aug</td><td>Interview notes</td><td>In progress</td><td>Check flow labels with the manager</td></tr>
+                  <tr class="pg-eg"><td>Build the Menu and Orders tables</td><td>Ben</td><td>Thu 6 Aug</td><td>Data dictionary</td><td>Not started</td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="callout tip">
+            <strong>Good tasks are small and checkable</strong>
+            &ldquo;Work on database&rdquo; is not a task. &ldquo;Build the Menu and Orders tables and enter five test records&rdquo; is: you can tell whether it is finished. If a task takes longer than a few days, split it.
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="process-diary-practice">
+          <h2 class="syllabus-phase">Process Diary: Templates and Good vs Weak Entries</h2>
+          <p class="syllabus-concept"><em><strong>Documenting progress</strong> NESA&rsquo;s eight items, a copyable template and what separates a strong entry from a weak one</em></p>
+          <p>The <a href="toolkit.html#process-diaries">Toolkit</a> lists the eight items NESA says a process diary entry should include. Here is a template you can copy, then a weak and a strong entry for the same afternoon of work. The diary is also your best evidence that the work is yours (see <a href="#academic-integrity">Part 7</a>), so make each entry specific enough that only the person who did the work could have written it.</p>
+          <div class="pg-template" data-pg-template>
+            <div class="pg-template-head"><span class="pg-template-title">Template: process diary entry</span><button type="button" class="pg-copy" hidden>Copy as text</button></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Item</th><th>Prompt</th><th>Your entry</th></tr></thead>
+                <tbody>
+                  <tr><td>Date</td><td>The day you write it, and the session it covers</td><td></td></tr>
+                  <tr><td>Person</td><td>Your name (in a team, each member writes their own)</td><td></td></tr>
+                  <tr><td>Progress since the last entry</td><td>What is different now?</td><td></td></tr>
+                  <tr><td>Tasks achieved</td><td>Which tasks from the action plan are finished?</td><td></td></tr>
+                  <tr><td>Stumbling blocks and how they were managed</td><td>What went wrong, how did you find out, what did you do, did it work?</td><td></td></tr>
+                  <tr><td>Possible approaches for upcoming tasks</td><td>Options for the next step and which you lean towards</td><td></td></tr>
+                  <tr><td>Reflective comments</td><td>What did you learn? What would you do differently?</td><td></td></tr>
+                  <tr><td>Resources used</td><td>Software, data, people, websites, tools (including any AI tool and what you used it for)</td><td></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="pg-compare">
+            <div class="pg-weak">
+              <h4>Weak entry</h4>
+              <p><em>Thursday.</em> Worked on the project. Did the database. Had some problems but fixed them. Will do the screens next.</p>
+              <ul><li>No name, no session detail, no task named.</li><li>&ldquo;Some problems&rdquo; hides the evidence of managing them.</li><li>No options, no reflection, no resources.</li></ul>
+            </div>
+            <div class="pg-strong">
+              <h4>Strong entry</h4>
+              <p><em>Thu 6 August, period 5 &ndash; Ben Tran.</em> Since Tuesday I built the Menu and Orders tables and entered five test records (action plan tasks 4 and 5). Prices displayed as 5.5 instead of $5.50, so I changed the field format to $#.## from the data dictionary and re-entered the data. Next I have to choose between a drop-down and option buttons for picking items; I lean towards a drop-down because the manager has 40 items. If I had tested one record before entering five, I would have found the format problem sooner. Used: database software, Ana&rsquo;s data dictionary, the manager&rsquo;s menu list.</p>
+              <ul><li>Every one of NESA&rsquo;s eight items is present.</li><li>The problem, the fix and the result are all stated.</li><li>The reflection leads to a change in how the work is done.</li></ul>
+            </div>
+          </div>
+          <div class="callout warning">
+            <strong>Common mistakes</strong>
+            Writing all the entries the night before the project is due (dates that do not match your version history give it away). Recording only successes. Copying a teammate&rsquo;s entry. Leaving out the resources, including any AI tool you used.
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="budgets">
+          <h2 class="syllabus-phase">Budgets</h2>
+          <p class="syllabus-concept"><em><strong>Researching and planning</strong> Costing time, hardware, software, training and ongoing use</em></p>
+          <p>A budget is a list of what the project will cost, added up, with a reserve for surprises. For a school project the main cost is <em>time</em>, and it is still worth pricing it, because a real client would be charged for it. Include the costs that come <em>after</em> the build: licences renew, cloud storage is billed monthly and people need training. A budget with only the build cost is a common weakness.</p>
+          <div class="pg-template" data-pg-template>
+            <div class="pg-template-head"><span class="pg-template-title">Template and worked example: project budget</span><button type="button" class="pg-copy" hidden>Copy as text</button></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Item</th><th>Type</th><th>Basis</th><th>Cost ($)</th></tr></thead>
+                <tbody>
+                  <tr class="pg-eg"><td>Design and build time</td><td>Labour (one-off)</td><td>60 hours at $30 per hour</td><td>1800</td></tr>
+                  <tr class="pg-eg"><td>Testing and training time</td><td>Labour (one-off)</td><td>20 hours at $30 per hour</td><td>600</td></tr>
+                  <tr class="pg-eg"><td>Tablet for the canteen counter</td><td>Hardware (one-off)</td><td>Quote from supplier</td><td>450</td></tr>
+                  <tr class="pg-eg"><td>Database hosting</td><td>Ongoing (per year)</td><td>$12 per month</td><td>144</td></tr>
+                  <tr class="pg-eg"><td>Contingency</td><td>Reserve</td><td>10% of one-off costs (assumed)</td><td>285</td></tr>
+                  <tr class="pg-eg pg-total"><td colspan="3">Total for the first year</td><td>3279</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p><small>The figures are invented to show the layout. Use real quotes and rates for your own project, and state your assumptions.</small></p>
+          <p>In a spreadsheet, use <code>SUM</code> for the total and a formula such as <code>=0.1*SUM(D2:D4)</code> for the contingency so the total updates when a cost changes (see the <a href="toolkit.html#spreadsheet-software">spreadsheet functions</a> in the Toolkit). A <strong>contingency</strong> is money or time set aside for things you cannot predict; choose an allowance, say why, and use your risk register to justify it.</p>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            If a question asks how a budget helps manage a project, link it to decisions: it shows whether the project is affordable (feasibility), lets you compare options (for example build or outsource) and gives you a figure to check actual spending against.
+          </div>
+        </section>
+
+        <div class="quiz" data-quiz="pg-3"></div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  PART 4: CLIENT AND TEAM                               -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Part 4</span>
+          <span class="part-name">Working with a client and a team</span>
+        </div>
+
+        <aside class="topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <p>Most project trouble is about people, not technology: a client who wanted something different, a team member who assumed someone else was doing a task, two versions of a file with the same name. NESA lists negotiating user and client needs and wants, and working collaboratively, among the criteria you should select for managing a project.</p>
+          <p class="breakout-question"><span class="bq-lead">Ask yourself</span> What is the last thing you asked someone to do and were sure they understood, but they did something else? What would have prevented it?</p>
+        </aside>
+
+        <section id="requirements-gathering">
+          <h2 class="syllabus-phase">Gathering Requirements: Interview and Survey Templates</h2>
+          <p class="syllabus-concept"><em><strong>Applying tools</strong> Interviews and surveys to find out what the system must do and what limits it</em></p>
+          <p>A requirement is something the system must do or a limit it must respect. Interviews suit a small number of people whose answers you need in depth (the client, a key user). Surveys suit many people and simple answers. The syllabus lists both, with analytical reports, prototypes and presentations of research results (see the <a href="enterprise-project.html#requirements-tools">Enterprise Project page</a>). Whichever you use, plan the questions in advance and keep a record.</p>
+          <div class="callout info">
+            <strong>Ethics and privacy</strong>
+            If you interview or survey people, ask permission first, tell them why you are collecting the information and what you will do with it, keep responses secure and collect only what you need. Check your school&rsquo;s rules before surveying other students. The <a href="cybersecurity.html">Principles of Cybersecurity</a> page covers privacy and personal information in more depth.
+          </div>
+
+          <h3>Interview template</h3>
+          <div class="pg-template" data-pg-template>
+            <div class="pg-template-head"><span class="pg-template-title">Template: client interview guide</span><button type="button" class="pg-copy" hidden>Copy as text</button></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Topic</th><th>Open question to ask</th><th>What you are trying to learn</th><th>Answer and notes</th></tr></thead>
+                <tbody>
+                  <tr><td>The problem</td><td>What is not working now? Can you walk me through the last time it went wrong?</td><td>The real problem, in the client&rsquo;s own words</td><td></td></tr>
+                  <tr><td>The users</td><td>Who will use it, how often and on what devices?</td><td>Users, skills, accessibility needs</td><td></td></tr>
+                  <tr><td>The process</td><td>What happens from start to finish, and where does data come from and go?</td><td>Inputs for a DFD or system flowchart</td><td></td></tr>
+                  <tr><td>Must-haves</td><td>If it could only do three things, what would they be?</td><td>Priorities for the <a href="#needs-wants">MoSCoW table</a></td><td></td></tr>
+                  <tr><td>Limits</td><td>What are the deadline, budget, existing systems and rules we must respect?</td><td>Constraints for the <a href="#feasibility">feasibility check</a></td><td></td></tr>
+                  <tr><td>Success</td><td>How will you know it has worked?</td><td>Measurable success criteria</td><td></td></tr>
+                  <tr><td>Close</td><td>Is there anything I have not asked that I should have?</td><td>Missed needs</td><td></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p>Ask <em>open</em> questions (&ldquo;How do you take an order now?&rdquo;) rather than leading ones (&ldquo;You would like an app, wouldn&rsquo;t you?&rdquo;). Write your notes up the same day and send a short summary back to the client to confirm you understood.</p>
+
+          <h3>Survey template</h3>
+          <div class="pg-template" data-pg-template>
+            <div class="pg-template-head"><span class="pg-template-title">Template: short user survey</span><button type="button" class="pg-copy" hidden>Copy as text</button></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>#</th><th>Question</th><th>Answer type</th><th>Why you are asking</th></tr></thead>
+                <tbody>
+                  <tr class="pg-eg"><td>1</td><td>How often do you buy food from the canteen?</td><td>Choose one: never, weekly, most days, every day</td><td>Estimate how busy the system will be</td></tr>
+                  <tr class="pg-eg"><td>2</td><td>How do you usually pay?</td><td>Choose one: cash, card, phone, other</td><td>Decide which payment options to support</td></tr>
+                  <tr class="pg-eg"><td>3</td><td>How easy is it to order at recess now?</td><td>Rating from 1 (very hard) to 5 (very easy)</td><td>Baseline to compare with after the change</td></tr>
+                  <tr class="pg-eg"><td>4</td><td>What is the one thing you would change?</td><td>Short written answer</td><td>Ideas you did not think of</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p>Mix closed questions (easy to count, giving <strong>quantitative</strong> data) with one or two open ones (richer, <strong>qualitative</strong> data). Keep it short, test it on two people before sending it out, and record how many people you asked, because a summary is only as good as the sample behind it.</p>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            Write five interview questions for the manager of a local sports club who wants an online booking system. Which of your questions are open, and which requirement would each help you find?
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="needs-wants">
+          <h2 class="syllabus-phase">Negotiating Needs and Wants (MoSCoW)</h2>
+          <p class="syllabus-concept"><em><strong>Collaborating and managing criteria</strong> Sorting a long wish list into what the system must, should and could do</em></p>
+          <p>Clients usually want more than the time and money allow. NESA asks you to negotiate user and client <em>needs and wants</em>. A common technique for doing this is <strong>MoSCoW prioritisation</strong>. It is a widely used project-management method, not something NESA specifies, and the capital letters spell out the four categories (the lower-case o&rsquo;s are just there to make a word).</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Category</th><th>Meaning</th><th>Test</th></tr></thead>
+              <tbody>
+                <tr><td><strong>M</strong>ust have</td><td>The project fails without it</td><td>If we deliver everything else but not this, is the system useless?</td></tr>
+                <tr><td><strong>S</strong>hould have</td><td>Important, but there is a workaround for now</td><td>Would the client be unhappy but still able to operate?</td></tr>
+                <tr><td><strong>C</strong>ould have</td><td>Nice to have if time and money allow</td><td>Would it improve things a little?</td></tr>
+                <tr><td><strong>W</strong>on&rsquo;t have (this time)</td><td>Agreed as out of scope for now</td><td>Written down, so it is not forgotten or promised by accident</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pg-template" data-pg-template>
+            <div class="pg-template-head"><span class="pg-template-title">Template and worked example: requirements by priority</span><button type="button" class="pg-copy" hidden>Copy as text</button></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Requirement</th><th>Who asked</th><th>Priority</th><th>Reason</th></tr></thead>
+                <tbody>
+                  <tr class="pg-eg"><td>Students can order and pay before recess</td><td>Canteen manager</td><td>Must</td><td>The whole point of the system</td></tr>
+                  <tr class="pg-eg"><td>Orders print in the kitchen</td><td>Canteen manager</td><td>Must</td><td>Staff cannot fill orders without it</td></tr>
+                  <tr class="pg-eg"><td>Allergy warnings on menu items</td><td>Parent survey</td><td>Should</td><td>Safety-related; a printed sign is a stop-gap</td></tr>
+                  <tr class="pg-eg"><td>Loyalty points</td><td>Student survey</td><td>Could</td><td>Popular, but not needed to run the canteen</td></tr>
+                  <tr class="pg-eg"><td>Mobile app for iPhone and Android</td><td>Student survey</td><td>Won&rsquo;t</td><td>Out of scope for the budget; a mobile-friendly web page is enough</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <h3>How to negotiate</h3>
+          <ol>
+            <li>Ask &ldquo;what problem would this solve?&rdquo; for each request. A want often has a simpler need behind it.</li>
+            <li>Show the client the cost of each item in time and money, using your <a href="#gantt-practice">Gantt chart</a> and <a href="#budgets">budget</a>.</li>
+            <li>Offer options: &ldquo;We can add loyalty points if we drop the print-out, or keep the print-out and add loyalty points next term.&rdquo;</li>
+            <li>Get the agreed list confirmed in writing (an email is enough) and record it in your diary.</li>
+            <li>Treat changes after agreement as changes to the plan: what will move, and who agreed?</li>
+          </ol>
+          <p>Uncontrolled additions during a project are known as <strong>scope creep</strong>. A signed-off priority list gives you a polite, factual way to say &ldquo;yes, and this is what it will displace&rdquo;.</p>
+          <div class="callout warning">
+            <strong>Common mistakes</strong>
+            Marking everything &ldquo;Must&rdquo;. Agreeing to a new feature in a hallway conversation without updating the plan. Confusing what the client <em>asked for</em> with what the client <em>needs</em>.
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="team-collaboration">
+          <h2 class="syllabus-phase">Collaboration, Version History and Roles</h2>
+          <p class="syllabus-concept"><em><strong>Working collaboratively</strong> Online collaboration tools, keeping track of versions and agreeing who does what</em></p>
+
+          <h3>Online collaboration tools</h3>
+          <p>Online collaboration is on NESA&rsquo;s list of tools that support design and development. What matters is what the tool lets you do, not its brand:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Need</th><th>What to look for</th><th>Good practice</th></tr></thead>
+              <tbody>
+                <tr><td>Shared documents and files</td><td>Cloud storage where several people can edit, with comments and suggestions</td><td>One shared folder with an agreed structure and file-naming pattern</td></tr>
+                <tr><td>Version history</td><td>The tool records who changed what and when, and lets you restore an earlier version</td><td>Name major versions (for example <code>booking-form_v0.3_2026-08-06</code>) and note what changed</td></tr>
+                <tr><td>Task tracking</td><td>A board or list showing tasks, owners and status</td><td>Match it to your action plan so you keep one source of truth</td></tr>
+                <tr><td>Communication</td><td>A place to talk that keeps a searchable record</td><td>Agree how quickly people should reply, and summarise decisions in writing</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Cloud document platforms such as Google Workspace and Microsoft 365 keep a version history, and it can support your process diary: the timestamps show when work happened and who did it. Take regular backups anyway, and make sure your team has the <em>right to</em> use each shared file (a client&rsquo;s data should go only where they have agreed).</p>
+
+          <h3 id="team-roles">Roles</h3>
+          <p>NESA asks you to outline the role of the participants in a system, and a team needs roles too. Small teams share roles, but every task should still have one accountable person.</p>
+          <div class="pg-template" data-pg-template>
+            <div class="pg-template-head"><span class="pg-template-title">Template: team roles</span><button type="button" class="pg-copy" hidden>Copy as text</button></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Role</th><th>Responsible for</th><th>Name</th></tr></thead>
+                <tbody>
+                  <tr class="pg-eg"><td>Client (or client representative)</td><td>Explaining the problem, answering questions, giving feedback and approving requirements and the final system</td><td>Canteen manager</td></tr>
+                  <tr class="pg-eg"><td>Project manager</td><td>The plan, the Gantt chart, the action plan, chasing progress and reporting to the client</td><td></td></tr>
+                  <tr class="pg-eg"><td>Analyst or designer</td><td>Requirements, diagrams, data dictionary, storyboards</td><td></td></tr>
+                  <tr class="pg-eg"><td>Developer</td><td>Building the solution</td><td></td></tr>
+                  <tr class="pg-eg"><td>Tester</td><td>The test plan and running the tests</td><td></td></tr>
+                  <tr class="pg-eg"><td>Documenter and trainer</td><td>User guide, training and the maintenance notes</td><td></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p>In Scrum, one common agile framework, the client&rsquo;s voice is a <em>product owner</em> who orders the backlog, and a <em>scrum master</em> helps the team follow the process. Those role names belong to Scrum, not to every project. If you work alone, you still play every role: say so, and note in your diary which hat you are wearing.</p>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            When asked how collaboration improves a project, give a tool, a benefit and a risk: for example, shared documents with version history let the team work at the same time and recover mistakes, but only if everyone follows the same file-naming and permissions rules.
+          </div>
+        </section>
+
+        <div class="quiz" data-quiz="pg-4"></div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  PART 5: RISK, FEASIBILITY, IMPLEMENTATION             -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Part 5</span>
+          <span class="part-name">Risk, feasibility and implementation</span>
+        </div>
+
+        <aside class="topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <p>Before you commit weeks of work, ask two hard questions: what could go wrong, and can this really be delivered? After the build, ask a third: how will people actually start using it? NESA lists risk analysis, training, the preferred implementation method and testing the feasibility of the plan as parts of an implementation plan.</p>
+          <p class="breakout-question"><span class="bq-lead">Ask yourself</span> What is the single biggest risk to finishing your project on time, and what have you already done about it?</p>
+        </aside>
+
+        <section id="risk-register">
+          <h2 class="syllabus-phase">Risk Register</h2>
+          <p class="syllabus-concept"><em><strong>Risk analysis</strong> Listing what could go wrong, rating it and deciding what to do</em></p>
+          <p>A <strong>risk register</strong> is a table of things that might go wrong. It is a common project-management tool, not one that NESA specifies. For each risk you rate how <em>likely</em> it is and how <em>serious</em> the consequence would be, then decide on a response. Rating each on a 1 to 3 or 1 to 5 scale and multiplying them gives a score for ranking; the <a href="cybersecurity.html">Cybersecurity</a> page shows a full 5 by 5 risk matrix used in the same way. Whatever scale you choose, say what the numbers mean.</p>
+          <div class="pg-template" data-pg-template>
+            <div class="pg-template-head"><span class="pg-template-title">Template and worked example: risk register (scale 1 low to 3 high)</span><button type="button" class="pg-copy" hidden>Copy as text</button></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>#</th><th>Risk</th><th>Likelihood</th><th>Consequence</th><th>Score</th><th>Response</th><th>Owner</th></tr></thead>
+                <tbody>
+                  <tr class="pg-eg"><td>1</td><td>Client is unavailable for feedback for two weeks</td><td>2</td><td>3</td><td>6</td><td>Reduce: agree fixed meeting times now; keep a prototype ready to show</td><td>Project manager</td></tr>
+                  <tr class="pg-eg"><td>2</td><td>Team member absent during the build</td><td>2</td><td>2</td><td>4</td><td>Reduce: share files and notes so another person can continue</td><td>Everyone</td></tr>
+                  <tr class="pg-eg"><td>3</td><td>Database file is lost or corrupted</td><td>1</td><td>3</td><td>3</td><td>Reduce: automatic cloud backup plus a weekly copy</td><td>Developer</td></tr>
+                  <tr class="pg-eg"><td>4</td><td>Requirements grow after sign-off (scope creep)</td><td>3</td><td>2</td><td>6</td><td>Avoid: signed MoSCoW list; changes go through the client meeting</td><td>Project manager</td></tr>
+                  <tr class="pg-eg"><td>5</td><td>Testing finds a serious fault two days before handover</td><td>2</td><td>3</td><td>6</td><td>Reduce: test early and often; keep a contingency of time</td><td>Tester</td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <h3>Choosing a response</h3>
+          <ul>
+            <li><strong>Avoid</strong> the risk by changing the plan (drop a feature that depends on a tool nobody has used).</li>
+            <li><strong>Reduce</strong> its likelihood or its consequence (backups, early testing, a second person who knows the task).</li>
+            <li><strong>Transfer</strong> it to someone better placed to carry it (a supplier who guarantees their part).</li>
+            <li><strong>Accept</strong> it and set aside time or money for it (your contingency), when the cost of a response is more than the risk.</li>
+          </ul>
+          <p>Review the register whenever you update the Gantt chart. Add new risks as you find them, and mark risks that have passed. Note the ones that actually happened and how you handled them: that is diary material.</p>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            Risk analysis is on NESA&rsquo;s list for implementation plans. A strong answer names a specific risk from the scenario, rates it, and gives a response that is realistic for the organisation, rather than a general statement such as &ldquo;back up your data&rdquo;.
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="feasibility">
+          <h2 class="syllabus-phase">Feasibility Checklist</h2>
+          <p class="syllabus-concept"><em><strong>Testing the plan</strong> Checking that the project can be done before you commit to it</em></p>
+          <p>NESA asks you to &ldquo;develop an implementation plan and test its feasibility&rdquo;. A feasibility check asks whether a plan can be delivered. A common way to organise it is to look at four areas (some frameworks add a fifth, legal). This is a common framework, not a NESA list.</p>
+          <div class="pg-template" data-pg-template>
+            <div class="pg-template-head"><span class="pg-template-title">Template: feasibility checklist</span><button type="button" class="pg-copy" hidden>Copy as text</button></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Area</th><th>Question</th><th>Evidence</th><th>Yes, no or with changes</th></tr></thead>
+                <tbody>
+                  <tr><td>Technical</td><td>Do we have, or can we get, the hardware, software and skills? Will it work with the systems already in use?</td><td>Skills audit; tool trial; compatibility check</td><td></td></tr>
+                  <tr><td>Economic</td><td>Do the benefits justify the costs, including ongoing costs?</td><td><a href="#budgets">Budget</a>; expected savings or benefits</td><td></td></tr>
+                  <tr><td>Schedule</td><td>Can it be finished by the deadline with the people available?</td><td><a href="#gantt-practice">Gantt chart</a>; critical path; <a href="#risk-register">risk register</a></td><td></td></tr>
+                  <tr><td>Operational</td><td>Will the people who need it actually use it? Does it suit how they work?</td><td>Interviews, prototype feedback, training plan</td><td></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p>A &ldquo;no&rdquo; is not a failure: it is what the check is for. It tells you to change the plan, for example by reducing the scope, choosing a simpler tool, or asking for more time, before the work is done rather than after. Write down what you changed as a result and keep it in your diary.</p>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            A netball club wants a website that takes online registrations and payments. Their volunteer has never built a website and there is no budget. Which of the four areas is the biggest concern, and how could the plan be changed?
+          </div>
+          <details class="pg-answer">
+            <summary>Model answer</summary>
+            <p>Technical and economic feasibility are the main concerns: the volunteer lacks the skills and payment handling usually has a cost and a security responsibility. The plan could be changed by using an existing registration service or a simple form instead of building payments, moving to end-user development with a tool the volunteer already knows, and putting online payment in the &ldquo;won&rsquo;t have this time&rdquo; column.</p>
+          </details>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="implementation-plan-template">
+          <h2 class="syllabus-phase">Implementation Plan and Method</h2>
+          <p class="syllabus-concept"><em><strong>Developing an implementation plan</strong> How the new system goes live, and which changeover method to use</em></p>
+          <p>An implementation plan says how the new system will replace the old one (or be used for the first time): what happens, in what order, who does it and what if it goes wrong. NESA names four changeover methods, direct, parallel, pilot and phased. Their definitions and a scenario table are on the <a href="toolkit.html#implementation-methods">Toolkit page</a>, and the <a href="enterprise-project.html#implementation-plan">Enterprise Project page</a> covers the theory. The animation below is a quick way to compare them.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Animated diagram</span></p>
+              <h4 class="figure-title">Implementation methods: switching from the old system to the new</h4>
+              <p class="figure-lead">Watch the steps, or step through with the arrow keys.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--anim"><div class="anim" data-anim="implementation-methods"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Direct switches every office at once, so a fault hits everyone. Parallel keeps the old system running as a fallback.</li><li>Pilot moves one office first. Phased moves one module at a time across all offices.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Use the tabs to compare how each method behaves when the new system has a fault.</p>
+            </div>
+          </figure>
+
+          <h3>Choosing a method quickly</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>If&hellip;</th><th>Lean towards</th></tr></thead>
+              <tbody>
+                <tr><td>Failure would be costly or dangerous, and the extra cost of double work is acceptable</td><td>Parallel</td></tr>
+                <tr><td>There are many sites or groups of users, and a small trial would reveal problems</td><td>Pilot</td></tr>
+                <tr><td>The system splits into independent modules and training must be spread out</td><td>Phased</td></tr>
+                <tr><td>The system is small, low-risk and the old data can be kept as a backup</td><td>Direct</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pg-template" data-pg-template>
+            <div class="pg-template-head"><span class="pg-template-title">Template: implementation plan</span><button type="button" class="pg-copy" hidden>Copy as text</button></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Heading</th><th>What to write</th><th>Your plan</th></tr></thead>
+                <tbody>
+                  <tr><td>Preferred method</td><td>Direct, parallel, pilot or phased, and one or two reasons from your project</td><td></td></tr>
+                  <tr><td>Steps and dates</td><td>Numbered steps with dates and who is responsible (link to your Gantt chart)</td><td></td></tr>
+                  <tr><td>Hardware and software integration</td><td>What has to be installed, configured or connected, and how it links to existing systems and data</td><td></td></tr>
+                  <tr><td>Data migration</td><td>How existing data will be moved, checked and backed up</td><td></td></tr>
+                  <tr><td>Training</td><td>Who is trained, by whom, when, and how you will know it worked</td><td></td></tr>
+                  <tr><td>Risks and fallback</td><td>The top risks during changeover and how you would go back to the old way</td><td></td></tr>
+                  <tr><td>Success check</td><td>How you will know the changeover worked, and who signs it off</td><td></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="callout warning">
+            <strong>Common mistakes</strong>
+            Naming a method with no reason from the project. Mixing up pilot (whole system, one place first) and phased (one part at a time, everywhere). No fallback if the new system fails. Forgetting that existing data has to be moved and checked.
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="training-documentation">
+          <h2 class="syllabus-phase">Training and Documentation</h2>
+          <p class="syllabus-concept"><em><strong>Designing for ease of operation and maintenance</strong> Making sure people can use the system, and keep it running</em></p>
+          <p>A system nobody knows how to use has failed, however well it was built. NESA lists designing for ease of operation and maintenance, and asks you to trial the operation and maintenance documentation during testing. Plan training and documentation in stage 2 and produce them in stage 3, not in the last hour.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Item</th><th>Audience</th><th>What it contains</th></tr></thead>
+              <tbody>
+                <tr><td>Quick reference card</td><td>Everyday users</td><td>The five most common tasks, one screenshot each, in a page</td></tr>
+                <tr><td>User guide</td><td>All users</td><td>Step-by-step instructions, with screenshots, for every task, plus what to do when an error message appears</td></tr>
+                <tr><td>Training session or video</td><td>Users, new staff</td><td>A guided walk through the tasks, with practice on test data rather than live data</td></tr>
+                <tr><td>Operation and maintenance documentation</td><td>Whoever keeps the system running</td><td>How to back up and restore, add or remove users, update the data, fix common faults, and who to contact</td></tr>
+                <tr><td>Technical documentation</td><td>Future developers</td><td>Diagrams (DFD, system flowchart), the data dictionary, the design decisions and the version history</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout tip">
+            <strong>Test your documentation</strong>
+            Ask someone who has never seen the system to complete three tasks using only your user guide. Watch, do not help, and write down each place they get stuck. Fix the guide (or the system), then note what you changed. That is the &ldquo;trialling the documentation&rdquo; NESA describes.
+          </div>
+        </section>
+
+        <div class="quiz" data-quiz="pg-5"></div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  PART 6: TESTING AND EVALUATION                        -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Part 6</span>
+          <span class="part-name">Testing and evaluation</span>
+        </div>
+
+        <aside class="topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <p>Testing asks whether the system works. Evaluation asks whether it was worth doing and whether you managed the project well. They are different questions, and a project that only answers the first is only half finished.</p>
+          <p class="breakout-question"><span class="bq-lead">Ask yourself</span> If a stranger opened your finished project and typed nonsense into every box, what would happen?</p>
+        </aside>
+
+        <section id="test-plan">
+          <h2 class="syllabus-phase">Test Plan Template: Normal, Boundary and Erroneous Data</h2>
+          <p class="syllabus-concept"><em><strong>Methodology for testing the system</strong> Planning tests before you run them, with test data that covers the edges</em></p>
+          <p>Write the test plan before you test, and work out the <em>expected result</em> before you run each test. Otherwise you are only checking that the system does what it does. NESA names six testing methods (functional, acceptance, live data, simulated data, beta and volume), described on the <a href="toolkit.html#testing-methods">Toolkit page</a>. A common way to choose test data for each function is three groups:</p>
+          <ul>
+            <li><strong>Normal data</strong>: typical values the system should accept.</li>
+            <li><strong>Boundary data</strong>: values at the edge of what is allowed, and just either side of it. Most faults hide here.</li>
+            <li><strong>Erroneous data</strong>: values that should be rejected, such as text where a number is expected, a blank, a negative or an impossible date.</li>
+          </ul>
+          <div class="pg-template" data-pg-template>
+            <div class="pg-template-head"><span class="pg-template-title">Template and worked example: test plan for an order quantity field (allowed: whole numbers 1 to 20)</span><button type="button" class="pg-copy" hidden>Copy as text</button></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Test</th><th>Function</th><th>Test data</th><th>Type</th><th>Expected result</th><th>Actual result</th><th>Pass or fail</th></tr></thead>
+                <tbody>
+                  <tr class="pg-eg"><td>1</td><td>Enter quantity</td><td>5</td><td>Normal</td><td>Accepted</td><td></td><td></td></tr>
+                  <tr class="pg-eg"><td>2</td><td>Enter quantity</td><td>1</td><td>Boundary (lowest allowed)</td><td>Accepted</td><td></td><td></td></tr>
+                  <tr class="pg-eg"><td>3</td><td>Enter quantity</td><td>20</td><td>Boundary (highest allowed)</td><td>Accepted</td><td></td><td></td></tr>
+                  <tr class="pg-eg"><td>4</td><td>Enter quantity</td><td>0</td><td>Boundary (just below)</td><td>Rejected with a clear message</td><td></td><td></td></tr>
+                  <tr class="pg-eg"><td>5</td><td>Enter quantity</td><td>21</td><td>Boundary (just above)</td><td>Rejected with a clear message</td><td></td><td></td></tr>
+                  <tr class="pg-eg"><td>6</td><td>Enter quantity</td><td>abc</td><td>Erroneous</td><td>Rejected, no crash</td><td></td><td></td></tr>
+                  <tr class="pg-eg"><td>7</td><td>Enter quantity</td><td>(left blank)</td><td>Erroneous</td><td>Rejected, asks for a value</td><td></td><td></td></tr>
+                  <tr class="pg-eg"><td>8</td><td>Enter quantity</td><td>2.5</td><td>Erroneous</td><td>Rejected: whole numbers only</td><td></td><td></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <h3>Running and recording the tests</h3>
+          <ol>
+            <li>Fill in the <em>expected</em> column for every test before you run any of them.</li>
+            <li>Run each test and record exactly what happened, including error messages. Take screenshots for the failures.</li>
+            <li>Fix each fault, then re-run the failed test and the tests near it, because a fix can break something else. Record the retest.</li>
+            <li>Finish with acceptance testing by the client against your success criteria, and a trial of the user guide.</li>
+          </ol>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            Question 18 of the 2025 HSC involved spreadsheet formulas checked with test data. When you are asked for test data, give a small set that includes normal, boundary and erroneous values and state the expected result for each. Just naming Just naming &ldquo;testing&rdquo; earns very little.ldquo;testingJust naming &ldquo;testing&rdquo; earns very little.rdquo; is too general.
+          </div>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            A form accepts a student&rsquo;s year level, which must be a whole number from 7 to 12. Write six tests: two normal, two boundary and two erroneous, each with its expected result.
+          </div>
+          <details class="pg-answer">
+            <summary>Model answer</summary>
+            <p>Normal: 9 (accepted) and 11 (accepted). Boundary: 7 (accepted, lowest) and 12 (accepted, highest); you could add 6 and 13 (both rejected) as the values just outside. Erroneous: &ldquo;nine&rdquo; (rejected, text) and a blank (rejected, value required). 9.5 is another good erroneous value.</p>
+          </details>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="verify-validate-practice">
+          <h2 class="syllabus-phase">Verification and Validation in Practice</h2>
+          <p class="syllabus-concept"><em><strong>Verify and validate</strong> Did we build it correctly, and did we build the right thing?</em></p>
+          <p>The syllabus asks you to verify and validate an enterprise computing system. Applied to a whole project, the two words ask different questions. The theory is on the <a href="enterprise-project.html#verify-validate">Enterprise Project page</a>.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th></th><th>Verification</th><th>Validation</th></tr></thead>
+              <tbody>
+                <tr><td>Question</td><td>Did we build the system correctly?</td><td>Did we build the right system?</td></tr>
+                <tr><td>Compared against</td><td>The design and the requirements you wrote</td><td>The client&rsquo;s real need and your success criteria</td></tr>
+                <tr><td>Typical activities</td><td>Functional tests, checking calculations and results against expected values, reviewing your diagrams against the build</td><td>Acceptance testing, a client trial, beta testing with real users, trialling the documentation</td></tr>
+                <tr><td>Example</td><td>The order total equals the sum of the item prices in every test</td><td>The canteen manager can actually run recess with it</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>A system can pass verification and fail validation: it meets the specification exactly, and the specification was wrong. That is why you go back to the client. You will also meet these words for <em>data</em> in the <a href="glossary.html">glossary</a>: <em>validation</em> checks that a value is reasonable and allowed (for example a range check), and <em>verification</em> checks that it was entered or transferred correctly (for example double entry). Both ideas belong in a well-tested system.</p>
+          <div class="callout warning">
+            <strong>Common mistakes</strong>
+            Treating &ldquo;it runs without errors&rdquo; as proof that it is right. Testing only with data you invented and never with real records (with care for privacy). Letting the developer be the only tester.
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="evaluation-maintenance">
+          <h2 class="syllabus-phase">Evaluating Against Criteria, and Maintenance</h2>
+          <p class="syllabus-concept"><em><strong>Evaluating and maintaining</strong> Judging the solution and the process against your own criteria, and planning its future</em></p>
+          <p>To evaluate is to make a judgement based on criteria (NESA&rsquo;s glossary meaning). So your evaluation must go back to the success criteria you wrote in stage 1. Judge the <em>product</em> and the <em>process</em>: the product is the system; the process is how you managed the project.</p>
+          <div class="pg-template" data-pg-template>
+            <div class="pg-template-head"><span class="pg-template-title">Template: evaluation against success criteria</span><button type="button" class="pg-copy" hidden>Copy as text</button></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Success criterion</th><th>Evidence</th><th>Met?</th><th>Judgement and reason</th><th>Improvement</th></tr></thead>
+                <tbody>
+                  <tr class="pg-eg"><td>Staff can enter an order in under a minute</td><td>Timed trial with the manager, three orders (test 12)</td><td>Mostly</td><td>Two of three orders met the target; the third was slowed by the item search</td><td>Add a search box or shortcut buttons</td></tr>
+                  <tr class="pg-eg"><td>No data is lost if the tablet is restarted</td><td>Restart tests 14 and 15</td><td>Yes</td><td>Data saved after every order</td><td>Add a daily backup</td></tr>
+                  <tr><td></td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <h3>Evaluating the process</h3>
+          <p>Compare your actual times with your planned times on the Gantt chart. Which tasks took longer, and why? Which risks happened? What did the client feedback change? What would you do differently with the same project again? Your process diary already holds this evidence: quote it. An evaluation that only says &ldquo;it went well&rdquo; is a claim; one that names a task, a number and a decision is evidence.</p>
+
+          <h3>Maintenance</h3>
+          <p>Systems need looking after after they go live. Plan for it. Maintenance commonly includes fixing faults found in use, adapting the system when something around it changes (a new device, a new rule, a new supplier) and improving it in response to new requests. In your notes, say who is responsible, how a fault is reported, how often data is backed up and how updates will be tested before they go live. The requests you placed in the &ldquo;could&rdquo; and &ldquo;won&rsquo;t&rdquo; rows of your MoSCoW table are the start of the future improvements list. NESA also lists <em>modifying designs to improve functionality</em>: record what you would change in the design and why.</p>
+          <div class="callout assessor">
+            <strong>Exam tip</strong>
+            &ldquo;Evaluate&rdquo; means to make a judgement based on criteria. Name the criteria, give evidence for each, then state your overall judgement. Listing what the system does is description, not evaluation.
+          </div>
+        </section>
+
+        <div class="quiz" data-quiz="pg-6"></div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  PART 7: ASSESSMENT AND INTEGRITY                      -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Part 7</span>
+          <span class="part-name">Assessment and academic integrity</span>
+        </div>
+
+        <aside class="topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <p>How project work is assessed is decided largely by your school, within rules set by NESA. Those rules changed recently, so this part sets out what NESA has published and what it has not. It also explains what &ldquo;your own work&rdquo; means when generative AI tools are everywhere.</p>
+          <p class="breakout-question"><span class="bq-lead">Ask yourself</span> If your teacher asked you to explain how you built a part of your project, could you? What evidence would you point to?</p>
+        </aside>
+
+        <section id="assessment-facts">
+          <h2 class="syllabus-phase">How Enterprise Computing Is Assessed</h2>
+          <p class="syllabus-concept"><em><strong>Facts from NESA</strong> School-based assessment, the take-home task limit and the HSC examination</em></p>
+          <div class="callout warning">
+            <strong>Follow your school&rsquo;s assessment schedule</strong>
+            This section summarises NESA pages checked on 28 September 2026 and is a study aid only. Your school gives you a formal assessment schedule at the start of the course, and written notice before each task. Rules can change: always follow your school&rsquo;s schedule and task notifications, and ask your teacher if anything is unclear.
+          </div>
+
+          <h3>School-based assessment</h3>
+          <ul>
+            <li><strong>Components and weightings.</strong> For both Year 11 and Year 12, NESA sets two mandatory course components, each worth 50%: knowledge and understanding of course content, and knowledge and skills in the practical application of the content.</li>
+            <li><strong>Number and type of tasks.</strong> Schools decide the number, type and weighting of assessment tasks, within the limit below. NESA&rsquo;s guidance (not a rule) is to use a variety of tasks and to weight each task between 10% and 40%.</li>
+            <li><strong>Project work.</strong> On the pages we checked, NESA does not publish a mandatory Enterprise Project task, a project weighting, a length or a word limit. Whether and how your project work is assessed is your school&rsquo;s decision, so ask your teacher.</li>
+            <li><strong>Notice.</strong> Under NESA&rsquo;s assessment rules, schools give students written notice of a task, typically 14 calendar days, with its weighting, the outcomes assessed and the marking criteria where appropriate.</li>
+          </ul>
+
+          <h3>The take-home task limit</h3>
+          <p>NESA has announced that school-based assessment programs can have <strong>no more than one take-home task, worth no more than 15%</strong>. A take-home task is one completed outside a classroom, a formal examination or teacher-approved monitoring conditions. The limit starts in <strong>Term 4 2026 for HSC courses</strong> and <strong>Term 1 2027 for Year 11 (Preliminary) courses</strong>. It does not apply to courses with a major project or an HSC practical exam. Enterprise Computing has neither (the HSC is a written online examination), and it is not on the list of exempt courses NESA published, so as we read that notice the limit applies to it. Your school can tell you how it affects your tasks. Schools still decide the number, type and weighting of tasks completed in class or under supervision.</p>
+
+          <h3>The HSC examination</h3>
+          <p>The HSC examination is a single written paper done on a computer: 80 marks, 2 hours 30 minutes including 10 minutes reading time, with objective-response items (about 20 marks) and short-answer items (about 60 marks). There is no separate practical examination or submitted major work. Project skills still appear in the exam: the 2025 marker feedback included questions on project management tools (Question 22) and on offshore development and freelance work (Question 24).</p>
+
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Source</th><th>What it covers</th></tr></thead>
+              <tbody>
+                <tr><td><a href="https://curriculum.nsw.edu.au/learning-areas/tas/enterprise-computing-11-12-2022/assessment/school-based-assessment" target="_blank" rel="noopener">NESA: school-based assessment &#8599;</a></td><td>Components, weightings and the one take-home task rule for Year 11 and Year 12</td></tr>
+                <tr><td><a href="https://www.nsw.gov.au/education-and-training/nesa/news/all/new-take-home-assessment-rules" target="_blank" rel="noopener">NESA 29/26: new take-home assessment rules &#8599;</a></td><td>The 15% limit, start dates and exempt courses</td></tr>
+                <tr><td><a href="https://www.nsw.gov.au/education-and-training/nesa/news/all/changes-ace-rules-take-home-tasks-artifical-intelligence" target="_blank" rel="noopener">NESA 34/26: ACE rule changes &#8599;</a></td><td>Take-home tasks and generative AI</td></tr>
+                <tr><td><a href="https://curriculum.nsw.edu.au/ace-rules/ace2/assessment-programs" target="_blank" rel="noopener">ACE rules: assessment programs &#8599;</a></td><td>Assessment schedules, notice and school policies</td></tr>
+                <tr><td><a href="https://curriculum.nsw.edu.au/learning-areas/tas/enterprise-computing-11-12-2022/assessment/hsc-examinations" target="_blank" rel="noopener">NESA: HSC examination specifications &#8599;</a></td><td>Exam format, online tools and sample materials</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="academic-integrity">
+          <h2 class="syllabus-phase">Academic Integrity and Generative AI</h2>
+          <p class="syllabus-concept"><em><strong>Your own work</strong> What NESA requires of schools and how to keep evidence that the work is yours</em></p>
+          <p>NESA&rsquo;s ACE rules require schools to design formal assessment tasks so that marks reflect <strong>a student&rsquo;s own knowledge, skills and understanding, and not the use of generative artificial intelligence</strong>. NESA has also said that schools should not rely on AI detection tools as the main safeguard against malpractice. The emphasis is on how schools design tasks and gather evidence of a student&rsquo;s own work.</p>
+          <p>In practice that puts the responsibility on you to be able to show how your work was made. Your school will explain what is allowed for each task. Ask before you use any AI tool for any part of a task, and follow the answer.</p>
+
+          <h3>Keep evidence of your own work</h3>
+          <ul>
+            <li><strong>A process diary</strong> with regular, dated, specific entries (see the <a href="#process-diary-practice">template and examples</a>). It records your decisions, problems and reflections, which are hard to fake later.</li>
+            <li><strong>Version history</strong> in your files, showing the project growing in steps over real dates.</li>
+            <li><strong>Drafts, sketches and earlier versions</strong>, including the ones you threw away.</li>
+            <li><strong>Client and teacher feedback</strong> and what you changed because of it.</li>
+            <li><strong>Sources</strong> for anything you did not create yourself: images, code, data, text. Note the licence or permission (see the <a href="glossary.html">Creative Commons</a> entry in the glossary).</li>
+            <li><strong>The ability to explain it.</strong> If you can walk a teacher through any part of your project and say why you did it that way, you have the strongest evidence of all.</li>
+          </ul>
+          <div class="callout tip">
+            <strong>A simple habit</strong>
+            If you use any tool that generates or rewrites text, code, images or data, and your school permits it, record in your diary which tool, what you asked, what it gave you and what you changed or rejected. Keeping that record is honest, and it shows your own judgement.
+          </div>
+          <div class="callout warning">
+            <strong>What not to do</strong>
+            Do not submit work you cannot explain, work made by someone else (or by a tool) without acknowledgement where your school requires it, or a diary written after the event. Copying another team member&rsquo;s entries is not collaboration.
+          </div>
+          <div class="callout success">
+            <strong>Where to next</strong>
+            Read the <a href="enterprise-project.html">Enterprise Project</a> page for the syllabus theory, look at the <a href="example-project.html">Example Enterprise Project</a> to see the tools used together, and keep the <a href="toolkit.html">Course Toolkit</a> open for notation.
+          </div>
+        </section>
+
+        <div class="quiz" data-quiz="pg-7"></div>
+
       </div>
     </main>
   </div>
@@ -231,6 +1218,36 @@
   </footer>
 
   <script src="../js/glossary-data.js?v=8f2b4607"></script>
+  <script src="../js/quizzes/project-guide.js?v=fd060199"></script>
+  <script src="../js/quiz.js?v=3e6185a0" defer></script>
+  <script src="../js/anim.js?v=7bfe5a4c" defer></script>
+  <script src="../js/pages/project-guide.js?v=aa8650f2" defer></script>
   <script src="../js/main.js?v=28275053"></script>
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- Diagram Lightbox Modal -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div class="lightbox-modal" id="diagram-lightbox" role="dialog" aria-labelledby="lightbox-title" aria-hidden="true">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-container">
+      <div class="lightbox-header">
+        <h2 id="lightbox-title" class="lightbox-title">Diagram View</h2>
+        <button type="button" class="lightbox-close" aria-label="Close diagram view">✕</button>
+      </div>
+      <div class="lightbox-canvas">
+        <div class="lightbox-content" id="lightbox-content"></div>
+      </div>
+      <div class="lightbox-controls">
+        <button type="button" class="lightbox-btn" id="zoom-out" aria-label="Zoom out">−</button>
+        <span class="lightbox-zoom-level" id="zoom-level">100%</span>
+        <button type="button" class="lightbox-btn" id="zoom-in" aria-label="Zoom in">+</button>
+        <button type="button" class="lightbox-btn" id="reset-view" aria-label="Reset view">⟲</button>
+      </div>
+      <div class="lightbox-info">
+        <p>Scroll to zoom • Drag to pan • <kbd>Esc</kbd> to close</p>
+      </div>
+    </div>
+  </div>
+  <script src="../js/progress.js?v=40b8096b" defer></script>
+  <script src="../js/progress.js?v=40b8096b" defer></script>
 </body>
 </html>

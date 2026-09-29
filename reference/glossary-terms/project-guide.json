@@ -1,0 +1,209 @@
+[
+  {
+    "id": "term-waterfall-approach",
+    "name": "Waterfall Approach",
+    "topics": [
+      "project"
+    ],
+    "definition": "A development approach that completes each stage (requirements, design, development, testing, installation, maintenance) in order, with each stage signed off before the next begins.",
+    "example": "A council system built to a signed specification, with testing only after all development is finished."
+  },
+  {
+    "id": "term-agile-approach",
+    "name": "Agile Approach",
+    "topics": [
+      "project"
+    ],
+    "definition": "A development approach that builds a system in short cycles, with a working piece and client feedback at the end of each cycle.",
+    "example": "A club booking app delivered in two-week sprints, with the club secretary reviewing each one."
+  },
+  {
+    "id": "term-sprint",
+    "name": "Sprint",
+    "topics": [
+      "project"
+    ],
+    "definition": "A short, fixed-length work cycle in Scrum, typically one to four weeks, that ends in a working increment and a review.",
+    "example": "A two-week sprint to build the login and timetable screens."
+  },
+  {
+    "id": "term-backlog",
+    "name": "Product Backlog",
+    "topics": [
+      "project"
+    ],
+    "definition": "A prioritised list of the features and tasks still to be done in an agile project.",
+    "example": "A list with 'online payment' at the top and 'loyalty points' near the bottom."
+  },
+  {
+    "id": "term-end-user-development",
+    "name": "End-User Development",
+    "topics": [
+      "project"
+    ],
+    "definition": "A development approach in which the people who will use a system build or adapt it themselves with accessible tools such as spreadsheets.",
+    "example": "A bookkeeper building a stock tracker in a spreadsheet for her own use."
+  },
+  {
+    "id": "term-outsourcing",
+    "name": "Outsourcing",
+    "topics": [
+      "project"
+    ],
+    "definition": "Paying another organisation, possibly in another country, to build or run part or all of a system.",
+    "example": "A start-up paying a software company to build its payment feature."
+  },
+  {
+    "id": "term-critical-path",
+    "name": "Critical Path",
+    "topics": [
+      "project"
+    ],
+    "definition": "The longest chain of dependent tasks in a project plan, which decides the earliest finish date; a delay to any task on it delays the project.",
+    "example": "Interview, design screens, build and test add up to 16 days, so any delay to them delays handover."
+  },
+  {
+    "id": "term-float",
+    "name": "Float (Slack)",
+    "topics": [
+      "project"
+    ],
+    "definition": "The number of days a task can be delayed without delaying the end date of the project.",
+    "example": "Designing the database has 2 days of float because the build cannot start until the screens are designed."
+  },
+  {
+    "id": "term-milestone",
+    "name": "Milestone",
+    "topics": [
+      "project"
+    ],
+    "definition": "A significant point in a project, such as an approval or delivery, marked on a Gantt chart as a point in time rather than a task with duration.",
+    "example": "'Requirements approved' on 23 October."
+  },
+  {
+    "id": "term-moscow",
+    "name": "MoSCoW Prioritisation",
+    "topics": [
+      "project"
+    ],
+    "definition": "A common technique that sorts requirements into Must have, Should have, Could have and Won't have (this time).",
+    "example": "Ordering canteen app features so online ordering is a Must and loyalty points a Could."
+  },
+  {
+    "id": "term-feasibility-study",
+    "name": "Feasibility Check",
+    "topics": [
+      "project"
+    ],
+    "definition": "An assessment of whether a project can be delivered, commonly looking at technical, economic, schedule and operational feasibility.",
+    "example": "Deciding that an online payment feature is not feasible with no budget and no skills."
+  },
+  {
+    "id": "term-risk-register",
+    "name": "Risk Register",
+    "topics": [
+      "project"
+    ],
+    "definition": "A table listing possible project risks with their likelihood, consequence, response and owner.",
+    "example": "A row for 'client unavailable for two weeks' with a plan to book meetings in advance."
+  },
+  {
+    "id": "term-contingency",
+    "name": "Contingency",
+    "topics": [
+      "project"
+    ],
+    "definition": "Time or money set aside to cover problems that cannot be predicted.",
+    "example": "Adding a 10% reserve to a project budget."
+  },
+  {
+    "id": "term-boundary-data",
+    "name": "Boundary Test Data",
+    "topics": [
+      "project"
+    ],
+    "definition": "Test values at the edge of the allowed range and just either side of it.",
+    "example": "For a quantity of 1 to 20: 0, 1, 20 and 21."
+  },
+  {
+    "id": "term-erroneous-data",
+    "name": "Erroneous Test Data",
+    "topics": [
+      "project"
+    ],
+    "definition": "Test data that should be rejected because it is the wrong type, is missing or is impossible.",
+    "example": "Entering 'abc', a blank or 2.5 into a whole-number quantity field."
+  },
+  {
+    "id": "term-version-history",
+    "name": "Version History",
+    "topics": [
+      "project"
+    ],
+    "definition": "A record kept by a file or collaboration tool of who changed a file and when, allowing earlier versions to be restored.",
+    "example": "Restoring yesterday's version of a shared design document."
+  },
+  {
+    "id": "term-success-criteria",
+    "name": "Success Criteria",
+    "topics": [
+      "project"
+    ],
+    "definition": "Measurable statements, set at the start of a project, that describe what a solution must achieve to be judged successful.",
+    "example": "Staff can enter an order in under one minute."
+  },
+  {
+    "id": "term-scope-creep",
+    "name": "Scope Creep",
+    "topics": [
+      "project"
+    ],
+    "definition": "The uncontrolled growth of a project's requirements after they were agreed.",
+    "example": "A client adds three new features after sign-off without any change to the deadline."
+  },
+  {
+    "id": "term-stakeholder",
+    "name": "Stakeholder",
+    "topics": [
+      "project"
+    ],
+    "definition": "A person or group who is involved in, or affected by, a project or the system it produces.",
+    "example": "The canteen manager, students who order, and parents who pay."
+  },
+  {
+    "id": "term-action-plan",
+    "name": "Action Plan",
+    "topics": [
+      "project"
+    ],
+    "definition": "A short-range list of tasks with an owner, a due date and a status, usually drawn from a Gantt chart.",
+    "example": "A weekly table of who builds the Menu tables and by which day."
+  },
+  {
+    "id": "term-implementation-plan",
+    "name": "Implementation Plan",
+    "topics": [
+      "project"
+    ],
+    "definition": "A plan for how a new system goes live, including the changeover method, steps and dates, training, risks and a fallback.",
+    "example": "A pilot in one depot, then rollout to four others, with the old system kept for a fortnight."
+  },
+  {
+    "id": "term-deliverable",
+    "name": "Deliverable",
+    "topics": [
+      "project"
+    ],
+    "definition": "A specific item that a project must produce and hand over, such as a working system, a user guide or a test report.",
+    "example": "The user guide handed to the canteen manager."
+  },
+  {
+    "id": "term-system-maintenance",
+    "name": "System Maintenance",
+    "topics": [
+      "project"
+    ],
+    "definition": "Work done after a system goes live to fix faults, adapt it to changes and improve it.",
+    "example": "Updating a booking system when the club adds a new membership type."
+  }
+]
