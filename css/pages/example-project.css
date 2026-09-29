@@ -1,0 +1,203 @@
+/* Example Enterprise Project (topics/example-project.html): the Canteen Insights dashboard, the query check, the live test table
+   and a few small page components. Uses the theme's custom properties so light and dark mode both work. */
+
+/* ---------- Dashboard frame ---------- */
+.ex-app, .ex-verify, .ex-tests-wrap { container-type: inline-size; }
+.ex-app {
+  --ex-heat: 10, 124, 134;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-2xl);
+  background: var(--bg-secondary);
+  padding: clamp(.6rem, 2vw, 1rem);
+  margin: 1.25rem 0 1.5rem;
+  display: grid;
+  gap: .9rem;
+}
+:root[data-theme="dark"] .ex-app { --ex-heat: 54, 194, 204; }
+.ex-flag { margin: 0; padding: .55rem .8rem; font-size: .84rem; line-height: 1.5; color: var(--text-primary); background: color-mix(in srgb, var(--accent) 16%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 55%, var(--border)); border-radius: 8px; }
+
+/* ---------- Filters ---------- */
+.ex-filters { display: grid; gap: .7rem; padding: .8rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+.ex-filter-row { display: flex; flex-wrap: wrap; gap: .7rem 1.1rem; align-items: flex-end; }
+.ex-field { display: flex; flex-direction: column; gap: .25rem; min-width: 0; font-size: .8rem; font-weight: 600; color: var(--text-secondary); }
+.ex-field > label, .ex-lab { font-size: .8rem; font-weight: 600; color: var(--text-secondary); }
+.ex-field select, .ex-field input[type="text"] {
+  font: inherit; font-weight: 500; font-size: .92rem; color: var(--text-primary); background: var(--surface);
+  border: 1px solid var(--border-strong); border-radius: 8px; padding: .4rem .55rem; min-height: 2.5rem; max-width: 100%;
+}
+.ex-field input[aria-invalid="true"] { border-color: var(--danger); box-shadow: 0 0 0 1px var(--danger); }
+.ex-field input[type="range"] { width: 100%; min-width: 0; accent-color: var(--primary); min-height: 2rem; }
+.ex-field select:focus-visible, .ex-field input:focus-visible, .ex-btn:focus-visible, .ex-pill:focus-visible, .ex-chart:focus-visible, .ex-scroll:focus-visible, .ex-sql:focus-visible, .ex-check input:focus-visible {
+  outline: 2px solid var(--primary); outline-offset: 2px;
+}
+.ex-pills { display: flex; flex-wrap: wrap; gap: .35rem; }
+.ex-pill {
+  font: inherit; font-size: .85rem; font-weight: 600; padding: .3rem .8rem; min-height: 2.5rem; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--border-strong); background: var(--surface); color: var(--text-secondary);
+}
+.ex-pill:hover { border-color: var(--primary); color: var(--text-primary); }
+.ex-pill[aria-pressed="true"] { background: var(--primary); border-color: var(--primary); color: #fff; }
+:root[data-theme="dark"] .ex-pill[aria-pressed="true"] { color: #0A1220; }
+.ex-btn {
+  font: 600 .85rem var(--font-body); padding: .4rem .9rem; min-height: 2.5rem; border-radius: 8px; cursor: pointer;
+  border: 1px solid var(--border-strong); background: var(--surface); color: var(--text-primary);
+}
+.ex-btn:hover:not(:disabled) { border-color: var(--primary); }
+.ex-btn:disabled { opacity: .5; cursor: not-allowed; }
+.ex-btn-primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+:root[data-theme="dark"] .ex-btn-primary { color: #0A1220; }
+.ex-btn-quiet { background: transparent; }
+.ex-row-btns { display: flex; flex-wrap: wrap; gap: .5rem; margin: .5rem 0; }
+.ex-status { margin: 0; font-size: .9rem; line-height: 1.55; color: var(--text-primary); }
+.ex-status.is-pass { color: #166534; font-weight: 600; }
+.ex-status.is-fail { color: #991B1B; font-weight: 700; }
+:root[data-theme="dark"] .ex-status.is-pass { color: #86EFAC; }
+:root[data-theme="dark"] .ex-status.is-fail { color: #FCA5A5; }
+.ex-check { display: inline-flex; align-items: center; gap: .4rem; font-size: .85rem; color: var(--text-secondary); cursor: pointer; min-height: 2rem; }
+
+/* ---------- Key figures ---------- */
+.ex-kpis { list-style: none; margin: .6rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+.ex-kpi {
+  display: flex; flex-direction: column; gap: .2rem; padding: .75rem .85rem; background: var(--surface);
+  border: 1px solid var(--border); border-top: 3px solid var(--primary); border-radius: var(--radius-lg); min-width: 0;
+}
+.ex-kpi.is-waste { border-top-color: var(--accent); }
+.ex-kpi-label { font: var(--ds-mono-label, 600 .68rem/1.2 var(--font-mono)); text-transform: uppercase; letter-spacing: .06em; color: var(--text-secondary); }
+.ex-kpi-value { font: 700 clamp(1.05rem, 4.6vw, 1.7rem)/1.15 var(--font-display); color: var(--text-primary); font-variant-numeric: tabular-nums; }
+.ex-kpi-note { font-size: .78rem; line-height: 1.4; color: var(--text-secondary); }
+@container (min-width: 640px) { .ex-kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* ---------- Cards and grids ---------- */
+.ex-grid { display: grid; gap: .9rem; grid-template-columns: minmax(0, 1fr); }
+@container (min-width: 760px) {
+  .ex-grid-charts { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+}
+@container (min-width: 1040px) {
+  .ex-grid-two { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
+}
+.ex-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: .9rem; min-width: 0; }
+.ex-card-title { margin: 0 0 .5rem; font: 700 1rem/1.3 var(--font-display); color: var(--text-primary); }
+.ex-sub { margin: 1rem 0 .3rem; font: 600 .9rem var(--font-display); }
+.ex-card-tools { margin: -.2rem 0 .4rem; }
+.ex-caption { margin: .5rem 0 .6rem; font-size: .8rem; line-height: 1.5; color: var(--text-secondary); }
+.ex-empty { margin: 1rem 0; padding: 1rem; text-align: center; font-size: .9rem; color: var(--text-secondary); background: var(--bg-tertiary); border: 1px dashed var(--border-strong); border-radius: 8px; }
+.ex-num { text-align: right; font-variant-numeric: tabular-nums; }
+.ex-strong { font-weight: 700; }
+.ex-total { font-weight: 700; }
+
+/* ---------- Charts ---------- */
+.ex-chart { position: relative; min-width: 0; border-radius: 8px; }
+.ex-svg { display: block; max-width: 100%; height: auto; overflow: visible; }
+.ex-svg .ex-gl { stroke: var(--border); stroke-width: 1; }
+.ex-tick { fill: var(--text-secondary); font: 500 12px var(--font-body); }
+.ex-note { fill: var(--text-primary); font: 600 12px var(--font-body); paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; }
+.ex-line { fill: none; stroke: var(--primary); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.ex-area { fill: var(--primary); opacity: .12; }
+.ex-dot { fill: var(--surface); stroke: var(--primary); stroke-width: 2; }
+.ex-mark { fill: none; stroke: var(--accent); stroke-width: 2.5; }
+.ex-cross { stroke: var(--text-secondary); stroke-width: 1; stroke-dasharray: 3 3; }
+.ex-focus { fill: var(--primary); stroke: var(--surface); stroke-width: 2; }
+.ex-readout { margin: .5rem 0 0; min-height: 2.6em; font-size: .85rem; line-height: 1.5; color: var(--text-primary); }
+.ex-bar { fill: var(--primary); }
+.ex-bar-row { cursor: pointer; outline: none; }
+.ex-bar-hit { fill: transparent; stroke: transparent; }
+.ex-bar-row:hover .ex-bar-hit { fill: var(--surface-hover); }
+.ex-bar-row:focus-visible .ex-bar-hit { stroke: var(--primary); stroke-width: 2; fill: var(--primary-light); }
+.ex-bar-row.is-on .ex-bar { fill: var(--accent); }
+.ex-bar-row.is-on .ex-bar-lab, .ex-bar-row.is-on .ex-bar-val { font-weight: 700; fill: var(--text-primary); }
+.ex-bar-row.is-dim .ex-bar { opacity: .4; }
+.ex-bar-val { fill: var(--text-primary); }
+.ex-alt { margin-top: .6rem; font-size: .85rem; }
+.ex-alt > summary { cursor: pointer; font-weight: 600; color: var(--primary); padding: .3rem 0; }
+.ex-alt > summary:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
+@media (prefers-reduced-motion: no-preference) {
+  .ex-bar { transition: opacity .2s ease; }
+  .ex-pill, .ex-btn { transition: background-color .15s ease, border-color .15s ease; }
+}
+
+/* ---------- Tables inside the dashboard ---------- */
+.ex-app .table-wrap { margin: .4rem 0; }
+.ex-app table, .ex-verify table, .ex-tests table { font-size: .85rem; }
+.ex-app th, .ex-app td, .ex-verify th, .ex-verify td { padding: .4rem .6rem; }
+.ex-app table caption, .ex-verify table caption { caption-side: top; text-align: left; font-size: .8rem; font-weight: 600; color: var(--text-secondary); padding: 0 0 .35rem; }
+.ex-scroll { max-height: 22rem; overflow: auto; }
+.ex-scroll thead th { position: sticky; top: 0; z-index: 1; }
+.ex-app td.ex-max { font-weight: 700; }
+.ex-app tfoot th, .ex-app tfoot td { font-weight: 700; border-top: 2px solid var(--border-strong); }
+.ex-app tr.is-fixed td { background: color-mix(in srgb, var(--accent) 18%, transparent); }
+.ex-item-name { display: block; font-weight: 600; }
+.ex-why { display: block; font-size: .76rem; font-weight: 400; line-height: 1.4; color: var(--text-secondary); }
+.ex-reorder td, .ex-reorder th { vertical-align: top; }
+.ex-badge { display: inline-block; padding: .15rem .55rem; border-radius: 999px; font-size: .78rem; font-weight: 700; border: 1px solid var(--border-strong); background: var(--bg-tertiary); color: var(--text-primary); white-space: nowrap; }
+.ex-badge.is-now { background: color-mix(in srgb, var(--danger) 16%, var(--surface)); border-color: var(--danger); }
+.ex-badge.is-soon { background: color-mix(in srgb, var(--warning) 18%, var(--surface)); border-color: var(--warning); }
+.ex-badge.is-hold { background: color-mix(in srgb, var(--success) 15%, var(--surface)); border-color: var(--success); }
+.ex-badge.is-fc { background: color-mix(in srgb, var(--info) 15%, var(--surface)); border-color: var(--info); }
+.ex-badge.is-buf { background: var(--bg-tertiary); }
+.ex-pageinfo { font-size: .85rem; color: var(--text-secondary); }
+.ex-pager { display: flex; align-items: center; gap: .75rem; margin-top: .5rem; flex-wrap: wrap; }
+.ex-tablebody[hidden] { display: none; }
+
+/* ---------- What-if ---------- */
+.ex-app .ex-card > .ex-field { margin: .5rem 0; }
+.ex-slide { display: flex; align-items: center; gap: .75rem; }
+.ex-out { min-width: 5.5rem; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+.ex-whatif-table { margin-top: .5rem; }
+
+/* ---------- Data entry ---------- */
+.ex-entry { display: grid; gap: .7rem; }
+.ex-msg { margin: .6rem 0 0; padding: 0; font-size: .88rem; line-height: 1.5; }
+.ex-msg.is-bad, .ex-msg.is-good { padding: .6rem .8rem; border-radius: 8px; border: 1px solid var(--border-strong); }
+.ex-msg.is-bad { background: color-mix(in srgb, var(--danger) 10%, var(--surface)); border-color: var(--danger); }
+.ex-msg.is-good { background: color-mix(in srgb, var(--success) 10%, var(--surface)); border-color: var(--success); }
+.ex-msg p { margin: 0; }
+.ex-msg ul { margin: .3rem 0 0; padding-left: 1.2rem; }
+.ex-msg-h { font-weight: 700; }
+.ex-log { margin: 0; padding-left: 1.3rem; font-size: .82rem; color: var(--text-secondary); }
+.ex-log:empty::before { content: 'No entries yet.'; margin-left: -1.3rem; }
+
+/* ---------- Query check ---------- */
+.ex-verify { margin: 1.25rem 0; }
+.ex-verify .ex-card { display: grid; gap: .6rem; }
+.ex-verify pre.ex-sql, .ex-sql {
+  margin: 0; padding: .8rem 1rem; overflow-x: auto; font: 500 .82rem/1.6 var(--font-mono); color: var(--text-primary);
+  background: var(--bg-tertiary); border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: 8px; white-space: pre;
+}
+.ex-sql-check { margin: .25rem 0 1rem; font-size: .8rem; color: var(--text-secondary); }
+.ex-qc-out { margin-top: .5rem; }
+
+/* ---------- Live test table ---------- */
+.ex-tests-wrap { margin: 1rem 0 1.25rem; }
+.ex-tests { width: 100%; }
+.ex-tests thead th { white-space: normal; padding: .55rem .5rem; }
+.ex-tests tbody td { padding: .5rem; vertical-align: top; font-size: .82rem; overflow-wrap: anywhere; }
+.ex-tests tbody tr.ex-group th { text-align: left; background: var(--bg-secondary); font-size: .8rem; }
+.ex-result { font-weight: 700; white-space: nowrap; }
+.ex-result.is-pass { color: #166534; }
+.ex-result.is-fail { color: #991B1B; }
+:root[data-theme="dark"] .ex-result.is-pass { color: #86EFAC; }
+:root[data-theme="dark"] .ex-result.is-fail { color: #FCA5A5; }
+.ex-tests .ex-input { font-family: var(--font-mono); font-size: .78rem; }
+
+/* ---------- Page components ---------- */
+.ex-artefact { display: inline-block; margin: 0 0 .5rem; padding: .15rem .6rem; font: var(--ds-mono-label, 600 .68rem/1.2 var(--font-mono)); text-transform: uppercase; letter-spacing: .06em; color: var(--primary); border: 1px solid var(--primary); border-radius: 999px; }
+.ex-quote { margin: 1rem 0; padding: .75rem 1rem; border-left: 4px solid var(--accent); background: var(--bg-tertiary); border-radius: 0 8px 8px 0; font-size: .95rem; }
+.ex-quote p { margin: 0 0 .5rem; } .ex-quote p:last-child { margin-bottom: 0; }
+.ex-quote cite { display: block; margin-top: .35rem; font-size: .8rem; font-style: normal; color: var(--text-secondary); }
+.ex-diary { margin: 1rem 0; padding: .9rem 1.1rem; background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: 8px; }
+.ex-diary h5 { margin: 0 0 .5rem; font: 700 .95rem var(--font-display); }
+.ex-diary dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: .3rem .9rem; font-size: .88rem; }
+.ex-diary dt { font-weight: 700; color: var(--text-secondary); }
+.ex-diary dd { margin: 0; }
+@media (max-width: 520px) { .ex-diary dl { grid-template-columns: 1fr; gap: 0; } .ex-diary dd { margin-bottom: .5rem; } }
+.ex-map td:first-child { font-weight: 600; }
+.ex-wide { grid-column: 1 / -1; }
+.ex-bar-chart-note { font-size: .8rem; }
+.ex-mini { font-size: .84rem; }
+.ex-inline-figure { margin: 1rem 0; }
+noscript .ex-flag { display: block; }
+
+.ex-app th[scope="row"], .ex-verify th[scope="row"], .ex-tests th[scope="row"] { text-align: left; }
+.ex-app thead th:not(.ex-num), .ex-verify thead th:not(.ex-num) { text-align: left; }
+
+.ex-verify pre.ex-sql { background: var(--bg-tertiary) !important; color: var(--text-primary) !important; }
