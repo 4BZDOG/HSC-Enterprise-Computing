@@ -2146,7 +2146,7 @@ button.chip-topic:focus-visible { outline: 2px solid var(--ds-focus); outline-of
 .glossary-term h3 mark { color: inherit; background: linear-gradient(transparent 55%, color-mix(in srgb, var(--ds-amber) 55%, transparent) 55%); padding: 0 .05em; }
 .glossary-term p { font-size: .9rem; line-height: 1.65; color: var(--text-secondary); margin: 0; }
 .term-chips { display: flex; flex-wrap: wrap; gap: .35rem; }
-.term-example { padding: .5rem .7rem; background: var(--bg-tertiary); border-left: 3px solid var(--primary); border-radius: 0 4px 4px 0; font-size: .86rem !important; }
+.term-example { padding: .5rem .7rem; background: var(--bg-tertiary); border-left: 3px solid var(--primary); border-radius: 0 4px 4px 0; font-size: .86rem !important; overflow-wrap: anywhere; }
 .glossary-related { margin-top: auto; padding-top: .65rem; border-top: 1px dashed var(--border-strong); display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; font-size: .82rem; color: var(--text-muted); }
 .glossary-related strong { font: 600 .62rem var(--font-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); }
 .glossary-related a { color: var(--primary); font-weight: 600; text-decoration: none; border-bottom: 1px dashed var(--primary); }
