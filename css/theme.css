@@ -2037,6 +2037,9 @@ a.pg-seen::after { border-color: #16A34A; background: #16A34A url("data:image/sv
 :root[data-theme] .chip-y12 { --tone: var(--year12); --tone-ink: var(--year12-dark); }
 :root[data-theme] .chip-core { --tone: var(--core); --tone-ink: var(--core); }
 :root[data-theme="dark"] .chip-core { --tone-ink: #CBD5E1; }
+/* NESA-source marker on glossary cards, and the "NESA glossary" filter */
+:root[data-theme] .chip-nesa { --tone: var(--ds-amber); --tone-ink: #7A4E00; --on-tone: #0B1B2E; }
+:root[data-theme="dark"] .chip-nesa { --tone-ink: #F5B83D; }
 button.chip-topic { gap: .35rem; font-family: var(--font-mono); cursor: pointer; transition: background 140ms ease, transform 140ms ease; }
 button.chip-topic:hover, button.chip-topic:focus-visible { background: color-mix(in srgb, var(--tone) 22%, var(--surface)); }
 button.chip-topic:focus-visible { outline: 2px solid var(--ds-focus); outline-offset: 2px; }
@@ -2077,6 +2080,8 @@ button.chip-topic:focus-visible { outline: 2px solid var(--ds-focus); outline-of
 .gl-topic-select { font: 500 .85rem var(--font-body); padding: .4rem 2rem .4rem .75rem; border-radius: 6px; border: 1px solid var(--border-strong); background: var(--surface); color: var(--text-primary); cursor: pointer; max-width: 100%; }
 .gl-topic-select:focus-visible { outline: 2px solid var(--ds-focus); outline-offset: 2px; }
 @media (max-width: 600px) { .gl-topic-label { flex: 1 1 100%; } .gl-topic-select { width: 100%; } .gl-count { width: 100%; } }
+.gl-source { margin-bottom: 1.25rem; }
+.gl-source .chip { vertical-align: baseline; }
 .gl-count { margin: 0; font: 500 .74rem var(--font-mono); letter-spacing: .04em; color: var(--text-muted); }
 .gl-count strong { color: var(--text-primary); font: 700 1rem var(--font-display); }
 #no-results-msg { text-align: center; padding: 3.5rem 2rem; background: var(--surface); border: 2px dashed var(--border-strong); border-radius: 8px; margin: 2rem 0; }
@@ -2165,7 +2170,7 @@ button.chip-topic:focus-visible { outline: 2px solid var(--ds-focus); outline-of
 :root[data-theme="dark"] .res-stamp-std { color: var(--primary); }
 .res-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 1rem; }
 .res-card { --tone: var(--primary); position: relative; display: flex; flex-direction: column; padding: 1rem 1.1rem 1.05rem 1.25rem; background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--tone); border-radius: 8px; transition: transform 160ms var(--ds-ease), box-shadow 160ms ease; }
-#nesa-syllabus .res-card, #nesa-exam .res-card, #nesa-support .res-card { --tone: var(--ds-amber); }
+.res-section[id^="nesa-"] .res-card { --tone: var(--ds-amber); }
 .res-card:hover, .res-card:focus-within { transform: translateY(-2px); box-shadow: var(--ds-shadow-hover); }
 .res-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: .55rem; }
 .res-icon { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 8px; color: var(--primary-dark); background: var(--primary-light); }

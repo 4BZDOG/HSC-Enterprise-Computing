@@ -22,12 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Index each card once: its title, all its text, and which years it belongs to.
   const cards = [...document.querySelectorAll('.glossary-term')].map(el => {
     const h3 = el.querySelector('h3');
+    const tags = [...el.querySelectorAll('.term-chips .chip:not(.term-nesa)')];
     return {
       el, h3, title: h3.textContent,
       text: el.textContent.toLowerCase(),
-      years: new Set([...el.querySelectorAll('.term-chips .chip')].map(c =>
+      nesa: !!el.querySelector('.term-nesa'),
+      years: new Set(tags.map(c =>
         c.classList.contains('chip-y11') ? 'y11' : c.classList.contains('chip-y12') ? 'y12' : 'core')),
-      topics: new Set([...el.querySelectorAll('.term-chips .chip')].map(c => c.textContent.trim()))
+      topics: new Set(tags.map(c => c.textContent.trim()))
     };
   });
 
@@ -42,10 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const q = input.value.trim();
     const ql = q.toLowerCase();
     const on = filters.filter(f => f.getAttribute('aria-pressed') === 'true').map(f => f.dataset.filter);
+    const nesaOnly = on.includes('nesa');            // "NESA glossary" narrows; the year buttons widen
+    const years = on.filter(f => f !== 'nesa');
     const topic = topicSel.value;
     let shown = 0;
     cards.forEach(c => {
-      const hit = (!ql || c.text.includes(ql)) && (!on.length || on.some(y => c.years.has(y))) && (!topic || c.topics.has(topic));
+      const hit = (!ql || c.text.includes(ql)) && (!years.length || years.some(y => c.years.has(y))) &&
+                  (!nesaOnly || c.nesa) && (!topic || c.topics.has(topic));
       c.el.classList.toggle('hidden', !hit);
       c.h3.innerHTML = mark(c.title, hit ? q : '');
       if (hit) shown++;
