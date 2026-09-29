@@ -1,0 +1,103 @@
+# ── OS Files ──
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
+*.swp
+*.swo
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+
+# ── Editor & IDE ──
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.sublime-project
+.sublime-workspace
+.eclipse
+*.iml
+
+# ── Dev Tools ──
+# Claude Code sessions (exclude runtime files, but track shared skills)
+.claude/
+!.claude/
+!.claude/skills/
+!.claude/skills/**
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+.npm
+
+# ── Environment ──
+.env
+.env.local
+.env.*.local
+.env.production.local
+
+# ── Backup Files ──
+*.backup
+*.bak
+*.tmp
+*.log
+.~*
+
+# ── Build Artifacts ──
+dist/
+build/
+*.tar.gz
+
+# ── Developer Notes ──
+# Keep commented to selectively ignore:
+# add_emojis.py
+# replace_software_automation.py
+# update_styling.py
+
+# ── Site-specific ──
+# Python bytecode from the scripts
+scripts/__pycache__/
+# Build tools (npm install)
+node_modules/
+# Staging folder used by the deploy workflow
+_site/
+# NESA's copyright material: link to the official copy, don't publish it
+resources/spec-pages/
+resources/*.pdf
+# Working screenshots
+reference/screens/

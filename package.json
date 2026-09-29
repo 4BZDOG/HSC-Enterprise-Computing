@@ -1,0 +1,15 @@
+{
+  "name": "hsc-enterprise-computing-notes",
+  "private": true,
+  "description": "Build tools for the site. The site itself is static HTML and needs no install.",
+  "type": "module",
+  "scripts": {
+    "diagrams": "node scripts/render-diagrams.mjs",
+    "diagrams:all": "node scripts/render-diagrams.mjs --force"
+  },
+  "devDependencies": {
+    "@fontsource/inter": "^5.2.0",
+    "mermaid": "^11.4.0",
+    "playwright": "^1.50.0"
+  }
+}

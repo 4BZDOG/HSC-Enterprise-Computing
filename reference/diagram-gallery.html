@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Diagram gallery | HSC Enterprise Computing</title>
+  <script>(function(){try{var t=localStorage.getItem('ec-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
+  <link rel="stylesheet" href="../css/styles.css?v=eaa2e127" />
+  <link rel="stylesheet" href="../css/theme.css?v=ea1ce127" />
+  <link rel="stylesheet" href="../css/anim.css?v=22e246f7" />
+  <style>
+    .gallery { max-width: 1100px; margin: 0 auto; padding: 1.5rem 16px 4rem; }
+    .gallery h1 { font: 700 1.9rem/1.2 var(--font-display); margin: 0 0 .4rem; }
+    .gallery h2 { font: 600 1.35rem/1.3 var(--font-display); margin: 2.4rem 0 .3rem; padding: 0; border: 0; background: none; -webkit-text-fill-color: currentColor; color: var(--text-primary); }
+    .gallery h2::before { display: none; }
+    .gallery-intro { color: var(--text-secondary); margin: 0 0 .5rem; max-width: 70ch; }
+    .gallery-bar { display: flex; flex-wrap: wrap; gap: .6rem 1.2rem; align-items: center; margin: .8rem 0 1rem; }
+    .gallery-bar ul { display: flex; flex-wrap: wrap; gap: .3rem 1rem; list-style: none; margin: 0; padding: 0; font-size: .9rem; }
+    .gallery-toggle { font: 600 .75rem var(--font-mono); letter-spacing: .08em; text-transform: uppercase; padding: .45rem .8rem; border: 1px solid var(--border-strong); border-radius: 4px; background: var(--surface); color: var(--text-primary); cursor: pointer; }
+    .gallery a { color: var(--primary); }
+    .gallery-credit { font-size: .85rem; color: var(--text-muted); margin-top: 3rem; }
+  </style>
+</head>
+<body>
+  <main class="gallery">
+    <h1>Diagram gallery</h1>
+    <p class="gallery-intro">Every Enterprise Computing reference scene and every scene ported from the sister SE site, each in the standard figure markup. This is a review page: it is not in the navigation and is not part of the topic notes.</p>
+    <div class="gallery-bar">
+      <button type="button" class="gallery-toggle" id="gallery-theme">Toggle light / dark</button>
+      <ul><li><a href="#symbols">Symbol keys</a> (3)</li><li><a href="#nesa">NESA worked examples, redrawn</a> (12)</li><li><a href="#ext">Extensions beyond the specifications</a> (2)</li><li><a href="#ported">Ported from the sister SE site: still diagrams</a> (10)</li><li><a href="#anims">Ported animated diagrams</a> (6)</li></ul>
+    </div>
+    <div class="content-body">
+<section id="symbols">
+<h2>Symbol keys</h2>
+<p class="gallery-intro">The notation itself, one key per diagram family. Symbols are as NESA draws them; each system flowchart symbol shares one soft blue tone.</p>
+<figure class="figure" id="fig-spec-dfd-symbols">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Symbol key</span></p>
+  <h4 class="figure-title">Data flow diagram symbols</h4>
+  <p class="figure-lead">The four symbols NESA gives for data flow diagrams.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="spec-dfd-symbols"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>A process is a circle, a data store is open on one side, an external entity is a closed near-square, and a data flow is a labelled curved arrow.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>spec-dfd-symbols</code> · Course Specifications p.4</p>
+</div>
+</figure>
+<figure class="figure" id="fig-spec-flowchart-symbols">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Symbol key</span></p>
+  <h4 class="figure-title">Flowchart symbols</h4>
+  <p class="figure-lead">The four flowchart symbols.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="spec-flowchart-symbols"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Input or output is a parallelogram; the terminator has rounded ends; the process is a rectangle; the decision is a diamond.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>spec-flowchart-symbols</code> · Course Specifications p.6</p>
+</div>
+</figure>
+<figure class="figure" id="fig-spec-sysflow-symbols">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Symbol key</span></p>
+  <h4 class="figure-title">System flowchart symbols</h4>
+  <p class="figure-lead">The nine system flowchart symbols. New in Enterprise Computing.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="spec-sysflow-symbols"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>NESA prints "Online dispay" (sic); this key spells it "Online display".</li><li>Node shapes: <code>sf-document</code>, <code>process</code>, <code>sf-storage</code>, <code>sf-display</code>, <code>sf-manual</code>, <code>sf-telecom</code> (symbol only; <code>s.telecomLink()</code> is the connector), <code>sf-input</code>, <code>sf-tape</code>, <code>sf-cloud</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>spec-sysflow-symbols</code> · Course Specifications p.7</p>
+</div>
+</figure>
+</section>
+<section id="nesa">
+<h2>NESA worked examples, redrawn</h2>
+<p class="gallery-intro">Every diagram in the Course Specifications, redrawn with the kit so writers can reuse it and the notation is proven. Compare each with the page named in its notes.</p>
+<figure class="figure" id="fig-spec-dfd-voting">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Data flow diagram</span></p>
+  <h4 class="figure-title">Data flow diagram: a voting system</h4>
+  <p class="figure-lead">Three external entities, three processes and two data stores.</p>
+</figcaption>
+<div class="figure-canvas"><div class="nesa-diagram" data-diagram="spec-dfd-voting"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Pairs of flows between the same symbols curve to opposite sides, each with its own label.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>spec-dfd-voting</code> · Course Specifications p.5 (drawn by js/nesa-diagrams.js from js/nesa-diagram-data.js)</p>
+</div>
+</figure>
+<figure class="figure" id="fig-spec-dfd-voting-l0">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Data flow diagram</span></p>
+  <h4 class="figure-title">Level 0 data flow diagram: a voting system</h4>
+  <p class="figure-lead">The whole system as one process. No data stores or internal processes.</p>
+</figcaption>
+<div class="figure-canvas"><div class="nesa-diagram" data-diagram="spec-dfd-voting-l0"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>A Level 0 (context) diagram shows the system, its external entities and the data crossing the boundary.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>spec-dfd-voting-l0</code> · Course Specifications p.5</p>
+</div>
+</figure>
+<figure class="figure" id="fig-spec-flowchart-delivery">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Flowchart</span></p>
+  <h4 class="figure-title">Flowchart: delivery charge for perishable and non-perishable items</h4>
+  <p class="figure-lead">Logic that decides whether a delivery charge applies.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="spec-flowchart-delivery"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Every arrow leaving a decision is labelled Yes or No.</li><li>NESA starts with START and ends with END.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>spec-flowchart-delivery</code> · Course Specifications p.6</p>
+</div>
+</figure>
+<figure class="figure" id="fig-spec-sysflow-doctor">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">System flowchart</span></p>
+  <h4 class="figure-title">System flowchart: a doctor managing patient information</h4>
+  <p class="figure-lead">Devices, storage and processes in a medical practice.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="spec-sysflow-doctor"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Arrows show the direction of data between the symbols. The double-headed arrow means the patient file is read and written.</li><li>The zig-zag is the telecommunications link between the consultation file and the cloud.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>spec-sysflow-doctor</code> · Course Specifications p.7</p>
+</div>
+</figure>
+<figure class="figure" id="fig-spec-dt-smart-house">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Decision tree</span></p>
+  <h4 class="figure-title">Decision tree (horizontal): comfort control in a smart house</h4>
+  <p class="figure-lead">Rules that set the fan, cooling, heating and window from temperature and humidity.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="spec-dt-smart-house"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Read left to right: each path ends in a set of actions.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>spec-dt-smart-house</code> · Course Specifications p.8</p>
+</div>
+</figure>
+<figure class="figure" id="fig-spec-dt-buy-car">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Decision tree</span></p>
+  <h4 class="figure-title">Decision tree (vertical): buying a car</h4>
+  <p class="figure-lead">The same idea drawn top down, with a Yes or No on every branch.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="spec-dt-buy-car"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Each path leads to another decision or a final action.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>spec-dt-buy-car</code> · Course Specifications p.8</p>
+</div>
+</figure>
+<figure class="figure" id="fig-spec-storyboard">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Storyboard</span></p>
+  <h4 class="figure-title">Storyboard: three pages promoting a school canteen</h4>
+  <p class="figure-lead">Screens and the links between them.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="spec-storyboard"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>A dot on a button with an arrow means the button opens that screen. The highlighted button is the current page.</li><li>Helper: <code>s.storyboard()</code> and <code>s.screen()</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>spec-storyboard</code> · Course Specifications p.9</p>
+</div>
+</figure>
+<figure class="figure" id="fig-spec-network">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Network diagram</span></p>
+  <h4 class="figure-title">Network diagram: devices joined to a router and two hubs</h4>
+  <p class="figure-lead">Every device is labelled; dotted lines are connections.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="spec-network"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Helper: <code>s.device()</code> draws the line-art icons.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>spec-network</code> · Course Specifications p.10</p>
+</div>
+</figure>
+<figure class="figure" id="fig-spec-graph-weighted">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Graph</span></p>
+  <h4 class="figure-title">Graph: VB’s social network</h4>
+  <p class="figure-lead">Nodes (vertices) and links (edges); circle size shows importance.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="spec-graph-weighted"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>NESA labels the links with the relationship (Friend, Listen, Watch, Group). Helper: <code>s.graph()</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>spec-graph-weighted</code> · Course Specifications p.11</p>
+</div>
+</figure>
+<figure class="figure" id="fig-spec-gantt-requirements">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Gantt chart</span></p>
+  <h4 class="figure-title">Gantt chart: requirements gathering</h4>
+  <p class="figure-lead">Tasks, dependencies, a milestone and a dated timeline.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="spec-gantt-requirements"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Solid bars are tasks, elbow arrows are dependencies and the hollow diamond is the milestone. Weekends are shaded.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>spec-gantt-requirements</code> · Course Specifications p.12 (example 1)</p>
+</div>
+</figure>
+<figure class="figure" id="fig-spec-gantt-resources">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Gantt chart</span></p>
+  <h4 class="figure-title">Gantt chart: resources and percentage completion</h4>
+  <p class="figure-lead">Phases, team members and how much of each task is done.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="spec-gantt-resources"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>The solid part of a bar is work done; the pale part is work remaining.</li><li>NESA prints a planned start of 17-11-2022 for Design complete but labels the milestone 24-11-2022; the table repeats NESA, the diamond follows the label.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>spec-gantt-resources</code> · Course Specifications p.12 (example 2)</p>
+</div>
+</figure>
+<figure class="figure" id="fig-spec-schema-games">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Schema</span></p>
+  <h4 class="figure-title">Schema: a games database</h4>
+  <p class="figure-lead">Three tables, their keys and the one-to-many links.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="spec-schema-games"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>P is a primary key and F a foreign key. 1 is the "one" end and ∞ the "many" end. Helper: <code>s.tableBox()</code> and <code>s.relation()</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>spec-schema-games</code> · Course Specifications p.16</p>
+</div>
+</figure>
+</section>
+<section id="ext">
+<h2>Extensions beyond the specifications</h2>
+<p class="gallery-intro">NESA says other notations are acceptable; these show the helper options that go beyond the printed examples.</p>
+<figure class="figure" id="fig-graph-weights">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Graph</span></p>
+  <h4 class="figure-title">Weighted graph: network cable lengths between five sites</h4>
+  <p class="figure-lead">Numbers on the edges are weights.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="graph-weights"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li><code>weight</code> prints a number on an edge; <code>directed: true</code> adds arrowheads.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>graph-weights</code> · Extension (syllabus: weighted graphs, adjacency, centrality, connectedness)</p>
+</div>
+</figure>
+<figure class="figure" id="fig-schema-alt">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Schema</span></p>
+  <h4 class="figure-title">Schema: customers and orders, PK and FK badges, crow’s foot</h4>
+  <p class="figure-lead">An alternative notation with badges instead of (P) and (F).</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="schema-alt"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li><code>keys: 'pk'</code> and <code>many: 'crow'</code>. Use the NESA style (<code>spec-schema-games</code>) unless a task asks otherwise.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>schema-alt</code> · Extension (NESA p.16 allows other methods)</p>
+</div>
+</figure>
+</section>
+<section id="ported">
+<h2>Ported from the sister SE site: still diagrams</h2>
+<p class="gallery-intro">Copied unchanged in content (header comments retargeted to Enterprise Computing topics). Reuse them directly.</p>
+<figure class="figure" id="fig-dt-spam">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Decision tree</span></p>
+  <h4 class="figure-title">Decision tree: is this email spam?</h4>
+  <p class="figure-lead">A small classifier as a decision tree.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="dt-spam"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Scene <code>dt-spam</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>dt-spam</code> · Ported scene · Data science, intelligent systems</p>
+</div>
+</figure>
+<figure class="figure" id="fig-dt-training-model">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Decision tree</span></p>
+  <h4 class="figure-title">Decision tree: choosing a training model</h4>
+  <p class="figure-lead">Reinforcement, supervised, semi-supervised or unsupervised learning.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="dt-training-model"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Scene <code>dt-training-model</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>dt-training-model</code> · Ported scene · Intelligent systems (machine learning)</p>
+</div>
+</figure>
+<figure class="figure" id="fig-gantt-project">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Gantt chart</span></p>
+  <h4 class="figure-title">Gantt chart: a library booking app</h4>
+  <p class="figure-lead">Tasks, dependencies and milestones over seven weeks.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="gantt-project"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Scene <code>gantt-project</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>gantt-project</code> · Ported scene · Enterprise project (time and resource management)</p>
+</div>
+</figure>
+<figure class="figure" id="fig-agile-sprint">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Process</span></p>
+  <h4 class="figure-title">The Agile (Scrum) sprint cycle</h4>
+  <p class="figure-lead">Backlog, sprint planning, the sprint and the review.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="agile-sprint"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Scene <code>agile-sprint</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>agile-sprint</code> · Ported scene · Enterprise project (development approaches)</p>
+</div>
+</figure>
+<figure class="figure" id="fig-ai-ml-dl">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Concept</span></p>
+  <h4 class="figure-title">AI, machine learning and deep learning</h4>
+  <p class="figure-lead">Each is a subset of the one before.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="ai-ml-dl"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Scene <code>ai-ml-dl</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>ai-ml-dl</code> · Ported scene · Intelligent systems</p>
+</div>
+</figure>
+<figure class="figure" id="fig-bias-cycle">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Cycle</span></p>
+  <h4 class="figure-title">How bias reinforces itself</h4>
+  <p class="figure-lead">Where a biased data loop can be broken.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="bias-cycle"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Scene <code>bias-cycle</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>bias-cycle</code> · Ported scene · Data science, data visualisation (bias)</p>
+</div>
+</figure>
+<figure class="figure" id="fig-nn-layers">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">System</span></p>
+  <h4 class="figure-title">A neural network’s layers</h4>
+  <p class="figure-lead">Inputs, hidden layers and outputs.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="nn-layers"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Scene <code>nn-layers</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>nn-layers</code> · Ported scene · Intelligent systems (neural networks)</p>
+</div>
+</figure>
+<figure class="figure" id="fig-ssa-encryption">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Concept</span></p>
+  <h4 class="figure-title">Symmetric and asymmetric encryption, and how HTTPS uses both</h4>
+  <p class="figure-lead">Encrypted data on a network.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="ssa-encryption"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Scene <code>ssa-encryption</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>ssa-encryption</code> · Ported scene · Cybersecurity, networking (encryption)</p>
+</div>
+</figure>
+<figure class="figure" id="fig-seq-dns">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Sequence</span></p>
+  <h4 class="figure-title">How DNS finds an IP address</h4>
+  <p class="figure-lead">Request and response steps between a browser and DNS servers.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="seq-dns"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Scene <code>seq-dns</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>seq-dns</code> · Ported scene · Networking systems</p>
+</div>
+</figure>
+<figure class="figure" id="fig-seq-http">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Sequence</span></p>
+  <h4 class="figure-title">An HTTP request and response</h4>
+  <p class="figure-lead">What a browser and a server say to each other.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="seq-http"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Scene <code>seq-http</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>seq-http</code> · Ported scene · Networking systems</p>
+</div>
+</figure>
+</section>
+<section id="anims">
+<h2>Ported animated diagrams</h2>
+<p class="gallery-intro">Step through each one with the controls. They play when scrolled into view.</p>
+<figure class="figure" id="fig-packets">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Animated diagram</span></p>
+  <h4 class="figure-title">How data packets cross the internet and are reassembled</h4>
+  <p class="figure-lead">Watch the steps, or step through with the arrow keys.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--anim"><div class="anim" data-anim="packets"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Scene <code>packets</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>packets</code> · Ported scene · Networking systems (transmission of data)</p>
+</div>
+</figure>
+<figure class="figure" id="fig-https">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Animated diagram</span></p>
+  <h4 class="figure-title">How HTTPS secures a connection</h4>
+  <p class="figure-lead">Watch the steps, or step through with the arrow keys.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--anim"><div class="anim" data-anim="https"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Scene <code>https</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>https</code> · Ported scene · Cybersecurity, networking (encrypted data)</p>
+</div>
+</figure>
+<figure class="figure" id="fig-waterfall-agile">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Animated diagram</span></p>
+  <h4 class="figure-title">Waterfall and Agile: when does the client get working software?</h4>
+  <p class="figure-lead">Watch the steps, or step through with the arrow keys.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--anim"><div class="anim" data-anim="waterfall-agile"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Scene <code>waterfall-agile</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>waterfall-agile</code> · Ported scene · Enterprise project (development approaches)</p>
+</div>
+</figure>
+<figure class="figure" id="fig-implementation-methods">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Animated diagram</span></p>
+  <h4 class="figure-title">Implementation methods: switching from the old system to the new</h4>
+  <p class="figure-lead">Watch the steps, or step through with the arrow keys.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--anim"><div class="anim" data-anim="implementation-methods"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Scene <code>implementation-methods</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>implementation-methods</code> · Ported scene · Enterprise project (direct, parallel, pilot, phased)</p>
+</div>
+</figure>
+<figure class="figure" id="fig-knn">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Animated diagram</span></p>
+  <h4 class="figure-title">K-nearest neighbour classification, and why K matters</h4>
+  <p class="figure-lead">Watch the steps, or step through with the arrow keys.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--anim"><div class="anim" data-anim="knn"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Scene <code>knn</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>knn</code> · Ported scene · Data science, intelligent systems (machine learning)</p>
+</div>
+</figure>
+<figure class="figure" id="fig-gradient-descent">
+<figcaption class="figure-head">
+  <p class="figure-kicker"><span class="figure-kind">Animated diagram</span></p>
+  <h4 class="figure-title">Training a regression model by gradient descent</h4>
+  <p class="figure-lead">Watch the steps, or step through with the arrow keys.</p>
+</figcaption>
+<div class="figure-canvas figure-canvas--anim"><div class="anim" data-anim="gradient-descent"></div></div>
+<div class="figure-notes">
+  <div><h5>What to notice</h5><ul><li>Scene <code>gradient-descent</code>.</li></ul></div>
+  <p class="figure-try"><strong>Source</strong><code>gradient-descent</code> · Ported scene · Data science (statistical modelling)</p>
+</div>
+</figure>
+</section>
+    </div>
+    <p class="gallery-credit">Diagrams marked “Course Specifications” are redrawn from the NSW Education Standards Authority (NESA) <em>Enterprise Computing Higher School Certificate Course Specifications</em>. NESA is the source of the notation; these are study aids and not a replacement for the official document.</p>
+  </main>
+  <script>
+    document.getElementById('gallery-theme').addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('ec-theme', next); } catch (e) {}
+    });
+  </script>
+  <script src="../js/nesa-diagram-data.js?v=33ff129d"></script>
+  <script src="../js/nesa-diagrams.js?v=6bab3032" defer></script>
+  <script src="../js/anim.js?v=014c2378" defer></script>
+</body>
+</html>
