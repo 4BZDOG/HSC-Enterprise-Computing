@@ -1,27 +1,71 @@
 /* Quiz bank for Principles of Cybersecurity (topics/cybersecurity.html).
    One entry per data-quiz key on the page: cyber-1, cyber-2, cyber-3.
-   Each question: { q: "…", options: ["…", "…", "…"], answer: <index of the right option>, why: "…" }.
-   The samples below only prove the machinery works: replace each with 4 to 6 real questions. */
+   Each question: { q: "…", options: ["…", "…", "…", "…"], answer: <index of the right option>, why: "…" }. */
 window.HSC_QUIZZES = Object.assign(window.HSC_QUIZZES || {}, {
-  // CONTENT: replace this sample with 4 to 6 questions on part 1 (Understanding privacy and security).
   'cyber-1': [
-    { q: 'Sample question: which NESA part of this topic does this quiz belong to?',
-      options: ['Understanding privacy and security', 'Security awareness', 'Cyber law and ethics'],
-      answer: 0,
-      why: 'This placeholder shows the quiz machinery working. It belongs to Part 1, Understanding privacy and security.' },
-  ],
-  // CONTENT: replace this sample with 4 to 6 questions on part 2 (Security awareness).
-  'cyber-2': [
-    { q: 'Sample question: which NESA part of this topic does this quiz belong to?',
-      options: ['Understanding privacy and security', 'Security awareness', 'Cyber law and ethics'],
+    { q: 'A clinic gives its receptionists access to appointments but not to clinical notes. Which principle is this?',
+      options: ['Data minimisation', 'Least privilege', 'Non-repudiation', 'Data retention'],
       answer: 1,
-      why: 'This placeholder shows the quiz machinery working. It belongs to Part 2, Security awareness.' },
-  ],
-  // CONTENT: replace this sample with 4 to 6 questions on part 3 (Cyber law and ethics).
-  'cyber-3': [
-    { q: 'Sample question: which NESA part of this topic does this quiz belong to?',
-      options: ['Understanding privacy and security', 'Security awareness', 'Cyber law and ethics'],
+      why: 'Least privilege gives each role only the access needed for its job. Data minimisation is about collecting less data, and retention is about how long data is kept.' },
+    { q: 'A student asks a NSW council for copies of its emails about a local development. Which law is most relevant?',
+      options: ['Spam Act 2003', 'Cybercrime Act 2001', 'Government Information (Public Access) Act 2009', 'Telecommunications (Interception and Access) Act 1979'],
       answer: 2,
-      why: 'This placeholder shows the quiz machinery working. It belongs to Part 3, Cyber law and ethics.' },
+      why: 'The GIPA Act gives the public a right of access to NSW government information. The others deal with unwanted messages, computer offences and interception.' },
+    { q: 'Which attribute of a breach is affected when an attacker secretly changes the bank account number on a supplier invoice?',
+      options: ['Confidentiality', 'Availability', 'Privacy only', 'Integrity'],
+      answer: 3,
+      why: 'Integrity means data is accurate and unaltered. The invoice was changed, not disclosed or made unavailable.' },
+    { q: 'Your phone joins "Cafe_Free_WiFi" but the real cafe network is a different device with the same name and a weaker signal. What is the attack called?',
+      options: ['Smishing', 'Credential stuffing', 'An evil twin', 'A DDoS attack'],
+      answer: 2,
+      why: 'An evil twin is a rogue access point copying a legitimate network name to intercept traffic. Smishing uses SMS, and DDoS floods a target.' },
+    { q: 'A staff member is tricked by a phone call into giving away a password, and the company has no rule to verify callers. Which two elements of the vulnerability model are mainly exploited?',
+      options: ['People and processes', 'Data and technology', 'Technology and hardware only', 'Data and availability'],
+      answer: 0,
+      why: 'The person was manipulated (people) and the missing verification rule is a gap in how work is done (processes).' }
   ],
+  'cyber-2': [
+    { q: 'Which is an example of smishing?',
+      options: ['A text message with a link to a fake toll payment page', 'A phone call from a fake bank officer', 'A poisoned USB drive left in a car park', 'A fake login page reached by a QR code'],
+      answer: 0,
+      why: 'Smishing is phishing by SMS. A phone call is vishing, and the QR code example is quishing.' },
+    { q: 'A business keeps one backup on its server, one on a NAS in the same office and one on tape stored at another site. What does this satisfy?',
+      options: ['The Essential Eight maturity level 3', 'Air-gapped isolation', 'The 3-2-1 backup rule', 'Multi-factor authentication'],
+      answer: 2,
+      why: 'Three copies, on at least two media types, with one copy offsite is the 3-2-1 rule. The tape being offsite and offline also protects against ransomware.' },
+    { q: 'Which combination is genuinely multi-factor authentication?',
+      options: ['A password and a security question', 'A password and a code from an authenticator app', 'Two different passwords', 'A PIN and a password'],
+      answer: 1,
+      why: 'MFA needs different types of proof: something you know plus something you have. Passwords, PINs and security questions are all "something you know".' },
+    { q: 'A risk has a likelihood of 4 (Likely) and a consequence of 5 (Severe) on a 5 by 5 matrix. Using the bands Low 1 to 4, Medium 5 to 9, High 10 to 16 and Extreme 20 to 25, what is the rating?',
+      options: ['High (16)', 'Extreme (25)', 'Medium (9)', 'Extreme (20)'],
+      answer: 3,
+      why: 'Risk score = likelihood x consequence = 4 x 5 = 20, which falls in the Extreme band.' },
+    { q: 'A firm encrypts every laptop hard drive. In a risk matrix, what does this treatment mainly change for the risk "laptop lost or stolen"?',
+      options: ['It makes losing a laptop less likely', 'It lowers the consequence because the data is unreadable', 'It transfers the risk to an insurer', 'It removes the risk entirely'],
+      answer: 1,
+      why: 'Laptops can still be lost, so likelihood is unchanged, but encryption reduces the consequence of the loss. The risk is reduced, not removed.' }
+  ],
+  'cyber-3': [
+    { q: 'Under the Notifiable Data Breaches scheme, when must an entity notify the OAIC and affected individuals?',
+      options: ['Whenever any data is lost', 'Only when a ransom has been paid', 'When there is an eligible data breach likely to result in serious harm', 'Only when the breach involves a bank'],
+      answer: 2,
+      why: 'Notification is required for an eligible data breach, meaning unauthorised access, disclosure or loss of personal information that is likely to cause serious harm.' },
+    { q: 'A business with $8 million annual turnover pays a ransom to recover its files. Which law now requires it to report the payment?',
+      options: ['Cyber Security Act 2024', 'Spam Act 2003', 'Freedom of Information Act 1982', 'Copyright Act 1968'],
+      answer: 0,
+      why: 'The Cyber Security Act 2024 introduced mandatory reporting of ransomware payments for businesses over the turnover threshold and for critical infrastructure entities.' },
+    { q: 'Which is an example of operational disruption after a breach?',
+      options: ['A regulator fines the company', 'A newspaper criticises the company', 'Customers close their accounts', 'Ransomware stops a logistics company from dispatching freight'],
+      answer: 3,
+      why: 'Operational disruption means the business cannot work normally. The fine is a legal ramification, and the criticism and lost customers are reputational damage.' },
+    { q: 'What is meant by "harvest now, decrypt later"?',
+      options: ['Ransomware is paid now and files are returned later', 'Criminals copy encrypted data today to break it once quantum computers exist', 'Backups are made today and restored later', 'Passwords are guessed slowly over time'],
+      answer: 1,
+      why: 'Encrypted data stolen now may be readable in future if public-key encryption is broken, which is why organisations plan to move to post-quantum algorithms.' },
+    { q: 'An accountant receives a video call from what appears to be the CEO asking for an urgent transfer to a new account. Which is the best defence?',
+      options: ['Verify through a known phone number and require a second approver', 'Check that the video looks realistic', 'Approve it, because the CEO can be seen', 'Update the antivirus software'],
+      answer: 0,
+      why: 'Deepfakes can look and sound real, so verification processes are the reliable control. Antivirus cannot detect a fake caller.' }
+  ]
 });

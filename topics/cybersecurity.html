@@ -9,14 +9,14 @@
   <meta name="robots" content="index, follow" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Principles of Cybersecurity | HSC Enterprise Computing" />
-  <meta property="og:description" content="HSC Enterprise Computing notes on Principles of Cybersecurity (Privacy, threats and risk). NESA NSW Year 11 Preliminary syllabus, dot point by dot point." />
+  <meta property="og:description" content="Year 11 Enterprise Computing notes on cybersecurity: privacy, threats, protections, risk matrices and Australian cyber law, with diagrams, tools and quizzes." />
   <meta property="og:url" content="https://4bzdog.github.io/HSC-Enterprise-Computing/topics/cybersecurity.html" />
   <meta property="og:image" content="https://4bzdog.github.io/HSC-Enterprise-Computing/og-image.png" />
   <meta property="og:image:alt" content="HSC Enterprise Computing Notes: NESA NSW" />
   <meta property="og:site_name" content="HSC Enterprise Computing Notes" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Principles of Cybersecurity | HSC Enterprise Computing" />
-  <meta name="twitter:description" content="HSC Enterprise Computing notes on Principles of Cybersecurity (Privacy, threats and risk). NESA NSW Year 11 Preliminary syllabus, dot point by dot point." />
+  <meta name="twitter:description" content="Year 11 Enterprise Computing notes on cybersecurity: privacy, threats, protections, risk matrices and Australian cyber law, with diagrams, tools and quizzes." />
   <meta name="twitter:image" content="https://4bzdog.github.io/HSC-Enterprise-Computing/og-image.png" />
   <script type="application/ld+json">
   {
@@ -48,12 +48,13 @@
   <meta name="theme-color" content="#0B1B2E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- CONTENT: rewrite the meta description (and the two social descriptions above) in 120 to 160 characters. -->
-  <meta name="description" content="HSC Enterprise Computing notes on Principles of Cybersecurity (Privacy, threats and risk). NESA NSW Year 11 Preliminary syllabus, dot point by dot point." />
+  <meta name="description" content="Year 11 Enterprise Computing notes on cybersecurity: privacy, threats, protections, risk matrices and Australian cyber law, with diagrams, tools and quizzes." />
   <!-- Theme init: prevents flash of wrong theme. The ec- prefix keeps this site's storage apart from sister sites on the same origin. -->
   <script>(function(){try{var t=localStorage.getItem('ec-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
   <link rel="stylesheet" href="../css/styles.css?v=eaa2e127" />
   <link rel="stylesheet" href="../css/theme.css?v=ea1ce127" />
+  <link rel="stylesheet" href="../css/anim.css?v=22e246f7" />
+  <link rel="stylesheet" href="../css/pages/cybersecurity.css?v=2d524f2f" />
 </head>
 <body>
 
@@ -158,8 +159,7 @@
       </nav>
       <div class="topic-title-row"><span class="topic-hero-icon ti-y11" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z"/><circle cx="12" cy="10.5" r="2"/><path d="M12 12.5V16"/></svg></span><h1>Principles of Cybersecurity</h1></div>
       <p class="text-muted-dark max-w-600 mt-2 fs-sm lh-base">
-        <!-- CONTENT: one or two sentences introducing the topic, with the key ideas in <strong>. -->
-        Notes for the NESA focus area <strong>Principles of cybersecurity</strong>, following the syllabus in order: Understanding privacy and security, Security awareness and Cyber law and ethics.
+        Notes for the NESA focus area <strong>Principles of cybersecurity</strong>: how <strong>privacy and security</strong> work inside Australian enterprises, the <strong>threats</strong> they face, the <strong>protections and risk management</strong> that keep data safe, and the <strong>laws</strong> that apply when things go wrong.
       </p>
       <div class="topic-header-meta">
         <span class="meta-pill year11">Year 11 — Preliminary</span>
@@ -204,8 +204,9 @@
 
         <aside class="yr11 topic-breakout" aria-label="Topic introduction">
           <span class="breakout-label">Why this matters now</span>
-          <!-- CONTENT: topic introduction. Two short paragraphs linking the topic to students' lives, then a closing question in .breakout-question with a .bq-lead label. -->
-          <p>This page covers the Principles of cybersecurity focus area of the NESA Enterprise Computing syllabus.</p>
+          <p>In 2022, two Australian companies, Optus and Medibank, each faced a breach that exposed the personal details of close to ten million people. Names, addresses, licence numbers and, for Medibank, health claims data ended up in criminal hands, and the price was paid by ordinary people who had done nothing wrong. Every enterprise you will ever work for, from a school canteen to a hospital network, holds data about other people, and looking after it is now a legal duty as well as good manners.</p>
+          <p>This topic follows the NESA syllabus in three parts. First you meet the ideas of privacy, trust and the attributes of a breach, and the people who cause breaches. Then you study the threats, the hardware and software defences, and how to weigh a risk with a risk matrix. Finally you look at what breaches cost individuals, organisations and society, and the Australian laws that respond.</p>
+          <p class="breakout-question"><span class="bq-lead">As you read, ask</span> If a company lost my data tomorrow, what could a stranger do with it, and who should be responsible for stopping that?</p>
         </aside>
 
         <!-- ═══════════════════════════════════════════════════════ -->
@@ -217,8 +218,8 @@
         </div>
 
         <aside class="yr11 topic-breakout subtopic-breakout" aria-label="Part introduction">
-          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
-          <p>This part covers 6 NESA dot points: understanding privacy and security.</p>
+          <p>Before you can defend data you need to know what you are protecting and why people care. This part explains privacy, trust and freedom of information, the principles enterprises use to control access, storage and permissions, how you can protect your own data, the weaknesses of social networking, what makes something a breach, and which weaknesses attackers exploit.</p>
+          <p class="breakout-question">How much of your life could a stranger rebuild from what is public about you right now?</p>
         </aside>
 
         <section id="privacy-trust-foi">
@@ -226,8 +227,38 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-03, EC-11-07)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Explain</strong> privacy, trust and freedom of information with respect to people, systems and data</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (explain). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+<p>Three ideas sit underneath everything in cybersecurity: <strong>privacy</strong> (who controls information about a person), <strong>trust</strong> (the confidence that people, systems and data will behave as expected) and <strong>freedom of information</strong> (the public's right to see what governments hold). They support each other, but they also pull against each other, which is why laws and enterprise policies have to balance them.</p>
+
+          <h3>Privacy</h3>
+          <p>Privacy is a person's ability to decide how information about them is collected, used, shared and kept. It is about <em>control</em>, not secrecy: you are happy for your bank to know your balance, but not for a stranger to. In Australia the <strong>Privacy Act 1988</strong> (Cth) protects <strong>personal information</strong>, defined as information or an opinion about an identified individual, or an individual who is reasonably identifiable. A name is personal information, but so can be a licence number, a photo or a combination of postcode, birth date and job title. <strong>Sensitive information</strong>, such as health, racial or ethnic origin, religious belief and biometric data, gets stronger protection. The Act binds Australian Government agencies and most organisations with an annual turnover over $3 million, plus some smaller ones such as health service providers. Its 13 Australian Privacy Principles are covered in the next section, and the Office of the Australian Information Commissioner (OAIC) enforces them. NSW public sector agencies, including public schools, are covered by the <em>Privacy and Personal Information Protection Act 1998</em> (NSW), and health information by the <em>Health Records and Information Privacy Act 2002</em> (NSW).</p>
+
+          <h3>Trust</h3>
+          <p>Trust is what makes people hand over data at all. An enterprise earns it by being open about what it collects, protecting it and owning up when something goes wrong. Trust is slow to build and quick to lose: after a breach, customers leave, partners ask hard questions and regulators investigate. Trust also applies to the technology itself. A browser trusts a website because a certificate authority has vouched for it; a bank trusts a login because a second factor confirms it; a manager trusts a report only if the data behind it is accurate and comes from a known source. Modern security designs often assume <em>zero trust</em>: no user or device is trusted just for being inside the network, and every request is checked.</p>
+
+          <h3>Freedom of information</h3>
+          <p>Freedom of information (FOI) is the right to access documents held by government. It exists so that citizens can hold governments accountable. Under the <strong>Freedom of Information Act 1982</strong> (Cth) a person can ask for documents held by Australian Government agencies and ministers. In NSW the <strong>Government Information (Public Access) Act 2009</strong> (the <strong>GIPA Act</strong>) covers state agencies, councils, universities and ministers. The GIPA Act works on a presumption in favour of disclosure and offers four pathways: open access information that agencies must publish, information proactively released, informal release on request, and a formal access application. An agency may refuse or redact information when there is an overriding public interest against disclosure, and an unreasonable impact on someone's privacy is one such consideration. FOI laws do not generally apply to private companies. To see what a company holds about you, you use the access principle in the Privacy Act (APP 12).</p>
+
+          <div class="callout info"><strong>Scenario</strong> A resident asks their regional council under the GIPA Act for emails about a development approval. The council releases the documents but blacks out private citizens' names and phone numbers. Transparency (FOI) and privacy are both being served: the public sees how the decision was made, and individuals stay protected.</div>
+
+          <h3>People, systems and data</h3>
+          <p>The syllabus asks you to consider all three ideas with respect to <strong>people</strong>, <strong>systems</strong> and <strong>data</strong>. The table pulls this together.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th></th><th>Privacy</th><th>Trust</th><th>Freedom of information</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">People</th><td>Customers and staff decide how their details are used; staff must handle others' data properly.</td><td>Customers trust staff not to snoop; staff are vetted and given access by role.</td><td>Citizens can ask government for documents; public servants must record decisions properly.</td></tr>
+                <tr><th scope="row">Systems</th><td>Systems are built with privacy controls: access limits, encryption, consent settings.</td><td>Certificates, logins and audit logs let users and systems verify each other.</td><td>Government systems must be able to find, retrieve and release documents when asked.</td></tr>
+                <tr><th scope="row">Data</th><td>Personal and sensitive information is collected only when needed and kept only while needed.</td><td>Data is trusted when it is accurate, complete and comes from a known source.</td><td>Government-held data is presumed open unless a public interest reason applies.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="key-terms"><div class="key-term-item"><strong>Personal information</strong><span>Information or an opinion about an identified or reasonably identifiable individual (Privacy Act 1988).</span></div><div class="key-term-item"><strong>Sensitive information</strong><span>A subset of personal information, such as health, biometric or racial origin data, that carries extra protection.</span></div><div class="key-term-item"><strong>Trust</strong><span>Confidence that a person, system or data source will behave or perform as expected.</span></div><div class="key-term-item"><strong>Freedom of information</strong><span>The legal right to access documents held by government, subject to exemptions.</span></div><div class="key-term-item"><strong>OAIC</strong><span>The Office of the Australian Information Commissioner, which regulates privacy and Commonwealth FOI.</span></div></div>
+
+          <div class="callout assessor"><strong>Assessor tip: "Explain"</strong> An <em>explain</em> question wants each idea defined, related to people, systems and data, and linked by cause and effect. A full-mark answer says something like: "Privacy is control over personal information; trust is what lets customers share it; FOI opens government records to scrutiny. They can conflict, so an agency releasing a document under GIPA must still protect personal details." Give one Australian example. A common mistake is treating privacy and security as the same thing.</div>
+
+          <p class="fs-sm">Further reading: <a href="https://www.oaic.gov.au/privacy/your-privacy-rights" target="_blank" rel="noopener">OAIC: your privacy rights</a> and <a href="https://www.oaic.gov.au/freedom-of-information" target="_blank" rel="noopener">OAIC: freedom of information</a>. The NSW Information and Privacy Commission (IPC) regulates GIPA and the NSW privacy laws.</p>
+
         </section>
 
         <hr class="divider" />
@@ -237,8 +268,78 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-03, EC-11-04)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Describe</strong> privacy and security principles associated with access, storage and permissions used by enterprises to collect and interpret data</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (describe). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+<p>Enterprises collect data to run services and to interpret it: to spot buying trends, predict demand or personalise offers. Doing this responsibly rests on principles that govern who can <strong>access</strong> data, how it is <strong>stored</strong> and what <strong>permissions</strong> people have given. In Australia, the 13 <strong>Australian Privacy Principles (APPs)</strong> in the Privacy Act 1988 set the legal baseline, and good security practice adds technical principles on top.</p>
+
+          <h3>Access principles</h3>
+          <p>Access control answers the question "who can see or change this data?" Four principles guide the answer.</p>
+          <ul>
+            <li><strong>Least privilege:</strong> every user and program gets the minimum access needed for the job, and no more. A front-desk worker can read appointments but not clinical notes.</li>
+            <li><strong>Need to know:</strong> even a person with a high clearance sees information only when their task needs it.</li>
+            <li><strong>Role-based access control (RBAC):</strong> permissions are attached to roles (receptionist, doctor, manager) and people are assigned roles, which makes access easier to manage and audit than granting rights person by person.</li>
+            <li><strong>Separation of duties and accountability:</strong> no single person can complete a sensitive process alone, and <em>audit logs</em> record who accessed what and when. Authentication (proving who you are) comes before authorisation (deciding what you may do).</li>
+          </ul>
+          <div class="table-wrap">
+            <table>
+              <caption>Worked example: role-based permissions for a medical clinic (R = read, W = read and write, none = no access)</caption>
+              <thead><tr><th>Role</th><th>Appointments</th><th>Clinical notes</th><th>Billing</th><th>System settings</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Receptionist</th><td>W</td><td>none</td><td>R</td><td>none</td></tr>
+                <tr><th scope="row">Doctor</th><td>R</td><td>W</td><td>none</td><td>none</td></tr>
+                <tr><th scope="row">Practice manager</th><td>W</td><td>none</td><td>W</td><td>none</td></tr>
+                <tr><th scope="row">IT administrator</th><td>none</td><td>none</td><td>none</td><td>W</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Notice that no role has every permission. The IT administrator can keep the system running without reading patient records, and a stolen receptionist password cannot expose clinical notes.</p>
+
+          <h3>Storage principles</h3>
+          <p>Where and how data is kept matters as much as who can open it.</p>
+          <ul>
+            <li><strong>Data minimisation:</strong> collect only what you need. Data you never collected cannot be stolen. APP 3 limits collection to information reasonably necessary for the organisation's functions.</li>
+            <li><strong>Encryption:</strong> protect data <em>at rest</em> (in databases and on devices) and <em>in transit</em> (across networks), so stolen files are unreadable without the key.</li>
+            <li><strong>Retention and secure destruction:</strong> keep data only as long as it is needed for the purpose or required by law, then destroy or de-identify it (APP 11.2). Old data that nobody uses is all risk and no benefit.</li>
+            <li><strong>Location and third parties:</strong> APP 8 makes an organisation accountable when personal information is disclosed to an overseas recipient, such as a cloud provider, so contracts and locations must be checked.</li>
+            <li><strong>Classification and backup:</strong> label data by sensitivity (public, internal, confidential) so controls match the risk, and keep protected backups so the data survives failure.</li>
+          </ul>
+
+          <h3>Permissions and consent</h3>
+          <p>Permissions cover what people have allowed an enterprise to do with their data. Valid <strong>consent</strong> is informed, voluntary, current and specific, and cannot be hidden in a huge terms-and-conditions page. Related principles:</p>
+          <ul>
+            <li><strong>Purpose limitation (APP 6):</strong> use or disclose data only for the purpose it was collected for, unless the person consents or another exception applies.</li>
+            <li><strong>Notice and transparency (APP 1 and 5):</strong> tell people what is collected, why, and who receives it, usually through a collection notice and a privacy policy.</li>
+            <li><strong>Choice and control:</strong> allow opt-out from direct marketing (APP 7) and let people access and correct their information (APP 12 and 13).</li>
+            <li><strong>App permissions:</strong> mobile apps and platforms should request only the permissions (location, contacts, camera) that their function needs.</li>
+          </ul>
+
+          <h3>Collecting and interpreting data</h3>
+          <p>Interpreting data raises its own privacy issues. Combining datasets can <em>re-identify</em> people from data that was supposedly anonymous: a "de-identified" record with postcode, birth date and gender might still point to one person. <em>Profiling</em> can also lead to unfair decisions if the data or the algorithm is biased. Sound practice is to analyse aggregated or de-identified data where possible, restrict who can join datasets, and use data only for purposes people would reasonably expect.</p>
+
+          <div class="table-wrap">
+            <table>
+              <caption>The 13 Australian Privacy Principles in plain language</caption>
+              <thead><tr><th>APP</th><th>Name</th><th>In plain language</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>Open and transparent management</td><td>Have a clear, current privacy policy and privacy practices.</td></tr>
+                <tr><td>2</td><td>Anonymity and pseudonymity</td><td>Let people deal with you anonymously or under a pseudonym where practical.</td></tr>
+                <tr><td>3</td><td>Collection of solicited information</td><td>Collect only what is reasonably necessary; sensitive information generally needs consent.</td></tr>
+                <tr><td>4</td><td>Unsolicited information</td><td>Decide whether you could have collected it; if not, destroy or de-identify it.</td></tr>
+                <tr><td>5</td><td>Notification of collection</td><td>Tell people what you collect, why and who gets it.</td></tr>
+                <tr><td>6</td><td>Use or disclosure</td><td>Use data for the purpose collected, unless an exception applies.</td></tr>
+                <tr><td>7</td><td>Direct marketing</td><td>Marketing must give an easy way to opt out.</td></tr>
+                <tr><td>8</td><td>Cross-border disclosure</td><td>Take reasonable steps so overseas recipients protect the data.</td></tr>
+                <tr><td>9</td><td>Government related identifiers</td><td>Do not use identifiers such as a Medicare number as your own customer ID.</td></tr>
+                <tr><td>10</td><td>Quality</td><td>Keep personal information accurate, up to date and complete.</td></tr>
+                <tr><td>11</td><td>Security</td><td>Take reasonable steps to protect data from misuse, interference, loss and unauthorised access; destroy or de-identify it when no longer needed.</td></tr>
+                <tr><td>12</td><td>Access</td><td>Give people access to their own information on request.</td></tr>
+                <tr><td>13</td><td>Correction</td><td>Correct information that is wrong.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout info"><strong>Indigenous data sovereignty</strong> Aboriginal and Torres Strait Islander Peoples have the right to govern the collection, ownership and use of data about their communities, Country and cultural knowledge. The Maiam nayri Wingara Indigenous Data Sovereignty Collective and the CARE principles for Indigenous data governance (Collective benefit, Authority to control, Responsibility, Ethics) apply these ideas. An enterprise collecting data about Aboriginal and Torres Strait Islander Peoples should ask permission, agree how data will be stored and used, and share the benefits.</div>
+
+          <div class="callout assessor"><strong>Assessor tip: "Describe"</strong> A <em>describe</em> answer sets out the features of each principle without a long argument. Name the principle (for example, least privilege), say what it means, and show it working in one enterprise setting. Marks are lost for describing security only in general terms such as "keeping data safe" without naming access, storage or permissions.</div>
+
         </section>
 
         <hr class="divider" />
@@ -248,8 +349,58 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-03, EC-11-07)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Investigate</strong> how an individual can contribute to maintaining the privacy of their own data</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+<p>Enterprises cannot protect your data alone. Most account takeovers begin with a stolen or reused password, a phishing message or an out-of-date device, and these are things an individual controls. Investigating what a person can do means comparing the actions by how much protection each gives, what it costs in effort, and what it cannot do.</p>
+
+          <h3>Accounts: passphrases, password managers and MFA</h3>
+          <p>A <strong>passphrase</strong> is a long secret made of several random words. Length beats complexity: four or more randomly chosen words are easier to remember and much harder to guess than a short password full of symbols such as <code>P@ssw0rd!</code>, which attackers' tools already try. The cyber.gov.au guidance from the Australian Signals Directorate's Australian Cyber Security Centre (ACSC) recommends passphrases, and the key rule is that every account needs a <em>different</em> one. Nobody can remember dozens of unique passphrases, so use a <strong>password manager</strong>: it generates and stores a unique secret for each site, and only fills it in on the real address, which also helps against fake login pages. Protect the manager itself with a strong passphrase and MFA.</p>
+          <p><strong>Multi-factor authentication (MFA)</strong> asks for something you know (a passphrase) plus something you have (an authenticator app, security key or passkey) or something you are (a fingerprint). Even if a criminal steals your password, they still need the second factor. Authenticator apps, security keys and <em>passkeys</em> resist phishing better than SMS codes, but any MFA is far better than none. Turn it on first for email, because email can reset every other account.</p>
+
+          <div class="cy-widget" data-cy="pass">
+            <h4>Passphrase strength estimator</h4>
+            <p class="cy-lead">Choose how a secret is made and how long it is. Enable JavaScript to use this tool. It shows how many guesses an attacker needs and how long that would take at three example speeds.</p>
+          </div>
+
+          <h3>Settings, updates and sharing</h3>
+          <ul>
+            <li><strong>Privacy settings:</strong> set social accounts to private, limit who can see posts, tags and location, and switch off location sharing you do not need. Review settings after app updates, because defaults sometimes change.</li>
+            <li><strong>App permissions:</strong> a torch app that asks for your contacts and microphone is a warning sign. Grant only what the function needs, and remove apps you no longer use.</li>
+            <li><strong>Software updates:</strong> updates fix known flaws that criminals actively exploit. Turn on automatic updates for your phone, computer and apps.</li>
+            <li><strong>Digital footprint:</strong> anything posted can be copied, screenshotted and searched, and can be used to guess passwords, security questions or to build a convincing scam. Post as if a stranger and a future employer will read it, because they might.</li>
+            <li><strong>Public Wi-Fi:</strong> avoid logging in to sensitive accounts on open networks. Use mobile data or a VPN, and see the evil twin animation in the social networking section.</li>
+            <li><strong>Backups:</strong> keep copies of important photos and files so ransomware or a lost phone does not become a disaster.</li>
+          </ul>
+
+          <h3>Recognising scams</h3>
+          <p>Scammers rely on emotion, not technology: urgency ("your account will be closed today"), fear (fines, police), reward (prizes, refunds) and authority (a bank, the ATO, a parcel courier). Warning signs include unexpected contact, pressure to act immediately, a request for passwords, codes or gift cards, payment by cryptocurrency, and a link that does not match the real organisation's address. Good habits are to <em>stop</em>, <em>verify</em> through a number or app you already trust, never share MFA codes, and report it. <a href="https://www.scamwatch.gov.au/protect-yourself" target="_blank" rel="noopener">Scamwatch</a> lists current scams and how to protect yourself.</p>
+
+          <h3>If something goes wrong</h3>
+          <ol>
+            <li>Change the affected password from a clean device and turn on MFA; sign out other sessions.</li>
+            <li>Check where else the same password was used and change those too.</li>
+            <li>Contact your bank straight away if money or card details are involved.</li>
+            <li>Report the incident to ReportCyber (through cyber.gov.au) and to Scamwatch if it was a scam; the eSafety Commissioner helps with image-based abuse and cyberbullying.</li>
+            <li>If identity documents were exposed, contact <a href="https://idcare.org/" target="_blank" rel="noopener">IDCARE</a>, Australia's not-for-profit identity and cyber support service.</li>
+            <li>Use a breach-notification service such as <a href="https://haveibeenpwned.com/" target="_blank" rel="noopener">Have I Been Pwned</a> to learn when your email address appears in a known breach.</li>
+          </ol>
+
+          <h3>Judgement: which actions matter most?</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Action</th><th>What it prevents</th><th>Effort</th><th>Limitation</th></tr></thead>
+              <tbody>
+                <tr><td>Unique passphrases in a password manager</td><td>Credential stuffing and guessing</td><td>Low once set up</td><td>Does not stop you typing it into a fake site if you ignore warnings.</td></tr>
+                <tr><td>MFA (app, key or passkey)</td><td>Account takeover after a stolen password</td><td>Low</td><td>SMS codes can be intercepted or tricked out of you; fake sites can relay codes.</td></tr>
+                <tr><td>Automatic updates</td><td>Exploits of known vulnerabilities</td><td>Very low</td><td>Does not protect against unknown flaws or scams.</td></tr>
+                <tr><td>Privacy settings and limited sharing</td><td>Stalking, identity theft, targeted scams</td><td>Medium, ongoing</td><td>Platforms still hold your data; friends can share what you post.</td></tr>
+                <tr><td>Scam awareness</td><td>Phishing, fraud, social engineering</td><td>Medium, ongoing</td><td>Depends on attention; tired or stressed people are easier to trick.</td></tr>
+                <tr><td>Backups</td><td>Loss from ransomware, theft or failure</td><td>Low to medium</td><td>Does not stop the breach; a connected backup can be encrypted too.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>A reasonable judgement is that the biggest gains come from the first two rows: unique passphrases plus MFA on email and banking. They stop the most common route into an account for very little effort. The other actions cover gaps that those two cannot, so together they form a set of layers.</p>
+
+          <div class="callout assessor"><strong>Assessor tip: "Investigate"</strong> An <em>investigate</em> question wants you to look at several options and reach a supported conclusion. Do more than list tips: pick two or three actions, explain how each reduces a particular threat, note a limitation, and finish with a judgement about which contributes most and why. Link the action to a threat (for example, MFA against credential stuffing).</div>
+
         </section>
 
         <hr class="divider" />
@@ -260,8 +411,55 @@
           <p class="syllabus-concept">📌 <em><strong>Explore</strong> security vulnerabilities of social networking to both an individual and an enterprise</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>account access</li><li>account behaviour</li><li>hosting platform security</li><li>identity theft</li><li>phishing</li><li>evil twins</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (explore). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+<p>Social networking platforms hold huge amounts of personal information and connect strangers to each other, which makes them useful to criminals. The weaknesses fall into a few groups: how <strong>accounts are accessed</strong>, how <strong>people behave</strong> on them, the security of the <strong>platform itself</strong>, and the crimes that follow, such as <strong>identity theft</strong>, <strong>phishing</strong> and <strong>evil twin</strong> networks. Each affects both an individual and an enterprise that uses social media for marketing, customer service or recruitment.</p>
+
+          <h3>Account access</h3>
+          <p>An account is only as safe as the way it is unlocked. Common weaknesses are weak or reused passwords, no MFA, accounts left logged in on shared devices, and recovery routes that are easier to attack than the login, such as a mobile number or an email address that has itself been compromised. Attackers use <strong>credential stuffing</strong>: they take email and password pairs leaked from one breach and automatically try them on other sites, betting that people reuse passwords. Another route is <strong>SIM swapping</strong>, where a criminal convinces a mobile provider to move your number to their SIM so they receive your SMS reset codes.</p>
+          <p><em>Individual:</em> a takeover lets the attacker read private messages, impersonate you to your friends and lock you out. <em>Enterprise:</em> a hijacked brand account can post scams or offensive content in the company's name, and a shared login with no accountability means nobody knows who did what.</p>
+
+          <h3>Account behaviour</h3>
+          <p>How people use the account creates risk even when the login is strong. Oversharing gives attackers the raw material for social engineering: a birthday, pet's name, school, workplace, holiday dates and location tags can answer security questions or make a scam convincing. Accepting friend requests from strangers, joining fake competitions and quizzes, clicking links in messages and granting third-party apps broad permissions all widen the attack surface. <strong>Fake or cloned profiles</strong> copy a real person's photos to trick their contacts into sending money or clicking a link.</p>
+          <p><em>Enterprise:</em> employees who post photos of their workplace can accidentally show screens, badges or systems; job titles and org charts on professional networks help an attacker choose whom to impersonate. A social media policy and training address this.</p>
+
+          <h3>Hosting platform security</h3>
+          <p>Users and companies rely on the platform's own security, over which they have little control. Weaknesses include software flaws, misconfigured settings, scraping of public profile data, over-broad access for third-party apps, and the platform's own staff being tricked. Two well-documented examples: in 2018 it emerged that a third-party quiz app had harvested data on up to 87 million Facebook users (Facebook's estimate) through the platform's permissions, in what became known as the Cambridge Analytica case; and in July 2020 attackers used phone-based social engineering on Twitter employees to gain access to internal tools and take over high-profile accounts to run a cryptocurrency scam. Lessons: the platform is a shared risk, so limit what you put on it and use its security features (MFA, login alerts, app-permission review).</p>
+
+          <h3>Identity theft</h3>
+          <p>Identity theft is using another person's personal information to commit fraud, such as opening accounts, taking out loans or making purchases in their name. Criminals assemble a profile from many small pieces: name and birth date from a social profile, an address from a delivery photo, an email and password from an old breach. Enough pieces let them pass a bank's identity check or reset another account. Signs include unexpected bills or credit checks, and contact from debt collectors about accounts you never opened. Dealing in another person's identification information with intent to commit an offence is a crime under the Commonwealth Criminal Code (identity crime offences). Response steps are in the earlier section, including contacting IDCARE.</p>
+
+          <h3>Phishing</h3>
+          <p>Phishing is a message that pretends to come from a trusted source to trick you into revealing information or taking an action. On social networks it arrives as a direct message from a "friend" whose account was taken over, a fake support account, or a post advertising a giveaway. The mechanics are precise:</p>
+          <ol>
+            <li>The attacker <strong>spoofs</strong> a trusted identity, using a look-alike display name, a cloned profile or a compromised real account.</li>
+            <li>The message creates urgency or curiosity ("Is this you in this video?").</li>
+            <li>The link leads to a <strong>look-alike domain</strong> (for example one letter changed) hosting a copy of the real login page.</li>
+            <li>The victim types their credentials; the page passes them to the attacker, who logs in at once. More advanced kits relay the login to the real site in real time so the victim's MFA code is captured and used too.</li>
+            <li>The attacker then uses the account to send the same message to the victim's contacts, so the scam spreads because people trust friends.</li>
+          </ol>
+          <p>Defences: check the address bar before typing a password, use a password manager (it will not fill on a fake domain), prefer passkeys or security keys, and confirm with the "friend" through another channel.</p>
+
+          <h3>Evil twins</h3>
+          <p>An <strong>evil twin</strong> is a rogue Wi-Fi access point set up to look like a legitimate one. Wi-Fi networks are identified by a name, the SSID, and anyone can broadcast any name. Phones remember networks they have joined and reconnect automatically to a known name, and open networks (no password) give the device no way to prove who is running them. So an attacker in a cafe can broadcast "Cafe_Free_WiFi" with a stronger signal, and nearby phones join without asking. All traffic then passes through the attacker's device, a <em>man-in-the-middle</em> position. The attacker can read unencrypted traffic, capture logins entered on a fake "sign in to Wi-Fi" page and redirect users to look-alike sites. HTTPS greatly limits the damage because content is encrypted end to end, but the attacker can still see which sites you visit and can present fake pages.</p>
+          <figure class="figure" id="fig-cyber-evil-twin">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Animated diagram</span></p>
+              <h4 class="figure-title">An evil twin network, with and without HTTPS</h4>
+              <p class="figure-lead">Follow one login as a rogue access point copies a cafe's network name.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--anim"><div class="anim" data-anim="cyber-evil-twin"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>An open network cannot prove who runs it, so a phone joins whichever known name has the stronger signal.</li><li>Over plain HTTP the attacker reads the password; over HTTPS the attacker sees only cipher text.</li><li>The scene simplifies: real attacks may also fake the sign-in page or block traffic.</li></ul><p class="figure-controls">Choose a connection with the tabs. Step with the Back and Next buttons (or the arrow keys), and play or pause with the Space bar.</p></div>
+              <p class="figure-try"><strong>Try this</strong>In the HTTPS tab, what can Mallory still learn or do, and which defence removes the evil twin from the picture entirely?</p>
+            </div>
+          </figure>
+          <p>Defences: turn off auto-join for open networks, confirm the exact network name with staff, use mobile data or a VPN for anything sensitive, and prefer networks that need a password or certificate. The HTTPS handshake that limits the damage is drawn in the <a href="#protect-data">hardware and software protection</a> section.</p>
+
+          <div class="callout info"><strong>Law note</strong> From December 2025 the Online Safety Amendment (Social Media Minimum Age) Act 2024 requires age-restricted social media platforms to take reasonable steps to stop Australians under 16 from holding accounts. The eSafety Commissioner enforces it. The aim is to reduce online harm, but it is not a substitute for the security habits above.</div>
+
+          <div class="key-terms"><div class="key-term-item"><strong>Credential stuffing</strong><span>Automatically trying leaked username and password pairs on other sites, relying on password reuse.</span></div><div class="key-term-item"><strong>Social engineering</strong><span>Manipulating people into giving up information or access, rather than breaking technology.</span></div><div class="key-term-item"><strong>Identity theft</strong><span>Using another person's personal information to commit fraud or other crimes.</span></div><div class="key-term-item"><strong>Evil twin</strong><span>A rogue Wi-Fi access point that copies a legitimate network's name to intercept traffic.</span></div><div class="key-term-item"><strong>Man-in-the-middle</strong><span>An attacker secretly relaying and possibly altering communication between two parties.</span></div></div>
+
+          <div class="callout assessor"><strong>Assessor tip: "Explore"</strong> An <em>explore</em> question is open, so cover the range: pick several of the six listed vulnerabilities, say how each works and show the effect on <em>both</em> an individual and an enterprise. Examples anchor the answer: a hijacked business page, a fake login page, an evil twin in a cafe. Do not describe only the individual's side.</div>
+
         </section>
 
         <hr class="divider" />
@@ -272,8 +470,50 @@
           <p class="syllabus-concept">📌 <em><strong>Describe</strong> the attributes of a cybersecurity breach</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>confidentiality of information</li><li>integrity of information</li><li>availability of information</li><li>privacy implications</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (describe). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+<p>A <strong>cybersecurity breach</strong> is an incident in which data or systems are accessed, disclosed, changed, destroyed or made unavailable without authorisation. Security professionals describe what has been lost using the <strong>CIA triad</strong>: confidentiality, integrity and availability. A single incident can damage more than one attribute, and whenever personal information is involved there are also <strong>privacy implications</strong> for the people it describes.</p>
+
+          <figure class="figure" id="fig-cyber-cia-triad">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Concept diagram</span></p>
+              <h4 class="figure-title">The CIA triad</h4>
+              <p class="figure-lead">Each attribute protects the same information in a different way, and each can fail in its own way.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="cyber-cia-triad"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Confidentiality is about who can see data, integrity about whether it is correct, and availability about whether it can be used.</li><li>One incident can break more than one attribute: ransomware that also steals data hits availability and confidentiality.</li><li>When the data is personal, any failure can become a privacy problem.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Which attribute fails when a hacker changes a student's marks, and which when a school network is unavailable during an exam?</p>
+            </div>
+          </figure>
+
+          <h3>Confidentiality of information</h3>
+          <p>Confidentiality means only authorised people and systems can view information. It is breached by <em>disclosure</em>: theft of a database, an email sent to the wrong person, a misconfigured cloud storage bucket left open to the internet, or an insider copying files. <strong>Example:</strong> the Medibank data stolen in 2022 was later published online, an extreme confidentiality failure. <strong>Controls:</strong> encryption, access control, MFA, data classification and staff training.</p>
+
+          <h3>Integrity of information</h3>
+          <p>Integrity means data is accurate, complete and has not been changed without authorisation. It is breached by <em>alteration</em>: an attacker editing bank details on an invoice, a user changing records they should only read, malware corrupting files, or a fake update. Integrity failures can be harder to notice than theft, because everything still appears to work. <strong>Example:</strong> in a payment-diversion scam a criminal changes the account number on a supplier's invoice so the payment lands in their account. <strong>Controls:</strong> permissions that limit who can edit, hashing and digital signatures to detect changes, audit logs, validation checks and backups to restore a known good copy.</p>
+
+          <h3>Availability of information</h3>
+          <p>Availability means information and systems are accessible when authorised users need them. It is breached by <em>disruption</em>: ransomware encrypting files, a denial-of-service attack flooding a website, destruction of equipment, or a failure with no backup. <strong>Example:</strong> a distribution centre whose warehouse system is locked by ransomware cannot dispatch orders, even though no data was stolen. Availability is not only about attacks: hardware failure and human error break it too. <strong>Controls:</strong> redundancy, backups and disaster recovery, DDoS protection, patching, and monitoring.</p>
+
+          <h3>Privacy implications</h3>
+          <p>When a breach exposes <strong>personal information</strong>, the harm falls on real people, and the law treats it differently from a breach of business secrets. Possible harms include identity theft, financial fraud, targeted scams, blackmail or embarrassment (especially with health information), damage to reputation, and even risks to physical safety where an address is exposed. Under the Notifiable Data Breaches scheme, a breach that is <em>likely to result in serious harm</em> to any individual must be reported to the OAIC and the people affected. Some harms cannot be undone: a leaked birth date, medical history or home address stays leaked, and cannot be reset like a password. Privacy implications also include loss of trust, complaints to the OAIC, and possible legal action by those affected.</p>
+          <p>Confidentiality and privacy are related but not identical. Confidentiality protects any kind of information, such as a secret product design. Privacy is specifically about individuals' control over information about them. A breach of a secret recipe is a confidentiality breach with no privacy issue; a customer list posted online is both. A privacy breach can also happen with no attack at all, such as an employee emailing a spreadsheet of client details to the wrong person.</p>
+
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Attribute</th><th>The question it answers</th><th>How it is breached</th><th>A control that helps</th></tr></thead>
+              <tbody>
+                <tr><td>Confidentiality</td><td>Who can see this?</td><td>Theft, leak, eavesdropping, misdirected email</td><td>Encryption, least privilege</td></tr>
+                <tr><td>Integrity</td><td>Is this still correct?</td><td>Tampering, forged records, malicious edits</td><td>Hashing, signatures, audit logs</td></tr>
+                <tr><td>Availability</td><td>Can it be used now?</td><td>Ransomware, DDoS, deletion, outages</td><td>Backups, redundancy, DR plan</td></tr>
+                <tr><td>Privacy</td><td>Is the person's control respected?</td><td>Any of the above involving personal data</td><td>Data minimisation, consent, breach response</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="key-terms"><div class="key-term-item"><strong>Breach</strong><span>An event where information or systems are accessed, changed, disclosed or disrupted without authorisation.</span></div><div class="key-term-item"><strong>Confidentiality</strong><span>Ensuring information is available only to those authorised to see it.</span></div><div class="key-term-item"><strong>Integrity</strong><span>Ensuring information is accurate and has not been altered without authorisation.</span></div><div class="key-term-item"><strong>Availability</strong><span>Ensuring information and systems can be used when needed.</span></div><div class="key-term-item"><strong>Vulnerability</strong><span>A weakness that a threat can exploit.</span></div><div class="key-term-item"><strong>Threat</strong><span>A potential cause of harm to data or systems, such as an attacker or a fire.</span></div></div>
+
+          <div class="callout assessor"><strong>Assessor tip: "Describe" a breach</strong> Answer with the three attributes by name and give a short, specific example for each; then add the privacy implication. A weak answer says "data is stolen". A strong one says: "Confidentiality is breached when customer records are copied by an attacker; integrity when records are altered; availability when ransomware locks the system; and privacy is affected because customers face identity theft." When a question gives a scenario, decide which attribute fails and say why.</div>
+
         </section>
 
         <hr class="divider" />
@@ -284,8 +524,47 @@
           <p class="syllabus-concept">📌 <em><strong>Investigate</strong> vulnerabilities exploited by the threat actor involved in a breach, such as the impact on various elements</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>data</li><li>people</li><li>processes</li><li>technology</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+<p>A <strong>threat actor</strong> is an individual or group that poses a security threat to an individual or organisation (NESA glossary). A breach happens when a threat actor finds and exploits a <strong>vulnerability</strong>, a weakness that can be used to cause harm. Weaknesses appear in four elements of any enterprise: its <strong>data</strong>, its <strong>people</strong>, its <strong>processes</strong> and its <strong>technology</strong>. Investigating a breach means asking which element failed, how the actor exploited it, and what the impact was.</p>
+
+          <h3>Data</h3>
+          <p><strong>Vulnerabilities:</strong> sensitive data stored unencrypted, far more data collected than needed, data kept long after its purpose has ended, cloud storage left publicly readable, and poor classification so nobody knows what is sensitive. <strong>Exploit:</strong> once inside, the actor finds large, readable stores and copies them. <strong>Impact:</strong> exposure of personal information, extortion and privacy harm. <strong>Fix:</strong> minimise, encrypt, classify and delete.</p>
+
+          <h3>People</h3>
+          <p><strong>Vulnerabilities:</strong> staff who click phishing links, reuse passwords, share credentials, fall for phone or message impersonation, or (rarely) act maliciously. Attackers target people because it is often easier than breaking technology. <strong>Exploit:</strong> social engineering, using authority, urgency or fear. <strong>Impact:</strong> stolen credentials, malware installed, money transferred. <strong>Fix:</strong> regular training, phishing simulations, a culture where reporting a mistake is safe, and MFA so one mistake is not enough.</p>
+
+          <h3>Processes</h3>
+          <p><strong>Vulnerabilities:</strong> gaps in how work is done: no patch schedule, accounts not removed when staff leave, one person able to approve and pay an invoice, no check before changing bank details, no tested incident-response or backup-restore plan, and weak supplier checks. <strong>Exploit:</strong> the actor finds the gap in the procedure, such as a phone call to a service desk that resets a password without verification. <strong>Impact:</strong> unauthorised access or payments that technology alone would not have stopped. <strong>Fix:</strong> documented and enforced procedures, separation of duties, verification steps and regular audits.</p>
+
+          <h3>Technology</h3>
+          <p><strong>Vulnerabilities:</strong> unpatched software, default or weak passwords on devices, misconfigured firewalls or cloud services, internet-facing systems with no MFA, exposed application interfaces (APIs) lacking access control, old unsupported systems and no encryption. <strong>Exploit:</strong> automated scanning finds exposed systems within hours, and known flaws are exploited with ready-made tools. <strong>Impact:</strong> remote access, malware, data theft or a system outage. <strong>Fix:</strong> patching, secure configuration, MFA, monitoring and vulnerability scanning.</p>
+
+          <h3>Threat actors</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Actor</th><th>Main motive</th><th>Capability</th><th>Typical methods</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Cybercriminals</strong></td><td>Money</td><td>Low to high; often organised, sometimes renting ready-made tools</td><td>Ransomware, phishing, fraud, selling stolen data</td></tr>
+                <tr><td><strong>Nation-state (state-sponsored) actors</strong></td><td>Espionage, disruption, strategic advantage</td><td>High, well resourced and patient</td><td>Targeted intrusion, supply-chain attacks, long-term access to critical systems</td></tr>
+                <tr><td><strong>Hacktivists</strong></td><td>Political or social cause</td><td>Low to medium</td><td>DDoS, website defacement, leaking documents</td></tr>
+                <tr><td><strong>Insiders</strong></td><td>Grievance, profit, or none (accident)</td><td>Already has legitimate access</td><td>Copying data, sabotage, or careless mistakes</td></tr>
+                <tr><td><strong>Script kiddies</strong></td><td>Curiosity, status, mischief</td><td>Low: uses tools others wrote</td><td>Downloaded attack tools, basic scans</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Motive shapes the target and the damage: a criminal wants data that can be sold or held to ransom; a state actor may quietly sit inside a network for months; a hacktivist wants publicity; and an insider needs no technical skill because they already have access. Hackers are also described by intent: <em>white hat</em> (authorised, testing security with permission), <em>black hat</em> (criminal) and <em>grey hat</em> (unauthorised but without malicious intent, and still often illegal).</p>
+
+          <h3>How the pieces fit: one breach, four elements</h3>
+          <p>Real breaches usually chain weaknesses from several elements. The OAIC has alleged in its Federal Court proceedings that Medibank's 2022 breach involved credentials belonging to a third-party service-desk worker being stolen, and that a VPN did not require a second factor. These are the regulator's allegations, not settled findings, but they illustrate how a chain forms:</p>
+          <ol>
+            <li><strong>People / technology:</strong> a staff member's login was captured by malware, and the account had wide access.</li>
+            <li><strong>Technology / process:</strong> remote access without MFA let the stolen login be used from anywhere.</li>
+            <li><strong>Data:</strong> a large store of customer records, including health claims data, was reachable from that account.</li>
+            <li><strong>Impact:</strong> the data was copied, a ransom demand followed and, when it was not paid, information was published on the dark web.</li>
+          </ol>
+          <p>Removing any single link, for example requiring MFA, would have made the chain much harder to complete. That is why defence uses several layers, covered in the next part.</p>
+
+          <div class="callout assessor"><strong>Assessor tip: "Investigate"</strong> Structure the answer around the four elements. For a given breach scenario, name the threat actor and their motive, identify the vulnerability in each relevant element, say how it was exploited, and state the impact on that element. A top answer also points to which single fix would have broken the chain and why.</div>
+
         </section>
 
         <div class="quiz" data-quiz="cyber-1"></div>
@@ -299,8 +578,8 @@
         </div>
 
         <aside class="yr11 topic-breakout subtopic-breakout" aria-label="Part introduction">
-          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
-          <p>This part covers 4 NESA dot points: security awareness.</p>
+          <p>Knowing the threats is only useful if you can act on them. This part covers the crimes aimed at enterprises, the hardware and software that stop them, how an organisation manages cyber risk, and how to rate and rank risks with a risk matrix so limited money goes where it matters most.</p>
+          <p class="breakout-question">If you could only afford three security controls for a small business, which would you pick, and why those?</p>
         </aside>
 
         <section id="cybercrime-threats">
@@ -309,8 +588,92 @@
           <p class="syllabus-concept">📌 <em><strong>Investigate</strong> cybercrime threats to an enterprise</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>hacking</li><li>phishing, including smishing</li><li>scamming</li><li>bots and botnets</li><li>employee action causing a vulnerability</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+<p>Cybercrime is criminal activity carried out using computers and networks, or aimed at them. For an enterprise the main threats are hacking, phishing (including smishing), scams, bots and botnets, and the actions of its own employees. To <em>investigate</em> them, look at how each works, what it damages (confidentiality, integrity or availability), and how likely and costly it is for the kind of enterprise involved.</p>
+
+          <h3>Hacking</h3>
+          <p>Hacking is gaining unauthorised access to a computer system, network or account. Under the Criminal Code (as inserted by the Cybercrime Act 2001) unauthorised access to or modification of restricted data, and impairment of electronic communication, are offences. Hackers work in stages: they research the target, find a way in, gain higher privileges, move across the network, then steal, change or lock data. Ways in include:</p>
+          <ul>
+            <li><strong>Password attacks:</strong> guessing, dictionary lists, and credential stuffing with leaked passwords.</li>
+            <li><strong>Exploiting software flaws:</strong> using known vulnerabilities in unpatched systems, or weaknesses in web applications such as SQL injection.</li>
+            <li><strong>Misconfiguration:</strong> exposed databases, open remote-access ports and default passwords.</li>
+            <li><strong>Malware:</strong> software installed to do harm, described below.</li>
+          </ul>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Malware</th><th>What it does</th><th>Attribute hit</th></tr></thead>
+              <tbody>
+                <tr><td>Virus</td><td>Attaches to a file or program and spreads when it is run.</td><td>Integrity, availability</td></tr>
+                <tr><td>Worm</td><td>Spreads by itself across networks without user action.</td><td>Availability</td></tr>
+                <tr><td>Trojan</td><td>Looks like useful software but carries a hidden payload, often a backdoor.</td><td>Confidentiality</td></tr>
+                <tr><td>Spyware / keylogger / infostealer</td><td>Records activity, keystrokes or saved passwords and sends them out.</td><td>Confidentiality</td></tr>
+                <tr><td>Ransomware</td><td>Encrypts files and demands payment for the key, often also threatening to publish stolen data.</td><td>Availability, confidentiality</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Phishing, including smishing</h3>
+          <p>Phishing sends messages that impersonate a trusted sender to steal credentials, money or access. It scales cheaply because a criminal only needs a small percentage of recipients to respond. Variants are named after the channel or the target.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Type</th><th>Channel or target</th><th>Example</th></tr></thead>
+              <tbody>
+                <tr><td>Phishing</td><td>Bulk email</td><td>"Your parcel could not be delivered: pay a small fee" with a fake payment page.</td></tr>
+                <tr><td>Spear phishing</td><td>A specific person, using details about them</td><td>An email to an accounts officer that names their manager and a real supplier.</td></tr>
+                <tr><td>Whaling</td><td>Senior executives</td><td>A fake legal notice sent to the CEO.</td></tr>
+                <tr><td><strong>Smishing</strong></td><td>SMS text messages</td><td>A text claiming to be a bank or toll operator with a link to log in.</td></tr>
+                <tr><td>Vishing</td><td>Voice phone calls</td><td>A caller posing as IT support asking you to install remote-control software.</td></tr>
+                <tr><td>Quishing</td><td>QR codes</td><td>A sticker over a real QR code leading to a fake login page.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Smishing works well because people trust text messages, screens are small so a dodgy link is harder to inspect, and messages can appear in the same conversation thread as genuine ones from that organisation. Enterprise controls include email and SMS filtering, MFA, training with simulated phishing, a simple way for staff to report suspicious messages and clear rules that no one will ever be asked for a password or code by message.</p>
+
+          <h3>Scamming</h3>
+          <p>A scam is a deception designed to make the victim hand over money or information voluntarily. Enterprises are targeted by <strong>business email compromise (BEC)</strong> and <em>invoice redirection</em> scams, where a criminal poses as a supplier or executive and asks for a payment to a new bank account; fake tech-support or investment offers; and fake job or supplier enquiries. All exploit human trust: urgency, authority and fear of getting into trouble. Because no malware is needed and the victim authorises the payment, technical controls alone are not enough. Strong <em>processes</em> stop them: call the supplier back on a known number before changing bank details, and require two people to approve large payments. The National Anti-Scam Centre's Scamwatch collects reports and publishes warnings.</p>
+
+          <h3>Bots and botnets</h3>
+          <p>A <strong>bot</strong> is an infected device controlled remotely by an attacker; a <strong>botnet</strong> is a large network of bots. Criminals infect computers, phones, routers and Internet of Things (IoT) devices such as cameras, then command all of them through a <em>command and control (C2)</em> server. Owners often never notice. Uses include:</p>
+          <ul>
+            <li><strong>Distributed denial of service (DDoS):</strong> thousands of bots send requests to one target at once until legitimate users cannot get through, a breach of availability.</li>
+            <li><strong>Spam and phishing:</strong> sending large volumes of messages from many addresses.</li>
+            <li><strong>Credential stuffing:</strong> trying stolen passwords across many sites from many addresses to avoid being blocked.</li>
+            <li><strong>Proxying and mining:</strong> hiding an attacker's traffic or running cryptocurrency mining at the owner's expense.</li>
+          </ul>
+          <figure class="figure" id="fig-cyber-botnet">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Concept diagram</span></p>
+              <h4 class="figure-title">Building and using a botnet</h4>
+              <p class="figure-lead">An attacker infects many devices, then commands them all to flood one target.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="cyber-botnet"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>The victim's server is overwhelmed by many ordinary-looking devices at once, which makes the attack hard to block by address.</li><li>Owners of the infected devices are victims too, and often do not know their device is involved.</li><li>Not all bots are bad: search-engine crawlers are legitimate bots.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Why does an attacker prefer thousands of small devices over a single powerful computer?</p>
+            </div>
+          </figure>
+          <p>Defences include DDoS protection services and rate limiting for the target; and for device owners, changing default passwords, updating firmware and keeping IoT devices on a separate network.</p>
+
+          <h3>Employee action causing a vulnerability</h3>
+          <p>Staff have legitimate access, so their actions can open the door for attackers without any hacking. Most are <em>negligent or accidental</em>: clicking a phishing link, reusing a password, using an unapproved cloud service (<em>shadow IT</em>), plugging in an unknown USB drive, emailing sensitive data to the wrong person, losing an unencrypted laptop, or ignoring updates. A smaller number are <em>malicious insiders</em>, who deliberately steal data, sabotage systems or sell access. Controls include least privilege and logging, clear acceptable-use and social media policies, ongoing training, offboarding that removes access on the last day, and a no-blame reporting culture so mistakes are reported quickly.</p>
+          <div class="callout warning"><strong>Ethics in the workplace</strong> Employers can monitor work systems, but in NSW the Workplace Surveillance Act 2005 requires notice to employees before surveillance starts. Security monitoring should be proportionate and disclosed, because staff who feel spied on are less likely to report mistakes.</div>
+
+          <div class="table-wrap">
+            <table>
+              <caption>Comparing the five threats for a small Australian retailer</caption>
+              <thead><tr><th>Threat</th><th>Typical harm</th><th>Most useful defence</th></tr></thead>
+              <tbody>
+                <tr><td>Hacking / ransomware</td><td>Locked point-of-sale and stock system; stolen customer data</td><td>Patching, MFA, tested offline backups</td></tr>
+                <tr><td>Phishing and smishing</td><td>Stolen staff logins, malware</td><td>Training, MFA, filtering</td></tr>
+                <tr><td>Scams (BEC)</td><td>Payments sent to criminals</td><td>Call-back checks, two-person approval</td></tr>
+                <tr><td>Botnet / DDoS</td><td>Online shop offline during a sale</td><td>DDoS protection service, hosting choices</td></tr>
+                <tr><td>Employee action</td><td>Lost laptop, wrong-recipient email</td><td>Encryption, policy, least privilege</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Judgement: for most small enterprises, phishing-led account takeover and scams are the most probable threats because they need no technical skill and are cheap to attempt, while ransomware has the highest potential cost. That points to prioritising MFA, staff awareness, payment-verification processes and backups over exotic defences.</p>
+
+          <div class="callout assessor"><strong>Assessor tip: "Investigate"</strong> Do not just define the threats. For each one named, say how it works, which attribute of the CIA triad it damages and what an enterprise could do about it, using a scenario if one is given. Smishing is the SMS form of phishing; do not confuse it with vishing (voice). A botnet is many infected devices under one controller, not one attacker's computer.</div>
+
         </section>
 
         <hr class="divider" />
@@ -321,8 +684,117 @@
           <p class="syllabus-concept">📌 <em><strong>Research</strong> hardware and software strategies used to protect data</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>isolation</li><li>physical security</li><li>biometrics</li><li>password protection, encryption and permissions</li><li>multi-factor authentication</li><li>back up and disaster recovery</li><li>firewalls</li><li>antivirus and anti-malware</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (research). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+<p>No single control stops every attack, so enterprises use <strong>defence in depth</strong>: several layers of hardware, software and procedure, so that when one layer fails another still protects the data. Controls are often grouped as <em>preventive</em> (stop it happening), <em>detective</em> (notice it) and <em>recovery</em> (restore after it). The eight strategies below cover all three groups. The Australian Signals Directorate's <strong>Essential Eight</strong>, a baseline of eight mitigation strategies, overlaps with several of them and is mapped at the end of this section.</p>
+
+          <h3>Isolation</h3>
+          <p>Isolation limits the damage an attacker can do by keeping systems apart. <strong>Network segmentation</strong> splits a network into zones (for example with VLANs), with a firewall controlling traffic between them, so that a compromised guest phone cannot reach the finance server. A <strong>DMZ</strong> (demilitarised zone) holds public-facing servers such as a web server, separate from the internal network. An <strong>air gap</strong> keeps a system with no network connection at all, used for offline backups and some critical control systems. <strong>Sandboxing</strong> runs untrusted files or programs in a contained environment, such as a virtual machine, where they cannot touch the real system, so an email attachment can be opened and studied safely. The trade-off is convenience: isolated systems are harder to update and share data with.</p>
+          <figure class="figure" id="fig-cyber-segmentation">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Network diagram</span></p>
+              <h4 class="figure-title">Segmentation, DMZ and air gap</h4>
+              <p class="figure-lead">A firewall separates zones, so a breach in one zone does not automatically reach the rest.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="cyber-segmentation"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Each zone has its own rules: the public web server sits in the DMZ, guests are kept away from staff computers, and the backup has no network link.</li><li>Every device is labelled, as NESA requires for network diagrams.</li><li>An air-gapped system is safe from network attacks, but data must move by hand.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>An attacker takes over a guest's phone. Which devices can they reach, and why?</p>
+            </div>
+          </figure>
+
+          <h3>Physical security</h3>
+          <p>If an attacker can touch a device, many software protections fail. Physical controls include locks and access cards on server rooms, CCTV, visitor sign-in and escorts, cable locks and lockable racks, secure disposal of drives and paper, and a clean-desk policy. Staff are trained to challenge <em>tailgating</em>, where an unauthorised person follows an employee through a secured door. Portable devices need encryption and remote-wipe in case they are lost. The controls also protect availability from fire, flood and power loss.</p>
+
+          <h3>Biometrics</h3>
+          <p>Biometrics identify people by body characteristics: fingerprint, face, iris or voice. They are convenient and hard to share or forget, so they suit the "something you are" factor in MFA. Their weaknesses matter as much as their strengths. Systems can wrongly accept an impostor (<em>false acceptance</em>) or wrongly reject the real person (<em>false rejection</em>), and tuning one error rate raises the other. A stolen password can be changed but a fingerprint cannot. Systems should include <em>liveness detection</em> to resist photos and copies, and templates should be stored encrypted, ideally on the device. Biometric information is <strong>sensitive information</strong> under the Privacy Act, so an enterprise must justify collecting it and protect it carefully.</p>
+
+          <h3>Password protection, encryption and permissions</h3>
+          <p><strong>Passwords</strong> should never be stored as plain text. Systems store a <em>hash</em> (a one-way fingerprint) and add a random <em>salt</em>, so that even if the database leaks, attackers cannot read passwords directly or reuse one precomputed table against all users; slow, purpose-built hashing algorithms make guessing expensive. Organisations should enforce a minimum length, block known breached passwords and support passphrases and MFA.</p>
+          <p><strong>Encryption</strong> turns readable data into cipher text using a key. <em>Symmetric</em> encryption uses one shared key and is fast; <em>asymmetric</em> encryption uses a public and private key pair and solves the problem of sharing keys safely. Data should be encrypted at rest (disk and database encryption) and in transit (HTTPS and VPNs). HTTPS uses both kinds: a certificate proves the site's identity, asymmetric keys deliver a session key, and fast symmetric encryption protects the data.</p>
+          <figure class="figure" id="fig-ssa-encryption">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Concept diagram</span></p>
+              <h4 class="figure-title">Symmetric and asymmetric encryption</h4>
+              <p class="figure-lead">One shared key is fast; a key pair removes the need to share a secret in advance.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="ssa-encryption"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Symmetric: the same key locks and unlocks.</li><li>Asymmetric: anyone can lock with the public key; only the private key unlocks.</li><li>HTTPS uses both together.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Why is it dangerous if the single shared key in symmetric encryption is sent over the internet unprotected?</p>
+            </div>
+          </figure>
+          <figure class="figure" id="fig-https">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Animated diagram</span></p>
+              <h4 class="figure-title">How HTTPS protects a connection</h4>
+              <p class="figure-lead">The browser checks a certificate, agrees a session key and then sends encrypted data.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--anim"><div class="anim" data-anim="https"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Watch the padlock and the cipher text: an eavesdropper sees only scrambled data.</li><li>Use the tabs to compare plain HTTP and an imposter site.</li><li>The scene simplifies: TLS 1.3 uses a key exchange, but the ideas of authentication and encryption are the same.</li></ul><p class="figure-controls">Choose a connection with the tabs. Step with the Back and Next buttons (or the arrow keys), and play or pause with the Space bar.</p></div>
+              <p class="figure-try"><strong>Try this</strong>On the plain HTTP tab, what exactly can the eavesdropper read that they cannot read on the HTTPS tab?</p>
+            </div>
+          </figure>
+          <p><strong>Permissions</strong> apply least privilege: file and database permissions (read, write, delete, execute) are given by role, reviewed regularly and removed when people change jobs, and administrator accounts are separate from everyday accounts.</p>
+
+          <h3>Multi-factor authentication</h3>
+          <p>MFA requires two or more different <em>types</em> of proof: something you <strong>know</strong> (password, PIN), something you <strong>have</strong> (phone, security key, card) and something you <strong>are</strong> (biometric). Two passwords count as one type, so they are not MFA. Strength varies: SMS codes can be intercepted or obtained through SIM swapping; authenticator-app codes are better; hardware security keys and passkeys are <em>phishing-resistant</em> because they only work with the genuine site. Attackers respond with <em>MFA fatigue</em> attacks (flooding a user with approval requests until they tap "yes") and by relaying codes through fake login pages. Enterprises enable MFA first for remote access, email, administrator accounts and anything holding sensitive data.</p>
+
+          <h3>Back up and disaster recovery</h3>
+          <p>A <strong>backup</strong> is a copy of data stored separately so it can be restored after loss, corruption or ransomware. The <strong>3-2-1 rule</strong> keeps <em>3</em> copies of data, on <em>2</em> different types of media, with <em>1</em> copy offsite. Modern advice adds that at least one copy should be offline or <em>immutable</em> (cannot be changed or deleted for a set time) so ransomware cannot encrypt it, and that backups must be <em>tested</em>, because an untested backup is only a hope. <strong>Disaster recovery (DR)</strong> is the plan for restoring systems: it sets a <em>recovery point objective (RPO)</em>, how much data loss is acceptable (for example, the last 24 hours), and a <em>recovery time objective (RTO)</em>, how long the business can be offline. Recovery sites can be <em>hot</em> (ready immediately), <em>warm</em> or <em>cold</em> (slower and cheaper).</p>
+          <figure class="figure" id="fig-cyber-backup-321">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Concept diagram</span></p>
+              <h4 class="figure-title">The 3-2-1 backup rule</h4>
+              <p class="figure-lead">Three copies on two media types, with one held offsite, survive fire, theft and ransomware.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="cyber-backup-321"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Copy 3 is separate from the office, so a fire or flood there cannot destroy every copy.</li><li>An offline or immutable copy cannot be encrypted by ransomware that reaches the network.</li><li>RPO and RTO decide how often to back up and how fast to restore.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>A backup drive is always plugged into the server. What could ransomware do to it, and how would you change the design?</p>
+            </div>
+          </figure>
+
+          <h3>Firewalls</h3>
+          <p>A <strong>firewall</strong> filters network traffic against rules, allowing or blocking it by source, destination, port and protocol. It can be hardware or software. <em>Packet-filtering</em> firewalls check each packet; <em>stateful</em> firewalls also track the connection; <em>next-generation</em> firewalls inspect applications and can block known threats; a <em>web application firewall</em> protects a website. Good practice is <em>default deny</em>: block everything, then allow only what is needed. A firewall does not stop a user being tricked into approving a connection, or malware already inside, which is why it is one layer among several.</p>
+          <div class="table-wrap">
+            <table>
+              <caption>Example firewall rule set for a small office (checked from top to bottom; the first match wins)</caption>
+              <thead><tr><th>#</th><th>From</th><th>To</th><th>Port / protocol</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>Internet</td><td>Public web server (DMZ)</td><td>443 / HTTPS</td><td>Allow</td></tr>
+                <tr><td>2</td><td>Staff LAN</td><td>Internet</td><td>80, 443 / web</td><td>Allow</td></tr>
+                <tr><td>3</td><td>Guest Wi-Fi</td><td>Staff LAN</td><td>Any</td><td>Deny</td></tr>
+                <tr><td>4</td><td>Internet</td><td>Staff LAN</td><td>Any</td><td>Deny</td></tr>
+                <tr><td>5</td><td>Any</td><td>Any</td><td>Any</td><td>Deny (default)</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Antivirus and anti-malware</h3>
+          <p>Antivirus and anti-malware software detects, blocks and removes malicious software. <em>Signature-based</em> detection compares files with a database of known malware; <em>heuristic</em> and <em>behaviour-based</em> detection looks for suspicious actions (such as mass file encryption) so it can catch new threats; and <em>endpoint detection and response (EDR)</em> tools monitor devices and let staff investigate and isolate a machine. Suspect files are placed in <em>quarantine</em>. The software needs frequent updates, and it can miss brand-new malware or be switched off by an attacker, so it works together with patching, application control and user training.</p>
+
+          <h3>Relating the strategies to the Essential Eight</h3>
+          <p>The ACSC's Essential Eight is a set of eight mitigation strategies and a maturity model (levels zero to three) that helps organisations judge how well each is implemented. It is used by Australian Government agencies and widely adopted as a baseline by other organisations. It focuses on technical controls; physical security, biometrics and isolation beyond application control are outside its eight strategies. The table shows how they connect.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Essential Eight strategy</th><th>What it does</th><th>Links to</th></tr></thead>
+              <tbody>
+                <tr><td>Application control</td><td>Only approved programs can run, blocking unknown malware.</td><td>Antivirus and anti-malware; permissions</td></tr>
+                <tr><td>Patch applications</td><td>Fixes known flaws in software promptly.</td><td>Technology vulnerabilities</td></tr>
+                <tr><td>Configure Microsoft Office macro settings</td><td>Blocks untrusted macros, a common malware route.</td><td>Antivirus and anti-malware; phishing</td></tr>
+                <tr><td>User application hardening</td><td>Turns off risky features in browsers and office programs.</td><td>Antivirus and anti-malware; firewalls</td></tr>
+                <tr><td>Restrict administrative privileges</td><td>Limits powerful accounts and separates them from everyday use.</td><td>Permissions; least privilege</td></tr>
+                <tr><td>Patch operating systems</td><td>Fixes known flaws in operating systems and devices.</td><td>Technology vulnerabilities</td></tr>
+                <tr><td>Multi-factor authentication</td><td>Requires more than a password to sign in.</td><td>MFA; biometrics; password protection</td></tr>
+                <tr><td>Regular backups</td><td>Keeps recoverable copies of important data, software and settings.</td><td>Back up and disaster recovery</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout tip"><strong>Research further</strong> The ASD's Australian Cyber Security Centre (cyber.gov.au) publishes the Essential Eight and its maturity model, the Information Security Manual, and small-business guidance. The <a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener">NIST Cybersecurity Framework</a> is a widely used international model. When you research, note the publication date: threats and recommended settings change, so prefer the current version from the original government source.</div>
+
+          <div class="callout assessor"><strong>Assessor tip: "Research"</strong> A <em>research</em> response shows you have consulted reliable sources and can compare what you found. For each strategy, say what threat it addresses, how it works and one limitation. Then judge how they combine: for example, MFA reduces the harm of stolen passwords, backups let a business recover from ransomware, and segmentation limits how far an intruder can move. Avoid saying any single control makes a system "secure".</div>
+
         </section>
 
         <hr class="divider" />
@@ -333,8 +805,71 @@
           <p class="syllabus-concept">📌 <em><strong>Investigate</strong> cyber risk management</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>implementing a cybersecurity strategy with ongoing training</li><li>identifying and managing vulnerabilities</li><li>assessing the impact of a breach</li><li>controlling damage and loss</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+<p><strong>Cyber risk management</strong> is the continuing process of finding what could go wrong with an enterprise's information and systems, judging how serious it is, deciding what to do about it and checking that it worked. It is a cycle, not a one-off project: identify, analyse, evaluate, treat, monitor, and repeat as the business and the threats change. The Australian and international frameworks, including the NIST Cybersecurity Framework 2.0 (Govern, Identify, Protect, Detect, Respond, Recover), follow the same logic.</p>
+
+          <h3>Implementing a cybersecurity strategy with ongoing training</h3>
+          <p>A cybersecurity strategy links security to the organisation's goals. Its parts are:</p>
+          <ul>
+            <li><strong>Governance:</strong> leaders own cyber risk, roles are assigned, and a budget exists. Boards and directors have legal duties to manage risk.</li>
+            <li><strong>Policies and procedures:</strong> acceptable use, password and MFA rules, data classification, incident response, and supplier security requirements.</li>
+            <li><strong>Technical controls:</strong> chosen against a baseline such as the Essential Eight and matched to the risks found.</li>
+            <li><strong>Ongoing training:</strong> one induction session is not enough. Staff need regular short training on phishing, safe data handling and reporting, phishing simulations to test it, extra training for high-risk roles such as finance and administrators, and updates when new scams appear.</li>
+            <li><strong>Testing and review:</strong> exercises for the incident response plan, restore tests for backups, and regular review of the strategy.</li>
+          </ul>
+          <p>Training matters because people are involved in a large share of breaches. Its effect depends on culture: a workplace where staff can report a clicked link without blame finds problems in minutes, not months.</p>
+
+          <h3>Identifying and managing vulnerabilities</h3>
+          <p>Vulnerability management is a repeating process:</p>
+          <ol>
+            <li><strong>Identify assets:</strong> keep an inventory of devices, software, data and suppliers. You cannot protect what you do not know you have.</li>
+            <li><strong>Find weaknesses:</strong> vulnerability scans, configuration reviews, penetration tests (authorised simulated attacks), supplier questionnaires and threat information from sources such as the ACSC.</li>
+            <li><strong>Prioritise:</strong> rank by how severe the weakness is, whether it is exposed to the internet, whether attackers are already exploiting it and how important the asset is.</li>
+            <li><strong>Treat:</strong> patch, reconfigure, add a control or remove the system; record a decision where a weakness is accepted for now.</li>
+            <li><strong>Verify and repeat:</strong> re-scan to confirm the fix and schedule the next review.</li>
+          </ol>
+          <p>Managing vulnerabilities covers people and processes as well as technology: an unenforced policy or an untrained user is also a vulnerability.</p>
+
+          <h3>Assessing the impact of a breach</h3>
+          <p>Before and after an incident, an enterprise assesses the impact to decide priorities. A <strong>business impact analysis</strong> asks which functions and data matter most and what happens if each is lost. Questions include:</p>
+          <ul>
+            <li>Which attributes (confidentiality, integrity, availability) are affected, and for which systems?</li>
+            <li>What data is involved, how many people are affected, and how sensitive is it?</li>
+            <li>What is the financial cost: response, recovery, lost sales, legal advice, penalties?</li>
+            <li>What is the operational cost: how long until normal work resumes?</li>
+            <li>What are the legal duties, such as notifying the OAIC and individuals?</li>
+            <li>What is the reputational effect on customers, partners and staff?</li>
+          </ul>
+          <p>The answers feed the <em>consequence</em> scale in the risk matrix in the next section.</p>
+
+          <h3>Controlling damage and loss</h3>
+          <p>When a breach occurs, a prepared <strong>incident response plan</strong> limits the harm. The usual phases are:</p>
+          <ol>
+            <li><strong>Prepare:</strong> a plan, contacts, roles and tested backups exist before anything happens.</li>
+            <li><strong>Detect and analyse:</strong> monitoring or a report reveals the incident, and the team works out what happened and how far it went.</li>
+            <li><strong>Contain:</strong> isolate affected devices and accounts, disable stolen credentials and block the attacker, while preserving evidence.</li>
+            <li><strong>Eradicate and recover:</strong> remove the cause, restore from clean backups and return to service.</li>
+            <li><strong>Communicate and notify:</strong> tell affected people, regulators and (where relevant) police. In Australia, an eligible data breach must be notified under the Notifiable Data Breaches scheme.</li>
+            <li><strong>Review:</strong> find out what failed, fix it and update the plan.</li>
+          </ol>
+          <p>Other tools reduce the loss: <em>cyber insurance</em> can transfer some costs, though it does not remove the harm or the legal duties, and a communications plan helps keep customers' trust. The flowchart below shows a simplified decision path for the Notifiable Data Breaches scheme.</p>
+          <figure class="figure" id="fig-cyber-ndb-flowchart">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Flowchart</span></p>
+              <h4 class="figure-title">Is a data breach notifiable?</h4>
+              <p class="figure-lead">A simplified decision path for the Notifiable Data Breaches scheme in the Privacy Act 1988.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="cyber-ndb-flowchart"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Every decision has labelled Yes and No exits, and the chart begins with START and ends with END.</li><li>Prompt remedial action can mean a breach is not notifiable, which is why containing it fast matters.</li><li>This is a simplification: the OAIC guidance sets out the full test, and some entities have separate rules.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>A staff member emails a spreadsheet of customer names and addresses to the wrong external address. Walk through the chart and decide whether it is notifiable.</p>
+            </div>
+          </figure>
+          <p>The NDB scheme is explained further in the law section, and NSW public sector agencies follow a similar scheme under the Privacy and Personal Information Protection Act 1998 (NSW).</p>
+
+          <div class="key-terms"><div class="key-term-item"><strong>Risk management</strong><span>Coordinated activities to identify, analyse, treat and monitor risk.</span></div><div class="key-term-item"><strong>Incident response plan</strong><span>A documented set of steps for detecting, containing, recovering from and reporting a security incident.</span></div><div class="key-term-item"><strong>Penetration test</strong><span>An authorised, simulated attack used to find weaknesses before criminals do.</span></div><div class="key-term-item"><strong>Business impact analysis</strong><span>A study of which functions matter most and the effect if they are lost.</span></div></div>
+
+          <div class="callout assessor"><strong>Assessor tip: "Investigate"</strong> Answers should cover all four parts: a strategy with training, a process for finding and managing vulnerabilities, an assessment of the impact and steps to control the damage. Tie them to a scenario and give reasons. A frequent mistake is describing only technical controls and leaving out people and process.</div>
+
         </section>
 
         <hr class="divider" />
@@ -345,8 +880,116 @@
           <p class="syllabus-concept">📌 <em><strong>Assess</strong> cyber risk by implementing risk-management strategies using a risk matrix</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>internal and external vulnerabilities</li><li>threat landscape</li><li>impact of exposure</li><li>likelihood of exploitation</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (assess). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+<p>A <strong>risk matrix</strong> is a grid that rates a risk from two judgements: how <em>likely</em> it is to happen and how bad the <em>consequence</em> would be. It lets an enterprise compare very different risks on one scale and spend limited time and money on the worst first. The NESA course specifications do not define one, so this section teaches the standard industry form, a 5 by 5 matrix where <strong>risk score = likelihood x consequence</strong>. Your school or teacher may use a different scale (for example 3 by 3 or 4 by 4); the method is the same.</p>
+
+          <div class="callout info"><strong>Scenario</strong> <em>Riverina Fresh Logistics</em> is a fictional freight and cold-storage company with about 180 staff and three depots in regional NSW. It runs a cloud accounting system, a customer tracking portal, GPS units in its trucks, handheld scanners in the warehouses, and holds customer contact details, driver licence details and delivery addresses. The owner wants to know which cyber risks to fix first.</div>
+
+          <h3>Internal and external vulnerabilities</h3>
+          <p>The first step is to list weaknesses. <strong>Internal vulnerabilities</strong> come from inside the enterprise; <strong>external vulnerabilities</strong> come from outside its direct control.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Type</th><th>Weakness at Riverina Fresh</th></tr></thead>
+              <tbody>
+                <tr><td>Internal: people</td><td>Accounts staff regularly receive invoices by email; training was a single induction session; one departing sales manager still has database access.</td></tr>
+                <tr><td>Internal: process</td><td>Bank details on supplier invoices can be changed by email with no call-back.</td></tr>
+                <tr><td>Internal: technology</td><td>Some laptops are not encrypted; an old server running the tracking portal is behind on updates; email accounts do not require MFA.</td></tr>
+                <tr><td>Internal: data</td><td>Ten years of customer records are kept in one database that most office staff can read.</td></tr>
+                <tr><td>External</td><td>The tracking portal and a remote-access VPN are reachable from the internet; a freight-management software supplier holds customer data; customers and suppliers are frequent phishing targets.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Threat landscape</h3>
+          <p>The <strong>threat landscape</strong> is the range of threat actors, methods and trends likely to target an enterprise like this one, drawn from sources such as the ASD's annual cyber threat reports and industry advisories. For a mid-sized logistics business it is mostly financially motivated <strong>cybercriminals</strong> using ransomware and business email compromise, opportunistic scanning of internet-facing systems, an occasional <strong>insider</strong> risk, and DDoS by <strong>hacktivists</strong> or extortionists. A nation-state attack is possible because freight is part of national supply chains, but it is less likely to be aimed at a company of this size. The landscape changes, so it is reviewed regularly, not filed away.</p>
+
+          <h3>Impact of exposure</h3>
+          <p>Impact (consequence) measures what would happen if the risk occurred, and it should be rated across several measures. A simple scale for Riverina Fresh is:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Rating</th><th>Financial</th><th>Operations</th><th>Privacy and legal</th></tr></thead>
+              <tbody>
+                <tr><td><strong>1 Insignificant</strong></td><td>Under $10,000</td><td>Less than an hour of disruption</td><td>No personal information involved</td></tr>
+                <tr><td><strong>2 Minor</strong></td><td>$10,000 to $50,000</td><td>Up to half a working day</td><td>Minor internal privacy incident, no notification</td></tr>
+                <tr><td><strong>3 Moderate</strong></td><td>$50,000 to $250,000</td><td>Up to two days lost in one depot</td><td>Limited personal information exposed; assessment needed</td></tr>
+                <tr><td><strong>4 Major</strong></td><td>$250,000 to $1 million</td><td>Several days across depots</td><td>Notifiable breach affecting many customers</td></tr>
+                <tr><td><strong>5 Severe</strong></td><td>Over $1 million or threatens survival</td><td>A week or more; customers lost</td><td>Large notifiable breach, regulator action, class action risk</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>The dollar bands are examples: each enterprise sets its own, scaled to its size. A $250,000 loss is serious for a business this size but trivial for a national bank.</p>
+
+          <h3>Likelihood of exploitation</h3>
+          <p>Likelihood is how probable it is that a threat will exploit the vulnerability in a given period (here, the next 12 months). Factors include how exposed the system is, whether tools to exploit the weakness are widely available, the skill needed, how attractive the target is, past incidents and the controls already in place.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Rating</th><th>Description</th><th>Rough guide</th></tr></thead>
+              <tbody>
+                <tr><td><strong>1 Rare</strong></td><td>Would take exceptional circumstances</td><td>Less than once in 20 years</td></tr>
+                <tr><td><strong>2 Unlikely</strong></td><td>Could happen but not expected</td><td>Once in 5 to 20 years</td></tr>
+                <tr><td><strong>3 Possible</strong></td><td>Might happen at some time</td><td>Once in 1 to 5 years</td></tr>
+                <tr><td><strong>4 Likely</strong></td><td>Probably will happen</td><td>Once a year or more</td></tr>
+                <tr><td><strong>5 Almost certain</strong></td><td>Expected to happen, perhaps repeatedly</td><td>Several times a year</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Plot, rate and treat</h3>
+          <p>Multiply the two ratings to get a score, then read the band. On this matrix the bands are <span class="cy-rating is-low">Low 1 to 4</span> <span class="cy-rating is-med">Medium 5 to 9</span> <span class="cy-rating is-high">High 10 to 16</span> <span class="cy-rating is-ext">Extreme 20 to 25</span>. Organisations set their own bands and matching responses (their <em>risk appetite</em>), which is why a 3 by 3 matrix elsewhere may look different. The steps for one risk are:</p>
+          <ol>
+            <li>Describe the risk as a sentence: threat, vulnerability and result.</li>
+            <li>Rate the likelihood (1 to 5) using the current controls.</li>
+            <li>Rate the consequence (1 to 5), using the worst credible outcome.</li>
+            <li>Multiply, find the band and compare it with the organisation's appetite.</li>
+            <li>Choose a treatment, then re-rate to find the <strong>residual risk</strong> that is left.</li>
+          </ol>
+          <figure class="figure" id="fig-cyber-risk-matrix">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Risk matrix</span></p>
+              <h4 class="figure-title">Riverina Fresh Logistics: five risks before treatment</h4>
+              <p class="figure-lead">Each risk is plotted by likelihood and consequence, and its score gives a band.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still"><div class="anim" data-anim="cyber-risk-matrix"></div></div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>The colour of a cell shows the band; the number is likelihood times consequence.</li><li>Ransomware (R2) is the only Extreme risk; R1, R3 and R4 are High and R5 is Medium.</li><li>The same score can come from different combinations: a rare, severe risk and a frequent, minor one may both score 5 or 8 but need different responses.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Locate R3. What would have to change, likelihood or consequence, to bring it down to Medium?</p>
+            </div>
+          </figure>
+
+          <div class="table-wrap">
+            <table>
+              <caption>Riverina Fresh risk register: inherent risk, treatment and residual risk</caption>
+              <thead><tr><th>Risk</th><th>Source</th><th>L x C</th><th>Rating</th><th>Treatment</th><th>Residual</th></tr></thead>
+              <tbody>
+                <tr><td><strong>R1</strong> Phishing leads to email account takeover and payment fraud</td><td>External threat, internal people and process</td><td>5 x 3 = 15</td><td><span class="cy-rating is-high">High</span></td><td>MFA on email; regular training; call-back check for bank-detail changes</td><td>3 x 3 = 9 <span class="cy-rating is-med">Medium</span></td></tr>
+                <tr><td><strong>R2</strong> Ransomware through an unpatched internet-facing server</td><td>External threat, internal technology</td><td>4 x 5 = 20</td><td><span class="cy-rating is-ext">Extreme</span></td><td>Patch and retire the old server; MFA on VPN; segment depots; offline tested backups</td><td>2 x 4 = 8 <span class="cy-rating is-med">Medium</span></td></tr>
+                <tr><td><strong>R3</strong> Insider copies the customer database before leaving</td><td>Internal people and data</td><td>3 x 4 = 12</td><td><span class="cy-rating is-high">High</span></td><td>Least privilege; alerts on bulk exports; offboarding checklist</td><td>2 x 3 = 6 <span class="cy-rating is-med">Medium</span></td></tr>
+                <tr><td><strong>R4</strong> Unencrypted laptop lost or stolen</td><td>Internal technology and people</td><td>4 x 3 = 12</td><td><span class="cy-rating is-high">High</span></td><td>Full-disk encryption; remote wipe; store files in the cloud, not on the laptop</td><td>4 x 1 = 4 <span class="cy-rating is-low">Low</span></td></tr>
+                <tr><td><strong>R5</strong> Supplier software is compromised</td><td>External supplier</td><td>2 x 4 = 8</td><td><span class="cy-rating is-med">Medium</span></td><td>Contract clauses on security and breach notification; share only what is needed</td><td>2 x 2 = 4 <span class="cy-rating is-low">Low</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Reading the register: R2 goes first because it is the only Extreme risk. Notice that R4's treatment (encryption) does not stop laptops being lost, since likelihood stays at 4; it cuts the <em>consequence</em> from 3 to 1 because the data is unreadable. Different treatments change different halves of the equation. R1's residual score stays Medium because people can always be tricked, so training and monitoring continue.</p>
+
+          <h3>Treatment options</h3>
+          <ul>
+            <li><strong>Avoid:</strong> stop the risky activity, for example retire the old tracking portal.</li>
+            <li><strong>Reduce (mitigate):</strong> add controls that lower likelihood or consequence, such as MFA or encryption.</li>
+            <li><strong>Transfer (share):</strong> move some of the financial risk through cyber insurance or a managed service. Legal responsibility for personal information stays with the enterprise.</li>
+            <li><strong>Accept:</strong> knowingly live with a Low risk, with an owner and a review date.</li>
+          </ul>
+
+          <div class="cy-widget" data-cy="risk">
+            <h4>Risk matrix explorer</h4>
+            <p class="cy-lead">Enable JavaScript to use this interactive tool. It lets you select any likelihood and consequence, see the score, band and recommended response, and compare the five Riverina Fresh risks before and after treatment. The register above shows the same information as a table.</p>
+          </div>
+
+          <h3>Limits of a risk matrix</h3>
+          <p>A matrix is a communication tool, not a measurement. The ratings are judgements, so two people can score the same risk differently: agree the scales first and have several people rate. Multiplying ordinal ratings (1 to 5) implies more precision than exists. Risks that combine, such as one intrusion causing several harms, may be under-rated when scored one by one. And a low-likelihood but catastrophic risk may deserve attention even when its score looks modest. Use the matrix to start the conversation and to track change over time, not to end it.</p>
+
+          <div class="key-terms"><div class="key-term-item"><strong>Risk</strong><span>The effect of uncertainty on objectives: a threat exploiting a vulnerability to cause harm.</span></div><div class="key-term-item"><strong>Risk matrix</strong><span>A grid that rates risk by likelihood and consequence.</span></div><div class="key-term-item"><strong>Inherent risk</strong><span>The level of risk before any treatment.</span></div><div class="key-term-item"><strong>Residual risk</strong><span>The risk that remains after treatments are applied.</span></div><div class="key-term-item"><strong>Risk appetite</strong><span>The amount and type of risk an organisation is willing to accept.</span></div></div>
+
+          <div class="callout assessor"><strong>Assessor tip: "Assess"</strong> <em>Assess</em> means make a judgement about the extent or value of something. In a risk question, name the vulnerability, threat and impact; give a likelihood and a consequence rating with a reason for each; state the score and band; recommend a treatment and say how it changes the rating. Show the multiplication. Keep the ratings consistent with the scenario: if the question says staff have had no training, do not rate the likelihood of phishing as Rare.</div>
+
         </section>
 
         <div class="quiz" data-quiz="cyber-2"></div>
@@ -360,8 +1003,8 @@
         </div>
 
         <aside class="yr11 topic-breakout subtopic-breakout" aria-label="Part introduction">
-          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
-          <p>This part covers 3 NESA dot points: cyber law and ethics.</p>
+          <p>Breaches leave a trail of costs and consequences that reach well beyond the company that was attacked. This part explains those impacts, identifies the Australian laws that apply to cybersecurity and privacy, and explores the newest threats that today's defences must face.</p>
+          <p class="breakout-question">Should a company that gets breached be treated as a victim, an offender, or both?</p>
         </aside>
 
         <section id="breach-impacts">
@@ -370,8 +1013,51 @@
           <p class="syllabus-concept">📌 <em><strong>Explain</strong> impacts of cybersecurity breaches on the individual, organisation and society</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>financial loss</li><li>reputational damage</li><li>operational disruptions</li><li>legal and regulatory ramifications</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (explain). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+<p>A breach rarely stays inside the organisation that was attacked. Its effects spread outward: first to the <strong>individuals</strong> whose data or services are affected, then to the <strong>organisation</strong> that failed to protect them, and then to <strong>society</strong>, through lost trust, disrupted services and changes to law and policy. The four impacts named in the syllabus (financial loss, reputational damage, operational disruption and legal and regulatory ramifications) can each be traced at all three levels.</p>
+
+          <h3>Financial loss</h3>
+          <p><strong>Individuals</strong> may lose money to fraud and spend time and money replacing identity documents, changing accounts and monitoring their credit. <strong>Organisations</strong> face response and recovery costs (investigators, IT, legal advice, customer support), any ransom, lost sales while systems are down, the cost of rebuilding trust, and possible penalties and compensation claims. <strong>Society</strong> bears the aggregate cost: fraud losses, higher insurance premiums and public spending on response and enforcement.</p>
+
+          <h3>Reputational damage</h3>
+          <p>Customers who lose trust take their business elsewhere, staff and partners hesitate, and media coverage lasts long after the technical fix. For <strong>individuals</strong>, published private information such as health details can cause embarrassment, stress and harm to relationships or careers. For <strong>society</strong>, repeated breaches lower confidence in online services and can make people reluctant to share information, even when it would benefit them.</p>
+
+          <h3>Operational disruptions</h3>
+          <p>Attacks on availability stop the business working. <strong>Organisations</strong> cannot take orders, dispatch goods or treat patients; staff fall back on paper processes; recovery may take days or weeks. In 2020 Australian logistics company Toll Group had its systems disrupted by ransomware, affecting freight and parcel services, and in November 2023 a cyber incident at DP World Australia halted operations at container terminals at several ports for days. When the target is essential infrastructure, <strong>society</strong> feels it directly: the 2021 ransomware attack on the US Colonial Pipeline led its operator to shut down the pipeline and caused fuel shortages, and the 2017 WannaCry ransomware disrupted hospitals in the UK. <strong>Individuals</strong> lose access to services they depend on.</p>
+
+          <h3>Legal and regulatory ramifications</h3>
+          <p>Organisations that do not protect personal information can face investigation by the OAIC, court proceedings and civil penalties under the Privacy Act, and must notify eligible breaches. They can also face class actions from affected customers and shareholder claims. Since December 2022 the maximum civil penalty for serious or repeated interferences with privacy has been the greater of $50 million, three times the benefit obtained, or 30 percent of adjusted turnover. <strong>Individuals</strong> may have rights to complain to the OAIC, and since 2025 to sue for a serious invasion of privacy (see the law section). <strong>Society</strong> responds with law reform, sanctions on offenders and stronger standards.</p>
+
+          <h3>Case study: Optus and Medibank, 2022</h3>
+          <p>Only well-documented facts are given here. Both companies were breached in the second half of 2022, and both matters have since been examined by the OAIC.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th></th><th>Optus (telecommunications), September 2022</th><th>Medibank (health insurance), October 2022</th></tr></thead>
+              <tbody>
+                <tr><td><strong>What happened</strong></td><td>Optus announced on 22 September 2022 that its systems had been accessed and customer data stolen.</td><td>Medibank detected unusual activity in October 2022 and later confirmed that criminals had stolen customer data and demanded a ransom.</td></tr>
+                <tr><td><strong>Data involved</strong></td><td>Names, dates of birth, addresses, phone numbers and email addresses, and for some customers government identifiers such as passport, driver licence and Medicare card numbers.</td><td>Personal information and health claims data of current and former customers; some was published on the dark web after the ransom was not paid.</td></tr>
+                <tr><td><strong>People affected</strong></td><td>About 9.5 million Australians, according to the OAIC's court filing.</td><td>About 9.7 million Australians, according to the OAIC's court filing.</td></tr>
+                <tr><td><strong>Individual impact</strong></td><td>Customers replaced identity documents and faced higher risk of identity theft and scams.</td><td>Exposure of sensitive health-related information, with risks of extortion, embarrassment and identity crime.</td></tr>
+                <tr><td><strong>Regulatory response</strong></td><td>The OAIC began civil penalty proceedings in the Federal Court in August 2025, alleging Optus failed to take reasonable steps to protect personal information.</td><td>The OAIC began civil penalty proceedings in the Federal Court in June 2024, alleging a failure to take reasonable steps to protect personal information. In January 2024 the Australian Government imposed cyber sanctions on a Russian national in connection with the incident.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Both cases prompted public debate, and the Privacy Act's maximum penalties were increased in December 2022; the Cyber Security Act 2024 came later. Court proceedings can take years, so check the OAIC website for the current status. Notice how all four impacts appear together, and how the harm to individuals (identity theft risk, stress, effort) is separate from the harm to the companies.</p>
+
+          <div class="table-wrap">
+            <table>
+              <caption>Impacts by level</caption>
+              <thead><tr><th>Impact</th><th>Individual</th><th>Organisation</th><th>Society</th></tr></thead>
+              <tbody>
+                <tr><td>Financial loss</td><td>Fraud, replacement costs</td><td>Response, ransom, lost sales, penalties</td><td>Fraud losses, public spending</td></tr>
+                <tr><td>Reputational damage</td><td>Embarrassment, stress</td><td>Lost customers and trust</td><td>Lower trust in digital services</td></tr>
+                <tr><td>Operational disruption</td><td>Services unavailable</td><td>Systems down, manual work</td><td>Supply and essential services disrupted</td></tr>
+                <tr><td>Legal and regulatory</td><td>Right to complain or sue</td><td>Investigations, penalties, class actions</td><td>New laws, sanctions</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout assessor"><strong>Assessor tip: "Explain"</strong> An <em>explain</em> answer links cause to effect at each level. Use a table-style structure in your head: pick the impacts the question names, say what happens to the individual, the organisation and society, and use one real or scenario example. Do not invent figures. Saying "millions of customers were affected" is safer than a made-up dollar cost.</div>
+
         </section>
 
         <hr class="divider" />
@@ -381,8 +1067,72 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-07)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Identify</strong> laws and legislation associated with cybersecurity</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (identify). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+<p>Australia has no single cybersecurity law. Instead, a set of Commonwealth and NSW Acts covers privacy, computer crime, critical infrastructure, unwanted messages and interception. Knowing <em>what each Act does</em> and <em>when it applies</em> is the aim of this dot point. The table summarises them; the details below are kept general where they are technical.</p>
+
+          <h3>Commonwealth legislation</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Law</th><th>What it does</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Privacy Act 1988</strong> (Cth)</td><td>Regulates how Australian Government agencies and most organisations with turnover over $3 million (and some smaller ones, such as health service providers) handle personal information, through the 13 Australian Privacy Principles. APP 11 requires reasonable steps to secure information. The OAIC enforces it.</td></tr>
+                <tr><td>Notifiable Data Breaches (NDB) scheme (Part IIIC of the Privacy Act, from February 2018)</td><td>Requires covered entities to notify the OAIC and affected individuals of an eligible data breach: unauthorised access to or disclosure or loss of personal information that is likely to cause serious harm. Suspected breaches must be assessed within 30 days, and notice given as soon as practicable.</td></tr>
+                <tr><td><strong>Privacy and Other Legislation Amendment Act 2024</strong></td><td>Strengthens privacy law: creates a statutory tort for serious invasions of privacy (in force from 2025), requires the OAIC to develop a Children's Online Privacy Code, gives the OAIC more enforcement powers and adds transparency duties for some automated decisions.</td></tr>
+                <tr><td><strong>Cybercrime Act 2001</strong></td><td>Added computer offences to the Criminal Code (Part 10.7): unauthorised access, modification or impairment of data and electronic communications, and possessing or supplying data with intent to commit a computer offence.</td></tr>
+                <tr><td><strong>Security of Critical Infrastructure Act 2018</strong></td><td>Sets duties for owners and operators of critical infrastructure assets across sectors such as energy, water, communications, transport, health, food and grocery, financial services and data storage. Duties include risk management programs and reporting cyber incidents to the ASD (within 12 hours for critical incidents and 72 hours for others), with extra obligations for systems of national significance.</td></tr>
+                <tr><td><strong>Cyber Security Act 2024</strong></td><td>Requires many businesses (with turnover of $3 million or more) and critical infrastructure entities to report ransomware or cyber-extortion payments to the government within 72 hours (from May 2025); allows minimum security standards for smart (internet-connected) devices, in force from March 2026; and creates a Cyber Incident Review Board.</td></tr>
+                <tr><td><strong>Spam Act 2003</strong></td><td>Prohibits sending unsolicited commercial electronic messages (email, SMS and similar). Messages need consent, must identify the sender and must include a working unsubscribe. The ACMA enforces it.</td></tr>
+                <tr><td><strong>Telecommunications (Interception and Access) Act 1979</strong></td><td>Generally prohibits intercepting communications as they pass over a telecommunications network, sets out when agencies may access communications and stored data with a warrant, and requires carriers to retain certain metadata.</td></tr>
+                <tr><td>Freedom of Information Act 1982 and Online Safety Act 2021</td><td>FOI gives public access to Commonwealth government documents; the Online Safety Act gives the eSafety Commissioner powers to deal with cyberbullying, image-based abuse and harmful content.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Penalties can be large. Since December 2022 the maximum civil penalty for a serious or repeated interference with privacy is the greater of $50 million, three times the benefit obtained, or 30 percent of adjusted turnover. Identity crime offences in Part 9.5 of the Criminal Code also cover dealing in identification information with intent to commit an offence.</p>
+
+          <h3>NSW legislation</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Law</th><th>What it does</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Privacy and Personal Information Protection Act 1998</strong> (NSW)</td><td>Sets Information Protection Principles for NSW public sector agencies, including public schools, and includes the Mandatory Notification of Data Breach (MNDB) scheme, in force from November 2023, requiring agencies to notify the Privacy Commissioner and affected individuals of eligible data breaches likely to cause serious harm.</td></tr>
+                <tr><td><strong>Health Records and Information Privacy Act 2002</strong> (NSW)</td><td>Sets Health Privacy Principles for health information held by NSW public and private organisations.</td></tr>
+                <tr><td><strong>Government Information (Public Access) Act 2009</strong> (NSW)</td><td>Gives the public a right of access to NSW government information (the GIPA Act).</td></tr>
+                <tr><td><strong>Workplace Surveillance Act 2005</strong> (NSW)</td><td>Requires notice to employees before computer, camera or tracking surveillance at work.</td></tr>
+                <tr><td><strong>Crimes Act 1900</strong> (NSW), Part 6</td><td>NSW computer offences, such as unauthorised access to or modification of restricted data.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Overseas laws can also matter: an Australian business that offers goods or services to people in the European Union may have to follow the GDPR as well.</p>
+
+          <h3>Which law applies?</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Situation</th><th>Law that is most relevant</th></tr></thead>
+              <tbody>
+                <tr><td>A retailer with $20 million turnover leaks customer addresses</td><td>Privacy Act 1988 and the NDB scheme</td></tr>
+                <tr><td>A person breaks into a company's database with a stolen password</td><td>Cybercrime Act 2001 (Criminal Code Part 10.7); Crimes Act 1900 (NSW)</td></tr>
+                <tr><td>A power company's control system is hit by ransomware</td><td>Security of Critical Infrastructure Act 2018; Cyber Security Act 2024</td></tr>
+                <tr><td>A shop pays a ransom to unlock its files</td><td>Cyber Security Act 2024 (reporting of ransomware payments)</td></tr>
+                <tr><td>A gym sends marketing texts to people who never agreed</td><td>Spam Act 2003</td></tr>
+                <tr><td>A NSW public school loses students' records</td><td>Privacy and Personal Information Protection Act 1998 (NSW), including the MNDB scheme</td></tr>
+                <tr><td>Someone secretly publishes intimate images of a person</td><td>Online Safety Act 2021; the statutory tort for serious invasions of privacy</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Ethical considerations</h3>
+          <p>The syllabus title pairs law with ethics because legal is not always the same as right. Key ethical questions include:</p>
+          <ul>
+            <li><strong>Authorisation:</strong> ethical (white hat) hackers test systems only with written permission. The same technique without permission is a crime.</li>
+            <li><strong>Responsible disclosure:</strong> a person who finds a flaw should report it to the owner and allow time to fix it, not publish it or exploit it.</li>
+            <li><strong>Paying ransoms:</strong> paying may recover data but funds criminals and encourages more attacks. Government advice discourages payment, and businesses covered by the Cyber Security Act must report payments.</li>
+            <li><strong>Monitoring and surveillance:</strong> security monitoring must be proportionate and disclosed to those affected.</li>
+            <li><strong>Privacy by design and honesty:</strong> collecting only what is needed, being open about breaches, and treating Aboriginal and Torres Strait Islander data with respect for Indigenous data sovereignty.</li>
+          </ul>
+
+          <div class="callout assessor"><strong>Assessor tip: "Identify"</strong> <em>Identify</em> asks you to recognise and name. Learn each Act's full name, and one key thing it does, so you can match a law to a scenario: Privacy Act and NDB for personal information breaches, Cybercrime Act for hacking offences, SOCI Act for critical infrastructure, Cyber Security Act for ransomware payment reporting and smart devices, Spam Act for unwanted marketing messages. Do not claim the Spam Act covers phishing scams themselves; scams are criminal offences under other laws. Read the legislation on <a href="https://www.legislation.gov.au/C2004A03712/latest/text" target="_blank" rel="noopener">legislation.gov.au</a>, and the <a href="https://www.oaic.gov.au/privacy/notifiable-data-breaches" target="_blank" rel="noopener">OAIC's Notifiable Data Breaches page</a> for the scheme.</div>
+
+          <p class="fs-sm">Primary sources: <a href="https://www.legislation.gov.au/C2004A03712/latest/text" target="_blank" rel="noopener">Privacy Act 1988</a>, <a href="https://www.legislation.gov.au/C2024A00128/latest/text" target="_blank" rel="noopener">Privacy and Other Legislation Amendment Act 2024</a>, <a href="https://www.legislation.gov.au/C2004A00937/latest/text" target="_blank" rel="noopener">Cybercrime Act 2001</a>, <a href="https://www.legislation.gov.au/C2018A00029/latest/text" target="_blank" rel="noopener">Security of Critical Infrastructure Act 2018</a>, <a href="https://www.legislation.gov.au/C2024A00098/latest/text" target="_blank" rel="noopener">Cyber Security Act 2024</a>, <a href="https://www.legislation.gov.au/C2004A01214/latest/text" target="_blank" rel="noopener">Spam Act 2003</a>, <a href="https://www.legislation.gov.au/C2004A02124/latest/text" target="_blank" rel="noopener">Telecommunications (Interception and Access) Act 1979</a> and <a href="https://www.legislation.gov.au/C2004A02562/latest/text" target="_blank" rel="noopener">Freedom of Information Act 1982</a>. NSW Acts are on the NSW legislation website.</p>
+
         </section>
 
         <hr class="divider" />
@@ -392,8 +1142,48 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-06, EC-11-07)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Explore</strong> current and emerging cybercrime threats to an enterprise</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (explore). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+<p>Cybercrime evolves as fast as defences do. Criminals adopt new technology, share tools and copy methods that work. The threats below are widely reported as current or emerging. To <em>explore</em> them, ask what is new about each, why it works and how an enterprise can respond. Trends change quickly, so treat this list as a snapshot and check recent ACSC and industry reports.</p>
+
+          <h3>Ransomware and ransomware-as-a-service</h3>
+          <p>Ransomware encrypts an organisation's files and demands payment for the key. Modern attacks use <strong>double extortion</strong>: the criminals also steal data first and threaten to publish it, so backups alone do not solve the problem. <strong>Ransomware-as-a-service (RaaS)</strong> is a business model in which developers rent their ransomware and infrastructure to "affiliates" who carry out the attacks and share the profits. This lowers the skill needed and increases the number of attacks. Defence: patching, MFA, segmentation, tested offline backups, an incident response plan and the reporting obligations in the Cyber Security Act 2024.</p>
+
+          <h3>AI-enabled phishing and deepfakes</h3>
+          <p>Generative AI lets attackers write fluent, personalised messages in any language, without the spelling mistakes that used to give scams away. <strong>Deepfakes</strong> are synthetic audio, images or video that imitate real people. Cloned voices have been used in phone scams, and in 2024 a multinational engineering firm was reported to have lost a large sum after an employee joined a video call in which colleagues were faked. Defence: process, not just vigilance. Use a call-back on a known number, a code word or a second approval for payments and sensitive requests, and treat unexpected urgency as a warning. AI can also help defenders, by detecting anomalies and filtering phishing.</p>
+
+          <h3>Supply-chain attacks</h3>
+          <p>Instead of attacking a well-defended target directly, criminals compromise a supplier, a piece of software or a service that the target trusts. In 2020 attackers inserted malicious code into a software update for the SolarWinds Orion network-management product, and the update reached thousands of customers. Breaches at third-party providers, such as a customer-service platform used by an airline's contact centre, can expose the data of the provider's clients. Defence: assess suppliers, write security and breach-notification duties into contracts, limit the data and access shared, and keep an inventory of dependencies.</p>
+
+          <h3>IoT botnets</h3>
+          <p>Internet of Things devices such as cameras, routers, smart TVs and sensors often ship with default passwords and rarely receive updates, so they are easy to infect. In 2016 the Mirai malware built a botnet of such devices and used it for a large DDoS attack that disrupted well-known websites through the DNS provider Dyn. The Cyber Security Act 2024 responds by allowing minimum security standards for smart devices, including no universal default passwords. Defence: change default credentials, update firmware, place IoT devices on a separate network and buy devices from suppliers that support updates.</p>
+
+          <h3>Credential stuffing and infostealers</h3>
+          <p>Billions of leaked username and password pairs are traded and tested automatically against other sites. <strong>Infostealer</strong> malware quietly copies saved passwords, browser cookies and session tokens from an infected device; stolen session tokens can even bypass MFA. The two feed each other: stealers supply fresh credentials, and stuffing tools test them at scale. Defence: unique passwords, phishing-resistant MFA, device security, session timeouts, and monitoring for logins from unusual places.</p>
+
+          <h3>Business email compromise</h3>
+          <p><strong>BEC</strong> takes over or imitates a business email account to redirect payments or steal data. A typical attack takes over a supplier's mailbox, reads real invoice conversations, then sends a genuine-looking message with changed bank details. It succeeds because the messages are relevant, come from a trusted address and use ordinary business processes, so there is no malware for antivirus to find. Defence: MFA on email, alerts on new mail-forwarding rules, and verifying any change of bank details by phone.</p>
+
+          <h3>Quantum threats to encryption</h3>
+          <p>A large, reliable quantum computer would be able to break the public-key algorithms (such as RSA and elliptic-curve cryptography) that protect HTTPS, digital signatures and key exchange today, although such computers do not yet exist at that scale. The risk is already real because of <em>harvest now, decrypt later</em>: an actor can copy encrypted data today and decrypt it years later. Symmetric encryption such as AES with long keys is much less affected. Standards bodies have published <strong>post-quantum</strong> algorithms (NIST released its first standards in 2024), and the ASD's Information Security Manual advises organisations to stop using traditional asymmetric cryptography by the end of 2030. Enterprises should know where they use encryption and plan the transition.</p>
+
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Threat</th><th>What is new</th><th>Most useful response</th></tr></thead>
+              <tbody>
+                <tr><td>Ransomware / RaaS</td><td>Data theft plus encryption; low-skill affiliates</td><td>Offline backups, patching, MFA, response plan</td></tr>
+                <tr><td>AI phishing and deepfakes</td><td>Convincing text, voice and video at scale</td><td>Verification processes and training</td></tr>
+                <tr><td>Supply chain</td><td>Attack through a trusted supplier</td><td>Supplier assessment and limited access</td></tr>
+                <tr><td>IoT botnets</td><td>Huge numbers of insecure devices</td><td>Default passwords changed; updates; separate network</td></tr>
+                <tr><td>Credential stuffing / infostealers</td><td>Automated reuse of leaked and stolen credentials</td><td>Unique passwords, phishing-resistant MFA</td></tr>
+                <tr><td>BEC</td><td>No malware, just trusted processes exploited</td><td>MFA on email, call-back verification</td></tr>
+                <tr><td>Quantum</td><td>Future break of public-key encryption</td><td>Crypto inventory; plan to migrate</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>Look across the table for patterns. Several threats work by exploiting <em>trust</em> (suppliers, familiar voices, business email), so verification steps matter as much as software. Several depend on <em>basics not being done</em> (default passwords, no MFA, reused passwords). And attackers scale up cheaply by renting tools. An enterprise that does the fundamentals well removes many of these threats at once, then adds targeted defences for the risks its risk matrix ranks highest.</p>
+
+          <div class="callout assessor"><strong>Assessor tip: "Explore"</strong> Choose two or three threats and go beyond naming them: say how each works, why it is a growing problem, which vulnerability it exploits and what an enterprise can do. Link them to earlier ideas such as CIA, the four vulnerability elements and the Essential Eight. Recent examples and Australian law (for example ransomware payment reporting) add credibility; avoid specific statistics you cannot source.</div>
+
         </section>
 
         <div class="quiz" data-quiz="cyber-3"></div>
@@ -446,7 +1236,7 @@
   </footer>
 
   <script src="../js/glossary-data.js?v=8f2b4607"></script>
-  <script src="../js/quizzes/cybersecurity.js?v=38a4be7d"></script>
+  <script src="../js/quizzes/cybersecurity.js?v=339f14d9"></script>
   <script src="../js/quiz.js?v=3e6185a0" defer></script>
   <script src="../js/nesa-diagram-data.js?v=33ff129d"></script>
   <script src="../js/nesa-diagrams.js?v=6bab3032" defer></script>
@@ -476,5 +1266,7 @@
     </div>
   </div>
   <script src="../js/progress.js?v=40b8096b" defer></script>
+  <script src="../js/anim.js?v=cb385498" defer></script>
+  <script src="../js/pages/cybersecurity.js?v=5cb94284" defer></script>
 </body>
 </html>
