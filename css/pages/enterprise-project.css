@@ -1,0 +1,94 @@
+/* Enterprise project (topics/enterprise-project.html): reveal-on-demand answers, wide comparison tables and the approach chooser.
+   Uses the theme's custom properties so light and dark mode both work. */
+
+/* Reveal-on-demand model answers */
+.ep-answer {
+  margin: .25rem 0 1.5rem;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  background: var(--surface);
+}
+.ep-answer > summary {
+  cursor: pointer;
+  padding: .7rem 1rem;
+  font-weight: 700;
+  font-size: .9rem;
+  color: var(--primary);
+  list-style: none;
+}
+.ep-answer > summary::-webkit-details-marker { display: none; }
+.ep-answer > summary::before {
+  content: '\25B8';
+  display: inline-block;
+  margin-right: .55rem;
+  transition: transform .15s ease;
+}
+.ep-answer[open] > summary::before { transform: rotate(90deg); }
+.ep-answer > summary:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 6px; }
+.ep-answer[open] > summary { border-bottom: 1px solid var(--border); }
+.ep-answer > :not(summary) { margin-left: 1rem; margin-right: 1rem; }
+.ep-answer > p, .ep-answer > .table-wrap { margin-top: .85rem; }
+.ep-answer > :last-child { margin-bottom: 1rem; }
+@media (prefers-reduced-motion: reduce) { .ep-answer > summary::before { transition: none; } }
+
+/* Wide tables: let headings wrap and tighten the cells so they fit the column */
+.ep-compare thead th, .ep-tests thead th { white-space: normal; padding: .65rem .6rem; }
+.ep-compare tbody td, .ep-tests tbody td { padding: .6rem .6rem; vertical-align: top; font-size: .88rem; }
+.ep-compare tbody td:first-child { font-weight: 700; }
+.ep-tests td:nth-child(3), .ep-tests td:nth-child(5), .ep-tests td:nth-child(6) { overflow-wrap: anywhere; }
+
+/* Callout lists */
+.callout ol, .callout ul { margin: .5rem 0 .6rem; padding-left: 1.3rem; }
+.callout li { margin: .3rem 0; }
+
+/* Development approach chooser */
+.ep-chooser {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem 1.1rem 1.2rem;
+  margin: 1.25rem 0 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+.ep-chooser h4 { margin: 0 0 .25rem; font-size: 1.05rem; }
+.ep-chooser .ep-lead { margin: 0 0 .9rem; color: var(--text-secondary); font-size: .92rem; }
+.ep-presets { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1rem; align-items: center; }
+.ep-presets .ep-presets-label { font-weight: 700; font-size: .82rem; color: var(--text-secondary); margin-right: .25rem; }
+.ep-btn {
+  font: 600 .82rem var(--font-display);
+  padding: .4rem .8rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+.ep-btn:hover { border-color: var(--primary); }
+.ep-btn[aria-pressed="true"] { background: var(--primary); border-color: var(--primary); color: #fff; }
+.ep-btn:focus-visible, .ep-opt input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ep-cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.25rem; align-items: start; }
+.ep-q { border: 0; margin: 0 0 .9rem; padding: 0; min-width: 0; }
+.ep-q legend { font-weight: 700; font-size: .88rem; color: var(--text-primary); padding: 0; margin: 0 0 .3rem; }
+.ep-opt { display: flex; gap: .5rem; align-items: flex-start; padding: .3rem .1rem; font-size: .88rem; color: var(--text-secondary); cursor: pointer; }
+.ep-opt input { margin-top: .2rem; flex: none; }
+.ep-opt:has(input:checked) { color: var(--text-primary); font-weight: 600; }
+.ep-out { position: sticky; top: 5.5rem; border: 1px solid var(--border); border-radius: var(--radius-md); padding: .9rem 1rem; background: var(--bg-tertiary); min-width: 0; }
+.ep-out h5 { margin: 0 0 .6rem; font-size: .9rem; }
+.ep-row { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr) 2.6rem; gap: .5rem; align-items: center; margin: .35rem 0; font-size: .85rem; }
+.ep-row .ep-name { font-weight: 600; color: var(--text-primary); }
+.ep-row.is-top .ep-name { color: var(--primary); }
+.ep-track { height: .8rem; border-radius: 999px; background: var(--border); overflow: hidden; }
+.ep-fill { display: block; height: 100%; background: var(--text-muted); border-radius: 999px; transition: width .25s ease; }
+.ep-row.is-top .ep-fill { background: var(--primary); }
+.ep-score { text-align: right; font: 700 .8rem var(--font-mono); color: var(--text-secondary); }
+.ep-why { margin: .8rem 0 0; padding-top: .7rem; border-top: 1px solid var(--border); font-size: .88rem; color: var(--text-secondary); }
+.ep-why strong { color: var(--text-primary); }
+.ep-why ul { margin: .35rem 0 .5rem; padding-left: 1.2rem; }
+.ep-note { margin: .7rem 0 0; font-size: .8rem; color: var(--text-muted); }
+@media (max-width: 720px) {
+  .ep-cols { grid-template-columns: minmax(0, 1fr); }
+  .ep-out { position: static; }
+  .ep-row { grid-template-columns: 6.6rem minmax(0, 1fr) 2.2rem; }
+}
+@media (prefers-reduced-motion: reduce) { .ep-fill { transition: none; } }
