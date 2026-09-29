@@ -16,18 +16,49 @@ OUT = os.path.join(ROOT, 'js', 'glossary-data.js')
 # Extra spellings students will meet in the notes, keyed by term id, e.g.
 #   'term-ux': ['UX', 'User Experience'],
 # The auto-linker already matches each term's name, its bracketed abbreviation,
-# plurals, hyphenated and joined forms and UK/US spellings, so add only genuine
-# alternative names.
-EXTRA_ALIASES = {}
+# plurals, hyphenated and joined forms and UK/US spellings ("Gantt chart", "Gantt charts",
+# "DFD"/"data flow diagrams", "IaaS", "user interfaces"), so add only genuine alternative names.
+EXTRA_ALIASES = {
+    'term-agile-approach': ['agile', 'agile development', 'agile methodology'],
+    'term-backup-rule': ['3-2-1 backup rule', '3-2-1 backup'],
+    'term-bitmap-graphic': ['bitmap', 'bitmap image', 'raster image'],
+    'term-boundary-data': ['boundary data', 'boundary test'],
+    'term-business-email-compromise': ['BEC'],
+    'term-erroneous-data': ['erroneous data', 'erroneous test'],
+    'term-feasibility-study': ['feasibility check', 'feasibility'],
+    'term-graph-network-theory': ['graph theory', 'network theory'],
+    'term-hash-function': ['hashing'],
+    'term-level-0-dfd': ['Level 0 DFD', 'context diagram'],
+    'term-mfa': ['MFA', '2FA', 'two-factor authentication'],
+    'term-minimum-viable-product': ['MVP'],
+    'term-notifiable-data-breach': ['NDB', 'NDB scheme', 'eligible data breach'],
+    'term-nudging': ['nudge', 'nudges', 'nudge theory'],
+    'term-privacy-act': ['Privacy Act', 'Australian Privacy Principles', 'APP'],
+    'term-rbac': ['RBAC'],
+    'term-task-float': ['float time'],
+    'term-vector-graphic': ['vector image'],
+    'term-waterfall-approach': ['waterfall', 'waterfall model', 'waterfall (structured)'],
+}
 
-# Everyday words that should stay in the glossary but not be auto-linked in prose,
-# e.g. {'term-record', 'term-tree'}.
+# Everyday words that should stay in the glossary but not be auto-linked in prose. Each of these is
+# ordinary vocabulary in the notes (data, model, product, project, app, measure ...), a command word
+# (evaluate, calculate, classify ...), the name of the course, or a word whose glossary meaning is
+# narrower than the way it is often used (slice and dice in pie charts and dice rolls, node and edge in
+# networks generally, dimension, database, and protocols, which the notes also use for Aboriginal and
+# Torres Strait Islander community protocols). Linking them once per section would put a popover on
+# almost every paragraph, or a wrong meaning on an ordinary sentence. A page can still link one by hand
+# with <button type="button" class="gloss" data-term="term-node">node</button>.
 # "Enterprise" is left out because nearly every mention in the notes is part of the
-# course name "Enterprise Computing" (or "enterprise computing system"), so the
-# auto-linker would put a popover on it in every section. The term stays in the
-# glossary, and a page can still link it by hand with
-# <button type="button" class="gloss" data-term="term-enterprise">enterprise</button>.
-NO_AUTOLINK = {'term-enterprise'}
+# course name "Enterprise Computing" (or "enterprise computing system").
+NO_AUTOLINK = {
+    'term-enterprise', 'term-enterprise-computing',
+    'term-app', 'term-assets', 'term-automate', 'term-calculate', 'term-clarify', 'term-classify',
+    'term-collaborate', 'term-critically-analyse-evaluate', 'term-cybersecurity', 'term-data',
+    'term-database', 'term-dice', 'term-digital-technologies', 'term-dimension', 'term-edge',
+    'term-evaluate', 'term-function', 'term-hardware', 'term-information', 'term-measure',
+    'term-model', 'term-node', 'term-producing', 'term-product', 'term-project', 'term-protocols', 'term-slice',
+    'term-visualisation',
+}
 
 text = lambda frag: html.unescape(re.sub(r'<.*?>', '', frag)).strip()
 src = open(GLOSSARY, encoding='utf-8').read()
