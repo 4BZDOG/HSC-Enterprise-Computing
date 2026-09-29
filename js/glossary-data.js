@@ -51,6 +51,16 @@ window.HSC_GLOSSARY = [
 "link": true
 },
 {
+"id": "term-adaptive-maintenance",
+"name": "Adaptive Maintenance",
+"aliases": [
+"Adaptive Maintenance"
+],
+"def": "Maintenance that changes a system to suit a change in its environment or requirements.",
+"example": "Adding a new menu item or updating prices when the menu changes.",
+"link": true
+},
+{
 "id": "term-adjacency-matrix",
 "name": "Adjacency Matrix",
 "aliases": [
@@ -476,6 +486,16 @@ window.HSC_GLOSSARY = [
 "link": true
 },
 {
+"id": "term-constraint",
+"name": "Constraint",
+"aliases": [
+"Constraint"
+],
+"def": "A limit on a project, such as time, money, skills or equipment, that the team must work within.",
+"example": "A six-week deadline and no budget for software.",
+"link": true
+},
+{
 "id": "term-contingency",
 "name": "Contingency",
 "aliases": [
@@ -503,6 +523,16 @@ window.HSC_GLOSSARY = [
 ],
 "def": "The legal right of a creator to control how their original work, such as text, images, music, video and software, is copied, shared and adapted. In Australia it arises automatically under the Copyright Act 1968.",
 "example": "Reusing a photo from a website only if its licence allows, and acknowledging the creator.",
+"link": true
+},
+{
+"id": "term-corrective-maintenance",
+"name": "Corrective Maintenance",
+"aliases": [
+"Corrective Maintenance"
+],
+"def": "Maintenance that finds and fixes faults reported after a system has been put into use.",
+"example": "Fixing an import that fails when an item name has a trailing space.",
 "link": true
 },
 {
@@ -583,6 +613,16 @@ window.HSC_GLOSSARY = [
 ],
 "def": "A deceptive design technique that steers users into choices that are not in their interest.",
 "example": "A cancel link hidden behind five clicks while sign-up takes one.",
+"link": true
+},
+{
+"id": "term-dashboard",
+"name": "Dashboard",
+"aliases": [
+"Dashboard"
+],
+"def": "A single screen that brings together the key figures, charts and controls someone needs to monitor a system or make a decision.",
+"example": "Canteen Insights shows revenue, items sold, top seller and waste, with a line chart, a bar chart and a reorder list on one page.",
 "link": true
 },
 {
@@ -697,6 +737,16 @@ window.HSC_GLOSSARY = [
 "link": true
 },
 {
+"id": "term-data-retention",
+"name": "Data Retention",
+"aliases": [
+"Data Retention"
+],
+"def": "The rule for how long data are kept before they are deleted or summarised.",
+"example": "Keeping item-level sales rows for 12 months, then reducing them to weekly totals.",
+"link": true
+},
+{
 "id": "term-data-sampling",
 "name": "Data Sampling",
 "aliases": [
@@ -774,6 +824,16 @@ window.HSC_GLOSSARY = [
 ],
 "def": "A collection of data combined for a specific purpose.",
 "example": "A year of bike-share trips gathered to study which stations are busiest.",
+"link": true
+},
+{
+"id": "term-days-of-stock",
+"name": "Days of Stock",
+"aliases": [
+"Days of Stock"
+],
+"def": "The number of trading days the stock on hand will last at the current average rate of sales, found by dividing stock on hand by average daily sales.",
+"example": "58 bottles on hand and 36 sold a day gives about 1.6 days of stock.",
 "link": true
 },
 {
@@ -1172,6 +1232,16 @@ window.HSC_GLOSSARY = [
 "link": false
 },
 {
+"id": "term-functional-requirement",
+"name": "Functional Requirement",
+"aliases": [
+"Functional Requirement"
+],
+"def": "A statement of something a system must do.",
+"example": "The system must show the top seller for any chosen weeks.",
+"link": true
+},
+{
 "id": "term-fuzzy-logic",
 "name": "Fuzzy Logic",
 "aliases": [
@@ -1357,6 +1427,16 @@ window.HSC_GLOSSARY = [
 "link": true
 },
 {
+"id": "term-input-validation",
+"name": "Input Validation",
+"aliases": [
+"Input Validation"
+],
+"def": "Checks made on data as it is entered so that impossible or badly formed values are refused, using checks such as presence, type, range and format.",
+"example": "Refusing a sold quantity of 'abc', -5 or 47 when only 46 items were prepared.",
+"link": true
+},
+{
 "id": "term-intelligent-agent",
 "name": "Intelligent Agent",
 "aliases": [
@@ -1429,6 +1509,17 @@ window.HSC_GLOSSARY = [
 "link": true
 },
 {
+"id": "term-kpi",
+"name": "Key Performance Indicator (KPI)",
+"aliases": [
+"KPI",
+"Key Performance Indicator"
+],
+"def": "A single measured figure that shows how well something is going against a goal.",
+"example": "Waste percentage on the Canteen Insights dashboard, calculated as items thrown out divided by items put out for sale.",
+"link": true
+},
+{
 "id": "term-knowledge-base",
 "name": "Knowledge Base",
 "aliases": [
@@ -1488,6 +1579,16 @@ window.HSC_GLOSSARY = [
 ],
 "def": "Real data from an organisation's actual operation that is used when testing a system.",
 "example": "Last term's real canteen orders loaded into a new ordering system.",
+"link": true
+},
+{
+"id": "term-lookup-function",
+"name": "LOOKUP Function",
+"aliases": [
+"LOOKUP Function"
+],
+"def": "A spreadsheet function that finds a value in one range and returns the matching value from another range.",
+"example": "=LOOKUP(B2,Items!$A$2:$A$13,Items!$D$2:$D$13) returns the price of the item whose ID is in B2.",
 "link": true
 },
 {
@@ -1687,6 +1788,16 @@ window.HSC_GLOSSARY = [
 "link": false
 },
 {
+"id": "term-non-functional-requirement",
+"name": "Non-functional Requirement",
+"aliases": [
+"Non-functional Requirement"
+],
+"def": "A statement of a quality a system must have, such as speed, accessibility, privacy or reliability.",
+"example": "Every panel recalculates after a filter change without a noticeable delay.",
+"link": true
+},
+{
 "id": "term-normalisation",
 "name": "Normalisation",
 "aliases": [
@@ -1859,6 +1970,16 @@ window.HSC_GLOSSARY = [
 "link": true
 },
 {
+"id": "term-pilot-implementation",
+"name": "Pilot Implementation",
+"aliases": [
+"Pilot Implementation"
+],
+"def": "A way of introducing a new system in which a small part of the organisation, or a limited range of the work, uses it first before it is extended.",
+"example": "One manager using the dashboard for hot food and fresh food for two weeks while other categories stay on the old paper method.",
+"link": true
+},
+{
 "id": "term-pivot-table",
 "name": "Pivot Table",
 "aliases": [
@@ -1897,6 +2018,16 @@ window.HSC_GLOSSARY = [
 ],
 "def": "A suggested completion of a search query, chosen by estimating what the user is most likely to type.",
 "example": "Typing how to cook and being offered how to cook rice.",
+"link": true
+},
+{
+"id": "term-price-elasticity-of-demand",
+"name": "Price Elasticity of Demand",
+"aliases": [
+"Price Elasticity of Demand"
+],
+"def": "A measure of how much the quantity people buy changes when the price changes.",
+"example": "A rise in the price of bottled water reduces units sold by more than the same rise in the price of a meat pie.",
 "link": true
 },
 {
@@ -2024,6 +2155,26 @@ window.HSC_GLOSSARY = [
 "link": true
 },
 {
+"id": "term-prototyping-approach",
+"name": "Prototyping Approach",
+"aliases": [
+"Prototyping Approach"
+],
+"def": "A development approach in which rough working versions are built, shown to the client and improved in cycles until the system meets the need.",
+"example": "Building a spreadsheet, a paper storyboard, a clickable page and then a working dashboard, with feedback from the client at each step.",
+"link": true
+},
+{
+"id": "term-pseudo-random-number-generator",
+"name": "Pseudo-random Number Generator",
+"aliases": [
+"Pseudo-random Number Generator"
+],
+"def": "A program that produces a sequence of numbers that looks random but is fully determined by a starting value called a seed.",
+"example": "A seeded generator that makes the same eight weeks of sample canteen sales every time a page loads.",
+"link": true
+},
+{
 "id": "term-qualitative-data",
 "name": "Qualitative Data",
 "aliases": [
@@ -2082,6 +2233,26 @@ window.HSC_GLOSSARY = [
 ],
 "def": "A database that stores data in several linked tables, using primary and foreign keys, so each fact is stored once.",
 "example": "Separate Riders, Bikes, Stations and Trips tables linked by RiderID, BikeID and StationID.",
+"link": true
+},
+{
+"id": "term-relative-reference",
+"name": "Relative Reference",
+"aliases": [
+"Relative Reference"
+],
+"def": "A spreadsheet cell reference that changes to match its new position when the formula is copied or filled.",
+"example": "Copying =D2*E2 down a column so the next row becomes =D3*E3.",
+"link": true
+},
+{
+"id": "term-requirements-traceability",
+"name": "Requirements Traceability",
+"aliases": [
+"Requirements Traceability"
+],
+"def": "Linking each requirement to the design, tests and evidence that show it has been met.",
+"example": "A table that lists requirement FR6 beside the tests N5, B4 to B7 and E1 to E8.",
 "link": true
 },
 {
@@ -2314,6 +2485,16 @@ window.HSC_GLOSSARY = [
 ],
 "def": "A person or group who is involved in, or affected by, a project or its outcome.",
 "example": "Members, the club secretary, the canteen coordinator and suppliers are stakeholders in a booking and inventory system.",
+"link": true
+},
+{
+"id": "term-stock-out",
+"name": "Stock-out",
+"aliases": [
+"Stock-out"
+],
+"def": "A situation in which an item sells out and customers cannot buy it, so recorded sales understate real demand.",
+"example": "Meat pies that are all sold by lunchtime on a Friday.",
 "link": true
 },
 {
@@ -2675,6 +2856,16 @@ window.HSC_GLOSSARY = [
 ],
 "def": "A graph in which each edge has a number, such as a distance, cost or delay.",
 "example": "Cable lengths in metres on the links between five sites.",
+"link": true
+},
+{
+"id": "term-what-if-analysis",
+"name": "What-if Analysis",
+"aliases": [
+"What-if Analysis"
+],
+"def": "Changing an input to a model, such as a price or a quantity, to see how the results would change.",
+"example": "Lowering the number of ham salad rolls put out each day to see the projected effect on waste and sales.",
 "link": true
 },
 {

@@ -9,14 +9,14 @@
   <meta name="robots" content="index, follow" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Example Enterprise Project | HSC Enterprise Computing" />
-  <meta property="og:description" content="A worked enterprise project from problem definition to evaluation, with a live dashboard you can explore in the browser." />
+  <meta property="og:description" content="Follow one fictional HSC enterprise project, Canteen Insights, from problem to evaluation, with a live dashboard, SQL checks and a syllabus map." />
   <meta property="og:url" content="https://4bzdog.github.io/HSC-Enterprise-Computing/topics/example-project.html" />
   <meta property="og:image" content="https://4bzdog.github.io/HSC-Enterprise-Computing/og-image.png" />
   <meta property="og:image:alt" content="HSC Enterprise Computing Notes: NESA NSW" />
   <meta property="og:site_name" content="HSC Enterprise Computing Notes" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Example Enterprise Project | HSC Enterprise Computing" />
-  <meta name="twitter:description" content="A worked enterprise project from problem definition to evaluation, with a live dashboard you can explore in the browser." />
+  <meta name="twitter:description" content="Follow one fictional HSC enterprise project, Canteen Insights, from problem to evaluation, with a live dashboard, SQL checks and a syllabus map." />
   <meta name="twitter:image" content="https://4bzdog.github.io/HSC-Enterprise-Computing/og-image.png" />
   <script type="application/ld+json">
   {
@@ -48,11 +48,13 @@
   <meta name="theme-color" content="#0B1B2E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <meta name="description" content="A worked enterprise project from problem definition to evaluation, with a live dashboard you can explore in the browser." />
+  <meta name="description" content="Follow one fictional HSC enterprise project, Canteen Insights, from problem to evaluation, with a live dashboard, SQL checks and a syllabus map." />
   <!-- Theme init: prevents flash of wrong theme. The ec- prefix keeps this site's storage apart from sister sites on the same origin. -->
   <script>(function(){try{var t=localStorage.getItem('ec-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
   <link rel="stylesheet" href="../css/styles.css?v=eaa2e127" />
   <link rel="stylesheet" href="../css/theme.css?v=b7f4cf21" />
+  <link rel="stylesheet" href="../css/anim.css?v=22e246f7" />
+  <link rel="stylesheet" href="../css/pages/example-project.css?v=8effd31d" />
 </head>
 <body>
 
@@ -157,36 +159,1314 @@
       </nav>
       <div class="topic-title-row"><span class="topic-hero-icon ti-core" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/><circle cx="12" cy="17" r="1.2"/><path d="M4 20.5h16"/></svg></span><h1>Example Enterprise Project</h1></div>
       <p class="text-muted-dark max-w-600 mt-2 fs-sm lh-base">
-        A worked enterprise project from problem definition to evaluation, with a live dashboard you can explore in the browser.
+        A fictional Year 12 project, Canteen Insights, followed through NESA&rsquo;s four stages with the real artefacts at each one and a live sales and stock dashboard you can use in your browser. Notation from the NESA Enterprise Computing Course Specifications (&copy; NESA).
       </p>
       <div class="topic-header-meta">
         <span class="meta-pill">Resources</span>
-        <span class="meta-pill">Coming soon</span>
+        <span class="meta-pill">Fictional worked example</span>
+        <span class="meta-pill">Live dashboard</span>
       </div>
     </div>
   </header>
 
-  <div class="page-layout">
+    <div class="page-layout">
     <aside class="sidebar">
       <div class="toc-title"><span class="toc-ico ti-core" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/><circle cx="12" cy="17" r="1.2"/><path d="M4 20.5h16"/></svg></span>Contents</div>
       <ul class="toc-list">
-        <li><a href="#coming-soon"><span class="toc-num">1</span>Coming soon</a></li>
+        <li class="sidebar-label">Start here</li>
+        <li><a href="#overview"><span class="toc-num">1</span>Meet Canteen Insights</a></li>
+        <li class="sidebar-label">Part 1 — Identifying and defining</li>
+        <li><a href="#problem"><span class="toc-num">2</span>The Client and the Problem</a></li>
+        <li><a href="#requirements"><span class="toc-num">3</span>Requirements and Constraints</a></li>
+        <li><a href="#schedule"><span class="toc-num">4</span>The Gantt Chart</a></li>
+        <li><a href="#social-legal"><span class="toc-num">5</span>Social, Ethical and Legal</a></li>
+        <li class="sidebar-label">Part 2 — Researching and planning</li>
+        <li><a href="#research"><span class="toc-num">6</span>Interviews, Surveys, Prototypes</a></li>
+        <li><a href="#modelling"><span class="toc-num">7</span>DFDs and System Flowchart</a></li>
+        <li><a href="#logic"><span class="toc-num">8</span>The Decision Tree</a></li>
+        <li><a href="#data-design"><span class="toc-num">9</span>Dictionary and Schema</a></li>
+        <li><a href="#screens"><span class="toc-num">10</span>The Storyboard</a></li>
+        <li><a href="#thinking"><span class="toc-num">11</span>Ways of Thinking</a></li>
+        <li><a href="#collaboration"><span class="toc-num">12</span>Working with the Client</a></li>
+        <li><a href="#approach"><span class="toc-num">13</span>Development Approach</a></li>
+        <li><a href="#budget"><span class="toc-num">14</span>Budget</a></li>
+        <li class="sidebar-label">Part 3 — Producing and implementing</li>
+        <li><a href="#dashboard"><span class="toc-num">15</span>The Live Dashboard</a></li>
+        <li><a href="#queries"><span class="toc-num">16</span>SQL and Formulas</a></li>
+        <li><a href="#implementation"><span class="toc-num">17</span>Implementation Plan</a></li>
+        <li class="sidebar-label">Part 4 — Testing and evaluating</li>
+        <li><a href="#testing"><span class="toc-num">18</span>Testing</a></li>
+        <li><a href="#verify"><span class="toc-num">19</span>Verification and Validation</a></li>
+        <li><a href="#feedback"><span class="toc-num">20</span>Feedback and Evaluation</a></li>
+        <li><a href="#maintenance"><span class="toc-num">21</span>Maintenance</a></li>
+        <li><a href="#diary"><span class="toc-num">22</span>Process Diary</a></li>
+        <li class="sidebar-label">Finish</li>
+        <li><a href="#syllabus-map"><span class="toc-num">23</span>How This Maps to the Syllabus</a></li>
       </ul>
     </aside>
 
     <main class="page-content">
       <div class="content-body">
-        <section id="coming-soon" class="coming-soon">
-          <p class="cs-label">Coming soon</p>
-          <h2>Example Enterprise Project is being written</h2>
-          <p>A worked enterprise project from problem definition to evaluation, with a live dashboard you can explore in the browser.</p>
-          <p>In the meantime, the focus-area pages already follow every NESA dot point in order, and the glossary defines the syllabus keywords.</p>
-          <div class="cs-links">
-            <a class="btn btn-primary" href="../index.html#year11">Browse Year 11</a>
-            <a class="btn btn-outline" href="../index.html#year12">Browse Year 12</a>
-            <a class="btn btn-outline" href="glossary.html">Open the glossary</a>
+
+        <aside class="topic-breakout" aria-label="Topic introduction">
+          <span class="breakout-label">Why this matters now</span>
+          <p>The hardest part of an enterprise project is rarely the programming. It is knowing what a finished project looks like: what the problem statement should say, how a Gantt chart shows a task that is running late, or what a test table looks like when it is honest about a failure. Most students only see the finished product, never the working.</p>
+          <p>This page follows one invented project, Canteen Insights, through all four of NESA&rsquo;s stages and shows the real artefact at each one. The centrepiece is a working dashboard that runs in your browser on made-up canteen sales. Every number on it can be traced to a SQL query and a spreadsheet formula, and you are invited to try to break it.</p>
+          <p class="breakout-question"><span class="bq-lead">Try this as you learn</span> Choose one artefact, such as the Gantt chart, the data dictionary or the test table, and ask whether a stranger could use it to check or rebuild the project. If the answer is no, work out what is missing.</p>
+        </aside>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  START HERE  -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Start here</span>
+          <span class="part-name">A worked example project</span>
+        </div>
+
+        <section id="overview">
+          <h2 class="syllabus-phase">Meet Canteen Insights</h2>
+          <p class="syllabus-concept"><em><strong>Start here</strong> A fictional Year 12 project, followed from problem to evaluation</em></p>
+          <div class="callout warning">
+            <strong>This project is fictional</strong>
+            <p>Canteen Insights, the student Jordan, the canteen manager Sandra, the peer tester Priya, Kestrel Ridge High School and every survey result, quote, date and number on this page were invented for these notes. The sales data are generated by a program. Nothing here describes a real school, person or canteen.</p>
+          </div>
+
+          <p>Canteen Insights is a sales and stock dashboard for a school canteen. The canteen manager, Sandra, wants to see <em>what sells, when it sells and what to reorder</em>, so that popular items stop running out and fresh food stops being thrown away. Jordan, a Year 12 student, builds it as an HSC enterprise project.</p>
+
+          <h3>How this page is organised</h3>
+          <p>NESA describes the design and production process in four stages. This page follows them in order, and each stage shows the real artefacts a marker or client would expect to see, not a description of them.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Stage</th><th>What Jordan produced</th><th>Where</th></tr></thead>
+              <tbody>
+                <tr><td>Identifying and defining</td><td>Problem definition, requirements and constraints, Gantt chart with resources, social, ethical and legal review</td><td><a href="#problem">Problem</a>, <a href="#requirements">Requirements</a>, <a href="#schedule">Schedule</a>, <a href="#social-legal">Ethics and law</a></td></tr>
+                <tr><td>Researching and planning</td><td>Interview and survey results, data flow diagrams, system flowchart, decision tree, data dictionary, schema, storyboard, approach and budget</td><td><a href="#research">Research</a> to <a href="#budget">Budget</a></td></tr>
+                <tr><td>Producing and implementing</td><td>A live dashboard, the SQL and spreadsheet formulas behind it, an implementation plan</td><td><a href="#dashboard">Dashboard</a>, <a href="#queries">Queries</a>, <a href="#implementation">Implementation</a></td></tr>
+                <tr><td>Testing and evaluating</td><td>Live test table, verification and validation, client feedback, evaluation, maintenance plan, process diary</td><td><a href="#testing">Testing</a> to <a href="#diary">Diary</a></td></tr>
+                <tr><td>Finish</td><td>A table linking every NESA dot point in the Enterprise project focus area to where this page shows it</td><td><a href="#syllabus-map">Syllabus map</a></td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p>The syllabus explanations live in the <a href="enterprise-project.html">Enterprise project notes</a>, and the management techniques are explained in the <a href="project-guide.html">Project Management Guide</a>. This page is the worked example that sits between them. Diagram notation follows NESA&rsquo;s Enterprise Computing Course Specifications (&copy; NESA), redrawn for these notes; the official document is <a href="https://library.curriculum.nsw.edu.au/341419dc-8ec2-0289-7225-6db7f2d751ef/1299d565-a98e-4578-a5c6-53262a5ecc08/enterprise-computing-11-12-higher-school-certificate-course-specifications.PDF" target="_blank" rel="noopener">on NESA&rsquo;s website &#8599;</a>.</p>
+          <div class="callout tip">
+            <strong>How to use this page</strong>
+            <p>Read it as a model, not a template. Notice what makes each artefact useful to someone who was not there: a named owner, a date, a measurable criterion, an expected result. When you build your own project, ask of every artefact whether a stranger could use it to check or rebuild your work.</p>
           </div>
         </section>
+
+        <hr class="divider" />
+
+        <hr class="divider" />
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  PART 1: IDENTIFYING AND DEFINING  -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Part 1</span>
+          <span class="part-name">Identifying and defining</span>
+        </div>
+
+        <aside class="topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <p>Every project starts with a problem that somebody actually has. In this part Jordan writes the problem down, agrees what the system must and must not do, plans the six weeks, and checks who could be affected.</p>
+          <p class="breakout-question"><span class="bq-lead">Ask yourself</span> If Sandra changed her mind in week three, which part of Jordan&rsquo;s plan would tell you what was now at risk?</p>
+        </aside>
+
+        <section id="problem">
+          <h2 class="syllabus-phase">The Client and the Problem</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Client profile and problem definition</em></p>
+          <span class="ex-artefact">Problem definition</span>
+          <h3>The client and the setting</h3>
+          <p>Sandra manages the canteen at the fictional Kestrel Ridge High School. She works with a small team of paid staff and parent volunteers, serving about the same set of twelve items every day. Sales are rung up on a till that can export a weekly file of what was sold. Orders to suppliers are placed on Fridays, and fresh food such as pies and rolls is prepared each morning.</p>
+          <p>At the moment Sandra decides how much to order and prepare from memory and a paper stock sheet that is counted by hand on Friday afternoons. The till export is filed and never looked at.</p>
+
+          <h3>Problem statement</h3>
+          <div class="ex-quote">
+            <p><strong>Problem statement (approved 10 July 2026).</strong> The canteen manager cannot easily see which items sell, on which days, or how much fresh food is thrown away, so she orders and prepares by habit. Popular items sometimes sell out and other items are wasted. She needs a simple way to see sales and waste, and to be told what to order next week.</p>
+          </div>
+          <p>A good problem statement names <em>who</em> has the problem, <em>what</em> is going wrong and <em>what a solution must let them do</em>, without describing the solution. Jordan deliberately did not write &ldquo;build a dashboard&rdquo;: a spreadsheet, a printed report or a better paper stock sheet might have solved it too, and choosing between them is part of the project.</p>
+
+          <h3>Success criteria</h3>
+          <p>Success criteria turn the problem into something that can be checked at the end. Jordan and Sandra agreed these four, and the <a href="#feedback">evaluation</a> comes back to each one.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>#</th><th>Criterion</th><th>How it will be measured</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>Sandra can read the top seller and the waste percentage for any chosen weeks</td><td>Timed trial with Sandra: under one minute, with no help</td></tr>
+                <tr><td>2</td><td>The dashboard&rsquo;s totals match the till&rsquo;s own figures</td><td>Three-way check of the dashboard, a SQL query and a spreadsheet on the same records</td></tr>
+                <tr><td>3</td><td>Sandra receives a reorder list she trusts and can explain</td><td>The rules are written as a decision tree that Sandra approves; each suggestion shows the rule used</td></tr>
+                <tr><td>4</td><td>Nothing collected identifies a student or staff member</td><td>Review of the till export and the stored fields</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <h3>Stakeholders</h3>
+          <p>A stakeholder is anyone affected by the system. Sandra is the client and the main user. Canteen staff and volunteers count stock and would enter corrections. Students are affected indirectly by what the canteen stocks, but never use the system. The school leadership cares about food waste and cost, and the supplier receives Sandra&rsquo;s orders. Jordan is the developer, and Priya, another student, agreed to act as a beta tester.</p>
+          <div class="key-terms">
+            <div class="key-term-item"><strong>Problem definition</strong><span>A statement of who has a problem, what is going wrong and what a solution must achieve, written before any solution is chosen.</span></div>
+            <div class="key-term-item"><strong>Stakeholder</strong><span>A person or group who is affected by the system or can influence it.</span></div>
+            <div class="key-term-item"><strong>Success criterion</strong><span>A measurable statement that shows whether the project solved the problem.</span></div>
+            </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="requirements">
+          <h2 class="syllabus-phase">Requirements and Constraints</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Functional and non-functional requirements, with constraints</em></p>
+          <span class="ex-artefact">Requirements specification</span>
+          <p>Requirements say <em>what</em> the system must do or be. <strong>Functional</strong> requirements describe behaviour, such as calculating waste. <strong>Non-functional</strong> requirements describe qualities, such as speed, accessibility or privacy. Each has a priority (Must, Should, Could) and, importantly, a way of being tested, shown in the last column.</p>
+          <div class="table-wrap">
+            <table class="ex-reqs">
+              <thead><tr><th>ID</th><th>Requirement</th><th>Type</th><th>Priority</th><th>Evidence (see <a href="#testing">tests</a>)</th></tr></thead>
+              <tbody>
+                <tr><td>FR1</td><td>Show revenue, items sold, top seller and waste percentage for any chosen weeks</td><td>Functional</td><td>Must</td><td>N1, N2, N6, B1</td></tr>
+                <tr><td>FR2</td><td>Filter by week range, category and item</td><td>Functional</td><td>Must</td><td>B1 to B3, E9, E10</td></tr>
+                <tr><td>FR3</td><td>Show sales over time, sales by category and an item-by-weekday summary</td><td>Functional</td><td>Must</td><td>Client trial</td></tr>
+                <tr><td>FR4</td><td>Suggest what to reorder using rules agreed with the client</td><td>Functional</td><td>Must</td><td>N3, B8, B9</td></tr>
+                <tr><td>FR5</td><td>Let the manager test a change of price or quantity and see the projected effect</td><td>Functional</td><td>Should</td><td>N4</td></tr>
+                <tr><td>FR6</td><td>Let the manager correct a day&rsquo;s counts, refusing impossible values</td><td>Functional</td><td>Must</td><td>N5, B4 to B7, E1 to E8</td></tr>
+                <tr><td>NFR1</td><td>Easy to operate: the manager finds the top seller and waste percentage within a minute, untrained</td><td>Non-functional (usability)</td><td>Should</td><td>Client trial</td></tr>
+                <tr><td>NFR2</td><td>Accessible: usable by keyboard, charts have text alternatives, readable on a phone, respects reduced-motion settings</td><td>Non-functional (accessibility)</td><td>Must</td><td>Checked in two browsers</td></tr>
+                <tr><td>NFR3</td><td>Private: collects and stores no personal information</td><td>Non-functional (privacy)</td><td>Must</td><td>Design review</td></tr>
+                <tr><td>NFR4</td><td>Reliable: totals agree with the till&rsquo;s own reports</td><td>Non-functional (reliability)</td><td>Must</td><td>N6</td></tr>
+                <tr><td>NFR5</td><td>Quick: every panel recalculates after a filter change with no noticeable delay</td><td>Non-functional (performance)</td><td>Should</td><td>Client trial</td></tr>
+                <tr><td>NFR6</td><td>Compatible: runs in the browsers on the canteen laptop and Sandra&rsquo;s phone, with nothing to install</td><td>Non-functional (compatibility)</td><td>Must</td><td>Checked on both devices</td></tr>
+                <tr><td>NFR7</td><td>Maintainable: each business rule lives in one place and is documented</td><td>Non-functional (maintainability)</td><td>Should</td><td>Documentation trial</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <h3>Constraints</h3>
+          <p>A constraint is a limit the project has to live with. Unlike a requirement it is not negotiable by adding effort.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Constraint</th><th>Detail</th><th>How the project responds</th></tr></thead>
+              <tbody>
+                <tr><td>Time</td><td>Six weeks, from 6 July to 14 August 2026</td><td>Fixed scope of Must items; Should items dropped first if the plan slips</td></tr>
+                <tr><td>Skills</td><td>Jordan knows HTML, JavaScript and spreadsheets; no server programming</td><td>The dashboard runs entirely in the browser</td></tr>
+                <tr><td>Money</td><td>Almost none: the school has no budget for software</td><td>Free tools only; see the <a href="#budget">budget</a></td></tr>
+                <tr><td>Hardware and data</td><td>One canteen laptop; the till exports a file each week and has no live link</td><td>Weekly import of a file rather than a live feed</td></tr>
+                <tr><td>Client availability</td><td>Sandra is free for about half an hour twice a week</td><td>Fixed check-ins; decisions saved up for them</td></tr>
+                <tr><td>Policy</td><td>The school&rsquo;s healthy-food guidelines and privacy obligations apply</td><td>Reviewed in <a href="#social-legal">the next section</a></td></tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="callout assessor">
+            <strong>Exam guidance</strong>
+            <p>A question that says <strong>identify</strong> or <strong>describe</strong> requirements is usually looking for a functional and a non-functional example, each tied to the scenario. &ldquo;Fast&rdquo; on its own scores poorly: &ldquo;a filter change recalculates every panel without a noticeable delay&rdquo; is testable. Do not confuse a <em>constraint</em> (a limit on the project, such as the budget) with a <em>requirement</em> (a property of the system).</p>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="schedule">
+          <h2 class="syllabus-phase">Time and Resources: the Gantt Chart</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Gantt chart with resources and percentage complete; weekly action plan</em></p>
+          <span class="ex-artefact">Project plan</span>
+          <p>Jordan broke the six weeks into four phases that follow NESA&rsquo;s stages, gave every task a self-explanatory name, an owner and a duration, marked the dependencies and put a milestone at the end of each phase. The chart below is the version at the end of Wednesday 29 July 2026, when the plan was updated with actual progress, as NESA asks (&ldquo;charts should be regularly updated during development to reflect actual versus estimated times&rdquo;).</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Gantt chart</span></p>
+              <h4 class="figure-title">Gantt chart: the Canteen Insights project, with resources and progress</h4>
+              <p class="figure-lead">Six weeks, four phases, four milestones, with the work done shown as the solid part of each bar.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="ex-gantt"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Each task has an owner (Jordan, Sandra or Priya) and a percentage complete. The solid part of a bar is done, the pale part remains.</li><li>Arrows show dependencies: &ldquo;Add reorder list, data checks&rdquo; cannot start until &ldquo;Add filters, pivot, what-if&rdquo; is finished.</li><li>Task 14 is 50% complete but 75% was planned by the status line (the dotted line). That is a warning to act on, not a failure to hide.</li><li>Hollow diamonds are milestones: dates when something is approved or delivered, with no duration.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Work out which later tasks move if task 14 finishes on Friday 31 July instead of Thursday 30 July. Which milestone is at risk, and what would you drop first?</p>
+            </div>
+          </figure>
+
+          <h3>Reading the plan</h3>
+          <p>The plan is a <strong>time and resource management</strong> tool because it answers four questions at a glance: what has to happen, in what order, who is doing it and whether the project is on track. At the status date, Phase 3 is 54% complete: the two finished tasks (2 and 3 days long), the half-finished filters task (4 days at 50%) and the unstarted reorder task add up to 7 of 13 working days. Phase 3 was expected to be further ahead, so Jordan did three things that day: recorded the reason in the <a href="#diary">process diary</a>, moved the optional &ldquo;export chart as an image&rdquo; feature into a &ldquo;Could&rdquo; list, and used the spare Friday as a buffer.</p>
+
+          <h3>Time/task action plan for the week</h3>
+          <p>The Gantt chart shows the whole project. A time/task action plan zooms in on the next few days, so nothing depends on memory. This is Jordan&rsquo;s plan for the week beginning Monday 27 July.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Day</th><th>Task</th><th>Output</th><th>Done when</th><th>Status at end of Wed 29 Jul</th></tr></thead>
+              <tbody>
+                <tr><td>Mon</td><td>Week-range and category filters</td><td>Filters working on the KPI tiles</td><td>Totals change correctly for three test filters</td><td>Done</td></tr>
+                <tr><td>Tue</td><td>Item filter and reconcile rules</td><td>Item list follows the category</td><td>Changing the category clears an item that no longer fits</td><td>Done</td></tr>
+                <tr><td>Wed</td><td>Item-by-weekday pivot table</td><td>Pivot with totals and shading</td><td>Grand total equals the KPI total</td><td>In progress</td></tr>
+                <tr><td>Thu</td><td>What-if sliders and model</td><td>Projected revenue and waste</td><td>No-change setting gives a change of $0.00</td><td>Not started</td></tr>
+                <tr><td>Fri</td><td>Buffer, client check-in with Sandra</td><td>Feedback recorded</td><td>Sandra has seen the pivot table</td><td>Not started (buffer day)</td></tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="callout info">
+            <strong>Where the plan meets the syllabus</strong>
+            <p>Both tools sit under &ldquo;time and resource management&rdquo;, which the <a href="enterprise-project.html#manage-document">Enterprise project notes</a> explain in general terms. The notation used here is NESA&rsquo;s (Course Specifications p.12, example 2). The <a href="project-guide.html">Project Management Guide</a> covers critical paths and how to recover a late task.</p>
+          </div>
+          <div class="callout assessor">
+            <strong>Exam guidance</strong>
+            <p>A Gantt question usually gives a task list with durations and dependencies and asks you to <strong>draw or complete</strong> the chart. Award yourself marks for a dated time scale, task names, correct start and end positions, dependency arrows, at least one milestone, and, if resources are asked for, a name against every bar. If percentage complete is required, the solid part must match the number.</p>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="social-legal">
+          <h2 class="syllabus-phase">Social, Ethical and Legal Considerations</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Impact review: privacy, fairness, health, accessibility and data retention</em></p>
+          <span class="ex-artefact">Impact review</span>
+          <p>Before building anything Jordan asked, for each stakeholder, who could be helped and who could be harmed. The review is short, and each finding changed the design.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area</th><th>Consideration</th><th>Decision</th></tr></thead>
+              <tbody>
+                <tr><td>Privacy</td><td>Personal information is information about an identifiable individual. A till export can carry names, card details or student numbers if the till is set up to record them.</td><td>The system only ever imports item, quantity and date. The import step ignores any other column and refuses a file whose headings are not the expected ones. No student or staff details are needed for any requirement, so none are collected (NFR3).</td></tr>
+                <tr><td>Data retention</td><td>Data kept forever are a risk and a cost. The <a href="https://www.oaic.gov.au/privacy/australian-privacy-principles" target="_blank" rel="noopener">Australian Privacy Principles &#8599;</a> expect entities to destroy or de-identify personal information they no longer need; sales counts are not personal information, but the habit is worth having.</td><td>Item-level rows are kept for 12 months, then reduced to weekly totals by item. This is the client&rsquo;s decision, not a legal requirement, and it is written in the maintenance plan.</td></tr>
+                <tr><td>Fairness</td><td>A price rise can hurt families with the least money, and the what-if panel makes price rises look attractive on paper.</td><td>The panel shows the effect on units sold as well as revenue, and Sandra agreed price changes are for her to decide, not the software.</td></tr>
+                <tr><td>Health and wellbeing</td><td>A dashboard that only rewards high revenue could push the menu towards less healthy items.</td><td>Reorder rules are about quantity, not which items to promote. Menu decisions stay with the school&rsquo;s healthy-food guidelines.</td></tr>
+                <tr><td>Accessibility</td><td>Staff and volunteers have different vision, motor skills and devices. The Web Content Accessibility Guidelines (<a href="https://www.w3.org/WAI/WCAG22/quickref/" target="_blank" rel="noopener">WCAG 2.2 &#8599;</a>) set out good practice.</td><td>Keyboard operation, text alternatives for charts, colour never the only signal, readable at phone width, and reduced-motion settings respected (NFR2).</td></tr>
+                <tr><td>Employment</td><td>Automation can worry the people whose jobs it touches.</td><td>The dashboard supports Sandra&rsquo;s decisions. It does not replace anyone, and staff helped choose the reorder rules.</td></tr>
+                <tr><td>Legal and ownership</td><td>Software, images and fonts have licence terms, and the <a href="https://www.legislation.gov.au/C2004A03712/latest/text" target="_blank" rel="noopener">Privacy Act 1988 (Cth) &#8599;</a> applies to most Australian organisations and agencies that handle personal information. Government schools may also be covered by NSW privacy law.</td><td>The dashboard uses no third-party code, images or fonts beyond the browser&rsquo;s own. Jordan wrote everything, and the school agreed how the finished work is shared.</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p>Notice the pattern: each row ends with a <em>design decision</em>. A social or legal review that produces only a list of worries has not done its job. The most effective privacy control here is not a rule, it is <strong>not collecting</strong> the data in the first place.</p>
+          <div class="callout assessor">
+            <strong>Exam guidance</strong>
+            <p>Questions on social, ethical and legal issues reward answers tied to the scenario. Name the issue (privacy), say why it applies (the export could contain personal details), and give the action taken (the import discards other columns). Avoid quoting legislation you are unsure of: describing the principle accurately, such as &ldquo;collect only what you need&rdquo;, is worth more than a misquoted Act.</p>
+          </div>
+        </section>
+
+        <div class="quiz" data-quiz="ex-1"></div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  PART 2: RESEARCHING AND PLANNING  -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Part 2</span>
+          <span class="part-name">Researching and planning</span>
+        </div>
+
+        <aside class="topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <p>Now Jordan finds out what is really going on and designs the system on paper. Interviews and surveys supply the facts, and diagrams, tables and a storyboard turn them into a plan that Sandra can check before any code is written.</p>
+          <p class="breakout-question"><span class="bq-lead">Ask yourself</span> Which of these artefacts could Sandra, who does not write code, check for mistakes, and which could only Jordan?</p>
+        </aside>
+
+        <section id="research">
+          <h2 class="syllabus-phase">Interviews, Surveys and Prototypes</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Research summaries, analytical report extract, prototype log</em></p>
+          <span class="ex-artefact">Requirements research</span>
+          <p>Jordan used more than one research tool, because each answers a different question. Interviews give depth, surveys give breadth, an analytical report of existing data gives evidence, and prototypes test ideas cheaply.</p>
+
+          <h3 id="interview">Interview with the client</h3>
+          <p>A structured interview asks the same planned questions in the same order and records the answers. Jordan interviewed Sandra on Monday 6 July for 30 minutes, with open questions that invited stories rather than yes or no answers.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Question</th><th>Summary of the answer</th></tr></thead>
+              <tbody>
+                <tr><td>Walk me through how you decide what to order each week.</td><td>Looks at last week&rsquo;s paper stock sheet on Friday, adds a bit &ldquo;if the weather is cold&rdquo;, and phones the order through. No sales figures are used.</td></tr>
+                <tr><td>What happens to food that is not sold?</td><td>Most fresh food is thrown out. Sandra thinks rolls and fruit are the worst but has never measured it.</td></tr>
+                <tr><td>Which decisions would you most like help with?</td><td>How many of each fresh item to prepare each day, and what to order for next week.</td></tr>
+                <tr><td>Who will use it, and on what?</td><td>Sandra, on the canteen laptop and sometimes her phone. Volunteers only enter corrections.</td></tr>
+                <tr><td>What must it never do?</td><td>Show which student bought what, or need anyone to install anything.</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <div class="ex-quote">
+            <p>&ldquo;I know we run out of pies on Fridays. I don&rsquo;t know how often, and I can&rsquo;t tell you what it costs us.&rdquo;</p>
+            <cite>Sandra, canteen manager (fictional), interview, 6 July 2026</cite>
+          </div>
+
+          <h3 id="survey">Surveys</h3>
+          <p>A survey collects the same answers from many people, so results can be counted. Jordan ran two short paper-and-form surveys on Tuesday 7 July and Wednesday 8 July: one of students (to test how common sell-outs are from the customer&rsquo;s side) and one of canteen staff and volunteers (to find out how fresh-food quantities are decided today). Both were anonymous.</p>
+          <p><strong>Sample question:</strong> &ldquo;This term, how often have you found the item you wanted sold out at the canteen?&rdquo; with fixed choices, so answers can be counted. A poor version, &ldquo;Do you like the canteen?&rdquo;, would not have led to any decision.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Student survey (64 responses)</th><th>Never</th><th>Sometimes</th><th>Often</th></tr></thead>
+              <tbody>
+                <tr><td>Found the item you wanted sold out</td><td>14 (22%)</td><td>34 (53%)</td><td>16 (25%)</td></tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>What would improve the canteen most? (64 responses)</th><th>Responses</th><th>Share</th></tr></thead>
+              <tbody>
+                <tr><td>Shorter queues</td><td>21</td><td>33%</td></tr>
+                <tr><td>More fresh and healthy choices</td><td>19</td><td>30%</td></tr>
+                <tr><td>Nothing sold out</td><td>15</td><td>23%</td></tr>
+                <tr><td>Lower prices</td><td>9</td><td>14%</td></tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Staff and volunteer survey (6 responses): how do you decide how many pies to prepare?</th><th>Responses</th></tr></thead>
+              <tbody>
+                <tr><td>The same as last week</td><td>3</td></tr>
+                <tr><td>Ask the manager</td><td>2</td></tr>
+                <tr><td>Guess from the weather</td><td>1</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p>Read the results critically. Nearly four in five students have met a sell-out at least sometimes, which supports the problem. But a sample of 64 students who chose to answer may not represent the school, and &ldquo;shorter queues&rdquo; came first, so a dashboard cannot claim to fix everything students want. Jordan wrote that limitation into the report below.</p>
+
+          <h3 id="analytical-report">Analytical report from existing data</h3>
+          <p>The most convincing evidence was already in the till export. Jordan loaded eight weeks of it into a spreadsheet and summarised what it showed. This is an extract from the report.</p>
+          <div class="ex-quote">
+            <p><strong>Findings, weeks 1 to 8 (fictional data).</strong> Meat pies were sold out (everything prepared was sold) on <span data-ex-fact="pieFridays">8</span> of 8 Fridays. Overall, <span data-ex-fact="waste">8.0%</span> of the items put out for sale were thrown away, costing <span data-ex-fact="wasteCost">$2,151.60</span> at cost price. Waste is concentrated in fresh food: ham salad rolls <span data-ex-fact="hamWaste">22.7%</span>, toasties <span data-ex-fact="toastieWaste">19.9%</span>, fruit cups <span data-ex-fact="fruitWaste">19.6%</span> and sausage rolls <span data-ex-fact="sausageWaste">17.1%</span>, against <span data-ex-fact="pieWaste">9.0%</span> for pies.</p>
+            <p><strong>Recommendation.</strong> Prepare more pies on Fridays and fewer on Mondays, and cut the preparation of rolls, toasties and fruit cups. Test the changes in a pilot before applying them to every item.</p>
+            <p><strong>Limitation.</strong> The till records what was <em>sold</em>, not what customers <em>wanted</em>. On the days pies sold out, real demand was higher than the figures show.</p>
+          </div>
+
+          <h3 id="presentation">Presenting the research</h3>
+          <p>Jordan presented these results to Sandra and three volunteers in a ten-minute session using five slides. The aim of a presentation of research results is agreement on what to build, so each slide carried one message and one chart or table.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Slide</th><th>Message</th><th>Evidence shown</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>The problem in one sentence</td><td>The approved problem statement</td></tr>
+                <tr><td>2</td><td>Sell-outs are real</td><td>Student survey chart; pies sold out on all 8 Fridays</td></tr>
+                <tr><td>3</td><td>Waste is concentrated</td><td>Waste percentage by item, from the till export</td></tr>
+                <tr><td>4</td><td>What the system will and will not do</td><td>Requirements list; the out-of-scope items</td></tr>
+                <tr><td>5</td><td>What we decide today</td><td>Approve the requirements, book the Thursday check-ins</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <h3 id="prototypes">Prototypes</h3>
+          <p>A prototype is a trial version built to test an idea before the full system exists. Jordan built four, each answering one question and each cheaper than the mistake it prevented.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Prototype</th><th>Form</th><th>Date</th><th>Question it answered</th><th>Result</th></tr></thead>
+              <tbody>
+                <tr><td>P1</td><td>Spreadsheet with a pivot table of the export</td><td>Fri 10 Jul</td><td>Is there anything useful in the data?</td><td>Sandra immediately asked why pies were gone every Friday, and wanted weekdays as columns. Weekday view added to the requirements.</td></tr>
+                <tr><td>P2</td><td>Paper storyboard, four screens</td><td>Thu 16 Jul</td><td>What should Sandra see first?</td><td>She circled waste percentage and the reorder list. A pie chart Jordan had drawn was crossed out.</td></tr>
+                <tr><td>P3</td><td>Clickable page with placeholder numbers</td><td>Fri 24 Jul</td><td>Is it readable on the canteen laptop?</td><td>Text too small. Key figures enlarged; screens 2 to 4 placed on one page so Sandra need not click.</td></tr>
+                <tr><td>P4</td><td>Working dashboard on the imported records</td><td>Wed 29 Jul</td><td>Do the numbers make sense to her?</td><td>She checked three totals against the till and all matched. She asked that the what-if panel, still to be built, show waste as well as revenue.</td></tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="callout assessor">
+            <strong>Exam guidance</strong>
+            <p>If asked to <strong>apply</strong> tools to inform requirements, choose a tool to fit the question and give a sample question or output, as above. Compare tools when asked: an interview gives detail from few people, a survey gives numbers from many, and an analytical report shows what people <em>did</em> rather than what they <em>say</em>. Always note a limitation, such as a small or self-selected sample.</p>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="modelling">
+          <h2 class="syllabus-phase">Modelling the System: DFDs and the System Flowchart</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Level 0 and Level 1 data flow diagrams, system flowchart, informatics table</em></p>
+          <span class="ex-artefact">System models</span>
+          <p>Jordan drew three models. The data flow diagrams show <em>what data moves</em>, the system flowchart shows <em>which devices and processes</em> carry it, and a table of informatics names the participants, data and components. All use NESA&rsquo;s notation.</p>
+
+          <h3 id="dfd">Level 0 data flow diagram</h3>
+          <p>The Level 0 diagram (or context diagram) shows the whole system as one process, with every external entity and no data stores. It is the picture Sandra checked first, because she could see what goes in and what comes out without any technical detail.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Data flow diagram</span></p>
+              <h4 class="figure-title">Level 0 data flow diagram: Canteen Insights</h4>
+              <p class="figure-lead">The whole system as one process, three external entities and six labelled flows.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="ex-dfd-l0"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>One circle for the system, closed rectangles for entities, no data stores.</li><li>Six flows cross the boundary. The two that carry the results of the dashboard, Dashboard and charts and Reorder list, both go to the Canteen manager.</li><li>Pairs of flows between the same two symbols curve to opposite sides, each with its own label and arrowhead.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Name a piece of data Sandra sends and a piece she receives. Then find where the till system fits.</p>
+            </div>
+          </figure>
+
+          <h3>Level 1 data flow diagram</h3>
+          <p>Level 1 opens the circle: four processes, each a job the system does, and two data stores. The data stores are the database tables from the <a href="#data-design">schema</a>. Every Level 0 flow appears here again with the same label, which is how you check the two levels balance.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Data flow diagram</span></p>
+              <h4 class="figure-title">Level 1 data flow diagram: Canteen Insights</h4>
+              <p class="figure-lead">Four processes and two data stores, with every Level 0 flow still present.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="ex-dfd-l1"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Import sales and Check and correct data both write to the Sales store, and only Check and correct data changes the Items store (stock counts).</li><li>Analyse sales and Decide reorders only read from the stores. They never write to them.</li><li>The six Level 0 flows are still here: Sales export, Stocktake and corrections, Saved or error message, Filters and what-if settings, Dashboard and charts, Reorder list.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Which process would break first if the till changed its export format, and what would Sandra see?</p>
+            </div>
+          </figure>
+          <div class="callout warning">
+            <strong>Common mistakes with DFDs</strong>
+            <p>Putting data stores on a Level 0 diagram; joining two entities or two stores directly; leaving arrows unlabelled; labelling a flow with an action (&ldquo;process&rdquo;) rather than the data; and forgetting that a Level 1 diagram must show every Level 0 flow.</p>
+          </div>
+
+          <h3 id="sysflow">System flowchart</h3>
+          <p>A system flowchart shows the main processes and devices, and the arrows show the direction of <em>data</em>. It answers a different question from the DFD: what hardware and storage does the system touch? This one uses eight of NESA&rsquo;s nine symbols; nothing in Canteen Insights needs magnetic tape.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">System flowchart</span></p>
+              <h4 class="figure-title">System flowchart: Canteen Insights</h4>
+              <p class="figure-lead">Inputs, processes, storage, displays, a paper document, a manual step and a cloud backup.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="ex-sysflow"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Online input for the till sales and the typed stocktake, direct access storage for the database, online display for the dashboard and messages, a paper document for the printed reorder list.</li><li>The database and the Import process share a double-headed arrow because the process both reads and writes.</li><li>A manual operation, ordering from the supplier, follows the printed list. Sandra, not the software, places the order.</li><li>A telecommunications link joins the database to the cloud backup.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Which symbol would you use for the till itself if it printed a paper receipt for each sale?</p>
+            </div>
+          </figure>
+
+          <h3 id="informatics">Informatics: participants, data and components</h3>
+          <p>Informatics is the science of processing data for storage and retrieval. To clarify each of the relevant informatics in the new system, Jordan listed who takes part, what data exist, and which components handle them at each step.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Step</th><th>Participants</th><th>Data</th><th>Components</th><th>Information produced</th></tr></thead>
+              <tbody>
+                <tr><td>Collect</td><td>Canteen staff at the till</td><td>Item, quantity, date and time of each sale (no customer details)</td><td>Till, weekly export file</td><td>Sales export</td></tr>
+                <tr><td>Store</td><td>Jordan (import), Sandra (stock counts)</td><td>Sales records, item list, stock on hand</td><td>Laptop, browser, database, cloud backup</td><td>Consistent tables</td></tr>
+                <tr><td>Process</td><td>The system</td><td>Totals, averages, waste percentages, days of stock</td><td>Dashboard code and reorder rules</td><td>Figures and recommendations</td></tr>
+                <tr><td>Retrieve and display</td><td>Sandra (and volunteers for corrections)</td><td>Filtered records</td><td>Dashboard, data table, printer</td><td>Charts, tables and the reorder list</td></tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="callout assessor">
+            <strong>Exam guidance</strong>
+            <p>2025 HSC candidates were asked to compare Level 0 and Level 1 diagrams using the correct symbols. Marks come from things a marker can see: a circle for a process, an open-ended rectangle for a store, a closed rectangle for an entity, labelled curved arrows with heads, one process and no stores at Level 0, several processes and at least one store at Level 1. Add one sentence saying what each level is for.</p>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="logic">
+          <h2 class="syllabus-phase">Reorder Rules: the Decision Tree</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Decision tree that the dashboard runs</em></p>
+          <span class="ex-artefact">Decision tree</span>
+          <p>The rules for reordering had to be ones Sandra understood and could challenge, so Jordan drew them as a decision tree before writing any code. A decision tree represents all possible combinations of decisions and their resulting actions, and every path ends in a final action.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Decision tree</span></p>
+              <h4 class="figure-title">Decision tree: what to order for next week</h4>
+              <p class="figure-lead">Five possible actions, each reached by a different path.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="ex-dt-reorder"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Rectangles, not diamonds, with every branch labelled Yes or No.</li><li>Perishable items are judged on waste. Non-perishable items are judged on days of stock left, worked out as stock on hand divided by average units sold per day.</li><li>The thresholds are boundaries: exactly 3.0 days is <em>not</em> under 3, so it gives Reorder soon; exactly 10% waste is <em>not</em> over 10%, so it gives Order forecast + 10%.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Trace Bottled water: 58 on hand and about 36 sold a day. Which action does the tree give?</p>
+            </div>
+          </figure>
+
+          <h3>The tree is the code</h3>
+          <p>This diagram is not a picture of the rules. It <em>is</em> the rules. The function that decides the action in the dashboard&rsquo;s code has one branch for each path, in the same order:</p>
+          <div class="code-block"><pre><code class="language-javascript">function decide(perishable, wastePct, daysCover) {
+  if (perishable) return wastePct &gt; 10 ? 'forecast' : 'buffer';
+  if (daysCover &lt; 3) return 'now';
+  if (daysCover &lt; 5) return 'soon';
+  return 'hold';
+}</code></pre></div>
+
+          <p>Two other parts of the reorder list follow from the tree. The <strong>forecast</strong> is the average units sold per day over the last ten trading days, times five days. <em>Order forecast + 10%</em> adds a buffer so fresh items do not sell out, and <em>Order to forecast</em> leaves the buffer off where waste is high. <em>Reorder now</em> and <em>Reorder soon</em> order enough for five days of sales plus a 20% buffer, less what is on hand. In the <a href="#dashboard">dashboard</a>, the list shows which rule each suggestion used, so Sandra can disagree with a specific step.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Item (in the sample data)</th><th>Path through the tree</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>Bottled water: 58 on hand, about 36 a day</td><td>Not perishable, 1.6 days left (under 3)</td><td>Reorder now</td></tr>
+                <tr><td>Flavoured milk: 70 on hand, about 19 a day</td><td>Not perishable, 3.7 days left (3 or more, under 5)</td><td>Reorder soon</td></tr>
+                <tr><td>Popcorn: 95 on hand, about 18 a day</td><td>Not perishable, 5.3 days left (5 or more)</td><td>Hold</td></tr>
+                <tr><td>Ham salad roll: waste last week 16.2%</td><td>Perishable, waste over 10%</td><td>Order to forecast</td></tr>
+                <tr><td>Meat pie: waste last week 5.2%</td><td>Perishable, waste 10% or less</td><td>Order forecast + 10%</td></tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="callout assessor">
+            <strong>Exam guidance</strong>
+            <p>NESA draws decision trees as rectangles joined by labelled branches (Course Specifications p.8). A frequent error is drawing diamonds, which belong to flowcharts. Check that branches from one question cover every case exactly once, so a value such as exactly 3.0 days cannot fit two branches. When asked to <strong>test</strong> a tree, choose data on both sides of every threshold as well as on it.</p>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="data-design">
+          <h2 class="syllabus-phase">Data Design: the Dictionary and the Schema</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Data dictionary and schema</em></p>
+          <span class="ex-artefact">Data design</span>
+          <h3>Data dictionary</h3>
+          <p>A data dictionary describes every field: its name, type, format, size, meaning and an example. Formats use NESA&rsquo;s notation: X is any character, N is a digit and # is a numeric digit. Jordan wrote one for each of the three tables so anyone importing data knows exactly what will be accepted.</p>
+          <div class="table-wrap">
+            <table class="ex-dict">
+              <thead><tr><th>Field name</th><th>Data type</th><th>Data format</th><th>Field size</th><th>Description</th><th>Example</th></tr></thead>
+              <tbody>
+                <tr><td><strong>DailySales</strong></td><td></td><td></td><td></td><td>One row for each item on each trading day</td><td></td></tr>
+                <tr><td>SaleID</td><td>Text</td><td>XNNNN</td><td>5</td><td>Unique record number: the letter S then four digits</td><td>S0325</td></tr>
+                <tr><td>SaleDate</td><td>Date</td><td>DD/MM/YYYY</td><td>10</td><td>Trading day (Monday to Friday)</td><td>10/06/2026</td></tr>
+                <tr><td>ItemID</td><td>Text</td><td>XNN</td><td>3</td><td>Item sold; links to the Items table</td><td>I01</td></tr>
+                <tr><td>Prepared</td><td>Integer</td><td>###</td><td>3</td><td>Units put out for sale that day, 0 to 500</td><td>46</td></tr>
+                <tr><td>Sold</td><td>Integer</td><td>###</td><td>3</td><td>Units sold; never more than Prepared</td><td>42</td></tr>
+                <tr><td>Wasted</td><td>Integer</td><td>###</td><td>3</td><td>Units thrown out; Sold plus Wasted never exceeds Prepared</td><td>4</td></tr>
+                <tr><td><strong>Items</strong></td><td></td><td></td><td></td><td>One row for each menu item</td><td></td></tr>
+                <tr><td>ItemID</td><td>Text</td><td>XNN</td><td>3</td><td>Unique item number</td><td>I01</td></tr>
+                <tr><td>ItemName</td><td>Text</td><td>XXX&hellip;XXX</td><td>20</td><td>Name of the item</td><td>Meat pie</td></tr>
+                <tr><td>CategoryID</td><td>Text</td><td>XN</td><td>2</td><td>Category of the item; links to Categories</td><td>C1</td></tr>
+                <tr><td>UnitPrice</td><td>Currency</td><td>$##.##</td><td>5</td><td>Selling price in dollars</td><td>$4.50</td></tr>
+                <tr><td>UnitCost</td><td>Currency</td><td>$##.##</td><td>5</td><td>Cost to the canteen per unit, in dollars</td><td>$2.10</td></tr>
+                <tr><td>Perishable</td><td>Boolean</td><td></td><td>1</td><td>Y if unsold units are thrown out, N if they go back on the shelf</td><td>Y</td></tr>
+                <tr><td>OnHand</td><td>Integer</td><td>###</td><td>3</td><td>Units in stock at the last Friday stocktake (0 for fresh food)</td><td>58</td></tr>
+                <tr><td><strong>Categories</strong></td><td></td><td></td><td></td><td>One row for each category</td><td></td></tr>
+                <tr><td>CategoryID</td><td>Text</td><td>XN</td><td>2</td><td>Unique category number</td><td>C1</td></tr>
+                <tr><td>CategoryName</td><td>Text</td><td>XXX&hellip;XXX</td><td>20</td><td>Name of the category</td><td>Hot food</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <h3>Schema</h3>
+          <p>The schema shows the structure: which tables exist, which field is each table&rsquo;s primary key, and how tables are linked. Jordan <em>normalised</em> the data: an item&rsquo;s name, price and category are stored once in Items, not repeated in each of the 480 sales rows. If a price changes, one row changes, and the data cannot contradict themselves.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Schema</span></p>
+              <h4 class="figure-title">Schema: the Canteen Insights database</h4>
+              <p class="figure-lead">Three tables joined by two one-to-many relationships.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="ex-schema"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>(P) marks the primary key of each table and (F) a foreign key. A foreign key holds a primary key value from another table.</li><li>One item has many sales rows, and one category has many items. The 1 is at the &ldquo;one&rdquo; end and the infinity sign at the &ldquo;many&rdquo; end.</li><li>The relationships are what make a join possible in <a href="#queries">SQL</a>: Items.ItemID = DailySales.ItemID.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Where would you store the supplier if each item came from one supplier? Sketch the new table and its foreign key.</p>
+            </div>
+          </figure>
+          <div class="callout assessor">
+            <strong>Exam guidance</strong>
+            <p>A data dictionary question expects all six NESA columns and sensible formats: a fixed-length code such as XNNNN is checked more easily than free text. For a schema, mark every primary key, every foreign key and the 1 and infinity ends of each relationship. When asked to <strong>explain</strong> normalisation, say that duplicated data can be updated inconsistently, and give an example from the scenario.</p>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="screens">
+          <h2 class="syllabus-phase">Screen Design: the Storyboard</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Storyboard and the design decisions behind it</em></p>
+          <span class="ex-artefact">Storyboard</span>
+          <p>A storyboard shows each screen and how the user moves between them. Jordan drew four and took them to Sandra on Thursday 16 July. Designing for ease of operation meant asking of every screen: could Sandra use this on a busy Friday, with one hand and no manual?</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Storyboard</span></p>
+              <h4 class="figure-title">Storyboard: the Canteen Insights dashboard</h4>
+              <p class="figure-lead">Four screens with a Help button, navigation buttons and a content panel on each.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="ex-storyboard"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>The highlighted button shows the current screen. A dot and arrow show that a button opens another screen.</li><li>Every screen has the same layout and the same button positions, so Sandra learns the pattern once.</li><li>Exit is always at the bottom and looks different from the navigation buttons.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Which screen would you add for entering corrections? Sketch it and say which buttons must link to it.</p>
+            </div>
+          </figure>
+
+          <h3>Design decisions</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Decision</th><th>Reason</th><th>What changed after testing</th></tr></thead>
+              <tbody>
+                <tr><td>Four numbers first (revenue, items sold, top seller, waste)</td><td>Sandra circled these when shown the paper storyboard</td><td>Made larger after the laptop trial</td></tr>
+                <tr><td>Plain words on every label</td><td>Volunteers should not need to learn terms such as &ldquo;pivot&rdquo;</td><td>The pivot table is captioned &ldquo;items by weekday&rdquo;</td></tr>
+                <tr><td>Filters above the figures they change</td><td>What she selects should be next to what it affects</td><td>Kept</td></tr>
+                <tr><td>Colour is never the only signal</td><td>Some people have colour-vision differences, and phones are used in bright sunlight</td><td>Reorder actions use words and symbols as well as colour</td></tr>
+                <tr><td>Four screens</td><td>Simple to draw and to explain</td><td>Screens 2 to 4 became panels on one page after Sandra said &ldquo;I don&rsquo;t want to click&rdquo;</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p>The last row shows why a design is not finished when it is approved. Prototype P3 showed a better layout than the storyboard. Jordan updated the design and recorded the change, rather than building something that no longer matched the plan.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="thinking">
+          <h2 class="syllabus-phase">Computational, Design and Systems Thinking</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Three ways of thinking, applied to the project</em></p>
+          <span class="ex-artefact">Thinking skills</span>
+          <p>The syllabus asks how three kinds of thinking help in designing and developing a system. Jordan used all three, at different moments, on the same problem.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Thinking</th><th>What it means</th><th>Where it appears in Canteen Insights</th></tr></thead>
+              <tbody>
+                <tr><td>Computational thinking</td><td>Analysing a problem so that a person or a computer can solve it: organising data logically, breaking a problem into parts, interpreting patterns and designing algorithms.</td><td><strong>Decomposition:</strong> the dashboard is filters, KPIs, charts, pivot, what-if, reorder and data entry, each built and tested alone. <strong>Pattern recognition:</strong> Fridays are busiest and pies always sell out. <strong>Abstraction:</strong> a sale is just item, day and quantity; who bought it is deliberately ignored. <strong>Algorithm:</strong> the <a href="#logic">reorder rules</a>.</td></tr>
+                <tr><td>Design thinking</td><td>Understanding a need, generating ideas and refining a design by testing, with economic, environmental and social impacts considered throughout.</td><td><strong>Empathise:</strong> the interview and the survey. <strong>Define:</strong> the problem statement. <strong>Ideate:</strong> the spreadsheet, the printed report and the dashboard were all considered. <strong>Prototype and test:</strong> P1 to P4. Waste reduction is an environmental and economic benefit.</td></tr>
+                <tr><td>Systems thinking</td><td>Understanding how connected parts interact and how a change in one affects the others.</td><td>The canteen is a loop: orders lead to stock, stock to sales, sales to waste, and waste feeds back into orders. The dashboard adds a feedback link. Changing a price changes demand, which changes preparation and waste, and the what-if panel makes that chain visible.</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p>Notice that the three are not competing methods. Systems thinking shows <em>where</em> the problem sits, design thinking keeps the project close to the people it serves, and computational thinking gets the solution into a form a computer can run.</p>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="collaboration">
+          <h2 class="syllabus-phase">Working with the Client: Collaboration and Negotiation</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Collaboration set-up, needs versus wants, and the way of working</em></p>
+          <span class="ex-artefact">Collaboration</span>
+          <h3 id="online-collaboration">Online collaboration</h3>
+          <p>Jordan, Sandra and Priya used ordinary tools rather than a purpose-built project system. Files lived in a shared school folder with version history, so any earlier copy could be recovered. Sandra sent each week&rsquo;s till export to Jordan through the school email system. A single feedback log, a shared document with the date, who said it, what changed and its status, meant nothing said in a hallway was lost.</p>
+          <h3 id="needs-wants">Negotiating needs and wants</h3>
+          <p>Clients often ask for more than the time allows. Jordan sorted Sandra&rsquo;s requests into needs and wants and negotiated the boundary using the priorities from the <a href="#requirements">requirements</a>.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Request</th><th>Need or want?</th><th>Outcome</th></tr></thead>
+              <tbody>
+                <tr><td>See waste percentage and top seller</td><td>Need</td><td>Must (FR1)</td></tr>
+                <tr><td>Suggest what to order</td><td>Need</td><td>Must (FR4); rules approved by Sandra</td></tr>
+                <tr><td>Test a price change</td><td>Want, but cheap to build</td><td>Should (FR5)</td></tr>
+                <tr><td>Live link to the till</td><td>Want</td><td>Out of scope: the till has no live feed. Weekly import instead.</td></tr>
+                <tr><td>Email alerts when stock is low</td><td>Want</td><td>Could; recorded for a later version</td></tr>
+                <tr><td>Online pre-ordering by students</td><td>Want</td><td>A different project; recorded as out of scope</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <h3 id="collaborating-criteria">Criteria for working collaboratively</h3>
+          <p>Jordan chose collaborating and managing criteria at the start, so behaviour could be judged against something later.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Criterion</th><th>What it looked like in this project</th></tr></thead>
+              <tbody>
+                <tr><td>Designing for ease of operation and maintenance</td><td>Plain-language labels, one page, a written maintenance guide (see <a href="#maintenance">maintenance</a>)</td></tr>
+                <tr><td>Clarifying the informatics</td><td>The <a href="#informatics">informatics table</a> agreed with Sandra before the build</td></tr>
+                <tr><td>Outlining the role of participants, data and components</td><td>The same table, plus the Level 1 diagram</td></tr>
+                <tr><td>Negotiating user and client needs and wants</td><td>The table above, signed off at the requirements milestone</td></tr>
+                <tr><td>Working collaboratively</td><td>Fixed twice-weekly check-ins, a shared feedback log, Priya as a beta tester who reported problems on the log</td></tr>
+                </tbody>
+            </table>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="approach">
+          <h2 class="syllabus-phase">Choosing a Development Approach</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Approach comparison and justification</em></p>
+          <span class="ex-artefact">Development approach</span>
+          <p>Jordan compared NESA&rsquo;s five approaches against the project&rsquo;s facts: unclear requirements at the start, one developer, a client who is available in short bursts, no money and a fixed end date.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Approach</th><th>How it works</th><th>Fit for Canteen Insights</th><th>Verdict</th></tr></thead>
+              <tbody>
+                <tr><td>Waterfall (structured)</td><td>Finish each stage completely before starting the next</td><td>Needs the requirements to be right first. Sandra could not say what she wanted until she saw numbers.</td><td>Rejected</td></tr>
+                <tr><td>Agile</td><td>Short cycles of build, review and adjust</td><td>Weekly review with the client suits Sandra&rsquo;s availability. Full agile roles suit teams, not one student.</td><td>Borrowed the short cycles</td></tr>
+                <tr><td>Prototyping</td><td>Build a rough version, get feedback, improve it</td><td>Sandra reacts far better to something on screen. Four prototypes answered the main questions cheaply.</td><td><strong>Chosen</strong></td></tr>
+                <tr><td>End-user development</td><td>The user builds the system, often with a spreadsheet</td><td>Sandra has neither time nor the confidence, and a spreadsheet alone cannot check entries.</td><td>Rejected</td></tr>
+                <tr><td>Outsourcing</td><td>Another organisation builds it</td><td>No money, and the sales data and settings need to stay under the school&rsquo;s control.</td><td>Rejected</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p><strong>Decision:</strong> prototyping, run as an iterative approach with a short cycle each week: build, show Sandra, record feedback, adjust. Two features of the project made the choice: the requirements were uncertain, and changing a prototype was far cheaper than changing a finished system. The risk of prototyping is that it never ends. Jordan controlled it with the Gantt chart and by fixing the Must items first.</p>
+
+          <h3 id="changing">The changing nature of enterprise</h3>
+          <p>Some features of this project reflect how enterprise projects are now run, and some show what it would look like if they were run another way.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Trend</th><th>In this project</th><th>If the project were larger</th></tr></thead>
+              <tbody>
+                <tr><td>Working remotely</td><td>Much of the build happened at home. Files, feedback and till exports moved through shared folders and school email.</td><td>Time-zone gaps and slower answers; clear written communication matters more.</td></tr>
+                <tr><td>Freelance work</td><td>Jordan behaves like a freelancer: one client, a defined brief, a fixed end date and no employer to fall back on.</td><td>The brief and the approval milestones protect both sides.</td></tr>
+                <tr><td>Offshore development</td><td>Not used. The client is a single local canteen.</td><td>Could cut costs but adds time-zone, language and data-location questions.</td></tr>
+                <tr><td>Growth of start-ups</td><td>The same dashboard could suit other canteens if the import step were generalised.</td><td>Digital tools and cloud services let a very small team start and grow a product with little capital.</td></tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="callout assessor">
+            <strong>Exam guidance</strong>
+            <p>Choosing an approach is a <strong>justify</strong> task: name the approach, then link it to a fact in the scenario. &ldquo;Agile is flexible&rdquo; is a definition; &ldquo;agile suits this project because the client can review something every week and requirements will change&rdquo; is a justification. Show that you considered a different approach and why it fits less well.</p>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="budget">
+          <h2 class="syllabus-phase">Budget</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Project budget with spreadsheet formulas</em></p>
+          <span class="ex-artefact">Budget</span>
+          <p>A budget lists what a project will cost and where the money comes from. Canteen Insights needs almost no cash, but Jordan still built one, because a project that has not counted its costs cannot say whether it was worth doing. Time is shown separately, as a notional cost, because Jordan is not being paid.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Item</th><th>Type</th><th>Quantity</th><th>Unit cost</th><th>Cost</th><th>Formula in the Cost column</th></tr></thead>
+              <tbody>
+                <tr><td>Development tools (browser, text editor, free spreadsheet)</td><td>Cash</td><td>1</td><td>$0.00</td><td>$0.00</td><td>=C2*D2</td></tr>
+                <tr><td>Printing the quick-reference guide</td><td>Cash</td><td>10</td><td>$0.60</td><td>$6.00</td><td>=C3*D3</td></tr>
+                <tr><td>Laminating the guide</td><td>Cash</td><td>10</td><td>$1.20</td><td>$12.00</td><td>=C4*D4</td></tr>
+                <tr><td>Contingency (10% of cash costs above)</td><td>Cash</td><td></td><td></td><td>$1.80</td><td>=0.1*SUM(E2:E4)</td></tr>
+                <tr><td><strong>Cash total</strong></td><td></td><td></td><td></td><td><strong>$19.80</strong></td><td>=SUM(E2:E5)</td></tr>
+                <tr><td>Jordan&rsquo;s time (notional, 45 hours at $20 an hour)</td><td>Notional</td><td>45</td><td>$20.00</td><td>$900.00</td><td>=C7*D7</td></tr>
+                <tr><td>Sandra&rsquo;s time (5 sessions of half an hour)</td><td>Client time</td><td>2.5</td><td></td><td>not costed</td><td></td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <h3>Comparing cost and benefit</h3>
+          <p>In the eight sample weeks, the waste cost <span data-ex-fact="wasteCost">$2,151.60</span> at cost price. If the reorder list helped the canteen cut that by a quarter, the saving would be about <span data-ex-fact="saving">$537.90</span> every eight weeks (<code>=0.25*2151.60</code>), which is more than the whole cash budget. That is an <em>estimate</em>, not a promise: it assumes the waste can be reduced without causing more sell-outs. It is one measure that the <a href="#feedback">evaluation</a> checks.</p>
+          <div class="callout assessor">
+            <strong>Exam guidance</strong>
+            <p>NESA lists budget among the tools that support design and development. Show the working: columns for quantity and unit cost, a formula for each line and a total. In an exam, write formulas using NESA&rsquo;s functions (such as SUM) and cell references, and state any assumption in words.</p>
+          </div>
+        </section>
+
+        <div class="quiz" data-quiz="ex-2"></div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  PART 3: PRODUCING AND IMPLEMENTING  -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Part 3</span>
+          <span class="part-name">Producing and implementing</span>
+        </div>
+
+        <aside class="topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <p>This is where the plan becomes a working system. The live dashboard below is the finished product: use it, break it, and trace every figure back to a query and a formula. Then Jordan plans how to switch it on in the real canteen.</p>
+          <p class="breakout-question"><span class="bq-lead">Ask yourself</span> When a number on a dashboard surprises you, what is the first thing you would check, and how could the system help you check it?</p>
+        </aside>
+
+        <section id="dashboard">
+          <h2 class="syllabus-phase">The Live Dashboard</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> A working solution you can use in the browser</em></p>
+          <span class="ex-artefact">The product</span>
+          <p>This is Canteen Insights. It runs entirely in your browser, on <span data-ex-fact="rows">480</span> generated sales records: eight weeks (Monday 4 May to Friday 26 June 2026) of twelve items in five categories. Nothing you do is sent anywhere or stored. The data were made by a seeded random-number program with built-in patterns, such as busy Fridays, a sports carnival on Wednesday of week 5 and some wet days, so they are the same every time you load the page.</p>
+          <div class="callout tip">
+            <strong>Things to try</strong>
+            <ol>
+              <li>Set the measure to <em>Items sold</em>, choose <em>Hot food</em> and read the Fri column of the pivot table. Which item has the biggest Friday total? Open the data table and check whether it sold everything that was put out on those days.</li>
+              <li>Click the <em>Drinks</em> bar in the category chart, then look at week 5 in the line chart. What happened on the Wednesday?</li>
+              <li>In the what-if panel choose <em>Ham salad roll</em> and lower the items put out each day. What happens to waste, and at what point does it start to sell out?</li>
+              <li>Read the reorder list, then find the same rules in the <a href="#logic">decision tree</a>.</li>
+              <li>Try to break the <em>Correct a record</em> form with the example buttons, then with your own bad input.</li>
+            </ol>
+          </div>
+
+          <div class="ex-app" id="ex-app" role="region" aria-label="Canteen Insights dashboard">
+            <noscript><p class="ex-flag"><strong>This dashboard needs JavaScript.</strong> Every figure in it is also shown in the tables in these notes. The fictional data cover eight weeks of sales for twelve items.</p></noscript>
+          </div>
+
+          <h3>How the dashboard meets the requirements</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Panel</th><th>Requirement</th><th>How it works</th></tr></thead>
+              <tbody>
+                <tr><td>Filters</td><td>FR2</td><td>Week range, category and item. The item list follows the category; if the two contradict each other, the item is cleared and a notice says why. A reversed week range is swapped and a notice appears.</td></tr>
+                <tr><td>Key figures</td><td>FR1</td><td>Revenue = the sum of Sold &times; UnitPrice. Items sold = the sum of Sold. Top seller = the item with the most units. Waste = Wasted &divide; Prepared. Each compares with the same number of earlier weeks when there are enough.</td></tr>
+                <tr><td>Line and bar charts, pivot table</td><td>FR3</td><td>Drawn as inline SVG from the filtered records. The bar chart is also a set of buttons: choosing a bar sets the category filter. The pivot shades the busiest cells.</td></tr>
+                <tr><td>What-if</td><td>FR5</td><td>Demand at a new price = current demand &times; (old price &divide; new price) to the power of an assumed elasticity; units sold is the smaller of demand and items put out. Fresh food not sold is thrown out.</td></tr>
+                <tr><td>Reorder list</td><td>FR4</td><td>One function, <code>decide()</code>, is the decision tree. Each suggestion shows the rule it used.</td></tr>
+                <tr><td>Data table</td><td>NFR4</td><td>Shows the records behind every figure, and can be downloaded as a CSV file.</td></tr>
+                <tr><td>Correct a record</td><td>FR6</td><td>Checks presence, type, range, date format and cross-field rules before saving anything. Every accepted change recalculates every panel.</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <h3>Built to be used by everyone</h3>
+          <ul>
+            <li><strong>Keyboard:</strong> every control can be reached with Tab. The bars are buttons, and in the line chart the left and right arrow keys, Home and End read each day.</li>
+            <li><strong>Text alternatives:</strong> each chart has a text summary, and both charts have a table view (the daily figures table and the data table).</li>
+            <li><strong>Colour is never alone:</strong> the reorder actions are words, and selected bars are labelled as well as coloured.</li>
+            <li><strong>Themes and motion:</strong> it follows the light and dark themes of these notes, and any movement is switched off when your device asks for reduced motion.</li>
+            <li><strong>Phones:</strong> the layout is single-column at phone width, and tables scroll inside their own frame.</li>
+          </ul>
+          <p>The dashboard&rsquo;s code is one file, <code>js/pages/example-project.js</code>, in two halves: an engine of plain functions (the data, the calculations, the reorder rules and the checks on typed data) and the code that draws it. Keeping calculation and drawing apart is what let Jordan test the numbers without looking at a screen. The <a href="#testing">test table</a> runs those same functions.</p>
+          <div class="key-terms">
+            <div class="key-term-item"><strong>KPI</strong><span>A key performance indicator: a single figure that shows how well something is going, such as waste percentage.</span></div>
+            <div class="key-term-item"><strong>Pivot table</strong><span>A summary that groups records by two fields, such as item and weekday, and adds up a value in each cell.</span></div>
+            <div class="key-term-item"><strong>Slicer</strong><span>A control that filters the data shown in a report, such as the category buttons.</span></div>
+            <div class="key-term-item"><strong>What-if analysis</strong><span>Changing an input to a model, such as a price, to see how the results would change.</span></div>
+            </div>
+          <div class="callout assessor">
+            <strong>Exam guidance</strong>
+            <p>Questions on dashboards ask you to <strong>select</strong> or justify a visualisation. Match the chart to the question: a line for change over time, bars for comparing categories, a table when exact values matter. Say what decision it supports (&ldquo;which day should more pies be made?&rdquo;), and mention that a chart needs a text or table alternative for users who cannot see it.</p>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="queries">
+          <h2 class="syllabus-phase">SQL and Spreadsheet Formulas Behind the Numbers</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Queries and formulas that produce the dashboard&rsquo;s figures, checked live</em></p>
+          <span class="ex-artefact">Queries and formulas</span>
+          <p>Jordan&rsquo;s test for &ldquo;are the totals right?&rdquo; was to get the same numbers by two other routes: a SQL query, and spreadsheet formulas. The queries use only the four keywords in NESA&rsquo;s Course Specifications, SELECT, FROM, WHERE and ORDER BY, and tables are joined by matching key fields in the WHERE clause. Because those keywords select and sort rows but do not add them up, the totals come from adding a column of the result, exactly as you would in a spreadsheet.</p>
+
+          <h3>Query A: one item, one week</h3>
+          <p>&ldquo;Show every sales row for meat pies in week 5, with the price.&rdquo; The result has five rows (Monday to Friday). Adding <code>Sold</code> gives 215 pies, and <code>Sold &times; UnitPrice</code> gives $967.50.</p>
+          <div class="code-block"><pre><code class="language-sql" data-ex-sql="Meat pie, week 5">SELECT DailySales.SaleDate, Items.ItemName, DailySales.Prepared, DailySales.Sold, DailySales.Wasted, Items.UnitPrice
+FROM DailySales, Items
+WHERE Items.ItemID = DailySales.ItemID
+AND DailySales.SaleDate &gt;= '01/06/2026'
+AND DailySales.SaleDate &lt;= '05/06/2026'
+AND Items.ItemName = 'Meat pie'
+ORDER BY DailySales.SaleDate ASC, Items.ItemName ASC</code></pre></div>
+          <p class="ex-sql-check">Checking in your browser&hellip;</p>
+
+          <h3>Query B: a category over several weeks</h3>
+          <p>&ldquo;Show every drinks sale from week 3 to week 5.&rdquo; This one joins <em>three</em> tables. Each extra table needs its own line of key equality in WHERE.</p>
+          <div class="code-block"><pre><code class="language-sql" data-ex-sql="Drinks, weeks 3 to 5">SELECT DailySales.SaleDate, Items.ItemName, DailySales.Prepared, DailySales.Sold, DailySales.Wasted, Items.UnitPrice
+FROM DailySales, Items, Categories
+WHERE Items.ItemID = DailySales.ItemID
+AND Categories.CategoryID = Items.CategoryID
+AND DailySales.SaleDate &gt;= '18/05/2026'
+AND DailySales.SaleDate &lt;= '05/06/2026'
+AND Categories.CategoryName = 'Drinks'
+ORDER BY DailySales.SaleDate ASC, Items.ItemName ASC</code></pre></div>
+          <p class="ex-sql-check">Checking in your browser&hellip;</p>
+
+          <h3>Query C: where is the waste?</h3>
+          <p>&ldquo;List the days on which ten or more units of a perishable item were thrown out, worst first.&rdquo; The comparison operators and the sorted output do the analysis. Press the button to run this exact text in the browser and compare the count with a plain JavaScript filter over the same records.</p>
+          <div class="code-block"><pre><code class="language-sql">SELECT DailySales.SaleDate, Items.ItemName, DailySales.Prepared, DailySales.Wasted
+FROM DailySales, Items
+WHERE Items.ItemID = DailySales.ItemID
+AND Items.Perishable = 'Y'
+AND DailySales.Wasted &gt;= 10
+ORDER BY DailySales.Wasted DESC, DailySales.SaleDate ASC</code></pre></div>
+          <div id="ex-query-c" class="ex-qc">
+            <button type="button" class="ex-btn">Run query C</button>
+            <div class="ex-qc-out" aria-live="polite"></div>
+          </div>
+
+          <h3>The same numbers in a spreadsheet</h3>
+          <p>In a spreadsheet the sales rows go on a Sales sheet and the item list on an Items sheet. The formulas use only functions from NESA&rsquo;s list: SUM, MAXIMUM, IF and LOOKUP. LOOKUP needs the ItemID column to be sorted ascending, which it is (I01 to I12). References to the Items sheet are absolute (<code>$A$2:$A$13</code>) so they stay fixed when the formula is filled down; references to the current row are relative.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Cell</th><th>Formula</th><th>What it does</th></tr></thead>
+              <tbody>
+                <tr><td>Sales!F2 (Revenue)</td><td><code>=D2*LOOKUP(B2,Items!$A$2:$A$13,Items!$D$2:$D$13)</code></td><td>Sold times the price found by looking up the ItemID</td></tr>
+                <tr><td>Sales!G2 (In range?)</td><td><code>=IF(A2&gt;=Summary!$B$1,IF(A2&lt;=Summary!$B$2,1,0),0)</code></td><td>1 if the date is inside the chosen range, otherwise 0</td></tr>
+                <tr><td>Sales!H2 (Revenue counted)</td><td><code>=F2*G2</code></td><td>Revenue for rows in range only</td></tr>
+                <tr><td>Summary!B4 (Revenue)</td><td><code>=SUM(Sales!H2:H481)</code></td><td>The revenue tile</td></tr>
+                <tr><td>Summary!B5 (Items sold)</td><td><code>=SUM(Sales!I2:I481)</code></td><td>The items-sold tile (column I is <code>=D2*G2</code>)</td></tr>
+                <tr><td>Summary!B6 (Waste %)</td><td><code>=SUM(Sales!J2:J481)/SUM(Sales!K2:K481)</code></td><td>Wasted divided by prepared (J is <code>=E2*G2</code>, K is <code>=C2*G2</code>)</td></tr>
+                <tr><td>Summary!B7 (Top seller units)</td><td><code>=MAXIMUM(Summary!E2:E13)</code></td><td>Highest of the twelve item totals, found with a pivot table or a sorted list</td></tr>
+                <tr><td>Items!J2 (Action, non-perishable)</td><td><code>=IF(I2&lt;3,"Reorder now",IF(I2&lt;5,"Reorder soon","Hold"))</code></td><td>The bottom half of the decision tree, as nested IFs (I is days of stock)</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p>Spreadsheet software names these functions differently (MAXIMUM is written MAX in most packages), so in the exam use NESA&rsquo;s wording.</p>
+
+          <h3>Live check: dashboard, SQL and spreadsheet</h3>
+          <p>The panel below follows the dashboard&rsquo;s filters. It rewrites the query for whatever you have selected, runs it with a small interpreter for NESA&rsquo;s SQL, applies the spreadsheet formulas row by row, and compares all three. Because it reads the same data as the dashboard, it still agrees after you save a correction in the form above.</p>
+          <div class="ex-verify" id="ex-verify" aria-label="Live query check"></div>
+          <div class="callout info">
+            <strong>Going beyond the syllabus</strong>
+            <p>Real SQL can add up values for you with SUM and GROUP BY, which would return the totals directly. Those are not in NESA&rsquo;s list of keywords, so an HSC answer should not depend on them. They are worth knowing about, and a database used in the real world would use them.</p>
+          </div>
+          <div class="callout assessor">
+            <strong>Exam guidance</strong>
+            <p>2025 HSC candidates were asked to write a query using four SQL keywords and a join. Full marks need SELECT with the right fields, FROM with every table, WHERE with <em>both</em> the search condition and the key equality that joins the tables, and ORDER BY with ASC or DESC. Missing the join condition is the most common lost mark: without it every row of one table is paired with every row of the other.</p>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="implementation">
+          <h2 class="syllabus-phase">Implementation Plan</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Implementation plan: method, integration, training, risks and testing</em></p>
+          <span class="ex-artefact">Implementation plan</span>
+          <p>A system that works on the developer&rsquo;s laptop is not yet a solution. An implementation plan says how it will move into the real setting and how Jordan will know it is feasible, meaning that it can actually be done with the time, skills and equipment available.</p>
+
+          <h3>Design thinking and the tools used</h3>
+          <p>Jordan followed a design-thinking cycle and used a tool at each step. Each is a section of this page.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Step</th><th>What happened</th><th>Tool used</th></tr></thead>
+              <tbody>
+                <tr><td>Empathise</td><td>Interviewed Sandra; surveyed students and staff</td><td><a href="#research">Interview and survey</a></td></tr>
+                <tr><td>Define</td><td>Wrote the problem and requirements</td><td><a href="#problem">Problem statement</a></td></tr>
+                <tr><td>Ideate</td><td>Compared a spreadsheet, a report and a dashboard</td><td><a href="#approach">Approach comparison</a></td></tr>
+                <tr><td>Prototype</td><td>Built P1 to P4</td><td><a href="#screens">Storyboard</a>, <a href="#logic">decision tree</a>, <a href="#schedule">Gantt chart</a></td></tr>
+                <tr><td>Test</td><td>Ran the tests and the client trial</td><td><a href="#testing">Test table</a></td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <h3 id="risk">Risk analysis</h3>
+          <p>A risk is something that might go wrong. For each one Jordan estimated how likely it is and how much damage it would do (Low, Medium, High) and planned what to do about it.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Response</th></tr></thead>
+              <tbody>
+                <tr><td>The till export format changes</td><td>Medium</td><td>High</td><td>The import refuses a file with unexpected headings and says why; the old file is kept</td></tr>
+                <tr><td>The reorder list causes a shortage</td><td>Medium</td><td>Medium</td><td>The list is a suggestion, and the first two weeks are a pilot with a limited range</td></tr>
+                <tr><td>Data are lost or overwritten</td><td>Medium</td><td>High</td><td>A weekly copy goes to the cloud backup; every correction is logged</td></tr>
+                <tr><td>A personal detail slips into an export</td><td>Low</td><td>High</td><td>The import keeps only item, quantity and date; other columns are dropped</td></tr>
+                <tr><td>The canteen browser is out of date</td><td>Low</td><td>Medium</td><td>Tested in two browsers; no features that need a recent one</td></tr>
+                <tr><td>Jordan is away for a week</td><td>Medium</td><td>Medium</td><td>A buffer day in the plan; documentation lets a teacher help</td></tr>
+                <tr><td>Sandra loses confidence after one wrong suggestion</td><td>Medium</td><td>High</td><td>Each suggestion shows its rule, so she can see why it was made</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <h3>Hardware and software integration</h3>
+          <p>Canteen Insights uses equipment that already exists, so integration is mostly a weekly routine. On Friday the till exports the week&rsquo;s file to the shared folder. On Monday morning Sandra (or a volunteer) opens the dashboard, imports the file and checks the message it shows. The laptop&rsquo;s browser runs the dashboard, the printer produces the reorder list and the database is copied to the cloud backup. The <a href="#modelling">system flowchart</a> shows these links. The one integration risk, the export format, is covered in the table above.</p>
+
+          <h3>Training and documentation</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>What</th><th>Who</th><th>When</th><th>How Jordan knows it worked</th></tr></thead>
+              <tbody>
+                <tr><td>30-minute walk-through with the live dashboard</td><td>Sandra and two volunteers</td><td>Week 1 of the pilot</td><td>Each completes the same three tasks without help</td></tr>
+                <tr><td>Laminated one-page quick guide</td><td>Everyone who uses the canteen laptop</td><td>Given out at the walk-through</td><td>A volunteer uses it to enter a correction</td></tr>
+                <tr><td>Maintenance guide</td><td>Sandra, the school&rsquo;s teacher-librarian or a later student</td><td>Handover</td><td>Priya follows it cold (see <a href="#maintenance">maintenance</a>)</td></tr>
+                <tr><td>Check-in after two weeks</td><td>Sandra</td><td>End of the pilot</td><td>Questions and problems go into the feedback log</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <h3>Preferred implementation method: pilot</h3>
+          <p>NESA names four methods of implementation: direct, parallel, pilot and phased. Jordan chose a <strong>pilot</strong>. For two weeks only Sandra uses Canteen Insights, and only for hot food, sandwiches and fresh food, the three categories where the data show waste. Drinks and snacks stay on the paper stock sheet. Then the dashboard is extended to everything, and the volunteers start entering corrections.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Animated diagram</span></p>
+              <h4 class="figure-title">Implementation methods: switching from the old system to the new</h4>
+              <p class="figure-lead">Watch the steps, or step through with the arrow keys.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--anim">
+              <div class="anim" data-anim="implementation-methods"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Direct switches every office at once, so a fault hits everyone. Parallel keeps the old system running as a fallback.</li><li>Pilot moves one office first. Phased moves one module at a time across all offices.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Use the tabs to compare how each method behaves when the new system has a fault. Which would suit a canteen with one till and one manager?</p>
+            </div>
+          </figure>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Method</th><th>Why it was not, or was, chosen</th></tr></thead>
+              <tbody>
+                <tr><td>Direct</td><td>Too risky. A wrong suggestion in week one would affect the whole canteen with no fallback.</td></tr>
+                <tr><td>Parallel</td><td>Possible, but Sandra would do all the work twice for every item, and she has little time.</td></tr>
+                <tr><td>Pilot</td><td><strong>Chosen.</strong> One user and two categories limit the damage of a fault. The categories not in the pilot act as a comparison, showing whether the dashboard&rsquo;s advice reduces waste.</td></tr>
+                <tr><td>Phased</td><td>A close second. The pilot is already phased by category, but it also limits who uses it.</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <h3>Testing methodology</h3>
+          <p>Jordan planned testing before the build ended. The <a href="#testing">next part</a> covers it in detail, and the plan draws on the methods in the Course Specifications: functional testing against the requirements, live and simulated data (the sample data are simulated; the pilot uses live data), beta testing by Priya, and acceptance testing by Sandra.</p>
+          <div class="callout assessor">
+            <strong>Exam guidance</strong>
+            <p>A question on implementation asks you to <strong>recommend</strong> or justify a method for a scenario. Name one of the four methods, describe how it would run here, and give a reason that comes from the scenario (a single-site canteen, a manager with little time, a real cost if the system is wrong). Comparing one other method earns the higher marks.</p>
+          </div>
+        </section>
+
+        <div class="quiz" data-quiz="ex-3"></div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  PART 4: TESTING AND EVALUATING  -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Part 4</span>
+          <span class="part-name">Testing and evaluating</span>
+        </div>
+
+        <aside class="topic-breakout subtopic-breakout" aria-label="Part introduction">
+          <p>Building something is not the same as knowing it works. Jordan tests the dashboard with three kinds of data, checks it against the requirements, asks the client what she thinks, judges the result against the success criteria and plans how it will be looked after.</p>
+          <p class="breakout-question"><span class="bq-lead">Ask yourself</span> If every test passes, does that prove the project succeeded? What else would you need to know?</p>
+        </aside>
+
+        <section id="testing">
+          <h2 class="syllabus-phase">Testing with Normal, Boundary and Erroneous Data</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Test table that runs live in your browser</em></p>
+          <span class="ex-artefact">Test plan and results</span>
+          <p>Testing checks whether a system does what it should, and a good test set does not just try things that work. Jordan chose data of three kinds for every input, because different faults hide in different places.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Kind of data</th><th>What it is</th><th>Fault it finds</th><th>Example here</th></tr></thead>
+              <tbody>
+                <tr><td>Normal</td><td>Typical valid input</td><td>A calculation that is simply wrong</td><td>All data: $41,299.40</td></tr>
+                <tr><td>Boundary</td><td>Values at and either side of a limit</td><td>A limit that is off by one (the classic &ldquo;&lt; or &lt;=&rdquo; slip)</td><td>Sold = prepared is accepted; sold = prepared + 1 is refused</td></tr>
+                <tr><td>Erroneous</td><td>Invalid or impossible input</td><td>A system that crashes or accepts nonsense</td><td>Sold = abc; 31/02/2026</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <h3>The test table</h3>
+          <p>Each row gives the input, the <strong>expected</strong> result worked out <em>before</em> testing, and the <strong>actual</strong> result. Jordan worked the expected totals out in a spreadsheet, and wrote the expected messages from the rules in the requirements. In this table the Actual column is filled in by your browser, just now, by running the dashboard&rsquo;s own functions on a fresh copy of the sample data; the Result column compares the two.</p>
+          <p class="ex-status is-pass" id="ex-test-summary" role="status">Running the tests&hellip;</p>
+          <div class="ex-tests-wrap">
+            <div class="table-wrap">
+              <table class="ex-tests">
+                <caption class="ex-cap">Test table for Canteen Insights (fictional project, live results)</caption>
+                <thead><tr><th scope="col">ID</th><th scope="col">Test and input</th><th scope="col">Expected</th><th scope="col">Actual</th><th scope="col">Result</th></tr></thead>
+                <tbody>
+<tr class="ex-group"><th scope="rowgroup" colspan="5">Normal data: typical inputs that the system must handle</th></tr>
+<tr data-test="N1"><td>N1</td><td>Totals for all data<span class="ex-why ex-input">All weeks, all categories, all items</span></td><td class="ex-exp">$41,299.40 and 10,953 items</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="N2"><td>N2</td><td>A filtered total<span class="ex-why ex-input">Category Drinks, weeks 3 to 5</span></td><td class="ex-exp">$3,536.50 and 1,129 items</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="N3"><td>N3</td><td>Reorder rule, low stock<span class="ex-why ex-input">Bottled water, 58 on hand, latest ten days of sales</span></td><td class="ex-exp">Reorder now, order 160</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="N4"><td>N4</td><td>What-if with nothing changed<span class="ex-why ex-input">Meat pie at $4.50, current quantity</span></td><td class="ex-exp">Revenue change $0.00</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="N5"><td>N5</td><td>A valid correction<span class="ex-why ex-input">10/06/2026, Meat pie, prepared 46, sold 44, wasted 2</span></td><td class="ex-exp">Accepted</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="N6"><td>N6</td><td>Three-way agreement<span class="ex-why ex-input">Dashboard, SQL and spreadsheet, all data and Meat pie in week 5</span></td><td class="ex-exp">All three methods agree</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr class="ex-group"><th scope="rowgroup" colspan="5">Boundary data: values at the edge of what is allowed</th></tr>
+<tr data-test="B1"><td>B1</td><td>Smallest week range<span class="ex-why ex-input">Week 5 to week 5</span></td><td class="ex-exp">60 records</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="B2"><td>B2</td><td>Exactly enough earlier weeks to compare<span class="ex-why ex-input">Weeks 5 to 8</span></td><td class="ex-exp">Compared with weeks 1 to 4</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="B3"><td>B3</td><td>One week short of enough<span class="ex-why ex-input">Weeks 4 to 8</span></td><td class="ex-exp">No comparison</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="B4"><td>B4</td><td>Sold equals prepared<span class="ex-why ex-input">Prepared 46, sold 46, wasted 0</span></td><td class="ex-exp">Accepted</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="B5"><td>B5</td><td>Sold one more than prepared<span class="ex-why ex-input">Prepared 46, sold 47, wasted 0</span></td><td class="ex-exp">Rejected: Sold (47) plus wasted (0) is more than prepared (46).</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="B6"><td>B6</td><td>Largest allowed quantity<span class="ex-why ex-input">Prepared 500, sold 500, wasted 0</span></td><td class="ex-exp">Accepted</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="B7"><td>B7</td><td>One over the largest quantity<span class="ex-why ex-input">Prepared 501, sold 44, wasted 2</span></td><td class="ex-exp">Rejected: Prepared must be between 0 and 500 (you entered 501).</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="B8"><td>B8</td><td>Reorder threshold: days of stock<span class="ex-why ex-input">Exactly 3.0 days, then 2.9 days</span></td><td class="ex-exp">Reorder soon at 3.0 days; Reorder now at 2.9 days</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="B9"><td>B9</td><td>Reorder threshold: waste<span class="ex-why ex-input">Exactly 10%, then 10.1%</span></td><td class="ex-exp">Order forecast + 10% at 10%; Order to forecast at 10.1%</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr class="ex-group"><th scope="rowgroup" colspan="5">Erroneous data: input that is wrong and must be refused or handled</th></tr>
+<tr data-test="E1"><td>E1</td><td>Letters in a number field<span class="ex-why ex-input">Sold = abc</span></td><td class="ex-exp">Rejected: Sold must be a whole number, digits only (you entered "abc").</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="E2"><td>E2</td><td>A negative quantity<span class="ex-why ex-input">Sold = -5</span></td><td class="ex-exp">Rejected: Sold cannot be negative (you entered -5).</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="E3"><td>E3</td><td>A required field left empty<span class="ex-why ex-input">Prepared left blank</span></td><td class="ex-exp">Rejected: Prepared is required.</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="E4"><td>E4</td><td>A date that does not exist<span class="ex-why ex-input">Date = 31/02/2026</span></td><td class="ex-exp">Rejected: 31/02/2026 is not a real date.</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="E5"><td>E5</td><td>A day the canteen is closed<span class="ex-why ex-input">Date = 13/06/2026 (a Saturday)</span></td><td class="ex-exp">Rejected: 13/06/2026 is a Saturday; the canteen trades Monday to Friday.</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="E6"><td>E6</td><td>A date in the wrong format<span class="ex-why ex-input">Date = 10 June 2026</span></td><td class="ex-exp">Rejected: Date must be written dd/mm/yyyy, for example 10/06/2026.</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="E7"><td>E7</td><td>A fraction of an item<span class="ex-why ex-input">Sold = 3.5</span></td><td class="ex-exp">Rejected: Sold must be a whole number of items (you entered 3.5).</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="E8"><td>E8</td><td>A rule between fields<span class="ex-why ex-input">Fruit cup: prepared 20, sold 15, wasted 2 (fresh food not sold must be thrown out)</span></td><td class="ex-exp">Rejected: Fruit cup is perishable, so everything not sold is thrown out: wasted should be 5.</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="E9"><td>E9</td><td>Filters that contradict each other<span class="ex-why ex-input">Item Meat pie is selected, then the category is changed to Drinks</span></td><td class="ex-exp">Item filter "All items"; The item filter was cleared because Meat pie is not in Drinks.</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="E10"><td>E10</td><td>Week range the wrong way round<span class="ex-why ex-input">From week 6, to week 3</span></td><td class="ex-exp">Weeks 3 to 6. The From week was after the To week, so the two were swapped.</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+<tr data-test="E11"><td>E11</td><td>A selection with no records at all<span class="ex-why ex-input">Category Drinks and item Meat pie, forced together</span></td><td class="ex-exp">0 records, waste n/a, top seller none</td><td class="ex-actual">Needs JavaScript</td><td class="ex-result">&ndash;</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p>The dashboard <em>handles</em> the erroneous cases, it does not just survive them. In the <em>Correct a record</em> form above, every rule in E1 to E8 produces a message that says what is wrong and how to fix it, marks the field, and saves nothing. Try the example buttons under the form. The filter cases (E9 to E11) never leave the dashboard in an impossible state: the item list follows the category, a reversed range is swapped with a notice, and an empty selection shows &ldquo;n/a&rdquo; and &ldquo;No sales match these filters&rdquo; instead of a blank or a divide-by-zero error.</p>
+
+          <h3>Methods of testing</h3>
+          <p>The Course Specifications name six methods of testing. Here is how Jordan used each one.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Method</th><th>Used how</th></tr></thead>
+              <tbody>
+                <tr><td>Functional testing</td><td>The table above: each row tests one function against its expected result.</td></tr>
+                <tr><td>Simulated data</td><td>The generated sample data. They let Jordan work out expected totals in advance and repeat every test identically.</td></tr>
+                <tr><td>Live data</td><td>From the pilot onward, real till exports. They will expose problems the sample data cannot, such as a new item.</td></tr>
+                <tr><td>Beta testing</td><td>Priya used the dashboard at home with no instructions and reported problems on the feedback log. She found the reversed week range (E10).</td></tr>
+                <tr><td>Acceptance testing</td><td>Sandra ran through the success criteria on the canteen laptop. See <a href="#feedback">feedback</a>.</td></tr>
+                <tr><td>Volume testing</td><td>Not yet done: the dashboard has only been tried on eight weeks. A year of data (about 3,000 rows) should be tried before it is used for a year, and this is on the maintenance plan.</td></tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="callout assessor">
+            <strong>Exam guidance</strong>
+            <p>When asked to <strong>develop test data</strong>, give values, not descriptions: &ldquo;sold = 47 when prepared = 46&rdquo; beats &ldquo;a number that is too big&rdquo;. Include at least one normal, one boundary and one erroneous value, say what result you expect from each, and note which requirement each one checks. A boundary test needs a value <em>on</em> the limit and one just past it.</p>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="verify">
+          <h2 class="syllabus-phase">Verification and Validation</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Requirements traceability: evidence of verification and validation</em></p>
+          <span class="ex-artefact">Verification and validation</span>
+          <p>The two words are easy to confuse. <strong>Verification</strong> asks &ldquo;did we build the system <em>right</em>?&rdquo;, meaning does it meet its specification, and is checked by testing, inspection and comparison. <strong>Validation</strong> asks &ldquo;did we build the <em>right</em> system?&rdquo;, meaning does it meet the client&rsquo;s real need, and is checked with the client and users. A system can pass every test and still be useless if the requirements were wrong.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Requirement</th><th>Verification (built right?)</th><th>Validation (right system?)</th></tr></thead>
+              <tbody>
+                <tr><td>FR1 Key figures</td><td>N1, N2: totals match the expected values. The query check agrees three ways.</td><td>Sandra read the top seller and waste percentage in 25 seconds during the trial.</td></tr>
+                <tr><td>FR2 Filters</td><td>B1 to B3, E9, E10: ranges and contradictions handled.</td><td>Sandra used the category bars without being told they were buttons.</td></tr>
+                <tr><td>FR3 Charts and pivot</td><td>The data table shows the records behind every chart.</td><td>Sandra found the Friday pie sell-outs from the pivot table herself.</td></tr>
+                <tr><td>FR4 Reorder list</td><td>N3, B8, B9: the decision tree and code agree on every boundary.</td><td>Sandra compared the pilot suggestions with her own instincts and agreed with most.</td></tr>
+                <tr><td>FR5 What-if</td><td>N4: no change gives $0.00 change.</td><td>Used to decide how many rolls to prepare; she asked for the waste figure to be shown as well as revenue.</td></tr>
+                <tr><td>FR6 Corrections</td><td>N5, B4 to B7, E1 to E8: valid entries saved, bad ones refused with a message.</td><td>A volunteer entered a correction using only the quick guide.</td></tr>
+                <tr><td>NFR2 Accessibility</td><td>Keyboard-only run-through, and checks at phone width and in light and dark themes.</td><td>Not yet tested with users who rely on assistive technology (recorded as a limitation).</td></tr>
+                <tr><td>NFR3 Privacy</td><td>Review of the import and stored fields: none identify a person.</td><td>Sandra confirmed nothing she cares about is missing.</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <p>Notice the gap in the accessibility row. Verification passed, but validation with real users who rely on assistive technology has not happened. Being honest about that gap is part of a good evaluation.</p>
+          <div class="callout assessor">
+            <strong>Exam guidance</strong>
+            <p>&ldquo;Distinguish between verification and validation&rdquo; needs both definitions <em>and</em> an example of each from the scenario. A reliable memory hook: verification looks back at the specification, and validation looks out at the client. If a question gives test results and asks whether the project succeeded, say the tests verify, and the client&rsquo;s response validates.</p>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="feedback">
+          <h2 class="syllabus-phase">Client Feedback and Evaluation</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Client feedback, evaluation against the success criteria and the impact of the system</em></p>
+          <span class="ex-artefact">Evaluation</span>
+          <h3>Client feedback</h3>
+          <p>Sandra worked through the dashboard on the canteen laptop on Wednesday 12 August, with Jordan watching and saying nothing. These are her words, recorded in the feedback log.</p>
+          <div class="ex-quote">
+            <p>&ldquo;I found the pie problem in about a minute. I didn&rsquo;t know that ham rolls were being thrown out that much. I like that it tells me <em>why</em> it wants me to order something. The bit I trust least is the what-if, because it only knows what people did buy, not what they would have bought.&rdquo;</p>
+            <cite>Sandra, canteen manager (fictional), trial with Jordan, 12 August 2026</cite>
+          </div>
+          <h3>Evaluation against the success criteria</h3>
+          <p>An evaluation makes a judgement against criteria set at the start, with evidence, and does not just say &ldquo;it went well&rdquo;.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Criterion</th><th>Evidence</th><th>Judgement</th></tr></thead>
+              <tbody>
+                <tr><td>1. Sandra reads the top seller and waste percentage for any weeks in under a minute, unaided</td><td>Timed at 25 seconds for the top seller and 40 seconds for waste percentage, with different weeks each time</td><td>Met</td></tr>
+                <tr><td>2. The totals match the till</td><td>The three-way check agrees for every filter tried. Sandra matched three weekly totals to the till&rsquo;s own printout.</td><td>Met</td></tr>
+                <tr><td>3. A reorder list Sandra trusts and can explain</td><td>She agreed with most suggestions and could explain the rule for each. One was disputed (see limitations).</td><td>Mostly met</td></tr>
+                <tr><td>4. Nothing identifies a student or staff member</td><td>The import keeps only item, quantity and date. Review found no other fields.</td><td>Met</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <h3>Limitations</h3>
+          <ul>
+            <li>The till records what was sold, not what customers wanted. On the days pies sold out, demand is understated, so the forecast for pies is probably too low.</li>
+            <li>The what-if panel uses assumed price sensitivities. They came from interviews and are not measured, so its projections show direction, not exact amounts.</li>
+            <li>Only eight weeks of data and a single canteen. Seasonal effects, such as cold weather and end-of-term days, are not modelled.</li>
+            <li>The import is manual, so a busy week without an import leaves the dashboard out of date.</li>
+            <li>Accessibility was tested in two browsers and by keyboard, not with screen-reader users.</li>
+          </ul>
+          <h3>Impact of the system on its environments</h3>
+          <p>An enterprise system does not only work or fail technically. It changes the places it is used in.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Environment</th><th>Impact seen or expected</th><th>Judgement</th></tr></thead>
+              <tbody>
+                <tr><td>Canteen (operational)</td><td>Weekly ordering takes about the same time but is based on evidence. Volunteers spend a few minutes on Fridays entering corrections.</td><td>Positive, small cost</td></tr>
+                <tr><td>Economic</td><td>Estimated saving of a quarter of waste cost, $537.90 every eight weeks, against a cash cost of $19.80.</td><td>Positive, unproven</td></tr>
+                <tr><td>Social</td><td>Fewer sell-outs of popular items. Price changes remain a human decision.</td><td>Positive</td></tr>
+                <tr><td>Environmental</td><td>Less thrown-out food.</td><td>Positive, size unknown</td></tr>
+                <tr><td>Technical</td><td>The system depends on one weekly file from the till. If the till is replaced, the import must be rewritten.</td><td>A dependency to manage</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <h3>Modifying the design</h3>
+          <p>Feedback led to three changes, each written up in the process diary and the change log: the four screens were merged into one page (P3), the what-if panel now shows waste as well as revenue (P4), and the evaluation now states that sold-out days hide real demand. The next version would add a column for &ldquo;sold out before closing&rdquo; to the till import, so the system can see lost sales.</p>
+          <div class="callout assessor">
+            <strong>Exam guidance</strong>
+            <p><strong>Evaluate</strong> means a judgement supported by criteria and evidence, with strengths <em>and</em> weaknesses. A high-scoring answer states each criterion, cites a result, and reaches a conclusion (&ldquo;mostly met&rdquo;), then names a limitation and an improvement. Do not evaluate against features you added later, only against the original success criteria.</p>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="maintenance">
+          <h2 class="syllabus-phase">Maintaining the System</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Maintenance plan and documentation trial</em></p>
+          <span class="ex-artefact">Maintenance plan</span>
+          <p>Systems are used for far longer than they are built. Maintenance is the work of keeping a system correct and useful once it is live. Jordan wrote a plan so that Sandra, or someone after Jordan, could look after Canteen Insights without guesswork.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Task</th><th>How often</th><th>Who</th><th>Kind of maintenance</th></tr></thead>
+              <tbody>
+                <tr><td>Import the week&rsquo;s till export and check the message</td><td>Every Monday</td><td>Sandra or a volunteer</td><td>Routine operation</td></tr>
+                <tr><td>Update the stock counts (OnHand)</td><td>Every Friday afternoon</td><td>Sandra</td><td>Routine operation</td></tr>
+                <tr><td>Copy the database to the cloud backup</td><td>Every Monday, after the import</td><td>Sandra</td><td>Backup</td></tr>
+                <tr><td>Add a new menu item or change a price</td><td>When the menu changes</td><td>Sandra, with the guide</td><td>Adaptive (changing for new conditions)</td></tr>
+                <tr><td>Reduce item-level rows older than 12 months to weekly totals</td><td>Each term</td><td>A teacher or later student</td><td>Data retention</td></tr>
+                <tr><td>Review the reorder thresholds (3 and 5 days, 10% waste)</td><td>Each term</td><td>Sandra and a teacher</td><td>Improving (perfective)</td></tr>
+                <tr><td>Fix a fault reported in the feedback log</td><td>As reported</td><td>The maintainer</td><td>Corrective (fixing faults)</td></tr>
+                <tr><td>Try a year of data (volume test)</td><td>Before the first anniversary</td><td>The maintainer</td><td>Preventive (avoiding future problems)</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          <h3>Trialling the documentation</h3>
+          <p>Documentation is only useful if someone else can follow it. Jordan gave Priya the maintenance guide and asked her to add a new item, an iced tea, with no help. This is the extract she followed.</p>
+          <ol>
+            <li>Open the Items table and add a new row at the bottom.</li>
+            <li>Give it the next ItemID in order, for example I13, using the format XNN.</li>
+            <li>Enter the name, choose its CategoryID from the Categories table, and enter the price and cost in dollars.</li>
+            <li>Enter Y for Perishable if unsold units are thrown out, otherwise N, and enter the units on hand.</li>
+            <li>Check the dashboard: the item appears in the item list, and the three-way check still agrees.</li>
+          </ol>
+          <p>Priya stopped at step 3 because it was not clear whether the cost meant the cost of one item or a box. Jordan rewrote the step to say &ldquo;cost of one item, for example $0.80&rdquo;, and the change is in the log. Trials find problems that the author never sees, which is why NESA lists trialling the operation and maintenance documentation as part of verifying a system.</p>
+          <h3>Version log</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Version</th><th>Date</th><th>Change</th><th>Reason</th></tr></thead>
+              <tbody>
+                <tr><td>1.0</td><td>29 Jul 2026</td><td>First working dashboard</td><td>Prototype P4</td></tr>
+                <tr><td>1.1</td><td>31 Jul 2026</td><td>What-if panel added, showing waste beside revenue</td><td>Client feedback on P4</td></tr>
+                <tr><td>1.2</td><td>3 Aug 2026</td><td>Reversed week range swapped with a notice</td><td>Beta test (Priya): E10</td></tr>
+                <tr><td>1.3</td><td>10 Aug 2026</td><td>Data entry refuses a Saturday date</td><td>Test E5 failed on the first run</td></tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="callout assessor">
+            <strong>Exam guidance</strong>
+            <p>Maintenance questions ask what must be done <em>after</em> implementation. Give specific, scheduled tasks with an owner (a weekly backup, a termly review of thresholds), not general advice such as &ldquo;keep it updated&rdquo;. Documentation belongs in the answer: a user guide for operators and a maintenance guide for whoever changes the system.</p>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section id="diary">
+          <h2 class="syllabus-phase">Process Diary Excerpt</h2>
+          <p class="syllabus-concept"><em><strong>Artefact</strong> Two entries from the process diary</em></p>
+          <span class="ex-artefact">Process diary</span>
+          <p>A process diary documents the progress of a project. NESA lists what each entry should include: the date, the person making the entry, progress since the last entry, tasks achieved, stumbling blocks and how they were managed, possible approaches for upcoming tasks, reflective comments and resources used. Here are two of Jordan&rsquo;s entries (fictional).</p>
+          <div class="ex-diary">
+            <h5>Entry 6: Wednesday 22 July 2026</h5>
+            <dl>
+              <dt>Person</dt><dd>Jordan</dd>
+              <dt>Progress</dt><dd>Phase 2 finished last Friday and Sandra approved the design. Phase 3 has started: the tables are built and all 480 sample rows are imported.</dd>
+              <dt>Tasks achieved</dt><dd>Task 12 (build tables, import sales) is 100%. Task 13 (charts and KPI tiles) has started.</dd>
+              <dt>Stumbling blocks</dt><dd>Item names in the export had trailing spaces, so the join to the Items table matched nothing. Managed by trimming names on import, and added a row-count check so an empty join is noticed straight away.</dd>
+              <dt>Next</dt><dd>Line chart first, then KPI tiles. Try a bar chart of categories, ordered largest first.</dd>
+              <dt>Reflection</dt><dd>The bug would have been invisible if I had not compared the row count with the file. I will do that check on every import.</dd>
+              <dt>Resources used</dt><dd>Sandra&rsquo;s till export (8 weeks), the data dictionary, about 4 hours.</dd>
+            </dl>
+          </div>
+          <div class="ex-diary">
+            <h5>Entry 8: Wednesday 29 July 2026</h5>
+            <dl>
+              <dt>Person</dt><dd>Jordan</dd>
+              <dt>Progress</dt><dd>Charts and KPI tiles are finished. Filters, pivot table and what-if are half done, but the Gantt chart says 75% by today, so I am behind.</dd>
+              <dt>Tasks achieved</dt><dd>Task 13 is 100%. Task 14 is 50%: week and category filters work; the pivot table is under way.</dd>
+              <dt>Stumbling blocks</dt><dd>Priya found that choosing From week 6 and To week 3 gave an empty dashboard. Fix planned: swap the two weeks and show a notice (this became test E10). The pivot table took longer than planned because of shading contrast in dark mode.</dd>
+              <dt>Next</dt><dd>Use Friday&rsquo;s buffer day for the what-if panel. Move &ldquo;export the chart as an image&rdquo; to the Could list. Ask Sandra on Thursday which numbers she wants beside the what-if result.</dd>
+              <dt>Reflection</dt><dd>My time estimates for interface work are too optimistic. I estimated the pivot table at one day and it will take two. I will add half again to estimates for anything with a screen.</dd>
+              <dt>Resources used</dt><dd>Feedback log entries 11 to 14, Priya&rsquo;s test notes, about 5 hours.</dd>
+            </dl>
+          </div>
+          <p>Notice that the second entry connects to the Gantt chart, the test table and the version log. A diary earns its place because it is the link between the plan, the problems and the decisions. This is what NESA means by <em>ongoing evaluation</em>: judging progress as it happens, not only at the end.</p>
+          <div class="callout assessor">
+            <strong>Exam guidance</strong>
+            <p>If asked to write or complete a process diary entry, include all eight items NESA lists. The most-missed are the stumbling block <em>and how it was managed</em>, and a reflective comment that shows something was learned. Specific details, such as the task number, a percentage or the number of hours, make an entry credible.</p>
+          </div>
+        </section>
+
+        <div class="quiz" data-quiz="ex-4"></div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  FINISH  -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="part-block">
+          <span class="part-number">Finish</span>
+          <span class="part-name">Connecting the example to the syllabus</span>
+        </div>
+
+        <section id="syllabus-map">
+          <h2 class="syllabus-phase">How This Maps to the Syllabus</h2>
+          <p class="syllabus-concept"><em><strong>Finish</strong> Each dot point in the Enterprise project focus area, and where this page shows it</em></p>
+          <p>The Enterprise project focus area has nine dot points. This table lists each one (NESA&rsquo;s wording) with a link to the explanation in the <a href="enterprise-project.html">Enterprise project notes</a>, and links to the places in this page that demonstrate it. Use it as a checklist for your own project: could you point to an artefact for each row?</p>
+          <div class="table-wrap">
+            <table class="ex-map">
+              <thead><tr><th>Syllabus dot point</th><th>Explained in</th><th>Shown in this example</th></tr></thead>
+              <tbody>
+                <tr><td>Describe the tools and processes used to manage and document the development of an enterprise system</td><td><a href="enterprise-project.html#manage-document">Notes</a></td><td><a href="#problem">Problem definition</a>; <a href="#schedule">Time and resource management, Gantt chart</a>; an iterative approach in <a href="#approach">the approach</a> and <a href="#diary">the diary</a>; production process and technical skills in <a href="#dashboard">the dashboard</a> and <a href="#queries">the queries</a>; testing and evaluation in <a href="#testing">testing</a> and <a href="#feedback">evaluation</a></td></tr>
+                <tr><td>Explain the effect of the changing nature of enterprise on the development of projects</td><td><a href="enterprise-project.html#changing-enterprise">Notes</a></td><td><a href="#changing">Offshore development, working remotely, freelance work and start-ups</a></td></tr>
+                <tr><td>Investigate tools that support the design and development of an enterprise system</td><td><a href="enterprise-project.html#design-tools">Notes</a></td><td><a href="#online-collaboration">Online collaboration</a>; <a href="#schedule">time/task action plan</a>; <a href="#diary">process diary</a>; <a href="#budget">budget</a>; <a href="#sysflow">system flowchart</a>; <a href="#dfd">data flow diagrams</a>; <a href="#logic">decision tree</a></td></tr>
+                <tr><td>Describe how computational, design and systems thinking skills are used in the design and development of an enterprise system</td><td><a href="enterprise-project.html#thinking-skills">Notes</a></td><td><a href="#thinking">Computational, design and systems thinking</a></td></tr>
+                <tr><td>Select key collaborating and managing criteria appropriate to the development of an enterprise project</td><td><a href="enterprise-project.html#collaboration-criteria">Notes</a></td><td><a href="#collaborating-criteria">Collaborating criteria</a>; <a href="#screens">ease of operation</a> and <a href="#maintenance">maintenance</a>; <a href="#informatics">informatics and the roles of participants, data and components</a>; <a href="#needs-wants">needs and wants</a></td></tr>
+                <tr><td>Apply tools to inform the requirements and limitations of an enterprise system</td><td><a href="enterprise-project.html#requirements-tools">Notes</a></td><td><a href="#interview">Interviews</a>; <a href="#survey">surveys</a>; <a href="#analytical-report">analytical reports</a>; <a href="#prototypes">prototypes</a>; <a href="#presentation">presentations of research results</a>; <a href="#requirements">requirements and constraints</a></td></tr>
+                <tr><td>Explore and apply the most suitable development approach to develop, modify and implement an enterprise system</td><td><a href="enterprise-project.html#development-approaches">Notes</a></td><td><a href="#approach">Waterfall, agile, prototyping, end-user and outsourcing compared, with prototyping chosen</a></td></tr>
+                <tr><td>Develop an implementation plan and test its feasibility for an enterprise computing system</td><td><a href="enterprise-project.html#implementation-plan">Notes</a></td><td><a href="#implementation">Design thinking, tools, integration, training and the pilot</a>; <a href="#risk">risk analysis</a>; <a href="#screens">storyboard</a>; <a href="#schedule">Gantt chart</a>; <a href="#logic">decision tree</a>; <a href="#testing">methodology for testing</a></td></tr>
+                <tr><td>Verify and validate an enterprise computing system</td><td><a href="enterprise-project.html#verify-validate">Notes</a></td><td><a href="#testing">Evaluating test data</a>; <a href="#maintenance">trialling the operation and maintenance documentation</a>; <a href="#feedback">impact of implementation</a> and modifying designs; <a href="#verify">verification and validation</a>; <a href="#maintenance">maintaining the system</a></td></tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="callout info">
+            <strong>Source</strong>
+            <p>Dot points are from the NESA <a href="https://curriculum.nsw.edu.au/learning-areas/tas/enterprise-computing-11-12-2022" target="_blank" rel="noopener">Enterprise Computing 11&ndash;12 Syllabus &#8599;</a> (&copy; NSW Education Standards Authority). Diagram notation, SQL keywords, spreadsheet functions and implementation and testing methods are from the Enterprise Computing Course Specifications (&copy; NESA). This page is a study aid and does not replace either document.</p>
+          </div>
+          <div class="cs-links">
+            <a class="btn btn-primary" href="enterprise-project.html">Read the Enterprise project notes</a>
+            <a class="btn btn-outline" href="project-guide.html">Open the Project Management Guide</a>
+            <a class="btn btn-outline" href="toolkit.html">Open the Course Toolkit</a>
+          </div>
+        </section>
+
       </div>
     </main>
   </div>
@@ -230,7 +1510,36 @@
     </div>
   </footer>
 
-  <script src="../js/glossary-data.js?v=696b7a09"></script>
+  <script src="../js/glossary-data.js?v=612e36c2"></script>
+  <script src="../js/quizzes/example-project.js?v=9d1d7558"></script>
+  <script src="../js/quiz.js?v=3e6185a0" defer></script>
+  <script src="../js/anim.js?v=f09b8c1b" defer></script>
   <script src="../js/main.js?v=28275053"></script>
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- Diagram Lightbox Modal -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div class="lightbox-modal" id="diagram-lightbox" role="dialog" aria-labelledby="lightbox-title" aria-hidden="true">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-container">
+      <div class="lightbox-header">
+        <h2 id="lightbox-title" class="lightbox-title">Diagram View</h2>
+        <button type="button" class="lightbox-close" aria-label="Close diagram view">✕</button>
+      </div>
+      <div class="lightbox-canvas">
+        <div class="lightbox-content" id="lightbox-content"></div>
+      </div>
+      <div class="lightbox-controls">
+        <button type="button" class="lightbox-btn" id="zoom-out" aria-label="Zoom out">−</button>
+        <span class="lightbox-zoom-level" id="zoom-level">100%</span>
+        <button type="button" class="lightbox-btn" id="zoom-in" aria-label="Zoom in">+</button>
+        <button type="button" class="lightbox-btn" id="reset-view" aria-label="Reset view">⟲</button>
+      </div>
+      <div class="lightbox-info">
+        <p>Scroll to zoom • Drag to pan • <kbd>Esc</kbd> to close</p>
+      </div>
+    </div>
+  </div>
+  <script src="../js/progress.js?v=40b8096b" defer></script>
+  <script src="../js/pages/example-project.js?v=1b1487d3" defer></script>
 </body>
 </html>

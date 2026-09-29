@@ -1,0 +1,97 @@
+/* Quiz bank for the Example Enterprise Project (topics/example-project.html).
+   One entry per data-quiz key on the page: ex-1 to ex-4, five questions each.
+   Each question: { q: "…", options: ["…", "…", "…", "…"], answer: <index of the right option>, why: "…" }. */
+window.HSC_QUIZZES = Object.assign(window.HSC_QUIZZES || {}, {
+  // Part 1: Identifying and defining
+  'ex-1': [
+    { q: "Which is the best problem statement for the canteen project?",
+      options: ["Build a dashboard for the canteen", "The canteen manager cannot see which items sell or how much fresh food is wasted, so she orders by habit and needs a way to see and act on the data", "The canteen should sell more food", "Use JavaScript to draw charts of canteen sales"],
+      answer: 1,
+      why: "A problem statement says who has the problem, what is going wrong and what a solution must let them do, without choosing the solution. The other options name a solution, or are too vague to check." },
+    { q: "Which of these is a non-functional requirement?",
+      options: ["Show the top seller for the chosen weeks", "Filter sales by category", "Suggest what to reorder using the agreed rules", "Recalculate every panel after a filter change without a noticeable delay"],
+      answer: 3,
+      why: "A non-functional requirement describes a quality, such as speed, rather than a behaviour. The other three describe things the system must do, so they are functional." },
+    { q: "On a Gantt chart with resources and percentage complete, task 14 is 50% complete but the status line shows 75% should be done. What does this tell the project manager?",
+      options: ["The task is behind plan, so its dependent tasks and milestones may be at risk", "The task is finished", "The task should be deleted", "The time scale is wrong"],
+      answer: 0,
+      why: "The solid part of a bar shows the work done. Being behind the status line is an early warning that dependent tasks, such as the reorder list that cannot start until this task ends, may slip." },
+    { q: "The till export can contain customer details, but Canteen Insights only needs item, quantity and date. Which response best reduces the privacy risk?",
+      options: ["Store everything and hide the customer columns on screen", "Keep the customer details but encrypt them", "Keep only item, quantity and date when importing, and drop other columns", "Ask Sandra to promise not to look at the details"],
+      answer: 2,
+      why: "The most effective privacy control is not collecting the personal information in the first place. Hiding, encrypting or promising still leaves personal information stored." },
+    { q: "Which is a constraint, not a requirement?",
+      options: ["The system must refuse a sold quantity greater than the quantity prepared", "The project must be finished in six weeks with no software budget", "The system must show a waste percentage", "The dashboard must be usable on a phone"],
+      answer: 1,
+      why: "A constraint is a limit on the project itself, such as time or money. The other options describe what the system must do or be, so they are requirements." }
+  ],
+  // Part 2: Researching and planning
+  'ex-2': [
+    { q: "A Level 0 data flow diagram of Canteen Insights would contain which of the following?",
+      options: ["One process, the external entities and the flows crossing the boundary, with no data stores", "Four processes and two data stores", "Only the data stores and the flows between them", "A cylinder for the database and diamonds for decisions"],
+      answer: 0,
+      why: "A Level 0 diagram gives an overview of the whole system as a single process with its external entities, and shows no data stores or internal processes. Four processes and two stores make a Level 1 diagram." },
+    { q: "In the reorder decision tree, a non-perishable item has exactly 3.0 days of stock left. Which action does the tree give?",
+      options: ["Reorder now", "Hold", "Reorder soon", "Order to forecast"],
+      answer: 2,
+      why: "Reorder now is for fewer than 3 days, and 3.0 is not fewer than 3. It is fewer than 5, so the action is Reorder soon. Boundary values decide which branch is taken." },
+    { q: "In the Items table, CategoryID links each item to a row in Categories. In NESA schema notation, how is CategoryID marked in Items?",
+      options: ["(P), as a primary key", "It is not marked", "(1), as the one end of the relationship", "(F), as a foreign key"],
+      answer: 3,
+      why: "A foreign key holds the primary key of another table and is marked (F). CategoryID is the primary key (P) only in the Categories table." },
+    { q: "Jordan chose prototyping rather than waterfall for the project. Which fact from the project best supports that choice?",
+      options: ["The project has a fixed end date", "Sandra could not say what she wanted until she saw real numbers on screen", "The project needed a Gantt chart", "Prototyping is always faster"],
+      answer: 1,
+      why: "Prototyping suits projects whose requirements are unclear at the start, because the client reacts to something real. A fixed end date, or the use of a Gantt chart, does not favour one approach over the other, and no approach is always faster." },
+    { q: "Which pair of NESA system flowchart symbols shows the till sales typed or scanned in and the file that holds the sales database?",
+      options: ["Manual operation and cloud", "Paper document and online display", "Online input and direct access storage", "Process and magnetic tape"],
+      answer: 2,
+      why: "Data entered directly into the system is online input, and a database that can be read and written directly is direct access storage. A manual operation is a step done by a person, such as placing an order with a supplier." }
+  ],
+  // Part 3: Producing and implementing
+  'ex-3': [
+    { q: "Using only NESA's SQL keywords, which query lists meat pie sales for week 5 in date order? (Assume the tables are DailySales and Items, joined on ItemID.)",
+      options: ["SELECT * FROM DailySales GROUP BY SaleDate", "SELECT DailySales.SaleDate, DailySales.Sold FROM DailySales, Items WHERE Items.ItemName = 'Meat pie' ORDER BY DailySales.SaleDate ASC", "SUM(Sold) WHERE ItemName = 'Meat pie'", "SELECT DailySales.SaleDate, DailySales.Sold FROM DailySales, Items WHERE Items.ItemName = 'Meat pie' AND Items.ItemID = DailySales.ItemID AND DailySales.SaleDate >= '01/06/2026' AND DailySales.SaleDate <= '05/06/2026' ORDER BY DailySales.SaleDate ASC"],
+      answer: 3,
+      why: "The correct query uses SELECT, FROM, WHERE with both the search conditions and the key equality that joins the tables, and ORDER BY. Option C has no join condition or date range, and options A and D use syntax outside the four keywords." },
+    { q: "Sales!F2 holds =D2*LOOKUP(B2,Items!$A$2:$A$13,Items!$D$2:$D$13). Why is the Items range written with dollar signs?",
+      options: ["So the reference stays fixed when the formula is copied down the column", "So the values are shown as currency", "So the formula is hidden from users", "So the range is treated as text"],
+      answer: 0,
+      why: "Dollar signs make a reference absolute, so the Items range does not move when the formula is filled down. The row references B2 and D2 are relative, so they move to each new row." },
+    { q: "Which implementation method did Jordan choose, and why?",
+      options: ["Direct, because it is quickest", "Parallel, because two systems are safer", "Pilot, because one user and two categories limit the damage of a fault and give a comparison", "Phased, because each screen is a separate module"],
+      answer: 2,
+      why: "A pilot introduces the system to a small part of the organisation first. Here only Sandra and only the categories with waste were included, so a fault had limited effects and the categories left out gave a comparison." },
+    { q: "Which is a risk-analysis entry with a specific, useful response?",
+      options: ["Data loss: be careful", "The till export format changes: the import refuses a file with unexpected headings and says why", "Something might go wrong: fix it later", "Sandra is busy: do not ask her"],
+      answer: 1,
+      why: "A good risk entry names the risk, estimates likelihood and impact, and gives a specific response that could actually be carried out. The others are vague or avoid the problem." },
+    { q: "The reorder list shows the rule used for each suggestion. What is the main benefit of this design choice?",
+      options: ["It makes the list look longer", "It removes the need for testing", "It lets the system change its own rules", "The client can see why a suggestion was made and challenge a particular step"],
+      answer: 3,
+      why: "Showing the rule lets the client understand and check the advice, which builds trust and makes disagreements specific. It does not replace testing and does not change the rules." }
+  ],
+  // Part 4: Testing and evaluating
+  'ex-4': [
+    { q: "The Sold field must not be more than the Prepared field. Which pair of values is the best boundary test?",
+      options: ["Prepared 46 with sold 20, and prepared 46 with sold abc", "Prepared 46 with sold 10, and prepared 46 with sold 12", "Prepared 46 with sold 46, and prepared 46 with sold 47", "Prepared 0 with sold 0 only"],
+      answer: 2,
+      why: "A boundary test uses a value on the limit (sold 46, accepted) and one just past it (sold 47, refused). Testing only well inside or well outside the limit will not find an off-by-one fault." },
+    { q: "A volunteer types \"3.5\" into the Sold field and the dashboard refuses it with a clear message. What kind of test data is this?",
+      options: ["Normal data", "Boundary data", "Live data", "Erroneous data"],
+      answer: 3,
+      why: "Erroneous data is invalid input that the system must refuse or handle. A fraction of an item is not a valid count." },
+    { q: "The dashboard passes every test in the table and its totals match the till. Sandra says she never uses the reorder list because it tells her nothing new. Which statement is correct?",
+      options: ["The system is verified but may not be validated", "The system is validated but not verified", "The system is neither verified nor validated", "Verification and validation mean the same thing"],
+      answer: 0,
+      why: "Verification asks whether the system was built to its specification, and the tests and totals suggest it was. Validation asks whether it meets the client's real need, and Sandra's comment suggests it may not." },
+    { q: "Which is the best example of ongoing evaluation in a process diary entry?",
+      options: ["Everything went well today", "The pivot table is at 50% against 75% planned, my estimate was too optimistic, so I will add half again to future estimates for screen work", "I did some coding", "I will finish the project on time"],
+      answer: 1,
+      why: "Ongoing evaluation compares progress with the plan, explains the difference and changes future behaviour. Vague or purely optimistic entries do not." },
+    { q: "Which maintenance task is best described as corrective?",
+      options: ["Fixing a bug found by a user and recorded in the feedback log", "Adding a new menu item to the Items table", "Changing the threshold for Reorder soon", "Copying the database to the cloud backup every Monday"],
+      answer: 0,
+      why: "Corrective maintenance finds and fixes faults. Adding an item is adaptive, changing a threshold is an improvement to how the system works (perfective), and a backup protects the data." }
+  ]
+});
