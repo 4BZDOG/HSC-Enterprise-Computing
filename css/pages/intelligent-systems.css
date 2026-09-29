@@ -1,0 +1,108 @@
+/* Intelligent Systems: the expert-system demo (forward and backward chaining on a plant-care rule base).
+   Uses the theme's custom properties so light and dark mode both work. Classes are prefixed isx- to stay clear of site styles. */
+.isx-widget {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem 1.1rem 1.2rem;
+  margin: 1.5rem 0;
+  box-shadow: var(--shadow-sm);
+  min-width: 0; max-width: 100%;
+}
+.isx-widget h4 { margin: 0 0 .25rem; font-size: 1.05rem; }
+.isx-widget h5 { margin: 0 0 .4rem; font: 700 .9rem var(--font-display); color: var(--text-primary); }
+.isx-lead { margin: 0 0 1rem; color: var(--text-secondary); font-size: .92rem; }
+.isx-widget button, .isx-widget select, .isx-widget input { font: inherit; }
+.isx-widget button:focus-visible, .isx-widget select:focus-visible, .isx-widget input:focus-visible, .isx-widget summary:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 2px;
+}
+.isx-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 1.1rem; align-items: start; }
+.isx-grid > div { min-width: 0; }
+.isx-box { border: 1px solid var(--border); border-radius: var(--radius-md); padding: .8rem .9rem; background: var(--bg-tertiary); margin-bottom: .9rem; }
+.isx-box legend, .isx-legend { font: 700 .9rem var(--font-display); color: var(--text-primary); padding: 0 .3rem; }
+fieldset.isx-box { margin-left: 0; margin-right: 0; min-width: 0; }
+.isx-facts label { display: flex; align-items: center; gap: .55rem; padding: .28rem 0; font-size: .92rem; cursor: pointer; color: var(--text-primary); }
+.isx-facts input[type="checkbox"] { width: 1.05rem; height: 1.05rem; accent-color: var(--primary); flex: none; }
+.isx-facts code, .isx-rule code, .isx-trace code { font-size: .8rem; }
+.isx-presets, .isx-row { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.isx-presets { margin-bottom: .8rem; }
+.isx-btn {
+  font: 600 .85rem var(--font-body); padding: .45rem .8rem; border-radius: var(--radius-md); cursor: pointer;
+  border: 1px solid var(--border-strong); background: var(--bg-tertiary); color: var(--text-primary);
+  min-height: 2.25rem;
+}
+.isx-btn:hover { background: var(--surface-hover); }
+.isx-btn.isx-primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+[data-theme="dark"] .isx-btn.isx-primary { color: #0A1220; }
+.isx-btn.isx-primary:hover { background: var(--primary-dark); }
+[data-theme="dark"] .isx-btn.isx-primary:hover { background: var(--secondary); }
+.isx-toggle { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--radius-md); overflow: hidden; margin: .25rem 0 .75rem; flex-wrap: wrap; }
+.isx-toggle button {
+  font: 600 .85rem var(--font-body); padding: .5rem .85rem; border: 0; cursor: pointer;
+  background: var(--bg-tertiary); color: var(--text-secondary); min-height: 2.25rem;
+}
+.isx-toggle button[aria-pressed="true"] { background: var(--primary); color: #fff; }
+[data-theme="dark"] .isx-toggle button[aria-pressed="true"] { color: #0A1220; }
+.isx-field { display: block; margin-bottom: .7rem; }
+.isx-field > span { display: block; font-weight: 600; font-size: .85rem; margin-bottom: .25rem; color: var(--text-primary); }
+.isx-field select, .isx-field input[type="text"] {
+  width: 100%; font-size: .9rem; padding: .45rem .55rem; color: var(--text-primary);
+  background: var(--surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md);
+}
+.isx-rules { list-style: none; margin: 0; padding: 0; }
+.isx-rule {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: .2rem .6rem; align-items: start;
+  padding: .5rem .55rem; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface); margin-bottom: .4rem;
+}
+.isx-rule.isx-off { opacity: .55; }
+.isx-rule.isx-fired { border-color: var(--success); background: color-mix(in srgb, var(--success) 12%, var(--surface)); }
+.isx-rule.isx-tried { border-color: var(--warning); background: color-mix(in srgb, var(--warning) 12%, var(--surface)); }
+.isx-rule input[type="checkbox"] { margin-top: .25rem; width: 1.05rem; height: 1.05rem; accent-color: var(--primary); }
+.isx-rule .isx-rtext { font-size: .88rem; line-height: 1.45; color: var(--text-primary); overflow-wrap: anywhere; }
+.isx-rule .isx-rid { font: 700 .8rem var(--font-mono); color: var(--primary-dark); margin-right: .35rem; }
+[data-theme="dark"] .isx-rule .isx-rid { color: var(--secondary); }
+.isx-kw { font-weight: 700; color: var(--year12-dark); }
+.isx-badge { font: 700 .72rem var(--font-display); padding: .12rem .5rem; border-radius: 999px; white-space: nowrap; align-self: start; }
+.isx-badge.isx-b-fired { background: var(--success); color: #fff; }
+[data-theme="dark"] .isx-badge.isx-b-fired { color: #0A1220; }
+.isx-badge.isx-b-tried { background: var(--warning); color: #fff; }
+[data-theme="dark"] .isx-badge.isx-b-tried { color: #0A1220; }
+.isx-rule button.isx-x { border: 1px solid var(--border-strong); background: var(--bg-tertiary); color: var(--text-primary); border-radius: var(--radius-md); font-size: .75rem; padding: .15rem .45rem; cursor: pointer; }
+.isx-add summary { cursor: pointer; font-weight: 700; font-size: .9rem; color: var(--text-primary); padding: .2rem 0; }
+.isx-add .isx-row { margin-top: .5rem; }
+.isx-msg { font-size: .82rem; color: var(--text-muted); margin: .4rem 0 0; min-height: 1.2em; }
+.isx-out { margin-top: .4rem; border-top: 1px dashed var(--border-strong); padding-top: 1rem; }
+.isx-summary { border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: var(--radius-md); padding: .7rem .9rem; background: var(--bg-tertiary); margin-bottom: .9rem; font-size: .92rem; }
+.isx-summary p { margin: .2rem 0; }
+.isx-summary.isx-fail { border-left-color: var(--danger); }
+.isx-summary.isx-ok { border-left-color: var(--success); }
+.isx-chips { display: flex; flex-wrap: wrap; gap: .35rem; margin: .3rem 0; }
+.isx-chip { font: 600 .78rem var(--font-mono); padding: .15rem .5rem; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--surface); color: var(--text-primary); }
+.isx-chip.isx-advice { border-color: var(--success); background: color-mix(in srgb, var(--success) 14%, var(--surface)); }
+.isx-tablewrap { overflow-x: auto; max-width: 100%; }
+.isx-trace { width: 100%; border-collapse: collapse; font-size: .85rem; }
+.isx-trace caption { text-align: left; font: 700 .9rem var(--font-display); padding: 0 0 .4rem; color: var(--text-primary); }
+.isx-trace th, .isx-trace td { border: 1px solid var(--border); padding: .35rem .5rem; text-align: left; vertical-align: top; }
+.isx-trace thead th { background: var(--bg-secondary); font-size: .8rem; }
+.isx-trace .isx-ind { display: block; padding-left: calc(var(--d, 0) * .9rem); }
+.isx-trace tr.isx-yes td:last-child { color: var(--success); font-weight: 700; }
+.isx-trace tr.isx-no td:last-child { color: var(--danger); font-weight: 700; }
+[data-theme="dark"] .isx-trace tr.isx-yes td:last-child { color: #4CC985; }
+[data-theme="dark"] .isx-trace tr.isx-no td:last-child { color: #F0705F; }
+.isx-tree, .isx-tree ul { list-style: none; margin: .25rem 0 0; padding-left: 1.2rem; border-left: 2px solid var(--border-strong); }
+.isx-tree { border-left: 0; padding-left: 0; }
+.isx-tree li { margin: .3rem 0; font-size: .86rem; position: relative; }
+.isx-tree li > .isx-node { display: inline-block; padding: .1rem .5rem; border: 1px solid var(--border-strong); border-radius: var(--radius-md); background: var(--surface); }
+.isx-tree li > .isx-node.isx-derived { border-color: var(--success); background: color-mix(in srgb, var(--success) 12%, var(--surface)); font-weight: 600; }
+.isx-tree .isx-via { font: 600 .75rem var(--font-mono); color: var(--text-muted); margin-left: .4rem; }
+.isx-note { font-size: .82rem; color: var(--text-muted); margin: .6rem 0 0; }
+@media (max-width: 760px) {
+  .isx-grid { grid-template-columns: minmax(0, 1fr); }
+  .isx-rule { grid-template-columns: auto minmax(0, 1fr); }
+  .isx-rule .isx-badge, .isx-rule button.isx-x { grid-column: 2; justify-self: start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .isx-widget * { transition: none !important; animation: none !important; }
+}
+.isx-widget input[type="range"] { accent-color: var(--primary); }
+.isx-widget output { font-weight: 700; }

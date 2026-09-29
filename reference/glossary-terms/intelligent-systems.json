@@ -1,0 +1,218 @@
+[
+  {
+    "id": "term-expert-system",
+    "name": "Expert System",
+    "topics": [
+      "is"
+    ],
+    "definition": "A program that captures the knowledge of human experts as facts and IF–THEN rules and uses an inference engine to reach conclusions about a narrow topic.",
+    "example": "A help-desk system that diagnoses a printer fault from the lights a user reports."
+  },
+  {
+    "id": "term-decision-support-system",
+    "name": "Decision Support System (DSS)",
+    "topics": [
+      "is"
+    ],
+    "definition": "An information system that combines data, a model and an interface to help people make decisions, without making them alone.",
+    "example": "A supermarket tool that forecasts demand and suggests next week's order for a manager to adjust."
+  },
+  {
+    "id": "term-unstructured-decision",
+    "name": "Unstructured Decision",
+    "topics": [
+      "is"
+    ],
+    "definition": "In NESA's framing, a decision with no complete set of instructions, so human judgement is required.",
+    "example": "Deciding whether a start-up should open a second shop in another town."
+  },
+  {
+    "id": "term-semi-structured-decision",
+    "name": "Semi-structured Decision",
+    "topics": [
+      "is"
+    ],
+    "definition": "A decision made with a specified set of finite instructions, where a person may still review or approve the result.",
+    "example": "A loan officer approving an exception to a risk score calculated by fixed rules."
+  },
+  {
+    "id": "term-structured-decision",
+    "name": "Structured Decision",
+    "topics": [
+      "is"
+    ],
+    "definition": "A decision that is fully specified and can be automated, so the system decides and acts without intervention.",
+    "example": "A warehouse system reordering an item when stock falls below a set level."
+  },
+  {
+    "id": "term-knowledge-base",
+    "name": "Knowledge Base",
+    "topics": [
+      "is"
+    ],
+    "definition": "The part of an expert system that stores facts and IF–THEN rules about a specific topic.",
+    "example": "The eight watering and sun-stress rules in a plant-care advisor."
+  },
+  {
+    "id": "term-inference-engine",
+    "name": "Inference Engine",
+    "topics": [
+      "is"
+    ],
+    "definition": "The part of an expert system that applies the rules in the knowledge base to the known facts to reach conclusions.",
+    "example": "An engine that fires a rule to add overwatered to working memory, then fires the next rule."
+  },
+  {
+    "id": "term-forward-chaining",
+    "name": "Forward Chaining",
+    "topics": [
+      "is"
+    ],
+    "definition": "An inference technique that evaluates existing data with the rules to develop new data and reach a decision.",
+    "example": "Starting from leaves_yellow and soil_wet, an engine adds overwatered and then reduce_watering."
+  },
+  {
+    "id": "term-backward-chaining",
+    "name": "Backward Chaining",
+    "topics": [
+      "is"
+    ],
+    "definition": "An inference technique that starts from a goal and tracks back through the rules to establish the facts and steps needed to prove it.",
+    "example": "To prove repot_with_drainage, the engine checks root_rot_risk, then overwatered, then the observed facts."
+  },
+  {
+    "id": "term-explanation-facility",
+    "name": "Explanation Facility",
+    "topics": [
+      "is"
+    ],
+    "definition": "A feature of an expert system that shows why a question was asked or how a conclusion was reached, usually by displaying the rules used.",
+    "example": "A tree showing that reduce_watering came from rule R5, which used overwatered, which came from rule R1."
+  },
+  {
+    "id": "term-certainty-factor",
+    "name": "Certainty Factor (CF)",
+    "topics": [
+      "is"
+    ],
+    "definition": "A number, here from 0 to 1, that shows how strongly a piece of evidence or a rule is believed.",
+    "example": "A rule with CF 0.8 and evidence with CF 0.7 gives a conclusion with CF 0.56."
+  },
+  {
+    "id": "term-fuzzy-logic",
+    "name": "Fuzzy Logic",
+    "topics": [
+      "is"
+    ],
+    "definition": "Reasoning with degrees of truth between 0 and 1 instead of only true or false.",
+    "example": "A temperature of 24 degrees is Warm to degree 0.6 and Hot to degree 0.4."
+  },
+  {
+    "id": "term-truth-maintenance",
+    "name": "Truth Maintenance",
+    "topics": [
+      "is"
+    ],
+    "definition": "A technique that records the reasons for each conclusion so it can be withdrawn automatically when its supporting facts change.",
+    "example": "Retracting overwatered when the user corrects soil_wet to dry."
+  },
+  {
+    "id": "term-hypothetical-reasoning",
+    "name": "Hypothetical Reasoning",
+    "topics": [
+      "is"
+    ],
+    "definition": "A technique that follows the consequences of an assumption in a separate context, then adopts or discards it.",
+    "example": "A roster system assuming a nurse works Thursday night and rejecting the option after a rest-period clash."
+  },
+  {
+    "id": "term-heuristic",
+    "name": "Heuristic",
+    "topics": [
+      "is"
+    ],
+    "definition": "An experience-based rule of thumb that finds a good-enough answer quickly without guaranteeing the best one.",
+    "example": "A mechanic's rule to check the battery first."
+  },
+  {
+    "id": "term-ontology",
+    "name": "Ontology",
+    "topics": [
+      "is"
+    ],
+    "definition": "A formal description of the concepts in a domain and the relationships between them, used to classify items and infer inherited properties.",
+    "example": "A product ontology in which trail running shoe is a kind of running shoe, which is a kind of footwear."
+  },
+  {
+    "id": "term-webometrics",
+    "name": "Webometrics",
+    "topics": [
+      "is"
+    ],
+    "definition": "The quantitative study of web resources, including the links between pages, their content and how they are used.",
+    "example": "Analysing which sites link to a page to estimate how relevant it is."
+  },
+  {
+    "id": "term-intelligent-agent",
+    "name": "Intelligent Agent",
+    "topics": [
+      "is"
+    ],
+    "definition": "A program that senses its environment, decides and acts to achieve a goal, from simple rule-following agents to complex learning agents.",
+    "example": "A web crawler that follows links (simple) and a ranking system that learns from clicks (complex)."
+  },
+  {
+    "id": "term-predictive-search-string",
+    "name": "Predictive Search String",
+    "topics": [
+      "is"
+    ],
+    "definition": "A suggested completion of a search query, chosen by estimating what the user is most likely to type.",
+    "example": "Typing how to cook and being offered how to cook rice."
+  },
+  {
+    "id": "term-actuator",
+    "name": "Actuator",
+    "topics": [
+      "is"
+    ],
+    "definition": "A device that converts a control signal into a physical action, such as opening a valve or switching a relay.",
+    "example": "A vent actuator that opens when a greenhouse is too hot."
+  },
+  {
+    "id": "term-generative-ai",
+    "name": "Generative AI",
+    "topics": [
+      "is"
+    ],
+    "definition": "Artificial intelligence that produces new content, such as text, images, audio or code, from patterns learned in very large datasets.",
+    "example": "A chatbot that drafts a summary of a meeting from a transcript."
+  },
+  {
+    "id": "term-digital-twin",
+    "name": "Digital Twin",
+    "topics": [
+      "is"
+    ],
+    "definition": "A virtual copy of a physical machine, building or process that is updated with live sensor data and used to test changes and predict faults.",
+    "example": "A model of a pump that shows when its vibration pattern suggests a failure."
+  },
+  {
+    "id": "term-surplus-data",
+    "name": "Surplus Data",
+    "topics": [
+      "is"
+    ],
+    "definition": "Data that is duplicated, unused, out of range or beyond the purpose of the system, and so adds cost and risk without adding value.",
+    "example": "A probe reading every second when only 15-minute averages and alerts are needed."
+  },
+  {
+    "id": "term-mean-absolute-error",
+    "name": "Mean Absolute Error",
+    "topics": [
+      "is"
+    ],
+    "definition": "The average size of the differences between proposed and actual values, ignoring whether they are above or below.",
+    "example": "Absolute errors of 75 units over eight weeks give a mean absolute error of about 9.4 units."
+  }
+]
