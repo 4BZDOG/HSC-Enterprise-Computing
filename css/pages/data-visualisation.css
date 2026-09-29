@@ -1,0 +1,40 @@
+/* Data visualisation page: "Interrogate the chart" widget. Uses the theme's custom properties so light and dark both work. */
+.dv-lab { border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); padding: 1rem; margin: 1.25rem 0; }
+.dv-controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: .75rem 1.25rem; align-items: start; margin-bottom: .9rem; }
+.dv-fs { border: 1px solid var(--border); border-radius: 10px; padding: .4rem .75rem .6rem; margin: 0; min-width: 0; }
+.dv-fs legend { font-size: .82rem; color: var(--text-secondary); padding: 0 .35rem; }
+.dv-opt, .dv-check, .dv-sel { display: flex; align-items: center; gap: .4rem; font-size: .92rem; color: var(--text-primary); line-height: 1.5; cursor: pointer; }
+.dv-opt { padding: .15rem 0; }
+.dv-opt input, .dv-check input { width: 1.05rem; height: 1.05rem; accent-color: var(--primary); flex: none; }
+.dv-filters, .dv-toggles { display: flex; flex-direction: column; gap: .5rem; }
+.dv-sel { justify-content: space-between; font-weight: 600; }
+.dv-sel select { font: inherit; font-weight: 500; padding: .35rem .5rem; border: 1px solid var(--border-strong); border-radius: 8px; background: var(--surface); color: var(--text-primary); min-width: 0; max-width: 60%; }
+.dv-lab input:focus-visible, .dv-lab select:focus-visible, .dv-lab summary:focus-visible, .dv-reset:focus-visible { outline: 3px solid var(--ds-focus, #E8A317); outline-offset: 2px; }
+.dv-reset { align-self: flex-start; padding: .35rem .9rem; font-size: .85rem; }
+.dv-lab h5.dv-chart-title { margin: .25rem 0 .4rem; font: 600 .98rem/1.35 var(--font-display); color: var(--text-primary); }
+.dv-stage { background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 10px; padding: .25rem; overflow: hidden; }
+.dv-svg { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+.dv-grid { stroke: var(--border); stroke-width: 1; }
+.dv-axis { stroke: var(--text-secondary); stroke-width: 1.5; }
+.dv-tick, .dv-cat, .dv-val { font: 500 13px var(--font-body); fill: var(--text-secondary); }
+.dv-cat { fill: var(--text-primary); font-weight: 600; }
+.dv-val { fill: var(--text-primary); font-weight: 700; }
+.dv-warn { font: 700 13px var(--font-body); fill: var(--danger); }
+:root[data-theme="dark"] .dv-warn { fill: #F0705F; }
+.dv-bar { fill: var(--primary); }
+.dv-bar.is-outlier { fill: var(--accent); stroke: var(--text-primary); stroke-width: 1.5; }
+@media (prefers-reduced-motion: no-preference) {
+  .dv-bar, .dv-val { animation: dv-fade .3s ease-out; }
+  @keyframes dv-fade { from { opacity: .2; } to { opacity: 1; } }
+}
+.dv-summary { margin: .5rem 0 .6rem; font-size: .9rem; color: var(--text-secondary); }
+.dv-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: .5rem; margin-bottom: .6rem; }
+.dv-stat { background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 10px; padding: .45rem .6rem; display: flex; flex-direction: column; }
+.dv-stat-k { font-size: .78rem; color: var(--text-secondary); }
+.dv-stat-v { font: 700 1.1rem/1.3 var(--font-display); color: var(--text-primary); }
+.dv-read { font-size: .95rem; line-height: 1.6; color: var(--text-primary); margin: 0 0 .6rem; }
+.dv-details summary { cursor: pointer; font-weight: 600; font-size: .9rem; margin: .4rem 0; color: var(--text-primary); }
+.dv-details .table-wrap { max-height: 320px; overflow: auto; }
+.dv-row-out td { background: var(--primary-light); font-weight: 700; }
+:root[data-theme="dark"] .dv-row-out td { background: rgba(245, 184, 61, .18); color: var(--text-primary); }
+@media (max-width: 520px) { .dv-lab { padding: .75rem; } .dv-sel { flex-wrap: wrap; } .dv-sel select { max-width: 100%; width: 100%; } }

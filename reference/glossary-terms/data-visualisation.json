@@ -1,0 +1,209 @@
+[
+  {
+    "id": "term-olap",
+    "name": "OLAP (Online Analytical Processing)",
+    "topics": [
+      "dv"
+    ],
+    "definition": "A way of storing and querying data in multidimensional form so that users can summarise and explore it quickly from many angles.",
+    "example": "A manager views café sales by product, quarter and region, then drills from quarter to month."
+  },
+  {
+    "id": "term-oltp",
+    "name": "OLTP (Online Transaction Processing)",
+    "topics": [
+      "dv"
+    ],
+    "definition": "The everyday system that records each transaction as it happens, such as a sale or a booking.",
+    "example": "A point-of-sale system that records each coffee sold."
+  },
+  {
+    "id": "term-data-cube",
+    "name": "Data Cube",
+    "topics": [
+      "dv"
+    ],
+    "definition": "A multidimensional arrangement of data in which each cell holds a measure at the intersection of several dimensions.",
+    "example": "A cube of sales with Product, Quarter and Region as its three dimensions."
+  },
+  {
+    "id": "term-dimension",
+    "name": "Dimension",
+    "topics": [
+      "dv"
+    ],
+    "definition": "A category by which data is viewed and grouped in analysis, often with a hierarchy of levels.",
+    "example": "Time is a dimension with the levels year, quarter, month and day."
+  },
+  {
+    "id": "term-measure",
+    "name": "Measure",
+    "topics": [
+      "dv"
+    ],
+    "definition": "The numeric value analysed in each cell of a data cube.",
+    "example": "Sales in dollars or number of units sold."
+  },
+  {
+    "id": "term-slice",
+    "name": "Slice",
+    "topics": [
+      "dv"
+    ],
+    "definition": "An OLAP operation that fixes one dimension at a single value, leaving a smaller table.",
+    "example": "Slicing the sales cube at Region = Coast gives a Product by Quarter table."
+  },
+  {
+    "id": "term-dice",
+    "name": "Dice",
+    "topics": [
+      "dv"
+    ],
+    "definition": "An OLAP operation that selects a sub-cube by choosing values on two or more dimensions.",
+    "example": "Dicing for Coffee and Cake in Q3 and Q4 across both regions."
+  },
+  {
+    "id": "term-drill-down",
+    "name": "Drill-down",
+    "topics": [
+      "dv"
+    ],
+    "definition": "Moving down a hierarchy to see more detailed data.",
+    "example": "Going from quarterly sales to the three months in that quarter."
+  },
+  {
+    "id": "term-roll-up",
+    "name": "Roll-up",
+    "topics": [
+      "dv"
+    ],
+    "definition": "Aggregating data up a hierarchy, or removing a dimension, to see a higher-level summary.",
+    "example": "Summing months into quarters and quarters into a year."
+  },
+  {
+    "id": "term-data-warehouse",
+    "name": "Data Warehouse",
+    "topics": [
+      "dv"
+    ],
+    "definition": "A large central store of consistent, historical data from many operational systems, organised for analysis and reporting.",
+    "example": "A retailer loads nightly sales from 90 stores into one warehouse and compares years."
+  },
+  {
+    "id": "term-etl",
+    "name": "ETL (Extract, Transform, Load)",
+    "topics": [
+      "dv"
+    ],
+    "definition": "The process of copying data from source systems, converting it to consistent formats and definitions, and loading it into a data warehouse.",
+    "example": "Matching old and new product codes before loading sales history."
+  },
+  {
+    "id": "term-data-integrity",
+    "name": "Data Integrity",
+    "topics": [
+      "dv"
+    ],
+    "definition": "The accuracy, completeness, consistency and trustworthiness of data across its whole life.",
+    "example": "Validation checks and access controls that stop a price of 5500 replacing 55.00."
+  },
+  {
+    "id": "term-validation",
+    "name": "Validation",
+    "topics": [
+      "dv"
+    ],
+    "definition": "Checking that data is reasonable and allowed before it is accepted, for example by type, range, format or presence.",
+    "example": "A range check rejects an age of 250."
+  },
+  {
+    "id": "term-verification",
+    "name": "Verification",
+    "topics": [
+      "dv"
+    ],
+    "definition": "Checking that data has been entered or transferred correctly, such as by double entry or comparing totals with the source.",
+    "example": "Two staff type the same figures and the system compares them."
+  },
+  {
+    "id": "term-predictive-analytics",
+    "name": "Predictive Analytics",
+    "topics": [
+      "dv"
+    ],
+    "definition": "Using patterns in historical data, with statistical methods or machine learning, to estimate what is likely to happen.",
+    "example": "Forecasting Saturday's shuttle boardings from the temperature forecast."
+  },
+  {
+    "id": "term-trend-line",
+    "name": "Trend Line",
+    "topics": [
+      "dv"
+    ],
+    "definition": "A line, usually the least-squares line of best fit, drawn through data to show its general direction and to make forecasts.",
+    "example": "A spreadsheet chart trend line y = 14.4x + 296.5 fitted to twelve months of orders."
+  },
+  {
+    "id": "term-outlier",
+    "name": "Outlier",
+    "topics": [
+      "dv"
+    ],
+    "definition": "A value that lies far from the rest of the data; it may be an error or a genuine unusual event.",
+    "example": "One $2,400 booking among bookings that are mostly under $110."
+  },
+  {
+    "id": "term-aggregation",
+    "name": "Aggregation",
+    "topics": [
+      "dv"
+    ],
+    "definition": "Combining many records into a summary such as a total, average or count for each group.",
+    "example": "Total takings for each month."
+  },
+  {
+    "id": "term-truncated-axis",
+    "name": "Truncated Axis",
+    "topics": [
+      "dv"
+    ],
+    "definition": "A value axis that does not start at zero, which can exaggerate differences in a column chart.",
+    "example": "A column axis from 90 to 95 makes 94% look four times as tall as 91%."
+  },
+  {
+    "id": "term-cherry-picking",
+    "name": "Cherry-picking",
+    "topics": [
+      "dv"
+    ],
+    "definition": "Choosing only the data, date range or results that support a preferred conclusion.",
+    "example": "Showing July to December sales growth and hiding the January to June decline."
+  },
+  {
+    "id": "term-extrapolation",
+    "name": "Extrapolation",
+    "topics": [
+      "dv"
+    ],
+    "definition": "Extending a pattern beyond the range of the data used to find it, which makes predictions less reliable.",
+    "example": "Using a trend line built on 21 to 35°C data to predict boardings at 42°C."
+  },
+  {
+    "id": "term-overplotting",
+    "name": "Overplotting",
+    "topics": [
+      "dv"
+    ],
+    "definition": "Marks on a chart overlapping so much that the pattern cannot be seen, common with very large datasets.",
+    "example": "A scatter graph of a million points that looks like a solid blob."
+  },
+  {
+    "id": "term-moving-average",
+    "name": "Moving Average",
+    "topics": [
+      "dv"
+    ],
+    "definition": "A series of averages of consecutive values, used to smooth short-term variation so that the trend shows.",
+    "example": "A 3-month average of monthly orders."
+  }
+]
