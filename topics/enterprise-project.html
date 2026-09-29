@@ -9,14 +9,14 @@
   <meta name="robots" content="index, follow" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Enterprise Project | HSC Enterprise Computing" />
-  <meta property="og:description" content="HSC Enterprise Computing notes on Enterprise Project (Define, plan, build and evaluate). NESA NSW Year 12 HSC syllabus, dot point by dot point." />
+  <meta property="og:description" content="Enterprise project notes for HSC Enterprise Computing: problem definitions, Gantt charts, DFDs, development approaches, risk registers and test tables." />
   <meta property="og:url" content="https://4bzdog.github.io/HSC-Enterprise-Computing/topics/enterprise-project.html" />
   <meta property="og:image" content="https://4bzdog.github.io/HSC-Enterprise-Computing/og-image.png" />
   <meta property="og:image:alt" content="HSC Enterprise Computing Notes: NESA NSW" />
   <meta property="og:site_name" content="HSC Enterprise Computing Notes" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Enterprise Project | HSC Enterprise Computing" />
-  <meta name="twitter:description" content="HSC Enterprise Computing notes on Enterprise Project (Define, plan, build and evaluate). NESA NSW Year 12 HSC syllabus, dot point by dot point." />
+  <meta name="twitter:description" content="Enterprise project notes for HSC Enterprise Computing: problem definitions, Gantt charts, DFDs, development approaches, risk registers and test tables." />
   <meta name="twitter:image" content="https://4bzdog.github.io/HSC-Enterprise-Computing/og-image.png" />
   <script type="application/ld+json">
   {
@@ -48,12 +48,13 @@
   <meta name="theme-color" content="#0B1B2E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- CONTENT: rewrite the meta description (and the two social descriptions above) in 120 to 160 characters. -->
-  <meta name="description" content="HSC Enterprise Computing notes on Enterprise Project (Define, plan, build and evaluate). NESA NSW Year 12 HSC syllabus, dot point by dot point." />
+  <meta name="description" content="Enterprise project notes for HSC Enterprise Computing: problem definitions, Gantt charts, DFDs, development approaches, risk registers and test tables." />
   <!-- Theme init: prevents flash of wrong theme. The ec- prefix keeps this site's storage apart from sister sites on the same origin. -->
   <script>(function(){try{var t=localStorage.getItem('ec-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
   <link rel="stylesheet" href="../css/styles.css?v=eaa2e127" />
   <link rel="stylesheet" href="../css/theme.css?v=ea1ce127" />
+  <link rel="stylesheet" href="../css/anim.css?v=22e246f7" />
+  <link rel="stylesheet" href="../css/pages/enterprise-project.css?v=14fd6c5a" />
 </head>
 <body>
 
@@ -158,8 +159,7 @@
       </nav>
       <div class="topic-title-row"><span class="topic-hero-icon ti-y12" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5V3h6v1.5"/><path d="M8.5 9H12M10.5 12.5H15.5"/><path d="M8.5 16l1.4 1.4 2.4-2.8"/></svg></span><h1>Enterprise Project</h1></div>
       <p class="text-muted-dark max-w-600 mt-2 fs-sm lh-base">
-        <!-- CONTENT: one or two sentences introducing the topic, with the key ideas in <strong>. -->
-        Notes for the NESA focus area <strong>Enterprise project</strong>, following the syllabus in order: Identifying and defining, Researching and planning, Producing and implementing and Testing and evaluating.
+        Notes for the NESA focus area <strong>Enterprise project</strong>: how to <strong>define</strong>, <strong>plan</strong>, <strong>build</strong> and <strong>evaluate</strong> an enterprise system. One worked example, ClubHub, carries every Gantt chart, data flow diagram, risk register and test table, in the order of the syllabus.
       </p>
       <div class="topic-header-meta">
         <span class="meta-pill year12">Year 12 — HSC</span>
@@ -201,9 +201,20 @@
 
         <aside class="yr12 topic-breakout" aria-label="Topic introduction">
           <span class="breakout-label">Why this matters now</span>
-          <!-- CONTENT: topic introduction. Two short paragraphs linking the topic to students' lives, then a closing question in .breakout-question with a .bq-lead label. -->
-          <p>This page covers the Enterprise project focus area of the NESA Enterprise Computing syllabus.</p>
+          <p>Every app you use, from your school’s timetable to the canteen’s online ordering, started as somebody’s problem, a plan, a budget and a great deal of testing. Projects rarely go wrong because the programming was too hard. They go wrong because nobody agreed what the system was for, nobody noticed a task running late, or nobody checked with the people who had to use it.</p>
+          <p>This focus area is where the course comes together: you plan and run a project, document it, choose how to build it, switch it on and judge whether it worked. It also holds tools that the HSC asks about again and again, such as Gantt charts, data flow diagrams and testing methods. On this page one made-up project, <strong>ClubHub</strong>, is used for every tool so you can see them working together.</p>
+          <p class="breakout-question"><span class="bq-lead">Try this as you learn</span> Think of a problem at your school or a club you belong to that a system could fix. Write it as a <em>problem</em>, not a solution, in two sentences, and add one way you would know it had been solved.</p>
         </aside>
+
+        <div class="callout info">
+            <strong>How this focus area is assessed</strong>
+            <p>Two facts from NESA’s published pages (checked on 28 September 2026):</p>
+            <ul>
+              <li><strong>The HSC examination.</strong> Enterprise Computing has a single external examination, done on a computer: 80 marks in 2 hours 30 minutes including 10 minutes reading time, made up of objective-response items (about 20 marks) and short-answer items (about 60 marks). There is no submitted major project and no HSC practical exam, so this focus area is examined through questions on the tools and processes below, often with a scenario and the Course Specifications notations. Year 11 content is assumed knowledge. See NESA’s <a href="https://curriculum.nsw.edu.au/learning-areas/tas/enterprise-computing-11-12-2022/assessment/hsc-examinations" target="_blank" rel="noopener">HSC examination specifications</a>.</li>
+              <li><strong>School-based assessment.</strong> The Year 12 school-based mark has two mandatory components, each weighted 50%: knowledge and understanding of course content, and knowledge and skills in the practical application of the content. Schools decide the number, type and weighting of tasks, within a limit of one take-home task worth no more than 15% (for HSC courses the limit starts from Term 4, 2026). NESA publishes no compulsory project task, project weighting or project length for Enterprise Computing, so whether and how your school assesses a project is your school’s decision. Ask for your school’s assessment schedule. NESA also requires tasks to reflect a student’s own knowledge, skills and understanding rather than the use of generative AI. See <a href="https://curriculum.nsw.edu.au/learning-areas/tas/enterprise-computing-11-12-2022/assessment/school-based-assessment" target="_blank" rel="noopener">school-based assessment</a> and NESA’s notice on the <a href="https://www.nsw.gov.au/education-and-training/nesa/news/all/new-take-home-assessment-rules" target="_blank" rel="noopener">take-home task limit</a>.</li>
+            </ul>
+            <p><strong>Caveats.</strong> NESA’s Enterprise Computing pages do not state how school-based and examination marks are combined, and on 28 September 2026 their sample assessment schedules had not been published. These rules change, so confirm details with your teacher and NESA’s pages.</p>
+          </div>
 
         <!-- ═══════════════════════════════════════════════════════ -->
         <!--  IDENTIFYING AND DEFINING                              -->
@@ -214,8 +225,8 @@
         </div>
 
         <aside class="yr12 topic-breakout subtopic-breakout" aria-label="Part introduction">
-          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
-          <p>This part covers 2 NESA dot points: identifying and defining.</p>
+          <p>This part sets up a project. You define the problem, plan the time and resources, choose how to document progress, and then explain how offshore, remote, freelance and start-up work change the way projects are run.</p>
+          <p class="breakout-question"><span class="bq-lead">Ask yourself</span> If a task in your project lost a week to an unexpected problem, what would your plan tell you about which other tasks were now late?</p>
         </aside>
 
         <section id="manage-document">
@@ -224,8 +235,90 @@
           <p class="syllabus-concept">📌 <em><strong>Describe</strong> the tools and processes used to manage and document the development of an enterprise system</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>problem definition</li><li>time and resource management, including Gantt charts</li><li>an iterative approach</li><li>production process and technical skills</li><li>testing and evaluation</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (describe). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <div class="callout info">
+            <strong>Our running example: ClubHub (a fictional project)</strong>
+            Riverbend Community Sports Club (invented for these notes) has four courts, a clubhouse canteen and a few hundred members. Court bookings are taken on a paper sheet and by text message. The canteen coordinator counts stock by hand on Sunday nights and often finds out about shortages on Saturday morning. A team of four students (<strong>Ana</strong>, project manager and analyst; <strong>Ben</strong>, database; <strong>Chloe</strong>, interface; <strong>Dev</strong>, testing) is asked to build <strong>ClubHub</strong>, a booking and inventory system: members book a free court online, and the canteen coordinator records stock and gets a reorder list. Every tool on this page is applied to ClubHub, so you can watch one project move from idea to evaluation. The club, the people and all the figures are invented for teaching.
+          </div>
+          <p>NESA defines <strong>project management</strong> as “the process of planning, organising, controlling resources, monitoring timelines and activities, and completing a project to achieve a goal that meets identified criteria” (NESA syllabus glossary). Project work in this focus area follows the <strong>design and production process</strong>: identifying and defining, researching and planning, producing and implementing, and testing and evaluating. Each stage has its own tools. The table shows where each one appears in these notes, so you can see the whole project before the detail.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Stage of the design and production process</th><th>Question the stage answers</th><th>Main tools and documents</th><th>Where on this page</th></tr></thead>
+              <tbody><tr><td>Identifying and defining</td><td>What is the problem, who has it and what would success look like?</td><td>Problem definition, Gantt chart, budget estimate</td><td><a href="#manage-document">Managing and documenting</a>, <a href="#changing-enterprise">Changing enterprise</a></td></tr><tr><td>Researching and planning</td><td>What must the system do and how will it be designed?</td><td>Interviews, surveys, DFDs, system flowcharts, decision trees, process diary, budget</td><td><a href="#design-tools">Design tools</a>, <a href="#requirements-tools">Requirements tools</a></td></tr><tr><td>Producing and implementing</td><td>How will we build it and switch it on?</td><td>Development approach, storyboards, risk register, implementation plan, training</td><td><a href="#development-approaches">Approaches</a>, <a href="#implementation-plan">Implementation</a></td></tr><tr><td>Testing and evaluating</td><td>Does it work, and does it solve the problem?</td><td>Test tables, documentation trials, evaluation against criteria</td><td><a href="#verify-validate">Verify and validate</a></td></tr></tbody>
+            </table>
+          </div>
+          <h3>Problem definition</h3>
+          <p>A <strong>problem definition</strong> is a short, precise statement of the problem the project will solve. It is written first because every later decision, from which diagram to draw to whether the finished system counts as a success, is judged against it. A good one describes the <em>problem</em>, not the solution: “build an app” is a solution, whereas “members cannot see which courts are free, so double bookings happen” is a problem. It also says who is affected, what the project will and will not cover (its <strong>scope</strong>), the <strong>constraints</strong> (time, money, skills, technology) and measurable <strong>success criteria</strong>. NESA’s teaching advice says students identify “a real-world problem of interest and develop a solution”, so the definition must come from a real need, confirmed with the people who have it.</p>
+          <div class="callout info">
+            <strong>A model problem definition for ClubHub</strong>
+            <strong>Problem.</strong> Riverbend Community Sports Club records court bookings on a paper sheet and by text message, and counts canteen stock by hand. Members cannot see which courts are free, the same court is sometimes booked twice, and the canteen runs short of popular items while over-ordering others.<br>
+            <strong>Who is affected.</strong> Members, the club secretary, the canteen coordinator and the suppliers who receive orders.<br>
+            <strong>Aim.</strong> Build an online system that lets members book a free court and lets the canteen coordinator record stock and produce a reorder list.<br>
+            <strong>In scope.</strong> Court bookings, member fees status, canteen stock counts, reorder lists, booking and payment reports. <strong>Out of scope (this release).</strong> Online payments and the coaching timetable.<br>
+            <strong>Constraints.</strong> Delivery within six weeks, a budget of up to $800 (all figures invented), a team of four students, and personal information about members that must be protected.<br>
+            <strong>Success criteria.</strong> (1) The same court cannot be booked twice for the same time. (2) A member can make a booking in no more than four screens. (3) The canteen coordinator can produce a reorder list in one action. (4) Only authorised people can see member details.
+          </div>
+          <p>Check a problem definition with four questions. Does it name a real problem rather than a product? Could a stranger tell who is affected? Can each success criterion be tested with a yes or no? Is the scope small enough to finish in the time available? If the answer to any is no, tighten it before you plan anything else.</p>
+          <h3>Time and resource management, including Gantt charts</h3>
+          <p><strong>Time management</strong> means estimating how long each task will take, putting the tasks in a workable order and checking progress against the plan. <strong>Resource management</strong> means making sure the things the project needs are available when they are needed: people and their skills, hardware and software, data, money and each person’s hours. The main tool is the <strong>Gantt chart</strong>. NESA (Course Specifications, p.12) describes it as displaying “each of the component tasks in a proposed system development on an estimated timeline”, with self-explanatory task names, the time needed for each task and its dependent tasks, a dated time scale and marked milestones. Its second example adds team members and the percentage complete, and says charts “should be regularly updated during development to reflect actual versus estimated times for tasks”. The notation is explained in the <a href="toolkit.html#gantt-charts">Course Toolkit</a>; here we apply it.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Gantt chart</span></p>
+              <h4 class="figure-title">ClubHub: schedule, team members and progress</h4>
+              <p class="figure-lead">Four phases, eighteen rows, each task with an owner and a percentage complete at the end of Thursday 5 November.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="ep-gantt"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Each phase is a <strong>summary task</strong> that groups smaller tasks, so the design and production stages are visible in the chart.</li><li>Arrows show <strong>dependencies</strong>: “Build stock screens” cannot start until “Build database” is finished, and “Integrate modules” cannot start until the stock screens are built.</li><li>The solid part of each bar is <strong>work done</strong>. Build database is planned to be 80% done by the status line (four of five days) but Ben reports 60%, so it is a day behind.</li><li>Because of the dependencies, that delay pushes back the stock screens, the integration and the tests. Hollow diamonds are <strong>milestones</strong>: points in time with no duration.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Ben is 20 percentage points behind. Name two ways the team could recover the day without moving the handover milestone.</p>
+            </div>
+          </figure>
+          <p>Reading a Gantt chart for problems is as important as drawing one. Ask which tasks are <strong>late or behind</strong> (compare the shaded share of a bar with how far along the time scale the status date is), which tasks <strong>depend</strong> on them, and which people are <strong>double-booked</strong> or idle. The longest chain of dependent tasks decides the earliest finish date, so a delay to any task on that chain moves the handover. A task off that chain has some slack. In ClubHub the chain runs database, stock screens, integration, testing, trial, handover, so Ben’s slip matters; a slip in Ana’s data flow diagram would not.</p>
+          <div class="callout assessor">
+            <strong>Exam focus: a Gantt chart to schedule and track a team’s allocated activities</strong>
+            The 2025 HSC included a question about using a Gantt chart to schedule and track a team’s allocated activities (see the <a href="https://www.nsw.gov.au/education-and-training/nesa/curriculum/hsc-exam-papers/enterprise-computing/2025" target="_blank" rel="noopener">2025 exam page</a>). NESA’s marking guidelines have the exact wording; here is how to build a full answer, whether you are asked to draw the chart or to describe how it is used.
+            <ol>
+              <li><strong>Name the tasks</strong> with self-explanatory titles (“Design database”, not “Phase 2”) and group them under phases.</li>
+              <li><strong>Give each task a duration and dates</strong> on a dated time scale, not just “week 1, week 2”.</li>
+              <li><strong>Show dependencies</strong> with arrows from the end of one bar to the start of the task that needs it.</li>
+              <li><strong>Allocate every task to a named team member</strong> (or members) and check nobody is double-booked. This is the “allocated activities” part.</li>
+              <li><strong>Mark milestones</strong> as hollow diamonds, for example “Design approved”.</li>
+              <li><strong>Track progress</strong>: shade each bar to its percentage complete, compare it with where the status date says it should be, and record actual against estimated time. This is the “track” part.</li>
+              <li><strong>Update and act</strong>: revise dates when a task slips, say what the slip affects through the dependencies, and record the reason in the process diary.</li>
+            </ol>
+            A model answer in words, using ClubHub: “Ana interviews the committee (19–20 October) then writes the problem definition (21–22 October), which ends in the milestone Requirements approved on 23 October. Ben designs the database, Chloe designs the screens and Ana draws the data flow diagram in parallel from 26 October. At the end of 5 November the chart shows Build database 60% complete against 80% planned, so Ben is a day behind. Because Build stock screens depends on it, the schedule is revised and the reason recorded in the process diary.”
+          </div>
+          <h3>An iterative approach</h3>
+          <p>NESA’s teaching advice describes project work as “an iterative process that builds on a systematic approach to problem identification, research, problem-solving, prototyping and evaluation”. <strong>Iterative</strong> means the team repeats a cycle of designing, building, testing and reviewing, improving the system a little each time, instead of expecting to get everything right in one pass. The design and production stages are not a one-way street: evidence from testing sends the team back to change the design, and a change to the design means the plan, the diagrams and the tests are updated too.</p>
+          <p>Iteration keeps a project honest because the client sees something early. In ClubHub the team did not wait until the end to find out whether members could use the booking screen:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Iteration</th><th>What was made</th><th>What was learned</th><th>What changed</th></tr></thead>
+              <tbody><tr><td>1</td><td>Paper prototype of the Book a court screen</td><td>Two members tested it. Both expected to pick the date first, then the court; the prototype asked for the court first.</td><td>Storyboard screen 2 redrawn with date, then court, then time.</td></tr><tr><td>2</td><td>Clickable screens with a test database</td><td>The secretary could not tell which bookings were guests. Members found the 30-minute steps confusing.</td><td>A “Guest” marker added to the booking list; time choices shown as start and end times.</td></tr><tr><td>3</td><td>Working booking module</td><td>A double booking was possible if two members pressed Confirm at the same moment.</td><td>The booking check moved to the database so it runs when a booking is saved; tests repeated.</td></tr></tbody>
+            </table>
+          </div>
+          <p>Each loop is recorded in the process diary and the Gantt chart is adjusted. Iteration is a habit that any development approach can use, and it is central to agile and prototyping (see <a href="#development-approaches">Choosing a Development Approach</a>). A common mistake is to iterate without a definition of “good enough”: return to your success criteria to decide when to stop.</p>
+          <h3>Production process and technical skills</h3>
+          <p>NESA’s glossary defines <strong>producing</strong> as “actively realising (making) designed solutions, using appropriate resources and means of production”. The <strong>production process</strong> is the sequence of steps that turns the design into a working system. For ClubHub it runs: set up the shared workspace and a backup routine; build the database tables from the schema and data dictionary; build screens from the approved storyboard; add validation so bad data is refused; connect the parts; and keep a written record of every change so that the work can be repeated, fixed or handed over.</p>
+          <p>Doing that takes <strong>technical skills</strong>, and a good team audits them early, because a missing skill is a risk. If nobody can do something, the team can train someone, share the task or (see approaches) outsource it.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Technical skill</th><th>Used in ClubHub for</th><th>Who has it</th><th>Gap and plan</th></tr></thead>
+              <tbody><tr><td>Database design and SQL (<a href="toolkit.html#relational-databases">schemas</a>, <a href="toolkit.html#sql-syntax">SQL</a>)</td><td>Tables for members, courts, bookings, stock items and suppliers; queries for the reorder list</td><td>Ben</td><td>None</td></tr><tr><td>Interface design (<a href="toolkit.html#storyboards">storyboards</a>)</td><td>Booking and stock screens that a first-time user can follow</td><td>Chloe</td><td>Ana to review for accessibility (contrast, large touch targets)</td></tr><tr><td>Programming or scripting</td><td>Validation, the booking check, the reorder calculation</td><td>Ben, Chloe</td><td>Dev learning the basics to read the code when testing</td></tr><tr><td>Spreadsheet skills (<a href="toolkit.html#spreadsheet-software">functions</a>)</td><td>Budget, importing the existing stock list, checking totals</td><td>Ana</td><td>None</td></tr><tr><td>Diagramming and documentation</td><td>DFD, system flowchart, decision tree, process diary, user guide</td><td>Ana, Dev</td><td>Shared: each person owns one document</td></tr><tr><td>Testing skills</td><td>Test tables, boundary and erroneous data, recording results</td><td>Dev</td><td>Ana and Chloe to pair with Dev on test days</td></tr></tbody>
+            </table>
+          </div>
+          <p>Technical skills sit beside <em>working</em> skills such as communicating with a client, planning your own time and giving useful feedback. Both kinds are evidence in a process diary. When you write about a project, name the skills you used and where you were stretched.</p>
+          <h3>Testing and evaluation</h3>
+          <p>Testing and evaluation are not one step at the end. They run through the whole project, and they are how iteration decides what to change. <strong>Testing</strong> checks whether something behaves as expected. <strong>Evaluation</strong>, in NESA’s glossary wording, is to “make a judgement based on criteria; determine the value of”, so the criteria come from the problem definition: you evaluate ClubHub by asking whether it meets each success criterion.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>When</th><th>What is tested or evaluated</th><th>Evidence kept</th></tr></thead>
+              <tbody><tr><td>While researching</td><td>A paper prototype with real users; whether the requirements were understood</td><td>Interview notes, photos of prototype tests, a list of changes</td></tr><tr><td>While producing</td><td>Each module as it is built, using simulated data (normal, boundary and erroneous values)</td><td>Test table with expected and actual results</td></tr><tr><td>Before implementing</td><td>The whole system against requirements; the operation and maintenance documentation; volume and acceptance tests</td><td>Test log, signed acceptance, documentation trial notes</td></tr><tr><td>After implementing</td><td>Whether the problem is solved, using the success criteria; user feedback; impact on the club</td><td>Evaluation report, survey results, list of improvements</td></tr><tr><td>Throughout</td><td>Ongoing evaluation of your own progress, decisions and teamwork</td><td>Reflective comments in the process diary</td></tr></tbody>
+            </table>
+          </div>
+          <p>Part 4 of these notes covers the detail: <a href="#verify-validate">verifying and validating</a> a system, test data and maintenance. The Toolkit lists NESA’s six testing methods in <a href="toolkit.html#testing-methods">Methods for Testing a System</a>.</p>
+          <div class="key-terms"><div class="key-term-item"><strong>Problem definition</strong><span>A precise statement of the problem, who is affected, the scope, the constraints and the success criteria.</span></div><div class="key-term-item"><strong>Project management</strong><span>NESA: planning, organising, controlling resources, monitoring timelines and activities, and completing a project to achieve a goal that meets identified criteria.</span></div><div class="key-term-item"><strong>Milestone</strong><span>An important point in a project, such as “Design approved”, shown as a hollow diamond on a Gantt chart. It has no duration.</span></div><div class="key-term-item"><strong>Iterative approach</strong><span>Repeating a cycle of design, build, test and review so that each pass improves the system.</span></div><div class="key-term-item"><strong>Evaluate</strong><span>NESA: make a judgement based on criteria; determine the value of.</span></div></div>
         </section>
 
         <hr class="divider" />
@@ -236,8 +329,35 @@
           <p class="syllabus-concept">📌 <em><strong>Explain</strong> the effect of the changing nature of enterprise on the development of projects</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>offshore development</li><li>working remotely</li><li>freelance work</li><li>enabling the growth of start-ups</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (explain). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>Digital tools have changed <em>where</em> and <em>by whom</em> enterprise systems are built. Fast networks, cloud services and online collaboration tools mean a project team no longer has to sit in one room, work for one employer or even live in one country. NESA asks you to explain the effect of four changes on the development of projects. To <em>explain</em> is to give causes and effects, so for each change the notes below say what it is, how it changes the way a project is planned and built, the <strong>benefits</strong> and the <strong>risks</strong>, and how a team manages them. In ClubHub’s case the team is local, so each change is illustrated by asking “what if the club had done it this way instead?”.</p>
+          <h3>Offshore development</h3>
+          <p><strong>Offshore development</strong> means having software or systems built by a team in another country. It is not the same as <strong>outsourcing</strong>, which means paying an outside organisation to do the work wherever it is; a company can offshore work to its own overseas office, and it can outsource to a firm down the road. Enterprises offshore to reach skills that are scarce at home, to lower the cost of development and to keep work going across time zones.</p>
+          <p><strong>Effect on the project.</strong> The team must plan for distance. A large time difference leaves few overlapping working hours, so meetings are scheduled, decisions can take a day longer and the Gantt chart has to allow for the delay. Requirements must be written clearly enough to be understood without a conversation, which pushes teams towards detailed specifications, prototypes and written acceptance tests. Differences in language and culture can cause misunderstandings that show up as defects late in the project.</p>
+          <p><strong>Benefits:</strong> access to specialist skills, potentially lower costs, extended working hours and more capacity. <strong>Risks:</strong> communication delays, quality that is harder to check, dependence on one supplier, and legal and security issues. Under the <em>Privacy Act 1988</em> (Cth), an Australian organisation that discloses personal information to an overseas recipient must generally take reasonable steps to ensure the recipient does not breach the Australian Privacy Principles (APP 8, cross-border disclosure; see the <a href="https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-8-app-8-cross-border-disclosure-of-personal-information" target="_blank" rel="noopener">OAIC guidelines</a>), so where member data is stored and who can see it must be decided early. Ownership of the code, confidentiality and how disputes are resolved belong in the contract.</p>
+          <p><strong>Managing it:</strong> agree overlap hours, use a shared plan and task board, split the work into small deliverables with acceptance tests, review code regularly and keep documentation up to date so knowledge is not locked up in another country.</p>
+          <h3>Working remotely</h3>
+          <p><strong>Working remotely</strong> means team members work from home or another place away from a shared office, connected by video meetings, messaging, cloud storage and shared documents. Remote working is possible because the project’s materials (documents, diagrams, code, test results) are digital and can be shared online, as the <a href="networking-systems.html#connectivity-work">Networking Systems</a> notes explain for connectivity and work.</p>
+          <p><strong>Effect on the project.</strong> The team can recruit from a wider area, and members save travel time, but the plan has to replace the conversations that happen by chance in an office. Teams write down decisions, keep a shared Gantt chart and process diary, hold short regular check-ins and rely on tools such as version control so that two people do not overwrite each other’s work. Progress is judged by finished tasks rather than by who is seen working, so tasks need to be small and clearly defined.</p>
+          <p><strong>Benefits:</strong> a wider pool of talent, flexibility, lower office costs and continuity when people cannot travel. <strong>Risks:</strong> weaker communication, isolation and unclear expectations; and security, because company data now sits on home networks and personal devices. Managing this uses the controls in <a href="cybersecurity.html#risk-management">Cyber Risk Management</a>: multi-factor authentication, encrypted connections, access only to the data a role needs, and clear rules about which tools may hold personal information. A ClubHub example: if Ben works from home on the member table, he should use test data, not real members’ details.</p>
+          <h3>Freelance work</h3>
+          <p><strong>Freelance work</strong> is work done by a self-employed person who takes on tasks or projects for different clients, rather than being an employee. Freelancers are used for particular pieces of work such as an interface design, a database build or testing.</p>
+          <p><strong>Effect on the project.</strong> A team can add a missing skill for exactly as long as it is needed, and the project plan can be built around specialist tasks. The team must also plan the handover: a freelancer’s knowledge leaves when the contract ends, so the work has to be documented and the deliverables clearly defined (what will be delivered, when, to what standard, and for what payment, often by milestone). Availability is a scheduling risk, because a freelancer may have other clients.</p>
+          <p><strong>Benefits:</strong> flexible cost, specialist skills, fast start. <strong>Risks:</strong> availability, uneven quality, dependence on one person, and <strong>ownership of the work</strong>. In Australian law the creator of a work is generally its first owner under the <em>Copyright Act 1968</em>, so a client who wants to own or freely modify a freelancer’s code needs the contract to say so in writing, and should get legal advice on the wording. For ClubHub, the club might hire a freelance graphic designer for the logo; the agreement should state that the club may use and change it.</p>
+          <h3>Enabling the growth of start-ups</h3>
+          <p>A <strong>start-up</strong> is a new enterprise, usually built around an idea for a product or service, that aims to grow quickly. Cloud computing, software as a service, open-source software and app stores have lowered what it costs to begin, because a start-up can rent computing power by the month instead of buying servers, and can add offshore, remote and freelance help without a large payroll. The Networking Systems notes discuss what makes a start-up succeed in <a href="networking-systems.html#startup-success">Start-ups and success</a>.</p>
+          <p><strong>Effect on the project.</strong> Start-up projects tend to be short, iterative and focused on getting something in front of users quickly. A common tactic is to build a <strong>minimum viable product (MVP)</strong>, the simplest version that solves the core problem and lets the founders learn from real users, then improve it in cycles. Requirements change often, so agile approaches and prototypes are popular, and money is limited, so the budget and the time-and-resource plan are tighter.</p>
+          <p><strong>Benefits:</strong> lower entry costs, speed and the ability to test an idea before committing much money. <strong>Risks:</strong> running out of money, depending on other companies’ platforms (a price rise or a change of terms affects the whole business), neglecting security and privacy because of pressure to launch, and difficulty scaling a quickly built system. A ClubHub example: a start-up could turn ClubHub into a service for many clubs; its first job would be a minimum viable product for one, using hosted cloud services rather than buying hardware.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Change</th><th>How it changes the way a project is developed</th><th>Main benefit</th><th>Main risk</th><th>How to manage it</th></tr></thead>
+              <tbody><tr><td>Offshore development</td><td>Longer feedback loops; detailed written specifications; acceptance tests</td><td>Skills and capacity at lower cost</td><td>Communication delay, quality, privacy across borders</td><td>Overlap hours, small deliverables, contract terms, data-location decisions</td></tr><tr><td>Working remotely</td><td>Shared online plans and diaries; version control; written decisions</td><td>Wider talent pool, flexibility</td><td>Weak communication, data security</td><td>Regular check-ins, MFA, least-privilege access, test data not real data</td></tr><tr><td>Freelance work</td><td>Tasks defined as deliverables; handover documentation</td><td>Specialist skill exactly when needed</td><td>Availability, ownership, dependence on one person</td><td>Written agreement covering ownership; milestones; documentation</td></tr><tr><td>Growth of start-ups</td><td>Short cycles, MVPs, cloud services, changing requirements</td><td>Low cost of starting; speed</td><td>Funding, platform dependence, weak security</td><td>Prioritise essentials, keep data portable, budget for security</td></tr></tbody>
+            </table>
+          </div>
+          <div class="callout assessor">
+            <strong>Exam focus: offshore development and freelance work</strong>
+            The 2025 HSC short-answer section included a question on offshore development and freelance work (per NESA’s marker feedback). When a question asks you to <strong>explain</strong> the effect of a change on a project, do more than name a benefit: (1) say what the change means in one line; (2) give an effect on how the project is planned or built; (3) give a benefit <em>and</em> a risk, each with a reason; (4) tie at least one point to the scenario in the question. A one-sided answer (“it is cheaper”) is weaker than one that balances cost against communication, quality or security. Never invent statistics.
+          </div>
+          <div class="key-terms"><div class="key-term-item"><strong>Offshore development</strong><span>Having a system built by a team in another country, whether in the organisation’s own overseas office or a contracted firm.</span></div><div class="key-term-item"><strong>Outsourcing</strong><span>Paying an outside organisation to do work that could be done in-house. It may be in the same country or overseas.</span></div><div class="key-term-item"><strong>Freelance work</strong><span>Work done by a self-employed person on a task or project basis for one or more clients.</span></div><div class="key-term-item"><strong>Minimum viable product</strong><span>The simplest version of a product that solves the core problem and can be tested with real users.</span></div></div>
         </section>
 
         <div class="quiz" data-quiz="ep-1"></div>
@@ -251,8 +371,8 @@
         </div>
 
         <aside class="yr12 topic-breakout subtopic-breakout" aria-label="Part introduction">
-          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
-          <p>This part covers 3 NESA dot points: researching and planning.</p>
+          <p>Research turns a vague idea into a design that the team and the client agree on. Here you investigate the planning and design tools, tell three kinds of thinking apart and select the criteria the project must meet.</p>
+          <p class="breakout-question"><span class="bq-lead">Ask yourself</span> Which one diagram would you draw first for a school canteen ordering system, and what would it let the client tell you?</p>
         </aside>
 
         <section id="design-tools">
@@ -261,8 +381,107 @@
           <p class="syllabus-concept">📌 <em><strong>Investigate</strong> tools that support the design and development of an enterprise system</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>online collaboration</li><li>time/task action plans</li><li>process diary, including ongoing evaluation</li><li>budget</li><li>system flowcharts</li><li>data flow diagrams</li><li>decision trees</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>To <em>investigate</em> a tool is to ask what it is for, what it costs the team to use, where it falls short and when it is the right choice. The seven tools below each answer a different question about the ClubHub project. Read the comparison first, then the detail; the closing judgement says which ones a small team could not do without.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Tool</th><th>The question it answers</th><th>Strength</th><th>Weakness</th></tr></thead>
+              <tbody><tr><td>Online collaboration</td><td>How do we work on the same files and talk to each other?</td><td>Everyone sees the latest version; works across distance</td><td>Needs rules and discipline; data may be stored in the cloud</td></tr><tr><td>Time/task action plan</td><td>Who does what by when, this week?</td><td>Simple, quick to update</td><td>Does not show dependencies or progress</td></tr><tr><td>Process diary</td><td>What did we do, what went wrong and what did we learn?</td><td>Evidence of progress and reasoning; drives ongoing evaluation</td><td>Only useful if entries are regular and honest</td></tr><tr><td>Budget</td><td>What will it cost and are we within the limit?</td><td>Shows feasibility and tracks spending</td><td>Estimates can be wrong; hidden costs</td></tr><tr><td>System flowchart</td><td>What are the processes, devices and stored data of the system?</td><td>Shows the whole system including hardware</td><td>Does not show the logic inside a process</td></tr><tr><td>Data flow diagram</td><td>What data moves between people, processes and stores?</td><td>Agrees scope with the client; no technology assumed</td><td>Does not show order or timing</td></tr><tr><td>Decision tree</td><td>What rule leads to which outcome?</td><td>Makes business rules explicit and testable</td><td>Grows large if there are many conditions</td></tr></tbody>
+            </table>
+          </div>
+          <h3>Online collaboration</h3>
+          <p>Online collaboration tools let a team share and work on project materials without being in the same place. The main kinds are <strong>shared document and file storage</strong> (with version history so an earlier copy can be restored), <strong>messaging and video meetings</strong>, <strong>task boards</strong> that show each task as a card moving from “to do” to “done”, and <strong>version control</strong> for code and other files that lets several people change the same project and merge their work. NESA defines <em>collaborate</em> as “working with others towards a shared goal, through a variety of modes of communication”, and these tools are those modes.</p>
+          <p><strong>Criteria for choosing.</strong> Can everyone reach it, including on a phone? Does it keep version history? Can access be limited by role? Where is the data stored and who can read it? What does it cost? ClubHub’s team chose a shared folder with version history, a task board for weekly tasks and a messaging group for quick questions. <strong>Judgement:</strong> online collaboration is essential, but only with rules: agreed file names, one owner per document, and no real member data in chat messages.</p>
+          <h3>Time/task action plans</h3>
+          <p>A <strong>time/task action plan</strong> is a short list, usually for a week or a work session, of the tasks to be done, who is responsible, when each is due and its status. It sits beneath the Gantt chart: the Gantt chart shows the whole project and its dependencies, the action plan says what each person does <em>this week</em>. It is quick to write and easy to review at a check-in.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Task</th><th>Who</th><th>Due</th><th>Priority</th><th>Status</th></tr></thead>
+              <tbody><tr><td>Finish Bookings and Courts tables</td><td>Ben</td><td>Mon 2 Nov</td><td>High</td><td>Done</td></tr><tr><td>Import stock list; remove duplicates</td><td>Ben</td><td>Thu 5 Nov</td><td>High</td><td>In progress (60%)</td></tr><tr><td>Build Book a court screen from storyboard 2</td><td>Chloe</td><td>Fri 6 Nov</td><td>High</td><td>In progress (80%)</td></tr><tr><td>Write first draft of user guide: booking</td><td>Dev</td><td>Fri 6 Nov</td><td>Medium</td><td>Not started</td></tr><tr><td>Check budget against invoices</td><td>Ana</td><td>Fri 6 Nov</td><td>Medium</td><td>Done</td></tr></tbody>
+            </table>
+          </div>
+          <p>An action plan does not show that “Build stock screens” cannot start until the database is finished, and it does not show percentage complete on a time scale. Use it with the Gantt chart, not instead of it. <strong>Judgement:</strong> a small team gets the most from a Gantt chart for the whole project and an action plan for each week.</p>
+          <h3>Process diary, including ongoing evaluation</h3>
+          <p>A process diary (or log book) documents the progress of the project as it happens. NESA (Course Specifications, p.13) says entries made by team members at regular intervals should include the date, the person making the entry, progress since the last entry, tasks achieved, stumbling blocks or issues and how they were managed, possible approaches for upcoming tasks, reflective comments and resources used. The layout of each item is in the <a href="toolkit.html#process-diaries">Course Toolkit</a>. <strong>Ongoing evaluation</strong> is the habit of judging your work against your success criteria <em>as you go</em> rather than only at the end: the reflective comment in each entry is where you do it. Ongoing evaluation is why a diary is more than a record; it changes what the team does next.</p>
+          <div class="callout info">
+            <strong>A model process diary entry (ClubHub)</strong>
+            <strong>Date:</strong> Thursday 5 November 2026. <strong>Person:</strong> Ben. <strong>Progress since last entry (Monday):</strong> the Members, Courts and Bookings tables are built and linked; the Stock and Suppliers tables have their fields but are not yet linked. <strong>Tasks achieved:</strong> created three tables from the data dictionary and loaded 40 invented test members. <strong>Stumbling blocks:</strong> importing the club’s stock list failed because some item names had extra spaces and two items appeared twice. I removed the spaces in the spreadsheet first, then checked the duplicates with the canteen coordinator before merging them. <strong>Possible approaches for next tasks:</strong> either check for double bookings in the screen code or make the database refuse a second booking for the same court and time; I prefer the database rule because it works however a booking is entered. <strong>Reflective comments:</strong> the import took a day longer than planned because I did not look at the real data during research; next time we inspect real data before we estimate. I am about one day behind on the Gantt chart and have told Ana so the stock screens can be rescheduled. <strong>Resources used:</strong> database software, a copy of the stock spreadsheet, advice from the canteen coordinator.
+          </div>
+          <p><strong>Judgement:</strong> the diary is the cheapest and most useful tool on the list, because it records the reasons behind changes to the Gantt chart. Its weakness is that it is only as good as its entries: a diary written the night before it is due is not ongoing evaluation.</p>
+          <h3>Budget</h3>
+          <p>A <strong>budget</strong> is a plan of the money a project will need and where it will be spent. It answers a feasibility question (“can we afford this?”) and, once the project is running, a control question (“are we within what we planned?”). List every cost you can identify, estimate each one, add a <strong>contingency</strong> (an amount held back for costs you did not foresee), and compare the total with the money available. Then keep an <em>actual</em> column and compare it with the planned figure as invoices arrive. All prices below are invented for teaching; a real budget uses quotes.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Item</th><th>Planned ($)</th><th>Actual to date ($)</th><th>Difference ($)</th></tr></thead>
+              <tbody><tr><td>Web hosting and domain name (12 months)</td><td>240</td><td>240</td><td>0</td></tr><tr><td>Tablet and case for the canteen</td><td>350</td><td>329</td><td>21 under</td></tr><tr><td>Software licences (school-provided and open-source tools)</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Printed quick-reference cards and training session</td><td>60</td><td>not yet spent</td><td>–</td></tr><tr><td>Refreshments for the committee trial day</td><td>40</td><td>not yet spent</td><td>–</td></tr><tr><td><strong>Subtotal</strong></td><td><strong>690</strong></td><td>569</td><td></td></tr><tr><td>Contingency (10% of subtotal)</td><td>69</td><td>0</td><td></td></tr><tr><td><strong>Total planned</strong></td><td><strong>759</strong></td><td></td><td></td></tr><tr><td>Club’s approved amount</td><td>800</td><td></td><td></td></tr><tr><td><strong>Unallocated</strong></td><td><strong>41</strong></td><td></td><td></td></tr></tbody>
+            </table>
+          </div>
+          <div class="code-block"><pre><code class="language-text">Subtotal    =SUM(B2:B6)     gives 690
+Contingency =B7*0.1         gives 69
+Total       =B7+B8          gives 759
+Unallocated =800-B9         gives 41</code></pre></div>
+          <p>This is the spreadsheet method from the <a href="toolkit.html#spreadsheet-software">Course Toolkit</a>. Notice what the budget does not show: student time. ClubHub’s team is not paid, but a real project would cost its people’s hours, and a good budget records them even when nobody is invoiced, so the client can see the full value. <strong>Judgement:</strong> a budget is essential if any money changes hands. If a cost is found to be more than planned, the response is to reduce scope, raise more money or use the contingency, and the decision belongs in the process diary.</p>
+          <h3>System flowcharts</h3>
+          <p>A <strong>system flowchart</strong> shows the main processes and devices in a system and how data moves between them. It answers “what is this system made of?” at the level of hardware and stored data. The NESA symbols (Course Specifications p.7) are the paper document, process, direct access storage, online display, manual operation, telecommunications link, online input, magnetic tape and cloud; the <a href="toolkit.html#system-flowcharts">Toolkit</a> has the key. Arrows show the direction of <strong>data</strong>, not the order of steps, and no flowchart symbols (terminator, decision) are mixed in.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">System flowchart</span></p>
+              <h4 class="figure-title">ClubHub: processes, devices and stored data</h4>
+              <p class="figure-lead">Bookings and stock each have an input, a process, a file and an output; both files are copied to the cloud.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="ep-sysflow-clubhub"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li><strong>Online input</strong> is data typed straight into the system: here both the booking form and the coordinator’s stock count entry.</li><li>Each file is <strong>direct access storage</strong>, and the double-headed arrows show the process both reads and writes it.</li><li>The <strong>online display</strong> shows the member a message; the <strong>paper document</strong> is the reorder list printed for the supplier.</li><li>The zig-zag line is the <strong>telecommunications link</strong> that carries a copy of the files to the <strong>cloud</strong> backup.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Add a symbol for the club secretary’s monthly report on bookings. Which symbol would you use, and which file does it read from? (NESA’s manual operation symbol would suit a step done by hand, such as counting stock on the shelf.)</p>
+            </div>
+          </figure>
+          <h3>Data flow diagrams</h3>
+          <p>A <strong>data flow diagram</strong> (DFD) shows what data moves between the people outside a system, the processes inside it and the places data is stored. It says nothing about screens or hardware, which is why clients understand it. NESA’s symbols (Course Specifications pp.4–5) are the circle (process), open-ended rectangle (data store), closed near-square rectangle (external entity) and labelled curved arrow (data flow); see the <a href="toolkit.html#dfd">Toolkit</a>. A <strong>Level 0</strong> diagram is an overview of the entire system: one process, all the external entities and no data stores.</p>
+          <p><strong>How to derive it.</strong> (1) List who or what supplies data to the system or receives data from it: these are the external entities (members, the club secretary, the canteen coordinator, suppliers). (2) Write the single system process in the middle. (3) For each entity, list what it sends in and what it gets out, and name each flow with a noun phrase describing the <em>data</em> (“Booking request”, not “Book”). (4) Give every arrow a head and a label, and draw two-way exchanges as two separate curved arrows.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Data flow diagram</span></p>
+              <h4 class="figure-title">ClubHub: Level 0 diagram</h4>
+              <p class="figure-lead">One process, four external entities and eight labelled data flows. No data stores appear at Level 0.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="ep-dfd-clubhub-l0"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>The single circle is the <strong>whole system</strong>. Nothing inside it is drawn yet.</li><li>Every entity has data flowing <em>in</em> and <em>out</em>, and each label names the data (a noun phrase), not an action.</li><li>Any data store (Bookings, Members, Stock) would first appear in the <strong>Level 1</strong> diagram, which splits the circle into processes such as Check and record booking and Update stock.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Sketch two Level 1 processes and two data stores that would sit inside the ClubHub circle. Which flows would connect them?</p>
+            </div>
+          </figure>
+          <h3>Decision trees</h3>
+          <p>A <strong>decision tree</strong> shows how a series of yes/no or multiple-choice questions leads to an outcome. NESA’s examples (Course Specifications p.8) use rectangles joined by labelled branches, and each path ends in a final action; see the <a href="toolkit.html#decision-trees">Toolkit</a>. A decision tree is the clearest way to record a <strong>business rule</strong> and to check it is complete. To build one: write the outcomes the system can produce, work out the questions that separate them, put the most important question at the top and label every branch. Then test every path with an example.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Decision tree</span></p>
+              <h4 class="figure-title">ClubHub: can this member book the court?</h4>
+              <p class="figure-lead">Two questions decide each request; each of the four paths ends in a different action.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="ep-dt-booking"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>Questions are in <strong>rectangles</strong> (not diamonds) and every branch is labelled Yes or No.</li><li>Each path ends in a <strong>final action</strong>. There are four, so testing needs at least four test cases, one per path.</li><li>The tree makes a gap visible: what if a financial member requests a court that is booked and there is no later slot? The rule “offer the next free time” must say what happens next.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Add a question for members under 18 who need a parent’s approval. Where does it go and what does each branch do?</p>
+            </div>
+          </figure>
+          <h3>Choosing between the tools</h3>
+          <p>A small team rarely uses every tool at full strength. The choice depends on the question being asked, so match the tool to the question rather than drawing every diagram.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>If the question is…</th><th>Use…</th><th>Because…</th></tr></thead>
+              <tbody><tr><td>Who and what is outside the system, and what data crosses the boundary?</td><td>Level 0 DFD</td><td>It agrees scope with the client in one picture.</td></tr><tr><td>What hardware, files and processes make up the system?</td><td>System flowchart</td><td>It shows devices and storage, which a DFD ignores.</td></tr><tr><td>What does the system do when…?</td><td>Decision tree</td><td>It makes each rule and outcome explicit and testable.</td></tr><tr><td>Are we on time and who is doing what?</td><td>Gantt chart and action plan</td><td>It shows dependencies, owners and progress.</td></tr><tr><td>Why did we change our mind?</td><td>Process diary</td><td>It records problems, decisions and reflections.</td></tr><tr><td>Can we afford it?</td><td>Budget</td><td>It compares costs with the available money.</td></tr></tbody>
+            </table>
+          </div>
+          <div class="callout assessor">
+            <strong>Exam focus: project management tools and DFD notation</strong>
+            The 2025 HSC asked about project management tools (Question 22) and about Level 0 and Level 1 data flow diagrams “using the correct DFD symbols” (Question 21), according to NESA’s marker feedback. Symbols are easy marks if practised: a process is a <strong>circle</strong>, a data store is a rectangle <strong>open at one side</strong>, an external entity is a <strong>closed near-square rectangle</strong>, and every data flow is a <strong>labelled curved arrow</strong> with an arrowhead. The commonest errors are drawing a data store at Level 0, labelling a flow with a verb or leaving it unlabelled, and joining two external entities directly. If a question asks you to <strong>investigate</strong> or compare tools, give a strength and a limitation for each and finish with a judgement that names the situation in which you would use it.
+          </div>
+          <div class="key-terms"><div class="key-term-item"><strong>Time/task action plan</strong><span>A short list of tasks with who is responsible, due dates and status, usually for a week or a work session.</span></div><div class="key-term-item"><strong>Ongoing evaluation</strong><span>Judging work against the success criteria as the project proceeds, recorded in reflective comments.</span></div><div class="key-term-item"><strong>Contingency</strong><span>An amount of money or time set aside for problems that could not be foreseen.</span></div><div class="key-term-item"><strong>Level 0 data flow diagram</strong><span>NESA: an overview of the entire system that does not show data stores or internal processes.</span></div></div>
         </section>
 
         <hr class="divider" />
@@ -272,8 +491,31 @@
           <p class="outcome-subtitle">🎯 <em>(EC-12-08)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Describe</strong> how computational, design and systems thinking skills are used in the design and development of an enterprise system</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (describe). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>NESA names three thinking skills for design and development. They overlap, and students often blur them, so the safest way to describe them is to define each one, say what question it asks, and then show what it produces in a project. The definitions below are NESA’s (syllabus glossary), shortened.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th></th><th>Computational thinking</th><th>Design thinking</th><th>Systems thinking</th></tr></thead>
+              <tbody><tr><td>NESA’s meaning</td><td>Analysing and solving a problem so that a human, machine or computer can effectively implement the solution: organising data logically, breaking problems into parts, interpreting patterns, and designing and implementing algorithms.</td><td>A process where a need or opportunity is identified and a design solution developed, considering economic, environmental and social impacts; used to understand a problem, generate ideas and refine a design through evaluation and testing.</td><td>An understanding of how related objects or components interact to influence how systems function, including the connectedness and interdependence of components and the impact of decisions.</td></tr><tr><td>The question it asks</td><td>How can I break this down and describe it so that a computer can do it?</td><td>What do the people who will use this need, and does my solution work for them?</td><td>How do the parts connect, and what else changes if I change one of them?</td></tr><tr><td>What you do</td><td>Decompose, find patterns, abstract, write algorithms (flowcharts, decision trees)</td><td>Interview, define the need, generate ideas, prototype, test with users, refine</td><td>Identify components, participants, data flows and feedback; consider effects on other parts and environments</td></tr><tr><td>ClubHub example</td><td>Turn “no double bookings” into a rule that compares start and end times</td><td>Test the paper booking screen with two members, then redraw it</td><td>Recognise that online booking changes the secretary’s work and the canteen’s stock needs</td></tr><tr><td>Evidence in the project</td><td>Decision tree, algorithm steps, validation rules</td><td>Interview notes, prototype tests, storyboard versions</td><td>DFD, system flowchart, list of interacting components and impacts</td></tr></tbody>
+            </table>
+          </div>
+          <h3>Computational thinking in ClubHub</h3>
+          <p>The rule “a court cannot be booked twice” looks simple until a computer has to check it. Computational thinking turns it into steps. <strong>Decomposition</strong>: split booking into finding the court, reading its existing bookings, comparing times and saving the booking. <strong>Pattern recognition</strong>: two bookings clash whenever one starts before the other ends and ends after the other starts. <strong>Abstraction</strong>: ignore who the member is and what the court looks like, and keep only court, start time and end time. <strong>Algorithm</strong>: for each existing booking on this court, if the new start is before its end and the new end is after its start, refuse; otherwise save. That algorithm can be drawn as a flowchart or decision tree and then tested with clashing and non-clashing times (see <a href="#verify-validate">test data</a>).</p>
+          <h3>Design thinking in ClubHub</h3>
+          <p>Design thinking starts with people. A common version of the process is: <em>empathise</em> (interview and observe members, the secretary and the canteen coordinator), <em>define</em> the problem in their terms, <em>ideate</em> possible solutions, <em>prototype</em> the best ones cheaply, and <em>test</em> with users, then repeat. It also weighs the effects of the design. ClubHub’s economic impact is the cost of hosting against the time saved; its environmental impact is less paper; its social impact includes members who are not comfortable online, which is why a phone booking option is kept. The Interactive Media notes describe the process in more detail in <a href="interactive-media.html#design-thinking-ux">Design Thinking and UX</a>.</p>
+          <h3>Systems thinking in ClubHub</h3>
+          <p>Systems thinking looks at the whole system and the connections between its parts. NESA’s glossary defines an <em>enterprise system</em> as “the combination of digital systems, people and processes that collect, manage and analyse data”, so a system is more than software. Adding online booking has consequences elsewhere: more games played means more canteen sales, which means stock runs out sooner, which means the reorder list matters more. That chain is a <strong>feedback loop</strong> between two parts of the system that were designed as separate modules. Systems thinking also asks who is affected outside the system (suppliers, members without internet access) and which data is shared between parts, so the Bookings and Stock tables must use the same court and member identifiers.</p>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            The club decides members should be able to cancel a booking. Write one sentence for each type of thinking: what would you decompose, whom would you ask, and what else in the system changes?
+          </div>
+          <details class="ep-answer">
+            <summary>A model answer</summary>
+            <p><strong>Computational:</strong> break cancelling into finding the booking, checking the member owns it, checking how long before the game it is (a cancellation rule), removing it and freeing the court, then write the steps as an algorithm or decision tree. <strong>Design:</strong> ask members and the secretary what they expect to happen (a refund? a confirmation message?), draw a prototype cancel screen and test it. <strong>Systems:</strong> a freed court becomes bookable again, the fees or payment report changes, the waiting list may need a new alert, and the canteen may expect fewer players.</p>
+          </details>
+          <div class="callout assessor">
+            <strong>Exam focus: keep the three skills separate</strong>
+            A “describe how … skills are used” question rewards precision. For each skill: <strong>name it, give its purpose in a phrase, then show a specific use in the scenario</strong>. Marks are lost by giving the same example for all three, by describing design thinking as “designing the screens” without users or testing, and by describing systems thinking as “thinking about the whole thing” without naming components and their connections. A useful check: computational thinking makes something a computer can do, design thinking checks it suits the people, and systems thinking checks what it affects.
+          </div>
         </section>
 
         <hr class="divider" />
@@ -284,8 +526,62 @@
           <p class="syllabus-concept">📌 <em><strong>Select</strong> key collaborating and managing criteria appropriate to the development of an enterprise project</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>designing for ease of operation and maintenance</li><li>clarifying each of the relevant informatics within the new system</li><li>outlining the role of the participants, data and components used in the system</li><li>negotiating user/client needs and wants</li><li>working collaboratively</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (select). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>Criteria are the standards a project is judged against. To <em>select</em> them is to choose the ones that matter most for <em>this</em> project and to be able to say why. Choosing well means asking who will run the system, who will maintain it, what data it holds, what the client needs and how the team will work together. Those are the five criteria below. NESA asks you to select criteria “appropriate to the development of an enterprise project”, so a good answer names the criterion, says how it would be measured and links it to the scenario.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Criterion</th><th>What to ask</th><th>How ClubHub measures it</th></tr></thead>
+              <tbody><tr><td>Ease of operation</td><td>Can a first-time user complete a task without help?</td><td>A member books a court in no more than four screens; the coordinator counts stock in one sitting</td></tr><tr><td>Ease of maintenance</td><td>Can the system be fixed or changed by someone who did not build it?</td><td>Documented tables and screens; fees and court names changed in a settings screen, not in code</td></tr><tr><td>Informatics</td><td>Is it clear what data is collected, processed, stored and retrieved?</td><td>Data dictionary and data flow diagram agree with each other</td></tr><tr><td>Roles of participants, data and components</td><td>Who does what, with which data and which components?</td><td>A role table; each person can see and change only what their role needs</td></tr><tr><td>Meeting needs and wants</td><td>Were the client’s needs met first, and wants negotiated?</td><td>Signed requirements list; changes agreed through change requests</td></tr><tr><td>Working collaboratively</td><td>Did the team share the work fairly and communicate clearly?</td><td>Task board shows each member’s contribution; diary entries by every member</td></tr></tbody>
+            </table>
+          </div>
+          <h3>Designing for ease of operation and maintenance</h3>
+          <p><strong>Ease of operation</strong> is how easily the people who use the system every day can do their jobs with it. It comes from clear screens, sensible defaults, helpful error messages, few steps for common tasks, and accessibility: strong colour contrast, text that can be enlarged and controls big enough to touch (the W3C’s <a href="https://www.w3.org/WAI/WCAG22/quickref/" target="_blank" rel="noopener">WCAG quick reference</a> lists the standards). For ClubHub the canteen coordinator will use a tablet in a busy kitchen, so buttons are large and the stock list is sorted by the items that run out most often.</p>
+          <p><strong>Ease of maintenance</strong> is how easily the system can be kept working and improved after the team has moved on. Design for it by building in separate modules, using meaningful names for tables, fields and screens, keeping a data dictionary and diagrams up to date, keeping settings (fees, court names, reorder levels) in data rather than in code, and writing maintenance documentation someone else can follow. Three kinds of maintenance are commonly distinguished (the terms are widely used in industry, though NESA does not name them): <em>corrective</em> (fixing faults), <em>adaptive</em> (changing the system because its environment changed, such as a new fee structure) and <em>perfective</em> (improving it, such as adding a reminder email). A system designed for maintenance makes all three cheaper.</p>
+          <h3>Clarifying each of the relevant informatics within the new system</h3>
+          <p>NESA’s glossary defines <strong>informatics</strong> as “the science of processing data for storage and retrieval”. To clarify the relevant informatics is to state, for every important piece of data in the new system, where it comes from, how it is processed, where it is stored and how it is retrieved and presented. If the team cannot describe this, it does not understand the system well enough to build it. The table is a small informatics map for ClubHub.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Data</th><th>Source</th><th>Processing</th><th>Storage</th><th>Retrieval and output</th></tr></thead>
+              <tbody><tr><td>Booking</td><td>Member, via the booking form</td><td>Checked for a clash with existing bookings on that court</td><td>Bookings table</td><td>Confirmation screen; the secretary’s booking report</td></tr><tr><td>Member and fee status</td><td>Secretary, from the club’s membership records</td><td>Marked financial or unfinancial</td><td>Members table</td><td>Used by the booking rule; secretary’s payment report</td></tr><tr><td>Stock count</td><td>Canteen coordinator, at the end of each session</td><td>Compared with the reorder level for each item</td><td>Stock table</td><td>Reorder list printed for the supplier</td></tr><tr><td>Supplier order</td><td>Generated from the reorder list</td><td>Grouped by supplier</td><td>Suppliers and Orders tables</td><td>Purchase order sent to the supplier</td></tr></tbody>
+            </table>
+          </div>
+          <p>The map lines up with the data dictionary (see <a href="toolkit.html#data-dictionary">Data dictionary</a>) and with the DFD flows: each data flow in the diagram should appear in the map. Because a booking holds a member’s personal information, the map also shows where privacy controls are needed; the <a href="cybersecurity.html#privacy-principles">Privacy and Security Principles</a> notes explain the Australian Privacy Principles that apply when an organisation collects and stores it.</p>
+          <h3>Outlining the role of the participants, data and components used in the system</h3>
+          <p>A system is not only software. NESA’s enterprise system definition combines “digital systems, people and processes”, so an outline of the system lists the people (<strong>participants</strong>), the <strong>data</strong> they use and the <strong>components</strong> (hardware, software, networks and procedures) that connect them. Setting out roles also decides who may see or change which data, which is the principle of least privilege.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Participant</th><th>Role in the system</th><th>Data they use</th><th>Access</th></tr></thead>
+              <tbody><tr><td>Member</td><td>Books and cancels courts</td><td>Own bookings; free times</td><td>View own bookings; create and cancel own bookings</td></tr><tr><td>Club secretary (administrator)</td><td>Manages members, fees and court settings; reviews reports</td><td>Members, Bookings, fees</td><td>Full access to member and booking data</td></tr><tr><td>Canteen coordinator</td><td>Counts stock; creates reorder lists</td><td>Stock, Suppliers, Orders</td><td>Stock and supplier data only; no member details</td></tr><tr><td>Supplier</td><td>Receives purchase orders</td><td>Purchase orders (emailed)</td><td>No access to ClubHub</td></tr><tr><td>Development team</td><td>Builds and maintains the system</td><td>Test data; documentation</td><td>Test system only, not real member data</td></tr></tbody>
+            </table>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Component type</th><th>ClubHub components</th><th>Role</th></tr></thead>
+              <tbody><tr><td>Hardware</td><td>Club office PC; canteen tablet; clubhouse Wi-Fi and router; label or A4 printer</td><td>Where people use the system and where it connects</td></tr><tr><td>Software</td><td>ClubHub web application; database; email service; cloud backup</td><td>Runs the rules, stores the data, sends messages and keeps copies</td></tr><tr><td>Procedures</td><td>Weekly stock count; monthly backup check; how to book by phone if the system is down</td><td>What people do around the system so it works</td></tr></tbody>
+            </table>
+          </div>
+          <h3>Negotiating user/client needs and wants</h3>
+          <p>A <strong>need</strong> is something the system must do for the project to be worth building. A <strong>want</strong> is something people would like but can live without. Clients and users often express wants as if they were needs, and they sometimes want things that conflict. <strong>Negotiation</strong> is the process of working out, with the client and users, what will be in the system, what will wait and what will not be done. It ends with an agreement in writing, which in the ClubHub Gantt chart is the milestone “Requirements approved”.</p>
+          <p>A common way to sort requirements is a four-level priority list (widely used in industry, not a NESA term): <em>must have</em>, <em>should have</em>, <em>could have</em> and <em>won’t have this time</em>.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Priority</th><th>ClubHub requirement</th><th>Reason</th></tr></thead>
+              <tbody><tr><td>Must have</td><td>Prevent double bookings; secure member details; stock counts and reorder list</td><td>These are the problem the project exists to solve</td></tr><tr><td>Should have</td><td>Email or text reminder before a booking</td><td>Reduces no-shows; the survey showed strong interest</td></tr><tr><td>Could have</td><td>Waiting list for busy times</td><td>Nice to have; can be added in a later iteration</td></tr><tr><td>Won’t have this time</td><td>Online payments; coaching timetable</td><td>Outside the budget and the six-week schedule</td></tr></tbody>
+            </table>
+          </div>
+          <p>Negotiation in practice: <strong>listen</strong> and write down each request; <strong>ask why</strong> to find the need behind a want; <strong>show the cost</strong> in time and money; <strong>agree priorities</strong> together; <strong>record</strong> the decision and get it approved; and use a <strong>change request</strong> for anything new afterwards. Conflicts are solved by compromise. The secretary wanted to approve every booking; members wanted an instant confirmation. The agreed solution was automatic confirmation for financial members and secretary approval for guest bookings.</p>
+          <h3>Working collaboratively</h3>
+          <p>NESA’s glossary defines <em>collaborate</em> as “working with others towards a shared goal, through a variety of modes of communication. This may be achieved using a range of technologies, tools and processes.” Collaboration is a skill that has to be planned. Teams that collaborate well agree on <strong>roles</strong> (who leads, who decides, who tests), <strong>processes</strong> (how work is shared, reviewed and approved), <strong>communication</strong> (channels, meeting rhythm, how questions are raised) and <strong>records</strong> of what each person contributed, which is what the process diary is for.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Problem</th><th>What it looks like</th><th>How the team responds</th></tr></thead>
+              <tbody><tr><td>Unclear roles</td><td>Two people build the same screen; nobody writes the user guide</td><td>Assign each task an owner on the Gantt chart and action plan</td></tr><tr><td>Overwriting work</td><td>Someone replaces a file with an older copy</td><td>Use version history or version control; one owner per file</td></tr><tr><td>Silence about problems</td><td>Ben is behind but nobody knows until integration</td><td>Report problems in the diary and at each check-in; treat early warning as good practice</td></tr><tr><td>Uneven workload</td><td>One member does most of the work</td><td>Review the Gantt allocation weekly; rebalance tasks</td></tr><tr><td>Disagreement</td><td>Team splits on the design of the stock screen</td><td>Test both options with users; decide against the success criteria</td></tr></tbody>
+            </table>
+          </div>
+          <div class="callout assessor">
+            <strong>Exam focus: selecting and justifying criteria</strong>
+            When a question says <strong>select</strong> criteria for a project, choose two or three that fit the scenario, and for each give (1) what it means, (2) why it matters <em>here</em> and (3) how it would be checked. For example, for a canteen system used by casual volunteers, “ease of operation” matters because staff change often, and it would be checked by having a new volunteer complete a set of tasks without help. Generic answers such as “the system should be user friendly” score less than measurable ones. If asked about needs and wants, name which is which and say how you would negotiate the difference.
+          </div>
+          <div class="key-terms"><div class="key-term-item"><strong>Informatics</strong><span>NESA: the science of processing data for storage and retrieval.</span></div><div class="key-term-item"><strong>Participants</strong><span>The people who use, manage or are affected by the system.</span></div><div class="key-term-item"><strong>Change request</strong><span>A formal request to alter something already agreed, assessed for its effect on cost, time and scope before it is accepted.</span></div><div class="key-term-item"><strong>Collaborate</strong><span>NESA: working with others towards a shared goal, through a variety of modes of communication.</span></div></div>
         </section>
 
         <div class="quiz" data-quiz="ep-2"></div>
@@ -299,8 +595,8 @@
         </div>
 
         <aside class="yr12 topic-breakout subtopic-breakout" aria-label="Part introduction">
-          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
-          <p>This part covers 3 NESA dot points: producing and implementing.</p>
+          <p>Now the requirements come from real people, an approach is chosen and the plan for switching on the system is developed and tested for feasibility.</p>
+          <p class="breakout-question"><span class="bq-lead">Think about it</span> Your system has 300 users and must not fail on the first day. Which implementation method would you choose, and what would you give up?</p>
         </aside>
 
         <section id="requirements-tools">
@@ -309,8 +605,62 @@
           <p class="syllabus-concept">📌 <em><strong>Apply</strong> tools to inform the requirements and limitations of an enterprise system</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>interviews</li><li>surveys</li><li>analytical reports</li><li>prototypes</li><li>presentations of research results</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (apply). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>Before a system is designed, the team needs to know what it must do (its <strong>requirements</strong>) and what will hold it back (its <strong>limitations</strong>). Requirements are the functions and qualities the users and client need, such as “a member can see which courts are free”. Limitations are the constraints on the solution: a budget of $800, a six-week schedule, a team of four students, members who prefer the phone, and privacy law. NESA’s Gantt chart example on page 12 of the Course Specifications is a requirements-gathering plan, and it is the order used here: interview participants, collate the results, document needs, identify processes and data, produce a data flow diagram, produce a requirements report, and reach a milestone.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Tool</th><th>What it finds out</th><th>Best for</th><th>Limitation</th></tr></thead>
+              <tbody><tr><td>Interview</td><td>Detailed views, reasons and stories from a few people</td><td>Understanding current processes and what really goes wrong</td><td>Time-consuming; small numbers; the interviewer can bias answers</td></tr><tr><td>Survey</td><td>What many people think or do, in numbers</td><td>Measuring how common a need is and setting priorities</td><td>Only as good as the questions; people skip questions or give quick answers</td></tr><tr><td>Analytical report</td><td>Turns findings into conclusions and recommendations</td><td>Recording evidence and decisions for the client</td><td>Can hide weak evidence behind confident writing</td></tr><tr><td>Prototype</td><td>Whether the design works for real users</td><td>Testing understanding early and cheaply</td><td>A polished prototype can be mistaken for the finished system</td></tr><tr><td>Presentation of research results</td><td>Whether the client agrees with the findings and the plan</td><td>Getting shared understanding and sign-off</td><td>Depends on the audience; poor charts mislead</td></tr></tbody>
+            </table>
+          </div>
+          <h3>Interviews</h3>
+          <p>An <strong>interview</strong> is a planned conversation to learn how something works now and what people need from a new system. Prepare by deciding the purpose, choosing who to interview (the people who will use the system and the person who decides), writing questions, and asking permission to take notes or record. Use <em>open</em> questions that invite a description (“Walk me through…”) and follow-ups (“Can you show me?”, “Why is that?”). Listen more than you talk, avoid suggesting the answer, and read back what you understood. Collate the notes soon after so that detail is not lost; this is the “collate interview results” task in NESA’s example.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Interviewee</th><th>Sample questions</th></tr></thead>
+              <tbody><tr><td>Club secretary</td><td>“Walk me through what happens from the moment a member asks for a court.” · “What goes wrong most often, and what does it cost the club?” · “Which reports do you produce, and when?” · “Who should be able to see members’ phone numbers?”</td></tr><tr><td>Canteen coordinator</td><td>“How do you decide what to reorder?” · “Which items run out first?” · “Where is stock kept and who counts it?” · “What would a useful reorder list look like?”</td></tr><tr><td>Member</td><td>“How do you find out whether a court is free?” · “What would make you stop using an online booking page?” · “What devices do you use?”</td></tr></tbody>
+            </table>
+          </div>
+          <h3>Surveys</h3>
+          <p>A <strong>survey</strong> asks the same questions of many people so the answers can be counted. It is the tool to use when you need to know <em>how many</em> people want something. Write questions that can be answered quickly, use a mix of closed and open questions, and try the survey on two or three people first to find questions that confuse. Keep it short; long surveys lose people.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Sample question</th><th>Type</th><th>Why it works</th></tr></thead>
+              <tbody><tr><td>How do you usually book a court now? (paper sheet / text message / phone call / other)</td><td>Closed: single choice</td><td>Measures current practice; easy to count</td></tr><tr><td>How easy is it to find out whether a court is free? (1 very difficult to 5 very easy)</td><td>Rating scale</td><td>Gives a baseline the finished system can be compared against</td></tr><tr><td>Which of these would you use? Tick all that apply: see free courts online / book online / reminders / pay online / cancel online</td><td>Closed: multiple choice</td><td>Shows priorities for the needs and wants list</td></tr><tr><td>How often do you play? (weekly / fortnightly / monthly / less often)</td><td>Closed: frequency</td><td>Shows demand and peak times</td></tr><tr><td>What is the biggest problem with booking now?</td><td>Open text</td><td>Captures reasons and problems the team did not think of</td></tr></tbody>
+            </table>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Weak question</th><th>Problem</th><th>Better version</th></tr></thead>
+              <tbody><tr><td>Don’t you agree online booking would be much better?</td><td>Leading: it suggests the answer</td><td>How would you prefer to book a court?</td></tr><tr><td>Is booking quick and reliable?</td><td>Double-barrelled: two questions in one</td><td>Ask “How quick is booking?” and “How reliable is booking?” separately</td></tr><tr><td>Do you play often?</td><td>Vague: “often” means different things</td><td>How often do you play? (weekly / fortnightly / monthly / less often)</td></tr></tbody>
+            </table>
+          </div>
+          <h3>Analytical reports</h3>
+          <p>An <strong>analytical report</strong> turns raw findings into conclusions. It usually has a purpose, a description of how the information was gathered, the findings (in tables and charts), an analysis that says what the findings mean, the limitations of the evidence and recommendations. For requirements, the most useful part is the link between each finding and a requirement or limitation. Below is an extract from ClubHub’s report. The survey figures are invented; 40 members responded.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Finding (survey and interviews)</th><th>Result</th><th>Requirement or limitation</th></tr></thead>
+              <tbody><tr><td>Want to see free courts online before booking</td><td>32 of 40 members (80%)</td><td>Requirement (must): online view of free courts by date and time</td></tr><tr><td>Would use a reminder before a booking</td><td>28 of 40 (70%)</td><td>Requirement (should): booking reminder by email or text</td></tr><tr><td>Prefer to book by phone or text</td><td>10 of 40 (25%)</td><td>Limitation and requirement: the secretary must still be able to enter bookings for members</td></tr><tr><td>Would pay for a court online today</td><td>6 of 40 (15%)</td><td>Limitation: online payments are not worth the cost or risk in this release</td></tr><tr><td>The secretary must report on bookings and fees each month</td><td>Interview</td><td>Requirement (must): booking and payment report</td></tr></tbody>
+            </table>
+          </div>
+          <p>A good report also states its limits: 40 responses from a membership of a few hundred are enough to show a trend but not to prove what all members think, and people who did not respond may differ. Finish with recommendations the client can act on. The charts in a report follow the same honesty rules as any data visualisation; see <a href="data-visualisation.html">Data Visualisation</a>.</p>
+          <h3>Prototypes</h3>
+          <p>NESA defines a <strong>prototype</strong> as “a trial product or model built to test an idea or process to inform further design development”, tested by users and systems analysts. Prototypes let the team find out whether the requirements were understood before anything expensive is built. A <em>low-fidelity</em> prototype is drawn on paper or as plain wireframes and is quick to change; a <em>high-fidelity</em> or clickable prototype looks and behaves more like the finished system and tests how it feels to use. The <a href="interactive-media.html#ui-design-tools">Interactive Media</a> notes compare the fidelity levels.</p>
+          <p>ClubHub’s first prototype was three sheets of paper. Two members were asked to “book a court for Saturday at 10”, while a team member acted as the computer by swapping the paper screens. Both tried to choose the date before the court, which is why the storyboard was redrawn (see the iterations table in <a href="#manage-document">Managing and Documenting a Project</a>). Record what users did, not just what they said, and be ready to be wrong.</p>
+          <h3>Presentations of research results</h3>
+          <p>A <strong>presentation of research results</strong> shares the findings with the client and team so that they can agree on the requirements and next steps. Plan it for the audience: the club committee wants to know the problem, what was found, what the options cost and what you recommend, not every survey response. A clear structure is: the problem, how we found out, what we found (three or four charts or tables), what we recommend (with cost and time), and the decision we need. Use one message per slide, label axes and units, do not truncate an axis to exaggerate a difference, and keep detail in the report. The presentation is also a control point: when the committee approves it, the “Requirements approved” milestone can be ticked.</p>
+          <div class="callout tip">
+            <strong>Try this</strong>
+            The canteen coordinator says, “Just make it like the app I use for online shopping.” Write two interview follow-up questions that turn this vague want into requirements.
+          </div>
+          <details class="ep-answer">
+            <summary>A model answer</summary>
+            <p>“Which things in that shopping app do you use most often?” finds the features that matter. “Show me how you would find out that we are running low on chips: what would you want to see?” turns a general comment into a specific task the system must support (for example a low-stock list sorted by how soon an item runs out). Each answer becomes a requirement, and any feature that is too expensive becomes a limitation to negotiate.</p>
+          </details>
+          <div class="callout assessor">
+            <strong>Exam focus: applying a requirements tool</strong>
+            An “apply” question asks you to <strong>use</strong> a tool on the scenario, not to define it. If asked to write survey questions, write the actual questions, choose closed and open types, and avoid leading or double-barrelled wording. If asked how an interview would help, name the person, a question and what requirement it would reveal. If asked to justify a tool, compare it with another: an interview finds out <em>why</em> from a few people; a survey finds out <em>how many</em>; a prototype shows whether the design <em>works</em>.
+          </div>
+          <div class="key-terms"><div class="key-term-item"><strong>Requirement</strong><span>A function or quality that a system must have to meet the needs of its users and client.</span></div><div class="key-term-item"><strong>Limitation</strong><span>A constraint on the solution, such as budget, time, skills, technology or law.</span></div><div class="key-term-item"><strong>Prototype</strong><span>NESA: a trial product or model built to test an idea or process to inform further design development.</span></div><div class="key-term-item"><strong>Analytical report</strong><span>A report that turns findings into conclusions and recommendations, with the evidence and its limits.</span></div></div>
         </section>
 
         <hr class="divider" />
@@ -321,8 +671,57 @@
           <p class="syllabus-concept">📌 <em><strong>Explore and apply</strong> the most suitable development approach to develop, modify and implement an enterprise system</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>waterfall (structured)</li><li>agile</li><li>prototyping</li><li>end-user</li><li>outsourcing</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (explore). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>A <strong>development approach</strong> is the way a team organises the work of building a system: in what order the stages happen, how much the client is involved and how changes are handled. There is no single best approach. To <em>explore and apply</em> them is to understand how each one works, compare them against a scenario’s needs and then use the one that fits, whether you are developing a new system, modifying an existing one or implementing it. NESA lists five: waterfall (structured), agile, prototyping, end-user and outsourcing.</p>
+          <h3>The five approaches</h3>
+          <p><strong>Waterfall (structured).</strong> The stages (requirements, design, development, testing, installation, maintenance) run in order, and each is finished and signed off before the next begins. It relies on a complete specification at the start. <strong>Agile.</strong> The system is built in short cycles (often called sprints, of one to four weeks) that each produce a working increment; the client reviews it, and the next cycle is planned from the feedback. <strong>Prototyping.</strong> Early models are built and refined with users until the design is right, and then the final system is built (or the prototype is evolved into it). <strong>End-user development.</strong> The people who will use the system build it themselves, typically with spreadsheets, database packages or no-code tools, without a professional developer. <strong>Outsourcing.</strong> The work is contracted to an outside organisation that delivers the system, or part of it, to an agreed specification.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Animated diagram</span></p>
+              <h4 class="figure-title">Waterfall and agile: when the client gets a working system</h4>
+              <p class="figure-lead">Two casts and one value chart show how much of the finished system the client can use, week by week.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--anim">
+              <div class="anim" data-anim="waterfall-agile"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>In <strong>waterfall</strong> the client waits until the final stages before receiving a working system.</li><li>In <strong>agile</strong> the client can use part of the system from the first cycles and can steer what comes next.</li><li>The picture uses a generic example (a school system with six features) and simplifies real projects: real waterfall projects have feedback between stages, and agile projects still plan and document.</li></ul><p class="figure-controls">Choose a method with the tabs. Step with ◀ and ▶ (or the arrow keys), play or pause with Space.</p></div>
+              <p class="figure-try"><strong>Try this</strong>Use the tabs to switch between the two methods. At which week does the client first have something usable in each?</p>
+            </div>
+          </figure>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Process diagram</span></p>
+              <h4 class="figure-title">An agile sprint cycle</h4>
+              <p class="figure-lead">The product backlog feeds the sprint; each sprint ends with a demo to the client and a review of the process.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="agile-sprint"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>The <strong>product backlog</strong> is the client’s prioritised list of wanted features; the team chooses what fits into the next sprint.</li><li>Inside the sprint the team meets daily and builds and tests each item.</li><li>The <strong>sprint review</strong> shows the client a working increment and the <strong>retrospective</strong> improves how the team works.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>ClubHub’s first sprint delivered bookings and its second delivered stock. What would each sprint review ask the committee?</p>
+            </div>
+          </figure>
+          <div class="table-wrap">
+            <table class="ep-compare">
+              <thead><tr><th></th><th>Waterfall (structured)</th><th>Agile</th><th>Prototyping</th><th>End-user</th><th>Outsourcing</th></tr></thead>
+              <tbody><tr><td>How it works</td><td>Sequential stages, each signed off</td><td>Short cycles, each with working output</td><td>Build, test and refine models with users</td><td>Users build their own tool</td><td>A third party builds it to a contract</td></tr><tr><td>Client involvement</td><td>At the start and the end</td><td>Throughout</td><td>Frequent, at each prototype</td><td>The users are the developers</td><td>Specification, then acceptance</td></tr><tr><td>Handling change</td><td>Costly once past requirements</td><td>Expected; built into each cycle</td><td>Expected; that is the purpose</td><td>Easy for the builder, but unmanaged</td><td>Needs a formal change request and may cost extra</td></tr><tr><td>Documentation</td><td>Heavy, detailed</td><td>Lighter; enough to work and hand over</td><td>Focus on the prototype; formal documents later</td><td>Usually minimal</td><td>Contracted deliverables</td></tr><tr><td>Best when</td><td>Requirements are clear and stable; safety- or money-critical; large teams</td><td>Requirements will change; users are available; early value matters</td><td>Requirements are unclear; the interface matters; risk of misunderstanding is high</td><td>The tool is small, used by few people and low risk</td><td>The team lacks a skill, needs extra capacity or wants a fixed price</td></tr><tr><td>Main risks</td><td>Building the wrong thing; late discovery of problems</td><td>Scope creep; weaker documentation; needs committed users</td><td>Endless refinement; prototype mistaken for the product</td><td>No testing or documentation; depends on one person; security</td><td>Less control; communication gaps; dependence on the supplier; where data is held</td></tr></tbody>
+            </table>
+          </div>
+          <p>Two clarifications. <strong>Approaches are combined in practice.</strong> A large project might use waterfall for the requirements and contract, agile for the build and prototyping for the interface. <strong>Structured</strong> is NESA’s other name for waterfall: the steps are planned and followed in a fixed order.</p>
+          <h3>Choosing an approach: an interactive chooser</h3>
+          <p>Choosing an approach means weighing several factors at once. The chooser below scores each approach against six questions about a project. It is a thinking aid, not an oracle: the scores come from simple rules, and a real decision also depends on judgement. Try the ClubHub preset first, then change one answer at a time and watch which approaches rise and fall.</p>
+          <div class="ep-chooser" id="ep-chooser" data-ep-chooser>
+            <p class="ep-noscript">This chooser needs JavaScript. The comparison table above gives the same information: match your project to the “Best when” row.</p>
+          </div>
+          <h3>Applying the choice to ClubHub</h3>
+          <p>ClubHub’s requirements are partly clear (the double-booking rule is firm, but the screens will change with feedback), the club committee is available every week, the team is small and skilled, the system is used by one organisation, and the club wants something usable soon. The scores point to <strong>agile with prototyping</strong>: two short sprints (bookings, then stock), each starting with a prototype tested by real users. Waterfall would suit if the club’s requirements were fixed and change was unlikely, but it would delay the first working booking screen until the end, when there is no time left to fix problems. <strong>Outsourcing</strong> would remove the team’s chance to learn the system and cost money the club has not got. <strong>End-user development</strong>, such as the secretary building a spreadsheet, would be cheaper but would not stop double bookings between two people using it at once and would depend on one person.</p>
+          <p>The same approaches apply to <em>modifying</em> an existing system. If ClubHub later adds online payment, a waterfall-style specification of the payment rules and security (money is at stake) could be paired with agile delivery of the screens.</p>
+          <div class="callout assessor">
+            <strong>Exam focus: recommend and justify an approach</strong>
+            A “recommend” or “justify” question wants one clear choice with reasons from the scenario. A strong answer: (1) names the approach; (2) gives <strong>two reasons that use the scenario’s facts</strong> (how clear the requirements are, whether the client is available, size and risk, skills, deadline); (3) states one <strong>disadvantage</strong> it accepts or how it would be managed; and (4) says why another approach was rejected. If a question says “compare”, use both approaches in every point rather than describing each one separately. Do not describe waterfall as “bad” or agile as “modern and better”: each is right in the right circumstances.
+          </div>
+          <div class="key-terms"><div class="key-term-item"><strong>Waterfall (structured) approach</strong><span>Development in ordered stages, each completed and approved before the next begins.</span></div><div class="key-term-item"><strong>Agile approach</strong><span>Development in short cycles that each produce working output, with the client giving regular feedback.</span></div><div class="key-term-item"><strong>End-user development</strong><span>Building a system by the people who will use it, usually with accessible tools such as spreadsheets or no-code software.</span></div><div class="key-term-item"><strong>Outsourcing</strong><span>Contracting an outside organisation to develop the system or part of it.</span></div></div>
         </section>
 
         <hr class="divider" />
@@ -333,8 +732,107 @@
           <p class="syllabus-concept">📌 <em><strong>Develop</strong> an implementation plan and test its feasibility for an enterprise computing system</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>design thinking</li><li>thinking and design tools, including storyboards, Gantt chart, decision tree</li><li>risk analysis</li><li>hardware and software integration</li><li>training</li><li>preferred system implementation method</li><li>methodology for testing the system</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (develop). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>An <strong>implementation plan</strong> sets out how a system will be put into use: what will be done, in what order, by whom, with what resources and risks, how people will be prepared, and how the team will know it works. Testing its <strong>feasibility</strong> means checking, before committing time and money, that the plan can actually succeed. Every part of the plan uses tools from earlier in these notes, so this section shows them working together, again with ClubHub.</p>
+          <h3>Design thinking</h3>
+          <p>NESA’s glossary describes design thinking as a process in which “a need or opportunity is identified and a design solution is developed”, with “the consideration of economic, environmental and social impacts” at its core, used “when trying to understand a problem, generate ideas and refine a design based on evaluation and testing”. In an implementation plan design thinking is the habit of asking how the plan will work for people, not just what the technical steps are. Testing the plan with the people who will live with it (the secretary, the canteen volunteers, a sample of members) finds problems while they are cheap to fix. The impacts should be written down.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Impact</th><th>ClubHub consideration</th><th>How the plan responds</th></tr></thead>
+              <tbody><tr><td>Economic</td><td>Hosting costs; the secretary saves time; risk of unexpected costs</td><td>Budget with contingency; review costs after three months</td></tr><tr><td>Environmental</td><td>Fewer paper booking sheets and printed order forms</td><td>Print only the reorder list, and only when needed</td></tr><tr><td>Social</td><td>Some members are less comfortable online; volunteers change often</td><td>Keep phone booking; short training and a one-page guide for new volunteers</td></tr><tr><td>Privacy and ethical</td><td>Members’ personal details are held by the club</td><td>Role-based access, secure connection, and only the data the system needs</td></tr></tbody>
+            </table>
+          </div>
+          <h3>Thinking and design tools, including storyboards, Gantt chart, decision tree</h3>
+          <p>Three tools carry most of an implementation plan. A <strong>storyboard</strong> shows the screens in order so that the client and users can agree on the interface, and it is the plan for the build. NESA’s storyboard (Course Specifications p.9) has a title, a Help button, navigation buttons with the current page highlighted, a content panel and a dot-and-arrow for a button that opens another screen; see the <a href="toolkit.html#storyboards">Toolkit</a>. A <strong>Gantt chart</strong> schedules the implementation tasks (installing hardware, importing data, training, testing, go-live) with owners and milestones; the ClubHub chart in <a href="#manage-document">Managing and Documenting a Project</a> covers the build, and an implementation chart would extend it. A <strong>decision tree</strong> records rules, and, as shown later in this section, can also guide the choice of implementation method.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Storyboard</span></p>
+              <h4 class="figure-title">ClubHub: booking a court, three linked screens</h4>
+              <p class="figure-lead">The Book button on screen 1 opens screen 2; the Confirm button on screen 2 opens screen 3.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="ep-storyboard-booking"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>The <strong>highlighted button</strong> shows which screen is showing. Every screen has a title and a Help button.</li><li>A <strong>dot and an arrow</strong> on a button show which screen it opens. Only the two links in the booking path are drawn to keep the diagram readable.</li><li>Number and caption each screen so the team and the client can refer to “screen 2”. The storyboard is used to build and to test: each screen becomes a task on the Gantt chart.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Add a fourth screen for cancelling a booking. Which button opens it, and which button leads back?</p>
+            </div>
+          </figure>
+          <h3>Risk analysis</h3>
+          <p><strong>Risk analysis</strong> identifies what could go wrong, judges how likely and how serious each problem would be, and decides what to do about it. The results go into a <strong>risk register</strong>. The steps are: (1) <em>identify</em> risks by asking the team, users and the client; (2) <em>assess</em> each by likelihood and impact (here Low = 1, Medium = 2, High = 3, multiplied to give a rating: 1–2 low, 3–4 medium, 6–9 high); (3) <em>respond</em>, by avoiding the risk, reducing it, transferring it (for example to a supplier or through insurance) or accepting it; and (4) <em>monitor</em>, with an owner for each risk and regular review. The Course Specifications do not prescribe a risk matrix, so a simple scale like this is acceptable if it is applied consistently. The <a href="cybersecurity.html#risk-matrix">Cybersecurity</a> notes show the same idea for security risks.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>#</th><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Rating</th><th>Response</th><th>Owner</th></tr></thead>
+              <tbody><tr><td>1</td><td>A key team member is unavailable at a critical time</td><td>Medium (2)</td><td>High (3)</td><td>6 High</td><td>Reduce: pair on critical tasks and keep documentation current so another person can step in</td><td>Ana</td></tr><tr><td>2</td><td>Scope creep: extra features (such as online payment) added mid-project</td><td>High (3)</td><td>Medium (2)</td><td>6 High</td><td>Avoid: agreed needs and wants list; anything new goes through a change request</td><td>Ana</td></tr><tr><td>3</td><td>Members’ personal details exposed</td><td>Low (1)</td><td>High (3)</td><td>3 Medium</td><td>Reduce: role-based access, secure connection, no real data in testing, backups</td><td>Ben</td></tr><tr><td>4</td><td>Members do not adopt the system and keep phoning</td><td>Medium (2)</td><td>Medium (2)</td><td>4 Medium</td><td>Reduce: training, an easy first booking, phone bookings still accepted</td><td>Chloe</td></tr><tr><td>5</td><td>Internet outage at the clubhouse</td><td>Medium (2)</td><td>Medium (2)</td><td>4 Medium</td><td>Reduce: paper booking sheet as a fallback; tablet can use mobile data</td><td>Dev</td></tr><tr><td>6</td><td>Errors when importing the old stock list</td><td>Medium (2)</td><td>Medium (2)</td><td>4 Medium</td><td>Reduce: inspect the data first; check totals after import</td><td>Ben</td></tr><tr><td>7</td><td>Hosting company raises prices or closes</td><td>Low (1)</td><td>Medium (2)</td><td>2 Low</td><td>Accept and monitor: keep data exportable so the system can move</td><td>Ana</td></tr></tbody>
+            </table>
+          </div>
+          <h3>Hardware and software integration</h3>
+          <p><strong>Integration</strong> is making the new hardware and software work together, and with what the organisation already has. It is a common source of late surprises, so the plan lists every component, what it connects to, and how each connection will be tested. Steps: (1) audit the existing equipment and data; (2) check compatibility (does the tablet’s browser support the screens? can the printer print the reorder list?); (3) plan data migration from old formats; (4) connect the components; (5) test the whole chain from a booking on a phone to a row in the database and a line in the report.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Integration point</th><th>Requirement</th><th>Check</th><th>Risk if it fails</th></tr></thead>
+              <tbody><tr><td>Canteen tablet and clubhouse Wi-Fi</td><td>A stable connection where the stock is counted</td><td>Test the screens in the storeroom at busy times</td><td>Coordinator cannot record stock</td></tr><tr><td>ClubHub and the club’s membership spreadsheet</td><td>Import the member list and fee status</td><td>Compare record counts before and after import</td><td>Financial members refused a booking</td></tr><tr><td>Reorder list and printer</td><td>Print to A4 from the tablet or office PC</td><td>Print a sample list from each device</td><td>Supplier orders delayed</td></tr><tr><td>ClubHub and the email service</td><td>Booking confirmations and reminders are delivered</td><td>Send to several different email providers</td><td>Members do not receive confirmations</td></tr><tr><td>Database and cloud backup</td><td>Nightly copy of both files</td><td>Restore a copy on a test machine</td><td>Data lost after a failure</td></tr></tbody>
+            </table>
+          </div>
+          <h3>Training</h3>
+          <p><strong>Training</strong> prepares the people who will use and support the system so that they can do their jobs on the first day. Different groups need different things, and the best methods are matched to the group. Untrained users are one of the most common reasons a technically successful system fails, because they avoid it, make errors or ask the same questions again and again. Training should happen shortly before go-live, use the real system with practice data, and be evaluated afterwards by watching people complete tasks. The user guide written for training is also the operation documentation that is trialled in Part 4.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Group</th><th>What they need to learn</th><th>Method</th><th>When</th></tr></thead>
+              <tbody><tr><td>Members</td><td>How to book and cancel</td><td>One-page guide, a short video and a help button; staff at the desk for the first week</td><td>Two weeks before and during go-live</td></tr><tr><td>Club secretary</td><td>Members, fees, court settings, reports, what to do if the system is down</td><td>Hands-on session with practice data</td><td>One week before go-live</td></tr><tr><td>Canteen coordinator and volunteers</td><td>Stock counts, reorder lists</td><td>Practice with the tablet in the storeroom; a laminated quick-reference card</td><td>One week before the stock module goes live</td></tr><tr><td>Committee (who will support it later)</td><td>Who to call, how backups work</td><td>Short briefing and the maintenance guide</td><td>After go-live</td></tr></tbody>
+            </table>
+          </div>
+          <h3>Preferred system implementation method</h3>
+          <p>NESA’s Course Specifications (p.14) name four methods: <strong>direct</strong>, <strong>parallel</strong>, <strong>pilot</strong> and <strong>phased</strong>. The glossary describes <em>system implementation</em> as “the implementation method applied when introducing a new or redesigned enterprise system”. The <a href="toolkit.html#implementation-methods">Toolkit</a> defines each one. The animation compares them for a generic four-office organisation.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Animated diagram</span></p>
+              <h4 class="figure-title">Implementation methods: switching from the old system to the new</h4>
+              <p class="figure-lead">Watch each method, then compare what happens when a fault appears.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--anim">
+              <div class="anim" data-anim="implementation-methods"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li><strong>Direct</strong> switches everyone at once, so a fault reaches everyone.</li><li><strong>Parallel</strong> keeps the old system running as a fallback while the new one is checked.</li><li><strong>Pilot</strong> moves one office first; <strong>phased</strong> moves one module at a time across all offices.</li><li>The organisation in the picture (four offices, three modules) is generic; the ClubHub choice is on the next diagram.</li></ul><p class="figure-controls">Choose a method with the tabs. Step with ◀ and ▶ (or the arrow keys), play or pause with Space.</p></div>
+              <p class="figure-try"><strong>Try this</strong>For each tab, find the week the bug appears. Which method has the smallest number of people affected?</p>
+            </div>
+          </figure>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Decision tree</span></p>
+              <h4 class="figure-title">Choosing an implementation method</h4>
+              <p class="figure-lead">Two questions narrow the choice; each path ends with one of NESA’s four methods.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="ep-dt-implementation"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li>The top question is about <strong>risk</strong>: how bad would a failure be?</li><li>If failure is costly, the next question is about a <strong>fallback</strong>: can the old system run alongside?</li><li>If failure is not costly, the question is whether the system can be introduced <strong>in parts</strong>.</li><li>This is a simplification to support a decision; real choices also consider cost, time and training.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>Follow the path for a hospital records system. Then follow it for a small club’s stock list. Do the answers match the Toolkit’s examples?</p>
+            </div>
+          </figure>
+          <p><strong>ClubHub’s choice.</strong> A booking failure would not be dangerous, and it would cost some goodwill; and the system splits into two modules used by different people. The tree leads to <strong>phased</strong>: the stock module goes live first, used only by the canteen coordinator, and the booking module goes live three weeks later once the team has learned from the first. During the first fortnight of booking, the paper sheet stays available as a fallback, which borrows a short parallel run for the module that affects the most people. The reasons: a fault in the stock module affects one person, and by the time booking goes live the team has a working, tested system and a trained secretary. <strong>The trade-off</strong> is that the club runs two ways of working for a while and full benefits arrive later than with direct implementation. <strong>Rejected:</strong> direct implementation, because a booking fault would reach every member on the first day; and full parallel running, because the secretary would enter every booking twice.</p>
+          <h3>Methodology for testing the system</h3>
+          <p>A <strong>testing methodology</strong> is the plan for how the system will be tested: which methods, in what order, on what data, by whom and to what standard. NESA (Course Specifications p.15) names six methods: functional testing, acceptance testing, live data, simulated data, beta testing and volume testing; the <a href="toolkit.html#testing-methods">Toolkit</a> defines them. A methodology puts them in a sensible order and says when testing is complete, using <strong>pass criteria</strong> agreed before testing starts.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Order</th><th>Method</th><th>ClubHub use</th><th>Who</th><th>Pass criterion</th></tr></thead>
+              <tbody><tr><td>1</td><td>Functional testing with simulated data</td><td>Every function against the requirements: booking rule, fee status, stock count, reorder calculation</td><td>Dev, with the developers fixing faults</td><td>Every test in the test table passes after fixes and retesting</td></tr><tr><td>2</td><td>Live data</td><td>Import the club’s real stock list and member list on a test copy and check totals</td><td>Ben and the coordinator</td><td>Record counts and stock totals match the originals</td></tr><tr><td>3</td><td>Volume testing</td><td>Load a full season of bookings and check searches stay quick</td><td>Dev</td><td>Booking screen responds within an agreed time on the largest data set</td></tr><tr><td>4</td><td>Beta testing</td><td>A small group of members uses the booking module for a fortnight</td><td>Twelve invited members</td><td>No serious faults reported; satisfaction rating agreed with the client</td></tr><tr><td>5</td><td>Acceptance testing</td><td>The secretary and the coordinator complete their real tasks against the success criteria</td><td>Client</td><td>Client signs off each success criterion</td></tr></tbody>
+            </table>
+          </div>
+          <h3>Testing the plan’s feasibility</h3>
+          <p>The last step in developing an implementation plan is to test whether it is <strong>feasible</strong>. A feasibility test asks a set of questions before the team commits. The following five questions are commonly used in industry (NESA does not name them, but the syllabus does ask you to test feasibility). A plan that fails one may be changed, delayed or dropped, and it is better to find that out on paper.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Feasibility question</th><th>ClubHub check</th><th>Verdict</th></tr></thead>
+              <tbody><tr><td>Technical: can it be built with the skills and technology available?</td><td>The team has database and interface skills; a hosted service handles the web side; the tablet supports the browser</td><td>Feasible</td></tr><tr><td>Economic: do the benefits justify the cost, and is the money available?</td><td>Planned cost of $759 against an approved $800; saves the secretary’s weekly counting and re-checking</td><td>Feasible</td></tr><tr><td>Operational: will people use it and can they be trained?</td><td>Committee supports it; training planned; phone booking retained for those who prefer it</td><td>Feasible with the training plan</td></tr><tr><td>Schedule: can it be done in time?</td><td>Six weeks; Gantt chart shows a one-day slip on the critical path; contingency is one day before handover</td><td>Feasible but tight: monitor</td></tr><tr><td>Legal and ethical: does it meet privacy and other obligations?</td><td>Member data is limited to what is needed, access is by role, and the club has told members how their data is used</td><td>Feasible; confirm the club’s privacy notice</td></tr></tbody>
+            </table>
+          </div>
+          <div class="callout assessor">
+            <strong>Exam focus: implementation plans, risks and methods</strong>
+            Expect questions that ask you to <strong>identify a risk and a strategy to reduce it</strong>, to <strong>recommend an implementation method</strong> or to <strong>match a testing method to a situation</strong>. Answer a risk question with the risk, its likelihood or impact and a specific response (“run the old system in parallel so bookings continue if the new one fails”, not “test it more”). For an implementation method, use the pattern from the previous part: method, two reasons from the scenario, one disadvantage. Do not confuse <strong>pilot</strong> (the whole system in one place first) with <strong>phased</strong> (one part at a time everywhere), and do not call live data “made-up data”: live data is real; simulated data is made up. The Toolkit lists the common mistakes.
+          </div>
+          <div class="key-terms"><div class="key-term-item"><strong>System implementation</strong><span>NESA: the implementation method applied when introducing a new or redesigned enterprise system, typically direct, parallel, phased or pilot.</span></div><div class="key-term-item"><strong>Risk register</strong><span>A record of identified risks with their likelihood, impact, response and owner.</span></div><div class="key-term-item"><strong>Feasibility study</strong><span>An assessment, before a project is committed to, of whether it can succeed technically, economically, operationally, on schedule and legally.</span></div><div class="key-term-item"><strong>Integration</strong><span>Making new hardware and software work together, and with existing systems and data.</span></div></div>
         </section>
 
         <div class="quiz" data-quiz="ep-3"></div>
@@ -348,8 +846,8 @@
         </div>
 
         <aside class="yr12 topic-breakout subtopic-breakout" aria-label="Part introduction">
-          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
-          <p>This part covers 1 NESA dot point: testing and evaluating.</p>
+          <p>Testing and evaluating decide whether the project worked. You verify that the system was built correctly, validate that it solves the right problem, then use what you learn to improve and maintain it.</p>
+          <p class="breakout-question"><span class="bq-lead">Ask yourself</span> A system passes every test you wrote, yet nobody uses it. What did your testing miss?</p>
         </aside>
 
         <section id="verify-validate">
@@ -358,8 +856,83 @@
           <p class="syllabus-concept">📌 <em><strong>Verify and validate</strong> an enterprise computing system</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>evaluating test data</li><li>trialling the operation and maintenance documentation</li><li>reviewing the impact of system implementation within relevant environments</li><li>modifying designs to improve functionality</li><li>testing, evaluating and maintaining the developed enterprise computing system</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (verify). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>“Verify” and “validate” are often used as if they meant the same thing, and in this dot point they do not. A team that only verifies can build exactly what the specification says and still fail, because the specification was wrong. A team that only validates can please the users in a demonstration and still ship a system full of faults. Both are needed.</p>
+          <figure class="figure">
+            <figcaption class="figure-head">
+              <p class="figure-kicker"><span class="figure-kind">Concept diagram</span></p>
+              <h4 class="figure-title">Verification and validation: two different checks on the same system</h4>
+              <p class="figure-lead">Verification compares the system with its specification; validation compares it with the real needs.</p>
+            </figcaption>
+            <div class="figure-canvas figure-canvas--still">
+              <div class="anim" data-anim="ep-verify-validate"></div>
+            </div>
+            <div class="figure-notes">
+              <div><h5>What to notice</h5><ul><li><strong>Verification</strong> looks along the bottom: was the system built to the requirements and design? It asks, “Are we building the product right?”</li><li><strong>Validation</strong> looks up to the top: does the system solve the client’s real problem for the people who use it? It asks, “Are we building the right product?”</li><li>A system can pass one check and fail the other. A specification that missed a need produces a system that is <em>verified</em> but not <em>validated</em>.</li></ul></div>
+              <p class="figure-try"><strong>Try this</strong>ClubHub passes every test in the test table, but volunteers keep forgetting to save stock counts. Which check has passed and which has failed?</p>
+            </div>
+          </figure>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th></th><th>Verify</th><th>Validate</th></tr></thead>
+              <tbody><tr><td>Question asked</td><td>Was it built correctly?</td><td>Is it the right thing, and does it work in real use?</td></tr><tr><td>Checked against</td><td>The requirements, design and specification</td><td>The users’ and client’s real needs and success criteria</td></tr><tr><td>Typical activities</td><td>Testing against expected results; reviewing designs against requirements; checking imported data against the source</td><td>Trials with users; acceptance testing; the impact review; evaluating against the success criteria</td></tr><tr><td>Who does it</td><td>Mainly the development and test team</td><td>Mainly the client and users, with the team</td></tr><tr><td>ClubHub system example</td><td>All test-table results match the expected results; imported record counts match the old list</td><td>The coordinator uses the stock module for a week and shortages stop</td></tr><tr><td>ClubHub data example</td><td>A second person checks entered fees against the source records</td><td>The system refuses a booking length of −30 or “abc”</td></tr></tbody>
+            </table>
+          </div>
+          <p>Notice that the words are also used for <em>data</em>. To <strong>validate data</strong> is to check that it is reasonable and allowed before it is accepted (a range, type, presence or format check). To <strong>verify data</strong> is to check that it was entered or copied correctly, for example by entering it twice or comparing it with the source. The <a href="data-visualisation.html#data-integrity">Data Visualisation</a> notes use these meanings. NESA’s dot point asks you to verify and validate <em>an enterprise computing system</em>, so a system-level answer is usually wanted, but read each question’s context and use data-level examples where the question is about data entry.</p>
+          <h3>Evaluating test data</h3>
+          <p>A test is only as good as its data. <strong>Evaluating test data</strong> means two things: judging whether the <em>set</em> of test data is good enough to give confidence (it is the right data), and then judging what the <em>results</em> say about the system. Good test data covers three kinds of values. <strong>Normal data</strong> is typical, valid data the system should accept. <strong>Boundary data</strong> is on and next to each limit: for a rule of 30 to 120 minutes, test 30 and 29, and 120 and 121. <strong>Erroneous data</strong> is data the system must reject: the wrong type, a negative number or a blank. The expected result for every test is worked out <em>before</em> testing, from the requirements, so you are checking the system rather than believing it. The <a href="toolkit.html#testing-methods">Toolkit</a> shows the same method on a delivery flowchart. The table tests ClubHub’s rule that a booking must last from 30 to 120 minutes.</p>
+          <div class="table-wrap">
+            <table class="ep-tests">
+              <thead><tr><th>ID</th><th>Purpose</th><th>Test data</th><th>Type</th><th>Expected result</th><th>Actual result</th><th>Result</th></tr></thead>
+              <tbody><tr><td>1</td><td>Typical booking</td><td>60 minutes</td><td>Normal</td><td>Accepted</td><td>Accepted</td><td>Pass</td></tr><tr><td>2</td><td>Lower limit</td><td>30 minutes</td><td>Boundary (on the limit)</td><td>Accepted</td><td>Accepted</td><td>Pass</td></tr><tr><td>3</td><td>Just below the lower limit</td><td>29 minutes</td><td>Boundary (just outside)</td><td>Rejected with message “30 to 120 minutes”</td><td>Rejected with message</td><td>Pass</td></tr><tr><td>4</td><td>Upper limit</td><td>120 minutes</td><td>Boundary (on the limit)</td><td>Accepted</td><td>Accepted</td><td>Pass</td></tr><tr><td>5</td><td>Just above the upper limit</td><td>121 minutes</td><td>Boundary (just outside)</td><td>Rejected with message</td><td>Accepted</td><td><strong>Fail</strong></td></tr><tr><td>6</td><td>Negative length</td><td>−30 minutes</td><td>Erroneous</td><td>Rejected</td><td>Rejected</td><td>Pass</td></tr><tr><td>7</td><td>Wrong data type</td><td>abc</td><td>Erroneous (wrong type)</td><td>Rejected: “Enter a number”</td><td>System error page shown</td><td><strong>Fail</strong></td></tr><tr><td>8</td><td>Missing value</td><td>(blank)</td><td>Erroneous (missing)</td><td>Rejected: “Choose a length”</td><td>Rejected</td><td>Pass</td></tr><tr><td>9</td><td>Clash rule: same court and time as an existing booking</td><td>Court 2, Saturday 10:00 twice</td><td>Normal (rule test)</td><td>Second booking refused</td><td>Second booking refused</td><td>Pass</td></tr><tr><td>10</td><td>Decision tree path: unfinancial member, not a guest</td><td>Member with unpaid fees</td><td>Normal (rule test)</td><td>Declined; shows how to pay fees</td><td>Declined; shows how to pay</td><td>Pass</td></tr></tbody>
+            </table>
+          </div>
+          <p><strong>Evaluating the results.</strong> Two tests failed. Test 5 shows the length check uses “less than 122” instead of “not more than 120”, a classic boundary error that only a boundary test would find. Test 7 shows the screen assumes the input is a number. Each fault was logged, the fix made, and both tests <strong>retested</strong> together with tests 3 and 4, because a change to one check can break a neighbouring one (this is called <em>regression testing</em>); they then passed. <strong>Evaluating the test data itself:</strong> the set covers all three data types and each path through the booking decision tree, and every test has an expected result. What it misses is also worth writing down: two members pressing Confirm at the same instant, times that cross midnight and very large volumes of bookings. Those gaps are why the plan adds volume and beta testing.</p>
+          <h3>Trialling the operation and maintenance documentation</h3>
+          <p>Documentation is part of the system: it is how people run it and keep it running. <strong>Operation documentation</strong> (often a user guide) explains how to do each task, what the messages mean and who to contact. <strong>Maintenance documentation</strong> is written for the people who look after the system: how it is built (diagrams, data dictionary, schema), how it is configured, how backups are taken and restored, how to apply updates and a log of changes. A guide is only good if a person can follow it, so it has to be <strong>trialled</strong>: give it to someone who was not involved in building the system, ask them to complete real tasks using only the documents, watch without helping, and note where they hesitate, get stuck or make mistakes. Then fix the documents and trial again.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Task set by the trial</th><th>Document used</th><th>Done without help?</th><th>Problem found</th><th>Fix</th></tr></thead>
+              <tbody><tr><td>Add a new stock item</td><td>Canteen quick-reference card, step 4</td><td>Yes, after re-reading</td><td>The card said “Save”, but the button reads “Add item”</td><td>Card corrected</td></tr><tr><td>Record a stock count</td><td>Card, step 2</td><td>Yes</td><td>None</td><td>–</td></tr><tr><td>Print the reorder list</td><td>Card, step 5</td><td>No</td><td>The coordinator could not find the list; it is under Reports</td><td>Screenshot and menu path added</td></tr><tr><td>Restore last night’s backup</td><td>Maintenance guide, section 5</td><td>No: needed a developer</td><td>Steps assumed the reader knew the administrator password</td><td>Added where the password is kept and who may use it; trial repeated with a committee member</td></tr></tbody>
+            </table>
+          </div>
+          <p>A trial is also validation: it tests whether the documents meet the real needs of the volunteers who will use them. The trial results go in the process diary, and the changes are versioned so that the guide always matches the system.</p>
+          <h3>Reviewing the impact of system implementation within relevant environments</h3>
+          <p>The syllabus asks for a review of the <em>impact</em> of the system on the <em>environments</em> it operates in. NESA’s outcomes refer to the effects of enterprise systems on the individual, society and the environment, so a helpful way to organise the review is to ask about the people and organisation using it, the wider community, the technical environment, the natural environment and the economic environment (this list is our reading of “relevant environments”, not a NESA list). Compare the situation <em>after</em> implementation with the baseline you recorded <em>before</em>, using the success criteria and evidence such as survey responses, logs, costs and feedback. Look for <strong>unintended</strong> effects as well as intended ones.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Environment</th><th>Question</th><th>Evidence</th><th>Illustrative finding (invented)</th></tr></thead>
+              <tbody><tr><td>Organisation and people</td><td>Has the work of the secretary, coordinator and members improved?</td><td>Time logs; interviews; survey ratings compared with the baseline</td><td>Weekly booking administration fell from about 3 hours to about 1 hour; the coordinator no longer counts stock twice</td></tr><tr><td>Community and social</td><td>Has anyone been left out or disadvantaged?</td><td>Feedback; number of phone bookings</td><td>Some older members still phone in; the secretary enters those bookings, so they are not excluded</td></tr><tr><td>Technical</td><td>Is the system reliable and does it fit with existing equipment?</td><td>Error log; uptime; backup restores</td><td>Two short outages; backup restore tested and worked</td></tr><tr><td>Environmental</td><td>Has resource use changed?</td><td>Paper used</td><td>The paper booking sheet is no longer printed each week</td></tr><tr><td>Economic</td><td>Did it cost what was planned and deliver the benefits?</td><td>Budget against actual; stock waste</td><td>Spent within the approved amount; fewer stock-outs reported</td></tr></tbody>
+            </table>
+          </div>
+          <h3>Modifying designs to improve functionality</h3>
+          <p>Testing and impact reviews produce evidence that the design can be better. <strong>Modifying a design</strong> is a controlled process, not a quick fix: identify the cause, decide the change against the success criteria, <strong>update the design documents first</strong> (storyboard, data flow diagram, decision tree, data dictionary), make the change, retest the change and the features around it, and record it in the process diary and a change log. Changing the documents first keeps the team from ending up with a system nobody can describe. This is the iterative approach from Part 1, applied after release.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Change</th><th>Evidence</th><th>Documents updated</th><th>Retest</th></tr></thead>
+              <tbody><tr><td>Show the court name on the confirmation screen</td><td>Three members in the beta trial were unsure which court they had booked</td><td>Storyboard screen 3; data flow label “Booking confirmation” description</td><td>Confirmation screen tests; email text</td></tr><tr><td>Reject a booking longer than 120 minutes</td><td>Test 5 failed</td><td>Validation rule in the data dictionary noted; no diagram change</td><td>Tests 3, 4 and 5</td></tr><tr><td>Handle a non-numeric length</td><td>Test 7 failed</td><td>Data dictionary: length is an integer field with format NNN</td><td>Tests 6, 7 and 8</td></tr></tbody>
+            </table>
+          </div>
+          <h3>Testing, evaluating and maintaining the developed enterprise computing system</h3>
+          <p>The last activity brings the parts together. The team <strong>tests</strong> the whole system with the methods in its plan, <strong>evaluates</strong> it against the criteria set in the problem definition, and hands over a system that can be <strong>maintained</strong>. NESA’s glossary describes evaluating as making “a judgement based on criteria”, so a good evaluation is a judgement with reasons, not a list of features. The table evaluates ClubHub against its four success criteria.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Success criterion</th><th>Evidence</th><th>Judgement</th></tr></thead>
+              <tbody><tr><td>The same court cannot be booked twice for the same time</td><td>Test 9 passes; no double bookings during the beta and first weeks of use</td><td>Met</td></tr><tr><td>A member can book in no more than four screens</td><td>The booking path is three screens (Home, Book, Confirmation) in the storyboard and in use</td><td>Met</td></tr><tr><td>The coordinator can produce a reorder list in one action</td><td>Acceptance test: the list is produced with one button, but the location of the button confused volunteers until the card was updated</td><td>Met after a change to the documentation</td></tr><tr><td>Only authorised people can see member details</td><td>Role tests pass; the canteen role cannot open member data; no independent security review yet</td><td>Partly met: recommend a review</td></tr></tbody>
+            </table>
+          </div>
+          <p><strong>Model evaluation.</strong> ClubHub meets its main purpose: the club no longer double-books courts, and the coordinator gets a reorder list with one action. It was delivered on time and within budget, and the trial of the documents found problems that would have frustrated volunteers. The main weakness is security: role restrictions were tested by the team, but no independent review has been done, and member data makes that a priority. On balance the project is a success, and the recommended next steps are a security review, reminders (should-have) and a review of fees handling before online payment is considered.</p>
+          <p><strong>Maintaining the system.</strong> Once it is live, the system needs care. Plan who does it, how often and how the work is recorded. Commonly three types of maintenance are distinguished (the terms are widely used, not NESA’s): <em>corrective</em> (fix faults, such as the length check), <em>adaptive</em> (respond to change, such as new court names or fees) and <em>perfective</em> (improve, such as the reminders).</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Maintenance task</th><th>How often</th><th>Who</th><th>Record</th></tr></thead>
+              <tbody><tr><td>Check that nightly backups ran; restore one to a test copy</td><td>Backup check weekly; restore test each term</td><td>Committee member with the maintenance guide</td><td>Backup log</td></tr><tr><td>Install security updates for the hosted service and the tablet</td><td>When released</td><td>Ben or a nominated volunteer</td><td>Change log</td></tr><tr><td>Update court names, fees and reorder levels</td><td>When the club decides</td><td>Club secretary, using the settings screen</td><td>Settings history</td></tr><tr><td>Log and triage faults and requests from users</td><td>Continuous</td><td>Club secretary passes them to the committee</td><td>Issue list with priority</td></tr><tr><td>Review the system against the success criteria</td><td>Each year</td><td>Committee</td><td>Review notes</td></tr></tbody>
+            </table>
+          </div>
+          <div class="callout assessor">
+            <strong>Exam focus: verify, validate and test data</strong>
+            <strong>Definitions to memorise:</strong> <em>verify</em> means to check the system was built correctly, against its specification; <em>validate</em> means to check that it meets the users’ real needs (and, for data, that data is reasonable and allowed). Always give an example from the scenario in the question. If you are asked for test data, give <strong>normal, boundary and erroneous</strong> values, and say what result you <em>expect</em> for each, for example “30 and 29 minutes for a 30 to 120 minute limit; expected: accepted and rejected”. In 2025 NESA’s Question 18 asked for spreadsheet formulas checked with test data, so practise choosing values that test the edges. Do not say “I would test it” with no method: name the method (functional, acceptance, live or simulated data, beta, volume) and why.
+          </div>
+          <div class="key-terms"><div class="key-term-item"><strong>Verify</strong><span>Check that a system was built correctly, meeting its specification; for data, check it was entered or transferred correctly.</span></div><div class="key-term-item"><strong>Validate</strong><span>Check that a system meets the real needs of its users; for data, check it is reasonable and allowed.</span></div><div class="key-term-item"><strong>Boundary data</strong><span>Test values on and immediately either side of a limit.</span></div><div class="key-term-item"><strong>Regression testing</strong><span>Repeating earlier tests after a change to make sure nothing that worked before has been broken.</span></div><div class="key-term-item"><strong>Operation documentation</strong><span>Instructions for the people who use the system day to day, such as a user guide.</span></div><div class="key-term-item"><strong>Maintenance documentation</strong><span>Technical information for those who look after the system: design, configuration, backup and update procedures, and a change log.</span></div></div>
         </section>
 
         <div class="quiz" data-quiz="ep-4"></div>
@@ -412,7 +985,7 @@
   </footer>
 
   <script src="../js/glossary-data.js?v=8f2b4607"></script>
-  <script src="../js/quizzes/enterprise-project.js?v=64dce083"></script>
+  <script src="../js/quizzes/enterprise-project.js?v=664d7c7c"></script>
   <script src="../js/quiz.js?v=3e6185a0" defer></script>
   <script src="../js/nesa-diagram-data.js?v=33ff129d"></script>
   <script src="../js/nesa-diagrams.js?v=6bab3032" defer></script>
@@ -442,5 +1015,7 @@
     </div>
   </div>
   <script src="../js/progress.js?v=40b8096b" defer></script>
+  <script src="../js/anim.js?v=063a7e7e" defer></script>
+  <script src="../js/pages/enterprise-project.js?v=ba0b4229" defer></script>
 </body>
 </html>
