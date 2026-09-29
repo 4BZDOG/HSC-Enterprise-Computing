@@ -9,14 +9,14 @@
   <meta name="robots" content="index, follow" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Data Visualisation | HSC Enterprise Computing" />
-  <meta property="og:description" content="HSC Enterprise Computing notes on Data Visualisation (Telling stories with data). NESA NSW Year 12 HSC syllabus, dot point by dot point." />
+  <meta property="og:description" content="Year 12 HSC Enterprise Computing notes on Data Visualisation: choosing charts, OLAP, bias, dashboards, UX and a worked project, dot point by dot point." />
   <meta property="og:url" content="https://4bzdog.github.io/HSC-Enterprise-Computing/topics/data-visualisation.html" />
   <meta property="og:image" content="https://4bzdog.github.io/HSC-Enterprise-Computing/og-image.png" />
   <meta property="og:image:alt" content="HSC Enterprise Computing Notes: NESA NSW" />
   <meta property="og:site_name" content="HSC Enterprise Computing Notes" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Data Visualisation | HSC Enterprise Computing" />
-  <meta name="twitter:description" content="HSC Enterprise Computing notes on Data Visualisation (Telling stories with data). NESA NSW Year 12 HSC syllabus, dot point by dot point." />
+  <meta name="twitter:description" content="Year 12 HSC Enterprise Computing notes on Data Visualisation: choosing charts, OLAP, bias, dashboards, UX and a worked project, dot point by dot point." />
   <meta name="twitter:image" content="https://4bzdog.github.io/HSC-Enterprise-Computing/og-image.png" />
   <script type="application/ld+json">
   {
@@ -48,12 +48,13 @@
   <meta name="theme-color" content="#0B1B2E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- CONTENT: rewrite the meta description (and the two social descriptions above) in 120 to 160 characters. -->
-  <meta name="description" content="HSC Enterprise Computing notes on Data Visualisation (Telling stories with data). NESA NSW Year 12 HSC syllabus, dot point by dot point." />
+  <meta name="description" content="Year 12 HSC Enterprise Computing notes on Data Visualisation: choosing charts, OLAP, bias, dashboards, UX and a worked project, dot point by dot point." />
   <!-- Theme init: prevents flash of wrong theme. The ec- prefix keeps this site's storage apart from sister sites on the same origin. -->
   <script>(function(){try{var t=localStorage.getItem('ec-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
   <link rel="stylesheet" href="../css/styles.css?v=eaa2e127" />
   <link rel="stylesheet" href="../css/theme.css?v=ea1ce127" />
+  <link rel="stylesheet" href="../css/anim.css?v=22e246f7" />
+  <link rel="stylesheet" href="../css/pages/data-visualisation.css?v=d3545a3f" />
 </head>
 <body>
 
@@ -158,8 +159,7 @@
       </nav>
       <div class="topic-title-row"><span class="topic-hero-icon ti-y12" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 3.5V20.5h16.5"/><path d="M7 18v-4.5M11.5 18v-7M16 18v-9.5"/><path d="M5.5 10.5 9.5 7l3.5 1.5 6-5"/></svg></span><h1>Data Visualisation</h1></div>
       <p class="text-muted-dark max-w-600 mt-2 fs-sm lh-base">
-        <!-- CONTENT: one or two sentences introducing the topic, with the key ideas in <strong>. -->
-        Notes for the NESA focus area <strong>Data visualisation</strong>, following the syllabus in order: Using data to tell a story, Interpreting data visualisations, Designing for user experience and Creating data visualisations.
+        Notes for the NESA focus area <strong>Data visualisation</strong>: why we turn data into pictures, how to choose and check a chart, how <strong>OLAP</strong>, <strong>data warehouses</strong> and <strong>big data</strong> change what can be seen, how to spot <strong>bias</strong>, how to design for the user, and how to build and protect a visualisation of your own.
       </p>
       <div class="topic-header-meta">
         <span class="meta-pill year12">Year 12 — HSC</span>
@@ -210,8 +210,9 @@
 
         <aside class="yr12 topic-breakout" aria-label="Topic introduction">
           <span class="breakout-label">Why this matters now</span>
-          <!-- CONTENT: topic introduction. Two short paragraphs linking the topic to students' lives, then a closing question in .breakout-question with a .bq-lead label. -->
-          <p>This page covers the Data visualisation focus area of the NESA Enterprise Computing syllabus.</p>
+          <p>Every day you scroll past charts: your screen-time summary, a sports scoreboard, a weather radar, an election map. Some make a complicated situation obvious in seconds. Others quietly steer you towards the wrong idea, with a squashed axis, a hand-picked date range or a chart that hides how the numbers were gathered.</p>
+          <p>In this topic you will learn how enterprises turn large stores of data into pictures that people can act on, how to check that a chart deserves trust, how to design one that a real audience can use, and how to build your own from sourcing the data to protecting it. It sits between Data Science, which collects and analyses data, and your Enterprise Project, where you will probably need at least one good chart.</p>
+          <p class="breakout-question"><span class="bq-lead">Try this as you learn</span> Find one chart from the news or social media this week. What is the point it wants you to take away, and what would you need to see in the data to trust it?</p>
         </aside>
 
         <!-- ═══════════════════════════════════════════════════════ -->
@@ -223,8 +224,8 @@
         </div>
 
         <aside class="yr12 topic-breakout subtopic-breakout" aria-label="Part introduction">
-          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
-          <p>This part covers 9 NESA dot points: using data to tell a story.</p>
+          <p>Data visualisation starts with a question: what does the audience need to see? This part covers why we visualise data, which chart suits which question, how software and OLAP tools help us spot trends and forecast, and how enterprises use hardware, warehouses and big data to do it at scale. It also asks the hard questions about integrity and bias.</p>
+          <p class="breakout-question">A chart tells a story in three seconds. How could you check, in three minutes, whether that story is honest?</p>
         </aside>
 
         <section id="dv-purposes">
@@ -233,8 +234,52 @@
           <p class="syllabus-concept">📌 <em><strong>Explain</strong> the purposes of data visualisation</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>simplifying understanding</li><li>telling a story</li><li>highlighting significant results</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (explain). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>What data visualisation is</h3>
+          <p>NESA's glossary defines <strong>visualisation</strong> as the presentation of data or information through pictures or graphics to help the intended audience understand its significance. The important words are <em>intended audience</em> and <em>significance</em>: a chart is not decoration, it is a tool for a particular reader who needs to notice something in the data and do something about it. An enterprise such as a regional hospital, a logistics firm or a school canteen collects far more data than anyone can read as rows in a table. Visualisation is how that data becomes information a manager, a customer or a community member can use.</p>
+
+          <h3>Simplifying understanding</h3>
+          <p>The human eye is very good at comparing lengths, positions and colours, and very poor at scanning hundreds of numbers. A well-chosen chart lets a reader see in seconds what a table would take minutes to reveal: which month is highest, whether the trend is up or down, which region is the odd one out.</p>
+          <p>Simplifying does not mean removing the truth. It means removing everything that does not help the reader: unnecessary gridlines, decorative effects and unrelated series. A chart of 12 months of sales as a single line is simpler to read than 12 separate numbers, and it makes the seasonal pattern obvious.</p>
+
+          <h3>Telling a story</h3>
+          <p>A good visualisation has a message, a title that states it, and a sequence that leads the reader to it. Data stories usually follow the same arc as any story: a <em>context</em> (what is normal), a <em>change or conflict</em> (what has moved), and a <em>resolution</em> (what to do). Compare two titles for the same chart: "Bookings by month" only labels it; "Bookings fall by half between January and June" tells the reader what to notice. Designers help the reader by ordering charts logically, using annotations and using colour to draw the eye to the part that matters (see <a href="interactive-media.html#data-journalism">data journalism in Interactive Media</a>).</p>
+
+          <h3>Highlighting significant results</h3>
+          <p>Enterprises rarely need all the data; they need the results that matter for a decision. Visualisation highlights <strong>significant results</strong> by making them stand out: one bar in a contrasting colour, a reference line for the target, an annotation on the spike, or a red marker when a value passes a threshold. Significant means important to the decision, not only unusual. A drop in canteen sales on the day of an excursion is unusual but explained; a slow, steady drop in enrolments over five years is quiet but significant. A dashboard used by a hospital's bed manager highlights wards over 90% occupancy because that threshold triggers action.</p>
+
+          <h3>Choosing the right chart for the question</h3>
+          <p>The most common mistake is to choose a chart first and ask the question afterwards. Decide what you want the reader to compare, then pick the chart whose shape matches. NESA's Course Specifications name five chart types students should be able to generate in spreadsheet software (bar, column, line, scatter graph and pie, see the <a href="toolkit.html#spreadsheet-software">Course Toolkit</a>); other types suit particular questions.</p>
+          <div class="table-wrap">
+          <table>
+          <caption>Chart choice by type of question</caption>
+          <thead><tr><th>Question type</th><th>Suitable chart</th><th>Example question</th><th>Watch out for</th></tr></thead>
+          <tbody>
+          <tr><td><strong>Comparison</strong> of categories</td><td>Column or bar chart (bar for long labels), sorted by value</td><td>Which canteen item earned the most revenue this term?</td><td>Truncated axes; too many categories</td></tr>
+          <tr><td><strong>Change over time</strong></td><td>Line chart (columns for a few periods)</td><td>How have weekly online orders changed over a year?</td><td>Cherry-picked date ranges; uneven time gaps</td></tr>
+          <tr><td><strong>Part-to-whole</strong></td><td>Pie chart with about five slices or fewer, or a stacked bar</td><td>What share of sales comes from each category?</td><td>Slices that are too similar to compare; 3D effects</td></tr>
+          <tr><td><strong>Relationship</strong> between two numbers</td><td>Scatter graph, often with a trend line</td><td>Do hotter days sell more cold drinks?</td><td>Assuming correlation is causation</td></tr>
+          <tr><td><strong>Distribution</strong> (spread of values)</td><td>Histogram or box plot</td><td>How are booking values spread, and are there outliers?</td><td>Bins that hide the shape</td></tr>
+          <tr><td><strong>Geographic</strong> pattern</td><td>Map, shaded by region or with points</td><td>Which suburbs order the most deliveries?</td><td>Large empty areas dominating small dense ones; shading by raw counts rather than rates</td></tr>
+          </tbody></table>
+          </div>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Decision tree</span></p>
+            <h4 class="figure-title">Choosing a chart for the question</h4>
+            <p class="figure-lead">A vertical decision tree in NESA's style (Course Specifications, page 8): rectangles, labelled Yes and No branches, and a chart at the end of each path.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="dv-chart-choice"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>The first questions decide the family of chart; the last one is the catch-all for simple comparison.</li>
+          <li>If every answer is No, the problem is the question, not the chart.</li>
+          <li>Each path ends in a chart that can be built with the spreadsheet features NESA lists, except the map and histogram, which many spreadsheets also provide.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>Follow the tree for "Are Year 12 students who study more getting higher marks?" and then for "How many students chose each elective?". Do you end at different charts, and why?</p>
+          </div>
+          </figure>
+          <p><strong>Worked example.</strong> A school canteen manager asks, "Which day of the week should we roster the most staff?" This is a comparison of categories (days), so the answer is a column chart of average orders per weekday, sorted from busiest to quietest, with the busiest day highlighted. A pie chart would be a poor choice: the seven days are not parts of something the manager cares about, and the slices would be almost equal.</p>
+          <div class="callout assessor"><strong>Assessor tip</strong> When a question says <em>explain the purposes</em>, give each purpose its own developed sentence: what it means, then an example from a named enterprise. For "choose a chart", name the type of question, then the chart, then <em>why</em> that chart fits (for example, "a line chart, because the reader needs to see change across ordered time periods").</div>
         </section>
 
         <hr class="divider" />
@@ -244,8 +289,48 @@
           <p class="outcome-subtitle">🎯 <em>(EC-12-05, EC-12-08)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Describe</strong> how features of software contribute to a better understanding of datasets through data visualisation, including spreadsheets, creative design applications and combining applications to track trends and forecast</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (describe). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>No single program does everything. Each type of application contributes something different to understanding a dataset, and skilled analysts combine them. Enterprise Computing expects you to describe what each type does well and how the features track trends and support forecasting. The detail of each feature is in the <a href="toolkit.html#spreadsheet-software">Spreadsheet Software</a> and <a href="toolkit.html#graphics-presentation">Graphics and Presentation Software</a> sections of the Course Toolkit; this section explains why they matter for visualisation.</p>
+
+          <h3>Spreadsheets</h3>
+          <p>Spreadsheet software is the analyst's first stop because it holds the data, calculates on it and draws it in one place. Features that improve understanding include:</p>
+          <ul>
+          <li><strong>Charts:</strong> the five NESA types (bar, column, line, scatter and pie), configured with titles, axis labels, scales and colours so the message is clear.</li>
+          <li><strong>Formulas and functions:</strong> SUM, MEAN, MAXIMUM, MINIMUM and COUNT summarise a dataset; IF flags values that pass a threshold.</li>
+          <li><strong>Sort and filter:</strong> reorder rows or hide those that do not matter to see a subset.</li>
+          <li><strong>Pivot tables:</strong> regroup thousands of rows by category or month and total them, which is the spreadsheet's version of the OLAP operations described later on this page.</li>
+          <li><strong>Conditional formatting:</strong> shades cells automatically when a rule is met, so outliers and targets are noticed at a glance.</li>
+          <li><strong>Multiple sheets and linked cells:</strong> keep raw data, calculations and the finished dashboard separate but connected.</li>
+          </ul>
+
+          <h3>Tracking trends and forecasting in a spreadsheet</h3>
+          <p>To <em>track a trend</em>, plot the values in time order as a line chart, then smooth the noise. A <strong>moving average</strong> replaces each value with the mean of the last few, so short spikes fade and the direction shows. To <em>forecast</em>, add a <strong>trend line</strong> to the chart and extend it forward; the next section explains what the line means and its limits. Spreadsheets also support "what if" analysis: change an assumption cell (such as expected growth) and every chart that depends on it redraws.</p>
+          <div class="table-wrap tk-wide">
+          <table>
+          <caption>Tracking a trend: monthly online orders for a fictional shop (sheet "Orders")</caption>
+          <thead><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th></tr></thead>
+          <tbody>
+          <tr><td>1</td><td>Month</td><td>Orders</td><td>3-month moving average</td><td>Change on previous month</td></tr>
+          <tr><td>2</td><td>1</td><td>310</td><td></td><td></td></tr>
+          <tr><td>3</td><td>2</td><td>325</td><td></td><td><code>=(B3-B2)/B2</code> gives 4.8%</td></tr>
+          <tr><td>4</td><td>3</td><td>342</td><td><code>=MEAN(B2:B4)</code> gives 325.7</td><td>5.2%</td></tr>
+          <tr><td>5</td><td>4</td><td>351</td><td><code>=MEAN(B3:B5)</code> gives 339.3</td><td>2.6%</td></tr>
+          <tr><td>6</td><td>5</td><td>372</td><td>355.0</td><td>6.0%</td></tr>
+          <tr><td>7</td><td>6</td><td>380</td><td>367.7</td><td>2.2%</td></tr>
+          </tbody></table>
+          </div>
+          <p>The month-on-month change bounces between 2.2% and 6.0%, which is hard to read, but the moving average climbs steadily by about 13 to 16 orders a month. Plotting column C beside the raw orders shows the trend without the noise. Fill the formulas down (relative referencing) and the whole column updates.</p>
+
+          <h3>Creative design applications</h3>
+          <p>Graphics software (see the Course Toolkit) turns an accurate chart into a clear and attractive one. <strong>Vector graphics</strong> keep lines and text sharp at any size, so charts, icons and infographics stay crisp on a phone or a printed poster. <strong>Bitmap</strong> tools suit photographs and textures. Features NESA lists that help: templates and colour themes for a consistent look, transparent backgrounds so a chart sits on any slide, cropping and resizing, and importing and exporting in a variety of formats. Presentation software adds slide order and animation, which lets a presenter reveal a chart one idea at a time so the audience follows the story rather than reading ahead.</p>
+
+          <h3>Combining applications</h3>
+          <p>Combining applications plays to each program's strength. A common workflow: query a database and export the results as a CSV file, import them into a spreadsheet to clean and analyse, generate a chart, export it as an image or vector file, polish it in graphics software, and embed it in a presentation or report. There is a choice when placing a chart in another document:</p>
+          <ul>
+          <li><strong>Embedded</strong> objects are a copy stored inside the document. The document is self-contained, but it does not change when the source spreadsheet changes.</li>
+          <li><strong>Linked</strong> objects point to the original file. The chart updates when the data changes (which supports tracking a trend month after month), but the link breaks if the file moves.</li>
+          </ul>
+          <div class="callout tip"><strong>Tip</strong> Keep one master copy of the data and link or export from it. If the same numbers are copied into three files by hand, they will eventually disagree, which is a data integrity problem (see the Data Integrity section).</div>
+          <div class="callout assessor"><strong>Assessor tip</strong> A <em>describe</em> answer names the application type, one or two specific features, and the effect on the reader's understanding. "A spreadsheet's trend line, extended forward, lets the enterprise forecast next month's orders" earns more than "spreadsheets make graphs".</div>
         </section>
 
         <hr class="divider" />
@@ -255,8 +340,75 @@
           <p class="outcome-subtitle">🎯 <em>(EC-12-04, EC-12-05)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Identify</strong> patterns in data by interpreting and comparing datasets for an enterprise, social or ethical issue to highlight trends and for predictive data analytics</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (identify). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>What patterns look like</h3>
+          <p>Identifying a pattern means noticing that data behaves in a regular, repeatable way. Common patterns are:</p>
+          <ul>
+          <li>a <strong>trend</strong>: a general rise or fall over time;</li>
+          <li><strong>seasonality</strong>: a repeat at regular intervals, such as canteen sales that dip in every school holiday;</li>
+          <li>a <strong>cluster</strong>: values that group together, such as customers who all order on Friday evenings;</li>
+          <li>a <strong>correlation</strong>: two variables that move together, such as temperature and cold-drink sales;</li>
+          <li>an <strong>outlier</strong>: a value far from the rest, which may be an error or something important.</li>
+          </ul>
+          <p>You find patterns by interpreting one dataset carefully and by <em>comparing datasets</em>: this month against last year, one suburb against another, or a measure against its target. Comparisons must be fair, so compare like with like: the same period, the same units, and rates (per person, per hour) rather than raw totals when the groups differ in size.</p>
+          <div class="table-wrap">
+          <table>
+          <caption>Comparing datasets for an enterprise, social or ethical issue</caption>
+          <thead><tr><th>Issue</th><th>Datasets compared</th><th>Pattern to look for</th><th>Prediction it supports</th></tr></thead>
+          <tbody>
+          <tr><td><strong>Enterprise</strong></td><td>Monthly sales this year against the same months last year</td><td>Growth trend and a repeating seasonal shape</td><td>Stock and staffing needed next quarter</td></tr>
+          <tr><td><strong>Social</strong></td><td>Public transport trips per 1,000 residents across suburbs (public data such as the ABS Census plus operator data)</td><td>Suburbs with low use and long distances to a stop</td><td>Where a new bus route would help most</td></tr>
+          <tr><td><strong>Ethical</strong></td><td>Historical loan approvals across groups of applicants, used to train a scoring model</td><td>Different approval rates that reflect past decisions, not ability to repay</td><td>A model trained on this history may repeat the unfairness (see the Bias section)</td></tr>
+          </tbody></table>
+          </div>
+
+          <h3>Predictive data analytics</h3>
+          <p><strong>Predictive analytics</strong> uses patterns in historical data, with statistical methods or machine learning, to estimate what is likely to happen next. It answers "what is likely?" where descriptive analytics only answers "what happened?". A prediction is an estimate with uncertainty, never a fact. The rest of this section works through two small, fictional datasets. Machine learning models are covered in <a href="data-science.html#ml-analytics">Data Science</a>; here the tools are a trend line and a correlation.</p>
+
+          <h3>Worked dataset 1: a trend and a forecast</h3>
+          <p>A fictional online shop recorded its monthly orders for a year. The orders rise steadily.</p>
+          <div class="table-wrap">
+          <table>
+          <caption>Monthly online orders, months 1 to 12 (fictional)</caption>
+          <thead><tr><th>Month</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th></tr></thead>
+          <tbody><tr><th>Orders</th><td>310</td><td>325</td><td>342</td><td>351</td><td>372</td><td>380</td><td>401</td><td>415</td><td>418</td><td>440</td><td>455</td><td>471</td></tr></tbody></table>
+          </div>
+          <p>A <strong>trend line</strong> (also called a line of best fit, or a linear regression line) is the straight line that sits closest to all the points. "Closest" has a precise meaning: the line chosen makes the total of the squared vertical gaps between each point and the line as small as possible (the least-squares method). Spreadsheet charts can add this line automatically and display its equation. For these data it is <code>y = 14.4x + 296.5</code>, where <em>x</em> is the month number and <em>y</em> the orders.</p>
+          <ul>
+          <li>The <strong>slope</strong>, 14.4, says orders have grown by about 14 a month.</li>
+          <li>The <strong>intercept</strong>, 296.5, is where the line meets the y-axis at month 0. It anchors the line; it is not a real month.</li>
+          <li><strong>R²</strong> (0.996) measures how much of the variation in orders the line explains, from 0 (none) to 1 (all). A value this high says a straight line describes the past very well.</li>
+          </ul>
+          <p>To forecast, substitute a future month into the equation. For month 13: 14.4 × 13 + 296.5 ≈ 483 orders. The same steps give about 498 for month 14 and 512 for month 15 (using the unrounded slope and intercept).</p>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Line chart</span></p>
+            <h4 class="figure-title">Actual orders, trend line and three-month forecast</h4>
+            <p class="figure-lead">Twelve months of fictional data, the fitted line, and the same line extended to months 13 to 15.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="dv-trend-forecast"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>Solid line: the fit to the past. Dashed line: an assumption that the same pattern continues.</li>
+          <li>Forecast points are drawn differently (hollow) from actual data so no one mistakes one for the other.</li>
+          <li>Real points sit slightly above and below the line; the gaps are the errors the model does not explain.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>Use the equation to forecast month 18. Then say why that forecast is less trustworthy than the one for month 13.</p>
+          </div>
+          </figure>
+          <p><strong>Limits of the forecast.</strong> The line assumes growth stays steady. Twelve months cannot reveal a yearly seasonal pattern, so a school-holiday or Christmas surge would be missed. A price rise, a competitor or a supplier problem would also break the pattern. The further beyond the data you extend the line, the less reliable the forecast, so a good chart shows forecasts as estimates, often with a range around them.</p>
+
+          <h3>Worked dataset 2: a relationship</h3>
+          <p>A fictional kiosk recorded the daily maximum temperature and the number of cold drinks sold on ten days.</p>
+          <div class="table-wrap">
+          <table>
+          <caption>Temperature and cold-drink sales over ten days (fictional)</caption>
+          <thead><tr><th>Max temperature (°C)</th><th>19</th><th>22</th><th>24</th><th>27</th><th>29</th><th>31</th><th>33</th><th>35</th><th>26</th><th>21</th></tr></thead>
+          <tbody><tr><th>Cold drinks sold</th><td>44</td><td>53</td><td>66</td><td>78</td><td>84</td><td>101</td><td>104</td><td>121</td><td>70</td><td>55</td></tr></tbody></table>
+          </div>
+          <p>Plotted as a scatter graph the points climb from bottom left to top right. The correlation coefficient <em>r</em> is about 0.99: close to +1 means a strong positive relationship. The trend line is approximately <code>drinks = 4.65 × temperature − 46.6</code>, so at 30°C the model predicts about 93 drinks.</p>
+          <p>Three warnings apply. First, <strong>correlation is not causation</strong>: heat probably drives both drink sales and beach crowds, and the crowd may be the direct cause. Second, do not <strong>extrapolate</strong>: the data stop at 35°C, so a prediction for 42°C is a guess. Third, ten days is a small sample; a real analysis would use months of data.</p>
+          <div class="callout info"><strong>Scenario</strong> A council wants to predict weekend demand for its beach shuttle bus. Analysts plot past passenger counts against forecast temperature and find a strong positive relationship. They use the trend line to plan how many buses to run, and they show the prediction as a range on the dashboard because tomorrow's weather forecast is itself uncertain.</div>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Identify</em> asks you to name what you see. Name the pattern (upward trend, seasonality, positive correlation), quote evidence from the data, and, if the question mentions prediction, state the limit (for example, that a trend line assumes the pattern continues).</div>
         </section>
 
         <hr class="divider" />
@@ -267,8 +419,45 @@
           <p class="syllabus-concept">📌 <em><strong>Investigate</strong> the impact of the evolution of hardware and software on the field of data analytics</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>processing power</li><li>storage/memory</li><li>communication media</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>Data analytics is not new: businesses have always counted stock and sales. What changed is <em>how much</em> data can be handled, <em>how fast</em>, and <em>by whom</em>. Each change came from advances in hardware (the physical equipment) and software (the programs), and each opened new kinds of analysis. The three factors NESA lists are best investigated by asking the same questions of each: what was the limit, what removed it, and what does that make possible now?</p>
+
+          <h3>Processing power</h3>
+          <p>Early business computers ran <em>batch jobs</em>: the sales report was requested in the afternoon and printed the next morning, because the machine was slow and shared. Since then the number of transistors that can be put on a processor has grown enormously, computers have gained several processor cores that work in parallel, and graphics processing units (GPUs) and other specialised chips do thousands of small calculations at once. Clusters of computers, including rented ones in the cloud, split one job across many machines.</p>
+          <ul>
+          <li><strong>Impact:</strong> queries that once took hours finish in seconds, so analysts can ask follow-up questions while they think. Dashboards can recalculate as filters change. Statistical models and machine learning that need millions of calculations became practical for ordinary enterprises.</li>
+          <li><strong>Limit:</strong> more processing costs money and electricity, and a model can be run faster but still run on poor data.</li>
+          </ul>
+
+          <h3>Storage and memory</h3>
+          <p>Storage moved from paper files and magnetic tape, to hard disks, to solid-state drives with no moving parts, and to cloud storage that grows on demand. Memory (RAM) became larger and much cheaper per gigabyte. Two consequences matter for visualisation. <strong>In-memory analytics</strong> loads the working dataset into RAM, which is far faster to read than disk, so charts respond instantly when a user clicks a filter. And cheap storage means an enterprise can keep <em>years of detailed records</em> in a data warehouse or data lake instead of throwing away detail and keeping only monthly totals.</p>
+          <ul>
+          <li><strong>Impact:</strong> longer history for spotting trends, finer detail to drill into, and the storage of new kinds of data (images, sensor readings, logs).</li>
+          <li><strong>Limit:</strong> keeping everything increases the amount of personal data at risk in a breach and the responsibility to secure it; the Privacy Act's Australian Privacy Principles also expect organisations to delete or de-identify personal information they no longer need.</li>
+          </ul>
+
+          <h3>Communication media</h3>
+          <p>Dial-up modems, then broadband and fibre (including the nbn), Wi-Fi and 4G/5G mobile networks moved data faster, more cheaply and to more places. Data no longer has to be carried on disk to an office: sensors, tills and vehicles send it continuously, and staff view the results in a browser on a phone or tablet. Standard interfaces (APIs) let one system feed another automatically.</p>
+          <ul>
+          <li><strong>Impact:</strong> live dashboards, data collected at the source (IoT sensors on a farm or a bus fleet), cloud collaboration on the same chart, and analytics delivered as an online service.</li>
+          <li><strong>Limit:</strong> a live view depends on connectivity, and regional areas can have slower or less reliable links, so design for the connection your audience actually has.</li>
+          </ul>
+
+          <h3>How the software evolved</h3>
+          <div class="table-wrap">
+          <table>
+          <caption>Eras of business analytics (approximate; each era builds on the last)</caption>
+          <thead><tr><th>Era</th><th>Typical tools</th><th>What analysis looked like</th></tr></thead>
+          <tbody>
+          <tr><td>Mainframe and batch</td><td>Printed reports from central computers</td><td>Periodic, fixed reports made by specialists</td></tr>
+          <tr><td>Desktop</td><td>Spreadsheets, charting programs</td><td>Individuals analyse their own data on their own computer</td></tr>
+          <tr><td>Enterprise data</td><td>Relational databases and SQL, data warehouses, OLAP</td><td>Company-wide history queried in a consistent way</td></tr>
+          <tr><td>Self-service and cloud</td><td>Dashboard and business intelligence tools, cloud services</td><td>Staff build and share interactive views without a specialist</td></tr>
+          <tr><td>AI-assisted</td><td>Natural-language questions, automated insights, machine learning</td><td>Software suggests charts and flags patterns; people check them</td></tr>
+          </tbody></table>
+          </div>
+          <h3>Judgement</h3>
+          <p>Taken together, the impact is that analytics moved from occasional, specialist, backward-looking reports to continuous, self-service and forward-looking analysis. Processing power made complex analysis quick, storage made long histories affordable, and communication media made the results available anywhere and in near real time. The limits are now less about capacity and more about <strong>data quality, skills, privacy and cost</strong>. Data centres also use large amounts of electricity, so the environment is a stakeholder too. A balanced answer names benefits and limits for at least two groups, such as the enterprise, its customers and the community.</p>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Investigate</em> wants evidence and a judgement. For each of processing power, storage/memory and communication media, give the older limit, the advance, and a specific effect on analytics (such as live dashboards or longer trend history). Finish with a short judgement about which change mattered most for a named enterprise and why.</div>
         </section>
 
         <hr class="divider" />
@@ -278,8 +467,90 @@
           <p class="outcome-subtitle">🎯 <em>(EC-12-04, EC-12-05)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Describe</strong> online analytical processing (OLAP)</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (describe). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>What OLAP is for</h3>
+          <p><strong>Online analytical processing (OLAP)</strong> is a way of storing and querying data so that people can explore it from many angles, quickly. It works on <em>multidimensional</em> data, usually held in a data warehouse, and returns summaries such as "sales by product, by quarter, by region" in seconds even when millions of transactions sit underneath. It contrasts with <strong>online transaction processing (OLTP)</strong>, the everyday system that records each sale as it happens.</p>
+          <div class="table-wrap">
+          <table>
+          <caption>OLTP compared with OLAP</caption>
+          <thead><tr><th></th><th>OLTP (transactions)</th><th>OLAP (analysis)</th></tr></thead>
+          <tbody>
+          <tr><td>Purpose</td><td>Run the business: record a sale, update a booking</td><td>Understand the business: find trends, compare, forecast</td></tr>
+          <tr><td>Typical operation</td><td>Add or change one record</td><td>Read and summarise many records</td></tr>
+          <tr><td>Data</td><td>Current, detailed, updated constantly</td><td>Historical, summarised, loaded on a schedule</td></tr>
+          <tr><td>Users</td><td>Staff and customers at the till or on a website</td><td>Analysts and managers</td></tr>
+          <tr><td>Example</td><td>The café point-of-sale system</td><td>A cube of café sales by product, quarter and region</td></tr>
+          </tbody></table>
+          </div>
+
+          <h3>Cubes, dimensions and measures</h3>
+          <p>OLAP arranges data in a <strong>cube</strong> (the shape can have more than three dimensions, but three is easiest to draw). The parts are:</p>
+          <ul>
+          <li>a <strong>dimension</strong>: a way to categorise the data, such as Product, Time or Region;</li>
+          <li>a <strong>measure</strong>: the numeric value being analysed, such as sales in dollars or units sold, held in each cell;</li>
+          <li>a <strong>hierarchy</strong>: levels within a dimension, for example Year, Quarter, Month, Day, or Country, State, City.</li>
+          </ul>
+          <p>Because the cube stores summaries ready-made at each level of each hierarchy, moving between views is fast. A spreadsheet pivot table works on the same idea for a single table of data, which is why pivot tables are the closest tool many students have used.</p>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Concept diagram</span></p>
+            <h4 class="figure-title">An OLAP cube and its five operations</h4>
+            <p class="figure-lead">Fictional café-chain sales ($000) by Product, Quarter and Region, with the slice and dice highlighted.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="dv-olap-cube"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>Three dimensions give three axes; every cell holds one measure.</li>
+          <li>The teal front layer is a slice: Region is fixed at Coast, leaving a two-dimensional table.</li>
+          <li>The dashed box is a dice: a smaller block chosen on more than one dimension.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>Where in the cube would Inland Tea sales in Q2 be? Add the four Coast cells in the Coffee row and check your answer against the table below.</p>
+          </div>
+          </figure>
+
+          <h3>The five operations</h3>
+          <p>Every operation works on the same cube (Coast and Inland, three products, four quarters, sales in $000). The Coast layer is the front face in the diagram; the Inland layer is behind it.</p>
+          <ul>
+          <li><strong>Slice</strong> fixes one dimension at a single value and shows the rest. Slice Region = Coast:</li>
+          </ul>
+          <div class="table-wrap">
+          <table>
+          <caption>Slice: Region = Coast (Product by Quarter)</caption>
+          <thead><tr><th></th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th></tr></thead>
+          <tbody>
+          <tr><th>Coffee</th><td>40</td><td>44</td><td>52</td><td>48</td></tr>
+          <tr><th>Cake</th><td>20</td><td>22</td><td>26</td><td>30</td></tr>
+          <tr><th>Tea</th><td>12</td><td>14</td><td>15</td><td>13</td></tr>
+          </tbody></table>
+          </div>
+          <ul>
+          <li><strong>Dice</strong> selects a sub-cube by choosing values on two or more dimensions. Dice Product = Coffee or Cake, Quarter = Q3 or Q4, both regions: this gives 2 × 2 × 2 = 8 cells (Coast: 52, 48, 26, 30 shown above; Inland: 33, 31, 17, 21).</li>
+          <li><strong>Drill-down</strong> moves down a hierarchy to more detail. Coast Coffee sales in Q3 were 52; drilling down from quarter to month shows July 17, August 18 and September 17 (which total 52). Drill-down may go all the way to individual transactions (called drill-through).</li>
+          <li><strong>Roll-up</strong> is the reverse: it aggregates to a higher level of a hierarchy (months to quarters to year) or removes a dimension. Rolling up Quarter into a whole year gives annual sales by Product and Region:</li>
+          </ul>
+          <div class="table-wrap">
+          <table>
+          <caption>Roll-up: Quarter summed into the year (Product by Region)</caption>
+          <thead><tr><th></th><th>Coast</th><th>Inland</th><th>Total</th></tr></thead>
+          <tbody>
+          <tr><th>Coffee</th><td>184</td><td>122</td><td>306</td></tr>
+          <tr><th>Cake</th><td>98</td><td>67</td><td>165</td></tr>
+          <tr><th>Tea</th><td>54</td><td>47</td><td>101</td></tr>
+          <tr><th>Total</th><td>336</td><td>236</td><td>572</td></tr>
+          </tbody></table>
+          </div>
+          <ul>
+          <li><strong>Pivot</strong> (rotate) swaps the axes to view the same data from another angle, for example Quarter down the side and Product across the top. The numbers do not change, only the arrangement, and the pattern that was hard to see in one layout may be obvious in the other.</li>
+          </ul>
+
+          <h3>Where OLAP lives</h3>
+          <p>OLAP tools differ in how the cube is stored. <em>Multidimensional</em> OLAP (MOLAP) keeps pre-calculated cubes for the fastest response; <em>relational</em> OLAP (ROLAP) computes the summaries on demand from ordinary relational tables, so it handles larger volumes but is slower; <em>hybrid</em> OLAP mixes the two. You do not need to know the vendors' products, only the idea: a dashboard filter or a drill-down click is an OLAP operation happening behind the scenes. In the NESA course, SQL is limited to SELECT, FROM, WHERE and ORDER BY, so OLAP-style grouping in this course is done with spreadsheet pivot tables.</p>
+          <div class="key-terms">
+            <div class="key-term-item"><strong>Dimension</strong><span>A category by which data is viewed, such as Product, Time or Region.</span></div>
+            <div class="key-term-item"><strong>Measure</strong><span>The numeric value stored in each cell of a cube, such as sales.</span></div>
+            <div class="key-term-item"><strong>Roll-up and drill-down</strong><span>Moving up to a summary or down to detail within a dimension's hierarchy.</span></div>
+            <div class="key-term-item"><strong>Slice and dice</strong><span>Slice fixes one dimension; dice chooses a sub-cube on two or more.</span></div>
+          </div>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Describe OLAP</em> means more than "it analyses data". Full-mark answers state that it is multidimensional analysis of historical data, name dimensions and measures, and give at least two operations with a plain example ("drill-down from quarterly to monthly sales"). Do not confuse it with OLTP, which records transactions.</div>
         </section>
 
         <hr class="divider" />
@@ -290,8 +561,67 @@
           <p class="syllabus-concept">📌 <em><strong>Assess</strong> data integrity in the development of a data visualisation</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>ownership</li><li>source</li><li>validation</li><li>risk</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (assess). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p><strong>Data integrity</strong> is the accuracy, completeness and consistency of data, and the trustworthiness of that data across its whole life, from collection to the chart on the screen. A visualisation inherits every flaw in its data and can make them look convincing, so assessing integrity comes <em>before</em> design. To <em>assess</em> is to make a judgement of value or quality, so your answer should rate each factor and justify the rating with evidence.</p>
+
+          <h3>Ownership</h3>
+          <p>Someone always owns or is responsible for a dataset, and that decides what you may do with it. Ask:</p>
+          <ul>
+          <li><strong>Who owns it, and under what licence?</strong> A licence such as Creative Commons Attribution lets you reuse a dataset if you credit the source; a dataset with no licence should not be assumed free to reuse. The Copyright Act 1968 (Cth) applies to some datasets and their presentation.</li>
+          <li><strong>Is it personal information?</strong> If people can be identified, the Privacy Act 1988 (Cth) and the Australian Privacy Principles govern how it is collected, used, kept accurate (APP 10) and secured (APP 11). See <a href="data-science.html#data-law">Data Science</a> for the legal framework.</li>
+          <li><strong>Who has the right to govern it?</strong> Aboriginal and Torres Strait Islander Peoples have the right to govern data about their communities, Country and cultures. Two frameworks guide this: the Maiam nayri Wingara Indigenous Data Sovereignty principles from Australia, and the international CARE Principles for Indigenous Data Governance (Collective benefit, Authority to control, Responsibility and Ethics). In practice, you seek permission and follow community protocols before using or publishing such data, and you do not assume that "publicly available" means "free to use".</li>
+          </ul>
+          <p>Learn more at the <a href="https://www.maiamnayriwingara.org" target="_blank" rel="noopener">Maiam nayri Wingara</a> website and the <a href="https://www.gida-global.org/" target="_blank" rel="noopener">Global Indigenous Data Alliance</a>.</p>
+
+          <h3>Source</h3>
+          <p>The <strong>source</strong> tells you how far to trust the data. <em>Primary</em> data is collected by you (a survey, a sensor); <em>secondary</em> data was collected by someone else (a government agency, a company report). Assess a source by asking who collected it, how (method and sample), when (is it current?), why (could the collector benefit from a particular result?), and whether the method is documented. Data from a statistical agency such as the Australian Bureau of Statistics documents its methods; an unsigned spreadsheet passed around on social media does not. Where possible, cross-check a key figure against a second independent source.</p>
+
+          <h3>Validation</h3>
+          <p><strong>Validation</strong> checks that data is reasonable and allowed before it is accepted; <strong>verification</strong> checks that it was transferred or entered correctly (for example, by double entry or by comparing totals with the source). Common validation checks are:</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Check</th><th>What it tests</th><th>Example</th></tr></thead>
+          <tbody>
+          <tr><td>Data type</td><td>The value is the right kind</td><td>Quantity must be a number, not "twelve"</td></tr>
+          <tr><td>Range</td><td>The value lies within limits</td><td>Age from 0 to 120; temperature not below −20°C for a Sydney dataset</td></tr>
+          <tr><td>Format</td><td>The pattern is right</td><td>A postcode of four digits (NNNN)</td></tr>
+          <tr><td>Presence</td><td>A required field is not empty</td><td>Every sale has a date</td></tr>
+          <tr><td>List or lookup</td><td>The value is one of the allowed set</td><td>State is NSW, VIC, QLD and so on</td></tr>
+          <tr><td>Consistency</td><td>Related fields agree</td><td>Delivery date is not earlier than order date</td></tr>
+          <tr><td>Uniqueness</td><td>No duplicates where none are allowed</td><td>One row per receipt number</td></tr>
+          </tbody></table>
+          </div>
+          <p>When a dataset arrives already collected, run the same checks as a <em>cleaning</em> step: count and handle blanks, remove duplicates, standardise formats (dates, spelling, units), and investigate impossible values. Record every change so the process can be repeated and explained. In a spreadsheet, filters, sorting (to spot extremes), conditional formatting and an IF formula such as <code>=IF(OR(B2&lt;0,B2&gt;120),"Check","OK")</code> can flag suspicious rows. The <a href="toolkit.html#data-dictionary">data dictionary</a> in the Course Toolkit records the rules each field must meet.</p>
+
+          <h3>Risk</h3>
+          <p>Data integrity risks are events that damage the accuracy or trustworthiness of data, with consequences for people who act on it. Risk is judged by likelihood and consequence (see the <a href="cybersecurity.html#risk-matrix">risk matrix</a> in Principles of Cybersecurity).</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Risk</th><th>Example</th><th>Consequence</th><th>Control</th></tr></thead>
+          <tbody>
+          <tr><td>Entry error</td><td>A price typed as 5500 instead of 55.00</td><td>A revenue chart with one enormous bar</td><td>Range and format validation; double entry</td></tr>
+          <tr><td>Out-of-date data</td><td>A chart uses last year's customer list</td><td>Decisions based on a world that has changed</td><td>Show the "as at" date; refresh schedule</td></tr>
+          <tr><td>Inconsistent definitions</td><td>Two departments count "active customer" differently</td><td>Dashboards that contradict each other</td><td>A shared data dictionary</td></tr>
+          <tr><td>Unauthorised change</td><td>Someone edits the master spreadsheet</td><td>Wrong or manipulated results</td><td>Access control, version history, audit trail</td></tr>
+          <tr><td>Corruption or loss</td><td>A failed disk or an overwritten file</td><td>Missing months in a trend</td><td>Regular backups, tested restores</td></tr>
+          <tr><td>Analysis error</td><td>A join that duplicates rows</td><td>Totals that are too high</td><td>Reconcile totals with source; peer review</td></tr>
+          </tbody></table>
+          </div>
+
+          <h3>Worked assessment</h3>
+          <div class="callout info"><strong>Scenario</strong> A student wants to chart daily beach visitor counts from a fictional council spreadsheet for a poster recommending lifeguard hours. They assess the dataset before using it.</div>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Factor</th><th>Evidence</th><th>Rating</th><th>Action</th></tr></thead>
+          <tbody>
+          <tr><td>Ownership</td><td>Published by the council on its open data portal under an attribution licence</td><td>Strong</td><td>Credit the council in a source line on the poster</td></tr>
+          <tr><td>Source</td><td>Counts come from automatic sensors; the method note says they can miss people in large groups</td><td>Adequate</td><td>State that counts are estimates</td></tr>
+          <tr><td>Validation</td><td>Three days show negative counts and two dates are missing</td><td>Weak</td><td>Check against the sensor log; if unresolved, exclude and document those days</td></tr>
+          <tr><td>Currency</td><td>Last updated 18 months ago</td><td>Weak</td><td>Look for newer data, or label the chart with the period covered</td></tr>
+          <tr><td>Risk</td><td>Poster will influence safety staffing, so a wrong chart has real consequences</td><td>High</td><td>Cross-check with a second source, such as lifeguard incident logs</td></tr>
+          </tbody></table>
+          </div>
+          <p><strong>Judgement.</strong> The dataset is suitable for showing broad seasonal patterns once the bad rows are handled, but it is not strong enough to justify a precise staffing figure on its own. The poster should say so.</p>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Assess</em> asks for a judgement, so end with one. Address ownership, source, validation and risk in turn; give a rating with evidence for each; then state whether the data is fit for the purpose and what you would do to improve it.</div>
         </section>
 
         <hr class="divider" />
@@ -302,8 +632,45 @@
           <p class="syllabus-concept">📌 <em><strong>Explain</strong> the impact of enterprise data warehousing on data visualisation</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>analysis and use of historical data trends and patterns</li><li>correlation with current data</li><li>data refinement/optimisation</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (explain). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>What a data warehouse is</h3>
+          <p>An enterprise <strong>data warehouse</strong> is a large, central store of data copied from many operational systems (sales, stock, human resources, web orders), organised around subjects such as customers or products, and kept over a long period for analysis and reporting. Operational databases are optimised to record transactions; a warehouse is optimised to answer questions. Data is loaded on a schedule through a process called <strong>ETL</strong> (extract, transform, load): extract it from each source, transform it into consistent formats and definitions, and load it into the warehouse. A smaller warehouse for one department is a <em>data mart</em>, and a <em>data lake</em> stores raw data of many formats before it is refined.</p>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">System flowchart</span></p>
+            <h4 class="figure-title">From operational systems to a data warehouse and dashboard</h4>
+            <p class="figure-lead">NESA system flowchart symbols (Course Specifications, page 7) show how a retailer's data moves from source to screen.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="dv-warehouse-flow"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>Three different sources, one of them outside the enterprise (cloud, joined by a telecommunications link), all pass through the same ETL process.</li>
+          <li>Analysis reads from the warehouse, not from the busy operational systems.</li>
+          <li>The double-headed arrow shows the analysis process reading from and writing back to the warehouse (saved summaries).</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>Add a fourth source (for example a loyalty card system) and say what the ETL process would need to standardise before loading it.</p>
+          </div>
+          </figure>
+
+          <h3>Analysis and use of historical data trends and patterns</h3>
+          <p>Because the warehouse keeps years of history in one consistent form, visualisation can show what a single year cannot: long trends, repeating seasonal patterns, and year-on-year comparisons. A line chart of five years of daily sales reveals a school-holiday dip each January, a steady growth rate, and one unusual week. That history is also the training material for predictive models, since a model can only learn patterns that are in the data it has seen. The value of historical analysis depends on <em>comparable</em> history: if a product code or a store's boundaries changed halfway through, the warehouse team must record the change or the chart will mislead.</p>
+
+          <h3>Correlation with current data</h3>
+          <p>History becomes useful when it is set beside the present. Visualisations do this in three ways:</p>
+          <ul>
+          <li><strong>Baselines:</strong> show today's figure beside the average for the same weekday over the past eight weeks, with a band for normal variation, so unusual days stand out.</li>
+          <li><strong>Forecast against actual:</strong> a model trained on history predicts today's demand; the chart shows the prediction and the real result, and a large gap triggers a review.</li>
+          <li><strong>Correlating sources:</strong> joining sales history with weather, holidays or promotions on a shared key such as the date or location, then checking whether the relationship still holds in current data.</li>
+          </ul>
+          <p>A correlation found in history may weaken, so it needs to be re-checked against current data; a dashboard that is never compared with reality slowly becomes wrong.</p>
+
+          <h3>Data refinement and optimisation</h3>
+          <p>Refinement improves the <em>quality</em> of data and optimisation improves the <em>speed</em> of using it; both change what a visualisation can do.</p>
+          <ul>
+          <li><strong>Refinement</strong> during ETL: remove duplicates, fix or flag errors, convert units and date formats, fill or mark missing values, and apply the same definition of terms such as "sale" and "customer" to every source. The result is a single trusted version of the figures, so two dashboards no longer show different totals.</li>
+          <li><strong>Optimisation:</strong> store pre-calculated summaries (daily totals rather than every transaction) for common charts, build indexes on fields that filters use, keep only fields that analysts need, and archive rarely used old detail. Faster queries mean a dashboard that responds when a user clicks; a slow one gets abandoned.</li>
+          </ul>
+          <div class="callout info"><strong>Scenario</strong> A supermarket chain loads point-of-sale data from 90 stores every night. During the transform step, product codes from an old system are matched to the new ones, and returns are recorded as negative sales. Next morning a regional manager opens a dashboard, compares this week's dairy sales with the same week in each of the last three years, and drills into the one store that is well below its pattern. Without refinement the old and new product codes would appear as separate products, and the history would look as if dairy sales had collapsed.</div>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Explain the impact</em> of data warehousing by linking cause and effect: for example, "because the warehouse stores consistent historical data, a manager can compare this year's trend with previous years, which shows whether a fall is seasonal or unusual." Cover all three of NESA's factors, each with a consequence for the visualisation.</div>
         </section>
 
         <hr class="divider" />
@@ -314,8 +681,43 @@
           <p class="syllabus-concept">📌 <em><strong>Explain</strong> how big data affects the design and development of data visualisation</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>scope of visible information</li><li>types and depth of insight provided by the data</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (explain). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>NESA's glossary describes <strong>big data</strong> as extremely large datasets that may be analysed computationally to reveal patterns, trends and associations. Big data is often described by four features: <em>volume</em> (how much), <em>velocity</em> (how fast it arrives), <em>variety</em> (many formats, from tables to text, images and sensor readings) and <em>veracity</em> (how trustworthy it is). See <a href="data-science.html#big-data">Data Science</a> for how big data is collected and stored; this section is about what it does to the design and development of a visualisation.</p>
+
+          <h3>Scope of visible information</h3>
+          <p>Big data changes <em>how much of the data can be seen at once</em>. A chart has perhaps a million pixels; a big dataset can have a billion rows. Drawing one mark for each row produces an unreadable blob (called overplotting) and a slow page. Designers respond by deciding what part of the data to show and how:</p>
+          <ul>
+          <li><strong>Aggregate</strong> before drawing: total or average by hour, suburb or category. The one-line summary replaces a million rows.</li>
+          <li><strong>Bin and shade:</strong> divide the plot into cells and shade each by count, as in a heat map or density plot.</li>
+          <li><strong>Sample:</strong> draw a random subset for a quick look, and say that it is a sample.</li>
+          <li><strong>Overview first, then zoom and filter, then details on demand:</strong> show the big picture, let users narrow the scope, and reveal individual records only when asked. This is the pattern behind dashboards, and it is the same as the OLAP drill-down.</li>
+          <li><strong>Pre-compute:</strong> summarise in the warehouse so the dashboard reads a small table, not the raw data.</li>
+          </ul>
+          <p>Each choice hides some detail, so the design must say what has been hidden (for example, "each cell is the average of about 10,000 tap-ons") and let the user check.</p>
+          <div class="table-wrap">
+          <table>
+          <caption>Designing for a small dataset and a big one</caption>
+          <thead><tr><th></th><th>Small dataset (hundreds of rows)</th><th>Big dataset (millions or more)</th></tr></thead>
+          <tbody>
+          <tr><td>What is drawn</td><td>Every value can be plotted</td><td>Summaries, bins or samples</td></tr>
+          <tr><td>Typical chart</td><td>Scatter graph, column chart</td><td>Heat map, density plot, aggregated line</td></tr>
+          <tr><td>Interaction</td><td>Optional</td><td>Essential: filter, zoom, drill down</td></tr>
+          <tr><td>Performance</td><td>Not a concern</td><td>Pre-aggregation, caching, in-memory processing</td></tr>
+          <tr><td>Main risk</td><td>Too few points to be reliable</td><td>Hidden detail, spurious patterns, privacy of individuals</td></tr>
+          </tbody></table>
+          </div>
+
+          <h3>Types and depth of insight provided by the data</h3>
+          <p>Big data offers <em>more kinds</em> of insight and <em>greater depth</em>. Analytics is often described in four levels, each answering a deeper question:</p>
+          <ul>
+          <li><strong>Descriptive:</strong> what happened? (weekly boardings on each bus route)</li>
+          <li><strong>Diagnostic:</strong> why did it happen? (boardings fell where a road was closed and on wet days)</li>
+          <li><strong>Predictive:</strong> what is likely to happen? (expected boardings next Saturday given the weather forecast)</li>
+          <li><strong>Prescriptive:</strong> what should we do? (add a bus on the route and time where demand is forecast to exceed capacity)</li>
+          </ul>
+          <p>The volume and variety of big data enable finer segments (down to a stop, an hour or an individual customer), the joining of data from different sources (location, weather, social media text), and pattern-finding by machine learning that no person could do by inspection. Each level should be visualised differently: descriptive views are charts of the past, predictive views need forecasts drawn as estimates with ranges, and prescriptive views end in a recommended action.</p>
+          <p><strong>Cautions.</strong> More data does not mean better data: a huge dataset can still be biased, for example if it only includes people who own smartphones. With many variables, some chance correlations will appear by luck, so a pattern needs a plausible explanation and to be tested on new data. And finer detail brings privacy risk: charts of very small groups can identify individuals, so enterprises combine small groups or suppress tiny counts.</p>
+          <div class="callout info"><strong>Scenario</strong> A city transport agency records millions of tap-on and tap-off events a week. A useful visualisation is not a dot per trip. It is a heat map of 24 hours by 7 days for the chosen route (168 shaded cells), with filters for route and month, and a click that opens the trips behind a cell. A separate view shows predicted boardings for the next week beside last week's actual figures.</div>
+          <div class="callout assessor"><strong>Assessor tip</strong> Link <em>big data</em> to a design consequence in every sentence: "because the dataset has millions of rows, the designer aggregates by hour and provides filters, so the visualisation stays readable and fast." Cover both NESA factors: what can be seen at once, and the type and depth of insight.</div>
         </section>
 
         <hr class="divider" />
@@ -326,8 +728,95 @@
           <p class="syllabus-concept">📌 <em><strong>Evaluate</strong> bias in data collection, storage and analysis when developing visualisations</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>accuracy</li><li>audience</li><li>data source</li><li>unconscious bias</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (evaluate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p><strong>Bias</strong> is a systematic distortion that pushes results in a particular direction. It can enter at any stage: when data is <em>collected</em> (who and what is measured), <em>stored</em> (what is kept, cleaned or dropped) and <em>analysed</em> (which comparisons and charts are chosen). To <em>evaluate</em> bias, you weigh how serious it is, what causes it, and how well it can be reduced, and then reach a judgement. The figure below shows why it matters: biased data can feed a loop that produces more biased data.</p>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Cycle diagram</span></p>
+            <h4 class="figure-title">How bias reinforces itself</h4>
+            <p class="figure-lead">Unrepresentative data trains a model, its unfair outputs shape future data collection, and the loop repeats until someone breaks it.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="bias-cycle"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>The loop has no natural exit; a person has to intervene.</li>
+          <li>The mitigations sit outside the loop: diverse data, audits, diverse teams and explainability.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>A delivery app only sends promotions to suburbs that already order a lot. How could that create the loop above?</p>
+          </div>
+          </figure>
+
+          <h3>Accuracy</h3>
+          <p>Accuracy is how closely the data and the chart match reality. Bias affects it when measurement is systematically off (a scale that reads 2 kg high), when the sample does not represent the population (a survey of gym-goers about attitudes to exercise), or when records are missing for a reason (people with low incomes skipping a question). In storage, accuracy is damaged by out-of-date records, rounding, and silently dropping rows with blanks. In analysis, it is damaged by choosing an average that hides a skewed distribution. <strong>Evaluation:</strong> ask how the data was measured, who is missing, and how large the error could be, then state the uncertainty on the chart.</p>
+
+          <h3>Audience</h3>
+          <p>Bias can come from the audience or be aimed at it. A designer who assumes the audience shares their knowledge may leave out context that changes the meaning. An organisation may show only the results that suit its audience, such as a sales chart with the good quarters and not the bad. Language, colour and imagery carry cultural assumptions: a red-green scale that is unreadable for a colour-blind viewer excludes part of the audience. <strong>Evaluation:</strong> identify who the audience is, who was left out, and what they would need to see to make a fair judgement.</p>
+
+          <h3>Data source</h3>
+          <p>Every source has a viewpoint. Data from social media over-represents people who use it and are vocal; data from a company's own customers says nothing about non-customers; historical records reflect the decisions of the time (such as who was offered a loan). Combining sources can compound the problem when their populations differ. A source with a stake in the result (a sponsor's survey praising the sponsor's product) needs extra scrutiny. <strong>Evaluation:</strong> ask who produced the data, for what purpose, and who is absent from it (see the <a href="#data-integrity">Data Integrity</a> section).</p>
+
+          <h3>Unconscious bias</h3>
+          <p>People have assumptions and preferences they are not aware of, and these shape every choice in a visualisation: which questions to ask, which variables to include, which outliers to treat as errors, and which story to look for. <em>Confirmation bias</em> makes us favour data that supports what we already believe; <em>survivorship bias</em> makes us study only the cases that survived (successful start-ups) and miss those that did not. <strong>Evaluation:</strong> unconscious bias cannot be seen by looking harder, so it is reduced by process: state the question before looking at the data, have someone with a different viewpoint review the chart, and test the finding against data you did not use to form it.</p>
+
+          <h3>Bias at each stage</h3>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Stage</th><th>Example of bias</th><th>Effect on the chart</th><th>Reduce it by</th></tr></thead>
+          <tbody>
+          <tr><td>Collection</td><td>Online-only survey about internet services</td><td>Excludes people without a connection; results look better than reality</td><td>Use several collection methods; record who responded</td></tr>
+          <tr><td>Storage</td><td>Rows with missing postcodes are deleted</td><td>Rural areas disappear from the map</td><td>Keep and flag missing data; document every rule</td></tr>
+          <tr><td>Analysis</td><td>Testing many comparisons and reporting the one that looks striking</td><td>A pattern that is really chance</td><td>Decide comparisons in advance; test on fresh data</td></tr>
+          <tr><td>Presentation</td><td>Truncated axis or chosen date range</td><td>Exaggerated or hidden change</td><td>Follow the honest-chart rules below</td></tr>
+          </tbody></table>
+          </div>
+
+          <h3>Misleading-chart techniques</h3>
+          <p>Some distortions are deliberate; many are accidents. Learn to spot them, and never use them.</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Technique</th><th>How it misleads</th><th>Before (misleading)</th><th>After (honest)</th></tr></thead>
+          <tbody>
+          <tr><td><strong>Truncated axis</strong></td><td>A value axis that does not start at zero makes small differences look large in a column chart, where length shows the value</td><td>Axis from 90 to 95: 94% looks four times 91%</td><td>Axis from zero: the columns are nearly equal</td></tr>
+          <tr><td><strong>Cherry-picked range</strong></td><td>Choosing start and end points that suit the story hides the wider pattern</td><td>Only July to December: sales up 47%</td><td>Whole year: seasonal dip and recovery, level overall</td></tr>
+          <tr><td><strong>3D distortion</strong></td><td>Perspective makes front items look larger and back items smaller, and the depth adds no information</td><td>A 3D pie in which the nearest slice looks like most of the pie</td><td>A flat bar chart, sorted, with the values labelled</td></tr>
+          <tr><td><strong>Dual axes</strong></td><td>Two series with separate y-axes can be scaled so they appear to move together or diverge, whatever the data say</td><td>Sales on the left axis and complaints on the right, each scaled to fill the chart, look "linked"</td><td>Two charts one above the other on a shared time axis, or both series indexed to 100</td></tr>
+          </tbody></table>
+          </div>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Column charts</span></p>
+            <h4 class="figure-title">Truncated axis: before and after</h4>
+            <p class="figure-lead">The same fictional satisfaction scores drawn with a short axis and with an axis from zero.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="dv-truncated-axis"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>In a column chart the reader compares heights, so the axis must start at zero for the comparison to be honest.</li>
+          <li>Both charts contain the same numbers; only the axis changed.</li>
+          <li>A line chart may use a non-zero axis because it shows change, not length, but the axis should still be labelled clearly.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>Brand Y scored 91 and Brand X 94. Write one honest title for each chart.</p>
+          </div>
+          </figure>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Line charts</span></p>
+            <h4 class="figure-title">Cherry-picked range: before and after</h4>
+            <p class="figure-lead">Six months look like strong growth; the full year shows a seasonal dip and recovery.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="dv-cherry-range"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>Every point in the left chart is real; the distortion is in what was left out.</li>
+          <li>The shaded part of the right chart is exactly what the left chart shows.</li>
+          <li>Ending the year at 53 against a January start of 52 is close to flat, not a 47% rise.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>What extra data would you ask for before predicting next year's sales?</p>
+          </div>
+          </figure>
+
+          <h3>Judgement: how serious is the bias?</h3>
+          <p>To evaluate bias in a visualisation, weigh these questions and reach a verdict. Does the bias change the decision the audience would make? Could it harm particular people or groups (an ethical and, in some cases, a legal issue under discrimination law)? Is it deliberate or accidental? Can it be corrected, and at what cost? For example, a truncated axis on an internal draft is easy to fix and low-harm; the same chart on a public health notice is high-harm and the enterprise should correct it publicly. The best defence is transparency: state the source, the period and the method, and show the whole scale.</p>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Evaluate</em> requires criteria and a verdict. Take one of NESA's four factors (accuracy, audience, data source or unconscious bias), name a stage (collection, storage or analysis), give a concrete example of the bias, weigh its effect, and say how you would reduce it. For misleading charts, describe the technique and state what the honest version would show.</div>
         </section>
 
         <div class="quiz" data-quiz="dv-1"></div>
@@ -341,8 +830,8 @@
         </div>
 
         <aside class="yr12 topic-breakout subtopic-breakout" aria-label="Part introduction">
-          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
-          <p>This part covers 2 NESA dot points: interpreting data visualisations.</p>
+          <p>Once a visualisation exists, two questions remain: was the right tool used to build it, and what does the finished chart actually tell us? This part evaluates the tools enterprises use, from spreadsheets to custom software, and gives you a method for interrogating any visualisation, including a hands-on chart you can change yourself.</p>
+          <p class="breakout-question">If you had to build a live dashboard for your school's canteen by Friday, which tool would you choose, and what would you give up?</p>
         </aside>
 
         <section id="dv-tools">
@@ -351,8 +840,69 @@
           <p class="syllabus-concept">📌 <em><strong>Evaluate</strong> the effectiveness of software tools used to develop data visualisations</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>spreadsheets used to develop dashboards</li><li>presentation software used to present data analysis</li><li>business analytics services, including ‘as a service’ products</li><li>custom software solutions</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (evaluate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>To <em>evaluate</em> a tool is to judge how well it does its job against criteria that matter to the user. There is no best tool, only the best fit for a purpose, an audience, a budget and a set of skills. The four categories below are not exclusive: many projects start in a spreadsheet, present in slides and later move to a business analytics service as they grow.</p>
+
+          <h3>Criteria for evaluation</h3>
+          <ul>
+          <li><strong>Cost:</strong> licence or subscription, hardware, training and maintenance, not just the purchase price.</li>
+          <li><strong>Ease of learning and use:</strong> how quickly a new user becomes productive.</li>
+          <li><strong>Data volume and sources:</strong> how much data it handles and what it can connect to.</li>
+          <li><strong>Interactivity:</strong> filters, drill-down and dashboards, or only fixed charts.</li>
+          <li><strong>Sharing and live refresh:</strong> whether many people can see current data without emailing files.</li>
+          <li><strong>Governance and security:</strong> access control, audit trails, where data is stored.</li>
+          <li><strong>Tailoring and integration:</strong> how far it can be adapted to the enterprise and connected to other systems.</li>
+          </ul>
+
+          <h3>Spreadsheets used to develop dashboards</h3>
+          <p>A spreadsheet dashboard combines a data sheet, a calculation sheet and a display sheet holding charts, pivot tables and key figures, often with slicers or drop-down cells so the user can filter. Most staff already know the software, so cost and training are low, and a prototype can be built in an afternoon.</p>
+          <ul>
+          <li><strong>Strengths:</strong> familiar, cheap, flexible; formulas are visible and easy to check; good for small and medium datasets and for one-off analysis.</li>
+          <li><strong>Limitations:</strong> row limits and slowing performance on large data; manual refresh unless connected to a source; version chaos when copies are emailed around; formulas can be broken by accident; weak access control.</li>
+          </ul>
+
+          <h3>Presentation software used to present data analysis</h3>
+          <p>Presentation software organises charts and commentary into a sequence for an audience, with templates, themes, animation and embedded or linked charts. It is the right tool for <em>telling</em> a story to a room, such as a board meeting or a class presentation, where the presenter controls the pace.</p>
+          <ul>
+          <li><strong>Strengths:</strong> strong storytelling and design control; audiences know how to follow slides; easy to combine with spreadsheet charts.</li>
+          <li><strong>Limitations:</strong> static (a chart on a slide is a snapshot); limited data handling; the audience cannot explore; numbers are copied and go out of date.</li>
+          </ul>
+
+          <h3>Business analytics services, including 'as a service' products</h3>
+          <p>Business analytics (or business intelligence) services are purpose-built for turning enterprise data into interactive dashboards. Many are delivered online <em>as a service</em>, so the enterprise rents access rather than buying and running the software (see cloud service models in <a href="networking-systems.html#cloud-services">Networking Systems</a>). Categories include:</p>
+          <ul>
+          <li><strong>Software as a Service (SaaS) dashboard tools</strong> used through a browser: connect to data, drag fields to build charts, publish to colleagues. Examples include Microsoft Power BI, Tableau and Google Looker Studio.</li>
+          <li><strong>Cloud data warehouses and analytics platforms</strong> (a platform or infrastructure service) that store and query very large data, which dashboard tools then read. Examples include Google BigQuery, Amazon Redshift and Snowflake.</li>
+          <li><strong>Embedded analytics:</strong> charts and dashboards built into another product, such as the sales report inside an accounting package.</li>
+          </ul>
+          <p>The product names are examples of the categories, not something you need to memorise. <strong>Strengths:</strong> scalable to big data, live refresh from many sources, interactive and shareable, security and access controls managed centrally, updates handled by the provider. <strong>Limitations:</strong> ongoing subscription cost, a learning curve, dependence on the provider and on internet access, and questions about where data is stored. Personal information sent to an overseas provider raises Australian Privacy Principle 8 (cross-border disclosure), so an enterprise checks the provider's data location and terms.</p>
+
+          <h3>Custom software solutions</h3>
+          <p>A custom solution is written or commissioned to fit one enterprise's needs, for example a web application using a programming language and a chart library, or an application built by an external developer. It might display a fleet's live positions on a map with rules the enterprise defines.</p>
+          <ul>
+          <li><strong>Strengths:</strong> complete control of features, appearance and integration; can handle unusual data; no licence fee for the tool itself; the enterprise owns the result.</li>
+          <li><strong>Limitations:</strong> highest up-front cost and time; needs programming skills; must be tested, secured and maintained for its whole life; risk that the developer leaves and no one understands it.</li>
+          </ul>
+
+          <h3>A worked evaluation</h3>
+          <div class="callout info"><strong>Scenario</strong> A fictional irrigation co-op needs a weekly dashboard for 12 staff. Data comes from a spreadsheet of meter readings and a database of customer accounts. The budget is small, most staff are not technical, and everyone must see up-to-date figures without emailing files.</div>
+          <p>Each criterion has a weight (3 = very important, 1 = minor). Each tool is scored from 1 (poor) to 5 (excellent) and the score is multiplied by the weight. The maximum possible total is 80.</p>
+          <div class="table-wrap">
+          <table>
+          <caption>Weighted decision matrix (scores are judgements for this scenario)</caption>
+          <thead><tr><th>Criterion</th><th>Weight</th><th>Spreadsheet</th><th>Presentation</th><th>Analytics service</th><th>Custom software</th></tr></thead>
+          <tbody>
+          <tr><td>Cost</td><td>3</td><td>5</td><td>5</td><td>3</td><td>1</td></tr>
+          <tr><td>Ease of learning</td><td>3</td><td>5</td><td>5</td><td>4</td><td>1</td></tr>
+          <tr><td>Data volume and sources</td><td>2</td><td>2</td><td>1</td><td>4</td><td>5</td></tr>
+          <tr><td>Interactivity</td><td>2</td><td>3</td><td>1</td><td>5</td><td>5</td></tr>
+          <tr><td>Sharing and live refresh</td><td>3</td><td>2</td><td>1</td><td>5</td><td>4</td></tr>
+          <tr><td>Governance and security</td><td>2</td><td>3</td><td>3</td><td>4</td><td>4</td></tr>
+          <tr><td>Tailoring and integration</td><td>1</td><td>2</td><td>2</td><td>3</td><td>5</td></tr>
+          <tr><th>Weighted total (out of 80)</th><td></td><th>54</th><th>45</th><th>65</th><th>51</th></tr>
+          </tbody></table>
+          </div>
+          <p><strong>Judgement.</strong> The analytics service scores highest because live sharing and interactivity matter most and staff can learn it. The spreadsheet is a sound second choice and a good <em>prototype</em>: the co-op could build it first to settle which charts they need. Custom software is powerful but its cost and skills demands outweigh the benefits at this scale. The result depends on the weights: if the co-op had no budget and only a monthly report, the spreadsheet would win. A good evaluation therefore states its assumptions.</p>
+          <div class="callout assessor"><strong>Assessor tip</strong> Do not just list features. Choose criteria that fit the scenario, compare at least two tools against each, and reach a clear recommendation with a reason. Naming a product is optional; describing the category and what it does well is what earns marks.</div>
         </section>
 
         <hr class="divider" />
@@ -363,8 +913,59 @@
           <p class="syllabus-concept">📌 <em><strong>Interrogate</strong> data from a data visualisation</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>interpreting what you see</li><li>aggregation</li><li>filtering</li><li>the effect of outliers</li><li>reasoning</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (interrogate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>To <em>interrogate</em> a visualisation is to question it: What does it show? How was it built? Would the message survive a change in aggregation or a filter? A good analyst does not just accept the picture; they poke at it. The interactive chart later in this section lets you do that with a small fictional dataset.</p>
+
+          <h3>Interpreting what you see</h3>
+          <p>Read a chart in a fixed order, so that you look at what is drawn before what it seems to say:</p>
+          <ol>
+          <li><strong>Title and purpose:</strong> what question is it answering, and for whom?</li>
+          <li><strong>Axes and scale:</strong> what is measured, in what units, and where does the axis start?</li>
+          <li><strong>Encoding:</strong> what do length, position, colour and size stand for? Check the legend.</li>
+          <li><strong>Data:</strong> what period, place and population does it cover? What is the source?</li>
+          <li><strong>Pattern:</strong> what is highest, lowest, rising, falling, or unusual?</li>
+          <li><strong>What is missing?</strong> Whose data is not shown, and what comparison is absent?</li>
+          </ol>
+          <p>Keep three statements apart. An <em>observation</em> says what the chart shows ("the March column is the tallest"). An <em>inference</em> says what it probably means ("March is the busiest month"). A <em>conclusion</em> says what to do ("hire more staff in March"). Each step needs more evidence than the one before.</p>
+
+          <h3>Aggregation</h3>
+          <p><strong>Aggregation</strong> combines many records into a summary, such as the total, average or count for each month or category. The level you aggregate at, and the measure you use, changes the story. Using the fictional hire-shop data in the widget below, the monthly <em>totals</em> fall from $640 in January to $350 in June. That looks like weaker bookings. But the monthly <em>counts</em> fall from 10 bookings to 5 while the average booking value stays between $55 and $73. The shop is not earning less per booking; it has fewer bookings. Different measures answer different questions:</p>
+          <ul>
+          <li><strong>Total (sum):</strong> how much overall. Sensitive to how many records there are.</li>
+          <li><strong>Average (mean):</strong> the typical size. Sensitive to outliers.</li>
+          <li><strong>Count:</strong> how often. Ignores size.</li>
+          </ul>
+          <p>Aggregation also hides detail: a healthy total can conceal one failing region. Good dashboards let the user aggregate at several levels, which is the roll-up and drill-down of OLAP.</p>
+
+          <h3>Filtering</h3>
+          <p><strong>Filtering</strong> shows only the records that meet a condition, such as one category or a range of months. It answers "what happens within this group?" and removes clutter. In the widget, filtering to Kayak bookings gives an average of about $86, well above the $45 for Bike. Filters have risks. A filter that is not obvious changes the meaning of the chart without the reader knowing, so the chart should state the active filters. A very narrow filter leaves too few records for a reliable pattern. And filtering out inconvenient data is a form of cherry-picking (see the Bias section).</p>
+
+          <h3>The effect of outliers</h3>
+          <p>An <strong>outlier</strong> is a value far from the rest. It may be an error (a price typed with an extra zero), or a real but unusual event (a corporate group booking). Outliers affect summaries differently. The <em>mean</em> uses every value, so one extreme value pulls it towards itself. The <em>median</em>, the middle value when the data are in order, barely moves. In the widget's data the median booking is $65 and the mean $66.78. Add one $2,400 corporate booking and the mean jumps to $117.50, while the median stays at $65. The March total leaps from $530 to $2,930 and, with a zero-based axis, every other month looks tiny.</p>
+          <p>What should an analyst do? First find out whether the outlier is an error. If it is, correct it or remove it and document the change. If it is genuine, keep it but do not let it mislead: show results with and without it, use the median for a "typical" value, and annotate the chart. Never delete a value silently because it spoils the pattern. A common rule of thumb flags values more than about three standard deviations from the mean, but the outlier itself inflates the standard deviation, so always look at the data too.</p>
+
+          <h3>Reasoning</h3>
+          <p>Reasoning links evidence to a claim. A useful structure is <strong>claim, evidence, reasoning</strong>, followed by a check for alternatives. In the hire-shop data: <em>Claim:</em> kayaks are the shop's best earner. <em>Evidence:</em> total kayak bookings are $1,380, against $955 for paddleboards and $670 for bikes. <em>Reasoning:</em> kayaks have the highest average booking ($86 against $68 and $45) while the counts of bookings are similar (16, 14 and 15), so the difference comes from higher value per booking, not more bookings. <em>Alternative explanations to test:</em> is kayak hire simply the most expensive item, and does the pattern hold in every month?</p>
+          <p>Good reasoning respects the limits of the data. Correlation is not causation. A pattern in 45 bookings may not hold for next year. And you cannot generalise beyond the population the data represent: the hire shop's customers are not all beachgoers.</p>
+
+          <h3>Try it: interrogate the chart</h3>
+          <p>The widget uses 45 bookings from an <strong>imaginary</strong> beachside hire shop, plus one optional corporate booking. Change the grouping and the aggregation, apply the filters, and watch the summary figures below the chart. The table behind the chart shows every record.</p>
+          <figure class="figure figure--lab">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Interactive</span></p>
+            <h4 class="figure-title">Interrogate the chart: hire-shop bookings</h4>
+            <p class="figure-lead">Fictional data. Choose how to group and aggregate, filter the records, and add an outlier to see how the chart, the mean and the median respond.</p>
+          </figcaption>
+          <div class="dv-lab" id="dv-lab"><noscript>This interactive needs JavaScript. The worked figures in the text (monthly totals, counts and averages, and the effect of the outlier) show the same ideas.</noscript></div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul>
+            <li>Group by Month and switch between Total and Count. Which changes more from January to June, and what does that tell you about the bookings?</li>
+            <li>Tick the outlier. The mean rises sharply but the median does not: which better describes a typical booking?</li>
+            <li>With the outlier on, set the measure to Average and group by Category. Which bar is affected, and why?</li>
+            <li>Untick "Start the value axis at zero" while grouped by Month. Does the chart now exaggerate the differences? What does the warning on the chart tell the reader?</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>Filter to Kayak only, group by Month, and switch on the outlier. Write one sentence for a manager that describes March fairly, using both the mean and the median.</p>
+          </div>
+          </figure>
+          <div class="callout assessor"><strong>Assessor tip</strong> Questions on <em>interrogate</em> often give a chart or table and ask what you can conclude. Quote values from it, say which measure (total, average, count) was used, note whether an outlier or filter affects the result, and state a conclusion that the data actually supports. Marks are lost for claims the data cannot show, such as saying one thing <em>caused</em> another.</div>
         </section>
 
         <div class="quiz" data-quiz="dv-2"></div>
@@ -378,8 +979,8 @@
         </div>
 
         <aside class="yr12 topic-breakout subtopic-breakout" aria-label="Part introduction">
-          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
-          <p>This part covers 4 NESA dot points: designing for user experience.</p>
+          <p>A visualisation can be accurate and still fail if the people it is for cannot use it. This part is about the human side: the tools designers use to build clear graphics, how user experience shapes what works, how to judge a design with your own criteria, and how new hardware and software are changing what an interface can be.</p>
+          <p class="breakout-question">Think of the last app you stopped using because it was confusing or slow. What exactly made you give up?</p>
         </aside>
 
         <section id="graphic-design-tools">
@@ -387,8 +988,45 @@
           <p class="outcome-subtitle">🎯 <em>(EC-12-08, EC-12-11)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Use</strong> graphic design tools to assist in the graphic development of a data visualisation</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (use). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>Spreadsheet charts are accurate but plain. Graphic design tools let you refine the look, add annotations and adapt the result to a poster, a website or a slide. Course Specifications page 21 lists what graphics software should allow you to do: create and manipulate bitmapped images and vector graphics, rotate, crop, resize and distort images, import and export in a variety of formats, apply textures, patterns and transparent backgrounds, and use templates, colour themes and animations. The <a href="toolkit.html#graphics-presentation">Course Toolkit</a> describes each feature. Here you apply them to a chart.</p>
+
+          <h3>Choosing the tool</h3>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Tool type</th><th>Good for in a visualisation</th><th>Example programs</th></tr></thead>
+          <tbody>
+          <tr><td>Vector graphics software</td><td>Charts, icons, diagrams and infographics that must stay sharp at any size; precise text and shapes</td><td>Inkscape, Adobe Illustrator, Affinity Designer</td></tr>
+          <tr><td>Bitmap (raster) editor</td><td>Photographs and textures used behind or beside a chart; cropping and colour correction</td><td>GIMP, Adobe Photoshop</td></tr>
+          <tr><td>Web-based design tools</td><td>Templates, quick infographics and posters, collaboration</td><td>Canva, Figma</td></tr>
+          <tr><td>Presentation software</td><td>Slide layout, themes and animation to reveal a chart step by step</td><td>PowerPoint, Google Slides, Keynote</td></tr>
+          </tbody></table>
+          </div>
+          <p>The programs are examples only; use whatever your school provides. Vector formats (such as SVG) keep shapes editable and crisp, while bitmap formats (PNG, JPEG) are pixels and blur when enlarged. Interactive Media covers <a href="interactive-media.html#ui-design-tools">UI design tools</a> in more depth.</p>
+
+          <h3>Design principles for data graphics</h3>
+          <ul>
+          <li><strong>Hierarchy:</strong> make the message the most prominent element (title and highlighted data), then supporting labels, then the source line.</li>
+          <li><strong>Colour with purpose:</strong> use a neutral base and one accent to highlight what matters. Use colour to encode meaning (for example, sequential shades for low to high), not decoration. Avoid pairs that colour-blind viewers cannot separate, such as red and green, or add a second cue such as a label or pattern.</li>
+          <li><strong>Contrast:</strong> the Web Content Accessibility Guidelines (WCAG) ask for a contrast ratio of at least 4.5:1 for normal text (<a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html" target="_blank" rel="noopener">contrast minimum</a>) and 3:1 for graphical objects such as chart lines and bars (<a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html" target="_blank" rel="noopener">non-text contrast</a>).</li>
+          <li><strong>Typography:</strong> one or two typefaces, a readable size (not tiny axis labels) and consistent styles for titles, labels and notes.</li>
+          <li><strong>Layout and alignment:</strong> align to a grid, group related items, and leave white space so the eye can rest.</li>
+          <li><strong>Reduce clutter:</strong> remove heavy gridlines, borders and decoration that carry no information, but keep labels, units and the source.</li>
+          <li><strong>Direct labels:</strong> label lines and bars on the chart when you can, instead of making the reader hunt in a legend.</li>
+          </ul>
+
+          <h3>Worked example: making a chart audience-ready</h3>
+          <div class="callout info"><strong>Scenario</strong> A student has a spreadsheet column chart of weekly boardings on a beach shuttle and wants a poster version for the council office.</div>
+          <ol>
+          <li><strong>Export:</strong> save the chart from the spreadsheet as a vector file (SVG or PDF) if possible, or as a high-resolution PNG (see "save a chart to a file format" in the Spreadsheet Specifications).</li>
+          <li><strong>Set up the canvas:</strong> create an A3 portrait document in vector software and apply the council's colour theme (or a limited palette of a neutral, a main colour and one highlight colour).</li>
+          <li><strong>Import and simplify:</strong> place the chart, delete gridlines and the legend, and label the columns directly. Make sure bars start at zero.</li>
+          <li><strong>Highlight:</strong> recolour the peak week in the highlight colour and add a short annotation ("School holidays: buses full").</li>
+          <li><strong>Add text hierarchy:</strong> write a headline that states the message ("Weekly boardings double in the school holidays"), a subtitle with the period, and a source line ("Source: fictional shuttle tap-on data, 2024").</li>
+          <li><strong>Check accessibility:</strong> test the contrast of text and bars and check the colours in a greyscale or colour-blind preview. Write alt text that states the message for screen readers.</li>
+          <li><strong>Export:</strong> PDF for print, PNG or SVG for the website, and a copy on a transparent background for slides. Keep the editable original.</li>
+          </ol>
+          <div class="callout tip"><strong>Tip</strong> Give a friend five seconds with the finished graphic and ask what it is about. If they cannot tell you the message, the hierarchy needs work.</div>
+          <div class="callout assessor"><strong>Assessor tip</strong> A <em>use</em> question is practical: name the tool feature, say what you did with it, and state the effect on the visualisation. For example, "I used transparency and a colour theme to place the chart on the council's poster template while keeping the text readable."</div>
         </section>
 
         <hr class="divider" />
@@ -399,8 +1037,37 @@
           <p class="syllabus-concept">📌 <em><strong>Explain</strong> how user experience (UX) influences the development of effective data visualisations</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>relevance to the audience</li><li>audience interpretation</li><li>customisation</li><li>live analysis</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (explain). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p><strong>User experience (UX)</strong> is the overall quality of a person's interaction with a product: whether they can find what they need, understand it and trust it. For a visualisation, good UX means the audience gets the right insight quickly, with little effort. UX is covered in Interactive Media (<a href="interactive-media.html#ui-vs-ux">UI and UX</a>); here it is applied to data. The figure shows where the four factors NESA names appear on a typical dashboard.</p>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Wireframe</span></p>
+            <h4 class="figure-title">The parts of an effective dashboard</h4>
+            <p class="figure-lead">A wireframe of a sales dashboard with each part numbered and linked to the UX idea it serves.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="dv-dashboard-wireframe"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>The key figures and the main trend chart sit at the top left, where readers of left-to-right languages look first.</li>
+          <li>Filters are grouped together and named plainly.</li>
+          <li>Detail is available on demand rather than crowding the page.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>Sketch a wireframe for a canteen manager who has 20 seconds each morning to decide what to prepare. What would you remove from this one?</p>
+          </div>
+          </figure>
+
+          <h3>Relevance to the audience</h3>
+          <p>The most common UX failure is showing everything because the data is available. A relevant visualisation starts from the audience's decisions: a hospital executive needs a few key indicators and trends; a ward nurse needs today's bed availability; an analyst needs detail and filters. The same data becomes three different visualisations. Relevance also means a suitable level of detail, familiar vocabulary and units, and content that is current. To design for relevance, ask "what will this person do with this?" and leave out anything that does not help.</p>
+
+          <h3>Audience interpretation</h3>
+          <p>Audiences interpret charts through their own knowledge, expectations and abilities. A specialist reads a box plot easily; a general audience may not. Readers assume conventions: time runs left to right, higher means more, red means bad. Breaking a convention (a reversed axis, red for good) invites misreading. Interpretation also depends on accessibility: colour-blind users, people using screen readers who need a text or table alternative, and people on small screens. Designers reduce misinterpretation by using plain titles that state the message, labelling units, offering short explanatory notes, and testing the design with real users, because what is obvious to the designer is often not to the audience.</p>
+
+          <h3>Customisation</h3>
+          <p>Users differ, so visualisations often let them shape what they see: filters, choice of measure, date range, chart type, units, saved views, or light and dark themes. Customisation lets one dashboard serve several audiences and lets users answer their own follow-up questions. It also has costs. Too many options overwhelm and make results hard to compare between users, and a customised view can be used to cherry-pick. Good practice is to offer sensible defaults, show the active filters clearly, and provide a one-click reset.</p>
+
+          <h3>Live analysis</h3>
+          <p>Live analysis means the visualisation updates as new data arrives, so users see what is happening now: a traffic map, a stock level, a hospital emergency waiting list. It supports fast decisions and alerts (a tile turns red past a threshold). UX questions include how often to refresh (too often is distracting and expensive), how to show when the data was last updated, how to handle a lost connection, and whether the audience needs live data at all: a monthly board report does not. Live views also depend on the communication media and processing power discussed earlier.</p>
+          <div class="callout info"><strong>Scenario</strong> A regional ambulance service shows paramedics a live map of vehicle positions. Users can filter by region, and the map refreshes every few seconds with the time of the last update in the corner. When mobile coverage drops, the map greys out and says "Connection lost: last update 9:41 am" instead of showing stale positions as current.</div>
+          <div class="callout assessor"><strong>Assessor tip</strong> Link every UX factor to a design choice and its effect: "The dashboard offers a region filter (customisation), so each manager can see their own area; the default view is all regions, so new users still see the whole picture." Avoid one-word answers such as "it should be user-friendly".</div>
         </section>
 
         <hr class="divider" />
@@ -410,8 +1077,50 @@
           <p class="outcome-subtitle">🎯 <em>(EC-12-10)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Develop and implement</strong> criteria for evaluating the effectiveness of user experiences</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (develop). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>To <em>evaluate</em> a user experience you need criteria you decided on before looking at the design, so the judgement is fair and repeatable. <em>Developing</em> criteria means deciding what makes this visualisation effective for this audience; <em>implementing</em> them means gathering evidence and applying the criteria to reach a rating and actions. The rubric below is a starting point you can reuse and adapt.</p>
+
+          <h3>A reusable rubric</h3>
+          <div class="table-wrap tk-wide">
+          <table>
+          <caption>UX evaluation rubric (score each criterion from 1 to 4)</caption>
+          <thead><tr><th>Criterion</th><th>Question to ask</th><th>4 (excellent)</th><th>2 (limited)</th><th>How to gather evidence</th></tr></thead>
+          <tbody>
+          <tr><td>Purpose and relevance</td><td>Does it answer the audience's real question?</td><td>Every element serves a decision; nothing irrelevant</td><td>Some elements unrelated to the purpose</td><td>Interview the audience; check against the brief</td></tr>
+          <tr><td>Clarity of message</td><td>Can users state the main point quickly?</td><td>Message understood in about five seconds</td><td>Message found only after searching</td><td>Five-second test</td></tr>
+          <tr><td>Accuracy and integrity</td><td>Are data, scales and labels honest and sourced?</td><td>Axes from zero where needed; units, source and date shown</td><td>Missing source or unclear scale</td><td>Reconcile with source data; check axes</td></tr>
+          <tr><td>Navigation and usability</td><td>Can users complete tasks without help?</td><td>All tasks succeed; controls obvious</td><td>Some tasks fail; controls unclear</td><td>Task tests: success rate and time</td></tr>
+          <tr><td>Accessibility</td><td>Can people with different needs use it?</td><td>Sufficient contrast, colour not the only cue, text alternative, keyboard access</td><td>Colour-only meaning; no alternative</td><td>Contrast checker; colour-blind preview; keyboard test</td></tr>
+          <tr><td>Visual design and consistency</td><td>Is the layout clear and consistent?</td><td>Clear hierarchy, aligned, consistent styles</td><td>Cluttered or inconsistent</td><td>Expert review; user comments</td></tr>
+          <tr><td>Interactivity and customisation</td><td>Do controls help without overwhelming?</td><td>Useful filters, defaults, reset</td><td>Too many or too few options</td><td>Observe use; feedback</td></tr>
+          <tr><td>Performance and currency</td><td>Is it fast and up to date?</td><td>Loads within seconds; updated time shown</td><td>Slow or stale without warning</td><td>Time loading; check refresh log</td></tr>
+          </tbody></table>
+          </div>
+          <p>Score 3 lies between 2 and 4 and score 1 is "not met". Decide the weights first if some criteria matter more than others (a public health dashboard might weight accessibility heavily).</p>
+
+          <h3>Implementing the criteria: a worked evaluation</h3>
+          <div class="callout info"><strong>Scenario</strong> A student builds a dashboard for a school canteen manager and tests it with five volunteers, each completing three tasks while a partner observes and times them. (All figures are fictional.)</div>
+          <ol>
+          <li><strong>Set tasks that match the purpose:</strong> (1) find last month's total sales, (2) show only the Friday sales, (3) explain why March was so high.</li>
+          <li><strong>Test:</strong> record success or failure and the time for each user and task. Afterwards, ask each user to rate "It was easy to use" from 1 (strongly disagree) to 5 (strongly agree).</li>
+          <li><strong>Summarise the evidence:</strong></li>
+          </ol>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Task</th><th>Users who succeeded</th><th>Success rate</th><th>Mean time (successful users)</th></tr></thead>
+          <tbody>
+          <tr><td>1 Find last month's total</td><td>5 of 5</td><td>100%</td><td>12 seconds</td></tr>
+          <tr><td>2 Show only Fridays</td><td>4 of 5</td><td>80%</td><td>25 seconds</td></tr>
+          <tr><td>3 Explain the March spike</td><td>2 of 5</td><td>40%</td><td>70 seconds</td></tr>
+          </tbody></table>
+          </div>
+          <p>The five satisfaction ratings were 4, 4, 3, 5 and 3, a mean of 3.8 out of 5.</p>
+          <ol start="4">
+          <li><strong>Score against the rubric:</strong> the student rates Purpose 4, Clarity 3, Accuracy 4, Navigation 2, Accessibility 2, Design 3, Interactivity 3 and Performance 3. The total is 24 out of 32, or 75%.</li>
+          <li><strong>Decide actions from the weakest criteria:</strong> Task 3 failed for most users because the March outlier is not annotated, and nobody could find the drill-down (navigation, score 2). Fix: add an annotation and a "click a bar for detail" hint. Accessibility scored 2 because red and green are the only difference between "up" and "down": add arrows and labels.</li>
+          <li><strong>Retest and record:</strong> after the changes, repeat the tasks with different users and compare the results with the first round.</li>
+          </ol>
+          <div class="callout tip"><strong>Tip</strong> Five users is a small sample but is enough to find most usability problems in an early design. Treat the numbers as evidence for improvement, not as proof of statistical significance.</div>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Develop and implement</em> means both halves are required: show the criteria you created, then show them applied to a real design with evidence (such as a task success rate) and a resulting change.</div>
         </section>
 
         <hr class="divider" />
@@ -421,8 +1130,32 @@
           <p class="outcome-subtitle">🎯 <em>(EC-12-06)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Investigate</strong> the impact of emerging hardware and software technologies on user interface (UI) and UX design and development</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>Interfaces change when hardware and software do. Each new technology gives visualisation designers new opportunities and new problems. To <em>investigate</em>, look at what the technology changes about how people interact with data, weigh benefits against limits, and draw a judgement. Interactive Media also covers <a href="interactive-media.html#im-hardware">hardware for interactive media</a>.</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Technology</th><th>Effect on UI and UX for data</th><th>Benefits</th><th>Limits and risks</th></tr></thead>
+          <tbody>
+          <tr><td><strong>Augmented reality (AR)</strong></td><td>Overlays data on the real world through a phone or headset; the chart appears on the machine or shelf it describes</td><td>Data in context; hands-free for workers</td><td>Small field of view; needs accurate tracking; clutter in the real scene</td></tr>
+          <tr><td><strong>Virtual reality (VR)</strong></td><td>Places the user inside a three-dimensional data space, which NESA's glossary describes as an immersive simulated environment</td><td>Explore complex spatial data (a mine, a building, a city model)</td><td>Special hardware; motion discomfort; hard to compare values precisely; less accessible</td></tr>
+          <tr><td><strong>Voice interfaces</strong></td><td>Users ask questions in speech or plain text ("show sales by region this quarter") and hear or see the answer</td><td>Hands-free; low barrier for non-experts; helpful for users with some disabilities</td><td>Misheard or ambiguous requests; privacy in shared spaces; hard to read out a complex chart</td></tr>
+          <tr><td><strong>AI-generated insights</strong></td><td>Software suggests charts, summarises a dataset in text and flags anomalies automatically</td><td>Speeds analysis; helps users find patterns they would not look for</td><td>Can be wrong or misleading; may reflect biased training data; users may over-trust it; needs explanation of how a result was reached</td></tr>
+          <tr><td><strong>Large displays and touch tables</strong></td><td>Wall screens in control rooms and touch-enabled tables allow many users to view and manipulate data together</td><td>Shared awareness; more information visible; gestures such as pinch and drag</td><td>Cost; distance changes legibility; lighting and glare; one dashboard for many audiences</td></tr>
+          <tr><td><strong>Small displays and wearables</strong></td><td>Phones and watches show a glance-sized view of a few key numbers and alerts</td><td>Always with the user; timely alerts</td><td>Little space, so only one or two numbers or a tiny chart; touch accuracy; battery life</td></tr>
+          </tbody></table>
+          </div>
+
+          <h3>Effects on design and development</h3>
+          <ul>
+          <li><strong>New interaction patterns:</strong> touch, gesture, voice and gaze replace the mouse, so designers rethink controls such as filters and tooltips.</li>
+          <li><strong>Responsive and adaptive design:</strong> one visualisation must adapt from a wall display to a watch, often by showing fewer elements as space shrinks. Designers plan the essential view first.</li>
+          <li><strong>New skills and processes:</strong> building for AR or VR requires three-dimensional tools; voice interfaces require language processing; all need prototyping and testing with real users on real devices.</li>
+          <li><strong>Accessibility opportunities and risks:</strong> voice and audio (sonification, a chart rendered as sound) can help users who cannot see a chart, but immersive interfaces can exclude users who cannot wear a headset.</li>
+          <li><strong>Privacy and ethics:</strong> headsets, microphones and cameras collect body movement, voice and surroundings; enterprises must handle this data under the Privacy Act and be clear with users.</li>
+          <li><strong>Trust:</strong> the more the software decides what to show, the more important it is that the user can see the source data and check the result.</li>
+          </ul>
+          <p><strong>Judgement.</strong> Emerging technologies improve <em>access</em> to data (more people, more places, more natural interaction) but do not remove the need for sound design: a badly chosen chart is just as misleading in VR or read aloud by a voice assistant. AI-generated insights offer the biggest gain in speed, and also the biggest need for human checking. The technology worth adopting is the one that fits the audience, the task and the environment, not the newest one.</p>
+          <div class="callout info"><strong>Scenario</strong> A farm co-op trials a smartphone AR view: pointing the phone at a paddock's water tank overlays its current level and a seven-day usage trend. It is quick and hands-free in the field, but in bright sunlight the overlay is hard to read and some phones in the co-op are too old to run it. The co-op keeps a simple text alert by SMS as a fallback.</div>
+          <div class="callout assessor"><strong>Assessor tip</strong> Pick a specific technology and connect it to a specific UI or UX change and its effect on a named audience, then balance a benefit with a limit. General statements such as "technology makes things better" are not enough for <em>investigate</em>.</div>
         </section>
 
         <div class="quiz" data-quiz="dv-3"></div>
@@ -436,8 +1169,8 @@
         </div>
 
         <aside class="yr12 topic-breakout subtopic-breakout" aria-label="Part introduction">
-          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
-          <p>This part covers 3 NESA dot points: creating data visualisations.</p>
+          <p>Now you put it together. This part follows the whole life of a visualisation project: finding and preparing suitable data, designing and building a visualisation for a real scenario that shows trends, patterns, relationships and a prediction, and keeping the data safe. The worked project can be adapted for your Enterprise Project.</p>
+          <p class="breakout-question">If a friend gave you a spreadsheet of a million rows, what is the first thing you would check before drawing a single chart?</p>
         </aside>
 
         <section id="source-data">
@@ -445,8 +1178,56 @@
           <p class="outcome-subtitle">🎯 <em>(EC-12-03, EC-12-04)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Research, source, organise and store</strong> data appropriate for a data visualisation</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (research,). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>The verbs here are practical: <em>research, source, organise and store</em>. A visualisation project is only as good as the data behind it, so this stage deserves as much care as the design. The steps below give you a process you can follow and evidence for your project documentation.</p>
+
+          <h3>Research: define what data you need</h3>
+          <p>Start from the question and the audience, then list what data would answer it: which variables, over what period, for which places or groups, and at what level of detail. For a question such as "how does temperature affect beach shuttle use?" you need daily boardings and daily maximum temperature for the same dates. Research also means finding out what already exists and how others have measured the same thing.</p>
+
+          <h3>Source: find data you may use</h3>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Source type</th><th>Examples</th><th>Points to check</th></tr></thead>
+          <tbody>
+          <tr><td><strong>Primary</strong> (you collect it)</td><td>Survey, observation, sensor readings, interviews</td><td>Sample size and fairness; consent; privacy; a way to keep it anonymous</td></tr>
+          <tr><td><strong>Secondary: open data</strong></td><td><a href="https://data.gov.au" target="_blank" rel="noopener">data.gov.au</a>, <a href="https://data.nsw.gov.au" target="_blank" rel="noopener">data.nsw.gov.au</a>, the <a href="https://www.abs.gov.au" target="_blank" rel="noopener">Australian Bureau of Statistics</a>, weather records from the Bureau of Meteorology</td><td>Licence (many are Creative Commons Attribution: credit the source), date, methods, file format</td></tr>
+          <tr><td><strong>Secondary: enterprise data</strong></td><td>Sales database, customer records, logs, sensors</td><td>Permission to use; privacy law; confidential fields to remove</td></tr>
+          <tr><td><strong>Live feeds and APIs</strong></td><td>A council or transport data feed</td><td>Terms of use, rate limits, reliability, stability of the format</td></tr>
+          </tbody></table>
+          </div>
+          <p>Judge a candidate dataset with the factors from the Data Integrity section: ownership and licence, source, validity, and risk. Also check it fits: is it detailed enough, current enough, and large enough? Record every source with its title, publisher, date accessed and licence, because you will need them for a source line on the chart and for your documentation.</p>
+
+          <h3>Organise: make it analysis-ready</h3>
+          <p>Raw data is rarely ready to chart. The usual target is a <strong>tidy</strong> layout: one row for each observation, one column for each variable, and one table for each type of thing (see <a href="toolkit.html#relational-databases">relational databases</a> for splitting data across linked tables). Use consistent formats, and describe every field in a <a href="toolkit.html#data-dictionary">data dictionary</a>. A small before-and-after shows the work:</p>
+          <div class="table-wrap">
+          <table>
+          <caption>Before: raw data as received (fictional)</caption>
+          <thead><tr><th>Date</th><th>Site</th><th>Boardings</th></tr></thead>
+          <tbody>
+          <tr><td>3/1/25</td><td>Main Beach</td><td>1,020</td></tr>
+          <tr><td>3 Jan 2025</td><td>main beach </td><td>1020</td></tr>
+          <tr><td>04-01-2025</td><td>Main Beach</td><td>n/a</td></tr>
+          </tbody></table>
+          </div>
+          <div class="table-wrap">
+          <table>
+          <caption>After: cleaned and organised</caption>
+          <thead><tr><th>Date (YYYY-MM-DD)</th><th>Site</th><th>Boardings</th></tr></thead>
+          <tbody>
+          <tr><td>2025-01-03</td><td>Main Beach</td><td>1020</td></tr>
+          <tr><td>2025-01-04</td><td>Main Beach</td><td>(blank, flagged: not recorded)</td></tr>
+          </tbody></table>
+          </div>
+          <p>What changed, and why it matters: three date formats became one (and "3/1/25" was checked to be day-month-year); the site name was standardised so it counts as one place; the thousands separator was removed so the value is a number; the duplicate row for 3 January was removed; and the "n/a" was replaced by a blank with a note, because a missing value is not zero. Keep a log of these decisions.</p>
+
+          <h3>Store: keep it safe and findable</h3>
+          <ul>
+          <li><strong>Keep the raw data untouched.</strong> Store the original download in a read-only folder, and do all cleaning in a copy. You can always return to the source.</li>
+          <li><strong>Use a clear structure:</strong> for example folders named <code>01_raw</code>, <code>02_clean</code>, <code>03_analysis</code> and <code>04_outputs</code>, and file names with a date and version such as <code>shuttle_daily_2025-06-30_v2.csv</code>.</li>
+          <li><strong>Choose a format to fit:</strong> CSV (simple, opens anywhere), a spreadsheet (formulas and charts), or a database for large or linked data.</li>
+          <li><strong>Write a README:</strong> what the data is, its source, the date accessed, the licence and the cleaning steps.</li>
+          <li><strong>Control access and back up:</strong> restrict who can edit, and keep backups (see the Maintaining Data Security section).</li>
+          </ul>
+          <div class="callout assessor"><strong>Assessor tip</strong> For <em>research, source, organise and store</em>, evidence beats description. Show the sources you used and why they are suitable, a before-and-after of your data with the changes explained, and how the files are named, stored and protected.</div>
         </section>
 
         <hr class="divider" />
@@ -456,8 +1237,84 @@
           <p class="outcome-subtitle">🎯 <em>(EC-12-05, EC-12-08, EC-12-11)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Design and develop</strong> a data visualisation for a specific scenario to represent trends, patterns and relationships, and illustrate predictive analysis incorporating big data</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (design). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>This is the practical heart of the topic: <em>design and develop</em> a visualisation for a specific scenario, showing <strong>trends, patterns and relationships</strong> and illustrating <strong>predictive analysis</strong> that incorporates big data. Below is a complete worked project in ten steps. Every figure is fictional. Use the same steps for your own scenario, and adapt the tools to what your school provides. Spreadsheet features are in the <a href="toolkit.html#spreadsheet-software">Course Toolkit</a>.</p>
+          <div class="callout info"><strong>Scenario</strong> A fictional council, Tidewater Council, runs a beach shuttle bus on summer weekends. The operations manager needs to decide each Thursday how many buses to run on Saturday. The council's card system has recorded about 1.8 million tap-on records in the past year.</div>
+
+          <h3>Step 1: define the question, audience and success criteria</h3>
+          <p><strong>Question:</strong> how many passengers can we expect on Saturday, and does it depend on the weather? <strong>Audience:</strong> the operations manager (not a data specialist), who has one minute on Thursday morning. <strong>Success criteria:</strong> the manager can find Saturday's predicted boardings in under 30 seconds and can see how sure the prediction is. Write these down; you will test against them in Step 9.</p>
+
+          <h3>Step 2: plan and source the data</h3>
+          <ul>
+          <li>Tap-on records from the council's card system (the big dataset): date, time, stop and route. Any card number is removed or replaced with a random code before analysis, to protect privacy.</li>
+          <li>Daily maximum temperature from a weather data provider, matched by date.</li>
+          <li>A calendar of school holidays and public holidays, which explains unusual days.</li>
+          </ul>
+          <p>Check ownership and licence for each, and record the source and date accessed.</p>
+
+          <h3>Step 3: prepare the big data</h3>
+          <p>Plotting 1.8 million points would be unreadable and slow, so reduce the data to what the question needs. Aggregate the tap-on records to <em>one row per day</em> (date, day type, boardings) in the council's database or with a pivot table, then join the daily maximum temperature by date. In NESA SQL, a query can select a filtered, ordered subset of a daily summary table that already exists:</p>
+          <div class="code-block"><pre><code class="language-sql">SELECT Trip_date, Boardings, Max_temp
+FROM Daily_summary
+WHERE Trip_date &gt;= '01/11/2024' AND Trip_date &lt;= '30/04/2025'
+ORDER BY Trip_date ASC</code></pre></div>
+          <p>Counting the raw records per day needs grouping, which is beyond NESA's four SQL keywords (SELECT, FROM, WHERE, ORDER BY); in practice a pivot table or the database tool's grouping feature does it. Validate as you go: check for missing days, negative values, and totals that do not match the source.</p>
+
+          <h3>Step 4: analyse for trends, patterns and relationships</h3>
+          <p>Explore the data before choosing the final charts. Three questions match NESA's three ideas:</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Idea</th><th>Question</th><th>Method</th><th>Finding (fictional)</th></tr></thead>
+          <tbody>
+          <tr><td>Trend</td><td>Is use rising or falling across the season?</td><td>Weekly totals as a line chart with a moving average</td><td>Rises to a mid-summer peak then eases</td></tr>
+          <tr><td>Pattern</td><td>Which days and times are busiest?</td><td>Pivot table: weekday by hour, shaded as a heat map</td><td>Saturday and Sunday, from 10 am to 2 pm, are the peak</td></tr>
+          <tr><td>Relationship</td><td>Do hotter days carry more people?</td><td>Scatter graph of temperature against boardings, with a trend line</td><td>Strong positive relationship</td></tr>
+          </tbody></table>
+          </div>
+          <p>A sample of ten summer Saturdays and Sundays shows the relationship (also fictional):</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Max temperature (°C)</th><th>21</th><th>24</th><th>26</th><th>29</th><th>31</th><th>33</th><th>35</th><th>28</th><th>23</th><th>30</th></tr></thead>
+          <tbody><tr><th>Boardings</th><td>820</td><td>940</td><td>1010</td><td>1180</td><td>1290</td><td>1400</td><td>1520</td><td>1090</td><td>890</td><td>1250</td></tr></tbody></table>
+          </div>
+          <p>The mean is 1,139 boardings, from a total of 11,390 over the ten days. The trend line the spreadsheet fits is approximately <code>boardings = 50.7 × temperature − 279</code> and the correlation is about 0.99. Each extra degree is associated with about 51 more boardings. Typical differences between the line and the actual values are around 26 boardings.</p>
+
+          <h3>Step 5: make the prediction</h3>
+          <p>The forecast for Saturday is 32°C. Substituting: 50.7 × 32 − 279 ≈ 1,340 boardings. Because real values scatter about 26 either side of the line, and the temperature forecast is itself uncertain, show a <em>range</em> of roughly 1,290 to 1,390 (about two typical differences), not a single number. The data stop at 35°C, so no prediction should be made for a 40°C day. A holiday weekend is not in the model at all, so the dashboard should say so.</p>
+          <div class="callout warning"><strong>Warning</strong> A predictive model is only as good as the pattern it was built on. Show forecasts as estimates, name what the model does not include, and compare predictions with what actually happened so the model can be improved.</div>
+
+          <h3>Step 6: design the visualisation</h3>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Message</th><th>Chart (see the chart-choice tree)</th><th>Design decisions</th></tr></thead>
+          <tbody>
+          <tr><td>Use rises to a summer peak</td><td>Line chart of weekly boardings</td><td>Moving average as a thick line, raw weeks as thin; axis labelled in boardings per week</td></tr>
+          <tr><td>Weekends at midday are busiest</td><td>Heat map, weekday by hour</td><td>One sequential colour from light to dark; legend with values</td></tr>
+          <tr><td>Hotter means busier</td><td>Scatter graph with trend line</td><td>Trend line labelled with the slope in words: "about 51 more boardings per degree"</td></tr>
+          <tr><td>Saturday's forecast</td><td>Large key figure with range, plus the forecast point on the scatter graph</td><td>Hollow marker and dashed line for predicted values; range shown; "Model built on 10 days" note</td></tr>
+          </tbody></table>
+          </div>
+          <p>Sketch a wireframe first (the dashboard figure in the User Experience section is a template), decide the reading order, and choose a limited palette with enough contrast. Give every chart a title that states its message. Add a source line and the date the data was last updated. Plan the customisation: a weekday filter and an input for a temperature to test.</p>
+
+          <h3>Step 7: build it in a spreadsheet</h3>
+          <ol>
+          <li><strong>Sheets:</strong> <code>Data</code> (the cleaned daily table), <code>Analysis</code> (calculations) and <code>Dashboard</code> (charts and key figures).</li>
+          <li><strong>Summaries:</strong> in Analysis, <code>=SUM(Data!C2:C11)</code> for the total, <code>=MEAN(Data!C2:C11)</code> for the mean, and <code>=MAXIMUM(Data!C2:C11)</code> and <code>=MINIMUM(Data!C2:C11)</code> for the extremes.</li>
+          <li><strong>Flag days:</strong> <code>=IF(Data!C2&gt;=1300,"Extra bus","Standard")</code> in a new column, and conditional formatting to shade those rows.</li>
+          <li><strong>Charts:</strong> insert a scatter graph of temperature (x) against boardings (y); add a trend line and display its equation and R². Insert a line chart of weekly totals. Configure titles, axis labels, scales, colours and remove default clutter.</li>
+          <li><strong>Prediction cell:</strong> put the forecast temperature in an input cell (say Dashboard!B2) and use <code>=50.7*B2-279</code> for the prediction, plus and minus the range in the next cells. Changing the temperature updates the figure straight away: a live "what if".</li>
+          <li><strong>Assemble:</strong> arrange the key figure, filters and charts on the Dashboard sheet as designed, and protect the Data and Analysis sheets so viewers cannot break formulas.</li>
+          </ol>
+          <p>Your school may prefer a different tool, such as a business analytics service or a program you write; the design and analysis decisions are identical.</p>
+
+          <h3>Step 8: check accuracy</h3>
+          <p>Reconcile the totals on the dashboard with the source data; recalculate one figure by hand; check that the trend line equation matches the chart; and confirm that axes start at zero for column charts. Ask someone else to try to break it.</p>
+
+          <h3>Step 9: test with users and refine</h3>
+          <p>Give the operations manager (or a classmate playing the role) the three tasks from Step 1 and time them. Score the dashboard against the <a href="#ux-criteria">UX rubric</a>. Record what needs to change, fix it and retest. Compare the results with your success criteria.</p>
+
+          <h3>Step 10: publish, document and maintain</h3>
+          <p>Publish the finished version and name the owner. Record the sources, cleaning steps, model assumptions and limits in a README. Put the "as at" date on the dashboard, set a refresh routine, and protect the files as described in the next section. Finally, evaluate: did the visualisation meet its success criteria, and what would you change with more time or data?</p>
+          <div class="callout assessor"><strong>Assessor tip</strong> A <em>design and develop</em> task is marked on its evidence. Keep your question and audience, your data sources and cleaning, sketches of the design, screenshots of the build with formulas visible, test results and your evaluation. Show all three of trends, patterns and relationships, and a prediction with its limits, and explain how big data was handled (aggregated, sampled or filtered).</div>
         </section>
 
         <hr class="divider" />
@@ -468,8 +1325,64 @@
           <p class="syllabus-concept">📌 <em><strong>Investigate and implement</strong> methods to maintain data security</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>cybersecurity</li><li>data backup</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>A visualisation project handles data that may be personal, commercially sensitive or simply hard to replace. <em>Investigate</em> the threats and methods, then <em>implement</em> them for your own project. NESA lists two areas: cybersecurity, which stops others from getting at or changing the data, and data backup, which lets you recover when something goes wrong. Principles of Cybersecurity covers <a href="cybersecurity.html#protect-data">protecting data</a> and <a href="cybersecurity.html#cyber-law">cyber law</a> in more depth.</p>
+
+          <h3>Cybersecurity</h3>
+          <p>Threats specific to visualisation work include stolen login details (through phishing), ransomware that encrypts files, a cloud dashboard accidentally shared with "anyone with the link", an insider copying data, and leakage through the chart itself. Charts and files often contain more than is shown: the data behind a chart embedded in a presentation, hidden sheets, and file properties can all be opened by the recipient.</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Threat</th><th>Method to reduce it</th><th>How to implement it in a project</th></tr></thead>
+          <tbody>
+          <tr><td>Stolen credentials</td><td>Multi-factor authentication and strong, unique passwords</td><td>Turn on multi-factor authentication for cloud storage and dashboard accounts; use a password manager</td></tr>
+          <tr><td>Unauthorised viewing or editing</td><td>Access control and least privilege</td><td>Give viewers view-only access; only the owner can edit; remove access when people leave the project</td></tr>
+          <tr><td>Interception</td><td>Encryption in transit and at rest</td><td>Use HTTPS links; store sensitive files on encrypted drives or encrypted cloud storage</td></tr>
+          <tr><td>Malware and ransomware</td><td>Patching, cautious handling of attachments and macros</td><td>Keep the operating system and applications up to date; do not enable macros in files from unknown sources</td></tr>
+          <tr><td>Over-sharing</td><td>Sharing settings and de-identification</td><td>Check the link setting before sending; publish aggregated data; combine or hide very small counts that could identify a person</td></tr>
+          <tr><td>Hidden data</td><td>Sanitise before sharing</td><td>Export the chart as an image or PDF; delete hidden sheets; check file properties</td></tr>
+          <tr><td>Mistakes and misuse</td><td>Logging and training</td><td>Keep version history on; agree rules for who can change the data</td></tr>
+          </tbody></table>
+          </div>
+          <p>The Australian Signals Directorate's Australian Cyber Security Centre publishes the <em>Essential Eight</em>, eight baseline mitigation strategies: application control, patching applications, configuring Microsoft Office macro settings, user application hardening, restricting administrative privileges, patching operating systems, multi-factor authentication and regular backups. Several apply directly to a visualisation project. The law also matters: Australian Privacy Principle 11 requires organisations to take reasonable steps to protect personal information, and under the <a href="https://www.oaic.gov.au/privacy/notifiable-data-breaches" target="_blank" rel="noopener">Notifiable Data Breaches scheme</a> an organisation must notify affected people and the OAIC about an eligible data breach that is likely to result in serious harm. The full text of the principles is on the <a href="https://www.oaic.gov.au/privacy/australian-privacy-principles" target="_blank" rel="noopener">OAIC website</a>.</p>
+
+          <h3>Data backup</h3>
+          <p>A <strong>backup</strong> is a copy of data kept separately so that it can be restored after loss, corruption, deletion or ransomware. The widely used <em>3-2-1 rule</em> is shown below.</p>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Concept diagram</span></p>
+            <h4 class="figure-title">The 3-2-1 backup rule</h4>
+            <p class="figure-lead">Three copies of the data, on two different kinds of storage, with one copy kept somewhere else.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="cyber-backup-321"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>The copies live on different devices, so one failure cannot destroy them all.</li>
+          <li>One copy is off site (or offline) so a fire, theft or ransomware attack on the main site does not reach it.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>List where your three copies of your own project files would be. Which single event would destroy all of them?</p>
+          </div>
+          </figure>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Backup type</th><th>What is copied</th><th>Advantages</th><th>Disadvantages</th></tr></thead>
+          <tbody>
+          <tr><td>Full</td><td>Everything, every time</td><td>Simplest to restore</td><td>Slow and uses most storage</td></tr>
+          <tr><td>Incremental</td><td>Only what changed since the last backup of any kind</td><td>Fast and small</td><td>Restoring needs the last full backup plus every increment</td></tr>
+          <tr><td>Differential</td><td>Everything changed since the last full backup</td><td>Restore needs only two sets</td><td>Grows larger each day until the next full backup</td></tr>
+          </tbody></table>
+          </div>
+          <p>Two measures plan a backup. The <em>recovery point objective</em> is how much work you can afford to lose (a daily backup means up to a day). The <em>recovery time objective</em> is how long you can afford to be without the data. Two cautions: a file-sync service is not the same as a backup, because an accidental deletion or an encrypted file is copied across immediately, so enable version history or keep a separate backup; and a backup that has never been restored is untested, so test a restore regularly.</p>
+
+          <h3>Implement: a security and backup plan for the project</h3>
+          <ol>
+          <li><strong>Classify the data:</strong> does it include personal information? If so, remove or replace identifiers before analysis.</li>
+          <li><strong>Set up storage:</strong> the folder structure from the Sourcing and Organising Data section, with raw data read-only.</li>
+          <li><strong>Secure accounts:</strong> turn on multi-factor authentication and set sharing to view-only for named people.</li>
+          <li><strong>Plan backups:</strong> working files copied automatically each day (incremental) to school cloud storage; a full copy each week to an external drive that is disconnected afterwards; a third copy in a different building or a different account. Recovery point objective: one day.</li>
+          <li><strong>Test:</strong> restore one file and the whole folder onto a different computer and check that the dashboard opens. Note the date and result in a log.</li>
+          <li><strong>Sanitise before sharing:</strong> export a PDF or image, remove hidden sheets and check the file properties.</li>
+          <li><strong>Review:</strong> repeat the checks each term and after any incident, and record what you changed.</li>
+          </ol>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Investigate and implement</em> needs both a reasoned choice of methods and evidence that you applied them. Name a specific threat, the method that addresses it, how you set it up (for example, a backup schedule and location), and how you tested it. Cover both cybersecurity and data backup.</div>
         </section>
 
         <div class="quiz" data-quiz="dv-4"></div>
@@ -522,7 +1435,7 @@
   </footer>
 
   <script src="../js/glossary-data.js?v=8f2b4607"></script>
-  <script src="../js/quizzes/data-visualisation.js?v=acca7325"></script>
+  <script src="../js/quizzes/data-visualisation.js?v=4f47bad3"></script>
   <script src="../js/quiz.js?v=3e6185a0" defer></script>
   <script src="../js/nesa-diagram-data.js?v=33ff129d"></script>
   <script src="../js/nesa-diagrams.js?v=6bab3032" defer></script>
@@ -552,5 +1465,7 @@
     </div>
   </div>
   <script src="../js/progress.js?v=40b8096b" defer></script>
+  <script src="../js/anim.js?v=bf375a54" defer></script>
+  <script src="../js/pages/data-visualisation.js?v=8d41b375" defer></script>
 </body>
 </html>

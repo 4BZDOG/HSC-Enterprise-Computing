@@ -1,34 +1,97 @@
 /* Quiz bank for Data Visualisation (topics/data-visualisation.html).
    One entry per data-quiz key on the page: dv-1, dv-2, dv-3, dv-4.
-   Each question: { q: "…", options: ["…", "…", "…"], answer: <index of the right option>, why: "…" }.
-   The samples below only prove the machinery works: replace each with 4 to 6 real questions. */
+   Each question: { q: "…", options: ["…", "…", "…", "…"], answer: <index of the right option>, why: "…" }. */
 window.HSC_QUIZZES = Object.assign(window.HSC_QUIZZES || {}, {
-  // CONTENT: replace this sample with 4 to 6 questions on part 1 (Using data to tell a story).
+  // Part 1: Using data to tell a story
   'dv-1': [
-    { q: 'Sample question: which NESA part of this topic does this quiz belong to?',
-      options: ['Using data to tell a story', 'Interpreting data visualisations', 'Designing for user experience', 'Creating data visualisations'],
-      answer: 0,
-      why: 'This placeholder shows the quiz machinery working. It belongs to Part 1, Using data to tell a story.' },
-  ],
-  // CONTENT: replace this sample with 4 to 6 questions on part 2 (Interpreting data visualisations).
-  'dv-2': [
-    { q: 'Sample question: which NESA part of this topic does this quiz belong to?',
-      options: ['Using data to tell a story', 'Interpreting data visualisations', 'Designing for user experience', 'Creating data visualisations'],
-      answer: 1,
-      why: 'This placeholder shows the quiz machinery working. It belongs to Part 2, Interpreting data visualisations.' },
-  ],
-  // CONTENT: replace this sample with 4 to 6 questions on part 3 (Designing for user experience).
-  'dv-3': [
-    { q: 'Sample question: which NESA part of this topic does this quiz belong to?',
-      options: ['Using data to tell a story', 'Interpreting data visualisations', 'Designing for user experience', 'Creating data visualisations'],
+    { q: "A shop owner wants to show how weekly online orders have changed over the past year. Which chart is the best fit?",
+      options: ["Pie chart", "Scatter graph of orders against price", "Line chart of orders by week", "Map of customer postcodes"],
       answer: 2,
-      why: 'This placeholder shows the quiz machinery working. It belongs to Part 3, Designing for user experience.' },
-  ],
-  // CONTENT: replace this sample with 4 to 6 questions on part 4 (Creating data visualisations).
-  'dv-4': [
-    { q: 'Sample question: which NESA part of this topic does this quiz belong to?',
-      options: ['Using data to tell a story', 'Interpreting data visualisations', 'Designing for user experience', 'Creating data visualisations'],
+      why: "A question about change over time needs ordered time periods on one axis, which a line chart shows clearly. A pie chart shows parts of a whole, a scatter graph shows a relationship between two numbers, and a map shows location." },
+    { q: "In an OLAP cube of café sales by Product, Quarter and Region, an analyst fixes Region = Coast and views the remaining Product by Quarter table. Which operation is this?",
+      options: ["Roll-up", "Drill-down", "Pivot", "Slice"],
       answer: 3,
-      why: 'This placeholder shows the quiz machinery working. It belongs to Part 4, Creating data visualisations.' },
+      why: "A slice fixes one dimension at a single value and leaves a smaller table. Roll-up and drill-down move up and down a hierarchy, and a pivot rotates the axes without changing the data shown." },
+    { q: "A data entry form for a hospital dashboard rejects an age of 250. Which validation check is being applied?",
+      options: ["Range check", "Presence check", "Format check", "Uniqueness check"],
+      answer: 0,
+      why: "A range check tests that a value lies between allowed limits, such as an age between 0 and 120. A presence check tests that a field is not empty, and a format check tests the pattern, such as four digits for a postcode." },
+    { q: "A chart of two brands' satisfaction scores (94% and 91%) uses a column axis that starts at 90. What is the main problem?",
+      options: ["The bars are the wrong colours", "It makes a small difference look large", "It uses too much data", "It hides the outliers in the data"],
+      answer: 1,
+      why: "Column length represents the value, so a truncated axis exaggerates the gap: here 94 looks four times as tall as 91. Starting at zero gives an honest comparison." },
+    { q: "A transport agency has millions of tap-on records. Which design response best suits the size of the dataset?",
+      options: ["Plot one point for every record so nothing is hidden", "Aggregate by hour and route, then let users filter and drill down", "Show only the first 100 records", "Remove the axes to reduce clutter"],
+      answer: 1,
+      why: "Drawing every record would be unreadable and slow. Aggregating first and offering filters and drill-down gives an overview with detail on demand. Showing only the first records would be a biased sample." }
   ],
+  // Part 2: Interpreting data visualisations
+  'dv-2': [
+    { q: "A co-op needs a dashboard that 20 staff can view with live data from several sources without emailing files. Which category of tool best meets this?",
+      options: ["Presentation software with embedded charts", "A stand-alone spreadsheet on one computer", "A business analytics service delivered online", "A bitmap image editor"],
+      answer: 2,
+      why: "A business analytics service, often provided as software as a service, connects to data sources, refreshes and shares interactive dashboards. A slide deck or emailed spreadsheet is a static snapshot." },
+    { q: "Which is the main limitation of using presentation software to present data analysis?",
+      options: ["It cannot display charts", "A chart on a slide is a static snapshot that the audience cannot explore", "It cannot use colour", "It only works with numbers stored in a database"],
+      answer: 1,
+      why: "Presentation software is strong for storytelling and layout, but the charts do not update or let viewers filter unless linked. It can display charts and colours." },
+    { q: "A hire shop's monthly total takings fall from $640 to $350, but the average booking value stays between $55 and $73. What best explains the fall in total takings?",
+      options: ["Each booking became much cheaper", "The outlier has been removed", "The number of bookings fell", "The chart axis was truncated"],
+      answer: 2,
+      why: "Total = count × average. With the average roughly steady, the total falls because there are fewer bookings. Comparing count, sum and average shows this." },
+    { q: "Nine bookings are worth about $65 each and one is worth $2,400. Which statistic is least affected by the $2,400 booking?",
+      options: ["Mean", "Total", "Median", "Range"],
+      answer: 2,
+      why: "The median is the middle value, so one extreme value hardly moves it. The mean, total and range all change greatly because they use the extreme value directly." },
+    { q: "Which of these statements is an inference rather than an observation?",
+      options: ["The March column is the tallest", "Sales in June were $350", "March is the busiest month because of school holidays", "The chart covers January to June"],
+      answer: 2,
+      why: "An observation states what the chart shows. Saying March is busy because of school holidays goes beyond the chart to an explanation that needs more evidence." }
+  ],
+  // Part 3: Designing for user experience
+  'dv-3': [
+    { q: "A designer needs a chart that stays sharp when enlarged for a poster and can be edited later. Which format is best?",
+      options: ["A vector graphic such as SVG", "A low-resolution JPEG", "A screenshot saved as PNG", "A scanned printout"],
+      answer: 0,
+      why: "Vector graphics are made of shapes and text, so they scale without blurring and stay editable. Bitmap formats are made of pixels and blur when enlarged." },
+    { q: "A dashboard shows sales up in green and down in red, with no other cue. Which change best improves accessibility?",
+      options: ["Use brighter greens and reds", "Make the text smaller", "Remove the legend", "Add arrows or labels so meaning does not depend on colour alone"],
+      answer: 3,
+      why: "Some users cannot tell red from green, so colour should not be the only way information is conveyed. Adding an arrow, label or pattern gives a second cue." },
+    { q: "For which use is live analysis most clearly justified?",
+      options: ["A yearly board report on last year's results", "A poster of last decade's rainfall", "A map showing the current positions of ambulances", "A slide summarising a completed survey"],
+      answer: 2,
+      why: "Live analysis suits situations where decisions depend on what is happening now, such as vehicle positions. Reports on completed periods do not need real-time updates." },
+    { q: "In a usability test of a dashboard, 2 of 5 users complete Task 3 and it takes them 70 seconds. What is the most sensible conclusion?",
+      options: ["The dashboard is excellent because two users succeeded", "The task has a navigation or clarity problem that should be fixed and retested", "The users were the problem", "The dashboard needs live data"],
+      answer: 1,
+      why: "A 40% success rate is strong evidence of a usability problem. The right response is to improve the design, then repeat the test with new users." },
+    { q: "A dashboard uses AI to write a summary of the data automatically. What is the most important risk to manage?",
+      options: ["The summary may be wrong or biased, so users need to be able to check it against the data", "The summary will always be too long", "AI cannot read numbers", "The dashboard will stop being interactive"],
+      answer: 0,
+      why: "AI-generated insights can be inaccurate or reflect biased data, and users may over-trust them. Designers should let users see the source data and how a result was reached." }
+  ],
+  // Part 4: Creating data visualisations
+  'dv-4': [
+    { q: "A dataset has the date typed as 3/1/25, 3 Jan 2025 and 04-01-2025 in different rows. What should be done when organising it?",
+      options: ["Convert all dates to one consistent format and check for duplicates", "Leave it because software will work it out", "Delete the date column", "Change every date to the first of the month"],
+      answer: 0,
+      why: "Consistent formats are needed so that dates sort and chart correctly. Duplicates such as the same day written two ways should also be removed, and the decisions logged." },
+    { q: "A designer has 1.8 million tap-on records but needs a chart of daily boardings. What should be done first?",
+      options: ["Plot every record as a point", "Delete records at random until it fits", "Convert the file to a paper document", "Aggregate the records to one row per day"],
+      answer: 3,
+      why: "Aggregating to the level the question needs makes the data manageable and the chart readable. Deleting random records would lose accuracy without saying so." },
+    { q: "A trend line fitted to temperatures from 21 to 35°C predicts boardings well. Why is a prediction for 42°C unreliable?",
+      options: ["The trend line only works on even numbers", "Boardings cannot exceed 1,000", "42°C is outside the range of the data, so the pattern may not continue", "Temperature cannot be used in predictions"],
+      answer: 2,
+      why: "Extrapolating beyond the range of the data assumes that the relationship continues, which may not be true. Predictions should stay within or close to the observed range and show uncertainty." },
+    { q: "Which set-up follows the 3-2-1 backup rule?",
+      options: ["One copy on the laptop and one copy in the same drawer", "Three copies on the same hard drive", "Three copies of the data on two kinds of storage, with one copy kept off site", "Two copies on the same cloud account"],
+      answer: 2,
+      why: "The rule is three copies, on two different types of storage, with one copy stored somewhere else so that one event cannot destroy them all." },
+    { q: "Why is a file-sync folder alone not a reliable backup?",
+      options: ["It cannot store spreadsheets", "A deleted or encrypted file is copied across the sync straight away", "It is too slow to use", "It always encrypts the data"],
+      answer: 1,
+      why: "Synchronisation mirrors changes, including accidental deletion and ransomware encryption. A backup keeps separate, earlier versions that can be restored, ideally with one copy offline." }
+  ]
 });
