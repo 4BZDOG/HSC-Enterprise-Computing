@@ -1,27 +1,77 @@
 /* Quiz bank for Interactive Media and the User Experience (topics/interactive-media.html).
    One entry per data-quiz key on the page: im-1, im-2, im-3.
-   Each question: { q: "…", options: ["…", "…", "…"], answer: <index of the right option>, why: "…" }.
-   The samples below only prove the machinery works: replace each with 4 to 6 real questions. */
+   Each question: { q: "…", options: ["…", "…", "…", "…"], answer: <index of the right option>, why: "…" }. */
 window.HSC_QUIZZES = Object.assign(window.HSC_QUIZZES || {}, {
-  // CONTENT: replace this sample with 4 to 6 questions on part 1 (Ubiquity of interactive media).
+  // Part 1: Ubiquity of interactive media
   'im-1': [
-    { q: 'Sample question: which NESA part of this topic does this quiz belong to?',
-      options: ['Ubiquity of interactive media', 'Capture, store and integrate data', 'Create interactive media systems'],
-      answer: 0,
-      why: 'This placeholder shows the quiz machinery working. It belongs to Part 1, Ubiquity of interactive media.' },
-  ],
-  // CONTENT: replace this sample with 4 to 6 questions on part 2 (Capture, store and integrate data).
-  'im-2': [
-    { q: 'Sample question: which NESA part of this topic does this quiz belong to?',
-      options: ['Ubiquity of interactive media', 'Capture, store and integrate data', 'Create interactive media systems'],
+    { q: 'A cookie banner shows a large coloured "Accept all" button and a small grey "Manage options" link, with optional cookies pre-ticked once the options open. Which technique is mainly being used?',
+      options: ['Encryption of user data', 'Nudging through visual hierarchy and defaults', 'Lossless compression', 'Crowdsourcing'],
       answer: 1,
-      why: 'This placeholder shows the quiz machinery working. It belongs to Part 2, Capture, store and integrate data.' },
-  ],
-  // CONTENT: replace this sample with 4 to 6 questions on part 3 (Create interactive media systems).
-  'im-3': [
-    { q: 'Sample question: which NESA part of this topic does this quiz belong to?',
-      options: ['Ubiquity of interactive media', 'Capture, store and integrate data', 'Create interactive media systems'],
+      why: 'The design steers users towards one option by making it prominent, making the alternative harder, and using a default. That is nudging. If it misleads users it may also breach the Australian Consumer Law.' },
+    { q: 'Which statement correctly separates an identifier from an identity?',
+      options: ['An identifier is the broader picture of who you are online; an identity is a username',
+               'They mean the same thing',
+               'An identifier, such as a username or device ID, points to one account or device; an identity is the wider picture built from your profile, behaviour and relationships',
+               'An identifier is created only by algorithms; an identity is created only by the user'],
       answer: 2,
-      why: 'This placeholder shows the quiz machinery working. It belongs to Part 3, Create interactive media systems.' },
+      why: 'Identifiers are labels that let data be linked to one account or device. A digital identity is the richer picture made from what you share (e-profile) and what is inferred about you (auto-profile).' },
+    { q: 'A student wants to use an Aboriginal artwork they found online as the background for a school website. What is the most appropriate first step under ICIP protocols?',
+      options: ['Check that the image is JPEG so it loads quickly', 'Credit "unknown Aboriginal artist" in the footer', 'Use it as long as the school website is non-commercial', 'Identify the artist and community, ask for permission for the specific use, and agree on credit'],
+      answer: 3,
+      why: 'ICIP protocols centre on respect, consultation and consent with the relevant custodians. Attribution alone is not consent, and non-commercial use does not remove the need to ask.' },
+    { q: 'Under Australian law, when does copyright in a newly written blog post arise?',
+      options: ['Only after it is registered with the Copyright Office', 'Automatically, when the original work is created and recorded', 'Only if a copyright symbol is added', 'Only after 70 years'],
+      answer: 1,
+      why: 'Copyright under the Copyright Act 1968 (Cth) arises automatically. There is no registration, and a copyright symbol is not required.' },
+    { q: 'A regional hospital gives nursing students a digital scenario in which they practise assessing a simulated patient and receive instant feedback. This is best described as:',
+      options: ['A simulation used for online training', 'Crowdsourcing', 'Auto-profiling', 'Digital radio'],
+      answer: 0,
+      why: 'A simulation is a digital model that lets learners practise a task safely and see the consequences. Adding points and badges would make it gamified as well.' },
+  ],
+  // Part 2: Capture, store and integrate data
+  'im-2': [
+    { q: 'A designer needs a logo that stays sharp at any size and has a small file size. Which format is the best choice?',
+      options: ['JPEG', 'GIF', 'SVG', 'WAV'],
+      answer: 2,
+      why: 'SVG is a vector format: it describes shapes mathematically, so it scales without blur and is small for simple shapes. JPEG would blur the edges, and WAV is an audio format.' },
+    { q: 'Which statement about lossy compression is correct?',
+      options: ['It removes redundancy but allows the original to be rebuilt exactly', 'It permanently discards data that is unlikely to be noticed, so the original cannot be restored', 'It is used only for text documents', 'It increases the file size'],
+      answer: 1,
+      why: 'Lossy compression permanently discards information (for example fine image detail or masked sounds). Lossless compression is the type that lets the original be rebuilt exactly.' },
+    { q: 'An A4 page is scanned at 300 dpi and is about 2481 × 3507 pixels in 24-bit colour. Which is the closest uncompressed file size?',
+      options: ['About 2.6 MB', 'About 8.7 MB', 'About 26 MB', 'About 260 MB'],
+      answer: 2,
+      why: 'Size = pixels × bytes per pixel = 2481 × 3507 × 3 = about 26.1 million bytes (26 MB), since 24 bits is 3 bytes per pixel.' },
+    { q: 'A recording of a violin sounds rough and jagged because it was recorded at a very low sampling rate. What does increasing the sampling rate do?',
+      options: ['It measures the sound wave more often, so it follows the wave more closely', 'It gives each measurement more possible heights', 'It removes background noise automatically', 'It converts the recording to a lossy format'],
+      answer: 0,
+      why: 'Sampling rate is the number of measurements per second. Bit depth is the number of possible heights for each measurement.' },
+    { q: 'Which UI change is most likely to improve the UX of a form for users with low vision?',
+      options: ['Using pale grey text on a white background for a clean look', 'Replacing text labels with small icons', 'Increasing text size and using sufficient colour contrast', 'Moving all buttons to a different place on each page'],
+      answer: 2,
+      why: 'WCAG requires sufficient contrast (4.5:1 for normal text at level AA) and readable text. Pale text, icon-only labels and inconsistent layout all make the UX worse.' },
+  ],
+  // Part 3: Create interactive media systems
+  'im-3': [
+    { q: 'In design thinking, which stage involves watching real users attempt tasks with a prototype and noting where they struggle?',
+      options: ['Empathise', 'Define', 'Ideate', 'Test'],
+      answer: 3,
+      why: 'Testing means observing real users with the prototype and using the findings to improve it, possibly by going back to an earlier stage.' },
+    { q: 'A newsroom builds an interactive chart from a government dataset. Which action best reflects ethical data journalism?',
+      options: ['Starting the y-axis at a high value so the change looks dramatic', 'Publishing the raw personal details of survey participants', 'Recording the data source and method, checking for missing data and giving a way to report corrections', 'Removing any data that does not support the headline'],
+      answer: 2,
+      why: 'Ethical practice is accurate, transparent and respectful of privacy. A truncated axis, exposing personal data and cherry-picking are all misleading or harmful.' },
+    { q: 'A museum needs a kiosk with fixed content, a fixed budget and an opening date that cannot move. Which approach is most suitable?',
+      options: ['Waterfall, because the requirements and deadline are fixed', 'Agile, because the client never wants to see the work', 'Waterfall, because it delivers a working system every two weeks', 'No approach is needed for interactive media'],
+      answer: 0,
+      why: 'Waterfall suits stable requirements and fixed deadlines. Agile delivers working increments regularly and suits unclear or changing requirements.' },
+    { q: 'On a shop website, a user searches for "shoes" and gets no results. Which response best applies good UX?',
+      options: ['Show a blank page', 'Show a message saying "No results" and suggest other terms or categories', 'Take the user back to the home page without explanation', 'Show random unrelated products with no message'],
+      answer: 1,
+      why: 'Helping users recognise and recover from errors is a core usability principle. A clear message and suggestions keep the user moving towards their goal.' },
+    { q: 'In a NESA storyboard, what does a dot on a navigation button with an arrow leading to another screen mean?',
+      options: ['The button is disabled', 'The button opens that other screen', 'The button is the current page', 'The screen must be printed'],
+      answer: 1,
+      why: 'In NESA storyboard notation a dot and arrow show that a button links to a screen. The current page is shown by highlighting its button.' },
   ],
 });

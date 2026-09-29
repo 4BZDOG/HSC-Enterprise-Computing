@@ -9,14 +9,14 @@
   <meta name="robots" content="index, follow" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Networking Systems and Social Computing | HSC Enterprise Computing" />
-  <meta property="og:description" content="HSC Enterprise Computing notes on Networking Systems and Social Computing (Networks, cloud and IoT). NESA NSW Year 11 Preliminary syllabus, dot point by dot point." />
+  <meta property="og:description" content="HSC Enterprise Computing notes on networking systems: graph theory, cloud, transmission media, IoT, network security and building a network. NESA Year 11." />
   <meta property="og:url" content="https://4bzdog.github.io/HSC-Enterprise-Computing/topics/networking-systems.html" />
   <meta property="og:image" content="https://4bzdog.github.io/HSC-Enterprise-Computing/og-image.png" />
   <meta property="og:image:alt" content="HSC Enterprise Computing Notes: NESA NSW" />
   <meta property="og:site_name" content="HSC Enterprise Computing Notes" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Networking Systems and Social Computing | HSC Enterprise Computing" />
-  <meta name="twitter:description" content="HSC Enterprise Computing notes on Networking Systems and Social Computing (Networks, cloud and IoT). NESA NSW Year 11 Preliminary syllabus, dot point by dot point." />
+  <meta name="twitter:description" content="HSC Enterprise Computing notes on networking systems: graph theory, cloud, transmission media, IoT, network security and building a network. NESA Year 11." />
   <meta name="twitter:image" content="https://4bzdog.github.io/HSC-Enterprise-Computing/og-image.png" />
   <script type="application/ld+json">
   {
@@ -48,12 +48,13 @@
   <meta name="theme-color" content="#0B1B2E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- CONTENT: rewrite the meta description (and the two social descriptions above) in 120 to 160 characters. -->
-  <meta name="description" content="HSC Enterprise Computing notes on Networking Systems and Social Computing (Networks, cloud and IoT). NESA NSW Year 11 Preliminary syllabus, dot point by dot point." />
+  <meta name="description" content="HSC Enterprise Computing notes on networking systems: graph theory, cloud, transmission media, IoT, network security and building a network. NESA Year 11." />
   <!-- Theme init: prevents flash of wrong theme. The ec- prefix keeps this site's storage apart from sister sites on the same origin. -->
   <script>(function(){try{var t=localStorage.getItem('ec-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
   <link rel="stylesheet" href="../css/styles.css?v=eaa2e127" />
   <link rel="stylesheet" href="../css/theme.css?v=ea1ce127" />
+  <link rel="stylesheet" href="../css/anim.css?v=22e246f7" />
+  <link rel="stylesheet" href="../css/pages/networking-systems.css?v=f348b8e4" />
 </head>
 <body>
 
@@ -158,8 +159,7 @@
       </nav>
       <div class="topic-title-row"><span class="topic-hero-icon ti-y11" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="6" r="2.5"/><circle cx="5.5" cy="18" r="2.5"/><circle cx="18.5" cy="18" r="2.5"/><path d="M10.9 8.2 6.6 15.8M13.1 8.2l4.3 7.6M8 18h8"/></svg></span><h1>Networking Systems and Social Computing</h1></div>
       <p class="text-muted-dark max-w-600 mt-2 fs-sm lh-base">
-        <!-- CONTENT: one or two sentences introducing the topic, with the key ideas in <strong>. -->
-        Notes for the NESA focus area <strong>Networking systems and social computing</strong>, following the syllabus in order: Introduction to human-centric computing, Storage and workflow in enterprise networks, Network architecture and infrastructure and Creating a network.
+        Notes for the NESA focus area <strong>Networking systems and social computing</strong>: how <strong>disruptive technology</strong> and <strong>social networks</strong> shape our lives, how <strong>cloud storage</strong>, <strong>graph theory</strong>, <strong>transmission media</strong> and the <strong>Internet of Things</strong> work, and how to <strong>design, configure and secure</strong> a network.
       </p>
       <div class="topic-header-meta">
         <span class="meta-pill year11">Year 11 — Preliminary</span>
@@ -218,8 +218,9 @@
 
         <aside class="yr11 topic-breakout" aria-label="Topic introduction">
           <span class="breakout-label">Why this matters now</span>
-          <!-- CONTENT: topic introduction. Two short paragraphs linking the topic to students' lives, then a closing question in .breakout-question with a .bq-lead label. -->
-          <p>This page covers the Networking systems and social computing focus area of the NESA Enterprise Computing syllabus.</p>
+          <p>Every message you send, video you stream or tap-to-pay purchase you make crosses networks you never see: Wi-Fi, fibre, mobile towers and cloud data centres. Your friend group is a network too, and the same mathematics that maps who knows whom also helps design the cabling in a school.</p>
+          <p>In this topic you will explore how technology disrupts everyday life, how enterprises store data and share work over networks and the cloud, how graph theory and transmission media shape network design, how IoT devices communicate and stay secure, and how to design and configure a network of your own.</p>
+          <p class="breakout-question"><span class="bq-lead">Try this as you learn</span> List every device connected to your home network right now. Who set each one up, and what would happen if it were taken over?</p>
         </aside>
 
         <!-- ═══════════════════════════════════════════════════════ -->
@@ -231,8 +232,8 @@
         </div>
 
         <aside class="yr11 topic-breakout subtopic-breakout" aria-label="Part introduction">
-          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
-          <p>This part covers 5 NESA dot points: introduction to human-centric computing.</p>
+          <p>How is technology changing people's lives, and how can we describe those changes precisely? This part covers disruptive technology, graph theory in social networks, web and mobile apps, the Internet of Things and Internet of Me, and what makes a start-up succeed.</p>
+          <p class="breakout-question">Which app on your phone replaced something your parents used to buy or do in person?</p>
         </aside>
 
         <section id="disruptive-tech">
@@ -241,8 +242,35 @@
           <p class="syllabus-concept">📌 <em><strong>Investigate</strong> the effects of disruptive technology on everyday computing</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>effects on the individual</li><li>innovations in infrastructure, hardware and software</li><li>trends and technology buzzwords</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>Disruptive technology in context</h3>
+          <p>A <strong>disruptive technology</strong> changes how people or organisations do something so much that older products, services or business models lose their place. The idea comes from the business writer Clayton Christensen, who described new products that start out simpler or cheaper, win over customers the market has overlooked, then improve until they displace the established leaders. In everyday speech the term is used more loosely for any technology that shifts habits quickly. To <em>investigate</em> a disruptive technology, ask four questions: what did it replace, who gained, who lost, and what new problems did it create?</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Technology</th><th>What it disrupted</th><th>Effect on individuals</th></tr></thead>
+          <tbody>
+          <tr><td><strong>Smartphones</strong></td><td>Compact cameras, GPS units, MP3 players, paper maps, landline phones</td><td>One pocket device replaces many; always reachable; constant notifications and screen time</td></tr>
+          <tr><td><strong>Streaming services</strong></td><td>DVD and video rental shops, broadcast TV schedules</td><td>Watch anything on demand; rental shop jobs and local shops disappear</td></tr>
+          <tr><td><strong>Cloud computing</strong></td><td>Owning and running your own servers and software installs</td><td>Files and apps follow you across devices; you depend on an internet connection and a provider</td></tr>
+          <tr><td><strong>Mobile payments (tap and pay, PayID)</strong></td><td>Cash, cheques, card swipes</td><td>Faster, contactless payments; harder for people without a smartphone or bank account</td></tr>
+          <tr><td><strong>Generative AI</strong></td><td>Routine writing, image and code production tasks</td><td>Faster drafting and study help; questions about job change, accuracy, copyright and academic integrity</td></tr>
+          </tbody></table>
+          </div>
+
+          <h3>Effects on the individual</h3>
+          <p>Effects are rarely all good or all bad. On the positive side, disruptive technology can bring <strong>convenience</strong> (banking, shopping and telehealth from home), <strong>access</strong> (a student in a remote community can join an online class), <strong>new work</strong> (app developers, data analysts, content creators) and <strong>lower costs</strong> for some services. On the negative side, it can remove jobs or change the skills needed, create a <strong>digital divide</strong> between people with and without fast internet or devices, erode <strong>privacy</strong> as more personal data is collected, and affect <strong>wellbeing</strong> through constant connection. Individuals must keep learning new skills, a pattern often called <em>lifelong learning</em>.</p>
+
+          <h3>Innovations in infrastructure, hardware and software</h3>
+          <p>Disruption usually needs several layers to advance together.</p>
+          <ul>
+          <li><strong>Infrastructure:</strong> fibre and the national broadband network (nbn), 4G and 5G mobile networks, low Earth orbit (LEO) satellites for regional areas, and large cloud data centres. Faster, cheaper connections make new services practical.</li>
+          <li><strong>Hardware:</strong> powerful, low-cost smartphones, wearables, tiny sensors and microcontrollers, and specialised chips for graphics and artificial intelligence.</li>
+          <li><strong>Software:</strong> app stores, web and mobile apps, application programming interfaces (APIs) that let systems connect, and machine learning that turns large datasets into predictions.</li>
+          </ul>
+          <p>Ride-sharing shows all three layers working together: smartphones with GPS (hardware), mobile data networks (infrastructure) and a matching app with online payments (software) combined to challenge the taxi industry.</p>
+
+          <h3>Trends and technology buzzwords</h3>
+          <p>Technology marketing is full of <strong>buzzwords</strong>: <em>cloud</em>, <em>AI</em>, <em>big data</em>, <em>blockchain</em>, <em>the Internet of Things (IoT)</em>, <em>edge computing</em>, <em>5G</em>, <em>digital transformation</em>, <em>metaverse</em>. Some name genuine advances; others are used to make ordinary products sound new. The Gartner Hype Cycle is a well-known model that describes how a new technology often passes through a peak of inflated expectations and a trough of disappointment before reaching steady, practical use. A useful test for any buzzword is: <em>what does it actually do, who benefits, and what evidence is there?</em></p>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Investigate</em> means you gather and weigh evidence, so a full-mark answer names a specific technology, states what it disrupted, and gives at least one benefit and one drawback for individuals (for example, streaming gives on-demand choice but removes local video-shop jobs). Avoid listing buzzwords without explaining what each does.</div>
         </section>
 
         <hr class="divider" />
@@ -252,8 +280,69 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-04, EC-11-06)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Investigate</strong> the application of graph and network theory in the design of social networks</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>Nodes, edges and NESA's notation</h3>
+          <p>A social network can be modelled as a <strong>graph</strong>: a set of <strong>nodes</strong> (also called <strong>vertices</strong>) joined by <strong>edges</strong> (links). In NESA's notation, a circle is an individual or a category, and a straight line is a link that connects nodes, groups of nodes or clusters. Circle size may show the size of a dataset or how important the node is, and labels on the links describe the relationship. NESA's worked example shows VB at the centre with friends and interest categories around them.</p>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Graph</span></p>
+            <h4 class="figure-title">VB's social network</h4>
+            <p class="figure-lead">NESA notation (Course Specifications, page 11): circle size shows importance and each labelled link names a relationship.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="spec-graph-weighted"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>VB is drawn largest because VB is the most important node in this network.</li>
+          <li>Links are labelled with the relationship (Friend, Listen, Watch, Group), so one graph can hold people and categories.</li>
+          <li>The small unlabelled circles still count as nodes: they link members together.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>Which node has the highest degree? Which links would you remove to isolate JM?</p>
+          </div>
+          </figure>
+
+          <h3>Adjacency</h3>
+          <p>Two nodes are <strong>adjacent</strong> if an edge joins them. Adjacency can be recorded as an <strong>adjacency list</strong> (each node lists its neighbours) or an <strong>adjacency matrix</strong> (a grid with 1 where two nodes are adjacent and 0 where they are not). In an undirected friendship graph the matrix is symmetrical. On a platform with "follow" relationships, edges are <strong>directed</strong> (an arrow from follower to followed), so the matrix is no longer symmetrical. Designers choose the model: mutual friendship suits an undirected graph; following a celebrity suits a directed one.</p>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Graph</span></p>
+            <h4 class="figure-title">A six-person friend group</h4>
+            <p class="figure-lead">Six people A to F. Node size shows degree, the number of friends each person has.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="net-graph-degree"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>A has three links, so A is drawn largest and has the highest degree.</li>
+          <li>The graph is connected: there is a path from every person to every other person.</li>
+          <li>D links the group {A, B, C} to {E, F}, even though D has only two friends.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>Add a link between B and D. Which degrees change, and does D's node grow?</p>
+          </div>
+          </figure>
+          <div class="table-wrap">
+          <table>
+          <caption>Adjacency matrix for the six-person graph (1 = friends)</caption>
+          <thead><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>Row total (degree)</th></tr></thead>
+          <tbody>
+          <tr><th>A</th><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td><strong>3</strong></td></tr>
+          <tr><th>B</th><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>2</td></tr>
+          <tr><th>C</th><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td></tr>
+          <tr><th>D</th><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>2</td></tr>
+          <tr><th>E</th><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>2</td></tr>
+          <tr><th>F</th><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td></tr>
+          </tbody></table>
+          </div>
+          <p>The same graph as an adjacency list: <code>A: B, C, D</code> &nbsp; <code>B: A, C</code> &nbsp; <code>C: A, B</code> &nbsp; <code>D: A, E</code> &nbsp; <code>E: D, F</code> &nbsp; <code>F: E</code>. Lists use less memory for large, sparse networks such as a social platform with millions of users, where most pairs of people are not friends.</p>
+
+          <h3>Centrality: who matters most?</h3>
+          <p><strong>Centrality</strong> measures how important or influential a node is. There are several measures, and they can disagree.</p>
+          <ul>
+          <li><strong>Degree centrality</strong> is the number of edges a node has. It is often <em>normalised</em> by dividing by the maximum possible degree, n − 1. For the six-person graph, A has degree 3, so its normalised degree centrality is 3 ÷ 5 = 0.6; F has 1 ÷ 5 = 0.2. Degree centrality finds the best-connected people, such as an influencer with many followers.</li>
+          <li><strong>Betweenness centrality</strong> counts how often a node lies on the shortest paths between other pairs of nodes. People with high betweenness are <em>bridges</em> between groups: information must pass through them. In the six-person graph, A and D each lie on six pairs' shortest paths, even though D has a lower degree than A.</li>
+          <li><strong>Closeness centrality</strong> measures how near a node is to every other node (the inverse of its total shortest-path distance). A's distances are 1, 1, 1, 2 and 3, a total of 8, so closeness is 5 ÷ 8 = 0.625, whereas F's total is 14 and its closeness is about 0.36. Nodes with high closeness can spread news the fastest.</li>
+          </ul>
+
+          <h3>Connectedness, paths and clusters</h3>
+          <p>A <strong>path</strong> is a sequence of edges joining two nodes. A graph is <strong>connected</strong> if there is a path between every pair of nodes; otherwise it is <strong>disconnected</strong> and splits into separate <strong>components</strong>. Dense groups inside a network are <strong>clusters</strong> or communities, such as a year group or a sports team. Platforms use these ideas in their design: <em>friend suggestions</em> often propose a friend of a friend (in the six-person graph, B and D are not friends, but they share the friend A, so D is a likely suggestion for B); <em>community detection</em> groups similar users; and measuring how far a post spreads along paths helps show how information, and misinformation, moves.</p>
+          <div class="callout assessor"><strong>Assessor tip</strong> A typical item gives a small graph and asks you to identify the node with the highest degree, build an adjacency matrix, or explain what a link label means. Use NESA's terms exactly: <em>node/vertex</em>, <em>link/edge</em>. When you <em>investigate application</em> in design, link the measure to a design decision, for example: "High-betweenness users connect separate groups, so the platform can recommend them as introductions."</div>
         </section>
 
         <hr class="divider" />
@@ -263,8 +352,32 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-01, EC-11-06)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Describe</strong> how web applications and dedicated apps for mobile devices influence the success of social networking</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (describe). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>Web applications and dedicated mobile apps</h3>
+          <p>A <strong>web application</strong> runs in a browser and is delivered from a server, so nothing needs to be installed and every device gets the same, current version. A <strong>dedicated (native) mobile app</strong> is built for one operating system, installed from an app store, and can use device features such as the camera, microphone, GPS, contacts and push notifications. Many social networks offer both, and the two work together.</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Feature</th><th>Web application</th><th>Dedicated mobile app</th></tr></thead>
+          <tbody>
+          <tr><td><strong>Installation</strong></td><td>None: open a link</td><td>Download from an app store</td></tr>
+          <tr><td><strong>Reach</strong></td><td>Any device with a browser, including laptops and school computers</td><td>Only the platforms it is built for (for example iOS and Android)</td></tr>
+          <tr><td><strong>Device features</strong></td><td>Limited, and depends on the browser</td><td>Full access with the user's permission: camera, location, sensors, notifications</td></tr>
+          <tr><td><strong>Updates</strong></td><td>Instant, on the server</td><td>User must update; app store review can delay releases</td></tr>
+          <tr><td><strong>Engagement</strong></td><td>Depends on the user opening it</td><td>Home-screen icon and push notifications bring users back</td></tr>
+          <tr><td><strong>Offline use</strong></td><td>Limited, unless built as a progressive web app</td><td>Can store content and work offline</td></tr>
+          </tbody></table>
+          </div>
+
+          <h3>How they influence the success of social networking</h3>
+          <ul>
+          <li><strong>Network effects:</strong> a social network is only valuable if your friends are on it, so anything that makes joining easy grows the network, and a bigger network attracts more users. A web link that opens instantly in any browser lowers the first barrier to joining; a well-built app keeps people coming back.</li>
+          <li><strong>Always with you:</strong> phones bring the camera, location and contacts into every post, story and message. Sharing a photo takes seconds, which increases content creation and activity.</li>
+          <li><strong>Notifications:</strong> push notifications pull people back into the service. They drive engagement but also contribute to distraction and pressure.</li>
+          <li><strong>Cross-platform consistency:</strong> users expect to move from phone to laptop mid-conversation, so successful networks keep accounts, messages and content in sync across web and mobile.</li>
+          <li><strong>User experience and performance:</strong> slow loading, confusing layouts or intrusive permissions make people leave. Good UX, including accessibility, widens the audience.</li>
+          <li><strong>Distribution and rules:</strong> app stores are the main channel for mobile apps, and their policies, review process and fees shape what an app can do. Web apps avoid store rules but have less visibility.</li>
+          </ul>
+          <div class="callout info"><strong>Australian context</strong> From 10 December 2025, the <em>Online Safety Amendment (Social Media Minimum Age) Act 2024</em> requires age-restricted social media platforms to take reasonable steps to stop Australians under 16 from having accounts, and the eSafety Commissioner oversees compliance. The rule applies to platforms, whether people reach them by web or app, so design choices about sign-up and age checks are now a business requirement as well as a safety feature. Read the <a href="https://www.legislation.gov.au/C2024A00127/latest/text" target="_blank" rel="noopener">Act on legislation.gov.au</a>.</div>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Describe</em> asks for features, not a debate. Name the type of app, give one feature, then link it to a success factor (for example, "push notifications on a mobile app remind users of new messages, which raises daily activity"). Mention network effects for full marks.</div>
         </section>
 
         <hr class="divider" />
@@ -275,8 +388,43 @@
           <p class="syllabus-concept">📌 <em><strong>Investigate</strong> how the development of hardware and software has influenced the adoption of the Internet of Things (IoT) and the Internet of Me (IoMe)</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>impact on the individual</li><li>impact on enterprise, including edge computing</li><li>hardware infrastructure</li><li>software protocols</li><li>data backup</li><li>regulation, compliance and cybersecurity</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>IoT and IoMe defined</h3>
+          <p>NESA's glossary describes the <strong>Internet of Things (IoT)</strong> as smart devices and smart objects that send and receive information using the internet and communication infrastructure. The <strong>Internet of Me (IoMe)</strong> loosely refers to technology that connects our minds and bodies with the online world, turning biological and cognitive life into streams of data that can be monitored, shared and shaped. In practice IoT covers thermostats, cameras, farm sensors and factory machines, while IoMe covers the devices on or in a person: smartwatches, fitness trackers, sleep monitors, continuous glucose monitors and hearing aids that connect to phones.</p>
+
+          <h3>Impact on the individual</h3>
+          <p>Benefits include convenience (lights, heating and door locks controlled from a phone), safety (fall detection, smoke alarms that message you) and health insights (heart rate and activity trends that support better choices or alert a doctor). The costs are <strong>privacy</strong> (a home device may record audio, video and daily routines), <strong>security</strong> (a weakly protected camera can be taken over), <strong>dependence</strong> (a smart lock that fails when the internet drops) and <strong>data ownership</strong> (who can use your health data, and for what?). Health information is <em>sensitive information</em> under the Privacy Act 1988, which means the Australian Privacy Principles require stronger protection.</p>
+
+          <h3>Impact on enterprise, including edge computing</h3>
+          <p>Enterprises use IoT to <strong>track assets</strong> (fleet vehicles and shipping containers), <strong>monitor equipment</strong> for faults, <strong>manage energy</strong> in buildings and <strong>improve farming</strong> with soil and weather sensors. Thousands of sensors produce a huge flow of data, and sending all of it to a distant cloud is slow and costly. <strong>Edge computing</strong>, in NESA's words, is a framework that distributes processing capabilities and hardware so applications can be closer to their data source. An edge gateway on the farm or factory floor filters and analyses readings locally, acts immediately (for example, switching a pump on), keeps working if the internet drops, and sends only summaries to the cloud.</p>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Concept diagram</span></p>
+            <h4 class="figure-title">IoT devices, edge gateway and cloud</h4>
+            <p class="figure-lead">Processing moves closer to where data is collected.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="net-iot-tiers"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>Devices collect data but have limited processing power and battery.</li>
+          <li>The edge tier gives fast responses and works offline.</li>
+          <li>The cloud is best for long-term storage and training machine learning models on data from many sites.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>A sensor reading must trigger a pump within a second, and the farm's internet is unreliable. Which tier should make the decision, and why?</p>
+          </div>
+          </figure>
+
+          <h3>Hardware infrastructure</h3>
+          <p>An IoT system needs <strong>sensors</strong> (measure the world) and <strong>actuators</strong> (act on it, such as valves and relays), <strong>microcontrollers</strong> or small computers (such as Arduino, ESP32 or Raspberry Pi boards) to run them, a <strong>network</strong> (Wi-Fi, Bluetooth Low Energy, cellular, LoRaWAN) to carry the data, <strong>gateways</strong> to link local devices to the internet, and <strong>servers or cloud services</strong> to store and analyse it. Power is a design limit: many sensors run for months or years from a battery, so they use low-power hardware and radios.</p>
+
+          <h3>Software protocols</h3>
+          <p>IoT devices talk using lightweight protocols suited to small devices and unreliable links: MQTT, CoAP, HTTP and the radio-level standards Zigbee, Thread and Bluetooth Low Energy. These are compared in detail in the section on IoT communication protocols. The important point here is that <strong>protocols are agreed rules</strong> (NESA's glossary calls them "generally accepted standards") that let devices from different makers exchange data.</p>
+
+          <h3>Data backup</h3>
+          <p>IoT data and settings need backing up too: the readings themselves (usually copied to cloud storage), device <strong>configurations</strong> and <strong>firmware</strong> images so a failed device can be replaced quickly, and the gateway's data if it buffers readings locally. The common <strong>3-2-1 rule</strong> keeps three copies of important data, on two different types of storage, with one copy off site.</p>
+
+          <h3>Regulation, compliance and cybersecurity</h3>
+          <p>Personal data collected by IoT and IoMe devices falls under the <strong>Privacy Act 1988</strong> and the Australian Privacy Principles, and an eligible data breach must be reported under the Notifiable Data Breaches scheme run by the OAIC. IoT in critical infrastructure such as energy and water is covered by the <strong>Security of Critical Infrastructure Act 2018</strong>. The <strong>Cyber Security Act 2024</strong> provides for mandatory security standards for smart devices, based on baseline practices such as no universal default passwords, a published way to report vulnerabilities, and a stated period of security updates. Weak default passwords on IoT devices have been a common way attackers build large botnets, so cybersecurity has to be designed in from the start. See the <a href="https://www.legislation.gov.au/C2024A00098/asmade" target="_blank" rel="noopener">Cyber Security Act 2024</a> and the <a href="https://www.oaic.gov.au/privacy/notifiable-data-breaches" target="_blank" rel="noopener">OAIC's Notifiable Data Breaches page</a>.</p>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Investigate</em> questions on this dot point reward answers that cover both sides: give an impact on the individual <em>and</em> on an enterprise, and name a regulation or security control. Define edge computing in one sentence and give an example of why processing closer to the source helps.</div>
         </section>
 
         <hr class="divider" />
@@ -286,8 +434,32 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-01, EC-11-06)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Outline</strong> the business and individual cultural characteristics that contribute to the success of start-ups</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (outline). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>What a start-up is</h3>
+          <p>A <strong>start-up</strong> is a new business, usually built around a new product, service or technology, that aims to grow quickly. Start-ups often begin with a small team and limited money, so their success depends on business decisions and on the people running them. Australian technology companies such as Atlassian and Canva both began as small start-ups.</p>
+
+          <h3>Business characteristics that contribute to success</h3>
+          <ul>
+          <li><strong>A real problem and a clear customer:</strong> the product solves a problem people have and will pay to fix (often called <em>product-market fit</em>).</li>
+          <li><strong>A scalable business model:</strong> the business can serve many more customers without costs rising at the same rate, which is why software and online services suit start-ups.</li>
+          <li><strong>Testing early:</strong> building a <em>minimum viable product (MVP)</em>, collecting feedback and improving in short cycles before spending heavily.</li>
+          <li><strong>Willingness to pivot:</strong> changing direction when evidence shows the first idea is not working.</li>
+          <li><strong>Funding and cash management:</strong> a plan for money coming in, from founders' savings, grants, angel investors, venture capital, crowdfunding or early sales, and awareness of how long the cash will last.</li>
+          <li><strong>Protecting ideas:</strong> using patents, trade marks, copyright and confidentiality where appropriate.</li>
+          <li><strong>Timing and networks:</strong> launching when technology and customers are ready, with mentors, advisers and partners who open doors.</li>
+          </ul>
+
+          <h3>Individual cultural characteristics</h3>
+          <p>Start-up culture refers to shared attitudes and habits in the team. It is usually informal and flat (few management layers), fast-moving and experimental. Individuals who help a start-up succeed often show:</p>
+          <ul>
+          <li><strong>Resilience:</strong> recovering from setbacks and rejections.</li>
+          <li><strong>Adaptability and a growth mindset:</strong> learning quickly and treating mistakes as feedback.</li>
+          <li><strong>Creativity and curiosity:</strong> looking for new solutions to problems.</li>
+          <li><strong>Initiative and ownership:</strong> acting without waiting to be told, and taking responsibility for results.</li>
+          <li><strong>Collaboration and communication:</strong> small teams cannot afford silos, so people share knowledge and take on different roles.</li>
+          <li><strong>Comfort with risk and uncertainty:</strong> accepting that plans change and many start-ups do not survive.</li>
+          </ul>
+          <div class="callout warning"><strong>A balanced view</strong> Slogans such as "move fast and fail fast" can hide long hours, pressure and burnout. Sustainable start-up cultures value wellbeing, clear expectations and inclusive teams, because a rested, diverse team makes better decisions.</div>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Outline</em> is short: give a list of characteristics with a few words on each. Make sure you include both <em>business</em> characteristics (for example, scalable model, testing with an MVP) and <em>individual cultural</em> characteristics (for example, resilience, adaptability) because the dot point asks for both.</div>
         </section>
 
         <div class="quiz" data-quiz="net-1"></div>
@@ -301,8 +473,8 @@
         </div>
 
         <aside class="yr11 topic-breakout subtopic-breakout" aria-label="Part introduction">
-          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
-          <p>This part covers 5 NESA dot points: storage and workflow in enterprise networks.</p>
+          <p>Enterprises depend on networks to share files, delegate work and store data. This part covers remote working, digital workflows, storage requirements, and the cloud service and storage models an enterprise can choose from.</p>
+          <p class="breakout-question">Where is a photo you took today actually stored, and who else could reach it?</p>
         </aside>
 
         <section id="connectivity-work">
@@ -311,8 +483,28 @@
           <p class="syllabus-concept">📌 <em><strong>Investigate</strong> how the developments in network connectivity and speed have influenced work practices within an enterprise</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>remote working opportunities</li><li>file sharing</li><li>task delegation and monitoring</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>Faster, more reliable connections</h3>
+          <p>Two measures describe how good a connection is. <strong>Bandwidth</strong> is how much data a connection can carry per second (in megabits per second, Mbps), and <strong>latency</strong> is how long a signal takes to make the trip (in milliseconds). Video calls, cloud files and remote desktops need both. In Australia, the national broadband network (nbn) brought fibre, hybrid fibre-coaxial, fixed wireless and satellite connections to homes and businesses, and 4G and 5G gave mobile connections that can carry video. Together these made it practical for many jobs to be done away from the office. Regional and remote areas still depend more on fixed wireless and satellite services, so the benefits are not shared equally.</p>
+
+          <h3>Remote working opportunities</h3>
+          <p><strong>Remote working</strong> means doing your job from home or another location, using a network to reach files, systems and colleagues. It relies on a <strong>virtual private network (VPN)</strong> or secure cloud sign-in, video conferencing (Teams, Zoom, Google Meet), messaging and shared documents.</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Benefits</th><th>Limitations and risks</th></tr></thead>
+          <tbody>
+          <tr><td>Flexibility for employees, including carers and people with a disability</td><td>Isolation and weaker team connection</td></tr>
+          <tr><td>Employers can hire from a wider area, including regional Australia</td><td>Work and home life blur; risk of being "always on"</td></tr>
+          <tr><td>Less commuting; lower office costs</td><td>Home networks are less secure and less reliable than office networks</td></tr>
+          <tr><td>Work can continue during floods, fires or transport disruption</td><td>Employers still have work health and safety duties for the home workspace</td></tr>
+          </tbody></table>
+          </div>
+
+          <h3>File sharing</h3>
+          <p>Teams share files through <strong>shared network drives</strong> or a network-attached storage (NAS) device on the local network, and through <strong>cloud file services</strong> such as Microsoft OneDrive and SharePoint or Google Drive. Good file sharing needs <strong>permissions</strong> (who can view, edit or share), <strong>version history</strong> (to undo changes or recover a deleted file), <strong>co-authoring</strong> (several people edit the same document at once) and <strong>sync</strong> so every device has the latest copy. Risks include sharing links that are too open, accidental deletion, and confidential files being copied to personal devices.</p>
+
+          <h3>Task delegation and monitoring</h3>
+          <p>Networked <strong>project and task tools</strong> (such as Microsoft Planner, Trello, Asana and Jira) let managers <em>delegate</em> tasks by assigning an owner, due date and priority, and <em>monitor</em> progress through boards and dashboards, comments and automatic notifications. Team members see what depends on their work, and managers see bottlenecks early. Some employers also use software that tracks logins, web use or location. In NSW, the <em>Workplace Surveillance Act 2005</em> requires employers to give employees notice before starting computer, camera or tracking surveillance. Monitoring outcomes (tasks completed) is generally more accepted and more useful than monitoring every keystroke, which can damage trust.</p>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Investigate</em> calls for a judgement. Pick one work practice (such as remote working), state the network development that enabled it (faster broadband, cloud, VPN), give benefits <em>and</em> limitations, and finish with a conclusion, for example whether the benefits outweigh the risks for a particular enterprise.</div>
         </section>
 
         <hr class="divider" />
@@ -322,8 +514,46 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-01, EC-11-10)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Examine</strong> the benefits and limitations of digital workflows operating in an enterprise</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (examine). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>What a digital workflow is</h3>
+          <p>A <strong>workflow</strong> is a series of tasks that move work from a start to a finish, with rules about who does each step and when. A <strong>digital workflow</strong> uses software and a network to carry the work, its data and its approvals automatically from person to person instead of by paper forms, emails and phone calls. Examples: staff leave requests, expense claims, purchase orders, student enrolments, insurance claims and helpdesk tickets. Tools include forms and approvals in Microsoft Power Automate, ServiceNow-style ticketing systems, and simple automations such as "when a form is submitted, email the manager".</p>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">System flowchart</span></p>
+            <h4 class="figure-title">A staff leave request as a digital workflow</h4>
+            <p class="figure-lead">NESA system flowchart symbols show where data enters, is processed, is stored and is sent on.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="net-sysflow-leave"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>Online input starts the workflow; the process reads and writes the leave records in direct access storage.</li>
+          <li>The manual operation is a person's decision, so the system waits for them.</li>
+          <li>The telecommunications link and cloud symbol show data moving to a separate payroll system.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>Where in this workflow would a paper-based process cause the longest delay? Which step must stay manual, and why?</p>
+          </div>
+          </figure>
+
+          <h3>Benefits</h3>
+          <ul>
+          <li><strong>Speed:</strong> requests are routed instantly, and reminders stop them stalling.</li>
+          <li><strong>Accuracy:</strong> forms can validate data at the start, so there are fewer transcription errors.</li>
+          <li><strong>Consistency and compliance:</strong> every request follows the same rules, and an <em>audit trail</em> records who did what and when.</li>
+          <li><strong>Visibility:</strong> managers and staff can see the status of any request at any time.</li>
+          <li><strong>Lower costs and less paper:</strong> less printing, storage and re-keying of data.</li>
+          <li><strong>Works with remote teams:</strong> approvals can happen from anywhere.</li>
+          </ul>
+
+          <h3>Limitations</h3>
+          <ul>
+          <li><strong>Set-up cost and training:</strong> designing workflows, integrating with existing systems and training staff takes time and money.</li>
+          <li><strong>Rigidity:</strong> unusual cases that do not fit the rules need a manual workaround.</li>
+          <li><strong>Dependence on the network and system:</strong> if the server, cloud service or internet is down, work stops unless there is a backup process.</li>
+          <li><strong>Security and privacy:</strong> workflows carry personal and financial data, so they need access control and protection.</li>
+          <li><strong>Automating a poor process:</strong> a slow or confusing process just becomes a faster confusing process, so review the process before automating it.</li>
+          <li><strong>Resistance and exclusion:</strong> some staff may find new tools difficult, and roles can change or disappear.</li>
+          </ul>
+          <div class="callout info"><strong>Scenario</strong> A regional council replaces a paper building-permit form with an online workflow. Applications are routed to the planning officer, then the engineer, then the manager, and applicants can check progress online. Processing time falls and fewer forms are lost, but a resident without internet access needs a staffed counter, and every approval is delayed when the council's system is offline for maintenance.</div>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Examine</em> means to inquire into the parts and weigh them. A strong answer gives at least two benefits and two limitations tied to a named workflow, then a concluding statement about whether the workflow suits the enterprise. Use system flowchart symbols correctly if asked to draw one.</div>
         </section>
 
         <hr class="divider" />
@@ -334,8 +564,47 @@
           <p class="syllabus-concept">📌 <em><strong>Investigate</strong> data storage requirements for an enterprise</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>capacity</li><li>accessibility</li><li>location</li><li>security</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>Before choosing storage, an enterprise works out what it must store, who needs to reach it, where it will be kept and how it will be protected. These four requirements shape every decision.</p>
+
+          <h3>Capacity</h3>
+          <p><strong>Capacity</strong> is how much data the enterprise must store now and in the future. Estimate current data, growth per year, backups and headroom. Storage is measured in gigabytes (GB) and terabytes (TB).</p>
+          <div class="callout info"><strong>Worked example (illustrative figures)</strong> A regional physiotherapy practice holds 6 000 patient files averaging 25 MB each (notes, scans and letters). <ol><li>Current data = 6 000 × 25 MB = 150 000 MB = <strong>150 GB</strong>.</li><li>New patients: 800 a year × 25 MB = 20 GB a year, so five years adds <strong>100 GB</strong>, a total of <strong>250 GB</strong>.</li><li>Add 30% headroom: 250 GB × 1.3 = <strong>325 GB</strong> of primary storage.</li><li>Keep three copies (the 3-2-1 rule): 325 GB × 3 ≈ <strong>975 GB</strong>, so plan for about 1 TB in total.</li></ol></div>
+
+          <h3>Accessibility</h3>
+          <p><strong>Accessibility</strong> is how easily and reliably authorised people can reach the data. Consider:</p>
+          <ul>
+          <li><strong>Availability:</strong> the share of time the data can be reached (uptime), and what happens if a disk, server or link fails.</li>
+          <li><strong>Method of access:</strong> local network, VPN or internet; and which devices (laptops, phones, kiosks).</li>
+          <li><strong>Performance:</strong> solid-state drives are faster than hard disk drives but cost more per gigabyte; distance and bandwidth to the server affect speed.</li>
+          <li><strong>Permissions:</strong> role-based access so staff see only what they need.</li>
+          <li><strong>Usability:</strong> including access for people with a disability, and offline access when the network is down.</li>
+          </ul>
+
+          <h3>Location</h3>
+          <p>Data may be stored <strong>on premises</strong> (a server or NAS in the building), in a <strong>data centre</strong> or in the <strong>cloud</strong>, in a specific country or region. Location matters for speed (closer is faster), disaster risk (a flood that affects the office should not also destroy the backup) and <strong>law</strong>. The <strong>data sovereignty</strong> of information depends on the country where it is stored, because that country's laws apply to it. NESA's glossary also describes data sovereignty as the right of Indigenous Peoples to determine the creation, collection, ownership and application of data that is for and about Indigenous Peoples. In Australia, the Maiam nayri Wingara Indigenous Data Sovereignty Collective sets out principles for how data about Aboriginal and Torres Strait Islander Peoples should be governed. Under the Privacy Act 1988, Australian Privacy Principle 8 places responsibilities on an organisation that discloses personal information to an overseas recipient, so many Australian organisations choose cloud regions located in Australia. Government agencies often require services assessed by ASD's Information Security Registered Assessors Program (IRAP).</p>
+
+          <h3>Security</h3>
+          <p>Storage must protect the <strong>confidentiality</strong>, <strong>integrity</strong> and <strong>availability</strong> of data. Controls include:</p>
+          <ul>
+          <li><strong>Encryption</strong> at rest (on the disk) and in transit (across the network).</li>
+          <li><strong>Access control</strong> with strong authentication and least privilege.</li>
+          <li><strong>Backups</strong> and tested recovery plans.</li>
+          <li><strong>Physical security</strong> such as locked server rooms, or a cloud provider's data-centre controls.</li>
+          <li><strong>Logging and monitoring</strong> to detect unusual access.</li>
+          <li><strong>Retention and secure disposal</strong> so data is not kept longer than needed.</li>
+          </ul>
+          <p>Health, education and financial data attract particular obligations, and a breach likely to cause serious harm must be reported under the Notifiable Data Breaches scheme.</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Requirement</th><th>Key question to ask</th><th>Example decision</th></tr></thead>
+          <tbody>
+          <tr><td><strong>Capacity</strong></td><td>How much data now, and how fast is it growing?</td><td>Buy 1 TB with room to expand</td></tr>
+          <tr><td><strong>Accessibility</strong></td><td>Who needs it, from where, and how often?</td><td>Cloud storage so staff can work from home; SSD for the busiest database</td></tr>
+          <tr><td><strong>Location</strong></td><td>Where is it physically and legally held?</td><td>Keep patient records in an Australian region; store a backup off site</td></tr>
+          <tr><td><strong>Security</strong></td><td>What are the threats and the legal duties?</td><td>Encrypt, use multi-factor authentication, log access, test restores</td></tr>
+          </tbody></table>
+          </div>
+          <div class="callout assessor"><strong>Assessor tip</strong> For <em>investigate</em> questions, apply each requirement to the scenario given rather than defining it in general. If a question says the enterprise holds health data, mention both security controls <em>and</em> the legal location issue (data sovereignty).</div>
         </section>
 
         <hr class="divider" />
@@ -346,8 +615,46 @@
           <p class="syllabus-concept">📌 <em><strong>Explore</strong> cloud computing services</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>Infrastructure as a Service (IaaS)</li><li>Software as a Service (SaaS)</li><li>Platform as a Service (PaaS)</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (explore). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>What cloud computing offers</h3>
+          <p>NESA describes cloud computing as distributing computing over a network so that storage of files, processing of data and access to software occurs on interconnected server computers to which the user's device is connected. Instead of buying hardware, the enterprise rents what it needs, usually paying for what it uses. Benefits include lower upfront cost, <strong>scalability</strong> (add or remove capacity on demand) and access from anywhere. Risks include dependence on the provider and internet, ongoing subscription costs, and the need to understand where the data is held.</p>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Concept diagram</span></p>
+            <h4 class="figure-title">Who manages what?</h4>
+            <p class="figure-lead">Under IaaS, PaaS and SaaS the enterprise hands more and more of the technology stack to the provider.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="net-cloud-stack"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>Moving to the right shifts responsibility to the provider and reduces the enterprise's control.</li>
+          <li>Even with SaaS, the enterprise remains responsible for its own users, passwords and data.</li>
+          <li>This is the "shared responsibility" idea used by cloud providers.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>A school moves its email from a server in its own comms room to a hosted email service. Which column does it move from, and to?</p>
+          </div>
+          </figure>
+
+          <h3>Infrastructure as a Service (IaaS)</h3>
+          <p>The provider supplies the basic computing infrastructure: virtual servers, storage and networks. The customer chooses the operating system and installs and maintains their own software. It is the most flexible model and needs the most technical skill. It suits an enterprise that wants to move existing servers to the cloud or needs a custom environment.</p>
+
+          <h3>Platform as a Service (PaaS)</h3>
+          <p>The provider supplies a ready-to-use platform including the operating system, runtime, databases and development tools, so developers deploy their own code without managing servers. It suits software teams who want to build and scale web apps and APIs quickly.</p>
+
+          <h3>Software as a Service (SaaS)</h3>
+          <p>The provider runs a complete application that users access through a browser or app, usually on a subscription. The provider handles updates, servers and security of the platform. It suits common needs such as email, accounting, customer records and video meetings.</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th></th><th>IaaS</th><th>PaaS</th><th>SaaS</th></tr></thead>
+          <tbody>
+          <tr><td><strong>You get</strong></td><td>Virtual servers, storage, networking</td><td>A platform to build and run apps</td><td>A finished application</td></tr>
+          <tr><td><strong>You manage</strong></td><td>Operating system, runtime, apps, data</td><td>Your app and data</td><td>Your users, settings and content</td></tr>
+          <tr><td><strong>Typical users</strong></td><td>IT administrators</td><td>Software developers</td><td>Everyday staff and students</td></tr>
+          <tr><td><strong>Control and flexibility</strong></td><td>Highest</td><td>Medium</td><td>Lowest</td></tr>
+          <tr><td><strong>Examples</strong></td><td>Amazon EC2 and Microsoft Azure Virtual Machines, both available in Sydney regions; Macquarie Cloud Services (Australian provider)</td><td>Azure App Service, Google App Engine, AWS Elastic Beanstalk</td><td>Microsoft 365, Google Workspace, MYOB, Atlassian Jira, Canva (the last three are Australian-founded)</td></tr>
+          </tbody></table>
+          </div>
+          <div class="callout info"><strong>Scenario</strong> A farm co-op needs (a) a place to run its legacy stock-control program that needs a particular Windows Server, (b) a way to publish a new online ordering app, and (c) email and calendars for 40 members. Best fits: (a) <strong>IaaS</strong>, because the co-op needs control of the operating system; (b) <strong>PaaS</strong>, so the developer focuses on code and not servers; (c) <strong>SaaS</strong>, because email is a standard service that needs no customisation.</div>
+          <div class="callout assessor"><strong>Assessor tip</strong> Multiple-choice items usually give a scenario and ask which model applies. Ask: <em>who is managing the operating system and application?</em> If it is the customer, think IaaS; if the customer manages only code, PaaS; if the customer only uses the finished product, SaaS.</div>
         </section>
 
         <hr class="divider" />
@@ -358,8 +665,33 @@
           <p class="syllabus-concept">📌 <em><strong>Compare</strong> different types of cloud-based data storage in terms of access and services</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>public cloud</li><li>private cloud</li><li>hybrid cloud</li><li>non-cloud on premises</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (compare). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>The four options are compared on <strong>access</strong> (who can reach the storage and how) and <strong>services</strong> (what the provider offers, such as self-service, scaling and management).</p>
+
+          <h3>Public cloud</h3>
+          <p>Storage and services are owned by a provider and shared by many customers over the internet (Google Drive, Microsoft OneDrive, Dropbox, Amazon S3). Anyone with an account and internet access can use it, usually with a subscription or pay-as-you-go pricing. Capacity scales quickly, and the provider maintains the hardware. The trade-offs are less control over where and how data is handled, and shared infrastructure that some regulations do not allow for the most sensitive data.</p>
+
+          <h3>Private cloud</h3>
+          <p>Cloud-style infrastructure used by <strong>one organisation only</strong>, either in its own data centre or hosted for it by a provider. Access is through the organisation's own network or a VPN. It offers self-service and scaling within the capacity the organisation buys, with greater control over security, location and compliance, but at higher cost and needing skilled staff.</p>
+
+          <h3>Hybrid cloud</h3>
+          <p>A mix of private (or on-premises) and public cloud, connected so data and applications can move between them. A hospital might keep patient records on a private system and use public cloud for research computation on de-identified data, or a business might use public cloud for backups and extra capacity during busy periods. Hybrid gives flexibility but adds complexity, since two environments must be secured and managed together.</p>
+
+          <h3>Non-cloud on premises</h3>
+          <p>Servers and storage (for example, a NAS) owned and operated inside the organisation's building, accessed over its local network. The organisation has full control and can work offline, but pays for hardware, power, cooling and staff, must plan capacity in advance, and must protect against fire, theft and hardware failure itself. It usually does not offer on-demand self-service scaling.</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th></th><th>Public cloud</th><th>Private cloud</th><th>Hybrid cloud</th><th>Non-cloud on premises</th></tr></thead>
+          <tbody>
+          <tr><td><strong>Owned and run by</strong></td><td>Provider, shared by many</td><td>One organisation (or dedicated hosting for it)</td><td>Both</td><td>The organisation</td></tr>
+          <tr><td><strong>Access</strong></td><td>Internet, from anywhere</td><td>Private network or VPN</td><td>Internet and private network</td><td>Local network (VPN for remote)</td></tr>
+          <tr><td><strong>Services</strong></td><td>Self-service, elastic scaling, managed backups</td><td>Self-service within its own capacity</td><td>Burst to public cloud when busy</td><td>Fixed capacity; manual changes</td></tr>
+          <tr><td><strong>Cost pattern</strong></td><td>Ongoing, by use</td><td>High upfront and running</td><td>Mixed</td><td>Upfront hardware plus running costs</td></tr>
+          <tr><td><strong>Control</strong></td><td>Lowest</td><td>High</td><td>Medium to high</td><td>Highest</td></tr>
+          <tr><td><strong>Good for</strong></td><td>Collaboration, start-ups, variable demand</td><td>Regulated or sensitive data</td><td>Mixed sensitivity and demand</td><td>Small sites, low latency, offline needs</td></tr>
+          </tbody></table>
+          </div>
+          <div class="callout info"><strong>Scenario</strong> A regional GP clinic must keep patient records private and available during internet outages, but wants cheap off-site backups. A sensible choice is <strong>hybrid</strong>: keep the active records on a server in the clinic (on premises), and copy encrypted backups to a public cloud region in Australia.</div>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Compare</em> needs similarities and differences on the same criteria. Use the two criteria the dot point names, access and services, and do not just describe each type separately. End with which type suits the scenario and why.</div>
         </section>
 
         <div class="quiz" data-quiz="net-2"></div>
@@ -373,8 +705,8 @@
         </div>
 
         <aside class="yr11 topic-breakout subtopic-breakout" aria-label="Part introduction">
-          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
-          <p>This part covers 10 NESA dot points: network architecture and infrastructure.</p>
+          <p>This is the biggest part: the infrastructure, cables and radio links that carry data, what interferes with them, how graph theory helps design better networks, how IoT devices communicate, and how to control access and secure a smart home.</p>
+          <p class="breakout-question">Why does your Wi-Fi work well in one room of your home and badly in another?</p>
         </aside>
 
         <section id="it-infrastructure">
@@ -383,8 +715,45 @@
           <p class="syllabus-concept">📌 <em><strong>Describe</strong> key components of an organisation’s information technology infrastructure</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>networking, including servers, storage and end-point devices</li><li>on-premises computing</li><li>cloud computing</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (describe). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>An organisation's <strong>information technology (IT) infrastructure</strong> is the combined hardware, software, networks and services that let it store, process and share information. NESA's list groups it into networking (including servers, storage and end-point devices), on-premises computing and cloud computing.</p>
+
+          <h3>Networking, including servers, storage and end-point devices</h3>
+          <p>A <strong>network</strong> joins devices so they can share data and resources. A <em>local area network (LAN)</em> covers a building or campus, a <em>wide area network (WAN)</em> joins sites over long distances (the internet is the largest WAN), and a <em>wireless LAN (WLAN)</em> uses Wi-Fi. Most LANs use a <strong>star topology</strong>: every device connects to a central switch or access point. Network diagrams show this structure; NESA asks for each device to be drawn as a symbol (node), joined by lines, with every device labelled.</p>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Network diagram</span></p>
+            <h4 class="figure-title">NESA's network diagram example</h4>
+            <p class="figure-lead">A router links the internet to two hubs and a wireless device; NESA's notation uses labelled symbols joined by dotted lines.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="spec-network"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>Every device is labelled. Different software packages draw the icons differently, but the labels and connections must be clear.</li>
+          <li>The router connects the whole network to the internet.</li>
+          <li>Hubs and switches share the connection between wired devices; the wireless device links a phone and a laptop.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>Label the devices you own at home in the same style: which one is the router, and which devices connect wirelessly?</p>
+          </div>
+          </figure>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Component</th><th>Role</th><th>Examples</th></tr></thead>
+          <tbody>
+          <tr><td><strong>Network devices</strong></td><td>Connect devices and carry data between networks</td><td>Router, switch, wireless access point, firewall, modem or nbn connection box</td></tr>
+          <tr><td><strong>Servers</strong></td><td>Computers that provide services to other devices (clients)</td><td>File server, print server, email server, database server, web server, directory (login) server</td></tr>
+          <tr><td><strong>Storage</strong></td><td>Holds data and backups</td><td>Direct-attached drives, network-attached storage (NAS, shares files over the network), storage area network (SAN, provides block storage to servers), cloud storage</td></tr>
+          <tr><td><strong>End-point devices</strong></td><td>Where people use the network</td><td>Desktops, laptops, tablets, smartphones, printers, point-of-sale terminals, IoT sensors</td></tr>
+          <tr><td><strong>Cabling and links</strong></td><td>Physical and wireless connections</td><td>Ethernet (twisted pair), fibre, Wi-Fi, the internet service provider (ISP) link</td></tr>
+          </tbody></table>
+          </div>
+          <p>A <strong>server</strong> provides a service and a <strong>client</strong> requests it: this is the <em>client-server</em> model. End-point devices are the most numerous and the most exposed part of the network, so organisations manage them with security software and policies, including for <em>bring your own device (BYOD)</em> arrangements.</p>
+
+          <h3>On-premises computing</h3>
+          <p>With <strong>on-premises</strong> computing, the organisation owns and runs its servers and network equipment in its own building or data room. It controls everything and can keep working without the internet, but must buy hardware up front, provide power, cooling, an uninterruptible power supply (UPS) and physical security, and employ staff to maintain and upgrade it.</p>
+
+          <h3>Cloud computing</h3>
+          <p>With <strong>cloud computing</strong>, some or all of the infrastructure is rented from a provider (see the cloud services section). The organisation still needs its own LAN, Wi-Fi, end-point devices and a good internet connection. Many organisations use a mix, for example an on-premises file server plus cloud email.</p>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Describe</em> asks for characteristics. For each component, state what it is <em>and</em> its role, with an example. If you draw a network diagram, label every device and connection.</div>
         </section>
 
         <hr class="divider" />
@@ -394,8 +763,64 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-01, EC-11-08)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Describe</strong> how transmission media is used in networks</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (describe). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p><strong>Transmission media</strong> are the physical paths, or the airwaves, that carry signals between devices. They are grouped into <em>guided</em> (wired) media and <em>wireless</em> (unguided) media.</p>
+
+          <h3>Wired media</h3>
+          <ul>
+          <li><strong>Twisted pair:</strong> pairs of copper wires twisted together to reduce interference. Unshielded (UTP) cable is the standard for Ethernet in buildings, and telephone lines use it too. It is cheap and easy to install, but a single Ethernet run is limited to about 100 metres.</li>
+          <li><strong>Coaxial cable:</strong> a copper core with an insulating layer, a metal shield and an outer jacket. The shield protects the signal better than twisted pair. It is used for pay-TV, antenna connections and the hybrid fibre-coaxial (HFC) nbn connections.</li>
+          <li><strong>Fibre optic:</strong> data is sent as pulses of light along glass strands. It has the highest bandwidth, loses very little signal over distance and is unaffected by electrical interference. It is used in nbn fibre connections, city and regional backbones, and the undersea cables that carry most international internet traffic. It costs more to install and needs care because the glass is fragile.</li>
+          </ul>
+
+          <h3>Wireless media</h3>
+          <ul>
+          <li><strong>Wi-Fi (IEEE 802.11):</strong> radio waves in the 2.4, 5 and (with newer standards) 6 GHz bands for wireless LANs. It offers mobility and cheap installation, but has a range of tens of metres indoors and is shared and easily disrupted.</li>
+          <li><strong>Microwave:</strong> a point-to-point radio link between two dishes with a clear line of sight. It is used to link remote towers and sites where laying cable is too costly, and to connect mobile towers to the core network.</li>
+          <li><strong>Satellite:</strong> a dish links to a satellite in space. <em>Geostationary</em> satellites orbit about 36 000 km above the equator and cover huge areas, but the long trip creates high latency (noticeable delay); nbn's Sky Muster service uses satellites like this for remote Australia. <em>Low Earth orbit (LEO)</em> satellites orbit from a few hundred kilometres up, so latency is much lower, but many satellites are needed to give continuous coverage, and users need a dish that tracks them.</li>
+          <li><strong>Cellular (3G, 4G, 5G):</strong> mobile networks divide areas into cells served by towers. <em>3G</em> introduced practical mobile data (and has now been shut down in Australia). <em>4G</em> provided mobile broadband suitable for video. <em>5G</em> adds higher capacity, lower latency and support for many more connected devices, which suits IoT and real-time uses. Coverage and speed depend on distance from the tower and the radio band used.</li>
+          <li><strong>Bluetooth:</strong> short-range radio (about 10 metres for many devices) for personal accessories such as headphones, watches and sensors. Bluetooth Low Energy uses very little power.</li>
+          </ul>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Medium</th><th>Typical use</th><th>Strengths</th><th>Limitations</th></tr></thead>
+          <tbody>
+          <tr><td><strong>Twisted pair</strong></td><td>Ethernet in offices, homes, schools</td><td>Cheap, easy to install, reliable</td><td>Limited to about 100 m; can pick up electrical interference</td></tr>
+          <tr><td><strong>Coaxial</strong></td><td>Pay-TV, HFC broadband</td><td>Better shielding, good bandwidth</td><td>Bulkier and dearer than twisted pair; shared segments slow down at peak times</td></tr>
+          <tr><td><strong>Fibre optic</strong></td><td>nbn fibre, backbones, undersea cables</td><td>Highest bandwidth, long distances, immune to electrical interference</td><td>Costly to install; fragile glass</td></tr>
+          <tr><td><strong>Wi-Fi</strong></td><td>Wireless LANs</td><td>Mobility, no cabling</td><td>Short range, shared and prone to interference</td></tr>
+          <tr><td><strong>Microwave</strong></td><td>Links between towers and remote sites</td><td>No cable to lay; fast to deploy</td><td>Needs line of sight; affected by heavy rain</td></tr>
+          <tr><td><strong>Satellite</strong></td><td>Remote regions, ships, aircraft</td><td>Coverage almost anywhere</td><td>Geostationary: high latency. LEO: needs many satellites and a tracking dish. Weather can reduce signal.</td></tr>
+          <tr><td><strong>Cellular (3G to 5G)</strong></td><td>Mobile phones, IoT, fixed wireless</td><td>Wide coverage, mobility</td><td>Speed varies with distance and congestion; coverage gaps in remote areas</td></tr>
+          <tr><td><strong>Bluetooth</strong></td><td>Headphones, watches, sensors</td><td>Low power, cheap, simple pairing</td><td>Very short range, low data rate</td></tr>
+          </tbody></table>
+          </div>
+
+          <h3>Choosing a medium</h3>
+          <p>Selection depends on <strong>distance</strong>, <strong>bandwidth</strong> needed, <strong>cost</strong>, <strong>mobility</strong>, <strong>interference</strong> and <strong>security</strong>. The decision tree below shows a simplified way to choose. Real designs often combine media: fibre from the ISP to the building, Ethernet to desktops and Wi-Fi for mobile devices.</p>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Decision tree</span></p>
+            <h4 class="figure-title">Choosing a transmission medium</h4>
+            <p class="figure-lead">A vertical decision tree in NESA's style: rectangles, labelled branches and a final action at the end of every path.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="net-dt-media"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>Mobility is the first question, because wired media cannot follow the user.</li>
+          <li>The 100 m figure is the limit for one run of twisted pair cable.</li>
+          <li>Where cable cannot be laid, radio links (microwave or satellite) take over.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>A remote cattle station needs an internet link and there is no cable and no mobile coverage. Follow the tree for two different sites and see which medium you reach.</p>
+          </div>
+          </figure>
+          <div class="video-box">
+          <div class="video-box-label"><span class="video-icon">▶</span> Watch &amp; Learn</div>
+          <ul class="video-list">
+          <li><a href="https://www.youtube.com/watch?v=ZhEf7e4kopM" target="_blank" rel="noopener">The Internet: Wires, Cables &amp; Wifi <span class="video-meta">— Code.org · 7 min</span></a></li>
+          </ul>
+          <p class="video-box-note">A short introduction to how data physically travels through cables and wireless links, useful before the interference and data-flow sections.</p>
+          </div>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Describe how transmission media is used</em>: for each medium, name the use and one feature that explains <em>why</em> it suits that use (for example, fibre suits backbones because it carries a lot of data with little loss). Know the difference between geostationary and LEO satellites.</div>
         </section>
 
         <hr class="divider" />
@@ -406,8 +831,46 @@
           <p class="syllabus-concept">📌 <em><strong>Explain</strong> factors that interfere with the transmission of data across a computer and social network</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>distance</li><li>topography</li><li>physical barriers</li><li>environmental barriers</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (explain). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>Signals rarely arrive exactly as they were sent. <strong>Interference</strong> is anything that weakens, delays or distorts a signal. NESA lists four factors, and each affects some media more than others.</p>
+
+          <h3>Distance</h3>
+          <p>As a signal travels, it loses strength. This is called <strong>attenuation</strong>. Copper cable loses signal quickly, which is why one Ethernet run is limited to about 100 metres and longer links use a switch, repeater or fibre. Radio signals spread out as they travel, so a Wi-Fi signal weakens quickly with distance. Distance also adds <strong>delay (latency)</strong>: signals to a geostationary satellite travel roughly 36 000 km each way, so the round trip takes a noticeable fraction of a second. On a social network, the same effect shows up when a platform's servers are on the other side of the world.</p>
+
+          <h3>Topography</h3>
+          <p><strong>Topography</strong> is the shape of the land: hills, valleys and mountains. Microwave links, mobile towers and satellites need a clear line of sight or a clear path, so a hill between a tower and a farm can block a signal. The curve of the Earth also limits how far apart two microwave dishes can be. This is why towers stand on high ground, why regional and rural Australia has coverage gaps, and why remote communities often depend on satellites.</p>
+
+          <h3>Physical barriers</h3>
+          <p>Walls, floors, metal, glass and water absorb or reflect radio waves. Brick, concrete and metal weaken Wi-Fi far more than plasterboard. Other equipment also interferes: microwave ovens, cordless phones and Bluetooth devices share the 2.4 GHz band with Wi-Fi, and neighbouring networks on the same channel compete for airtime. In cables, <strong>electromagnetic interference (EMI)</strong> from motors, fluorescent lights and power cables can create noise, and <strong>crosstalk</strong> occurs when signals leak between neighbouring wires (twisting the pairs and shielding help reduce both).</p>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Floor plan</span></p>
+            <h4 class="figure-title">The same house, two router positions</h4>
+            <p class="figure-lead">A router in a corner cupboard behind walls gives a weak signal in far rooms; a high, central position covers the house.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="net-wifi-placement"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>Each wall the signal passes through reduces its strength.</li>
+          <li>The router's position matters more than adding power.</li>
+          <li>The shaded rings are illustrative: real coverage depends on the building materials and the router.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>Sketch the floor plan of your home. Where would you put the router, and which walls would the signal have to pass through to reach your bedroom?</p>
+          </div>
+          </figure>
+
+          <h3>Environmental barriers</h3>
+          <p>Weather and natural conditions affect signals too. Heavy rain can weaken satellite and microwave links (<em>rain fade</em>), trees and foliage absorb some radio signals, lightning and power surges damage equipment, and flooding, fire, heat and wind can damage cables, towers and data centres. Undersea cables can be cut by anchors, landslides or volcanic activity. In January 2022 an eruption near Tonga damaged the submarine cable that connected the country to the internet, cutting most of its international connection for several weeks. Networks reduce the risk by using diverse routes and backup links.</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Factor</th><th>Example</th><th>Most affects</th><th>Common response</th></tr></thead>
+          <tbody>
+          <tr><td><strong>Distance</strong></td><td>Ethernet run over 100 m; far corner of a large house</td><td>Copper cable, Wi-Fi, satellite delay</td><td>Fibre, switches or repeaters, more access points</td></tr>
+          <tr><td><strong>Topography</strong></td><td>Hill blocks a microwave link</td><td>Microwave, mobile, satellite</td><td>Higher towers, relay sites, different route</td></tr>
+          <tr><td><strong>Physical barriers</strong></td><td>Concrete wall; microwave oven; crowded Wi-Fi channel</td><td>Wi-Fi, Bluetooth, unshielded cable</td><td>Reposition; use 5 GHz; choose a clear channel; shielded cable</td></tr>
+          <tr><td><strong>Environmental barriers</strong></td><td>Storm, flood, bushfire, submarine cable damage</td><td>Satellite, microwave, cables, equipment</td><td>Diverse routes, protective housing, backup links</td></tr>
+          </tbody></table>
+          </div>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Explain</em> means to give the cause and the effect. Do not just write "walls block Wi-Fi": say that materials such as concrete absorb radio waves, so the signal weakens and the data rate drops. Link each factor to a named medium to earn the mark.</div>
         </section>
 
         <hr class="divider" />
@@ -418,8 +881,56 @@
           <p class="syllabus-concept">📌 <em><strong>Investigate</strong> ways to improve data flow within a system, considering proximity and modes of connectivity</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>size, location and power of antennae when using satellite and microwave</li><li>traffic filtering</li><li>flow scheduling and traffic monitoring on telecommunications, including wireless broadband for mobile devices (3G→), Bluetooth and wi-fi</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>Good design considers <strong>proximity</strong> (how far the data has to travel) and the <strong>mode of connectivity</strong> (wired, Wi-Fi, cellular, satellite). Moving devices closer, or from wireless to wired, often gives the biggest improvement. The techniques below improve the flow of data when the medium is already chosen.</p>
+
+          <h3>Size, location and power of antennae (satellite and microwave)</h3>
+          <ul>
+          <li><strong>Size:</strong> a larger dish or antenna gathers more of the weak signal and focuses it into a narrower beam. This increases <em>gain</em> and improves reliability and speed, but a narrow beam must be aimed accurately.</li>
+          <li><strong>Location:</strong> mount the antenna high, with a clear line of sight and away from trees, buildings and hills, and keep the cable between the antenna and equipment short. A satellite dish must also point at the correct part of the sky.</li>
+          <li><strong>Power:</strong> a higher transmit power extends range and overcomes weak signals, but uses more energy, can interfere with other services, and is regulated. In Australia the Australian Communications and Media Authority (ACMA) sets limits on radio equipment and licences.</li>
+          </ul>
+
+          <h3>Traffic filtering</h3>
+          <p><strong>Traffic filtering</strong> means allowing only wanted data through. A firewall or router applies rules based on addresses, ports and protocols, and can block unwanted or harmful traffic, such as unused services or known malicious sites. Content and DNS filters block categories of sites. Filtering improves flow by keeping unnecessary traffic off the network and improves security.</p>
+
+          <h3>Flow scheduling and traffic monitoring</h3>
+          <p><strong>Flow scheduling</strong> decides when and in what order data is sent. <strong>Quality of Service (QoS)</strong> rules give priority to time-sensitive traffic such as voice and video calls over bulk downloads, and <em>traffic shaping</em> limits how much bandwidth a low-priority service can use. Large jobs, such as cloud backups and software updates, can be scheduled for overnight. On mobile networks, the tower's scheduler shares radio time between many phones; Wi-Fi devices take turns on a channel.</p>
+          <p><strong>Traffic monitoring</strong> measures what is happening so problems can be found and fixed. Useful measures are <em>utilisation</em> (how full the link is), <em>throughput</em>, <em>latency</em>, <em>jitter</em> (variation in delay) and <em>packet loss</em>. Tools include the router's usage dashboard, speed tests, <code>ping</code> and <code>traceroute</code> (which show delay and where a path breaks), and packet analysers such as Wireshark. A baseline of normal performance makes unusual patterns easy to spot.</p>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Animated diagram</span></p>
+            <h4 class="figure-title">Data packets: split up, sent separately, reassembled</h4>
+            <p class="figure-lead">Choose the journey with a lost packet to see how the receiver notices a gap and asks for it again.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--anim">
+            <div class="anim" data-anim="packets"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>Each packet may take a different route, so congestion on one route does not stop the whole message.</li>
+          <li>Missing sequence numbers reveal packet loss, one of the measures traffic monitoring reports.</li>
+          <li>Packets can arrive out of order, so latency and jitter matter for live video.</li></ul><p class="figure-controls">Choose a journey with the tabs. Step with ◀ and ▶ (or the arrow keys), play or pause with Space.</p></div>
+            <p class="figure-try"><strong>Try this</strong>Which of the monitoring measures (latency, jitter, packet loss) would show the problem in the lost-packet journey?</p>
+          </div>
+          </figure>
+
+          <h3>Wireless broadband, Bluetooth and Wi-Fi</h3>
+          <ul>
+          <li><strong>Wireless broadband for mobile devices (3G to 5G):</strong> each generation increased capacity. Better flow comes from newer standards, using more or wider radio channels, more antennas at the tower and phone, smaller cells with fewer users each, and moving closer to the tower or to an outdoor antenna.</li>
+          <li><strong>Bluetooth:</strong> keep devices close, avoid obstacles, and reduce clashes with Wi-Fi. Bluetooth hops between channels to avoid busy ones.</li>
+          <li><strong>Wi-Fi:</strong> choose a clear channel, use the 5 GHz band for speed at short range and 2.4 GHz for range, place access points centrally, add access points or a mesh system in large buildings, and connect fixed devices such as TVs and desktops by cable to free up airtime.</li>
+          </ul>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Problem</th><th>Technique</th><th>Why it helps</th></tr></thead>
+          <tbody>
+          <tr><td>Video calls stutter while backups run</td><td>QoS priority for calls; schedule backups overnight</td><td>Time-sensitive traffic goes first; bulk transfers avoid busy times</td></tr>
+          <tr><td>Weak signal on a microwave link</td><td>Larger dish, better aim, higher mounting</td><td>Increases gain and clears obstructions</td></tr>
+          <tr><td>Slow Wi-Fi in a busy apartment block</td><td>Change channel; move to 5 GHz; cable the fixed devices</td><td>Avoids crowded channels and frees airtime</td></tr>
+          <tr><td>Network slows because of unwanted traffic</td><td>Firewall and DNS filtering</td><td>Blocks unneeded and harmful traffic</td></tr>
+          <tr><td>Intermittent drops nobody can explain</td><td>Monitor latency, jitter and packet loss over time</td><td>Shows when and where the fault occurs</td></tr>
+          </tbody></table>
+          </div>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Investigate</em> questions in this area often provide a scenario, such as a regional office with a slow satellite link. Choose techniques that fit the medium named and explain how each improves flow. Do not suggest fibre if the scenario says cable cannot be laid.</div>
         </section>
 
         <hr class="divider" />
@@ -430,8 +941,101 @@
           <p class="syllabus-concept">📌 <em><strong>Investigate</strong> the application of graph theory and network theory in the design of optimised computer networks</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>adjacency</li><li>centrality</li><li>connectedness</li><li>weighted graphs</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>Graph theory helps network designers because a computer network <em>is</em> a graph: devices are nodes and cables or wireless links are edges. The same measures used for social networks (adjacency, centrality and connectedness) apply, and <em>weights</em> on the edges let designers compare routes. NESA's notation for graphs uses circles for nodes and straight lines for links, with labels on the links.</p>
+
+          <h3>Adjacency</h3>
+          <p>Two nodes are adjacent when a link joins them directly. The adjacency matrix below records the network in the figure: the number in each cell is the cable length in metres, and 0 means there is no direct cable. The matrix is symmetrical because each cable works both ways. Adjacency tells the designer which devices need a port on which switch, and how many ports each device needs.</p>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Weighted graph</span></p>
+            <h4 class="figure-title">Cable lengths between five sites</h4>
+            <p class="figure-lead">Each line is a cable and its weight is its length in metres. Weights turn 'is there a link?' into 'how good is the link?'.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="graph-weights"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>Site C is adjacent to every other site, so it has the highest degree.</li>
+          <li>Weights can stand for distance, cost, delay or the inverse of bandwidth.</li>
+          <li>There is more than one route from A to E, so the designer must compare them.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>Which node has the most links? What single cable could you add so that A and E are joined directly, and would it be shorter than the current best route?</p>
+          </div>
+          </figure>
+          <div class="table-wrap">
+          <table>
+          <caption>Weighted adjacency matrix (metres of cable)</caption>
+          <thead><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr></thead>
+          <tbody>
+          <tr><th>A</th><td>0</td><td>40</td><td>25</td><td>0</td><td>0</td></tr>
+          <tr><th>B</th><td>40</td><td>0</td><td>15</td><td>30</td><td>0</td></tr>
+          <tr><th>C</th><td>25</td><td>15</td><td>0</td><td>20</td><td>45</td></tr>
+          <tr><th>D</th><td>0</td><td>30</td><td>20</td><td>0</td><td>10</td></tr>
+          <tr><th>E</th><td>0</td><td>0</td><td>45</td><td>10</td><td>0</td></tr>
+          </tbody></table>
+          </div>
+
+          <h3>Centrality</h3>
+          <p>Centrality shows which devices matter most. <strong>Degree centrality</strong> counts the links: in this graph A has 2, B has 3, C has 4, D has 3 and E has 2, so C is the most central. In network design, a highly central node is a natural place for a core switch or server, but also a <em>single point of failure</em>: if C fails, every route through it is lost. <strong>Betweenness centrality</strong> shows which node carries the most shortest-path traffic, so it needs the highest-capacity links. <strong>Closeness centrality</strong> shows which node has the shortest total distance to all the others, which suits a server that everyone must reach quickly.</p>
+
+          <h3>Connectedness</h3>
+          <p>A network must be <strong>connected</strong>, so every device can reach every other. A <strong>disconnected</strong> graph has separate components that cannot communicate. Designers add <strong>redundant links</strong>, so that if one cable fails there is still a path. A graph that contains cycles (like A-B-C above) has redundancy; a tree, which has no cycles, has none, and cutting any link disconnects part of the network.</p>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Graph</span></p>
+            <h4 class="figure-title">Connected and disconnected graphs</h4>
+            <p class="figure-lead">On the left every node is reachable, and a path from P to T is highlighted. On the right, no path joins the two components.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="net-graph-connected"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>A path is a sequence of links; the highlighted path P, Q, S, T has three links.</li>
+          <li>The right-hand graph has two components: {U, V, W} and {X, Y}.</li>
+          <li>Adding any link between the components joins them into one.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>Which single link could you add on the right so the whole graph becomes connected?</p>
+          </div>
+          </figure>
+
+          <h3>Weighted graphs and the shortest path</h3>
+          <p>A <strong>weighted graph</strong> attaches a number to each edge. Routers use link costs to choose routes; the OSPF routing protocol, for example, applies Dijkstra's shortest path first algorithm. The worked example below finds the shortest cabling route from A to E by hand. <strong>Dijkstra's algorithm</strong> keeps a table of the best-known distance to each node and repeatedly finalises the closest unfinished node.</p>
+          <ol>
+          <li>Set A = 0 and all other distances to ∞ (unknown).</li>
+          <li>Finalise the nearest unfinished node, then update its neighbours: if (its distance + link weight) is less than a neighbour's current distance, replace it.</li>
+          <li>Repeat until the destination is finalised, then trace back through the nodes that gave each best distance.</li>
+          </ol>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Step</th><th>Finalise</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>What changed</th></tr></thead>
+          <tbody>
+          <tr><td>1</td><td>A (0)</td><td><strong>0</strong></td><td>40</td><td>25</td><td>∞</td><td>∞</td><td>B = 0 + 40, C = 0 + 25</td></tr>
+          <tr><td>2</td><td>C (25)</td><td>0</td><td>40</td><td><strong>25</strong></td><td>45</td><td>70</td><td>D = 25 + 20 = 45, E = 25 + 45 = 70. B via C is 25 + 15 = 40, no improvement.</td></tr>
+          <tr><td>3</td><td>B (40)</td><td>0</td><td><strong>40</strong></td><td>25</td><td>45</td><td>70</td><td>D via B is 40 + 30 = 70, worse than 45, so no change</td></tr>
+          <tr><td>4</td><td>D (45)</td><td>0</td><td>40</td><td>25</td><td><strong>45</strong></td><td>55</td><td>E via D is 45 + 10 = 55, better than 70</td></tr>
+          <tr><td>5</td><td>E (55)</td><td>0</td><td>40</td><td>25</td><td>45</td><td><strong>55</strong></td><td>Destination finalised</td></tr>
+          </tbody></table>
+          </div>
+          <p>Tracing back from E: E was reached from D, D from C and C from A, so the shortest route is <strong>A → C → D → E = 25 + 20 + 10 = 55 m</strong>. The direct-looking route A → C → E costs 70 m, and A → B → D → E costs 80 m.</p>
+          <div class="callout info"><strong>Extension: the cheapest way to cable everything</strong> A <em>minimum spanning tree</em> connects all nodes with the least total weight and no cycles. Adding the shortest cables first, and skipping any that create a cycle, gives D–E (10), B–C (15), C–D (20) and A–C (25): a total of <strong>70 m</strong> for five sites, compared with 185 m if every cable were installed. It is cheapest but has no redundancy, so real designs add a few extra links. (This technique is beyond the NESA dot points but shows why weights matter.)</div>
+
+          <h3>Try it: the campus network lab</h3>
+          <p>Use the tool below to test the ideas on a bigger graph. Pick two buildings, cut cables and watch the shortest path, the centrality measures and the connectedness change. The step table follows the same steps as the hand-worked example.</p>
+          <figure class="figure figure--lab">
+          <figcaption class="figure-head">
+          <p class="figure-kicker"><span class="figure-kind">Interactive</span></p>
+          <h4 class="figure-title">Campus network lab</h4>
+          <p class="figure-lead">Seven buildings joined by cables; each weight is a cable length in metres.</p>
+          </figcaption>
+          <div class="net-lab" id="net-lab"><noscript>This interactive needs JavaScript. The hand-worked example above shows the same method.</noscript></div>
+          <div class="figure-notes">
+          <div><h5>What to notice</h5><ul>
+          <li>Cut the cable D–E. The shortest path from A to G changes; which route does it use, and how much longer is it?</li>
+          <li>Turn on "Size nodes by degree". Is the node with the highest degree also the one with the highest betweenness?</li>
+          <li>Cut cables until the graph splits. Closeness becomes n/a because it is only defined for a connected graph.</li>
+          </ul></div>
+          <p class="figure-try"><strong>Try this</strong>What is the smallest set of cables whose failure would cut a building off from the campus? Which buildings need the fewest cables to fail? (Hint: look at each building's degree.)</p>
+          </div>
+          </figure>
+          <div class="callout assessor"><strong>Assessor tip</strong> Expect to be given a small weighted graph and asked to identify the shortest path and its total weight, or to identify the node with the highest degree. Show your working (a table like the one above). Use the words <em>node</em>, <em>link</em> or <em>edge</em>, and <em>weight</em>, and be ready to explain in one sentence why the answer matters to a network designer, for example, choosing the cheapest route or finding a single point of failure.</div>
         </section>
 
         <hr class="divider" />
@@ -441,8 +1045,42 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-01, EC-11-06)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Explore</strong> device interoperability within an Internet of Things (IoT) based enterprise network, including supervisory control and data acquisition (SCADA)</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (explore). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <h3>What interoperability means</h3>
+          <p><strong>Interoperability</strong> is the ability of devices and systems from different manufacturers to work together and exchange data without special effort. In a home, it means a light bulb from one brand, a speaker from another and a hub from a third can be controlled from one app. In an enterprise, it means sensors, controllers, software and cloud services that were bought at different times can share data. IoT devices often fail to interoperate because they use different radio technologies, different messaging protocols, different data formats and different cloud accounts.</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Barrier</th><th>Example</th><th>Approach</th></tr></thead>
+          <tbody>
+          <tr><td><strong>Proprietary protocols and ecosystems</strong></td><td>A sensor that only works with its maker's app</td><td>Open standards, published APIs</td></tr>
+          <tr><td><strong>Different radios</strong></td><td>Zigbee sensor and Wi-Fi hub cannot talk directly</td><td>Gateways or hubs that translate</td></tr>
+          <tr><td><strong>Different data formats</strong></td><td>One device reports temperature in °C as text, another in °F as a number</td><td>Common data models such as JSON with agreed field names and units</td></tr>
+          <tr><td><strong>Different firmware and versions</strong></td><td>An update breaks compatibility</td><td>Testing, certification and version management</td></tr>
+          <tr><td><strong>Security differences</strong></td><td>One weak device exposes the network</td><td>Common baseline security requirements</td></tr>
+          </tbody></table>
+          </div>
+          <p>The <strong>Matter</strong> standard from the Connectivity Standards Alliance was created to reduce these problems in smart homes: certified devices can work with different brands' ecosystems and can be controlled locally on the home network over Wi-Fi, Thread or Ethernet. In industry, <strong>OPC UA</strong> and <strong>Modbus</strong> are widely used standards for connecting machines and controllers.</p>
+
+          <h3>Supervisory control and data acquisition (SCADA)</h3>
+          <p><strong>SCADA</strong> systems monitor and control industrial and infrastructure processes spread over large areas, such as water supply, electricity, gas pipelines, railways and factories. Sensors and actuators at each site are controlled by a <strong>programmable logic controller (PLC)</strong> or <strong>remote terminal unit (RTU)</strong>. A communications network carries data to a <strong>SCADA server</strong> at the control centre, where operators use a <strong>human-machine interface (HMI)</strong> to see live readings and alarms and to send commands. A <strong>historian</strong> database stores the readings.</p>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Concept diagram</span></p>
+            <h4 class="figure-title">The parts of a SCADA system</h4>
+            <p class="figure-lead">Readings travel up to the control centre; commands and set-points travel back down.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="net-scada"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>The PLC or RTU keeps controlling the site even if the link to the control centre is lost.</li>
+          <li>Field devices from different manufacturers only work together if they share a protocol, which is why interoperability matters in SCADA.</li>
+          <li>The historian allows trends to be analysed, for example by machine learning.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>A water utility has 200 pump stations in remote areas. Which media from the transmission media section might link them to the control centre?</p>
+          </div>
+          </figure>
+          <p><strong>SCADA and IoT</strong> overlap. Traditional SCADA runs on private networks with strict reliability and equipment that can last decades. IoT adds many more, cheaper, internet-connected devices and cloud analytics. Connecting the two (often called the industrial IoT) brings efficiency but exposes systems that were not designed for the internet to cyber attack. Critical infrastructure operators in Australia have obligations under the <em>Security of Critical Infrastructure Act 2018</em>.</p>
+          <div class="callout info"><strong>Case study: Maroochy Shire, Queensland</strong> In 2000, a former contractor to the Maroochy Shire Council used radio equipment and knowledge of the sewage system's controls to interfere with pumping stations, causing about 800 000 litres of raw sewage to spill into local waterways. He was later convicted. It is often cited as an early example of an attack on industrial control systems and shows why access control, monitoring and staff off-boarding matter for SCADA.</div>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Explore</em> asks you to look at an idea from several sides. Define interoperability, give one barrier and one solution, and describe SCADA's components in order (sensor, PLC or RTU, network, server, HMI). A short example, such as a water utility, makes the answer concrete.</div>
         </section>
 
         <hr class="divider" />
@@ -452,8 +1090,51 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-02, EC-11-06)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Investigate</strong> communication protocols between devices in an Internet of Things (IoT) network</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>A <strong>protocol</strong> is a set of agreed rules for exchanging data. IoT networks use several protocols working together at different levels: <em>radio and network protocols</em> that carry data between nearby devices, <em>messaging protocols</em> that structure the data, and <em>interoperability standards</em> that let different brands cooperate.</p>
+
+          <h3>Messaging and application protocols</h3>
+          <ul>
+          <li><strong>MQTT</strong> (Message Queuing Telemetry Transport): a lightweight <em>publish/subscribe</em> protocol. Devices <strong>publish</strong> messages to named <strong>topics</strong> on a central <strong>broker</strong>, and other devices or applications <strong>subscribe</strong> to the topics they need. It runs over TCP (port 1883, or 8883 with TLS) and has three levels of delivery guarantee (quality of service 0, 1 and 2). It suits sensors on unreliable links.</li>
+          <li><strong>CoAP</strong> (Constrained Application Protocol): a lightweight, web-like protocol for very small devices. It uses the same request types as HTTP (GET, POST, PUT, DELETE) but runs over UDP (port 5683) with less overhead, and can be secured using DTLS.</li>
+          <li><strong>HTTP/HTTPS:</strong> the protocol of the web, based on requests and responses. It is well understood and works with existing tools and APIs, but its headers are larger and it is heavier for tiny battery-powered devices. Devices often use HTTPS to talk to cloud services.</li>
+          </ul>
+          <div class="code-block"><pre><code class="language-text">MQTT example: a soil sensor publishes to a topic; the irrigation controller subscribes.
+
+          topic:    farm/paddock3/soil/moisture
+          payload:  {"value": 23.4, "unit": "%"}
+          QoS:      1  (delivered at least once)
+
+          Subscriber:  farm/paddock3/soil/#     (# matches every sub-topic)</code></pre></div>
+
+          <h3>Radio and network protocols</h3>
+          <ul>
+          <li><strong>Bluetooth Low Energy (BLE):</strong> short-range, very low power, widely built into phones and wearables; suits fitness trackers, beacons and device set-up.</li>
+          <li><strong>Zigbee:</strong> a low-power <em>mesh</em> protocol built on the IEEE 802.15.4 radio standard, used in smart lighting and sensors. Each mains-powered device can relay messages for others, extending range.</li>
+          <li><strong>Z-Wave:</strong> a low-power mesh protocol used in home automation. It works in a sub-gigahertz radio band, which avoids crowded Wi-Fi channels, and certification helps different brands work together.</li>
+          <li><strong>Thread:</strong> a low-power IPv6 mesh network built on 802.15.4. Devices get IP addresses, and border routers connect them to the home network, so the network is designed to avoid a single point of failure.</li>
+          <li><strong>LoRaWAN:</strong> a <em>low-power wide-area network (LPWAN)</em> protocol using unlicensed radio bands (in Australia, the 915-928 MHz range). It carries small messages many kilometres, which suits farm, mining and city sensors that send only a few readings each hour. Its data rate is low.</li>
+          <li><strong>Wi-Fi and cellular (including NB-IoT and LTE-M):</strong> higher data rates; cellular reaches wherever there is coverage but each device needs a subscription.</li>
+          </ul>
+
+          <h3>Interoperability standards</h3>
+          <p><strong>Matter</strong> is an application-layer standard for smart-home devices that runs over Wi-Fi, Thread and Ethernet (Bluetooth Low Energy is used for set-up). It defines a common way for a light, lock or sensor to describe itself and be controlled, regardless of brand.</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Protocol</th><th>Type</th><th>Range and power</th><th>Typical use</th></tr></thead>
+          <tbody>
+          <tr><td><strong>MQTT</strong></td><td>Messaging (publish/subscribe over TCP)</td><td>Depends on the network below it</td><td>Sensor data to a broker or cloud</td></tr>
+          <tr><td><strong>CoAP</strong></td><td>Messaging (request/response over UDP)</td><td>Suits constrained devices</td><td>Small sensors and actuators</td></tr>
+          <tr><td><strong>HTTP/HTTPS</strong></td><td>Request/response over TCP</td><td>Depends on the network</td><td>Web APIs and cloud services</td></tr>
+          <tr><td><strong>BLE</strong></td><td>Short-range radio</td><td>Short range, very low power</td><td>Wearables, phone pairing</td></tr>
+          <tr><td><strong>Zigbee</strong></td><td>Mesh radio (802.15.4)</td><td>Short range per hop; low power</td><td>Smart lighting and sensors</td></tr>
+          <tr><td><strong>Z-Wave</strong></td><td>Mesh radio (sub-GHz)</td><td>Short range per hop; low power</td><td>Home automation</td></tr>
+          <tr><td><strong>Thread</strong></td><td>IPv6 mesh (802.15.4)</td><td>Short range per hop; low power</td><td>Smart homes, as a base for Matter</td></tr>
+          <tr><td><strong>LoRaWAN</strong></td><td>Long-range, low-rate radio</td><td>Kilometres; very low power</td><td>Farm and city sensors</td></tr>
+          <tr><td><strong>Matter</strong></td><td>Application standard over Wi-Fi, Thread, Ethernet</td><td>Follows the network beneath</td><td>Cross-brand smart-home control</td></tr>
+          </tbody></table>
+          </div>
+          <div class="callout info"><strong>Scenario</strong> A farm co-op wants soil-moisture sensors across 500 hectares, with batteries that last more than a year. Wi-Fi is too short-range and cellular needs a plan per sensor. <strong>LoRaWAN</strong> carries small readings over kilometres to a gateway with one internet connection, and the gateway forwards them by <strong>MQTT</strong> to the cloud. In the farmhouse, the smart lights use <strong>Matter over Thread</strong>, and the farmer's smartwatch uses <strong>BLE</strong>.</div>
+          <div class="callout assessor"><strong>Assessor tip</strong> For <em>investigate</em> questions, compare on criteria: range, power use, data rate, and topology (mesh or star). Match each protocol to a use with a reason. Do not confuse MQTT (a messaging protocol) with Zigbee (a radio and network protocol). See the <a href="https://mqtt.org/" target="_blank" rel="noopener">MQTT site</a>, <a href="https://www.rfc-editor.org/rfc/rfc7252" target="_blank" rel="noopener">RFC 7252 (CoAP)</a> and the <a href="https://csa-iot.org/all-solutions/matter/" target="_blank" rel="noopener">Matter overview</a> for details.</div>
         </section>
 
         <hr class="divider" />
@@ -464,8 +1145,30 @@
           <p class="syllabus-concept">📌 <em><strong>Explore</strong> the benefits of interfacing machine learning (ML) with IoT</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>data-driven optimisation to enable predictive maintenance and logistics in manufacturing</li><li>data acquired from medical imaging to improve accuracy of diagnosis</li><li>improving traffic control through ML and sensors</li><li>automating soil moisture data collection to manage farm irrigation</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (explore). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p><strong>Machine learning (ML)</strong> finds patterns in data and uses them to make predictions. IoT supplies the raw material: a steady stream of sensor readings from the physical world. Together they let systems move from <em>collecting</em> data to <em>acting</em> on it. Models are usually trained in the cloud on historical data, then run either in the cloud or on an edge device close to the sensor.</p>
+
+          <h3>Predictive maintenance and logistics in manufacturing</h3>
+          <p>Sensors on machines measure vibration, temperature, current and pressure. ML learns what normal readings look like and what patterns come before a breakdown, so the factory can repair a machine <em>before</em> it fails, instead of on a fixed schedule or after a fault. This cuts unplanned downtime and waste. The same data-driven optimisation helps logistics: predicting demand, planning routes and scheduling deliveries and stock to reduce delays and costs.</p>
+
+          <h3>Medical imaging</h3>
+          <p>Imaging devices such as X-ray, CT, MRI and retinal cameras generate digital images. ML models trained on many labelled images can highlight suspicious areas, helping clinicians improve the accuracy and speed of diagnosis. Connected devices send images securely to the systems where they are analysed. Human clinicians remain responsible for the diagnosis. Risks include bias (a model trained on limited patient groups may perform less well for others), privacy, and errors. In Australia, the Therapeutic Goods Administration (TGA) regulates software used for medical purposes.</p>
+
+          <h3>Improving traffic control</h3>
+          <p>Traffic sensors, cameras and vehicle detectors report how many vehicles are waiting and moving. Adaptive signal systems, such as SCATS, which was developed in Sydney, adjust signal timing to real conditions. ML can add <em>prediction</em>, forecasting congestion and suggesting timing or routes before queues build, and can help prioritise emergency vehicles and buses. Limitations include the cost of sensors, the need for reliable communication, and privacy where cameras are used.</p>
+
+          <h3>Automating soil moisture collection for irrigation</h3>
+          <p>Soil-moisture sensors in the ground send readings over a low-power network such as LoRaWAN to a gateway. ML combines the readings with weather forecasts and crop type to decide when and how much to water, and can control valves and pumps automatically. It saves labour and water, an important benefit in Australia's dry climate, and can improve yields. Limitations are sensor calibration, connectivity in remote areas, and the cost of equipment.</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Use</th><th>IoT data</th><th>ML task</th><th>Benefit</th><th>Risk or limit</th></tr></thead>
+          <tbody>
+          <tr><td><strong>Predictive maintenance</strong></td><td>Vibration, temperature</td><td>Predict failure</td><td>Fewer breakdowns</td><td>Needs enough failure data</td></tr>
+          <tr><td><strong>Medical imaging</strong></td><td>Scans from imaging devices</td><td>Detect and classify features</td><td>Better diagnosis accuracy</td><td>Bias, privacy, clinician oversight</td></tr>
+          <tr><td><strong>Traffic control</strong></td><td>Vehicle counts, speeds</td><td>Forecast congestion, optimise signals</td><td>Shorter delays</td><td>Cost, privacy</td></tr>
+          <tr><td><strong>Farm irrigation</strong></td><td>Soil moisture, weather</td><td>Predict water need</td><td>Saves water and labour</td><td>Sensor accuracy, connectivity</td></tr>
+          </tbody></table>
+          </div>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Explore the benefits</em> means describe advantages with a reason. Use the pattern: <em>sensor data</em> &rarr; <em>what ML predicts</em> &rarr; <em>action</em> &rarr; <em>benefit</em>. Add one limitation to show balanced thinking.</div>
         </section>
 
         <hr class="divider" />
@@ -476,8 +1179,42 @@
           <p class="syllabus-concept">📌 <em><strong>Investigate</strong> security measures used to control access to networks</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>password systems</li><li>biometric measures</li><li>CAPTCHA</li><li>trusted Platform Module (TPM)</li><li>automatic software updates</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (investigate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>Access control asks two questions: <strong>who are you?</strong> (<em>authentication</em>) and <strong>what are you allowed to do?</strong> (<em>authorisation</em>). The measures below work best in combination, an approach called <em>defence in depth</em>.</p>
+
+          <h3>Password systems</h3>
+          <p>A password proves you know a secret. Systems should store only a <strong>hash</strong> of each password (a one-way scrambled value, ideally with a random <em>salt</em>), never the password itself. Good practice:</p>
+          <ul>
+          <li>Use <strong>long</strong> passwords or passphrases. The Australian Cyber Security Centre recommends a passphrase of four or more random words, because length gives more protection than clever substitutions.</li>
+          <li>Use a <strong>unique</strong> password for each account, with a <strong>password manager</strong> to remember them.</li>
+          <li>Turn on <strong>multi-factor authentication (MFA)</strong>, which adds something you have (a phone app or key) or something you are (a fingerprint).</li>
+          <li>Systems should limit login attempts, lock accounts after repeated failures and check for passwords known to have been leaked.</li>
+          </ul>
+          <div class="callout info"><strong>Worked example: why length wins</strong> An 8-character password made from the 94 printable keyboard characters has 94<sup>8</sup> ≈ 6.1 × 10<sup>15</sup> combinations. A passphrase of 4 words chosen at random from a list of 7 776 words has 7 776<sup>4</sup> ≈ 3.7 × 10<sup>15</sup> combinations, similar strength but much easier to remember. Five random words give 7 776<sup>5</sup> ≈ 2.8 × 10<sup>19</sup>, thousands of times more. The strength assumes the words are chosen randomly, not from a favourite phrase.</div>
+
+          <h3>Biometric measures</h3>
+          <p>NESA's glossary describes <strong>biometric</strong> as relating to a source of data being human or biological. Biometric authentication uses fingerprints, faces, irises or voices. Strengths: nothing to remember or lose, and it is quick. Limitations: a biometric <strong>cannot be changed</strong> if it is stolen; systems make errors (a <em>false accept</em> lets the wrong person in, a <em>false reject</em> locks out the right person); they can be fooled by spoofs (photos, copies); accuracy can vary between groups of people; and biometric information is <em>sensitive information</em> under the Privacy Act 1988, so it needs extra care. Phones typically store biometric templates on the device, not on a central server.</p>
+
+          <h3>CAPTCHA</h3>
+          <p>CAPTCHA stands for <em>Completely Automatic Public Turing Test to Tell Computers and Humans Apart</em>. It asks the user to do something that is easy for a human and harder for a program, such as choosing images, typing distorted text or ticking a box while the site analyses behaviour. It reduces automated abuse such as fake sign-ups, spam and <strong>credential stuffing</strong> (bots trying leaked passwords). Limitations: it can frustrate users, be difficult for people with vision or motor impairments unless an alternative is offered, and modern AI can solve many puzzles, so it is one layer, not a complete defence.</p>
+
+          <h3>Trusted Platform Module (TPM)</h3>
+          <p>A <strong>TPM</strong> is a dedicated security chip (or firmware equivalent) on a device's motherboard. It generates and stores cryptographic keys in hardware so they never leave the chip, can check that the device started with trusted software, and supports full-disk encryption (for example Windows BitLocker) and sign-in features such as Windows Hello. If a laptop is stolen, its drive is unreadable without the TPM and the user's credentials. Windows 11 requires TPM 2.0.</p>
+
+          <h3>Automatic software updates</h3>
+          <p>Attackers exploit known weaknesses (<em>vulnerabilities</em>) in software. Vendors release <strong>patches</strong> to fix them, so applying updates quickly closes the gap. <strong>Automatic updates</strong> remove reliance on people remembering. Patching operating systems and applications is part of the Australian Signals Directorate's <em>Essential Eight</em> mitigation strategies. The drawbacks are that an update occasionally causes problems or a restart at an inconvenient time, so organisations test updates and roll them out in stages, while home users can schedule them.</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Measure</th><th>What it protects against</th><th>Weakness</th></tr></thead>
+          <tbody>
+          <tr><td><strong>Password or passphrase</strong></td><td>Casual and guessing attacks</td><td>Reuse, phishing, weak choices</td></tr>
+          <tr><td><strong>MFA</strong></td><td>Stolen passwords</td><td>Phishing of codes; lost devices</td></tr>
+          <tr><td><strong>Biometrics</strong></td><td>Forgotten or shared passwords</td><td>Cannot be reset; spoofing; privacy</td></tr>
+          <tr><td><strong>CAPTCHA</strong></td><td>Bots and automated sign-ups</td><td>Accessibility; solvable by AI</td></tr>
+          <tr><td><strong>TPM</strong></td><td>Stolen devices; tampered start-up software</td><td>Only protects that device; needs correct set-up</td></tr>
+          <tr><td><strong>Automatic updates</strong></td><td>Exploits of known vulnerabilities</td><td>Occasional compatibility problems; unsupported devices get no updates</td></tr>
+          </tbody></table>
+          </div>
+          <div class="callout assessor"><strong>Assessor tip</strong> For <em>investigate</em> questions, pick the measure that best fits the scenario, then give a strength and a limitation. For a shared computer lab, for example, a TPM and MFA fit better than fingerprints. State what each measure <em>controls</em>: authentication (who you are), or device and software integrity. Check the Australian Cyber Security Centre (cyber.gov.au) for current guidance.</div>
         </section>
 
         <hr class="divider" />
@@ -488,8 +1225,40 @@
           <p class="syllabus-concept">📌 <em><strong>Examine</strong> data security for an intelligent home network</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>access levels, including universal plug and play (UPnP)</li><li>passwords and firewalls</li><li>port management on routers and switches</li><li>wi-fi device positioning</li><li>virtual private networks (VPNs) and hidden networks</li><li>backup and disaster recovery</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (examine). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>An <strong>intelligent (smart) home network</strong> links computers, phones, TVs, cameras, doorbells, speakers, lights and appliances through a home router. Many of these devices are low-cost, rarely updated and always on, so the network needs deliberate protection.</p>
+          <div class="callout info"><strong>Scenario</strong> A family has laptops, phones, a smart TV, two cameras, a smart doorbell, a games console and a NAS on one home network. A cheap camera with a default password is taken over, and because everything shares one network, the attacker can now try to reach the laptops and the NAS.</div>
+
+          <h3>Access levels, including universal plug and play (UPnP)</h3>
+          <p>Give each person and device only the access it needs (<em>least privilege</em>). Use a separate <strong>administrator</strong> account for the router with a strong, unique password; ordinary users should not have it. Create a <strong>guest network</strong> for visitors and a separate network for <strong>IoT devices</strong> so a compromised camera cannot reach the laptops. <strong>UPnP</strong> is a feature that lets devices ask the router to open ports automatically so that consoles, cameras and apps work without manual set-up. The convenience is a risk: malware or a poorly designed device can open ports to the internet without the user knowing. Turn UPnP off unless it is needed, and open ports manually if required.</p>
+
+          <h3>Passwords and firewalls</h3>
+          <p>Change every default password (the router's admin login, the Wi-Fi password, and each device's). Weak default passwords on IoT devices were used to build large botnets such as Mirai. Use WPA3 (or WPA2 with AES) for Wi-Fi with a long passphrase. A <strong>firewall</strong> filters traffic and blocks unsolicited connections from the internet; routers include one, and computers have their own software firewalls. Keep both switched on.</p>
+
+          <h3>Port management on routers and switches</h3>
+          <p>A <strong>port</strong> is a numbered doorway for a network service (for example, 443 for HTTPS). Open ports are places an attacker can knock. On a router, keep <strong>port forwarding</strong> to a minimum, close unused ports and disable remote administration. On a <em>managed</em> switch (common in businesses), disable unused physical ports, limit the number of devices per port and assign devices to separate virtual LANs (VLANs). A basic home switch has no such settings, so the router and access point do most of the work at home.</p>
+
+          <h3>Wi-Fi device positioning</h3>
+          <p>Placing the router centrally and high gives every room a good signal (see the interference section). It also limits how far the signal leaks outside the home, where a stranger could try to connect. Avoid placing it next to windows and metal objects. Position Wi-Fi-connected devices, such as cameras, within good range; a weak signal causes dropouts that can leave a camera or alarm offline.</p>
+
+          <h3>Virtual private networks (VPNs) and hidden networks</h3>
+          <p>A <strong>VPN</strong> creates an encrypted tunnel between your device and a VPN server, protecting data on untrusted networks such as public Wi-Fi, and letting you reach your home network remotely without opening ports for each service. A VPN does not make you anonymous or fix an insecure device, and you must trust the VPN provider. A <strong>hidden network</strong> is a Wi-Fi network with its name (SSID) not broadcast. It may deter casual visitors, but the name is still sent when devices connect, and free tools can find it, so it is not real security. Strong encryption (WPA3) and a long passphrase matter far more.</p>
+
+          <h3>Backup and disaster recovery</h3>
+          <p>Data can be lost through hardware failure, theft, fire, mistakes and ransomware. Follow the <strong>3-2-1 rule</strong> (three copies, two types of storage, one off site), automate backups, and <strong>test that a restore works</strong>. Keep a copy of router and device configurations so replacement is quick. A <strong>disaster recovery plan</strong> lists what to restore first, and how long the household or business can afford to be without it (the <em>recovery time objective</em>) and how much recent data it can afford to lose (the <em>recovery point objective</em>).</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Measure</th><th>How it helps</th><th>Limitation</th></tr></thead>
+          <tbody>
+          <tr><td>Separate IoT and guest networks</td><td>Limits the damage from one compromised device</td><td>Needs a router that supports it; some devices need to be on the main network to be controlled</td></tr>
+          <tr><td>Turn off UPnP; minimise port forwarding</td><td>Stops uncontrolled openings to the internet</td><td>Some games and apps need manual set-up</td></tr>
+          <tr><td>Strong passwords, WPA3, firewall</td><td>Blocks guessing and unsolicited connections</td><td>Older devices may not support WPA3</td></tr>
+          <tr><td>Sensible Wi-Fi positioning</td><td>Better coverage and less leakage</td><td>The signal cannot be fully confined</td></tr>
+          <tr><td>VPN</td><td>Encrypts traffic on untrusted networks</td><td>Not anonymity; provider must be trusted</td></tr>
+          <tr><td>Hidden SSID</td><td>Hides the name from casual view</td><td>Provides little real security</td></tr>
+          <tr><td>Backups and a recovery plan</td><td>Recover from loss and ransomware</td><td>Needs regular testing and an off-site copy</td></tr>
+          </tbody></table>
+          </div>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Examine</em> requires you to weigh measures. A good answer states what each measure does <em>and</em> its limitation. Watch for hidden SSIDs and MAC filtering as distractors: they are not strong protection. Answers that recommend a specific combination for the scenario score higher than lists.</div>
         </section>
 
         <div class="quiz" data-quiz="net-3"></div>
@@ -503,8 +1272,8 @@
         </div>
 
         <aside class="yr11 topic-breakout subtopic-breakout" aria-label="Part introduction">
-          <!-- CONTENT: part introduction. One short paragraph on what this part covers, then a closing question in .breakout-question. -->
-          <p>This part covers 6 NESA dot points: creating a network.</p>
+          <p>Now you build. You will design and model a network for a purpose, plan the work, configure and secure the devices, tune performance, and judge how data is protected as it travels.</p>
+          <p class="breakout-question">If you had to set up the Wi-Fi for a school club tomorrow, what is the first setting you would change, and why?</p>
         </aside>
 
         <section id="design-network">
@@ -512,8 +1281,81 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-08, EC-11-11)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Design and model</strong> a network of interconnected devices for a specific purpose</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (design). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>To <strong>design and model</strong> a network you decide what it must do, choose the devices and connections, plan how they will be addressed and secured, and represent the design in a diagram that can be checked before anything is bought. The worked example below is one you can reproduce for a school club, a small office or your own project.</p>
+          <div class="callout info"><strong>Scenario: Wattle Creek Vet Clinic</strong> A small regional veterinary clinic has 8 staff, two reception computers, a shared printer and a file server holding animal records and scanned X-rays. Staff use laptops and a tablet in the treatment rooms. Clients wait in reception and would like Wi-Fi. The clinic needs the internet for email and cloud practice-management software, and it must protect client and animal records.</div>
+
+          <h3>Step 1: Define the purpose and requirements</h3>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Requirement</th><th>Design decision</th></tr></thead>
+          <tbody>
+          <tr><td>Reliable, fast access to the file server from reception</td><td>Wired Ethernet (twisted pair) to a switch</td></tr>
+          <tr><td>Staff mobility in treatment rooms</td><td>Staff Wi-Fi access point, WPA3 with a strong passphrase</td></tr>
+          <tr><td>Clients need internet but must not reach clinic data</td><td>Separate guest Wi-Fi network with no route to the staff network</td></tr>
+          <tr><td>Records must be protected and recoverable</td><td>File server (NAS) with encrypted backups, one copy off site</td></tr>
+          <tr><td>Shared printing</td><td>Network printer with a fixed address</td></tr>
+          <tr><td>Internet access and protection</td><td>Router with firewall connected to the nbn service</td></tr>
+          <tr><td>Room to grow</td><td>Switch with spare ports; addressing plan with spare addresses</td></tr>
+          </tbody></table>
+          </div>
+
+          <h3>Step 2: Choose the topology, media and devices</h3>
+          <p>A <strong>star topology</strong> puts a central switch in the middle, with each wired device on its own cable, so a failed cable affects only one device. Wired connections use twisted pair Ethernet (each run under 100 m); wireless devices connect through access points.</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Device</th><th>Qty</th><th>Purpose</th></tr></thead>
+          <tbody>
+          <tr><td>Router with firewall</td><td>1</td><td>Connects to the internet, provides addresses (DHCP), filters traffic</td></tr>
+          <tr><td>Switch (managed, 16 ports)</td><td>1</td><td>Connects wired devices; spare ports for growth</td></tr>
+          <tr><td>Wireless access points</td><td>2</td><td>One staff network, one guest network</td></tr>
+          <tr><td>NAS file server</td><td>1</td><td>Shared records with backup</td></tr>
+          <tr><td>Reception computers</td><td>2</td><td>Wired for reliability</td></tr>
+          <tr><td>Network printer</td><td>1</td><td>Shared printing</td></tr>
+          <tr><td>Staff laptops and tablet</td><td>3</td><td>Wireless staff devices</td></tr>
+          </tbody></table>
+          </div>
+
+          <h3>Step 3: Plan the addressing</h3>
+          <p>Devices on a private network use private IP address ranges (10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16). A <code>/24</code> network has the mask 255.255.255.0 and up to 254 usable addresses. Servers and printers get fixed addresses; other devices are given addresses automatically by the router's <strong>DHCP</strong> service.</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Network</th><th>Range</th><th>Fixed addresses</th><th>DHCP pool</th></tr></thead>
+          <tbody>
+          <tr><td>Staff (wired and Wi-Fi)</td><td>192.168.10.0/24</td><td>Router .1, NAS .10, printer .20</td><td>.100 to .199</td></tr>
+          <tr><td>Guest Wi-Fi</td><td>192.168.20.0/24</td><td>Router .1</td><td>.100 to .199</td></tr>
+          </tbody></table>
+          </div>
+
+          <h3>Step 4: Model the design</h3>
+          <p>A <strong>model</strong> lets you test the design on paper or in software before building. Draw a <strong>network diagram</strong> using NESA's notation: a symbol for each device (node), lines showing how they connect, and <em>every device labelled</em>. Free simulators such as Cisco Packet Tracer or GNS3 let you build the same network virtually and test it.</p>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Network diagram</span></p>
+            <h4 class="figure-title">Wattle Creek Vet Clinic network</h4>
+            <p class="figure-lead">Wired reception devices and the NAS connect to the switch; staff and guest Wi-Fi are separate access points.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="net-office-network"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>The router and firewall sit between the internet and everything else.</li>
+          <li>The guest access point connects directly to the router, not the switch, so guests are kept apart from the staff network.</li>
+          <li>Every device is labelled, as NESA's network diagram notation asks.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>The visitor phone should not reach the file server. Which device in the diagram enforces that rule?</p>
+          </div>
+          </figure>
+
+          <h3>Step 5: Test the model and evaluate</h3>
+          <p>Walk through each requirement with a test:</p>
+          <ol>
+          <li>Can Reception computer 1 reach the NAS and printer? (It should.)</li>
+          <li>Can the visitor phone reach the NAS? (It should <em>not</em>.)</li>
+          <li>Can staff laptops and the tablet reach the internet and the NAS over Wi-Fi?</li>
+          <li>If a reception cable is unplugged, do the other devices keep working? (Yes, in a star topology.)</li>
+          <li>If the router fails, what is lost? (Internet and guest access; this single point of failure is accepted, with a spare router on the shelf.)</li>
+          </ol>
+          <p>Record the results, compare them with the requirements, and revise the design where a test fails. This cycle of design, model, test and improve is what makes a design reliable.</p>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Design and model</em> tasks reward a design that matches the stated purpose. Label every device, show connections clearly, and justify choices in one line each (for example, "reception computers are wired because they need fast, reliable access to the server"). Mention security (guest separation) and how you would test it.</div>
         </section>
 
         <hr class="divider" />
@@ -523,8 +1365,55 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-08, EC-11-09)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Apply</strong> appropriate project management tools to develop a project</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (apply). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>Building a network is a <strong>project</strong>: it has a goal, tasks, a deadline, limited resources and risks. NESA's Course Specifications describe two tools for managing a project: <strong>Gantt charts</strong> and <strong>process diaries (log books)</strong>. Other tools, such as task lists and Kanban boards, support them.</p>
+
+          <h3>Apply a Gantt chart</h3>
+          <p>A Gantt chart shows each task on an estimated timeline, with self-explanatory task names, the estimated time for each task, its dependencies, a clear dated time scale and milestones. To apply it to the network installation for the vet clinic:</p>
+          <ol>
+          <li><strong>List the tasks</strong> using self-explanatory names (survey, design, order, cable, configure, test).</li>
+          <li><strong>Estimate durations</strong> from experience or supplier advice, in working days.</li>
+          <li><strong>Identify dependencies:</strong> which tasks must finish before another can start? Equipment cannot be ordered until the design is approved.</li>
+          <li><strong>Place tasks on the timeline</strong> with a dated scale, starting each as soon as its dependencies allow. Tasks that do not depend on each other can run in parallel.</li>
+          <li><strong>Mark milestones</strong>, such as "Network live", with a diamond.</li>
+          <li><strong>Update</strong> the chart as work is done, comparing actual with estimated times.</li>
+          </ol>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Gantt chart</span></p>
+            <h4 class="figure-title">Installing the clinic network</h4>
+            <p class="figure-lead">Nine tasks over two weeks. Arrows show dependencies, the diamond is the milestone and weekends are shaded.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--still">
+            <div class="anim" data-anim="net-gantt-install"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>Tasks 4 and 5 run in parallel because they do not depend on each other; both depend on the order being placed.</li>
+          <li>The longest chain of dependent tasks sets the earliest finish date (the <em>critical path</em>). Here it runs through tasks 1, 2, 3, 5, 6, 7 and 8.</li>
+          <li>Task 4 has a day of spare time: task 7 does not start until 22 October, but cabling finishes on the 20th.</li></ul></div>
+            <p class="figure-try"><strong>Try this</strong>Task 4 (run cabling) is delayed by two days. Does the go-live date move? Check whether task 4 or task 5 is the longer path.</p>
+          </div>
+          </figure>
+          <p>NESA's style also allows allocating resources (team members' names) to tasks and showing percentage complete by shading part of each bar. Update the chart regularly so it reflects <em>actual versus estimated</em> times.</p>
+
+          <h3>Apply a process diary (log book)</h3>
+          <p>A process diary records what actually happened. NESA lists what each entry should contain: the date, the person making the entry, progress since the last entry, tasks achieved, stumbling blocks or issues and how they were managed, possible approaches for upcoming tasks, reflective comments and resources used.</p>
+          <div class="table-wrap">
+          <table>
+          <caption>Example process diary entry</caption>
+          <tbody>
+          <tr><th scope="row">Date</th><td>21 October</td></tr>
+          <tr><th scope="row">Person</th><td>Sam (network technician)</td></tr>
+          <tr><th scope="row">Progress since last entry</th><td>Router and switch configured; both cabling runs completed</td></tr>
+          <tr><th scope="row">Tasks achieved</th><td>Tasks 4 and 5 finished on schedule</td></tr>
+          <tr><th scope="row">Issues and how managed</th><td>Printer would not get its fixed address. Found a conflict with a DHCP address; moved the DHCP pool to start at .100</td></tr>
+          <tr><th scope="row">Approaches for upcoming tasks</th><td>Test Wi-Fi coverage in each treatment room before finalising the access point position</td></tr>
+          <tr><th scope="row">Reflection</th><td>Planning the address ranges first would have avoided the conflict</td></tr>
+          <tr><th scope="row">Resources used</th><td>Router admin page, cable tester, network diagram</td></tr>
+          </tbody></table>
+          </div>
+          <h3>Supporting tools</h3>
+          <p>A <strong>task list or Kanban board</strong> (Trello, Planner) shows work as cards moving from <em>To do</em> to <em>Doing</em> to <em>Done</em>, which suits day-to-day tracking. A <strong>risk list</strong> notes what could go wrong (a late delivery, a cable fault) and what you will do about it. Choose the tool for the purpose: a Gantt chart for planning time and dependencies, a process diary for recording and reflecting, and a board for daily work.</p>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Apply</em> means use the tool on the given scenario. If asked to complete a Gantt chart, use self-explanatory task names, show dependencies, a dated time scale and mark milestones as NESA describes. For process diaries, include all the listed elements in each entry.</div>
         </section>
 
         <hr class="divider" />
@@ -535,8 +1424,56 @@
           <p class="syllabus-concept">📌 <em><strong>Configure</strong> devices within a network</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>naming the device</li><li>updating the device</li><li>configuring security protocols</li><li>connecting to the internet</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (configure). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>To <strong>configure</strong> a device is to set it up so it works correctly and safely on the network. The steps below configure the clinic's router and access point, and the same order works for most small networks. Screens differ between brands, but the settings are the same.</p>
+
+          <h3>1. Naming the device</h3>
+          <p>Give each device a clear, consistent name so it can be found in a list of connected devices and in logs. Use a pattern such as <code>SITE-ROLE-NUMBER</code>: <code>WCVC-RTR-01</code> for the router, <code>WCVC-NAS-01</code> for the file server, <code>WCVC-REC-01</code> for a reception computer. Set the <strong>hostname</strong> in the device's settings. Choose a network name (<strong>SSID</strong>) that does not reveal personal information or the device model, for example <code>WattleCreekVet</code> for staff and <code>WattleCreekVet-Guest</code> for visitors.</p>
+
+          <h3>2. Updating the device</h3>
+          <ol>
+          <li>Note the current <strong>firmware</strong> version from the router's status page.</li>
+          <li>Check the manufacturer's site for a newer version, and read the release notes for security fixes.</li>
+          <li><strong>Back up</strong> the current configuration.</li>
+          <li>Download the update from the manufacturer only, apply it, and let the device restart without interruption.</li>
+          <li>Check that settings survived, and turn on automatic updates if available.</li>
+          </ol>
+          <p>Do the same for operating systems on computers and for other network devices such as access points and printers.</p>
+
+          <h3>3. Configuring security protocols</h3>
+          <ol>
+          <li>Replace the <strong>default administrator username and password</strong> with a unique, long passphrase.</li>
+          <li>Set Wi-Fi security to <strong>WPA3-Personal</strong> (or WPA2/WPA3 mixed mode if an older device needs it) with a strong passphrase. Do not use WEP or an open network.</li>
+          <li>Turn off <strong>WPS</strong> (push-button set-up), which can be attacked, and turn off <strong>UPnP</strong> and <strong>remote administration</strong> unless needed.</li>
+          <li>Enable the router's <strong>firewall</strong>.</li>
+          <li>Create the <strong>guest network</strong> and enable client isolation, so guests cannot see each other or the staff network.</li>
+          <li>Use <strong>HTTPS</strong> to reach the router's admin page.</li>
+          </ol>
+
+          <h3>4. Connecting to the internet</h3>
+          <ol>
+          <li>Connect the nbn connection box (network termination device) to the router's <strong>WAN</strong> port with an Ethernet cable, and connect the switch to a <strong>LAN</strong> port.</li>
+          <li>In the router's internet settings, choose the connection type your internet service provider (ISP) specifies. Some connections are configured automatically with DHCP; others need a username and password (PPPoE).</li>
+          <li>Set the LAN address and DHCP range from the addressing plan.</li>
+          <li>Restart and check the WAN status shows an address from the ISP.</li>
+          </ol>
+          <div class="code-block"><pre><code class="language-text">Configuration record (Wattle Creek Vet Clinic)
+          Router hostname:     WCVC-RTR-01
+          LAN address:         192.168.10.1 / 255.255.255.0
+          DHCP range:          192.168.10.100 - 192.168.10.199
+          Reserved addresses:  NAS 192.168.10.10, printer 192.168.10.20
+          Staff Wi-Fi:         SSID WattleCreekVet, WPA3-Personal
+          Guest Wi-Fi:         SSID WattleCreekVet-Guest, isolated, 192.168.20.0/24
+          Router admin:        default password changed; remote admin OFF; UPnP OFF; WPS OFF
+          Firmware:            updated, automatic updates ON
+          Backup:              configuration file saved to NAS and off-site storage</code></pre></div>
+
+          <h3>5. Test the configuration</h3>
+          <p>From a computer on the staff network, run these commands (on Windows use <code>ipconfig /all</code>; on macOS or Linux use <code>ip addr</code> or <code>ifconfig</code>):</p>
+          <div class="code-block"><pre><code class="language-text">ping 192.168.10.1      (can I reach the router?)
+          ping 1.1.1.1           (can I reach the internet by address?)
+          ping example.com       (does name lookup by DNS work?)</code></pre></div>
+          <p>If the second works but the third does not, the fault is in DNS. If the first fails, check the cable or Wi-Fi connection. Testing one step at a time locates faults quickly.</p>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Configure</em> items reward a correct sequence and specific settings, not general advice. Name the setting and the value (for example, "change the default admin password", "WPA3 with a passphrase of at least four random words"). Remember to explain <em>why</em>: default passwords are published online.</div>
         </section>
 
         <hr class="divider" />
@@ -546,8 +1483,38 @@
           <p class="outcome-subtitle">🎯 <em>(EC-11-03, EC-11-09)</em></p>
           <p class="syllabus-concept">📌 <em><strong>Implement</strong> procedures and security protocols considering cybersecurity</em></p>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (implement). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>To <strong>implement</strong> security means to put controls into practice on the network. Two kinds work together: <strong>protocols</strong> are technical rules that protect data as it moves or as devices connect, and <strong>procedures</strong> are the steps people follow. Both are needed, because the best technical protection fails if people share passwords or ignore updates.</p>
+
+          <h3>Security protocols to implement</h3>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Protocol</th><th>What it protects</th><th>Where to implement it</th></tr></thead>
+          <tbody>
+          <tr><td><strong>WPA3</strong> (or WPA2 with AES)</td><td>Encrypts Wi-Fi traffic and controls who can join</td><td>Router and access points</td></tr>
+          <tr><td><strong>TLS / HTTPS</strong></td><td>Encrypts web traffic and proves a site's identity</td><td>Websites, web-based admin pages, cloud services</td></tr>
+          <tr><td><strong>VPN (for example IPsec or WireGuard)</strong></td><td>Encrypted tunnel for remote access</td><td>Router or VPN server; staff laptops</td></tr>
+          <tr><td><strong>SSH and SFTP</strong></td><td>Encrypted remote administration and file transfer (replacing Telnet and FTP)</td><td>Servers, NAS, network equipment</td></tr>
+          <tr><td><strong>Firewall rules</strong></td><td>Allow only needed traffic</td><td>Router and device firewalls</td></tr>
+          <tr><td><strong>802.1X or network access control</strong></td><td>Authenticates each device or user before it is allowed on the network (used in larger organisations)</td><td>Switches and access points with a login server</td></tr>
+          </tbody></table>
+          </div>
+
+          <h3>Security procedures to implement</h3>
+          <ol>
+          <li><strong>Accounts:</strong> create an individual account for each person, give only the access needed (<em>least privilege</em>), turn on multi-factor authentication, and remove accounts promptly when someone leaves.</li>
+          <li><strong>Patching:</strong> update operating systems, applications and firmware on a set schedule, and automatically where possible.</li>
+          <li><strong>Backups:</strong> follow the 3-2-1 rule, and test restoring from a backup on a regular schedule.</li>
+          <li><strong>Segmentation:</strong> keep guest and IoT devices apart from staff systems.</li>
+          <li><strong>Monitoring and logging:</strong> review router and server logs for repeated failed logins or unknown devices.</li>
+          <li><strong>Acceptable use and training:</strong> staff learn to spot phishing and use strong passwords; a written policy states what is allowed.</li>
+          <li><strong>Physical security:</strong> lock the comms cabinet and server area.</li>
+          <li><strong>Incident response:</strong> agree who does what if something goes wrong. Under the Notifiable Data Breaches scheme, an organisation covered by the Privacy Act 1988 must notify affected individuals and the OAIC when a breach is likely to cause serious harm.</li>
+          </ol>
+          <p>These procedures line up with the Australian Signals Directorate's <em>Essential Eight</em>, which includes patching applications and operating systems, multi-factor authentication, restricting administrator privileges and regular backups. The Cybersecurity page of these notes covers threats, risk and legal obligations in more depth: see <a href="cybersecurity.html">Principles of Cybersecurity</a>.</p>
+
+          <h3>Check that it works</h3>
+          <p>Test each control: try to join the network with a wrong password, connect a phone to the guest network and confirm it cannot reach the NAS, restore a test file from backup, and confirm updates are switched on. Only test networks you own or have permission to test: unauthorised access to computer systems is an offence under the <em>Cybercrime Act 2001</em> (Cth).</p>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Implement</em> tasks are practical: list the specific protocols and procedures, where they are applied and how you would check them. Show that you considered cybersecurity by including access control, encryption, updates and backups, and refer to the scenario's data (for example, animal and client records).</div>
         </section>
 
         <hr class="divider" />
@@ -558,8 +1525,39 @@
           <p class="syllabus-concept">📌 <em><strong>Explore</strong> opportunities for optimising network performance</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>improving bandwidth</li><li>updating drivers and firmware</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (explore). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>A network's performance is judged by <strong>bandwidth</strong> (how much data per second the link can carry), <strong>throughput</strong> (how much actually gets through), <strong>latency</strong> (delay) and <strong>reliability</strong>. To optimise a network, measure first, find the <em>bottleneck</em> (the slowest part), change one thing, and measure again.</p>
+
+          <h3>Improving bandwidth</h3>
+          <ul>
+          <li><strong>Upgrade the internet plan or connection type:</strong> a higher nbn speed tier, or a fibre connection if available.</li>
+          <li><strong>Use wired connections</strong> for fixed devices such as desktops, servers and TVs to leave Wi-Fi capacity for mobile devices.</li>
+          <li><strong>Fix bottlenecks:</strong> a switch with slow ports, an old hub, or a cable that limits speed will limit the whole path. Replace hubs with switches, and use cables that support the speed needed.</li>
+          <li><strong>Improve Wi-Fi:</strong> use a newer Wi-Fi standard, the 5 GHz band at short range, wider channels where there is little interference, a clear channel and a better access point position.</li>
+          <li><strong>Manage traffic:</strong> prioritise voice and video with QoS, and schedule large transfers for off-peak times.</li>
+          <li><strong>Reduce the data sent:</strong> compress files and use caching, so common content is stored closer to users.</li>
+          </ul>
+
+          <h3>Updating drivers and firmware</h3>
+          <p>A <strong>driver</strong> is software that lets the operating system control a hardware device such as a network adapter. <strong>Firmware</strong> is software stored inside a device such as a router or access point. Out-of-date drivers and firmware can cause dropped connections, poor speeds, compatibility problems and security holes, and updates often add support for newer, faster standards.</p>
+          <ol>
+          <li>Identify the device and its current driver or firmware version (Device Manager on Windows; the status page on a router).</li>
+          <li>Download the update from the <strong>manufacturer's official site</strong> only.</li>
+          <li>Create a restore point or save the configuration so you can roll back.</li>
+          <li>Install the update, restart, and confirm the device works.</li>
+          <li>Test performance again and record the result.</li>
+          </ol>
+          <div class="callout info"><strong>Worked example (illustrative figures)</strong> A small office measures its Wi-Fi with a speed test before making changes. <em>Before:</em> download 45 Mbps, ping 38 ms, and video calls drop out. The technician (1) updates the access point firmware, (2) moves it from a cupboard to the hallway ceiling, (3) changes it from a crowded channel and (4) connects the two desktops by cable. <em>After:</em> download 190 Mbps, ping 12 ms, and no dropouts. The fault was mainly position and channel congestion, not the internet plan, so upgrading the plan first would have wasted money. A tool such as <code>iperf</code> can test speed inside the LAN, separate from the internet connection.</div>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Symptom</th><th>Likely cause</th><th>Try</th></tr></thead>
+          <tbody>
+          <tr><td>Fast wired, slow Wi-Fi</td><td>Interference, distance, old Wi-Fi standard</td><td>Reposition, change channel, update firmware, upgrade access point</td></tr>
+          <tr><td>All devices slow at peak times</td><td>Shared internet link is full</td><td>QoS, schedule bulk transfers, upgrade plan</td></tr>
+          <tr><td>One computer disconnects</td><td>Outdated network driver</td><td>Update the driver from the manufacturer</td></tr>
+          <tr><td>LAN file copies slow</td><td>Slow switch port or cable</td><td>Check link speed; replace cable or switch</td></tr>
+          </tbody></table>
+          </div>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Explore opportunities</em> means suggest and discuss options. Link each improvement to a cause (for example, updating a driver fixes dropouts caused by a bug) and mention that you would measure before and after to check it worked.</div>
         </section>
 
         <hr class="divider" />
@@ -570,8 +1568,66 @@
           <p class="syllabus-concept">📌 <em><strong>Evaluate</strong> the role of hardware and software related to the transmission of data</em></p>
           <ul class="syllabus-including" aria-label="Including"><li>unsecured data</li><li>encrypted data</li><li>infrastructure</li></ul>
 
-          <!-- CONTENT: explain this dot point at the depth its verb asks for (evaluate). -->
-          <p class="content-placeholder">Notes for this dot point are being written.</p>
+          <p>Data crosses a network as packets, passing through hardware and software that can protect it or leave it open. To <strong>evaluate</strong>, judge how well each option meets criteria such as security, performance, cost and reliability, and reach a supported conclusion.</p>
+
+          <h3>Unsecured data</h3>
+          <p><strong>Unsecured (unencrypted) data</strong> is sent as readable <em>plain text</em>. Anyone able to capture packets on the path (on an open Wi-Fi network, or a compromised router) can read or change it using a packet-capture tool. Plain HTTP, FTP, Telnet, open Wi-Fi and unencrypted email are examples. Risks include stolen passwords and personal information (<em>eavesdropping</em>), altered messages (<em>tampering</em>) and fake websites or servers (<em>impersonation</em>). Unsecured transmission is only acceptable for public information, such as a public weather page.</p>
+
+          <h3>Encrypted data</h3>
+          <p>NESA's glossary defines <strong>encryption</strong> as encoding data with mathematical formulas into a form that only the intended recipient can decode. The main methods are:</p>
+          <ul>
+          <li><strong>Symmetric encryption</strong> (for example AES): one shared secret key encrypts and decrypts. It is fast, so it protects bulk data.</li>
+          <li><strong>Asymmetric (public-key) encryption:</strong> a public key locks data and a matching private key unlocks it. It solves the problem of sharing a key safely and supports digital signatures and certificates.</li>
+          <li><strong>TLS (HTTPS)</strong> uses both: public-key methods set up the connection and check the site's certificate, then a fast shared key protects the data. <strong>WPA3</strong> protects Wi-Fi, <strong>VPNs</strong> protect whole connections, and <strong>SFTP</strong> and <strong>SSH</strong> protect file transfer and remote access.</li>
+          </ul>
+          <figure class="figure">
+          <figcaption class="figure-head">
+            <p class="figure-kicker"><span class="figure-kind">Animated diagram</span></p>
+            <h4 class="figure-title">How HTTPS protects data in transit</h4>
+            <p class="figure-lead">Compare an HTTPS connection with plain HTTP and with an imposter site.</p>
+          </figcaption>
+          <div class="figure-canvas figure-canvas--anim">
+            <div class="anim" data-anim="https"></div>
+          </div>
+          <div class="figure-notes">
+            <div><h5>What to notice</h5><ul><li>With HTTPS, an eavesdropper sees only scrambled cipher text.</li>
+          <li>The certificate lets the browser check it is talking to the real site, not an imposter.</li>
+          <li>The scene simplifies the key exchange: modern TLS 1.3 agrees a shared key differently from the picture, but the idea (only the endpoints can read the data) is the same.</li></ul><p class="figure-controls">Choose a case with the tabs. Step with ◀ and ▶ (or the arrow keys), play or pause with Space.</p></div>
+            <p class="figure-try"><strong>Try this</strong>In the Plain HTTP tab, what can an eavesdropper read? What changes in the HTTPS tab?</p>
+          </div>
+          </figure>
+          <p>Encryption has costs: it needs some processing power (usually small, since most modern devices have hardware support), keys must be managed and protected, security tools cannot inspect encrypted traffic unless configured to, and a lost key can make data unrecoverable. Encryption protects <em>confidentiality</em>; it does not on its own stop malware, weak passwords or a compromised device at either end.</p>
+
+          <h3>Infrastructure</h3>
+          <p>Hardware and software work together to carry and protect data:</p>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Element</th><th>Role in transmission</th><th>Security and performance considerations</th></tr></thead>
+          <tbody>
+          <tr><td><strong>Network interface card (NIC) and driver</strong></td><td>Connects a device and converts data to signals</td><td>Keep drivers updated; supports speed and Wi-Fi standard</td></tr>
+          <tr><td><strong>Cabling and wireless links</strong></td><td>Carry signals</td><td>Media choice sets speed, range and interference</td></tr>
+          <tr><td><strong>Switch and access point</strong></td><td>Deliver data to the right device</td><td>Port and Wi-Fi security settings; capacity</td></tr>
+          <tr><td><strong>Router and firewall</strong></td><td>Route packets between networks and filter them</td><td>Firmware updates; rules; NAT</td></tr>
+          <tr><td><strong>Servers and storage</strong></td><td>Provide and hold data</td><td>Access control, encryption at rest, backups</td></tr>
+          <tr><td><strong>Protocols and encryption software</strong></td><td>Format, address, check and protect data (TCP/IP, TLS, WPA3)</td><td>Use current versions; disable obsolete ones</td></tr>
+          </tbody></table>
+          </div>
+
+          <h3>Evaluating a choice</h3>
+          <div class="callout info"><strong>Scenario</strong> The vet clinic's cloud practice-management software will send client and animal records to a cloud provider, and staff work from home on some days. Options: (A) send the data unencrypted over the internet; (B) use HTTPS for the software and a VPN for staff working remotely.</div>
+          <div class="table-wrap">
+          <table>
+          <thead><tr><th>Criterion</th><th>A: unencrypted</th><th>B: HTTPS plus VPN</th></tr></thead>
+          <tbody>
+          <tr><td>Confidentiality</td><td>Poor: records can be read in transit</td><td>Strong: data is encrypted end to end</td></tr>
+          <tr><td>Legal obligations</td><td>Likely fails the duty to take reasonable steps to protect personal information</td><td>Supports compliance</td></tr>
+          <tr><td>Performance</td><td>Slightly faster in theory</td><td>Small overhead, not noticeable to users</td></tr>
+          <tr><td>Cost and effort</td><td>None</td><td>Some set-up, and staff need training</td></tr>
+          <tr><td>Risk if intercepted</td><td>High</td><td>Low</td></tr>
+          </tbody></table>
+          </div>
+          <p><strong>Judgement:</strong> Option B is clearly better. The performance and effort costs are small compared with the risk of exposing personal information, and the data is sensitive. Unencrypted transmission cannot be justified for client records.</p>
+          <div class="callout assessor"><strong>Assessor tip</strong> <em>Evaluate</em> is the highest-order verb here, so finish with a judgement. Use a small set of criteria (security, performance, cost, legal), weigh the strengths and limitations of each option, and state which you recommend and why. Naming a real protocol (TLS, WPA3) shows understanding.</div>
         </section>
 
         <div class="quiz" data-quiz="net-4"></div>
@@ -624,7 +1680,7 @@
   </footer>
 
   <script src="../js/glossary-data.js?v=8f2b4607"></script>
-  <script src="../js/quizzes/networking-systems.js?v=af803316"></script>
+  <script src="../js/quizzes/networking-systems.js?v=5f7197b3"></script>
   <script src="../js/quiz.js?v=3e6185a0" defer></script>
   <script src="../js/nesa-diagram-data.js?v=33ff129d"></script>
   <script src="../js/nesa-diagrams.js?v=6bab3032" defer></script>
@@ -654,5 +1710,7 @@
     </div>
   </div>
   <script src="../js/progress.js?v=40b8096b" defer></script>
+  <script src="../js/anim.js?v=2eeed270" defer></script>
+  <script src="../js/pages/networking-systems.js?v=136b1b92" defer></script>
 </body>
 </html>

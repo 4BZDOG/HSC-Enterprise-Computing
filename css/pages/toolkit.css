@@ -1,0 +1,73 @@
+/* Course Toolkit (topics/toolkit.html): small additions to the shared theme.
+   Uses the theme's custom properties so light and dark mode both work. */
+
+/* Reveal-on-demand model answers */
+.tk-answer {
+  margin: .25rem 0 1.5rem;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  background: var(--surface);
+}
+.tk-answer > summary {
+  cursor: pointer;
+  padding: .7rem 1rem;
+  font-weight: 700;
+  font-size: .9rem;
+  color: var(--primary);
+  list-style: none;
+}
+.tk-answer > summary::-webkit-details-marker { display: none; }
+.tk-answer > summary::before {
+  content: '\25B8';
+  display: inline-block;
+  margin-right: .55rem;
+  transition: transform .15s ease;
+}
+.tk-answer[open] > summary::before { transform: rotate(90deg); }
+.tk-answer > summary:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 6px; }
+.tk-answer[open] > summary { border-bottom: 1px solid var(--border); }
+.tk-answer > :not(summary) { margin-left: 1rem; margin-right: 1rem; }
+.tk-answer > p, .tk-answer > .table-wrap, .tk-answer > .code-block { margin-top: .85rem; }
+.tk-answer > :last-child { margin-bottom: 1rem; }
+@media (prefers-reduced-motion: reduce) { .tk-answer > summary::before { transition: none; } }
+
+/* SQL worked queries */
+.tk-query-title { margin: 1.6rem 0 .3rem; font-size: 1rem; }
+.tk-result-label {
+  margin: .9rem 0 .3rem;
+  font: 600 .7rem/1 var(--font-mono);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.tk-query-title + p { margin-top: 0; }
+
+/* Captions on tables */
+.table-wrap caption {
+  caption-side: top;
+  padding: .6rem .8rem;
+  text-align: left;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.table-wrap td code, .table-wrap th code { white-space: normal; overflow-wrap: anywhere; }
+
+/* Wide reference tables: let headings wrap and tighten the cells so they fit the column */
+.tk-wide thead th { white-space: normal; padding: .65rem .7rem; }
+.tk-wide tbody td { padding: .6rem .7rem; }
+.tk-wide tr.tk-group td {
+  padding: .45rem .7rem;
+  font: 600 .68rem/1.2 var(--font-mono);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: var(--bg-secondary);
+}
+@media (min-width: 900px) {
+  .tk-fn table { table-layout: fixed; }
+  .tk-fn th:nth-child(1) { width: 15%; }
+  .tk-fn th:nth-child(2) { width: 27%; }
+  .tk-fn th:nth-child(3) { width: 23%; }
+}
