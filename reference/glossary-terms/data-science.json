@@ -1,0 +1,218 @@
+[
+  {
+    "id": "term-quantitative-data",
+    "name": "Quantitative Data",
+    "topics": [
+      "ds"
+    ],
+    "definition": "Data expressed as numbers that measure or count something, so arithmetic on the values is meaningful.",
+    "example": "Trip length in minutes and the fare in dollars for a bike-share trip."
+  },
+  {
+    "id": "term-qualitative-data",
+    "name": "Qualitative Data",
+    "topics": [
+      "ds"
+    ],
+    "definition": "Data that describes qualities, categories or opinions, usually as words, labels, images or sounds.",
+    "example": "A rider's comment that a dock was jammed, or the name of a docking station."
+  },
+  {
+    "id": "term-levels-of-measurement",
+    "name": "Levels of Measurement",
+    "topics": [
+      "ds"
+    ],
+    "definition": "The four scales that describe how much information a variable carries: nominal (names), ordinal (order), interval (equal gaps) and ratio (equal gaps and a true zero).",
+    "example": "Station name is nominal, a 1 to 5 star rating is ordinal, temperature in degrees Celsius is interval and trip minutes are ratio."
+  },
+  {
+    "id": "term-stratified-sampling",
+    "name": "Stratified Sampling",
+    "topics": [
+      "ds"
+    ],
+    "definition": "A sampling method that divides the population into groups (strata) and samples each group in proportion to its size.",
+    "example": "Surveying 20 of 200 members and 40 of 400 casual riders, so both groups are represented."
+  },
+  {
+    "id": "term-passive-data-collection",
+    "name": "Passive Data Collection",
+    "topics": [
+      "ds"
+    ],
+    "definition": "Capturing data as a by-product of what people do, without them deliberately providing it.",
+    "example": "Dock sensors and GPS logs recording every bike trip."
+  },
+  {
+    "id": "term-primary-data",
+    "name": "Primary Data",
+    "topics": [
+      "ds"
+    ],
+    "definition": "Data collected first-hand by an enterprise for its own purpose.",
+    "example": "A bike-share's own trip log or its rider survey."
+  },
+  {
+    "id": "term-secondary-data",
+    "name": "Secondary Data",
+    "topics": [
+      "ds"
+    ],
+    "definition": "Data that was collected by someone else, usually for a different purpose, and is reused.",
+    "example": "Daily rainfall figures from the Bureau of Meteorology used to study bike demand."
+  },
+  {
+    "id": "term-informatics",
+    "name": "Informatics",
+    "topics": [
+      "ds"
+    ],
+    "definition": "The science of processing data for storage and retrieval, used to turn raw data into information that people can understand and act on.",
+    "example": "Organising a bike-share's trip records into tables, summarising them and presenting a dashboard to the operations manager."
+  },
+  {
+    "id": "term-unstructured-data",
+    "name": "Unstructured Data",
+    "topics": [
+      "ds"
+    ],
+    "definition": "Data with no predefined model or field layout, such as free text, images, audio and video.",
+    "example": "Rider comments, photos of damaged bikes and recorded customer calls."
+  },
+  {
+    "id": "term-alternative-data",
+    "name": "Alternative Data",
+    "topics": [
+      "ds"
+    ],
+    "definition": "Data from non-traditional sources, such as likes, emoticons and memes, used as quick feedback about a product or message.",
+    "example": "A surge of angry-face reactions on a post about a new e-bike."
+  },
+  {
+    "id": "term-data-bias",
+    "name": "Data Bias",
+    "topics": [
+      "ds"
+    ],
+    "definition": "A systematic tilt in how data is collected, analysed or used, so that results consistently lean in one direction.",
+    "example": "Surveying only app users, so riders without smartphones are missing from the results."
+  },
+  {
+    "id": "term-blockchain",
+    "name": "Blockchain",
+    "topics": [
+      "ds"
+    ],
+    "definition": "A growing list of records, called blocks, linked using cryptography so that any change to an earlier block is detectable.",
+    "example": "Each block stores the hash of the previous block, so editing one block breaks every later link."
+  },
+  {
+    "id": "term-hash-function",
+    "name": "Hash Function",
+    "topics": [
+      "ds"
+    ],
+    "definition": "A function that turns any input into a fixed-length output (a hash) that changes completely if the input changes and cannot practically be reversed.",
+    "example": "SHA-256 turns a block of transactions into a 64-character fingerprint."
+  },
+  {
+    "id": "term-distributed-ledger",
+    "name": "Distributed Ledger",
+    "topics": [
+      "ds"
+    ],
+    "definition": "A record of transactions held as identical copies on many computers (nodes), with no single master copy.",
+    "example": "Every node in a public blockchain stores the full chain of blocks."
+  },
+  {
+    "id": "term-consensus-mechanism",
+    "name": "Consensus Mechanism",
+    "topics": [
+      "ds"
+    ],
+    "definition": "The rule a distributed network uses to agree on which new block or record is valid.",
+    "example": "Proof of work and proof of stake are two consensus mechanisms."
+  },
+  {
+    "id": "term-big-data",
+    "name": "Big Data",
+    "topics": [
+      "ds"
+    ],
+    "definition": "Extremely large datasets that may be analysed computationally to reveal patterns, trends and associations, often described by their volume, variety and velocity.",
+    "example": "A GPS point logged every few seconds for every bike in a scheme."
+  },
+  {
+    "id": "term-data-mining",
+    "name": "Data Mining",
+    "topics": [
+      "ds"
+    ],
+    "definition": "Discovering patterns, relationships and unusual values in large datasets using statistics and machine learning.",
+    "example": "Finding groups of riders with similar travel habits so that passes can be designed for each."
+  },
+  {
+    "id": "term-metadata",
+    "name": "Metadata",
+    "topics": [
+      "ds"
+    ],
+    "definition": "A set of data that describes and gives information about other data.",
+    "example": "A photo's file details, such as when and where it was taken and its copyright."
+  },
+  {
+    "id": "term-data-swamp",
+    "name": "Data Swamp",
+    "topics": [
+      "ds"
+    ],
+    "definition": "A data lake that has become unusable because nothing records what the data is, where it came from, its quality or who owns it.",
+    "example": "A store of thousands of unlabelled, duplicate files that analysts cannot trust."
+  },
+  {
+    "id": "term-data-literacy",
+    "name": "Data Literacy",
+    "topics": [
+      "ds"
+    ],
+    "definition": "The ability to read, understand, question and communicate with data.",
+    "example": "Checking who collected a chart's data, how big the sample was and whether the axis starts at zero."
+  },
+  {
+    "id": "term-care-principles",
+    "name": "CARE Principles",
+    "topics": [
+      "ds"
+    ],
+    "definition": "Principles for Indigenous data governance from the Global Indigenous Data Alliance: Collective benefit, Authority to control, Responsibility and Ethics.",
+    "example": "A research team agrees with an Aboriginal community-controlled organisation how its data will be stored and shared."
+  },
+  {
+    "id": "term-slicer",
+    "name": "Slicer",
+    "topics": [
+      "ds"
+    ],
+    "definition": "A set of buttons in a spreadsheet dashboard that filters connected pivot tables and charts without changing the source data.",
+    "example": "Clicking Riverside Park in a station slicer to show only that station's figures."
+  },
+  {
+    "id": "term-flat-file-database",
+    "name": "Flat-File Database",
+    "topics": [
+      "ds"
+    ],
+    "definition": "A database that stores all its data in a single table of records and fields.",
+    "example": "A single table of trips that repeats each rider's name on every row."
+  },
+  {
+    "id": "term-relational-database",
+    "name": "Relational Database",
+    "topics": [
+      "ds"
+    ],
+    "definition": "A database that stores data in several linked tables, using primary and foreign keys, so each fact is stored once.",
+    "example": "Separate Riders, Bikes, Stations and Trips tables linked by RiderID, BikeID and StationID."
+  }
+]
