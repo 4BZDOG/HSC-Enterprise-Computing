@@ -2372,7 +2372,7 @@ a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$=
 
 :root[data-focus="ep"][data-theme][lang],
 a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$="enterprise-project.html"] {
-  --tone: #0E8F86; --tone-ink: color-mix(in srgb, #0E8F86 72%, #000); --tone-wash: color-mix(in srgb, #0E8F86 11%, #fff); --on-tone: #fff;
+  --tone: #0B7F77; --tone-ink: color-mix(in srgb, #0B7F77 72%, #000); --tone-wash: color-mix(in srgb, #0B7F77 11%, #fff); --on-tone: #fff;
 }
 :root[data-theme="dark"][data-focus="ep"],
 :root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$="enterprise-project.html"] {
@@ -2510,3 +2510,19 @@ a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$=
 }
 .card-art.topic-viz { margin-top: 0; }
 .card-art svg { max-height: 150px; }
+
+/* Glossary: topic tags take their focus area's colour (the same values as above) */
+:root[data-theme] button.chip-topic[data-topic="Interactive Media and the User Experience"] { --tone: #B5179E; --tone-ink: color-mix(in srgb, #B5179E 72%, #000); --tone-wash: color-mix(in srgb, #B5179E 11%, #fff); --on-tone: #fff; }
+:root[data-theme="dark"] button.chip-topic[data-topic="Interactive Media and the User Experience"] { --tone: #F472D0; --tone-ink: color-mix(in srgb, #F472D0 62%, #fff); --tone-wash: color-mix(in srgb, #F472D0 16%, #0A1220); --on-tone: #0A1220; }
+:root[data-theme] button.chip-topic[data-topic="Networking Systems and Social Computing"] { --tone: #2563EB; --tone-ink: color-mix(in srgb, #2563EB 72%, #000); --tone-wash: color-mix(in srgb, #2563EB 11%, #fff); --on-tone: #fff; }
+:root[data-theme="dark"] button.chip-topic[data-topic="Networking Systems and Social Computing"] { --tone: #60A5FA; --tone-ink: color-mix(in srgb, #60A5FA 62%, #fff); --tone-wash: color-mix(in srgb, #60A5FA 16%, #0A1220); --on-tone: #0A1220; }
+:root[data-theme] button.chip-topic[data-topic="Principles of Cybersecurity"] { --tone: #C62828; --tone-ink: color-mix(in srgb, #C62828 72%, #000); --tone-wash: color-mix(in srgb, #C62828 11%, #fff); --on-tone: #fff; }
+:root[data-theme="dark"] button.chip-topic[data-topic="Principles of Cybersecurity"] { --tone: #F87171; --tone-ink: color-mix(in srgb, #F87171 62%, #fff); --tone-wash: color-mix(in srgb, #F87171 16%, #0A1220); --on-tone: #0A1220; }
+:root[data-theme] button.chip-topic[data-topic="Data Science"] { --tone: #3F7D1A; --tone-ink: color-mix(in srgb, #3F7D1A 72%, #000); --tone-wash: color-mix(in srgb, #3F7D1A 11%, #fff); --on-tone: #fff; }
+:root[data-theme="dark"] button.chip-topic[data-topic="Data Science"] { --tone: #A3E635; --tone-ink: color-mix(in srgb, #A3E635 62%, #fff); --tone-wash: color-mix(in srgb, #A3E635 16%, #0A1220); --on-tone: #0A1220; }
+:root[data-theme] button.chip-topic[data-topic="Data Visualisation"] { --tone: #B45309; --tone-ink: color-mix(in srgb, #B45309 72%, #000); --tone-wash: color-mix(in srgb, #B45309 11%, #fff); --on-tone: #fff; }
+:root[data-theme="dark"] button.chip-topic[data-topic="Data Visualisation"] { --tone: #FBBF24; --tone-ink: color-mix(in srgb, #FBBF24 62%, #fff); --tone-wash: color-mix(in srgb, #FBBF24 16%, #0A1220); --on-tone: #0A1220; }
+:root[data-theme] button.chip-topic[data-topic="Intelligent Systems"] { --tone: #7E22CE; --tone-ink: color-mix(in srgb, #7E22CE 72%, #000); --tone-wash: color-mix(in srgb, #7E22CE 11%, #fff); --on-tone: #fff; }
+:root[data-theme="dark"] button.chip-topic[data-topic="Intelligent Systems"] { --tone: #C084FC; --tone-ink: color-mix(in srgb, #C084FC 62%, #fff); --tone-wash: color-mix(in srgb, #C084FC 16%, #0A1220); --on-tone: #0A1220; }
+:root[data-theme] button.chip-topic[data-topic="Enterprise Project"] { --tone: #0B7F77; --tone-ink: color-mix(in srgb, #0B7F77 72%, #000); --tone-wash: color-mix(in srgb, #0B7F77 11%, #fff); --on-tone: #fff; }
+:root[data-theme="dark"] button.chip-topic[data-topic="Enterprise Project"] { --tone: #2DD4BF; --tone-ink: color-mix(in srgb, #2DD4BF 62%, #fff); --tone-wash: color-mix(in srgb, #2DD4BF 16%, #0A1220); --on-tone: #0A1220; }
