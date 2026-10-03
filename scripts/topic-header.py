@@ -55,7 +55,7 @@ def art_im():
         b += f'<rect class="tv-card" x="{x}" y="204" width="92" height="56" rx="4"/><rect class="tv-fill" x="{x}" y="204" width="92" height="3" rx="1.5"/>'
         b += f'<rect class="tv-dim" x="{x+8}" y="218" width="60" height="5" rx="2"/><rect class="tv-dim" x="{x+8}" y="230" width="44" height="5" rx="2"/>'
     b += '<rect class="tv-fill" x="40" y="274" width="84" height="26" rx="13"/><rect class="tv-dim" x="136" y="280" width="130" height="6" rx="3"/><rect class="tv-dim" x="136" y="292" width="86" height="6" rx="3"/>'
-    b += '<polygon class="tv-amber" points="290,238 290,270 298,263 304,276 311,273 305,260 315,260"/>'
+    b += '<polygon class="tv-amber a-float" points="290,238 290,270 298,263 304,276 311,273 305,260 315,260"/>'
     b += inset(370, 56, 166, 272) + '<text class="tv-text" x="386" y="77">COMPRESSION</text>'
     for i, (w, cls, lab) in enumerate([(132, 'tv-dim', 'RAW'), (92, 'tv-soft2', 'PNG'), (34, 'tv-fill', 'JPEG')]):
         y = 92 + i * 34
@@ -64,7 +64,7 @@ def art_im():
     hs = [10, 22, 34, 18, 40, 28, 14, 36, 24, 44, 20, 30, 12, 26]
     for i, h in enumerate(hs):
         x = 388 + i * 9.6
-        b += f'<line class="tv-line" x1="{x:.1f}" y1="{290-h/2:.1f}" x2="{x:.1f}" y2="{290+h/2:.1f}" stroke-width="3"/>'
+        b += f'<line class="tv-line a-wave" style="--i:{i}" x1="{x:.1f}" y1="{290-h/2:.1f}" x2="{x:.1f}" y2="{290+h/2:.1f}" stroke-width="3"/>'
     b += '<text class="tv-text" x="386" y="320">AUDIO · 44.1 KHZ</text>'
     return chrome('interactive-media / preview', b)
 
@@ -102,7 +102,7 @@ def art_cyber():
         for c in range(5):
             rank = r + c
             k = 0 if rank < 3 else 1 if rank < 5 else 2 if rank < 7 else 3
-            b += f'<rect class="{cols[k]}" x="{318+c*42}" y="{88+(4-r)*38}" width="38" height="34" rx="3"/>'
+            b += f'<rect class="{cols[k]} a-pop" style="--i:{r+c}" x="{318+c*42}" y="{88+(4-r)*38}" width="38" height="34" rx="3"/>'
     b += '<circle class="tv-amber" cx="381" cy="167" r="6"/><circle class="tv-halo" cx="381" cy="167" r="9"/>'
     b += '<text class="tv-text" x="318" y="294">LIKELIHOOD →</text>'
     b += '<text class="tv-text" x="296" y="196" transform="rotate(-90 296 196)">IMPACT →</text><text class="tv-text" x="296" y="316">BLOCKED · PHISHING · 03:14</text>'
@@ -124,7 +124,7 @@ def art_ds():
     b += inset(310, 56, 226, 140) + '<text class="tv-text" x="326" y="77">TRIPS VS MINS</text>'
     pts = [(334, 168), (350, 156), (364, 160), (378, 142), (392, 148), (408, 130), (420, 136), (436, 118), (452, 124), (466, 104), (482, 112), (498, 96)]
     b += '<line class="tv-axis" x1="326" y1="180" x2="522" y2="180"/><line class="tv-line" x1="326" y1="176" x2="522" y2="94" stroke-dasharray="5 4" stroke-opacity=".7"/>'
-    b += ''.join(f'<circle class="tv-fill" cx="{x}" cy="{y}" r="3.5"/>' for x, y in pts)
+    b += ''.join(f'<circle class="tv-fill a-pop" style="--i:{i}" cx="{x}" cy="{y}" r="3.5"/>' for i, (x, y) in enumerate(pts))
     b += inset(310, 208, 226, 120)
     for i, (txt, kw) in enumerate([('SELECT', ' station, COUNT(*)'), ('FROM', ' trips'), ('GROUP BY', ' station;')]):
         b += f'<text class="tv-code" x="326" y="{238+i*26}"><tspan class="kw">{txt}</tspan>{html.escape(kw)}</text>'
@@ -139,7 +139,7 @@ def art_dv():
     b += '<line class="tv-axis" x1="40" y1="296" x2="288" y2="296"/>'
     for i, h in enumerate(hs):
         cls = 'tv-amber' if i == 7 else 'tv-soft2' if i % 2 else 'tv-fill'
-        b += f'<rect class="{cls}" x="{48+i*30}" y="{296-h}" width="20" height="{h}" rx="2"/>'
+        b += f'<rect class="{cls} a-grow" style="--i:{i}" x="{48+i*30}" y="{296-h}" width="20" height="{h}" rx="2"/>'
     b += '<path class="tv-line thin" d="M58 220 L88 204 L118 212 L148 180 L178 190 L208 160 L238 168 L268 126"/>'
     b += inset(320, 56, 216, 130) + '<text class="tv-text" x="336" y="77">SHARE</text>'
     segs = [(0, 92, 'tv-ring a'), (92, 58, 'tv-ring b'), (150, 46, 'tv-ring c'), (196, 30, 'tv-ring d')]
@@ -190,7 +190,7 @@ def art_ep():
     for i, (lab, s, d, cls) in enumerate(tasks):
         y = 98 + i * 36
         b += f'<text class="tv-text" x="40" y="{y+14}">{lab}</text>'
-        b += f'<rect class="{cls}" x="{172+s*45:.0f}" y="{y}" width="{d*45:.0f}" height="20" rx="4"/>'
+        b += f'<rect class="{cls} a-growx" style="--i:{i}" x="{172+s*45:.0f}" y="{y}" width="{d*45:.0f}" height="20" rx="4"/>'
         if i < len(tasks) - 1:
             b += f'<path class="tv-edge" d="M{172+(s+d)*45:.0f} {y+10} h6 v26 h-4" />'
     b += '<polygon class="tv-amber" points="316,296 324,304 316,312 308,304"/><polygon class="tv-amber" points="496,296 504,304 496,312 488,304"/>'
