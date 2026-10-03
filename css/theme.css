@@ -361,7 +361,7 @@
   max-width: 1200px;
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
-  grid-template-areas: "copy viz" "stats stats";
+  grid-template-areas: "copy viz" "stats stats" "topics topics";
   gap: clamp(1.5rem, 3vw, 2.5rem) clamp(1.5rem, 4vw, 3.5rem);
   align-items: center;
 }
@@ -616,7 +616,7 @@ a.hours-seg:hover { background: color-mix(in srgb, var(--tone) 30%, var(--surfac
 :root[data-theme] .reveal-item { transition: opacity .5s ease, transform .5s var(--ds-ease); }
 
 @media (max-width: 900px) {
-  :root[data-theme] .hero-inner { grid-template-columns: 1fr; grid-template-areas: "copy" "viz" "stats"; }
+  :root[data-theme] .hero-inner { grid-template-columns: 1fr; grid-template-areas: "copy" "viz" "stats" "topics"; }
   .hero-viz { max-width: 560px; }
   .how-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .how-step:nth-child(3) { padding-left: 0; border-left: 0; }
@@ -2317,65 +2317,65 @@ button.chip-topic:focus-visible { outline: 2px solid var(--ds-focus); outline-of
    the deeper value, dark mode the brighter one. */
 
 :root[data-focus="im"][data-theme][lang],
-a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="interactive-media.html"] {
+a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$="interactive-media.html"] {
   --tone: #B5179E; --tone-ink: color-mix(in srgb, #B5179E 72%, #000); --tone-wash: color-mix(in srgb, #B5179E 11%, #fff); --on-tone: #fff;
 }
 :root[data-theme="dark"][data-focus="im"],
-:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="interactive-media.html"] {
+:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$="interactive-media.html"] {
   --tone: #F472D0; --tone-ink: color-mix(in srgb, #F472D0 62%, #fff); --tone-wash: color-mix(in srgb, #F472D0 16%, #0A1220); --on-tone: #0A1220;
 }
 
 :root[data-focus="net"][data-theme][lang],
-a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="networking-systems.html"] {
+a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$="networking-systems.html"] {
   --tone: #2563EB; --tone-ink: color-mix(in srgb, #2563EB 72%, #000); --tone-wash: color-mix(in srgb, #2563EB 11%, #fff); --on-tone: #fff;
 }
 :root[data-theme="dark"][data-focus="net"],
-:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="networking-systems.html"] {
+:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$="networking-systems.html"] {
   --tone: #60A5FA; --tone-ink: color-mix(in srgb, #60A5FA 62%, #fff); --tone-wash: color-mix(in srgb, #60A5FA 16%, #0A1220); --on-tone: #0A1220;
 }
 
 :root[data-focus="cyber"][data-theme][lang],
-a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="cybersecurity.html"] {
+a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$="cybersecurity.html"] {
   --tone: #C62828; --tone-ink: color-mix(in srgb, #C62828 72%, #000); --tone-wash: color-mix(in srgb, #C62828 11%, #fff); --on-tone: #fff;
 }
 :root[data-theme="dark"][data-focus="cyber"],
-:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="cybersecurity.html"] {
+:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$="cybersecurity.html"] {
   --tone: #F87171; --tone-ink: color-mix(in srgb, #F87171 62%, #fff); --tone-wash: color-mix(in srgb, #F87171 16%, #0A1220); --on-tone: #0A1220;
 }
 
 :root[data-focus="ds"][data-theme][lang],
-a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="data-science.html"] {
+a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$="data-science.html"] {
   --tone: #3F7D1A; --tone-ink: color-mix(in srgb, #3F7D1A 72%, #000); --tone-wash: color-mix(in srgb, #3F7D1A 11%, #fff); --on-tone: #fff;
 }
 :root[data-theme="dark"][data-focus="ds"],
-:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="data-science.html"] {
+:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$="data-science.html"] {
   --tone: #A3E635; --tone-ink: color-mix(in srgb, #A3E635 62%, #fff); --tone-wash: color-mix(in srgb, #A3E635 16%, #0A1220); --on-tone: #0A1220;
 }
 
 :root[data-focus="dv"][data-theme][lang],
-a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="data-visualisation.html"] {
+a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$="data-visualisation.html"] {
   --tone: #B45309; --tone-ink: color-mix(in srgb, #B45309 72%, #000); --tone-wash: color-mix(in srgb, #B45309 11%, #fff); --on-tone: #fff;
 }
 :root[data-theme="dark"][data-focus="dv"],
-:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="data-visualisation.html"] {
+:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$="data-visualisation.html"] {
   --tone: #FBBF24; --tone-ink: color-mix(in srgb, #FBBF24 62%, #fff); --tone-wash: color-mix(in srgb, #FBBF24 16%, #0A1220); --on-tone: #0A1220;
 }
 
 :root[data-focus="is"][data-theme][lang],
-a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="intelligent-systems.html"] {
+a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$="intelligent-systems.html"] {
   --tone: #7E22CE; --tone-ink: color-mix(in srgb, #7E22CE 72%, #000); --tone-wash: color-mix(in srgb, #7E22CE 11%, #fff); --on-tone: #fff;
 }
 :root[data-theme="dark"][data-focus="is"],
-:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="intelligent-systems.html"] {
+:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$="intelligent-systems.html"] {
   --tone: #C084FC; --tone-ink: color-mix(in srgb, #C084FC 62%, #fff); --tone-wash: color-mix(in srgb, #C084FC 16%, #0A1220); --on-tone: #0A1220;
 }
 
 :root[data-focus="ep"][data-theme][lang],
-a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="enterprise-project.html"] {
+a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$="enterprise-project.html"] {
   --tone: #0E8F86; --tone-ink: color-mix(in srgb, #0E8F86 72%, #000); --tone-wash: color-mix(in srgb, #0E8F86 11%, #fff); --on-tone: #fff;
 }
 :root[data-theme="dark"][data-focus="ep"],
-:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="enterprise-project.html"] {
+:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$="enterprise-project.html"] {
   --tone: #2DD4BF; --tone-ink: color-mix(in srgb, #2DD4BF 62%, #fff); --tone-wash: color-mix(in srgb, #2DD4BF 16%, #0A1220); --on-tone: #0A1220;
 }
 
@@ -2479,3 +2479,34 @@ a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="enterprise-p
 }
 @media (prefers-reduced-motion: reduce) { .topic-part, .topic-part:hover { transition: none; transform: none; } }
 :root[data-focus] .toc-ico { background: var(--yr); color: var(--on-yr); }
+
+/* Home: hero strip of the seven focus areas, and card illustrations */
+:is(.hero-topic, .card-art) { --band-tone: color-mix(in srgb, var(--tone) 72%, #fff); }
+:root[data-theme="dark"] :is(.hero-topic, .card-art) { --band-tone: var(--tone); }
+.hero-topics { grid-area: topics; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .6rem; }
+.hero-topic {
+  display: flex; flex-direction: column; gap: .55rem;
+  padding: .75rem .8rem .8rem;
+  background: color-mix(in srgb, var(--band-tone) 9%, transparent);
+  border: 1px solid color-mix(in srgb, var(--band-tone) 34%, var(--ds-band-line));
+  border-top: 3px solid var(--band-tone);
+  border-radius: 6px;
+  color: #E8EEF6; text-decoration: none; min-width: 0;
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms var(--ds-ease);
+}
+.hero-topic:hover { background: color-mix(in srgb, var(--band-tone) 22%, transparent); border-color: var(--band-tone); transform: translateY(-2px); }
+.hero-topic:focus-visible { outline: 2px solid var(--ds-focus); outline-offset: 2px; }
+.ht-ico { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 7px; background: var(--band-tone); color: #0A1220; }
+.ht-ico svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.ht-text { display: flex; flex-direction: column; gap: .15rem; min-width: 0; }
+.ht-year { font: 600 .58rem/1.2 var(--font-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--band-tone); }
+.ht-name { font: 600 .9rem/1.25 var(--font-display); color: #fff; overflow-wrap: anywhere; }
+@media (max-width: 1100px) { .hero-topics { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .hero-topics { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+:root[data-theme] .topic-card .card-art {
+  margin: -1.35rem -1.4rem 1.1rem -1.6rem; padding: .7rem .8rem .6rem 1.1rem;
+  background: var(--ds-navy); border-bottom: 3px solid var(--band-tone);
+}
+.card-art.topic-viz { margin-top: 0; }
+.card-art svg { max-height: 150px; }
