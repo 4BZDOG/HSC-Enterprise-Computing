@@ -2308,3 +2308,173 @@ button.chip-topic:focus-visible { outline: 2px solid var(--ds-focus); outline-of
 :root[data-theme] .content-body a.btn-primary:hover { background: #F5B83D; border: 0; }
 :root[data-theme] .content-body a.btn-outline { color: var(--text-primary); border: 1px solid var(--border-strong); background: transparent; }
 :root[data-theme] .content-body a.btn-outline:hover { color: var(--primary); border-color: var(--primary); background: var(--surface); }
+
+/* ── 15  Focus-area colours and the topic hero ────────────────
+   Each of the seven focus areas has its own colour. It is set on the page
+   (<html data-focus="…">, written by scripts/topic-header.py) and on the
+   links that point at the page (home cards, navigation, previous/next
+   cards), so a topic looks the same wherever it appears. Light mode uses
+   the deeper value, dark mode the brighter one. */
+
+:root[data-focus="im"][data-theme][lang],
+a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="interactive-media.html"] {
+  --tone: #B5179E; --tone-ink: color-mix(in srgb, #B5179E 72%, #000); --tone-wash: color-mix(in srgb, #B5179E 11%, #fff); --on-tone: #fff;
+}
+:root[data-theme="dark"][data-focus="im"],
+:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="interactive-media.html"] {
+  --tone: #F472D0; --tone-ink: color-mix(in srgb, #F472D0 62%, #fff); --tone-wash: color-mix(in srgb, #F472D0 16%, #0A1220); --on-tone: #0A1220;
+}
+
+:root[data-focus="net"][data-theme][lang],
+a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="networking-systems.html"] {
+  --tone: #2563EB; --tone-ink: color-mix(in srgb, #2563EB 72%, #000); --tone-wash: color-mix(in srgb, #2563EB 11%, #fff); --on-tone: #fff;
+}
+:root[data-theme="dark"][data-focus="net"],
+:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="networking-systems.html"] {
+  --tone: #60A5FA; --tone-ink: color-mix(in srgb, #60A5FA 62%, #fff); --tone-wash: color-mix(in srgb, #60A5FA 16%, #0A1220); --on-tone: #0A1220;
+}
+
+:root[data-focus="cyber"][data-theme][lang],
+a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="cybersecurity.html"] {
+  --tone: #C62828; --tone-ink: color-mix(in srgb, #C62828 72%, #000); --tone-wash: color-mix(in srgb, #C62828 11%, #fff); --on-tone: #fff;
+}
+:root[data-theme="dark"][data-focus="cyber"],
+:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="cybersecurity.html"] {
+  --tone: #F87171; --tone-ink: color-mix(in srgb, #F87171 62%, #fff); --tone-wash: color-mix(in srgb, #F87171 16%, #0A1220); --on-tone: #0A1220;
+}
+
+:root[data-focus="ds"][data-theme][lang],
+a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="data-science.html"] {
+  --tone: #3F7D1A; --tone-ink: color-mix(in srgb, #3F7D1A 72%, #000); --tone-wash: color-mix(in srgb, #3F7D1A 11%, #fff); --on-tone: #fff;
+}
+:root[data-theme="dark"][data-focus="ds"],
+:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="data-science.html"] {
+  --tone: #A3E635; --tone-ink: color-mix(in srgb, #A3E635 62%, #fff); --tone-wash: color-mix(in srgb, #A3E635 16%, #0A1220); --on-tone: #0A1220;
+}
+
+:root[data-focus="dv"][data-theme][lang],
+a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="data-visualisation.html"] {
+  --tone: #B45309; --tone-ink: color-mix(in srgb, #B45309 72%, #000); --tone-wash: color-mix(in srgb, #B45309 11%, #fff); --on-tone: #fff;
+}
+:root[data-theme="dark"][data-focus="dv"],
+:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="data-visualisation.html"] {
+  --tone: #FBBF24; --tone-ink: color-mix(in srgb, #FBBF24 62%, #fff); --tone-wash: color-mix(in srgb, #FBBF24 16%, #0A1220); --on-tone: #0A1220;
+}
+
+:root[data-focus="is"][data-theme][lang],
+a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="intelligent-systems.html"] {
+  --tone: #7E22CE; --tone-ink: color-mix(in srgb, #7E22CE 72%, #000); --tone-wash: color-mix(in srgb, #7E22CE 11%, #fff); --on-tone: #fff;
+}
+:root[data-theme="dark"][data-focus="is"],
+:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="intelligent-systems.html"] {
+  --tone: #C084FC; --tone-ink: color-mix(in srgb, #C084FC 62%, #fff); --tone-wash: color-mix(in srgb, #C084FC 16%, #0A1220); --on-tone: #0A1220;
+}
+
+:root[data-focus="ep"][data-theme][lang],
+a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="enterprise-project.html"] {
+  --tone: #0E8F86; --tone-ink: color-mix(in srgb, #0E8F86 72%, #000); --tone-wash: color-mix(in srgb, #0E8F86 11%, #fff); --on-tone: #fff;
+}
+:root[data-theme="dark"][data-focus="ep"],
+:root[data-theme="dark"] a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="enterprise-project.html"] {
+  --tone: #2DD4BF; --tone-ink: color-mix(in srgb, #2DD4BF 62%, #fff); --tone-wash: color-mix(in srgb, #2DD4BF 16%, #0A1220); --on-tone: #0A1220;
+}
+
+:root[data-focus][data-theme][lang] {
+  --yr: var(--tone); --yr-ink: var(--tone-ink); --yr-wash: var(--tone-wash); --on-yr: var(--on-tone);
+  --band-tone: color-mix(in srgb, var(--tone) 72%, #fff);
+  --focus-band: var(--band-tone);
+}
+:root[data-theme="dark"][data-focus] { --band-tone: var(--tone); --focus-band: var(--tone); }
+:root[data-focus] .topic-hero-icon { --band-tone: var(--focus-band); }
+:root[data-focus] .topic-header::after { display: none; }
+:root[data-focus][data-theme] .topic-header::before {
+  background-image:
+    linear-gradient(var(--ds-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--ds-grid) 1px, transparent 1px),
+    radial-gradient(640px 320px at 8% 0%, color-mix(in srgb, var(--band-tone) 26%, transparent), transparent 70%),
+    radial-gradient(520px 300px at 100% 100%, color-mix(in srgb, var(--band-tone) 14%, transparent), transparent 70%);
+}
+:root[data-focus][data-theme] .topic-header { border-bottom: 3px solid var(--band-tone); }
+:root[data-focus][data-theme] .meta-pill:not(.year11):not(.year12) { border-color: color-mix(in srgb, var(--band-tone) 45%, transparent); }
+:root[data-focus] .topic-breakout, :root[data-focus] .callout.exam-tip { --tone: var(--yr); }
+
+/* Hero illustration (decorative; the wrapper carries the description) */
+.topic-viz { min-width: 0; margin-top: 1.4rem; }
+.topic-viz svg { display: block; width: 100%; height: auto; overflow: visible; }
+.topic-viz .tv-panel { fill: #0F2036; stroke: var(--ds-band-line); }
+.topic-viz .tv-inset { fill: #0B1B2E; stroke: var(--ds-band-line); }
+.topic-viz .tv-card { fill: #13263F; stroke: var(--ds-band-line); }
+.topic-viz .tv-text { font: 500 10px var(--font-mono); fill: #8FA0B8; letter-spacing: .08em; }
+.topic-viz .tv-text.ink { fill: #0A1220; font-weight: 700; }
+.topic-viz .tv-code { font: 500 12px var(--font-mono); fill: #C5D2E2; }
+.topic-viz .tv-code .kw { fill: var(--band-tone); font-weight: 700; }
+.topic-viz .tv-num { font: 700 17px var(--font-display); fill: #F3F6FA; }
+.topic-viz .tv-dim { fill: #33465F; }
+.topic-viz .tv-grid { stroke: #22324A; }
+.topic-viz .tv-axis { stroke: #3A4F6D; }
+.topic-viz .tv-fill { fill: var(--band-tone); }
+.topic-viz .tv-ink { fill: #0B1B2E; }
+.topic-viz .tv-soft { fill: color-mix(in srgb, var(--band-tone) 24%, transparent); }
+.topic-viz .tv-soft2 { fill: color-mix(in srgb, var(--band-tone) 52%, transparent); }
+.topic-viz .tv-amber { fill: #E8A317; }
+.topic-viz .tv-flag { fill: #E8A317; }
+.topic-viz .tv-line { fill: none; stroke: var(--band-tone); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.topic-viz .tv-line.thin { stroke: #E8A317; stroke-width: 2; }
+.topic-viz .tv-edge { stroke: #3A4F6D; stroke-width: 1.4; fill: none; }
+.topic-viz .tv-edge.hot { stroke: var(--band-tone); stroke-width: 1.8; }
+.topic-viz .tv-edge.dash { stroke-dasharray: 3 4; }
+.topic-viz .tv-node { fill: #0B1B2E; stroke: var(--band-tone); stroke-width: 2; }
+.topic-viz .tv-node.b { fill: color-mix(in srgb, var(--band-tone) 30%, #0B1B2E); }
+.topic-viz .tv-node.hubn { fill: #E8A317; stroke: #E8A317; }
+.topic-viz .tv-halo { fill: none; stroke: #E8A317; stroke-opacity: .6; }
+.topic-viz .tv-today { stroke: #E8A317; stroke-width: 1.5; stroke-dasharray: 4 4; }
+.topic-viz .tv-ring { fill: none; stroke-width: 14; }
+.topic-viz .tv-ring.a { stroke: var(--band-tone); } .topic-viz .tv-ring.b { stroke: #E8A317; }
+.topic-viz .tv-ring.c { stroke: color-mix(in srgb, var(--band-tone) 50%, transparent); } .topic-viz .tv-ring.d { stroke: #33465F; }
+.topic-viz .rk0 { fill: #2E7D4F; } .topic-viz .rk1 { fill: #C9A227; } .topic-viz .rk2 { fill: #D9782D; } .topic-viz .rk3 { fill: #D23B35; }
+
+/* Figures and part cards */
+.topic-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; margin-top: 1.6rem; }
+.topic-stat {
+  padding: .8rem 1rem .85rem;
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid var(--ds-band-line);
+  border-left: 3px solid var(--band-tone);
+  border-radius: 6px;
+}
+.topic-stat:nth-child(even) { border-left-color: #E8A317; }
+.topic-stat-num { display: block; font: 700 clamp(1.6rem, 3vw, 2.2rem)/1 var(--font-display); color: #F3F6FA; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.topic-stat-label { display: block; margin-top: .4rem; font: 500 .64rem/1.3 var(--font-mono); letter-spacing: .1em; text-transform: uppercase; color: #9FB1C8; }
+.topic-parts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: .75rem; margin-top: .75rem; }
+.topic-part {
+  display: flex; flex-direction: column; gap: .25rem;
+  padding: .85rem 1rem .8rem;
+  background: color-mix(in srgb, var(--band-tone) 9%, transparent);
+  border: 1px solid color-mix(in srgb, var(--band-tone) 32%, var(--ds-band-line));
+  border-radius: 6px;
+  color: #E8EEF6; text-decoration: none;
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms var(--ds-ease);
+}
+.topic-part:hover { background: color-mix(in srgb, var(--band-tone) 20%, transparent); border-color: var(--band-tone); transform: translateY(-2px); }
+.topic-part:focus-visible { outline: 2px solid var(--ds-focus); outline-offset: 2px; }
+.topic-part-num { font: 600 .62rem/1.2 var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--band-tone); }
+.topic-part-name { font: 600 1rem/1.3 var(--font-display); color: #fff; }
+.topic-part-count { margin-top: auto; padding-top: .3rem; font: 500 .72rem/1.3 var(--font-mono); color: #9FB1C8; }
+.topic-map-link { display: inline-block; margin-top: .9rem; font-size: .84rem; color: #C5D2E2; text-decoration: none; border-bottom: 1px solid transparent; }
+.topic-map-link:hover { color: #fff; border-bottom-color: #F5B83D; }
+
+@media (min-width: 1024px) {
+  :root[data-theme] .topic-header-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 460px);
+    grid-template-areas: "crumb crumb" "title viz" "desc viz" "meta viz" "stats stats" "parts parts" "map map";
+  }
+  :root[data-theme] .topic-header-inner > .topic-viz { grid-area: viz; align-self: center; margin-top: 0; }
+  :root[data-theme] .topic-header-inner > .topic-stats { grid-area: stats; }
+  :root[data-theme] .topic-header-inner > .topic-parts { grid-area: parts; }
+  :root[data-theme] .topic-header-inner > .topic-map-link { grid-area: map; justify-self: start; }
+}
+@media (max-width: 640px) {
+  .topic-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .topic-viz { max-width: 460px; }
+}
+@media (prefers-reduced-motion: reduce) { .topic-part, .topic-part:hover { transition: none; transform: none; } }
