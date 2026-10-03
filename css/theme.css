@@ -2478,3 +2478,4 @@ a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip)[href$="enterprise-p
   .topic-viz { max-width: 460px; }
 }
 @media (prefers-reduced-motion: reduce) { .topic-part, .topic-part:hover { transition: none; transform: none; } }
+:root[data-focus] .toc-ico { background: var(--yr); color: var(--on-yr); }
