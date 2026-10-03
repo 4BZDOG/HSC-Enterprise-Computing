@@ -365,7 +365,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const q = e.target.value.toLowerCase().trim();
         let visibleCount = 0;
         cards.forEach(card => {
-          const show = !q || card.textContent.toLowerCase().includes(q);
+          // The illustration's labels are decorative: search only the card's own text.
+          const text = Array.from(card.children).filter(c => !c.classList.contains('card-art')).map(c => c.textContent).join(' ').toLowerCase();
+          const show = !q || text.includes(q);
           card.style.display = show ? '' : 'none';
           if (show) visibleCount++;
         });

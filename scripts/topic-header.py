@@ -267,6 +267,41 @@ def build_header(slug, page):
             f'      {viz}\n      {stats}\n      {strip}\n    </div>\n  </header>')
 
 
+HOME_NAMES = {
+    'interactive-media': 'Interactive Media', 'networking-systems': 'Networking Systems', 'cybersecurity': 'Cybersecurity',
+    'data-science': 'Data Science', 'data-visualisation': 'Data Visualisation', 'intelligent-systems': 'Intelligent Systems',
+    'enterprise-project': 'Enterprise Project',
+}
+
+
+def update_home():
+    """Hero strip of the seven focus areas, and an illustration at the top of each focus-area card."""
+    path = os.path.join(ROOT, 'index.html')
+    with open(path, encoding='utf-8') as f:
+        page = f.read()
+    # Card illustrations
+    for slug, key in FOCUS.items():
+        card = re.search(r'(<a href="topics/%s\.html" class="topic-card[^"]*">)(\s*<div class="card-art[^>]*>.*?</svg></div>)?' % slug, page, re.S)
+        art = f'<div class="card-art topic-viz" aria-hidden="true">{ART[key]()}</div>'
+        page = page[:card.start()] + card.group(1) + '\n          ' + art + page[card.end():]
+    # Hero strip
+    links = ''
+    for i, (slug, key) in enumerate(FOCUS.items(), 1):
+        icon = re.search(r'<a href="topics/%s\.html" class="topic-card.*?<div class="card-icon" aria-hidden="true">(<svg.*?</svg>)</div>' % slug, page, re.S).group(1)
+        hrs = '40' if i <= 3 else '30'
+        links += (f'<a class="hero-topic" href="topics/{slug}.html"><span class="ht-ico" aria-hidden="true">{icon}</span>'
+                  f'<span class="ht-text"><span class="ht-year">Year {11 if i <= 3 else 12} · {hrs} hrs</span><span class="ht-name">{HOME_NAMES[slug]}</span></span></a>')
+    strip = f'<!-- hero-topics -->\n      <nav class="hero-topics" aria-label="The seven focus areas">{links}</nav>\n      <!-- /hero-topics -->\n    '
+    page = re.sub(r'<!-- hero-topics -->.*?<!-- /hero-topics -->\s*', '', page, flags=re.S)
+    start = page.index('<section class="hero"')
+    end = page.index('</section>', start)
+    close = page.rindex('</div>', start, end)
+    page = page[:close] + strip + page[close:]
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write(page)
+    print('updated index')
+
+
 def main():
     for slug, key in FOCUS.items():
         path = os.path.join(ROOT, 'topics', slug + '.html')
@@ -278,6 +313,7 @@ def main():
         with open(path, 'w', encoding='utf-8') as f:
             f.write(page)
         print('updated', slug)
+    update_home()
 
 
 if __name__ == '__main__':
