@@ -2558,3 +2558,8 @@ a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$=
 @media print {
   .topic-viz, .topic-stats, .topic-parts, .topic-map-link, .hero-topics { display: none !important; }
 }
+
+/* Phones: a quiz fieldset must not refuse to shrink below its longest line, and long topic tags wrap */
+fieldset.quiz-q { min-width: 0; }
+.quiz-text, .quiz-opt-text { overflow-wrap: anywhere; }
+:root[data-theme] button.chip.chip-topic { white-space: normal; max-width: 100%; text-align: left; }
