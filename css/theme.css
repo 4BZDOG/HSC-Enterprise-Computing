@@ -2703,3 +2703,109 @@ a.nav-item[href$="enterprise-project.html"] { --tone-light-on-navy: #2DD4BF; }
 :root[data-theme] .mobile-menu a.nav-item[href$="intelligent-systems.html"] .nav-ico { color: #C084FC; }
 :root[data-theme] .mobile-menu a.nav-item[href$="enterprise-project.html"] .nav-ico { color: #2DD4BF; }
 :root[data-theme] .mobile-menu a.nav-item[aria-current] .nav-ico { color: #0A1220; }
+
+/* ── Light mode, clearer layers: page, content area, cards ──
+   The page, the content area and the cards on it were all white or nearly white. Now the page is
+   a cool grey, each section's content area a soft tint, and cards, tables and figures are white
+   with a border and a shadow, so each one reads as a raised sheet. */
+:root[data-theme="light"] body { background-color: #E2E9F1; }
+:root[data-theme="light"] .section-body {
+  background: #F0F4F9;
+  border: 1px solid #C3CFDD;
+  box-shadow: 0 1px 2px rgba(11, 27, 46, .06), 0 10px 22px -16px rgba(11, 27, 46, .35);
+}
+:root[data-theme="light"] :is(.table-wrap, .key-term-item, .figure, .quiz-opt, .res-card, .ex-card, .pager-card, .search-bar .search-input) {
+  border: 1px solid #BCC9D9;
+  box-shadow: 0 1px 2px rgba(11, 27, 46, .07), 0 8px 16px -12px rgba(11, 27, 46, .3);
+}
+:root[data-theme="light"] .quiz { background: #E8EFF7; border: 1px solid #B7C5D6; box-shadow: 0 1px 2px rgba(11, 27, 46, .07), 0 8px 16px -12px rgba(11, 27, 46, .3); }
+:root[data-theme="light"] .quiz-opt { background: #fff; }
+:root[data-theme="light"] .key-term-item { border-left: 4px solid color-mix(in srgb, var(--yr) 70%, #fff); }
+:root[data-theme="light"] :is(.sidebar .toc-list, .pg-sidebar) { border-color: #BCC9D9; }
+
+/* ── Tables: clearer rows, columns, header and caption ── */
+:root[data-theme] .table-wrap { border-radius: 8px; margin: 1.5rem 0; }
+:root[data-theme="light"] .table-wrap { border-color: #B3C2D4; }
+:root[data-theme] table { border-collapse: separate; border-spacing: 0; width: 100%; }
+:root[data-theme] thead th { padding: .85rem 1rem; border-left: 1px solid rgba(255, 255, 255, .1); border-bottom: 3px solid var(--ds-amber); }
+:root[data-theme] thead th:first-child { border-left: 0; }
+:root[data-theme] tbody td, :root[data-theme] tbody th { padding: .8rem 1rem; vertical-align: top; line-height: 1.55; }
+:root[data-theme="light"] tbody td { border-bottom: 1px solid #D3DCE8; }
+:root[data-theme="light"] tbody td + td { border-left: 1px solid #E3E9F1; }
+:root[data-theme] tbody tr:last-child td { border-bottom: 0; }
+:root[data-theme] tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--yr) 9%, transparent); }
+:root[data-theme] tbody tr:hover td { background: color-mix(in srgb, var(--yr) 17%, transparent); }
+:root[data-theme] tbody td:first-child { background-color: color-mix(in srgb, var(--yr) 6%, transparent); border-right: 2px solid color-mix(in srgb, var(--yr) 35%, transparent); color: var(--text-primary); font-weight: 600; }
+:root[data-theme] tbody tr:nth-child(even) td:first-child { background-color: color-mix(in srgb, var(--yr) 13%, transparent); }
+:root[data-theme] caption {
+  caption-side: top; text-align: left;
+  padding: .7rem 1rem; margin: 0;
+  font: 600 .8rem/1.4 var(--font-body); color: var(--text-primary);
+  background: color-mix(in srgb, var(--yr) 11%, var(--surface));
+  border-bottom: 1px solid color-mix(in srgb, var(--yr) 30%, transparent);
+}
+@media (max-width: 640px) {
+  :root[data-theme] tbody td, :root[data-theme] tbody th { padding: .65rem .75rem; }
+  :root[data-theme] thead th { padding: .7rem .75rem; }
+}
+
+/* ── Year 11 and Year 12, set apart ──
+   On the home page each year is its own block: a coloured banner with the year numeral, a tinted
+   area and a coloured edge. In the navigation the two year menus are divided and each dropdown
+   opens with a labelled header. */
+:root[data-theme] :is(#year11, #year12) {
+  --yc: var(--year11); --on-yc: #fff;
+  position: relative; margin: 2.5rem 0 0; overflow: clip;
+  border: 1px solid color-mix(in srgb, var(--yc) 50%, var(--border));
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--yc) 6%, var(--surface));
+  box-shadow: 0 1px 2px rgba(11, 27, 46, .08), 0 16px 32px -24px rgba(11, 27, 46, .5);
+}
+:root[data-theme] #year12 { --yc: var(--year12); }
+:root[data-theme="dark"] :is(#year11, #year12) { --on-yc: #0A1220; background: color-mix(in srgb, var(--yc) 9%, var(--surface)); }
+:root[data-theme] :is(#year11, #year12) > .section-header {
+  position: relative; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem 1rem;
+  margin: 0 0 1.5rem; padding: 1.2rem 1.5rem;
+  background: var(--yc); border: 0; overflow: hidden;
+}
+:root[data-theme] :is(#year11, #year12) > .section-header::after { display: none; }
+:root[data-theme] #year11 > .section-header::before, :root[data-theme] #year12 > .section-header::before {
+  position: absolute; right: 1.2rem; top: 50%; translate: 0 -50%;
+  font: 800 4rem/1 var(--font-display); letter-spacing: -.04em; color: var(--on-yc); opacity: .16; pointer-events: none;
+}
+:root[data-theme] #year11 > .section-header::before { content: '11'; }
+:root[data-theme] #year12 > .section-header::before { content: '12'; }
+:root[data-theme] :is(#year11, #year12) .section-title { color: var(--on-yc); position: relative; }
+:root[data-theme] :is(#year11, #year12) .year-badge { background: color-mix(in srgb, var(--on-yc) 22%, transparent); color: var(--on-yc); border: 1px solid color-mix(in srgb, var(--on-yc) 45%, transparent); }
+:root[data-theme] :is(#year11, #year12) .topic-count { position: relative; margin-right: 6.5rem; color: var(--on-yc); opacity: .9; }
+:root[data-theme] :is(#year11, #year12) > .topics-grid { padding: 0 1.25rem 1.5rem; }
+@media (max-width: 640px) {
+  :root[data-theme] :is(#year11, #year12) > .section-header { padding: 1rem 1.1rem 1.1rem; flex-direction: column; align-items: flex-start; text-align: left; }
+  :root[data-theme] :is(#year11, #year12) .section-title { text-align: left; }
+  :root[data-theme] :is(#year11, #year12) > .topics-grid { padding: 0 .75rem 1.1rem; }
+  :root[data-theme] :is(#year11, #year12) .topic-count { margin-right: 0; }
+  :root[data-theme] #year11 > .section-header::before, :root[data-theme] #year12 > .section-header::before { font-size: 3.4rem; top: auto; bottom: -.35rem; translate: 0 0; }
+}
+
+/* Navigation: a divider between the groups, and a labelled header on each dropdown */
+@media (min-width: 920px) {
+  :root[data-theme] .nav-links > li.nav-dropdown-y12::before,
+  :root[data-theme] .nav-links > li.nav-dropdown:not(.nav-dropdown-y11):not(.nav-dropdown-y12)::before {
+    content: ''; position: absolute; left: -.2rem; top: 22%; bottom: 22%; width: 1px; background: currentColor; opacity: .22;
+  }
+}
+.nav-dropdown-head {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+  margin: .1rem .2rem .4rem; padding: .35rem .5rem .5rem;
+  border-bottom: 2px solid var(--yc, #64748B);
+  font: 700 .64rem/1.2 var(--font-mono); letter-spacing: .1em; text-transform: uppercase; color: #475569;
+}
+.nav-dropdown-head span:last-child { font-weight: 500; letter-spacing: .06em; opacity: .85; }
+.nav-dropdown-y11 .nav-dropdown-head { --yc: var(--year11); color: #0B5C72; }
+.nav-dropdown-y12 .nav-dropdown-head { --yc: var(--year12); color: #5B2EC4; }
+
+/* Dropdowns: wide enough for the longest topic title */
+@media (min-width: 920px) { :root[data-theme] .nav-dropdown-menu { width: max-content; min-width: 270px; max-width: min(440px, 92vw); } }
+
+/* Phones: a long resource tag may wrap instead of pushing the page sideways */
+@media (max-width: 480px) { :root[data-theme] .res-card .chip, :root[data-theme] .res-links .chip { white-space: normal; max-width: 100%; } }
