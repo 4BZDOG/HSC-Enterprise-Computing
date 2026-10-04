@@ -244,27 +244,35 @@ def build_header(slug, page):
     for i, n in enumerate(names):
         end = names[i + 1].start() if i + 1 < len(names) else len(page)
         chunk = page[n.end():end]
-        sec = re.search(r'<section[^>]*\bid="([^"]+)"', chunk)
-        parts.append((n.group(1), len(re.findall(r'<h2 class="syllabus-phase', chunk)), sec.group(1) if sec else ''))
+        ids = []
+        for piece in chunk.split('<section')[1:]:
+            m = re.match(r'[^>]*\bid="([^"]+)"', piece)
+            if m and '<h2 class="syllabus-phase' in piece:
+                ids.append(m.group(1))
+        parts.append((n.group(1), len(ids), ids[0] if ids else '', ids))
     dots = sum(p[1] for p in parts)
 
     stats = (
         '<div class="topic-stats">'
-        f'<div class="topic-stat"><span class="topic-stat-num">{dots}</span><span class="topic-stat-label">NESA dot points</span></div>'
-        f'<div class="topic-stat"><span class="topic-stat-num">{len(parts)}</span><span class="topic-stat-label">Syllabus parts</span></div>'
+        f'<div class="topic-stat"><span class="topic-stat-num">{dots}</span><span class="topic-stat-label">Dot points</span></div>'
+        f'<div class="topic-stat"><span class="topic-stat-num">{len(parts)}</span><span class="topic-stat-label">Parts</span></div>'
         f'<div class="topic-stat"><span class="topic-stat-num">{hours}</span><span class="topic-stat-label">Course hours</span></div>'
         f'<div class="topic-stat"><span class="topic-stat-num">{outcomes}</span><span class="topic-stat-label">Outcomes</span></div>'
         '</div>')
     cards = ''
-    for i, (name, n, sid) in enumerate(parts, 1):
+    for i, (name, n, sid, ids) in enumerate(parts, 1):
         href = f'#{sid}' if sid else '#'
-        cards += (f'<a class="topic-part" href="{href}"><span class="topic-part-num">Part {i}</span>'
+        cards += (f'<a class="topic-part" href="{href}" data-sections="{",".join(ids)}"><span class="topic-part-num">Part {i}</span>'
                   f'<span class="topic-part-name">{name}</span><span class="topic-part-count">{n} dot point{"s" if n != 1 else ""} →</span></a>')
-    strip = (f'<nav class="topic-parts" aria-label="Parts of this focus area">{cards}</nav>'
-             f'<a class="topic-map-link" href="{MAPPING_URL}" target="_blank" rel="noopener">Curriculum aligned: view the full syllabus mapping →</a>')
+    first = parts[0][2] if parts else ''
+    actions = ('<div class="topic-actions">'
+               f'<a class="topic-start" data-start href="#{first}">Start learning <span aria-hidden="true">→</span></a>'
+               f'<a class="topic-map-link" href="{MAPPING_URL}" target="_blank" rel="noopener">Syllabus mapping ↗</a>'
+               '</div>')
+    strip = f'<nav class="topic-parts" aria-label="Parts of this focus area">{cards}</nav>'
     viz = f'<div class="topic-viz" role="img" aria-label="{html.escape(ALT[key])}">{ART[key]()}</div>'
     return (f'<header class="topic-header">\n    <div class="topic-header-inner">\n      {crumb}\n      {title}\n      {intro}\n      {meta}\n'
-            f'      {viz}\n      {stats}\n      {strip}\n    </div>\n  </header>')
+            f'      {actions}\n      {viz}\n      {stats}\n      {strip}\n    </div>\n  </header>')
 
 
 HOME_NAMES = {
