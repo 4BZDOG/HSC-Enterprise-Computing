@@ -17,6 +17,7 @@ One icon per page lives in ICONS below. The script rewrites, on index.html,
     the file, so it changes exactly when the file does; this includes
     css/anim.css and js/anim.js; js/anim.js passes its ?v= on to the scene
     files it loads, so its hash also covers every file in js/anims/),
+  * a position number on every dropdown and mobile-menu item (--i), so the menus animate in one by one,
   * the previous / next topic cards at the end of each topic page,
   * the topic tags on glossary terms (icon, and a button that filters the
     glossary to that topic). New terms from add-glossary-terms.py come in
@@ -263,6 +264,24 @@ def page_slug(path):
     return os.path.basename(path)[:-5]
 
 
+def stagger(text):
+    """Number the items of each dropdown and of the mobile menu (style="--i:N") so the menus can animate in one by one."""
+    def number(chunk):
+        n = [0]
+        def one(m):
+            n[0] += 1
+            tag = re.sub(r' style="--i:\d+"', '', m.group(0))
+            return tag[:-1] + f' style="--i:{n[0]}">'
+        return re.sub(r'<a [^>]*class="nav-item[^"]*"[^>]*>', one, chunk)
+    text = re.sub(r'(<div class="nav-dropdown-menu"[^>]*>)(.*?)(</div>)',
+                  lambda m: m.group(1) + number(m.group(2)) + m.group(3), text, flags=re.S)
+    m = re.search(r'<div class="mobile-menu" id="mobile-menu"', text)
+    if m:
+        end = block_end(text, m.start())
+        text = text[:m.start()] + number(text[m.start():end]) + text[end:]
+    return text
+
+
 def apply(path):
     text = open(path, encoding='utf-8').read()
     orig = text
@@ -326,6 +345,7 @@ def apply(path):
         return f'{c.group(1)}{svg(slug, "f-ico")}' if slug in ICONS else c.group(0)
     text = re.sub(r'(<a class="lost-link[^"]*" href="([^"]+\.html)">)(?:<span class="f-ico" aria-hidden="true"><svg.*?</svg></span>)?',
                   chip, text)
+    text = stagger(text)
     text = versioned(text, os.path.dirname(path))
     if text != orig:
         open(path, 'w', encoding='utf-8').write(text)

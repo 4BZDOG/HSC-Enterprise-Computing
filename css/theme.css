@@ -2662,3 +2662,44 @@ fieldset.quiz-q { min-width: 0; }
   @keyframes th-grid { to { background-position: 32px 32px, 32px 32px, 0 0, 0 0; } }
   @keyframes th-nudge { 0%, 70%, 100% { box-shadow: 0 6px 16px -8px color-mix(in srgb, var(--band-tone) 80%, #000), 0 0 0 0 color-mix(in srgb, var(--band-tone) 55%, transparent); } 85% { box-shadow: 0 6px 16px -8px color-mix(in srgb, var(--band-tone) 80%, #000), 0 0 0 9px color-mix(in srgb, var(--band-tone) 0%, transparent); } }
 }
+
+/* ── Navigation, brought in line with the topic headers ──
+   On a focus-area page the reading line, the current-section underline and (on phones)
+   the menu's icons use that topic's colour; menus and the logo have a little motion. */
+:root[data-focus][data-theme] .reading-progress { height: 3px; background: linear-gradient(90deg, var(--band-tone), color-mix(in srgb, var(--band-tone) 55%, #fff)); }
+:root[data-focus][data-theme] .nav-dropdown.nav-dropdown--has-active .nav-dropdown-btn::after,
+:root[data-focus][data-theme] .nav-links > li > a[aria-current]::after { background: var(--band-tone); }
+:root[data-focus][data-theme] .navbar { border-bottom-color: color-mix(in srgb, var(--band-tone) 38%, transparent); }
+
+a.nav-item[href$="interactive-media.html"] { --tone-light-on-navy: #F472D0; }
+a.nav-item[href$="networking-systems.html"] { --tone-light-on-navy: #60A5FA; }
+a.nav-item[href$="cybersecurity.html"] { --tone-light-on-navy: #F87171; }
+a.nav-item[href$="data-science.html"] { --tone-light-on-navy: #A3E635; }
+a.nav-item[href$="data-visualisation.html"] { --tone-light-on-navy: #FBBF24; }
+a.nav-item[href$="intelligent-systems.html"] { --tone-light-on-navy: #C084FC; }
+a.nav-item[href$="enterprise-project.html"] { --tone-light-on-navy: #2DD4BF; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .nav-dropdown.open .nav-dropdown-menu a.nav-item { animation: nv-in 320ms var(--ds-ease) both; animation-delay: calc(var(--i, 0) * 45ms + 40ms); }
+  .nav-dropdown.open .nav-dropdown-menu a.nav-item .nav-ico { animation: nv-pop 420ms cubic-bezier(.3, 1.6, .5, 1) both; animation-delay: calc(var(--i, 0) * 45ms + 140ms); }
+  .mobile-menu.open a.nav-item { animation: nv-slide 380ms var(--ds-ease) both; animation-delay: calc(min(var(--i, 0), 10) * 32ms + 110ms); }
+  .mobile-menu.open .mobile-menu-label { animation: nv-in 320ms var(--ds-ease) both; animation-delay: 160ms; }
+  .nav-links > li > a[aria-current]::after,
+  :root[data-theme] .nav-dropdown.nav-dropdown--has-active .nav-dropdown-btn::after { animation: nv-line 520ms var(--ds-ease) 220ms both; }
+  .nav-brand:hover .nav-logo { animation: nv-wiggle 560ms var(--ds-ease); }
+  @keyframes nv-in { from { opacity: 0; translate: 0 8px; } to { opacity: 1; translate: 0 0; } }
+  @keyframes nv-slide { from { opacity: 0; translate: -18px 0; } to { opacity: 1; translate: 0 0; } }
+  @keyframes nv-pop { from { scale: .5; } to { scale: 1; } }
+  @keyframes nv-line { from { scale: 0 1; opacity: 0; } to { scale: 1 1; opacity: 1; } }
+  @keyframes nv-wiggle { 0%, 100% { rotate: 0deg; } 30% { rotate: -9deg; } 65% { rotate: 6deg; } }
+}
+
+/* Phone menu: each topic's icon takes its own colour */
+:root[data-theme] .mobile-menu a.nav-item[href$="interactive-media.html"] .nav-ico { color: #F472D0; }
+:root[data-theme] .mobile-menu a.nav-item[href$="networking-systems.html"] .nav-ico { color: #60A5FA; }
+:root[data-theme] .mobile-menu a.nav-item[href$="cybersecurity.html"] .nav-ico { color: #F87171; }
+:root[data-theme] .mobile-menu a.nav-item[href$="data-science.html"] .nav-ico { color: #A3E635; }
+:root[data-theme] .mobile-menu a.nav-item[href$="data-visualisation.html"] .nav-ico { color: #FBBF24; }
+:root[data-theme] .mobile-menu a.nav-item[href$="intelligent-systems.html"] .nav-ico { color: #C084FC; }
+:root[data-theme] .mobile-menu a.nav-item[href$="enterprise-project.html"] .nav-ico { color: #2DD4BF; }
+:root[data-theme] .mobile-menu a.nav-item[aria-current] .nav-ico { color: #0A1220; }
