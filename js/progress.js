@@ -62,6 +62,7 @@
         const ids = card.dataset.sections.split(',').filter(id => sections.some(s => s.id === id));
         const n = ids.filter(id => seen.has(id)).length;
         card.classList.toggle('is-done', ids.length > 0 && n === ids.length);
+        card.style.setProperty('--pg', ids.length ? (n / ids.length).toFixed(3) : 0);
         const count = card.querySelector('.topic-part-count');
         if (count) count.textContent = n === ids.length && n ? `All ${n} opened ✓` : n ? `${n} of ${ids.length} opened →` : `${ids.length} dot point${ids.length === 1 ? '' : 's'} →`;
       });
@@ -76,6 +77,7 @@
       let target = sections[0], label = 'Start learning';
       if (seen.size && next) { target = next; label = `Continue: ${title(next)}`; }
       else if (seen.size) { label = 'Revise from the start'; }
+      btn.classList.toggle('is-continue', !!(seen.size && next));
       btn.setAttribute('href', `#${target.id}`);
       btn.innerHTML = '';
       btn.append(document.createTextNode(label + ' '));
