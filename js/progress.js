@@ -52,7 +52,36 @@
     persist(); // records the section count so the home page can show progress
 
     const meters = [];
-    const refresh = () => meters.forEach(m => update(m, seen.size, total));
+    const refresh = () => { meters.forEach(m => update(m, seen.size, total)); paintHeader(); };
+
+    // Header: each part card shows how much of it is opened, and the main button starts or resumes
+    function paintHeader() {
+      const hdr = document.querySelector('.topic-header');
+      if (!hdr) return;
+      hdr.querySelectorAll('.topic-part[data-sections]').forEach(card => {
+        const ids = card.dataset.sections.split(',').filter(id => sections.some(s => s.id === id));
+        const n = ids.filter(id => seen.has(id)).length;
+        card.classList.toggle('is-done', ids.length > 0 && n === ids.length);
+        const count = card.querySelector('.topic-part-count');
+        if (count) count.textContent = n === ids.length && n ? `All ${n} opened ✓` : n ? `${n} of ${ids.length} opened →` : `${ids.length} dot point${ids.length === 1 ? '' : 's'} →`;
+      });
+      const btn = hdr.querySelector('[data-start]');
+      if (!btn) return;
+      const next = sections.find(s => !seen.has(s.id));
+      const title = sec => {
+        const h = sec.querySelector(':scope > h2.syllabus-phase').cloneNode(true);
+        h.querySelectorAll('.pg-stamp, .section-chevron, .heading-anchor, .outcome-subtitle, .syllabus-concept').forEach(n => n.remove());
+        return h.textContent.trim();
+      };
+      let target = sections[0], label = 'Start learning';
+      if (seen.size && next) { target = next; label = `Continue: ${title(next)}`; }
+      else if (seen.size) { label = 'Revise from the start'; }
+      btn.setAttribute('href', `#${target.id}`);
+      btn.innerHTML = '';
+      btn.append(document.createTextNode(label + ' '));
+      const arrow = document.createElement('span'); arrow.setAttribute('aria-hidden', 'true'); arrow.textContent = '→';
+      btn.append(arrow);
+    }
 
     // Header meter
     const meta = document.querySelector('.topic-header-meta');
@@ -108,6 +137,7 @@
       });
     }
     sections.forEach(mark);
+    paintHeader();
 
     if (!('IntersectionObserver' in window)) return;
     const timers = new Map();

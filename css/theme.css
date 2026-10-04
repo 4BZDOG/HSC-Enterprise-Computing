@@ -2563,3 +2563,43 @@ a:is(.topic-card, .nav-item, .pager-card, .hours-seg, .chip, .hero-topic)[href$=
 fieldset.quiz-q { min-width: 0; }
 .quiz-text, .quiz-opt-text { overflow-wrap: anywhere; }
 :root[data-theme] button.chip.chip-topic { white-space: normal; max-width: 100%; text-align: left; }
+
+/* ── Topic header, round two: a way in, live part progress, and a compact phone layout ── */
+.topic-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; margin-top: 1.1rem; }
+.topic-start {
+  display: inline-flex; align-items: center; gap: .5rem; max-width: 100%;
+  padding: .7rem 1.15rem; border-radius: 6px;
+  background: var(--band-tone); color: #0A1220;
+  font: 700 .95rem/1.2 var(--font-body); text-decoration: none;
+  box-shadow: 0 6px 16px -8px color-mix(in srgb, var(--band-tone) 80%, #000);
+  transition: transform 160ms var(--ds-ease), filter 160ms ease;
+}
+.topic-start:hover { transform: translateY(-2px); filter: brightness(1.08); }
+.topic-start:focus-visible { outline: 2px solid var(--ds-focus); outline-offset: 3px; }
+.topic-actions .topic-map-link { margin: 0; }
+.topic-part.is-done { border-color: var(--band-tone); background: color-mix(in srgb, var(--band-tone) 20%, transparent); }
+.topic-part.is-done .topic-part-count { color: var(--band-tone); font-weight: 600; }
+
+@media (min-width: 1024px) {
+  :root[data-theme] .topic-header-inner {
+    grid-template-areas: "crumb crumb" "title viz" "desc viz" "meta viz" "act viz" "stats stats" "parts parts";
+  }
+  :root[data-theme] .topic-header-inner > .topic-actions { grid-area: act; }
+}
+
+@media (max-width: 1023px) {
+  .topic-header-inner { display: flex; flex-direction: column; }
+  .topic-header-inner > .topic-viz { order: 9; margin-top: 1.4rem; width: 100%; max-width: 360px; align-self: center; }
+}
+@media (max-width: 640px) {
+  :root[data-theme] .topic-header { padding-block: 1.25rem 1.5rem; }
+  .topic-header-inner > p { font-size: .93rem; line-height: 1.55; }
+  .topic-header-meta { margin-top: .9rem; }
+  .topic-start { width: 100%; justify-content: center; text-align: center; }
+  .topic-stats { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .4rem; margin-top: 1rem; }
+  .topic-stat { padding: .5rem .55rem .55rem; }
+  .topic-stat-num { font-size: 1.25rem; }
+  .topic-stat-label { font-size: .54rem; letter-spacing: .06em; margin-top: .3rem; }
+  .topic-parts { display: flex; overflow-x: auto; scroll-snap-type: x proximity; gap: .6rem; margin-top: .6rem; padding-bottom: .3rem; scrollbar-width: thin; }
+  .topic-part { flex: 0 0 72%; scroll-snap-align: start; }
+}
