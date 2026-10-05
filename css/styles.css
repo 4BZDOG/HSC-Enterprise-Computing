@@ -3863,6 +3863,7 @@ section:has(> h2.section-collapsed) + .divider {
   }
   .mobile-toc-fab svg { width: 18px; height: 18px; flex-shrink: 0; }
   .mobile-toc-fab:active { transform: scale(0.96); }
+  .mobile-toc-fab.is-over-footer { opacity: 0; transform: translateY(10px); pointer-events: none; transition: opacity 160ms ease, transform 200ms ease; }
 }
 
 [data-theme="dark"] .mobile-toc-fab {
