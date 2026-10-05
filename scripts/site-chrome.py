@@ -70,6 +70,13 @@ BRAND_GLYPH = ('<svg class="brand-glyph" viewBox="0 0 24 24" aria-hidden="true" 
 SITE_NAME = 'EntComp Notes'
 NESA_URL = 'https://curriculum.nsw.edu.au/learning-areas/tas/enterprise-computing-11-12-2022'
 BASE_PATH = '/HSC-Enterprise-Computing/'
+# The footer's "More from 4BZDOG" row: the sister site first, then the author's projects and this site's source.
+# The sister site's script (HSC_SoftwareEngineering/scripts/site-chrome.py) mirrors this row; keep the two in step.
+MORE_LINKS = [
+    ('Software Engineering Notes', 'https://4bzdog.github.io/HSC_SoftwareEngineering/'),
+    ('All projects', 'https://4bzdog.github.io/'),
+    ('Source on GitHub', 'https://github.com/4BZDOG/HSC-Enterprise-Computing'),
+]
 
 # slug: (group, title, summary)
 PAGES = {
@@ -197,6 +204,7 @@ def footer(prefix, home, page_title):
             links.append(f'        <a href="{NESA_URL}" target="_blank" rel="noopener">NESA Syllabus ↗</a>')
         cols.append(f'      <div class="footer-col footer-col-{group}">\n        <h4>{label}</h4>\n' + '\n'.join(links) + '\n      </div>')
     where = f' · {page_title}' if page_title else ''
+    more = '\n'.join(f'      <a href="{u}" rel="noopener">{t} ↗</a>' for t, u in MORE_LINKS)
     return f'''<footer>
     <div class="footer-inner">
       <div>
@@ -212,6 +220,10 @@ def footer(prefix, home, page_title):
       <span>© 2026 HSC {SITE_NAME}{where}</span>
       <span>Aligned to the NESA syllabus · For educational purposes only</span>
     </div>
+    <nav class="footer-more" aria-label="More from 4BZDOG">
+      <span>More from 4BZDOG</span>
+{more}
+    </nav>
   </footer>'''
 
 
