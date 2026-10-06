@@ -75,8 +75,6 @@ def head(*, title, description, path, og_type='article', crumbs=None, descriptio
   <meta name="twitter:image" content="{SITE_URL}og-image.png" />
 {ld}  <link rel="icon" href="{FAVICON}" />
   <meta name="theme-color" content="{THEME_COLOUR}" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 {note}  <meta name="description" content="{esc(description)}" />
   <!-- Theme init: prevents flash of wrong theme. The ec- prefix keeps this site's storage apart from sister sites on the same origin. -->
   <script>(function(){{try{{var t=localStorage.getItem('ec-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}}catch(e){{}}}})()</script>

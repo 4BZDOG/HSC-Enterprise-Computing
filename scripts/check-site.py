@@ -396,6 +396,14 @@ if counts:
 
 for n in notes:
     print('  !', n) if not n.startswith('    ') else print(n)
+# Fonts are served from css/fonts/: no page or stylesheet may call a font host, and every font file named exists
+for path in PAGES + glob.glob(os.path.join(ROOT, 'css', '*.css')):
+    if re.search(r'fonts\.(?:googleapis|gstatic)\.com', open(path, encoding='utf-8').read()):
+        fail(f'{os.path.relpath(path, ROOT)}: calls a font host; serve the font from css/fonts/ instead')
+for font_url in sorted(set(re.findall(r"url\('(fonts/[^']+)'\)", open(os.path.join(ROOT, 'css', 'styles.css'), encoding='utf-8').read()))):
+    if not os.path.exists(os.path.join(ROOT, 'css', font_url)):
+        fail(f'css/styles.css: font file css/{font_url} is missing')
+
 # Home page figures are written by hand, so check them against the pages they describe
 home_html = open(os.path.join(ROOT, 'index.html'), encoding='utf-8').read()
 area_dots = {}

@@ -20,10 +20,10 @@ A free static study-notes site for NSW HSC Enterprise Computing (NESA Enterprise
 ```
 index.html  404.html  sitemap.xml  robots.txt  og-image.png  package.json
 topics/     one page per topic (7 focus areas + toolkit, project-guide, example-project, glossary, resources)
-css/        styles.css (base), theme.css ("Data Studio" theme), anim.css (diagram kit)
+css/        styles.css (base), theme.css ("Data Studio" theme), anim.css (diagram kit), fonts/ (self-hosted WOFF2)
 js/         main.js, progress.js, quiz.js, quizzes/<slug>.js, glossary.js, glossary-data.js (generated),
             hero.js, nesa-diagrams.js, nesa-diagram-data.js, anim.js, anims/<scene>.js
-scripts/    site-chrome.py, scaffold-page.py, page_specs.py, page_shell.py, restructure.py, check-site.py,
+scripts/    site-chrome.py, scaffold-page.py, page_specs.py, page_shell.py, restructure.py, check-site.py, check-layout.mjs,
             validate-alignment.sh, build-glossary.py, add-glossary-terms.py, glossary_new_terms.py,
             build-mapping.py, build-resources.py, copy_audit.py, render-diagrams.mjs
 resources/  source material (not published)      reference/  writer support (not published)
@@ -46,7 +46,7 @@ python3 scripts/build-mapping.py
 python3 scripts/check-site.py --strict     # non-strict lists unfinished CONTENT placeholders as notes
 bash scripts/validate-alignment.sh
 ```
-Other useful commands: `python3 scripts/restructure.py [slug]` (page_specs vs syllabus), `python3 scripts/copy_audit.py` (section length vs verb), `npm run diagrams` (Mermaid to SVG). Do not run `git commit` unless the user asks. Serve locally with `python3 -m http.server <port>`; screenshot with Playwright (`require('/opt/node22/lib/node_modules/playwright')`; never run `playwright install`).
+Other useful commands: `python3 scripts/restructure.py [slug]` (page_specs vs syllabus), `python3 scripts/copy_audit.py` (section length vs verb), `npm run diagrams` (Mermaid to SVG). `node scripts/check-layout.mjs` (add `--quick` for a shorter run) checks for sideways scrolling at 375 to 1440 px and that the shared page frame holds; it needs Playwright and is not part of CI, so run it before a pull request that touches layout or styling. Do not run `git commit` unless the user asks. Serve locally with `python3 -m http.server <port>`; screenshot with Playwright (`require('/opt/node22/lib/node_modules/playwright')`; never run `playwright install`).
 
 ## Content conventions
 - **Callouts**: `<div class="callout tip|info|warning|danger|success|assessor"><strong>Label</strong> …</div>`; `assessor` is for HSC exam guidance (at least one per part).
@@ -68,6 +68,7 @@ Enterprise Computing and Software Engineering are one family: a student moving b
 
 ## Storage, dependencies, links
 - Every `localStorage`/`sessionStorage` key starts with **`ec-`** (`ec-theme`, `ec-progress-v1`, `ec-parts`, `ec-collapsed`); the site shares an origin with the Software Engineering site. `check-site.py` enforces it. Wrap storage access in try/catch.
+- **Fonts are served from `css/fonts/`** (licences in its `README.md`); no page or stylesheet may call a font host, and `check-site.py` fails if one does.
 - **No external JS or CSS libraries and no CDNs.** Vanilla HTML/CSS/JS; the theme's custom properties so light and dark mode work; respect `prefers-reduced-motion`; usable at 375 px.
 - External links only to reputable, stable sources (NESA, OAIC, ASD/ACSC, eSafety, legislation.gov.au, W3C, ABS, AIATSIS and similar); check each returns HTTP 200.
 
