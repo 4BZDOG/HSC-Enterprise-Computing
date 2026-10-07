@@ -38,3 +38,23 @@
 .dv-row-out td { background: var(--primary-light); font-weight: 700; }
 :root[data-theme="dark"] .dv-row-out td { background: rgba(245, 184, 61, .18); color: var(--text-primary); }
 @media (max-width: 520px) { .dv-lab { padding: .75rem; } .dv-sel { flex-wrap: wrap; } .dv-sel select { max-width: 100%; width: 100%; } }
+
+/* Labs built on the shared kit (css/labs.css) */
+.dv-olap-filters { align-items: flex-start; }
+.dv-olap-set { margin: 0; padding: .5rem .8rem .6rem; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--bg-tertiary); min-width: 0; }
+.dv-olap-set legend { padding: 0 .3rem; font: 700 .76rem var(--font-mono); letter-spacing: .04em; text-transform: uppercase; color: var(--text-secondary); }
+.dv-olap-set .lab-check { margin: .1rem 0; }
+.dv-olap-lab .lab-readout .lab-list { margin-top: .2rem; }
+.dv-flaw-visual { margin-top: .6rem; max-width: 27rem; }
+.dv-svg { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface); }
+.dv-svg text { fill: var(--text-primary); font-family: var(--font-body); }
+.dv-svg .dv-bar { fill: var(--primary); }
+.dv-svg .dv-bar-2 { fill: var(--accent); }
+.dv-svg .dv-line { stroke: var(--primary); stroke-width: 3; stroke-linejoin: round; }
+.dv-svg .dv-dot { fill: var(--primary); }
+.dv-svg .dv-grid { stroke: var(--border-strong); stroke-width: 1; }
+.dv-svg .dv-slice { stroke: var(--surface); stroke-width: 1; }
+.dv-svg .dv-slice-0 { fill: var(--primary); }
+.dv-svg .dv-slice-1 { fill: var(--accent); }
+.dv-svg .dv-slice-2 { fill: #8b6fd9; }
+.dv-svg .dv-slice-3 { fill: #7fb069; }

@@ -26,12 +26,13 @@
   }
 
   /* A lab table. Cells are strings or DOM nodes; opts.num lists the right-aligned numeric columns and
-     opts.stack lets the rows turn into stacked cards on a phone (each cell shows its column name). */
+     opts.stack lets the rows turn into stacked cards on a phone (each cell shows its column name);
+     opts.raw keeps the headings exactly as written (field names), instead of the small capitals style. */
   function table(headers, opts) {
     opts = opts || {};
     const num = opts.num || [];
     const wrap = el('div', 'lab-table-wrap');
-    const tbl = el('table', 'lab-table' + (opts.stack ? ' lab-table--stack' : ''));
+    const tbl = el('table', 'lab-table' + (opts.stack ? ' lab-table--stack' : '') + (opts.raw ? ' lab-table--raw' : ''));
     const thead = el('thead'), hr = el('tr');
     headers.forEach((h, i) => hr.append(el('th', num.includes(i) ? 'num' : null, h)));
     thead.append(hr);
@@ -60,7 +61,7 @@
        cls, title, lead,
        noun: 'incident',                       used in "Incident 2 of 7"
        choices: [{ key: 'C', label: 'Confidentiality' }, ...],
-       items: [{ text, ans: 'C', why: 'Reason.', extra: 'Optional second paragraph.' }, ...],
+       items: [{ text, ans: 'C', why: 'Reason.', extra: 'Optional second paragraph.', visual: () => Node }, ...],   visual is optional: a chart or picture shown under the text
        extraLabel: 'Privacy',                  prefix for each item's `extra` paragraph
        keepCase: true,                         do not lower-case the category name in feedback (acronyms)
        closing: 'Sentence shown under the final score.'
@@ -103,6 +104,7 @@
       const item = items[i];
       answered = false;
       card.replaceChildren(el('p', null, item.text));
+      if (item.visual) card.append(item.visual());
       buttons.forEach(([, b]) => { b.disabled = false; b.removeAttribute('aria-pressed'); });
       group.hidden = false;
       fb.hidden = true;

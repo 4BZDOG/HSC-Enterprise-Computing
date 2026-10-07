@@ -148,6 +148,7 @@
 :root[data-theme] .lab .lab-table tbody tr:hover > * { background: color-mix(in srgb, var(--primary) 8%, transparent); }
 :root[data-theme] .lab .lab-table tbody tr > :first-child { font-weight: 600; }
 :root[data-theme] .lab .lab-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+:root[data-theme] .lab .lab-table--raw thead th { text-transform: none; letter-spacing: 0; font-size: .8rem; }
 :root[data-theme] .lab .lab-table tbody tr.is-hit > *, :root[data-theme] .lab .lab-table tbody td.is-hit { background: var(--lab-good); color: var(--lab-good-ink); }
 :root[data-theme] .lab .lab-table tbody tr.is-miss > *, :root[data-theme] .lab .lab-table tbody td.is-miss { background: var(--lab-bad); color: var(--lab-bad-ink); }
 :root[data-theme] .lab .lab-table tbody tr.is-warn > *, :root[data-theme] .lab .lab-table tbody td.is-warn { background: var(--lab-warn); color: var(--lab-warn-ink); }

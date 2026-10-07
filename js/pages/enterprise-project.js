@@ -149,3 +149,104 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
   else start();
 })();
+
+/* Enterprise project: labs built on the shared kit (css/labs.css, js/labs.js).
+   1. Needs and wants: sort the features of a project into Must, Should, Could and Won't against a limited number of hours.
+   2. Test data practice: is this value normal, boundary or invalid? */
+(function () {
+  'use strict';
+  var el = Labs.el;
+
+  /* ---------- 1. MoSCoW: negotiating needs and wants ---------- */
+  var FEATURES = [
+    { id: 'book', n: 'Book a place in a session', h: 30, core: true, why: 'Booking is the reason ClubHub exists.' },
+    { id: 'cancel', n: 'Cancel a booking and free the place', h: 12, core: true, why: 'Without cancelling, places stay blocked and staff fix mistakes by hand.' },
+    { id: 'email', n: 'Email confirmation of a booking', h: 10 },
+    { id: 'wait', n: 'Waiting list for full sessions', h: 16 },
+    { id: 'report', n: 'Attendance report for staff', h: 14 },
+    { id: 'access', n: 'Accessibility checks (labels, contrast, keyboard use)', h: 10 },
+    { id: 'pay', n: 'Online payment for paid events', h: 36 },
+    { id: 'dark', n: 'Dark mode', h: 8 },
+    { id: 'share', n: 'Share a session on social media', h: 6 },
+    { id: 'app', n: 'Separate mobile app', h: 60 }
+  ];
+  var BUCKETS = [['must', 'Must have'], ['should', 'Should have'], ['could', 'Could have'], ['wont', 'Won\'t have this time']];
+  var CAP = 100;
+
+  function buildMoscow(host) {
+    Labs.shell(host, 'ep-moscow', 'Negotiate the ClubHub features', 'The team has 100 hours to build the first release of ClubHub, and the client has asked for ten features. Sort each feature into Must have, Should have, Could have or Won\'t have this time (MoSCoW). The tool checks your plan against the hours and against the purpose of the system.');
+    var st = {};
+    FEATURES.forEach(function (f) { st[f.id] = 'could'; });
+    var list = el('div', 'ep-ms-list');
+    var sel = {};
+    FEATURES.forEach(function (f) {
+      var row = el('div', 'ep-ms-row'), name = el('label', 'ep-ms-name'), s = el('select');
+      s.id = 'ep-ms-' + f.id; name.htmlFor = s.id; name.append(el('span', null, f.n), el('small', null, f.h + ' hours'));
+      BUCKETS.forEach(function (b) { var o = el('option', null, b[1]); o.value = b[0]; s.append(o); });
+      s.value = st[f.id]; s.addEventListener('change', function () { st[f.id] = s.value; update(); });
+      row.append(name, s); list.append(row); sel[f.id] = s;
+    });
+    host.append(list);
+    var bars = el('div', 'ep-ms-bars'); host.append(bars);
+    var out = el('div', 'lab-feedback is-info'); out.setAttribute('role', 'status'); host.append(out);
+    var actions = el('div', 'lab-actions'); var sug = el('button', 'lab-btn', 'Show one sensible plan'); sug.type = 'button'; var rs = el('button', 'lab-btn lab-btn--quiet', 'Clear my plan'); rs.type = 'button'; actions.append(sug, rs); host.append(actions);
+    var why = el('div', 'lab-readout'); why.hidden = true; host.append(why);
+    host.append(el('p', 'lab-note', 'A common rule of thumb, from the agile method DSDM, is that Must haves should take no more than about 60% of the effort, so the team has room for surprises. The hours here are made up for the activity. In a real project the client and the team negotiate the list together, and it can change at each review.'));
+
+    function hours(b) { return FEATURES.filter(function (f) { return st[f.id] === b; }).reduce(function (a, f) { return a + f.h; }, 0); }
+    function update() {
+      bars.replaceChildren();
+      var must = hours('must'), should = hours('should'), could = hours('could'), wont = hours('wont');
+      [['Must', must, 'is-must'], ['Should', should, 'is-should'], ['Could', could, 'is-could']].forEach(function (b) {
+        var r = el('div', 'ep-ms-bar'); var fill = el('span', 'ep-ms-fill ' + b[2]); fill.style.width = Math.min(100, b[1] / CAP * 100) + '%';
+        var track = el('div', 'ep-ms-track'); track.append(fill);
+        r.append(el('span', 'ep-ms-label', b[0] + ' have'), track, el('span', 'ep-ms-hours', b[1] + ' h')); bars.append(r);
+      });
+      var committed = must + should;
+      bars.append(el('p', 'lab-note', 'Committed (Must + Should): ' + committed + ' of ' + CAP + ' hours. Could have: ' + could + ' hours of extras if time allows. Won\'t have this time: ' + wont + ' hours.'));
+      var notes = [], level = 'is-good';
+      FEATURES.filter(function (f) { return f.core && st[f.id] !== 'must'; }).forEach(function (f) { notes.push('"' + f.n + '" is core to the system. ' + f.why + ' Make it a Must have.'); level = 'is-bad'; });
+      if (must > CAP) { notes.push('The Must haves alone need ' + must + ' hours, more than the ' + CAP + ' available. Something has to move down.'); level = 'is-bad'; }
+      else if (committed > CAP) { notes.push('You have promised ' + committed + ' hours of work in ' + CAP + ' hours. Move some Should haves to Could have or Won\'t have.'); if (level !== 'is-bad') level = 'is-warn'; }
+      else if (must > CAP * 0.6) { notes.push('The Must haves take ' + Math.round(must / CAP * 100) + '% of the time. If anything goes wrong there is no room to recover, so check that each one is truly essential.'); if (level !== 'is-bad') level = 'is-warn'; }
+      if (!notes.length) { notes.push(committed < CAP * 0.6 ? 'This is a safe plan, with time left over. You could move a Could have up to Should have.' : 'This plan fits the hours, includes the core features and leaves some room for surprises.'); }
+      out.className = 'lab-feedback ' + level; out.replaceChildren(el('p', null, notes.join(' ')));
+    }
+    sug.addEventListener('click', function () {
+      var plan = { book: 'must', cancel: 'must', email: 'must', wait: 'should', report: 'should', access: 'should', dark: 'could', share: 'could', pay: 'wont', app: 'wont' };
+      FEATURES.forEach(function (f) { st[f.id] = plan[f.id]; sel[f.id].value = plan[f.id]; });
+      update(); why.hidden = false; why.replaceChildren(el('p', null, 'One sensible plan: booking, cancelling and a confirmation email are Must haves (52 hours). A waiting list, an attendance report and accessibility checks are Should haves (40 hours), so the first release is 92 hours. Dark mode and sharing are Could haves. Online payment and a separate app are left for a later release, because together they would take 96 hours and are not needed for the first version to work. Another team could reasonably make a different choice if it can justify it.'));
+    });
+    rs.addEventListener('click', function () { FEATURES.forEach(function (f) { st[f.id] = 'could'; sel[f.id].value = 'could'; }); why.hidden = true; update(); });
+    update();
+  }
+
+  /* ---------- 2. Test data practice ---------- */
+  function buildTests(host) {
+    Labs.sorter(host, {
+      cls: 'ep-testsort', keepCase: true,
+      title: 'Normal, boundary or invalid test data?',
+      lead: 'A test plan needs three kinds of data. Normal data is a typical valid value. Boundary data sits at or just beside a limit. Invalid data is clearly wrong, such as the wrong type or an impossible value. Read each rule and test value, then choose the kind.',
+      noun: 'test value', groupLabel: 'Kind of test data',
+      choices: [{ key: 'Normal', label: 'Normal' }, { key: 'Boundary', label: 'Boundary' }, { key: 'Invalid', label: 'Invalid' }],
+      items: [
+        { text: 'Rule: a booking is for 1 to 8 people. Test value: 4.', ans: 'Normal', why: 'A typical value well inside the limits. The system should accept it.' },
+        { text: 'Rule: a booking is for 1 to 8 people. Test value: 8.', ans: 'Boundary', why: 'It sits exactly on the upper limit. The system should accept it, and this is where off-by-one mistakes (using < where <= was meant) show up.' },
+        { text: 'Rule: a booking is for 1 to 8 people. Test value: 9.', ans: 'Boundary', why: 'It is just beyond the upper limit. The system should reject it, which checks that the limit stops at exactly 8.' },
+        { text: 'Rule: a booking is for 1 to 8 people. Test value: "twelve".', ans: 'Invalid', why: 'The wrong data type. The system should reject it with a helpful message rather than crash.' },
+        { text: 'Rule: a discount code is exactly 6 characters. Test value: SAVE20.', ans: 'Normal', why: 'A valid code of the right length. The system should accept it.' },
+        { text: 'Rule: a discount code is exactly 6 characters. Test value: SAVE2 (5 characters).', ans: 'Boundary', why: 'One character below the required length. The system should reject it, which checks the lower edge of the rule.' },
+        { text: 'Rule: a discount code is exactly 6 characters. Test value: (nothing entered).', ans: 'Invalid', why: 'A missing value is clearly wrong data, and tests that a required field cannot be left empty.' },
+        { text: 'Rule: a quiz mark is a whole number from 0 to 100. Test value: 100.', ans: 'Boundary', why: 'It sits exactly on the upper limit and should be accepted.' },
+        { text: 'Rule: a quiz mark is a whole number from 0 to 100. Test value: 12.5.', ans: 'Invalid', why: 'Within the range, but not a whole number, so it breaks the rule about type. The system should reject it.' }
+      ],
+      closing: 'A good test plan lists normal, boundary and invalid values for each rule, and states the expected result for each before the test is run.'
+    });
+  }
+
+  function init2() {
+    document.querySelectorAll('[data-epl="moscow"]').forEach(buildMoscow);
+    document.querySelectorAll('[data-epl="tests"]').forEach(buildTests);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init2); else init2();
+})();

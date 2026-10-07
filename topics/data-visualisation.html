@@ -52,8 +52,8 @@
   <link rel="stylesheet" href="../css/styles.css?v=4473cb26" />
   <link rel="stylesheet" href="../css/theme.css?v=a29ce4bd" />
   <link rel="stylesheet" href="../css/anim.css?v=1fecdf2c" />
-  <link rel="stylesheet" href="../css/labs.css?v=74999441" />
-  <link rel="stylesheet" href="../css/pages/data-visualisation.css?v=d3545a3f" />
+  <link rel="stylesheet" href="../css/labs.css?v=4b9dd249" />
+  <link rel="stylesheet" href="../css/pages/data-visualisation.css?v=66d8578c" />
 </head>
 <body>
 
@@ -279,6 +279,12 @@
           </figure>
           <p><strong>Worked example.</strong> A school canteen manager asks, "Which day of the week should we roster the most staff?" This is a comparison of categories (days), so the answer is a column chart of average orders per weekday, sorted from busiest to quietest, with the busiest day highlighted. A pie chart would be a poor choice: the seven days are not parts of something the manager cares about, and the slices would be almost equal.</p>
           <div class="callout assessor"><strong>Assessor tip</strong> When a question says <em>explain the purposes</em>, give each purpose its own developed sentence: what it means, then an example from a named enterprise. For "choose a chart", name the type of question, then the chart, then <em>why</em> that chart fits (for example, "a line chart, because the reader needs to see change across ordered time periods").</div>
+
+          <div data-dv="chart-choice" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Which chart answers the question?</h4>
+            <p class="lab-lead">Practise matching a chart type to a question. Enable JavaScript to use this tool. In short: columns compare categories, lines show change over time, pies show parts of a whole and scatter graphs show a relationship.</p>
+          </div>
         </section>
 
         <hr class="divider" />
@@ -541,6 +547,12 @@
           <li><strong>Pivot</strong> (rotate) swaps the axes to view the same data from another angle, for example Quarter down the side and Product across the top. The numbers do not change, only the arrangement, and the pattern that was hard to see in one layout may be obvious in the other.</li>
           </ul>
 
+          <div data-dv="olap" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">OLAP cube explorer</h4>
+            <p class="lab-lead">Slice, dice, drill down, roll up and pivot a small cube of café sales. Enable JavaScript to use this tool. In short: slice fixes one dimension, dice chooses values on two or more, drill-down adds detail, roll-up removes detail and pivot rotates the axes.</p>
+          </div>
+
           <h3>Where OLAP lives</h3>
           <p>OLAP tools differ in how the cube is stored. <em>Multidimensional</em> OLAP (MOLAP) keeps pre-calculated cubes for the fastest response; <em>relational</em> OLAP (ROLAP) computes the summaries on demand from ordinary relational tables, so it handles larger volumes but is slower; <em>hybrid</em> OLAP mixes the two. You do not need to know the vendors' products, only the idea: a dashboard filter or a drill-down click is an OLAP operation happening behind the scenes. In the NESA course, SQL is limited to SELECT, FROM, WHERE and ORDER BY, so OLAP-style grouping in this course is done with spreadsheet pivot tables.</p>
           <div class="key-terms">
@@ -590,6 +602,12 @@
           </tbody></table>
           </div>
           <p>When a dataset arrives already collected, run the same checks as a <em>cleaning</em> step: count and handle blanks, remove duplicates, standardise formats (dates, spelling, units), and investigate impossible values. Record every change so the process can be repeated and explained. In a spreadsheet, filters, sorting (to spot extremes), conditional formatting and an IF formula such as <code>=IF(OR(B2&lt;0,B2&gt;120),"Check","OK")</code> can flag suspicious rows. The <a href="toolkit.html#data-dictionary">data dictionary</a> in the Course Toolkit records the rules each field must meet.</p>
+
+          <div data-dv="validate" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Which validation check catches it?</h4>
+            <p class="lab-lead">Practise choosing the check that rejects a bad value. Enable JavaScript to use this tool. In short: type, range, format, presence, list and consistency checks each catch a different kind of error.</p>
+          </div>
 
           <h3>Risk</h3>
           <p>Data integrity risks are events that damage the accuracy or trustworthiness of data, with consequences for people who act on it. Risk is judged by likelihood and consequence (see the <a href="cybersecurity.html#risk-matrix">risk matrix</a> in Principles of Cybersecurity).</p>
@@ -812,6 +830,12 @@
             <p class="figure-try"><strong>Try this</strong>What extra data would you ask for before predicting next year's sales?</p>
           </div>
           </figure>
+
+          <div data-dv="flaws" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">What is wrong with this chart?</h4>
+            <p class="lab-lead">Practise spotting misleading-chart techniques. Enable JavaScript to use this tool. In short: check the axis, the time range, the chart type, the scales and the context.</p>
+          </div>
 
           <h3>Judgement: how serious is the bias?</h3>
           <p>To evaluate bias in a visualisation, weigh these questions and reach a verdict. Does the bias change the decision the audience would make? Could it harm particular people or groups (an ethical and, in some cases, a legal issue under discrimination law)? Is it deliberate or accidental? Can it be corrected, and at what cost? For example, a truncated axis on an internal draft is easy to fix and low-harm; the same chart on a public health notice is high-harm and the enterprise should correct it publicly. The best defence is transparency: state the source, the period and the method, and show the whole scale.</p>
@@ -1472,7 +1496,7 @@ ORDER BY Trip_date ASC</code></pre></div>
   <script src="../js/progress.js?v=fd3fe0bd" defer></script>
   <script src="../js/topic-header.js?v=af48f2c4" defer></script>
   <script src="../js/anim.js?v=c2e454df" defer></script>
-  <script src="../js/labs.js?v=ff21362e" defer></script>
-  <script src="../js/pages/data-visualisation.js?v=8d41b375" defer></script>
+  <script src="../js/labs.js?v=07f0729b" defer></script>
+  <script src="../js/pages/data-visualisation.js?v=ccade7f8" defer></script>
 </body>
 </html>

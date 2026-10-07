@@ -106,3 +106,32 @@ fieldset.isx-box { margin-left: 0; margin-right: 0; min-width: 0; }
 }
 .isx-widget input[type="range"] { accent-color: var(--primary); }
 .isx-widget output { font-weight: 700; }
+
+/* Labs built on the shared kit (css/labs.css) */
+.is-fuzzy svg, .is-dss svg { color: var(--text-secondary); }
+.is-fuzzy .is-fz-grid { stroke: var(--border-strong); stroke-width: 1; }
+.is-fuzzy .is-fz-txt, .is-dss .is-dss-txt { fill: var(--text-secondary); font: 400 13px var(--font-body); }
+.is-fuzzy .is-fz-name { font: 700 13px var(--font-body); }
+.is-fuzzy .is-fz-cold { stroke: #3a8fd6; stroke-width: 3.5; }
+.is-fuzzy .is-fz-warm { stroke: #3f9d6a; stroke-width: 3.5; }
+.is-fuzzy .is-fz-hot { stroke: #d9534a; stroke-width: 3.5; }
+.is-fuzzy .is-fz-cold-t { fill: #3a8fd6; } .is-fuzzy .is-fz-warm-t { fill: #3f9d6a; } .is-fuzzy .is-fz-hot-t { fill: #d9534a; }
+.is-fuzzy .is-fz-cold-dot { fill: #3a8fd6; } .is-fuzzy .is-fz-warm-dot { fill: #3f9d6a; } .is-fuzzy .is-fz-hot-dot { fill: #d9534a; }
+.is-fuzzy .is-fz-mark { stroke: var(--text-primary); stroke-width: 1.5; stroke-dasharray: 4 3; }
+.is-fuzzy .is-fz-fuzzy { stroke: var(--primary); stroke-width: 3.5; }
+.is-fuzzy .is-fz-crisp { stroke: var(--accent); stroke-width: 3; }
+.is-fuzzy .is-fz-fuzzy-dot { fill: var(--primary); } .is-fuzzy .is-fz-crisp-dot { fill: var(--accent); }
+.is-fuzzy .is-fz-fuzzy-t { fill: var(--primary); } .is-fuzzy .is-fz-crisp-t { fill: var(--accent); }
+.is-pr-list { list-style: none; margin: .6rem 0 .3rem; padding: 0; border: 1px solid var(--border-strong); border-radius: var(--radius-md); background: var(--bg-tertiary); overflow: hidden; }
+.is-pr-list:empty { display: none; }
+.is-pr-item { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .2rem .8rem; padding: .5rem .8rem; border-bottom: 1px solid var(--border); font-size: .95rem; }
+.is-pr-item:last-child { border-bottom: 0; }
+.is-pr-item b { font-weight: 700; }
+.is-pr-score { font: .78rem var(--font-mono); color: var(--text-secondary); }
+.is-dss .is-dss-axis { stroke: var(--border-strong); stroke-width: 1.5; }
+.is-dss .is-dss-declined { fill: var(--lab-bad); opacity: .35; }
+.is-dss .is-dss-approved { fill: var(--lab-good); opacity: .35; }
+.is-dss .is-dss-name { fill: var(--text-primary); font: 700 13px var(--font-body); }
+.is-dss .is-dss-ok { fill: #2f9461; stroke: var(--surface); stroke-width: 1.5; }
+.is-dss .is-dss-bad { fill: #d9534a; stroke: var(--surface); stroke-width: 1.5; }
+.is-dss .is-dss-th { stroke: var(--text-primary); stroke-width: 2; }
