@@ -5,6 +5,8 @@
 
    Labs.el(tag, cls, text)            create an element
    Labs.shell(host, cls, title, lead) fill a lab host with its kicker, title and lead
+   Labs.fit(svg)                      keep an svg's text the same size on screen: sets --u, the number of drawing units in one screen pixel,
+                                      so CSS can write font-size: calc(13px * var(--u, 1))
    Labs.table(headers, opts)          a lab table: { wrap, tbody, clear(), add(cells, rowClass) }
    Labs.sorter(host, config)          a "which category does this belong to?" practice set */
 (() => {
@@ -23,6 +25,17 @@
     if (cls) host.classList.add(cls);
     host.append(el('p', 'lab-kicker', 'Try it'), el('h4', 'lab-title', title), el('p', 'lab-lead', lead));
     return host;
+  }
+
+  /* Text drawn inside an svg scales with the picture. Setting --u (drawing units per screen pixel) lets CSS keep it readable at any width. */
+  function fit(svg) {
+    const update = () => {
+      const vb = svg.viewBox && svg.viewBox.baseVal, w = svg.getBoundingClientRect().width;
+      if (vb && vb.width && w) svg.style.setProperty('--u', (vb.width / w).toFixed(3));
+    };
+    update();
+    if (!svg._labsFit && 'ResizeObserver' in window) { svg._labsFit = new ResizeObserver(update); svg._labsFit.observe(svg); }
+    return update;
   }
 
   /* A lab table. Cells are strings or DOM nodes; opts.num lists the right-aligned numeric columns and
@@ -146,5 +159,5 @@
     show();
   }
 
-  window.Labs = { el, shell, table, sorter };
+  window.Labs = { el, shell, table, sorter, fit };
 })();
