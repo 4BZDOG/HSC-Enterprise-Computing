@@ -51,8 +51,9 @@
   <script>(function(){try{var t=localStorage.getItem('ec-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
   <link rel="stylesheet" href="../css/styles.css?v=4473cb26" />
   <link rel="stylesheet" href="../css/theme.css?v=a29ce4bd" />
-  <link rel="stylesheet" href="../css/anim.css?v=22e246f7" />
-  <link rel="stylesheet" href="../css/pages/networking-systems.css?v=f348b8e4" />
+  <link rel="stylesheet" href="../css/anim.css?v=1fecdf2c" />
+  <link rel="stylesheet" href="../css/labs.css?v=74999441" />
+  <link rel="stylesheet" href="../css/pages/networking-systems.css?v=559a137f" />
 </head>
 <body>
 
@@ -653,6 +654,12 @@
           </div>
           <div class="callout info"><strong>Scenario</strong> A farm co-op needs (a) a place to run its legacy stock-control program that needs a particular Windows Server, (b) a way to publish a new online ordering app, and (c) email and calendars for 40 members. Best fits: (a) <strong>IaaS</strong>, because the co-op needs control of the operating system; (b) <strong>PaaS</strong>, so the developer focuses on code and not servers; (c) <strong>SaaS</strong>, because email is a standard service that needs no customisation.</div>
           <div class="callout assessor"><strong>Assessor tip</strong> Multiple-choice items usually give a scenario and ask which model applies. Ask: <em>who is managing the operating system and application?</em> If it is the customer, think IaaS; if the customer manages only code, PaaS; if the customer only uses the finished product, SaaS.</div>
+
+          <div data-net="cloud-models" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">IaaS, PaaS or SaaS?</h4>
+            <p class="lab-lead">Practise choosing the cloud service model for a situation. Enable JavaScript to use this tool. In short: the more you manage yourself, the closer to IaaS; the less you manage, the closer to SaaS.</p>
+          </div>
         </section>
 
         <hr class="divider" />
@@ -688,6 +695,12 @@
           <tr><td><strong>Good for</strong></td><td>Collaboration, start-ups, variable demand</td><td>Regulated or sensitive data</td><td>Mixed sensitivity and demand</td><td>Small sites, low latency, offline needs</td></tr>
           </tbody></table>
           </div>
+          <div data-net="cloud-storage" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Which storage type?</h4>
+            <p class="lab-lead">Practise choosing public, private, hybrid or on-premises storage for a situation. Enable JavaScript to use this tool. In short: compare who can access the data and which services the organisation gets.</p>
+          </div>
+
           <div class="callout info"><strong>Scenario</strong> A regional GP clinic must keep patient records private and available during internet outages, but wants cheap off-site backups. A sensible choice is <strong>hybrid</strong>: keep the active records on a server in the clinic (on premises), and copy encrypted backups to a public cloud region in Australia.</div>
           <div class="callout assessor"><strong>Assessor tip</strong> <em>Compare</em> needs similarities and differences on the same criteria. Use the two criteria the dot point names, access and services, and do not just describe each type separately. End with which type suits the scenario and why.</div>
         </section>
@@ -856,6 +869,12 @@
           </div>
           </figure>
 
+          <div data-net="wifi" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Wi-Fi signal explorer</h4>
+            <p class="lab-lead">Move a router around a floor plan and see how distance and walls change the signal. Enable JavaScript to use this tool. In short: a signal weakens with distance and again at every wall, so a central position behind few walls gives the best coverage.</p>
+          </div>
+
           <h3>Environmental barriers</h3>
           <p>Weather and natural conditions affect signals too. Heavy rain can weaken satellite and microwave links (<em>rain fade</em>), trees and foliage absorb some radio signals, lightning and power surges damage equipment, and flooding, fire, heat and wind can damage cables, towers and data centres. Undersea cables can be cut by anchors, landslides or volcanic activity. In January 2022 an eruption near Tonga damaged the submarine cable that connected the country to the internet, cutting most of its international connection for several weeks. Networks reduce the risk by using diverse routes and backup links.</p>
           <div class="table-wrap">
@@ -910,6 +929,12 @@
             <p class="figure-try"><strong>Try this</strong>Which of the monitoring measures (latency, jitter, packet loss) would show the problem in the lost-packet journey?</p>
           </div>
           </figure>
+
+          <div data-net="transfer" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">How long will the transfer take?</h4>
+            <p class="lab-lead">Compare connections and change the signal, congestion and priority. Enable JavaScript to use this tool. In short: time = size ÷ speed, and the speed you actually get falls with a weak signal and with other traffic on the link.</p>
+          </div>
 
           <h3>Wireless broadband, Bluetooth and Wi-Fi</h3>
           <ul>
@@ -1243,6 +1268,12 @@
 
           <h3>Backup and disaster recovery</h3>
           <p>Data can be lost through hardware failure, theft, fire, mistakes and ransomware. Follow the <strong>3-2-1 rule</strong> (three copies, two types of storage, one off site), automate backups, and <strong>test that a restore works</strong>. Keep a copy of router and device configurations so replacement is quick. A <strong>disaster recovery plan</strong> lists what to restore first, and how long the household or business can afford to be without it (the <em>recovery time objective</em>) and how much recent data it can afford to lose (the <em>recovery point objective</em>).</p>
+          <div data-net="homesec" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Smart home security audit</h4>
+            <p class="lab-lead">Harden a default home network and see which attacks it stops. Enable JavaScript to use this tool. In short: change default passwords, turn off UPnP and remote administration, keep IoT devices on a separate network, update automatically and keep a tested backup.</p>
+          </div>
+
           <div class="table-wrap">
           <table>
           <thead><tr><th>Measure</th><th>How it helps</th><th>Limitation</th></tr></thead>
@@ -1715,7 +1746,8 @@
   </div>
   <script src="../js/progress.js?v=fd3fe0bd" defer></script>
   <script src="../js/topic-header.js?v=af48f2c4" defer></script>
-  <script src="../js/anim.js?v=f09b8c1b" defer></script>
-  <script src="../js/pages/networking-systems.js?v=136b1b92" defer></script>
+  <script src="../js/anim.js?v=c2e454df" defer></script>
+  <script src="../js/labs.js?v=ff21362e" defer></script>
+  <script src="../js/pages/networking-systems.js?v=0184e5ba" defer></script>
 </body>
 </html>

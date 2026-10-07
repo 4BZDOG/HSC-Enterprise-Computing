@@ -51,8 +51,9 @@
   <script>(function(){try{var t=localStorage.getItem('ec-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
   <link rel="stylesheet" href="../css/styles.css?v=4473cb26" />
   <link rel="stylesheet" href="../css/theme.css?v=a29ce4bd" />
-  <link rel="stylesheet" href="../css/anim.css?v=22e246f7" />
-  <link rel="stylesheet" href="../css/pages/cybersecurity.css?v=2d524f2f" />
+  <link rel="stylesheet" href="../css/anim.css?v=1fecdf2c" />
+  <link rel="stylesheet" href="../css/labs.css?v=74999441" />
+  <link rel="stylesheet" href="../css/pages/cybersecurity.css?v=ea71bf1a" />
 </head>
 <body>
 
@@ -483,6 +484,12 @@
             </div>
           </figure>
 
+          <div data-cy="cia" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Which attribute failed?</h4>
+            <p class="lab-lead">Read each incident and choose the attribute that failed first, then read why. Enable JavaScript to use this tool. In short: confidentiality is about who can see data, integrity about whether it is correct, and availability about whether it can be used.</p>
+          </div>
+
           <h3>Confidentiality of information</h3>
           <p>Confidentiality means only authorised people and systems can view information. It is breached by <em>disclosure</em>: theft of a database, an email sent to the wrong person, a misconfigured cloud storage bucket left open to the internet, or an insider copying files. <strong>Example:</strong> the Medibank data stolen in 2022 was later published online, an extreme confidentiality failure. <strong>Controls:</strong> encryption, access control, MFA, data classification and staff training.</p>
 
@@ -626,6 +633,12 @@
           </div>
           <p>Smishing works well because people trust text messages, screens are small so a dodgy link is harder to inspect, and messages can appear in the same conversation thread as genuine ones from that organisation. Enterprise controls include email and SMS filtering, MFA, training with simulated phishing, a simple way for staff to report suspicious messages and clear rules that no one will ever be asked for a password or code by message.</p>
 
+          <div data-cy="phish" class="lab cy-phish">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Phishing spotter</h4>
+            <p class="lab-lead">Choose a message and click every part that is a warning sign, then check your answers. Enable JavaScript to use this tool. In short: look at the sender's real address, any pressure to act now, requests for money or passwords, and where a link really goes.</p>
+          </div>
+
           <h3>Scamming</h3>
           <p>A scam is a deception designed to make the victim hand over money or information voluntarily. Enterprises are targeted by <strong>business email compromise (BEC)</strong> and <em>invoice redirection</em> scams, where a criminal poses as a supplier or executive and asks for a payment to a new bank account; fake tech-support or investment offers; and fake job or supplier enquiries. All exploit human trust: urgency, authority and fear of getting into trouble. Because no malware is needed and the victim authorises the payment, technical controls alone are not enough. Strong <em>processes</em> stop them: call the supplier back on a known number before changing bank details, and require two people to approve large payments. The National Anti-Scam Centre's Scamwatch collects reports and publishes warnings.</p>
 
@@ -699,6 +712,12 @@
             </div>
           </figure>
 
+          <div data-cy="segment" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Contain the breach</h4>
+            <p class="lab-lead">Click a device to take it over and see what it can reach, on a flat and on a segmented network. Enable JavaScript to use this tool. In short: on a flat network one compromised device can reach almost everything, while firewall rules between zones keep an attacker in the zone they started in.</p>
+          </div>
+
           <h3>Physical security</h3>
           <p>If an attacker can touch a device, many software protections fail. Physical controls include locks and access cards on server rooms, CCTV, visitor sign-in and escorts, cable locks and lockable racks, secure disposal of drives and paper, and a clean-desk policy. Staff are trained to challenge <em>tailgating</em>, where an unauthorised person follows an employee through a secured door. Portable devices need encryption and remote-wipe in case they are lost. The controls also protect availability from fire, flood and power loss.</p>
 
@@ -732,6 +751,12 @@
               <p class="figure-try"><strong>Try this</strong>On the plain HTTP tab, what exactly can the eavesdropper read that they cannot read on the HTTPS tab?</p>
             </div>
           </figure>
+          <div data-cy="cipher" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Caesar cipher: algorithm, key and cipher text</h4>
+            <p class="lab-lead">Shift each letter to turn plain text into cipher text, then try every key as an eavesdropper. Enable JavaScript to use this tool. In short: a Caesar cipher has only 25 keys, so it is cracked by trying them all, which is why real encryption uses very long keys.</p>
+          </div>
+
           <p><strong>Permissions</strong> apply least privilege: file and database permissions (read, write, delete, execute) are given by role, reviewed regularly and removed when people change jobs, and administrator accounts are separate from everyday accounts.</p>
 
           <h3>Multi-factor authentication</h3>
@@ -1271,7 +1296,8 @@
   </div>
   <script src="../js/progress.js?v=fd3fe0bd" defer></script>
   <script src="../js/topic-header.js?v=af48f2c4" defer></script>
-  <script src="../js/anim.js?v=f09b8c1b" defer></script>
-  <script src="../js/pages/cybersecurity.js?v=5cb94284" defer></script>
+  <script src="../js/anim.js?v=c2e454df" defer></script>
+  <script src="../js/labs.js?v=ff21362e" defer></script>
+  <script src="../js/pages/cybersecurity.js?v=90fcb534" defer></script>
 </body>
 </html>

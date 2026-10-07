@@ -51,8 +51,9 @@
   <script>(function(){try{var t=localStorage.getItem('ec-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
   <link rel="stylesheet" href="../css/styles.css?v=4473cb26" />
   <link rel="stylesheet" href="../css/theme.css?v=a29ce4bd" />
-  <link rel="stylesheet" href="../css/anim.css?v=22e246f7" />
-  <link rel="stylesheet" href="../css/pages/interactive-media.css?v=13071842" />
+  <link rel="stylesheet" href="../css/anim.css?v=1fecdf2c" />
+  <link rel="stylesheet" href="../css/labs.css?v=74999441" />
+  <link rel="stylesheet" href="../css/pages/interactive-media.css?v=3f02c090" />
 </head>
 <body>
 
@@ -472,6 +473,12 @@
             <li><strong>CD-quality stereo audio:</strong> 44,100 samples/s × 16 bits × 2 channels = 1,411,200 bits per second, about 10.6 MB per minute.</li>
           </ul>
 
+          <div data-im="hardware" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Which hardware matters most?</h4>
+            <p class="lab-lead">Practise matching a project to the hardware that limits it. Enable JavaScript to use this tool. In short: VR needs a graphics processor, large layered images need RAM, 4K editing needs fast storage, recording needs good audio capture and multiplayer games need a good network.</p>
+          </div>
+
           <h3>Making the judgement</h3>
           <div class="callout info"><strong>Scenario</strong> A school's media club will edit short documentaries in full HD. Option A is a standard laptop with 8 GB RAM, integrated graphics and a 256 GB drive. Option B is a laptop with 32 GB RAM, a dedicated GPU and a 1 TB SSD. Against the requirements: Option A can edit, but timelines will stutter, exports will be slow and 256 GB fills after a few projects, so storage would need to be added. Option B meets the need with room to grow but costs more and is heavier. <strong>Judgement:</strong> Option B, or A with extra fast external storage if the budget is tight, because the club's requirement is smooth editing of large files; RAM and storage matter more than display size. Note the trade-off explicitly and state the assumptions (these specifications are examples only).</div>
           <div class="callout assessor"><strong>HSC exam focus</strong> "Evaluate" needs criteria, evidence and a <em>judgement</em>. State the project's requirements first, compare at least two options against them, weigh cost, performance, portability and the audience's devices, and finish with a clear recommendation with a reason. Listing components without a decision earns few marks.</div>
@@ -815,6 +822,12 @@
           </div>
           <div class="callout tip"><strong>Using formats well</strong> Keep an uncompressed or lossless <em>master</em> (WAV, PNG or original camera file) and export a smaller copy for each use. Never edit a JPEG or MP3 again and again, because each save loses more quality. Resize images to the size they are shown before you upload them. Give files clear, lowercase names without spaces (<code>ranger-interview.mp4</code>), and always add alternative text for images and captions for video.</div>
           <div class="callout assessor"><strong>HSC exam focus</strong> "Select" questions give a purpose and ask for a format <em>with a reason</em>. Reasons that earn marks are specific: "PNG because the logo needs a transparent background and sharp edges", "MP3 because the podcast needs small files that play on any device". Naming only a format, or saying "because it is better", does not.</div>
+
+          <div data-im="formats" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Which file format?</h4>
+            <p class="lab-lead">Practise choosing a format for a defined purpose. Enable JavaScript to use this tool. In short: SVG for scalable logos, JPEG for photographs, PNG for sharp or transparent graphics, GIF for tiny animations, WAV for masters, MP3 for streaming audio and MP4 for video.</p>
+          </div>
         </section>
 
         <hr class="divider" />
@@ -935,6 +948,12 @@
           <h3>Digitising video</h3>
           <p>Video is a sequence of images (<strong>frames</strong>) plus sound. Its size depends on resolution, <strong>frame rate</strong> (frames per second), colour depth and length, and then on the <strong>bitrate</strong> chosen by the codec. As calculated earlier, uncompressed high-definition video is enormous, so video is <em>always</em> compressed for storage and streaming.</p>
 
+          <div data-im="size" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Asset size calculator</h4>
+            <p class="lab-lead">Work out the uncompressed size of an image, a sound or a video clip. Enable JavaScript to use this tool. In short: image bytes = width × height × bits per pixel ÷ 8; sound bits per second = sampling rate × bit depth × channels; and video multiplies the frame size by the frames per second and the seconds.</p>
+          </div>
+
           <h3>Data compression</h3>
           <p>NESA's glossary defines <strong>data compression</strong> as a reduction in the number of bits needed to represent data. It saves storage and speeds up transmission. There are two families.</p>
           <h4>Lossless compression</h4>
@@ -1048,6 +1067,12 @@
           <p>Accessibility is also a legal matter. The Disability Discrimination Act 1992 (Cth) makes discrimination on the basis of disability unlawful in the provision of services, and inaccessible websites can breach it. WCAG is the accepted technical measure. Accessible design also helps many people without disability: captions in noisy places, high contrast in bright light, and keyboard shortcuts for speed.</p>
           <div class="callout info"><strong>Scenario</strong> A local pool's booking page uses pale grey text on white, a "Book" icon with no label, and a date picker that can only be operated with a mouse. Fixes: darken the text to meet the 4.5:1 contrast ratio, add a text label to the icon, use a standard date input that also works with the keyboard, and provide visible focus outlines. Each change improves the UX for everyone and removes a barrier for some.</div>
           <div class="callout assessor"><strong>HSC exam focus</strong> "Explain how the UI impacts the UX" wants cause and effect: name a UI feature, say what the user experiences as a result, and say why. For example, "consistent navigation lets users predict where to find things, which reduces errors and effort, so the experience is more efficient". Keep the two terms distinct: UI is the interface, UX is the overall experience.</div>
+
+          <div data-im="contrast" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Contrast checker</h4>
+            <p class="lab-lead">Test a text and background colour against the WCAG contrast ratios. Enable JavaScript to use this tool. In short: normal text needs a contrast ratio of at least 4.5:1 and large text at least 3:1.</p>
+          </div>
         </section>
 
         <hr class="divider" />
@@ -1582,8 +1607,9 @@
       </div>
     </div>
   </div>
-  <script src="../js/anim.js?v=f09b8c1b" defer></script>
-  <script src="../js/pages/interactive-media.js?v=42dceaa2" defer></script>
+  <script src="../js/anim.js?v=c2e454df" defer></script>
+  <script src="../js/labs.js?v=ff21362e" defer></script>
+  <script src="../js/pages/interactive-media.js?v=82b2b155" defer></script>
   <script src="../js/progress.js?v=fd3fe0bd" defer></script>
   <script src="../js/topic-header.js?v=af48f2c4" defer></script>
 </body>
