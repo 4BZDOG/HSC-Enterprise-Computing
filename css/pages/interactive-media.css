@@ -47,3 +47,14 @@
   .im-demo { padding: .85rem .8rem 1rem; }
 }
 @media (prefers-reduced-motion: reduce) { .im-demo * { transition: none !important; animation: none !important; } }
+
+/* Labs built on the shared kit (css/labs.css) */
+.im-size-fields { align-items: flex-end; }
+.im-size .lab-panel .lab-list { list-style: decimal; }
+.im-size .lab-panel li { overflow-wrap: anywhere; font-size: .86rem; }
+.im-con-preview { display: grid; gap: .8rem; justify-items: start; margin: 0 0 .9rem; padding: 1rem; border: 1px solid var(--border-strong); border-radius: var(--radius-md); background: var(--bg-tertiary); }
+.im-con-sample { margin: 0; padding: .7rem .9rem; border-radius: var(--radius-md); line-height: 1.35; max-width: 100%; border: 1px solid rgba(128, 128, 128, .35); }
+.im-con-btn { display: inline-block; padding: .55rem 1.2rem; border-radius: var(--radius-md); line-height: 1.2; border: 1px solid rgba(128, 128, 128, .35); }
+.im-contrast input[type="color"] { width: 3.6rem; height: 2.5rem; padding: 2px; cursor: pointer; }
+.im-contrast .lab-chips { display: inline-flex; }
+.im-contrast .lab-label { font-weight: 600; font-size: .84rem; }

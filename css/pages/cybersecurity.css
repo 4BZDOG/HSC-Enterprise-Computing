@@ -107,3 +107,70 @@
 }
 .cy-risk > div, .cy-pass > div { min-width: 0; }
 .cy-widget { min-width: 0; max-width: 100%; }
+
+/* Phishing spotter */
+.cy-msg { border: 1px solid var(--border-strong); border-radius: var(--radius-md); background: var(--bg-tertiary); padding: .85rem 1rem; font-size: .93rem; line-height: 1.6; }
+.cy-msg-line { margin: 0 0 .5rem; overflow-wrap: anywhere; }
+.cy-msg-line.has-head { margin-bottom: .2rem; }
+.cy-msg-head { font: 700 .78rem var(--font-mono); color: var(--text-secondary); text-transform: uppercase; letter-spacing: .04em; }
+.cy-msg--email .cy-msg-line.has-head + .cy-msg-line:not(.has-head) { margin-top: .8rem; padding-top: .8rem; border-top: 1px dashed var(--border-strong); }
+.cy-msg--sms { max-width: 26rem; background: var(--surface); border-radius: 1.1rem; }
+.cy-msg--sms .cy-msg-line:not(.has-head) { background: var(--bg-secondary); border-radius: .9rem .9rem .9rem .2rem; padding: .55rem .75rem; }
+.cy-msg--dm .cy-msg-line:not(.has-head) { background: var(--bg-secondary); border-radius: .9rem; padding: .5rem .75rem; max-width: 28rem; }
+.cy-spot {
+  font: inherit; color: inherit; cursor: pointer; padding: .05rem .25rem; margin: 0 -.05rem; text-align: left;
+  border: 1px dashed var(--border-strong); border-radius: var(--radius-sm); background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+.cy-spot:hover { border-color: var(--text-secondary); background: color-mix(in srgb, var(--accent) 22%, transparent); }
+.cy-spot[aria-pressed="true"] { border: 2px solid var(--primary); background: color-mix(in srgb, var(--primary) 18%, transparent); padding: .03rem .23rem; }
+.cy-spot.is-hit { border: 2px solid var(--lab-good-line); background: var(--lab-good); color: var(--lab-good-ink); padding: .03rem .23rem; }
+.cy-spot.is-miss { border: 2px dashed var(--lab-bad-line); background: var(--lab-bad); color: var(--lab-bad-ink); padding: .03rem .23rem; }
+.cy-spot.is-wrong { border: 2px solid var(--lab-warn-line); background: var(--lab-warn); color: var(--lab-warn-ink); text-decoration: line-through; padding: .03rem .23rem; }
+.cy-why h5 { margin: .4rem 0 .2rem; font: 700 .78rem var(--font-mono); letter-spacing: .05em; text-transform: uppercase; color: var(--text-secondary); }
+.cy-why .lab-badge { margin-right: .25rem; }
+.cy-phish > .lab-feedback { margin-top: .9rem; }
+
+/* Contain the breach */
+.cy-seg-net { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin: 0 0 .5rem; }
+.cy-seg-net-top, .cy-seg-fw { font: 700 .78rem var(--font-mono); letter-spacing: .05em; text-transform: uppercase; padding: .3rem .7rem; border-radius: var(--radius-md); }
+.cy-seg-net-top { background: var(--bg-secondary); color: var(--text-secondary); border: 1px dashed var(--border-strong); }
+.cy-seg-fw { background: color-mix(in srgb, var(--accent) 24%, transparent); border: 1px solid var(--accent); color: var(--text-primary); }
+.cy-seg-map { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .6rem; margin: 0 0 .9rem; align-items: stretch; }
+.cy-zone { border: 2px dashed var(--border-strong); border-radius: var(--radius-md); padding: .55rem .6rem .7rem; background: var(--bg-tertiary); display: flex; flex-direction: column; gap: .4rem; min-width: 0; }
+.cy-zone h5 { margin: 0; font: 700 .86rem var(--font-display); color: var(--text-primary); }
+.cy-zone-note { margin: 0 0 .1rem; font-size: .78rem; color: var(--text-secondary); line-height: 1.35; }
+.cy-seg:not(.is-segmented) .cy-seg-map { border: 2px dashed var(--lab-bad-line); border-radius: var(--radius-md); padding: .5rem; }
+.cy-seg:not(.is-segmented) .cy-zone { border-style: dotted; border-color: var(--border); }
+.cy-dev {
+  font: 600 .82rem/1.25 var(--font-body); text-align: left; padding: .5rem .55rem; min-height: 2.6rem; cursor: pointer;
+  border: 2px solid var(--border-strong); border-radius: var(--radius-md); background: var(--surface); color: var(--text-primary);
+  transition: background var(--transition), border-color var(--transition);
+}
+.cy-dev:hover { border-color: var(--text-secondary); }
+.cy-dev.is-attacker { border-color: var(--lab-bad-line); background: var(--lab-bad); color: var(--lab-bad-ink); box-shadow: 0 0 0 3px color-mix(in srgb, var(--lab-bad-line) 30%, transparent); }
+.cy-dev.is-reached { border-color: var(--lab-warn-line); background: var(--lab-warn); color: var(--lab-warn-ink); }
+.cy-dev.is-safe, .cy-dev.is-gap { border-color: var(--lab-good-line); background: var(--lab-good); color: var(--lab-good-ink); }
+.cy-dev.is-gap { border-style: dashed; }
+.cy-seg .lab-meter { margin: .7rem 0 .2rem; }
+@media (max-width: 760px) { .cy-seg-map { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 420px) { .cy-seg-map { grid-template-columns: minmax(0, 1fr); } }
+
+/* Which attribute failed? */
+.cy-cia-card { font-size: 1.02rem; margin: 0 0 .75rem; }
+.cy-cia .lab-score { margin: 0 0 .6rem; }
+
+/* Caesar cipher */
+.cy-cc-cipher strong, .cy-cipher .lab-panel p strong { color: var(--text-secondary); }
+.cy-cipher .lab-panel p { margin: .2rem 0; overflow-wrap: anywhere; }
+.cy-cc-cipher { font-family: var(--font-mono); font-size: 1.02rem; }
+.cy-cc-strip { display: grid; grid-template-columns: repeat(26, minmax(0, 1fr)); gap: 2px; margin: .8rem 0; font-family: var(--font-mono); }
+.cy-cc-cell { display: grid; text-align: center; border: 1px solid var(--border); border-radius: 3px; background: var(--bg-tertiary); overflow: hidden; }
+.cy-cc-cell span { font-size: .78rem; padding: .15rem 0; color: var(--text-secondary); }
+.cy-cc-cell b { font-size: .84rem; padding: .15rem 0; background: color-mix(in srgb, var(--primary) 16%, transparent); color: var(--text-primary); }
+.cy-cc-crack { margin: .8rem 0 0; }
+.cy-cc-crack summary { cursor: pointer; font-weight: 600; font-size: .92rem; padding: .3rem 0; }
+.cy-cc-crack .lab-table-wrap { max-height: 18rem; overflow-y: auto; margin: .5rem 0; }
+@media (max-width: 640px) { .cy-cc-strip { grid-template-columns: repeat(13, minmax(0, 1fr)); } }
+.cy-cipher .lab-row .lab-field:first-child { flex: 1 1 18rem; }
+.cy-cipher .lab-row .lab-field:first-child input { width: 100%; }
+.cy-cipher .lab-row .lab-field:last-child { flex: 0 1 14rem; }

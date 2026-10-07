@@ -46,3 +46,29 @@
 .net-matrix th, .net-matrix td { text-align: center !important; min-width: 2rem; }
 @media (prefers-reduced-motion: reduce) { .net-node circle { transition: none; } }
 @media (max-width: 520px) { .net-lab { padding: .75rem; } }
+
+/* Labs built on the shared kit (css/labs.css) */
+.net-wifi-stage canvas { cursor: crosshair; touch-action: pan-y; }
+.net-wifi .lab-chips { display: inline-flex; }
+.net-wifi .lab-label { font-weight: 600; font-size: .84rem; }
+.net-wifi-legend { display: flex; flex-wrap: wrap; gap: .3rem 1rem; margin: .5rem 0 .9rem; font-size: .8rem; color: var(--text-secondary); }
+.net-wifi-legend span { display: inline-flex; align-items: center; gap: .35rem; }
+.net-wifi-legend i { width: .9rem; height: .9rem; border-radius: 3px; display: inline-block; opacity: .85; border: 1px solid var(--border-strong); }
+.net-wifi .lab-table-wrap { margin: 0 0 .8rem; }
+.net-bars { display: grid; gap: .3rem; margin: .5rem 0 .9rem; }
+.net-bar { display: grid; grid-template-columns: minmax(7.5rem, 15rem) minmax(0, 1fr) minmax(5.5rem, 8rem); gap: .6rem; align-items: center; font-size: .85rem; }
+.net-bar-name { color: var(--text-secondary); }
+.net-bar-time { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+.net-bar-track { height: .7rem; background: var(--bg-secondary); border-radius: 999px; overflow: hidden; }
+.net-bar-fill { display: block; height: 100%; background: var(--border-strong); border-radius: 999px; }
+.net-bar.is-sel .net-bar-name { color: var(--text-primary); font-weight: 700; }
+.net-bar.is-sel .net-bar-fill { background: var(--primary); }
+.net-transfer h5.lab-sub, .net-transfer .lab-sub { margin: 1rem 0 .3rem; font: 700 .78rem var(--font-mono); letter-spacing: .05em; text-transform: uppercase; color: var(--text-secondary); }
+.net-hs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: .6rem .9rem; margin: 0 0 1rem; }
+.net-hs-score { align-items: center; }
+.net-hs-score .lab-meter { flex: 1 1 12rem; }
+.net-homesec .lab-table td:nth-child(3) { min-width: 14rem; }
+@media (max-width: 560px) {
+  .net-bar { grid-template-columns: minmax(0, 1fr) minmax(4.5rem, 6rem); }
+  .net-bar-track { grid-column: 1 / -1; grid-row: 2; }
+}

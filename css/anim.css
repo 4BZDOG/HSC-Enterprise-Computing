@@ -488,3 +488,13 @@
 /* Small labels in still diagrams stay legible */
 .anim-still .pa-t-sm { font-size: 12.5px; }
 .anim-still .pa-t-xs { font-size: 12px; }
+
+/* A wide still diagram scrolls inside its canvas; the hint says so */
+.figure-scrollhint {
+  margin: -.55rem 0 .8rem;
+  text-align: right;
+  font: 600 .75rem var(--font-mono);
+  color: var(--text-muted);
+}
+.figure-scrollhint::after { content: " \2192"; }
+.figure-canvas.is-scrollable { scrollbar-width: auto; }

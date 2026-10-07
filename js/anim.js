@@ -1735,6 +1735,25 @@
       if ('ResizeObserver' in window && def.layouts && def.layouts.tall) {
         new ResizeObserver(() => { if (this.pickMode() !== this.mode) this.draw(); }).observe(root);
       }
+      this.watchScroll();
+    }
+
+    // A wide diagram keeps its natural size and scrolls sideways inside its canvas.
+    // Say so in words, because overlay scrollbars hide until you touch the canvas.
+    watchScroll() {
+      const canvas = this.root.closest('.figure-canvas');
+      if (!canvas || !('ResizeObserver' in window)) return;
+      const hint = h('p', 'figure-scrollhint', 'Scroll sideways to see the whole diagram');
+      hint.hidden = true;
+      hint.setAttribute('aria-hidden', 'true');
+      canvas.after(hint);
+      const check = () => {
+        const wide = canvas.scrollWidth > canvas.clientWidth + 2;
+        canvas.classList.toggle('is-scrollable', wide);
+        hint.hidden = !wide;
+      };
+      new ResizeObserver(check).observe(canvas);
+      check();
     }
 
     pickMode() { return Player.prototype.pickMode.call(this); }
