@@ -120,3 +120,48 @@
 /* Keep field names as typed (the theme upper-cases table headings) */
 .ds-sheet th, .ds-table-wrap th, .ds-rel th { text-transform: none; letter-spacing: 0; }
 .ds-table-wrap tbody th { text-align: left; }
+
+/* Labs built on the shared kit (css/labs.css) */
+.ds-samp-dots svg, .ds-samp-hist svg { color: var(--text-secondary); }
+.ds-samp-legend { display: flex; flex-wrap: wrap; gap: .3rem 1rem; font-size: .8rem; color: var(--text-secondary); }
+.ds-samp-legend span { display: inline-flex; align-items: center; gap: .35rem; }
+.ds-samp-legend i { width: .8rem; height: .8rem; border-radius: 50%; display: inline-block; }
+.ds-sampling .lab-chips { margin-top: .1rem; }
+.ds-anomaly .lab-table { font-size: .82rem; }
+.ds-an-input { width: 7.5rem; font: inherit; padding: .2rem .4rem; }
+
+/* SQL practice */
+.sql-tables { margin: 0; padding: 0; list-style: none; display: grid; gap: .35rem; font-size: .88rem; }
+.sql-tables u { text-decoration-thickness: 2px; text-underline-offset: 2px; }
+.sql-data { margin-top: .6rem; font-size: .85rem; }
+.sql-data summary { cursor: pointer; font-weight: 600; }
+.sql-data-name { margin: .6rem 0 .2rem; font-weight: 700; font-size: .84rem; }
+.sql-data .lab-table { font-size: .78rem; }
+.sql-task { margin: 0; font-weight: 600; line-height: 1.5; }
+.sql-editor { font-family: var(--font-mono); font-size: .9rem; line-height: 1.55; tab-size: 4; }
+.sql-out { margin-top: .6rem; }
+.sql-result { margin-top: .6rem; }
+.sql-model { margin: .2rem 0 .6rem; }
+.sql-aux .lab-feedback { margin-top: 0; }
+
+/* Spreadsheet practice */
+.ds-sheet-task { margin: .5rem 0 .6rem; font-weight: 600; line-height: 1.5; }
+.ds-sheet-bar { display: flex; align-items: center; gap: .5rem; margin: 0 0 .5rem; }
+.ds-sheet-addr { flex: none; min-width: 3rem; padding: .35rem .5rem; text-align: center; font: 700 .85rem var(--font-mono); border: 1px solid var(--border-strong); border-radius: var(--radius-md); background: var(--bg-secondary); }
+.ds-sheet-fx { flex: none; font: italic 700 .9rem serif; color: var(--text-secondary); }
+.ds-sheet-bar input { flex: 1 1 auto; min-width: 0; font-family: var(--font-mono); font-size: .9rem; }
+.ds-sheet-wrap { max-height: 26rem; overflow: auto; }
+.ds-sheet-wrap:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.ds-sheet-grid { border-collapse: collapse; font-size: .8rem; font-variant-numeric: tabular-nums; width: max-content; min-width: 100%; margin: 0; }
+:root[data-theme] .lab .ds-sheet-grid th, :root[data-theme] .lab .ds-sheet-grid td { padding: .2rem .45rem; border: 1px solid var(--border); white-space: nowrap; background: var(--surface); color: var(--text-primary); font-weight: 400; line-height: 1.4; text-align: left; }
+:root[data-theme] .lab .ds-sheet-grid thead th, :root[data-theme] .lab .ds-sheet-grid .ds-sheet-rowh { background: var(--bg-secondary); color: var(--text-secondary); font: 700 .72rem var(--font-mono); text-align: center; position: sticky; z-index: 1; }
+:root[data-theme] .lab .ds-sheet-grid thead th { top: 0; }
+:root[data-theme] .lab .ds-sheet-grid .ds-sheet-rowh { left: 0; }
+:root[data-theme] .lab .ds-sheet-grid td.is-head { font-weight: 700; background: var(--bg-tertiary); }
+:root[data-theme] .lab .ds-sheet-grid td.is-num { text-align: right; }
+:root[data-theme] .lab .ds-sheet-grid td.is-formula { background: color-mix(in srgb, var(--primary) 7%, var(--surface)); }
+:root[data-theme] .lab .ds-sheet-grid td.is-err { color: var(--lab-bad-ink); background: var(--lab-bad); font-weight: 700; }
+:root[data-theme] .lab .ds-sheet-grid td.is-ref { outline: 2px dashed var(--lab-info-line); outline-offset: -2px; background: var(--lab-info); color: var(--lab-info-ink); }
+:root[data-theme] .lab .ds-sheet-grid td.is-sel { outline: 3px solid var(--primary); outline-offset: -2px; position: relative; z-index: 1; }
+.ds-sheet-grid td { cursor: cell; }
+.ds-anomaly .lab-split { grid-template-columns: minmax(0, 1fr); }

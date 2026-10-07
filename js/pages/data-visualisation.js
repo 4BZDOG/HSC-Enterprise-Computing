@@ -238,3 +238,240 @@
   build();
   render();
 })();
+
+/* Data visualisation: labs built on the shared kit (css/labs.css, js/labs.js).
+   1. OLAP explorer: slice, dice, drill down, roll up and pivot a small cube of fictional cafe sales.
+   2. Practice sets: which chart answers the question, what is wrong with this chart, and which validation check catches this value.
+   All data is fictional. */
+(function () {
+  'use strict';
+  var el = Labs.el;
+  var NS = 'http://www.w3.org/2000/svg';
+  function svgEl(tag, attrs, parent) { var e = document.createElementNS(NS, tag); for (var k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.append(e); return e; }
+
+  /* ---------- 1. OLAP explorer ---------- */
+  var REGIONS = ['Coast', 'Inland'], PRODUCTS = ['Coffee', 'Cake', 'Tea'], QUARTERS = ['Q1', 'Q2', 'Q3', 'Q4'];
+  var MONTHS = [['Jan', 'Feb', 'Mar'], ['Apr', 'May', 'Jun'], ['Jul', 'Aug', 'Sep'], ['Oct', 'Nov', 'Dec']];
+  // Sales in $000: SALES[region][product][quarter]. Totals match the worked figures in the notes (Coast 336, Inland 236, all 572).
+  var SALES = { Coast: { Coffee: [40, 44, 52, 48], Cake: [20, 22, 26, 30], Tea: [12, 14, 15, 13] }, Inland: { Coffee: [27, 31, 33, 31], Cake: [14, 15, 17, 21], Tea: [10, 11, 13, 13] } };
+  function split3(t) { var b = Math.floor(t / 3), r = t - 3 * b; return r === 0 ? [b, b, b] : r === 1 ? [b, b + 1, b] : [b + 1, b + 1, b]; }
+  var DIMS = { Region: REGIONS, Product: PRODUCTS, Time: null };
+
+  function buildOlap(host) {
+    Labs.shell(host, 'dv-olap-lab', 'OLAP cube explorer', 'This cube holds fictional café sales in thousands of dollars, by Product, Region and Time. Change the view and the tool names the OLAP operation you have just used. Each operation only changes how the same numbers are viewed.');
+    var st = { rows: 'Product', cols: 'Time', level: 'Quarter', sel: { Region: { Coast: true, Inland: true }, Product: { Coffee: true, Cake: true, Tea: true }, Time: { Q1: true, Q2: true, Q3: true, Q4: true } } };
+
+    var row = el('div', 'lab-row');
+    function pickDim(label, key) {
+      var f = el('div', 'lab-field'), l = el('label', null, label), s = el('select'); l.htmlFor = s.id = 'dv-olap-' + key;
+      ['Product', 'Time', 'Region'].forEach(function (d) { var o = el('option', null, d); o.value = d; s.append(o); });
+      s.value = st[key]; s.addEventListener('change', function () { st[key] = s.value; if (st.rows === st.cols) { var other = key === 'rows' ? 'cols' : 'rows'; st[other] = ['Product', 'Time', 'Region'].filter(function (d) { return d !== st[key] && d !== (key === 'rows' ? st.cols : st.rows); })[0] || 'Region'; } sync(); update(); });
+      f.append(l, s); row.append(f); return s;
+    }
+    var sRows = pickDim('Down the side', 'rows'), sCols = pickDim('Across the top', 'cols');
+    var fl = el('div', 'lab-field'); fl.append(el('span', 'lab-label', 'Time level'));
+    var lv = el('div', 'lab-seg'); lv.setAttribute('role', 'group'); lv.setAttribute('aria-label', 'Time level');
+    var lvBtn = {};
+    ['Year', 'Quarter', 'Month'].forEach(function (n) { var b = el('button', null, n); b.type = 'button'; b.addEventListener('click', function () { st.level = n; update(); }); lv.append(b); lvBtn[n] = b; });
+    fl.append(lv); row.append(fl); host.append(row);
+
+    var filters = el('div', 'lab-row dv-olap-filters'); host.append(filters);
+    var tableBox = el('div'); var ops = el('div', 'lab-readout'); ops.setAttribute('role', 'status');
+    host.append(tableBox, ops);
+    host.append(el('p', 'lab-note', 'Slice and dice keep some values and hide the rest. Drill-down and roll-up change the level of detail inside a hierarchy (year, quarter, month). Pivot swaps the axes. Dimensions not on an axis are added together (rolled up). Quarter and month figures are the fictional values from the notes; the months in each quarter are split evenly.'));
+
+    function sync() { /* keep the selects in step */ sRows.value = st.rows; sCols.value = st.cols; }
+    function timeValues() { return st.level === 'Year' ? ['Year'] : st.level === 'Quarter' ? QUARTERS : [].concat.apply([], MONTHS); }
+    function valuesOf(dim) { return dim === 'Time' ? timeValues() : DIMS[dim]; }
+    function quarterOf(m) { for (var q = 0; q < 4; q++) if (MONTHS[q].indexOf(m) >= 0) return q; return 0; }
+    function cell(regions, products, timeKey) {
+      var total = 0;
+      regions.forEach(function (r) { products.forEach(function (p) {
+        var q = SALES[r][p];
+        if (timeKey === 'Year') total += q.reduce(function (a, b) { return a + b; }, 0);
+        else if (QUARTERS.indexOf(timeKey) >= 0) total += q[QUARTERS.indexOf(timeKey)];
+        else { var qi = quarterOf(timeKey); total += split3(q[qi])[MONTHS[qi].indexOf(timeKey)]; }
+      }); });
+      return total;
+    }
+    function keptTime() { // the time values allowed by the quarter filter
+      return timeValues().filter(function (t) { if (t === 'Year') return true; var q = QUARTERS.indexOf(t) >= 0 ? QUARTERS.indexOf(t) : quarterOf(t); return st.sel.Time[QUARTERS[q]]; });
+    }
+    function chosen(dim) { return dim === 'Time' ? keptTime() : DIMS[dim].filter(function (v) { return st.sel[dim][v]; }); }
+
+    function drawFilters() {
+      filters.replaceChildren();
+      ['Region', 'Product', 'Time'].forEach(function (dim) {
+        var f = el('fieldset', 'dv-olap-set'); f.append(el('legend', null, dim === 'Time' ? 'Quarters included' : dim + 's included'));
+        (dim === 'Time' ? QUARTERS : DIMS[dim]).forEach(function (v) {
+          var l = el('label', 'lab-check'), c = el('input'); c.type = 'checkbox'; c.checked = !!st.sel[dim][v]; l.append(c, document.createTextNode(v));
+          c.addEventListener('change', function () { st.sel[dim][v] = c.checked; if (!Object.keys(st.sel[dim]).some(function (k) { return st.sel[dim][k]; })) { st.sel[dim][v] = true; } update(); });
+          f.append(l);
+        });
+        filters.append(f);
+      });
+    }
+    function update() {
+      Object.keys(lvBtn).forEach(function (n) { lvBtn[n].setAttribute('aria-pressed', String(st.level === n)); });
+      drawFilters();
+      var third = ['Product', 'Time', 'Region'].filter(function (d) { return d !== st.rows && d !== st.cols; })[0];
+      var rv = chosen(st.rows), cv = chosen(st.cols);
+      var tab = Labs.table([st.rows + ' \\ ' + st.cols].concat(cv).concat(['Total']), { num: cv.map(function (c, i) { return i + 1; }).concat([cv.length + 1]) });
+      function val(rKey, cKey) {
+        var ctx = { Region: chosen('Region'), Product: chosen('Product'), Time: null };
+        var tKey = null;
+        [[st.rows, rKey], [st.cols, cKey]].forEach(function (p) { if (p[0] === 'Region') ctx.Region = [p[1]]; else if (p[0] === 'Product') ctx.Product = [p[1]]; else tKey = p[1]; });
+        if (tKey !== null) return cell(ctx.Region, ctx.Product, tKey);
+        // time is the third dimension: add up the kept time values at this level
+        return keptTime().reduce(function (a, t) { return a + cell(ctx.Region, ctx.Product, t); }, 0);
+      }
+      var colTot = cv.map(function () { return 0; }), grand = 0;
+      rv.forEach(function (r) {
+        var rowTot = 0, cells = [r];
+        cv.forEach(function (c, i) { var v = val(r, c); rowTot += v; colTot[i] += v; cells.push(String(v)); });
+        grand += rowTot; cells.push(String(rowTot)); tab.add(cells);
+      });
+      tab.add(['Total'].concat(colTot.map(String)).concat([String(grand)]), 'is-sel');
+      tableBox.replaceChildren(tab.wrap);
+      // Name the operations in use, compared with the starting view (Product by Quarter, everything included)
+      var used = [];
+      var dimsKept = {};
+      ['Region', 'Product'].forEach(function (d) { dimsKept[d] = chosen(d).length; });
+      var timeQ = QUARTERS.filter(function (q) { return st.sel.Time[q]; }).length;
+      var sliced = [], diced = [];
+      [['Region', REGIONS.length], ['Product', PRODUCTS.length], ['Time', 4]].forEach(function (p) {
+        var kept = p[0] === 'Time' ? timeQ : dimsKept[p[0]];
+        if (kept === 1) sliced.push(p[0] + ' = ' + (p[0] === 'Time' ? QUARTERS.filter(function (q) { return st.sel.Time[q]; })[0] : chosen(p[0])[0]));
+        else if (kept < p[1]) diced.push(p[0] + ' limited to ' + (p[0] === 'Time' ? QUARTERS.filter(function (q) { return st.sel.Time[q]; }).join(', ') : chosen(p[0]).join(', ')));
+      });
+      if (sliced.length) used.push('Slice (' + sliced.join('; ') + '): one dimension is fixed to a single value.');
+      if (diced.length || sliced.length > 1) used.push('Dice (' + diced.concat(sliced.length > 1 ? ['two dimensions fixed'] : []).join('; ') + '): values chosen on more than one dimension give a smaller sub-cube.');
+      if (st.level === 'Month') used.push('Drill-down: Time moved from Quarter down to Month, which is more detail.');
+      if (st.level === 'Year') used.push('Roll-up: Time moved from Quarter up to Year, which is less detail.');
+      var startView = st.rows === 'Product' && st.cols === 'Time';
+      if (!startView && third !== 'Time' && chosen(third).length > 1) used.push('Roll-up: ' + third + ' is not on an axis, so its values are added together.');
+      else if (!startView && third === 'Time' && keptTime().length > 1) used.push('Roll-up: Time is not on an axis, so its values are added together.');
+      else if (startView && chosen('Region').length > 1) used.push('Roll-up: Region is not on an axis, so Coast and Inland are added together.');
+      if (st.rows !== 'Product' || st.cols !== 'Time') used.push('Pivot: the axes are arranged differently from the starting view (Product down the side, Time across the top). It is the same data viewed from another angle.');
+      ops.className = 'lab-readout';
+      var onlyBase = used.length === 1 && used[0].indexOf('Region is not on an axis') > -1 && st.level === 'Quarter';
+      if (onlyBase) used = [];
+      ops.replaceChildren(el('p', null, used.length ? 'Operations in this view:' : 'This is the starting view: Product down the side, Quarter across the top, with Coast and Inland added together. Nothing has been sliced, diced, drilled or pivoted yet.'));
+      if (used.length) { var ul = el('ul', 'lab-list'); used.forEach(function (u) { ul.append(el('li', null, u)); }); ops.append(ul); }
+      ops.append(el('p', 'lab-note', 'The grand total of the cells shown is $' + grand + ' thousand. Try: tick only Coast (slice), then tick only Coffee and Cake and Q3 and Q4 as well (dice), then change the time level to Month (drill-down).'));
+    }
+    update();
+  }
+
+  /* ---------- 2. Practice sets ---------- */
+  function chartVisual(kind) {
+    return function () {
+      var box = el('div', 'dv-flaw-visual');
+      var svg = svgEl('svg', { viewBox: '0 0 360 190', role: 'img', class: 'dv-svg' }, box);
+      function txt(x, y, s, extra) { var t = svgEl('text', Object.assign({ x: x, y: y, 'font-size': 13 }, extra || {}), svg); t.textContent = s; return t; }
+      function bar(x, y, w, h, cls) { svgEl('rect', { x: x, y: y, width: w, height: h, class: cls || 'dv-bar' }, svg); }
+      if (kind === 'axis') {
+        svg.setAttribute('aria-label', 'Bar chart titled "Customer satisfaction". Two bars: Last year about 78 and This year about 82. The vertical axis starts at 75, so the second bar looks about twice as tall.');
+        txt(180, 16, 'Customer satisfaction (%)', { 'text-anchor': 'middle', 'font-weight': 700 });
+        [75, 80, 85].forEach(function (v, i) { var y = 160 - i * 55; svgEl('line', { x1: 50, y1: y, x2: 340, y2: y, class: 'dv-grid' }, svg); txt(44, y + 4, String(v), { 'text-anchor': 'end' }); });
+        bar(90, 160 - (78 - 75) * 11, 70, (78 - 75) * 11); bar(210, 160 - (82 - 75) * 11, 70, (82 - 75) * 11);
+        txt(125, 180, 'Last year', { 'text-anchor': 'middle' }); txt(245, 180, 'This year', { 'text-anchor': 'middle' });
+      } else if (kind === 'range') {
+        svg.setAttribute('aria-label', 'Line chart titled "Sales are soaring". It shows only March to June, rising from 40 to 70. A note says the data for January and February, which were higher, is not shown.');
+        txt(180, 16, 'Sales are soaring! ($000, Mar to Jun)', { 'text-anchor': 'middle', 'font-weight': 700 });
+        var pts = [[70, 140], [140, 110], [210, 80], [280, 48]];
+        svgEl('polyline', { points: pts.map(function (p) { return p.join(','); }).join(' '), class: 'dv-line', fill: 'none' }, svg);
+        pts.forEach(function (p) { svgEl('circle', { cx: p[0], cy: p[1], r: 4, class: 'dv-dot' }, svg); });
+        ['Mar', 'Apr', 'May', 'Jun'].forEach(function (m, i) { txt(pts[i][0], 180, m, { 'text-anchor': 'middle' }); });
+        svgEl('line', { x1: 50, y1: 160, x2: 340, y2: 160, class: 'dv-grid' }, svg);
+      } else if (kind === 'pie') {
+        svg.setAttribute('aria-label', 'A pie chart with twelve thin slices, one for each month of the year, titled "Sales by month". The slices are almost the same size and cannot be told apart or compared.');
+        txt(180, 16, 'Sales by month, one slice each', { 'text-anchor': 'middle', 'font-weight': 700 });
+        var cx = 180, cy = 105, r = 70, vals = [8, 9, 7, 9, 8, 10, 8, 9, 7, 8, 9, 8], tot = vals.reduce(function (a, b) { return a + b; }, 0), a0 = -Math.PI / 2;
+        vals.forEach(function (v, i) {
+          var a1 = a0 + v / tot * Math.PI * 2, large = a1 - a0 > Math.PI ? 1 : 0;
+          svgEl('path', { d: 'M' + cx + ',' + cy + ' L' + (cx + r * Math.cos(a0)) + ',' + (cy + r * Math.sin(a0)) + ' A' + r + ',' + r + ' 0 ' + large + ' 1 ' + (cx + r * Math.cos(a1)) + ',' + (cy + r * Math.sin(a1)) + ' Z', class: 'dv-slice dv-slice-' + (i % 4) }, svg);
+          a0 = a1;
+        });
+      } else if (kind === 'context') {
+        svg.setAttribute('aria-label', 'A line chart that climbs steeply from left to right. It has no title, no axis labels, no units and no source.');
+        svgEl('polyline', { points: '30,150 80,140 130,120 180,95 230,70 280,40 330,22', class: 'dv-line', fill: 'none' }, svg);
+        svgEl('line', { x1: 30, y1: 170, x2: 340, y2: 170, class: 'dv-grid' }, svg); svgEl('line', { x1: 30, y1: 10, x2: 30, y2: 170, class: 'dv-grid' }, svg);
+      } else {
+        svg.setAttribute('aria-label', 'Two bar charts side by side, both showing a rise from 10 to 20, one labelled "Our shop" with a vertical scale from 0 to 25 and one labelled "Rival shop" with a scale from 0 to 100, so the rival looks much smaller although both doubled.');
+        txt(95, 16, 'Our shop', { 'text-anchor': 'middle', 'font-weight': 700 }); txt(265, 16, 'Rival shop', { 'text-anchor': 'middle', 'font-weight': 700 });
+        svgEl('line', { x1: 30, y1: 160, x2: 160, y2: 160, class: 'dv-grid' }, svg); svgEl('line', { x1: 200, y1: 160, x2: 330, y2: 160, class: 'dv-grid' }, svg);
+        txt(26, 164, '0', { 'text-anchor': 'end' }); txt(26, 40, '25', { 'text-anchor': 'end' }); txt(196, 164, '0', { 'text-anchor': 'end' }); txt(196, 40, '100', { 'text-anchor': 'end' });
+        bar(50, 160 - 10 / 25 * 120, 40, 10 / 25 * 120); bar(105, 160 - 20 / 25 * 120, 40, 20 / 25 * 120);
+        bar(220, 160 - 10 / 100 * 120, 40, 10 / 100 * 120, 'dv-bar dv-bar-2'); bar(275, 160 - 20 / 100 * 120, 40, 20 / 100 * 120, 'dv-bar dv-bar-2');
+        txt(70, 180, 'Jan', { 'text-anchor': 'middle' }); txt(125, 180, 'Jun', { 'text-anchor': 'middle' }); txt(240, 180, 'Jan', { 'text-anchor': 'middle' }); txt(295, 180, 'Jun', { 'text-anchor': 'middle' });
+      }
+      return box;
+    };
+  }
+
+  function buildChartChoice(host) {
+    Labs.sorter(host, {
+      cls: 'dv-chartsort', keepCase: true,
+      title: 'Which chart answers the question?',
+      lead: 'Read each question and choose the chart type that answers it most clearly. Think about what the data is: categories, time, parts of a whole or two measures.',
+      noun: 'question', groupLabel: 'Chart type',
+      choices: [{ key: 'Column or bar chart', label: 'Column or bar' }, { key: 'Line chart', label: 'Line' }, { key: 'Pie chart', label: 'Pie' }, { key: 'Scatter graph', label: 'Scatter' }],
+      items: [
+        { text: 'A café wants to compare total sales of coffee, cake, tea and sandwiches last month.', ans: 'Column or bar chart', why: 'Comparing a measure across separate categories is the job of a column or bar chart. The heights or lengths are easy to compare against a common baseline.' },
+        { text: 'A school wants to show how daily attendance has changed over the 40 weeks of the year.', ans: 'Line chart', why: 'A line connects values in time order, so rises, falls and seasonal patterns are easy to see. Weeks are a continuous sequence, not separate categories.' },
+        { text: 'A council wants to show how its $2 million budget is split between four services, adding to 100%.', ans: 'Pie chart', why: 'A pie shows parts of one whole, and works when there are only a few slices. The slices must add to 100% for the whole to make sense.' },
+        { text: 'A teacher wants to see whether students who study more hours a week tend to get higher marks.', ans: 'Scatter graph', why: 'A scatter graph plots two numeric measures against each other, one point per student, so a relationship (and any outliers) shows up as a pattern of points.' },
+        { text: 'A farm wants to compare average rainfall in each of the 12 months, to see which months are wettest.', ans: 'Column or bar chart', why: 'Twelve months on a pie would be unreadable, and a line would suggest the months flow into each other. Columns make the wettest months stand out.', },
+        { text: 'A manager wants to track the daily temperature of a cold-storage room across one week, to spot sudden changes.', ans: 'Line chart', why: 'Readings taken in time order are a trend, and sudden jumps appear as sharp changes in the line.' }
+      ],
+      closing: 'Match the chart to the question: comparing categories, showing change over time, showing parts of a whole, or showing a relationship between two measures.'
+    });
+  }
+
+  function buildFlaws(host) {
+    var C = [{ key: 'Truncated axis', label: 'Truncated axis' }, { key: 'Cherry-picked range', label: 'Cherry-picked range' }, { key: 'Wrong chart type', label: 'Wrong chart type' }, { key: 'Missing context', label: 'Missing context' }, { key: 'Mismatched scales', label: 'Mismatched scales' }];
+    Labs.sorter(host, {
+      cls: 'dv-flaws', keepCase: true,
+      title: 'What is wrong with this chart?',
+      lead: 'Each chart below is built from honest numbers, yet each one misleads. Look at the chart and choose the technique it uses. Then read how to fix it.',
+      noun: 'chart', groupLabel: 'Misleading technique',
+      choices: C,
+      items: [
+        { text: 'The chart says satisfaction "doubled". The numbers behind it are 78% last year and 82% this year.', ans: 'Truncated axis', visual: chartVisual('axis'), why: 'The vertical axis starts at 75, not 0, so a 4-point rise looks like the bar has doubled in height. Fix: start a bar chart\'s axis at zero, or show the numbers.' },
+        { text: 'The headline says "Sales are soaring!". A note says January and February, which were higher, are left out.', ans: 'Cherry-picked range', visual: chartVisual('range'), why: 'Only the months that rise are shown. Choosing a start and end date that supports the story hides the bigger picture. Fix: show the full period, or explain why a shorter one is fair.' },
+        { text: 'A manager shows sales for each of the 12 months as slices of one pie.', ans: 'Wrong chart type', visual: chartVisual('pie'), why: 'Months are a sequence, not parts of one whole, and twelve almost equal slices cannot be compared by eye. Fix: a column or line chart shows month-to-month change clearly.' },
+        { text: 'A chart is shared online with the caption "Look how fast this is growing".', ans: 'Missing context', visual: chartVisual('context'), why: 'With no title, axis labels, units or source, the viewer cannot tell what is growing, how much, over what time or where the data came from. Fix: title, label axes with units, and cite the source.' },
+        { text: 'Two shops each doubled their sales from 10 to 20. The charts sit side by side.', ans: 'Mismatched scales', visual: chartVisual('scales'), why: 'The two charts use different vertical scales (0 to 25 and 0 to 100), so the same growth looks very different. Fix: use the same scale for charts that are meant to be compared.' }
+      ],
+      closing: 'Bias in a visualisation can come from the choice of data, the scale, the chart type or what is left out. Always check the axis, the time range, the chart type and the context.'
+    });
+  }
+
+  function buildValidation(host) {
+    Labs.sorter(host, {
+      cls: 'dv-validate', keepCase: true,
+      title: 'Which validation check catches it?',
+      lead: 'A data entry form accepts a value only if it passes a check. Read each bad value and choose the check that would catch it.',
+      noun: 'value', groupLabel: 'Validation check',
+      choices: [{ key: 'Data type', label: 'Data type' }, { key: 'Range', label: 'Range' }, { key: 'Format', label: 'Format' }, { key: 'Presence', label: 'Presence' }, { key: 'List', label: 'List or lookup' }, { key: 'Consistency', label: 'Consistency' }],
+      items: [
+        { text: 'A customer\'s age is entered as 214.', ans: 'Range', why: 'The value is the right kind (a number) but outside the sensible limits, for example 0 to 120. A range check rejects it.' },
+        { text: 'The quantity field contains the word "twelve".', ans: 'Data type', why: 'A data type check makes sure the value is the kind the field expects. Quantity must be a number, not text.' },
+        { text: 'An Australian postcode is entered as 20000 (five digits).', ans: 'Format', why: 'A format check tests the pattern: a postcode must be exactly four digits (NNNN). The value is a number in a sensible range, but the wrong pattern.' },
+        { text: 'A sale is saved with the date field left empty.', ans: 'Presence', why: 'A presence check makes sure that a required field is not blank, because every sale must have a date.' },
+        { text: 'The state field contains "Texas" in a database of Australian customers.', ans: 'List', why: 'A list (or lookup) check accepts only values from an allowed set, such as NSW, VIC, QLD, SA, WA, TAS, NT and ACT.' },
+        { text: 'An order is recorded as delivered on 3 March, but it was ordered on 10 March.', ans: 'Consistency', why: 'Each date is valid on its own, but the two fields disagree: a delivery cannot be earlier than the order. A consistency check compares related fields.' }
+      ],
+      closing: 'Validation checks that data is reasonable and allowed. Verification checks that it was copied or entered correctly, for example by entering it twice. A value can pass validation and still be wrong.'
+    });
+  }
+
+  function init() {
+    document.querySelectorAll('[data-dv="olap"]').forEach(buildOlap);
+    document.querySelectorAll('[data-dv="chart-choice"]').forEach(buildChartChoice);
+    document.querySelectorAll('[data-dv="flaws"]').forEach(buildFlaws);
+    document.querySelectorAll('[data-dv="validate"]').forEach(buildValidation);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();

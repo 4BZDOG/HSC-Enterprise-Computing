@@ -52,8 +52,8 @@
   <link rel="stylesheet" href="../css/styles.css?v=4473cb26" />
   <link rel="stylesheet" href="../css/theme.css?v=a29ce4bd" />
   <link rel="stylesheet" href="../css/anim.css?v=1fecdf2c" />
-  <link rel="stylesheet" href="../css/labs.css?v=74999441" />
-  <link rel="stylesheet" href="../css/pages/enterprise-project.css?v=14fd6c5a" />
+  <link rel="stylesheet" href="../css/labs.css?v=4b9dd249" />
+  <link rel="stylesheet" href="../css/pages/enterprise-project.css?v=516c850b" />
 </head>
 <body>
 
@@ -581,6 +581,12 @@ Unallocated =800-B9         gives 41</code></pre></div>
             When a question says <strong>select</strong> criteria for a project, choose two or three that fit the scenario, and for each give (1) what it means, (2) why it matters <em>here</em> and (3) how it would be checked. For example, for a canteen system used by casual volunteers, “ease of operation” matters because staff change often, and it would be checked by having a new volunteer complete a set of tasks without help. Generic answers such as “the system should be user friendly” score less than measurable ones. If asked about needs and wants, name which is which and say how you would negotiate the difference.
           </div>
           <div class="key-terms"><div class="key-term-item"><strong>Informatics</strong><span>NESA: the science of processing data for storage and retrieval.</span></div><div class="key-term-item"><strong>Participants</strong><span>The people who use, manage or are affected by the system.</span></div><div class="key-term-item"><strong>Change request</strong><span>A formal request to alter something already agreed, assessed for its effect on cost, time and scope before it is accepted.</span></div><div class="key-term-item"><strong>Collaborate</strong><span>NESA: working with others towards a shared goal, through a variety of modes of communication.</span></div></div>
+
+          <div data-epl="moscow" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Negotiate the ClubHub features</h4>
+            <p class="lab-lead">Sort ten features into Must, Should, Could and Won't have against 100 hours. Enable JavaScript to use this tool. In short: Must haves are essential, Should haves are important, Could haves are extras and Won't haves are left for later, and the Must and Should hours have to fit the time available.</p>
+          </div>
         </section>
 
         <div class="quiz" data-quiz="ep-2"></div>
@@ -886,6 +892,12 @@ Unallocated =800-B9         gives 41</code></pre></div>
             </table>
           </div>
           <p><strong>Evaluating the results.</strong> Two tests failed. Test 5 shows the length check uses “less than 122” instead of “not more than 120”, a classic boundary error that only a boundary test would find. Test 7 shows the screen assumes the input is a number. Each fault was logged, the fix made, and both tests <strong>retested</strong> together with tests 3 and 4, because a change to one check can break a neighbouring one (this is called <em>regression testing</em>); they then passed. <strong>Evaluating the test data itself:</strong> the set covers all three data types and each path through the booking decision tree, and every test has an expected result. What it misses is also worth writing down: two members pressing Confirm at the same instant, times that cross midnight and very large volumes of bookings. Those gaps are why the plan adds volume and beta testing.</p>
+          <div data-epl="tests" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Normal, boundary or invalid test data?</h4>
+            <p class="lab-lead">Practise sorting test values into the three kinds of test data. Enable JavaScript to use this tool. In short: normal data is typical, boundary data sits at or beside a limit, and invalid data is clearly wrong.</p>
+          </div>
+
           <h3>Trialling the operation and maintenance documentation</h3>
           <p>Documentation is part of the system: it is how people run it and keep it running. <strong>Operation documentation</strong> (often a user guide) explains how to do each task, what the messages mean and who to contact. <strong>Maintenance documentation</strong> is written for the people who look after the system: how it is built (diagrams, data dictionary, schema), how it is configured, how backups are taken and restored, how to apply updates and a log of changes. A guide is only good if a person can follow it, so it has to be <strong>trialled</strong>: give it to someone who was not involved in building the system, ask them to complete real tasks using only the documents, watch without helping, and note where they hesitate, get stuck or make mistakes. Then fix the documents and trial again.</p>
           <div class="table-wrap">
@@ -1022,7 +1034,7 @@ Unallocated =800-B9         gives 41</code></pre></div>
   <script src="../js/progress.js?v=fd3fe0bd" defer></script>
   <script src="../js/topic-header.js?v=af48f2c4" defer></script>
   <script src="../js/anim.js?v=c2e454df" defer></script>
-  <script src="../js/labs.js?v=ff21362e" defer></script>
-  <script src="../js/pages/enterprise-project.js?v=ba0b4229" defer></script>
+  <script src="../js/labs.js?v=07f0729b" defer></script>
+  <script src="../js/pages/enterprise-project.js?v=1537b99d" defer></script>
 </body>
 </html>

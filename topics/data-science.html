@@ -52,8 +52,8 @@
   <link rel="stylesheet" href="../css/styles.css?v=4473cb26" />
   <link rel="stylesheet" href="../css/theme.css?v=a29ce4bd" />
   <link rel="stylesheet" href="../css/anim.css?v=1fecdf2c" />
-  <link rel="stylesheet" href="../css/labs.css?v=74999441" />
-  <link rel="stylesheet" href="../css/pages/data-science.css?v=fae05212" />
+  <link rel="stylesheet" href="../css/labs.css?v=4b9dd249" />
+  <link rel="stylesheet" href="../css/pages/data-science.css?v=4a44f866" />
 </head>
 <body>
 
@@ -443,6 +443,12 @@
             </table>
           </div>
           <p>Where the data is about people, passive collection should still be disclosed in a collection notice and privacy policy (see the Software features and Legal issues sections).</p>
+
+          <div data-ds="sampling" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Sampling simulator</h4>
+            <p class="lab-lead">Draw samples from a town of 200 people with five different methods and see which ones are biased. Enable JavaScript to use this tool. In short: random, systematic and stratified methods give averages that centre on the truth, while convenience and voluntary samples are biased because they leave out or favour some people.</p>
+          </div>
 
           <h3>Choosing a method</h3>
           <p>Match the method to the question. To find out <em>how many</em> trips happen at each station, passive computerised logging is the accurate answer. To find out <em>why</em> people avoid Hospital station, an active method such as a short survey or interviews is needed, because the log cannot record motives. Enterprises often combine them and then check whether the results agree.</p>
@@ -1437,6 +1443,12 @@
           <p>COUNT is applied to the Minutes column because COUNT counts <em>numbers</em>: TripID values such as T001 are text, so <code>=COUNT(A2:A19)</code> would wrongly give 0. Other summaries help decisions: <code>=IF(K3&gt;=100,"Target met","Below target")</code> gives &ldquo;Below target&rdquo; against a $100 weekly target.</p>
           <p>To summarise <em>by group</em> (fares for each station) you need a filter, subtotals or a pivot table, covered in the next sections. Software also offers functions such as SUMIF and COUNTIF for this; they are <strong>extensions</strong>, not in NESA&rsquo;s list.</p>
 
+          <div data-ds="sheet" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Spreadsheet practice: the Bellbird fare sheet</h4>
+            <p class="lab-lead">Type the formulas yourself and have each task checked. Enable JavaScript to use this tool. In short: use SUM, AVERAGE, MAX and STDEV with ranges such as E2:E19, lock fixed cells with dollar signs such as $Q$1, and use IF and LOOKUP for decisions and look-ups.</p>
+          </div>
+
           <h3>Check your work</h3>
           <ul>
             <li><strong>Reasonableness.</strong> The mean (23.1) lies between the shortest (7) and longest (55) trips, and total fare is not larger than 18 &times; the top fare.</li>
@@ -1849,6 +1861,12 @@
           <p>The data in the linked tables (18 trips, six riders, three stations, five bikes) is the same data as the spreadsheet, split so each fact is stored once:</p>
           <div class="ds-rel"><div class="table-wrap"><table><caption>Riders</caption><thead><tr><th>RiderID (P)</th><th>FirstName</th><th>Surname</th><th>RiderType</th></tr></thead><tbody><tr><td>R01</td><td>Ava</td><td>Chen</td><td>Member</td></tr><tr><td>R02</td><td>Ben</td><td>Taylor</td><td>Casual</td></tr><tr><td>R03</td><td>Cara</td><td>Nguyen</td><td>Member</td></tr><tr><td>R04</td><td>Dylan</td><td>Smith</td><td>Casual</td></tr><tr><td>R05</td><td>Eli</td><td>Johnson</td><td>Member</td></tr><tr><td>R06</td><td>Farah</td><td>Ali</td><td>Casual</td></tr></tbody></table></div><div class="table-wrap"><table><caption>Stations</caption><thead><tr><th>StationID (P)</th><th>StationName</th><th>Docks</th></tr></thead><tbody><tr><td>S1</td><td>Market Square</td><td>12</td></tr><tr><td>S2</td><td>Riverside Park</td><td>10</td></tr><tr><td>S3</td><td>Hospital</td><td>8</td></tr></tbody></table></div><div class="table-wrap"><table><caption>Bikes</caption><thead><tr><th>BikeID (P)</th><th>Model</th></tr></thead><tbody><tr><td>B01</td><td>Standard</td></tr><tr><td>B02</td><td>E-bike</td></tr><tr><td>B03</td><td>Standard</td></tr><tr><td>B04</td><td>Standard</td></tr><tr><td>B05</td><td>E-bike</td></tr></tbody></table></div><div class="table-wrap"><table><caption>Trips</caption><thead><tr><th>TripID (P)</th><th>TripDate</th><th>Minutes</th><th>Km</th><th>Fare</th><th>RiderID (F)</th><th>BikeID (F)</th><th>StationID (F)</th></tr></thead><tbody><tr><td>T001</td><td>07/09/2026</td><td class="ds-num">12</td><td class="ds-num">2.8</td><td class="ds-num">$1.20</td><td>R01</td><td>B01</td><td>S1</td></tr><tr><td>T002</td><td>07/09/2026</td><td class="ds-num">25</td><td class="ds-num">4.6</td><td class="ds-num">$7.25</td><td>R02</td><td>B02</td><td>S2</td></tr><tr><td>T003</td><td>07/09/2026</td><td class="ds-num">9</td><td class="ds-num">1.9</td><td class="ds-num">$0.90</td><td>R03</td><td>B03</td><td>S3</td></tr><tr><td>T004</td><td>08/09/2026</td><td class="ds-num">18</td><td class="ds-num">3.4</td><td class="ds-num">$5.50</td><td>R04</td><td>B01</td><td>S1</td></tr><tr><td>T005</td><td>08/09/2026</td><td class="ds-num">14</td><td class="ds-num">3.0</td><td class="ds-num">$1.40</td><td>R01</td><td>B04</td><td>S1</td></tr><tr><td>T006</td><td>08/09/2026</td><td class="ds-num">31</td><td class="ds-num">6.2</td><td class="ds-num">$3.10</td><td>R05</td><td>B02</td><td>S2</td></tr><tr><td>T007</td><td>09/09/2026</td><td class="ds-num">7</td><td class="ds-num">1.5</td><td class="ds-num">$2.75</td><td>R02</td><td>B05</td><td>S3</td></tr><tr><td>T008</td><td>09/09/2026</td><td class="ds-num">42</td><td class="ds-num">8.1</td><td class="ds-num">$11.50</td><td>R06</td><td>B03</td><td>S2</td></tr><tr><td>T009</td><td>09/09/2026</td><td class="ds-num">11</td><td class="ds-num">2.2</td><td class="ds-num">$1.10</td><td>R03</td><td>B01</td><td>S3</td></tr><tr><td>T010</td><td>10/09/2026</td><td class="ds-num">22</td><td class="ds-num">4.4</td><td class="ds-num">$2.20</td><td>R05</td><td>B04</td><td>S1</td></tr><tr><td>T011</td><td>10/09/2026</td><td class="ds-num">15</td><td class="ds-num">2.9</td><td class="ds-num">$4.75</td><td>R04</td><td>B02</td><td>S3</td></tr><tr><td>T012</td><td>11/09/2026</td><td class="ds-num">13</td><td class="ds-num">2.7</td><td class="ds-num">$1.30</td><td>R01</td><td>B05</td><td>S1</td></tr><tr><td>T013</td><td>11/09/2026</td><td class="ds-num">55</td><td class="ds-num">10.4</td><td class="ds-num">$14.75</td><td>R06</td><td>B03</td><td>S2</td></tr><tr><td>T014</td><td>12/09/2026</td><td class="ds-num">38</td><td class="ds-num">7.0</td><td class="ds-num">$10.50</td><td>R02</td><td>B01</td><td>S2</td></tr><tr><td>T015</td><td>12/09/2026</td><td class="ds-num">27</td><td class="ds-num">5.3</td><td class="ds-num">$2.70</td><td>R05</td><td>B02</td><td>S2</td></tr><tr><td>T016</td><td>12/09/2026</td><td class="ds-num">10</td><td class="ds-num">2.1</td><td class="ds-num">$1.00</td><td>R03</td><td>B04</td><td>S3</td></tr><tr><td>T017</td><td>13/09/2026</td><td class="ds-num">20</td><td class="ds-num">3.8</td><td class="ds-num">$6.00</td><td>R04</td><td>B05</td><td>S1</td></tr><tr><td>T018</td><td>13/09/2026</td><td class="ds-num">47</td><td class="ds-num">9.0</td><td class="ds-num">$12.75</td><td>R06</td><td>B03</td><td>S2</td></tr></tbody></table></div></div>
 
+          <div data-ds="anomaly" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Why store a fact once?</h4>
+            <p class="lab-lead">Change a rider's surname in a flat file and in linked tables. Enable JavaScript to use this tool. In short: a fact stored once can be changed once, while a fact repeated on every row can end up with several versions.</p>
+          </div>
+
           <h3>Sort and search data, including using SQL</h3>
           <p>NESA&rsquo;s SQL has four keywords: <code>SELECT</code> (what to display), <code>FROM</code> (the tables), <code>WHERE</code> (the search criteria, which can come from several tables) and <code>ORDER BY</code> (the sequence). Tables are joined by listing them in FROM and matching the linked key fields in WHERE. Dates use the same day/month/year format as the data, and the field must have the Date type so that comparisons follow the calendar.</p>
           <p><strong>Query 1:</strong> list the casual riders in surname order (one table).</p>
@@ -1891,6 +1909,12 @@ WHERE Trips.StationID = Stations.StationID
 GROUP BY Stations.StationName</code></pre>
             </div>
             It returns Hospital 5 and $10.50, Market Square 6 and $17.60, and Riverside Park 7 and $62.55.
+          </div>
+
+          <div data-ds="sql" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">SQL practice: Bellbird Bikes</h4>
+            <p class="lab-lead">Write queries with SELECT, FROM, WHERE and ORDER BY and have them checked. Enable JavaScript to use this tool. In short: SELECT chooses the fields, FROM names the tables, WHERE gives the search criteria and links the tables by their key fields, and ORDER BY sets the sequence.</p>
           </div>
 
           <h3>Using forms and reports (appropriate user views)</h3>
@@ -2087,7 +2111,8 @@ GROUP BY Stations.StationName</code></pre>
   <script src="../js/progress.js?v=fd3fe0bd" defer></script>
   <script src="../js/topic-header.js?v=af48f2c4" defer></script>
   <script src="../js/anim.js?v=c2e454df" defer></script>
-  <script src="../js/labs.js?v=ff21362e" defer></script>
-  <script src="../js/pages/data-science.js?v=9f9b2b51" defer></script>
+  <script src="../js/labs.js?v=07f0729b" defer></script>
+  <script src="../js/minisql.js?v=b5fdfd5e" defer></script>
+  <script src="../js/pages/data-science.js?v=5beb4e20" defer></script>
 </body>
 </html>

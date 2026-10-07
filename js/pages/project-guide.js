@@ -169,3 +169,83 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
+
+/* Project guide: critical path lab, built on the shared kit (css/labs.css, js/labs.js).
+   Change the length of each task in the canteen ordering app plan and see which tasks are critical, which have float
+   and when the project finishes. The critical path is a common project-management technique; NESA's Course
+   Specifications do not name it. */
+(function () {
+  'use strict';
+  var el = Labs.el;
+  // id, name, days, tasks that must finish first
+  var TASKS = [
+    { id: 'A', n: 'Interview the canteen manager', d: 2, after: [] },
+    { id: 'B', n: 'Design the database', d: 3, after: ['A'] },
+    { id: 'C', n: 'Design the screens', d: 5, after: ['A'] },
+    { id: 'D', n: 'Build the app', d: 6, after: ['B', 'C'] },
+    { id: 'E', n: 'Test with the manager', d: 3, after: ['D'] }
+  ];
+
+  function buildCritical(host) {
+    Labs.shell(host, 'pg-critical', 'Critical path explorer', 'Change the number of working days for each task. The tool works out the earliest each task can start and finish, which tasks are critical (no spare time) and how many days of float the others have.');
+    var days = {}; TASKS.forEach(function (t) { days[t.id] = t.d; });
+    var row = el('div', 'lab-row');
+    var inputs = {};
+    TASKS.forEach(function (t) {
+      var f = el('div', 'lab-field'), l = el('label', null, t.id + '. ' + t.n), i = el('input');
+      l.htmlFor = i.id = 'pg-cp-' + t.id; i.type = 'number'; i.min = 1; i.max = 20; i.step = 1; i.value = t.d;
+      i.addEventListener('input', function () { var v = Math.round(parseFloat(i.value)); if (v >= 1 && v <= 20) { days[t.id] = v; update(); } });
+      f.append(l, i); row.append(f); inputs[t.id] = i;
+    });
+    host.append(row);
+    var chart = el('div', 'pg-cp-chart'); chart.setAttribute('role', 'img'); chart.setAttribute('aria-label', 'Gantt chart of the five tasks. The table below gives the same information.');
+    var tab = Labs.table(['Task', 'Days', 'Must finish first', 'Earliest start', 'Earliest finish', 'Float (spare days)', 'Critical?'], { num: [1, 3, 4, 5], stack: true });
+    var out = el('div', 'lab-readout'); out.setAttribute('role', 'status');
+    var actions = el('div', 'lab-actions'); var rs = el('button', 'lab-btn lab-btn--quiet', 'Back to the original plan'); rs.type = 'button'; actions.append(rs);
+    host.append(chart, tab.wrap, out, actions);
+    host.append(el('p', 'lab-note', 'Days are working days, counted from day 1. A task that starts on day 8 can begin once everything it depends on has finished on or before day 7. Try the worked questions in the notes: cut E to 2 days, then grow C to 8 days, then grow B past C.'));
+
+    function compute() {
+      var es = {}, ef = {};
+      TASKS.forEach(function (t) { es[t.id] = t.after.length ? Math.max.apply(null, t.after.map(function (a) { return ef[a]; })) + 1 : 1; ef[t.id] = es[t.id] + days[t.id] - 1; });
+      var end = Math.max.apply(null, TASKS.map(function (t) { return ef[t.id]; }));
+      var lf = {}, ls = {};
+      TASKS.slice().reverse().forEach(function (t) {
+        var succ = TASKS.filter(function (u) { return u.after.indexOf(t.id) >= 0; });
+        lf[t.id] = succ.length ? Math.min.apply(null, succ.map(function (u) { return ls[u.id]; })) - 1 : end;
+        ls[t.id] = lf[t.id] - days[t.id] + 1;
+      });
+      return { es: es, ef: ef, ls: ls, lf: lf, end: end };
+    }
+    function update() {
+      var r = compute();
+      chart.replaceChildren();
+      var scale = el('div', 'pg-cp-scale');
+      for (var d = 1; d <= r.end; d++) { var tick = el('span', 'pg-cp-tick', d % 2 === 1 || r.end < 14 ? String(d) : ''); scale.append(tick); }
+      scale.style.gridTemplateColumns = 'repeat(' + r.end + ', minmax(0, 1fr))';
+      var head = el('div', 'pg-cp-row'); head.append(el('span', 'pg-cp-name'), scale); chart.append(head);
+      var critical = [];
+      TASKS.forEach(function (t) {
+        var fl = r.ls[t.id] - r.es[t.id], crit = fl === 0; if (crit) critical.push(t.id);
+        var rowEl = el('div', 'pg-cp-row'); rowEl.append(el('span', 'pg-cp-name', t.id + '. ' + t.n));
+        var track = el('div', 'pg-cp-track'); track.style.gridTemplateColumns = 'repeat(' + r.end + ', minmax(0, 1fr))'; track.style.setProperty('--pg-cp-n', r.end);
+        var bar = el('span', 'pg-cp-bar ' + (crit ? 'is-crit' : 'is-flex'), days[t.id] + ' d'); bar.style.gridColumn = r.es[t.id] + ' / ' + (r.ef[t.id] + 2); track.append(bar);
+        if (fl > 0) { var f = el('span', 'pg-cp-float', fl + ' d float'); f.style.gridColumn = (r.ef[t.id] + 1) + ' / ' + (r.ef[t.id] + 1 + fl + 1); track.append(f); }
+        rowEl.append(track); chart.append(rowEl);
+      });
+      tab.clear();
+      TASKS.forEach(function (t) {
+        var fl = r.ls[t.id] - r.es[t.id];
+        tab.add([t.id + '. ' + t.n, String(days[t.id]), t.after.length ? t.after.join(', ') : 'none', 'Day ' + r.es[t.id], 'Day ' + r.ef[t.id], String(fl), fl === 0 ? el('span', 'lab-badge is-bad', 'Critical') : el('span', 'lab-badge is-good', 'Has float')]);
+      });
+      out.className = 'lab-readout';
+      out.replaceChildren(el('p', null, 'The project finishes on day ' + r.end + '. The critical path is ' + critical.join(' → ') + ': a delay to any of these delays the finish.'));
+      var flexy = TASKS.filter(function (t) { return r.ls[t.id] - r.es[t.id] > 0; });
+      if (flexy.length) out.append(el('p', null, flexy.map(function (t) { return 'Task ' + t.id + ' can slip by up to ' + (r.ls[t.id] - r.es[t.id]) + ' day' + (r.ls[t.id] - r.es[t.id] === 1 ? '' : 's') + ' without moving the end date.'; }).join(' ')));
+    }
+    rs.addEventListener('click', function () { TASKS.forEach(function (t) { days[t.id] = t.d; inputs[t.id].value = t.d; }); update(); });
+    update();
+  }
+  function init3() { document.querySelectorAll('[data-pgl="critical"]').forEach(buildCritical); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init3); else init3();
+})();

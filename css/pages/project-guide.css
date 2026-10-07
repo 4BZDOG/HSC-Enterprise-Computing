@@ -91,3 +91,19 @@
 .pg-compare p { margin: 0 0 .5rem; font-size: .93rem; }
 .pg-compare ul { margin: 0 0 0 1.1rem; padding: 0; font-size: .88rem; color: var(--text-secondary); }
 .pg-template thead th { white-space: normal; }
+
+/* Critical path explorer (shared lab kit: css/labs.css) */
+.pg-cp-chart { display: grid; gap: .3rem; margin: .4rem 0 .9rem; overflow-x: auto; }
+.pg-cp-row { display: grid; grid-template-columns: minmax(8rem, 13rem) minmax(16rem, 1fr); gap: .6rem; align-items: center; min-width: 30rem; }
+.pg-cp-name { font-size: .84rem; color: var(--text-primary); }
+.pg-cp-scale, .pg-cp-track { display: grid; gap: 2px; }
+.pg-cp-tick { text-align: center; font: .72rem var(--font-mono); color: var(--text-secondary); }
+.pg-cp-track { background: repeating-linear-gradient(90deg, transparent 0, transparent calc(100% / var(--pg-cp-n, 16) - 1px), var(--border) 0, var(--border) calc(100% / var(--pg-cp-n, 16))); min-height: 1.9rem; }
+.pg-cp-bar { display: grid; align-items: center; justify-items: center; font: 700 .76rem var(--font-body); border-radius: 4px; padding: .3rem 0; color: #fff; }
+.pg-cp-bar.is-crit { background: #c8372d; }
+.pg-cp-bar.is-flex { background: #0a7c86; }
+[data-theme="dark"] .pg-cp-bar.is-flex { color: #06161a; background: #36c2cc; }
+.pg-cp-float { display: grid; align-items: center; justify-items: center; font: .72rem var(--font-body); border: 2px dashed var(--border-strong); border-radius: 4px; color: var(--text-secondary); }
+.pg-critical .lab-field input { width: 100%; }
+.pg-critical .lab-row .lab-field { flex: 1 1 11rem; }
+@media (max-width: 560px) { .pg-cp-row { grid-template-columns: minmax(6.5rem, 9rem) minmax(0, 1fr); min-width: 22rem; } }

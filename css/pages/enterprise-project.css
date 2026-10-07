@@ -92,3 +92,16 @@
   .ep-row { grid-template-columns: 6.6rem minmax(0, 1fr) 2.2rem; }
 }
 @media (prefers-reduced-motion: reduce) { .ep-fill { transition: none; } }
+
+/* Labs built on the shared kit (css/labs.css) */
+.ep-ms-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); gap: .55rem .9rem; margin: 0 0 1rem; }
+.ep-ms-row { display: grid; grid-template-columns: minmax(0, 1fr) 9.5rem; gap: .5rem; align-items: center; padding: .45rem .6rem; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--bg-tertiary); }
+.ep-ms-name { display: grid; font-size: .88rem; line-height: 1.35; }
+.ep-ms-name small { color: var(--text-secondary); font-size: .76rem; }
+.ep-ms-bars { display: grid; gap: .35rem; margin: 0 0 .8rem; }
+.ep-ms-bar { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr) 3.5rem; gap: .6rem; align-items: center; font-size: .84rem; }
+.ep-ms-track { height: .8rem; border-radius: 999px; background: var(--bg-secondary); border: 1px solid var(--border); overflow: hidden; }
+.ep-ms-fill { display: block; height: 100%; border-radius: 999px; }
+.ep-ms-fill.is-must { background: #c8372d; } .ep-ms-fill.is-should { background: #d9a020; } .ep-ms-fill.is-could { background: #0a7c86; }
+.ep-ms-hours { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+@media (max-width: 480px) { .ep-ms-row { grid-template-columns: minmax(0, 1fr); } }

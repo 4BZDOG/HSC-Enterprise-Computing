@@ -52,8 +52,8 @@
   <link rel="stylesheet" href="../css/styles.css?v=4473cb26" />
   <link rel="stylesheet" href="../css/theme.css?v=a29ce4bd" />
   <link rel="stylesheet" href="../css/anim.css?v=1fecdf2c" />
-  <link rel="stylesheet" href="../css/labs.css?v=74999441" />
-  <link rel="stylesheet" href="../css/pages/intelligent-systems.css?v=3dce3361" />
+  <link rel="stylesheet" href="../css/labs.css?v=4b9dd249" />
+  <link rel="stylesheet" href="../css/pages/intelligent-systems.css?v=cd7dbfed" />
 </head>
 <body>
 
@@ -310,6 +310,12 @@
           <div class="callout tip"><strong>A decision can move</strong> The category depends on how well the decision is understood. Weekly stock ordering may start as semi-structured. After a year of results the manager trusts the rules for staple items and lets the system order them automatically (structured), while a new product still needs judgement (unstructured). Automating a decision is a choice, and it needs testing first.</div>
 
           <div class="callout assessor"><strong>Assessor tip: "Describe"</strong> For each category give a short definition in NESA's terms (judgement, finite instructions, automated) and one example that clearly fits. The common mistake is choosing an example that could belong to two categories without saying why. State who makes the final decision: a person (unstructured), a person guided by the system (semi-structured) or the system (structured).</div>
+
+          <div data-isl="decisions" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">How structured is the decision?</h4>
+            <p class="lab-lead">Practise classifying decisions as unstructured, semi-structured or structured. Enable JavaScript to use this tool. In short: unstructured decisions need judgement, semi-structured ones mix a procedure with judgement, and structured ones are fully automated.</p>
+          </div>
         </section>
 
         <hr class="divider" />
@@ -601,6 +607,12 @@
           <h3>Predictive search strings</h3>
           <p>When you type "how to cook" and the box offers "how to cook rice" before you finish, an agent is predicting the rest of your <strong>search string</strong>. It estimates the most likely completions from how often people search for them, then adjusts using signals such as your location, language, recent searches and trending topics. Each suggestion is a probability estimate, not a fixed answer. This saves time and helps people with spelling, but it also has costs. Suggestions can reflect the biases of the people whose searches trained them, can steer attention towards popular topics, and depend on the collection of personal search history, which raises privacy questions. Search providers filter certain suggestions, and users can usually manage or delete their history.</p>
 
+          <div data-isl="predict" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Predictive search</h4>
+            <p class="lab-lead">Type the start of a search and see how popularity and personal data change the suggestions. Enable JavaScript to use this tool. In short: an agent ranks likely completions by how often they are searched for, and personal signals can change the order at the cost of collecting more data.</p>
+          </div>
+
           <h3>Voice assistants</h3>
           <p>A <strong>voice assistant</strong> lets a person start an interaction by speaking. A small program on the device listens for a wake word, and only after hearing it does the rest of the request get processed. The steps are: speech recognition turns the audio into text, language understanding works out the intent and details, an agent acts (search, answer a question, set a timer or control a smart device), and the reply is spoken or displayed. Some processing happens on the device and some in the cloud, depending on the product. Voice suits people who have their hands full or find typing hard, and it supports accessibility. The concerns are accidental activation, the storage of recordings, and mistakes with accents or background noise.</p>
 
@@ -661,6 +673,12 @@
             <li><em>Combine (defuzzify).</em> Use a weighted average of the fan speeds: (0.6 × 50 + 0.4 × 100) ÷ (0.6 + 0.4) = (30 + 40) ÷ 1 = 70%.</li>
           </ol>
           <p>A crisp rule such as "IF temperature &gt; 25 THEN fan High" would give a sudden jump between 24.9 and 25.1 degrees. The fuzzy fan speed rises smoothly as the greenhouse warms, which is gentler on equipment and closer to how an expert would describe it. (Real fuzzy controllers use several ways of combining, and this weighted average is a simplified one.)</p>
+
+          <div data-isl="fuzzy" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Fuzzy fan controller</h4>
+            <p class="lab-lead">Slide the temperature and watch the fuzzy rules blend into a smooth fan speed. Enable JavaScript to use this tool. In short: a temperature has a degree of membership in Cold, Warm and Hot, and the fan speed is the weighted average of the rules that fire.</p>
+          </div>
 
           <h3>Ontology classification</h3>
           <p>An <strong>ontology</strong> is a formal description of the concepts in a domain and the relationships between them, such as <em>is a kind of</em> and <em>is part of</em>. Classification places a new item into the hierarchy, so the engine can infer properties it inherits. <em>Example:</em> a product-recommendation system knows that a "trail running shoe" is a kind of "running shoe", which is a kind of "footwear". A rule written for running shoes therefore applies to trail shoes without being repeated. Ontologies are used in medical coding, product catalogues and the semantic web. Their cost is the effort to build and agree on the hierarchy.</p>
@@ -744,6 +762,12 @@
           <div class="key-terms"><div class="key-term-item"><strong>Biometric</strong><span>Data whose source is human or biological, such as a fingerprint or face.</span></div><div class="key-term-item"><strong>Haptic</strong><span>Relating to the sense of touch, often used for output that can be felt.</span></div><div class="key-term-item"><strong>Microcontroller</strong><span>A small computer built for specific tasks that processes data from users or sensors.</span></div><div class="key-term-item"><strong>Sensor</strong><span>A device that detects and responds to input from the physical environment.</span></div><div class="key-term-item"><strong>Actuator</strong><span>A device that turns a control signal into a physical action, such as opening a valve.</span></div></div>
 
           <div class="callout assessor"><strong>Assessor tip: "Investigate"</strong> Sort each device into input, processing or output, and connect it to a task. An answer for a smart system should show sensors feeding a microcontroller that drives actuators, with a comment on one limitation such as cost, accuracy or privacy. Note that the 2025 HSC included a short-answer question on sensors and expert systems in manufacturing, so practise linking a named sensor to the decision it supports.</div>
+
+          <div data-isl="hardware" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Which hardware is it?</h4>
+            <p class="lab-lead">Practise naming the hardware an intelligent system uses. Enable JavaScript to use this tool. In short: biometrics identify people, haptics give touch feedback, touch and gesture read movement, VR and AR change what you see, voice uses sound, and sensors and actuators link the system to the world.</p>
+          </div>
         </section>
 
         <hr class="divider" />
@@ -963,6 +987,12 @@
           <div class="callout warning"><strong>Ethics is not only law</strong> A system can be legal and still unfair or intrusive. Good practice asks whether people would reasonably expect and accept the use of their data and the decision made about them, and involves those affected in the design.</div>
 
           <div class="callout assessor"><strong>Assessor tip: "Investigate"</strong> Choose three or four issues, and for each state the issue, a realistic example, who is affected and one way to reduce the harm. Reach a judgement, such as that human oversight and transparency reduce several harms at once. Use the correct Australian terms (Privacy Act 1988, APPs, OAIC) rather than general references to "privacy laws".</div>
+
+          <div data-isl="ethics" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Which issue is it?</h4>
+            <p class="lab-lead">Practise naming the main ethical issue in a situation. Enable JavaScript to use this tool. In short: look for consent and privacy, unfair results, missing explanations, effects on jobs, and security or safety risks.</p>
+          </div>
         </section>
 
         <hr class="divider" />
@@ -1176,6 +1206,12 @@
           <div class="callout info"><strong>Scenario</strong> A school installs classroom sensors for temperature and carbon dioxide to control ventilation. It keeps a reading every minute for a week to tune the rules, then keeps only summaries. It does not record audio, because sound is not needed for the purpose and would capture students' conversations, so collecting it would be surplus and intrusive.</div>
 
           <div class="callout assessor"><strong>Assessor tip: "Explore"</strong> Walk through the stages with one example, and define relevant and surplus data with a reason for each. Show that you understand the consequences of surplus data (cost, security, privacy) and one technique for reducing it, such as filtering at an edge gateway.</div>
+
+          <div data-isl="surplus" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Relevant or surplus?</h4>
+            <p class="lab-lead">Practise deciding which data a system really needs. Enable JavaScript to use this tool. In short: relevant data supports a decision, while surplus data is repeated, unused or beyond the purpose of the system.</p>
+          </div>
         </section>
 
         <hr class="divider" />
@@ -1750,6 +1786,12 @@ moisture 30%, 18 C, rain False: pump on, fan off</code></pre></div>
             </div>
           </figure>
 
+          <div data-isl="dss" class="lab">
+            <p class="lab-kicker">Try it</p>
+            <h4 class="lab-title">Check a decision support system</h4>
+            <p class="lab-lead">Move an approval threshold and compare proposed decisions with actual outcomes. Enable JavaScript to use this tool. In short: tabulate what the system proposed against what happened, count the right and wrong decisions, and judge the cost of each kind of mistake.</p>
+          </div>
+
           <h3>Step 4: calculate and interpret</h3>
           <ul>
             <li><strong>Mean absolute error:</strong> the absolute errors add to 75, so 75 ÷ 8 = 9.4 units per week on average.</li>
@@ -1898,7 +1940,7 @@ moisture 30%, 18 C, rain False: pump on, fan off</code></pre></div>
   <script src="../js/progress.js?v=fd3fe0bd" defer></script>
   <script src="../js/topic-header.js?v=af48f2c4" defer></script>
   <script src="../js/anim.js?v=c2e454df" defer></script>
-  <script src="../js/labs.js?v=ff21362e" defer></script>
-  <script src="../js/pages/intelligent-systems.js?v=4023c9b7" defer></script>
+  <script src="../js/labs.js?v=07f0729b" defer></script>
+  <script src="../js/pages/intelligent-systems.js?v=94a2b529" defer></script>
 </body>
 </html>
