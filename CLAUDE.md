@@ -20,9 +20,10 @@ A free static study-notes site for NSW HSC Enterprise Computing (NESA Enterprise
 ```
 index.html  404.html  sitemap.xml  robots.txt  og-image.png  package.json
 topics/     one page per topic (7 focus areas + toolkit, project-guide, example-project, glossary, resources)
-css/        styles.css (base), theme.css ("Data Studio" theme), anim.css (diagram kit), fonts/ (self-hosted WOFF2)
+css/        styles.css (base), theme.css ("Data Studio" theme), anim.css (diagram kit), labs.css (lab kit), minisql.css, pages/<slug>.css, fonts/ (self-hosted WOFF2)
 js/         main.js, progress.js, quiz.js, quizzes/<slug>.js, glossary.js, glossary-data.js (generated),
-            hero.js, nesa-diagrams.js, nesa-diagram-data.js, anim.js, anims/<scene>.js
+            hero.js, nesa-diagrams.js, nesa-diagram-data.js, anim.js, anims/<scene>.js,
+            labs.js (lab kit), minisql.js (SQL practice engine), pages/<slug>.js (each page's hands-on tools)
 scripts/    site-chrome.py, scaffold-page.py, page_specs.py, page_shell.py, restructure.py, check-site.py, check-layout.mjs,
             validate-alignment.sh, build-glossary.py, add-glossary-terms.py, glossary_new_terms.py,
             build-mapping.py, build-resources.py, copy_audit.py, render-diagrams.mjs
@@ -55,6 +56,7 @@ Other useful commands: `python3 scripts/restructure.py [slug]` (page_specs vs sy
 - **Code**: `<div class="code-block"><pre><code class="language-sql">…</code></pre></div>`; SQL uses only the Course Specification keywords unless flagged as an extension.
 - **Figures**: `<figure class="figure">` with `figcaption.figure-head` (`.figure-kicker > .figure-kind`, `h4.figure-title`, `p.figure-lead`), a `.figure-canvas` (`--still` or `--anim` variant for kit scenes), and `.figure-notes` (`h5` "What to notice" list and `p.figure-try` "Try this"). Full `alt` text, no emoji inside diagrams, text at least 13 px.
 - **Diagrams** are drawn with the shared kit, never hand-written SVG: scenes in `js/anims/<name>.js` used as `<div class="anim" data-anim="name">` (see `.claude/skills/paper-diagrams.md` and `.claude/skills/add-animation.md`); structure charts and DFDs via `js/nesa-diagrams.js` + `js/nesa-diagram-data.js`; Mermaid pre-rendered with `npm run diagrams`. New scene files and diagram-data keys use the page's prefix (`im-`, `net-`, `cyber-`, `ds-`, `dv-`, `is-`, `ep-`, `tk-`, `pg-`, `ex-`).
+- **Hands-on labs** ("Try it" tools) are built on the shared lab kit: `css/labs.css` and `js/labs.js` (`Labs.shell`, `Labs.table`, `Labs.sorter`, `Labs.fit`) and, for SQL practice, `js/minisql.js` with `css/minisql.css`; the same files are in the Software Engineering repo, so edit them in both. The page's script (`js/pages/<slug>.js`) fills a host such as `<div data-cy="phish" class="lab">`; the host holds a static fallback sentence for when JavaScript is off, so write it as a real summary. Hosts go inside a section, never inside a paragraph, list, table or code block. Write everything shown with `textContent`, keep to the theme tokens (so light and dark both work), use `.lab-*` classes rather than new look-and-feel, keep a tool to a few controls, and check it at 375 px (no sideways scroll; tables use `{ stack: true }`). `MiniSQL` runs only NESA's keywords unless a lab sets `extended: true`.
 - **Quizzes**: `<div class="quiz" data-quiz="<prefix>-<N>">` at the end of each part; questions (about five per part, `{ q, options[4], answer, why }`) in `js/quizzes/<slug>.js`.
 - **Glossary**: add terms via `scripts/glossary_new_terms.py` then `add-glossary-terms.py` → `build-glossary.py` → `site-chrome.py`. `term-enterprise` is in `NO_AUTOLINK` because every mention of "Enterprise Computing" would otherwise link to it.
 - Only touch the files for your task. Shared files (`css/`, `js/main.js`, `scripts/`, `index.html`) change only when the task says so.

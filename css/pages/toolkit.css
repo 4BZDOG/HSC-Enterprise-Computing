@@ -83,17 +83,3 @@
 .tk-tree-rule { padding: .3rem .55rem; border-radius: var(--radius-sm); border: 1px solid transparent; overflow-wrap: anywhere; }
 .tk-tree-rule.is-on { background: var(--lab-warn); color: var(--lab-warn-ink); border-color: var(--lab-warn-line); }
 .tk-tree-rule.is-done { background: var(--lab-good); color: var(--lab-good-ink); border-color: var(--lab-good-line); font-weight: 700; }
-
-/* SQL practice (css rules shared with the data science page) */
-.sql-tables { margin: 0; padding: 0; list-style: none; display: grid; gap: .35rem; font-size: .88rem; }
-.sql-tables u { text-decoration-thickness: 2px; text-underline-offset: 2px; }
-.sql-data { margin-top: .6rem; font-size: .85rem; }
-.sql-data summary { cursor: pointer; font-weight: 600; }
-.sql-data-name { margin: .6rem 0 .2rem; font-weight: 700; font-size: .84rem; }
-.sql-data .lab-table { font-size: .78rem; }
-.sql-task { margin: 0; font-weight: 600; line-height: 1.5; }
-.sql-editor { font-family: var(--font-mono); font-size: .9rem; line-height: 1.55; tab-size: 4; }
-.sql-out { margin-top: .6rem; }
-.sql-result { margin-top: .6rem; }
-.sql-model { margin: .2rem 0 .6rem; }
-.sql-aux .lab-feedback { margin-top: 0; }
