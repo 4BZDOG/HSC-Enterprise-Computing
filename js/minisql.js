@@ -100,7 +100,7 @@
     }
     if (p < tokens.length) {
       const t = tokens[p];
-      fail('Unexpected "' + (t.v !== undefined ? t.v : t.t) + '". ' + (t.u === 'AND' || t.u === 'OR' ? 'Put AND and OR inside the WHERE clause.' : 'Check the order: SELECT, FROM, WHERE, ORDER BY.'));
+      fail('Unexpected "' + (t.v !== undefined ? t.v : t.t) + '". ' + (t.u === 'AND' || t.u === 'OR' ? 'Put AND and OR inside the WHERE clause.' : t.t === 'comma' && where ? 'To combine two conditions, join them with AND or OR instead of a comma.' : t.u === 'LIMIT' ? 'LIMIT is not part of the SQL used in this practice tool.' : 'Check the order: SELECT, FROM, WHERE, ORDER BY.'));
     }
     return { select, from, where, order };
 
@@ -243,7 +243,7 @@
     if (eatKw('LIMIT')) { const t = peek(); if (!t || t.t !== 'num') fail('LIMIT must be followed by a number of rows.'); p++; limit = t.v; }
     if (p < tokens.length) {
       const t = tokens[p];
-      fail('Unexpected "' + (t.v !== undefined ? t.v : t.t) + '". ' + (t.u === 'AND' || t.u === 'OR' ? 'Put AND and OR inside the WHERE clause.' : t.t === 'word' && !XKW.includes(t.u) ? 'Table aliases are not used here; write the table name before a field, for example Games.Name.' : 'Check the order of the clauses: SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY, LIMIT.'));
+      fail('Unexpected "' + (t.v !== undefined ? t.v : t.t) + '". ' + (t.u === 'AND' || t.u === 'OR' ? 'Put AND and OR inside the WHERE clause.' : t.v === ',' && where ? 'To combine two conditions, join them with AND or OR instead of a comma.' : t.t === 'word' && !XKW.includes(t.u) ? 'Table aliases are not used here; write the table name before a field, for example Games.Name.' : 'Check the order of the clauses: SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY, LIMIT.'));
     }
     return { select, tables, where, group, having, order, limit };
 
@@ -310,6 +310,7 @@
     tabs.forEach((a, i) => tabs.forEach((b, j) => { if (j > i && a.key === b.key) fail('The table ' + a.key + ' is used twice. Each table can appear once in a query here.'); }));
     const colName = r => tabs[r.ti].key + '.' + tabs[r.ti].t.cols[r.ci].n;
 
+    let inCond = false;   // true while WHERE and HAVING are prepared, so an unknown name can suggest quotes
     function resolve(f, upto) {
       const hits = [];
       tabs.forEach((tb, ti) => {
@@ -322,7 +323,7 @@
         if (ti < 0) fail('The table ' + f.table + ' is used in the query but is not in FROM or a JOIN.');
         if (ti > upto) fail('This ON condition uses ' + tabs[ti].key + ' before it has been joined. Match the new table with one that is already listed.');
       }
-      if (!hits.length) fail('There is no field called "' + (f.table ? f.table + '.' : '') + f.name + '" in the tables of this query. The fields are: ' + tabs.map(tb => tb.key + ' (' + tb.t.cols.map(c => c.n).join(', ') + ')').join('; ') + '.');
+      if (!hits.length) fail('There is no field called "' + (f.table ? f.table + '.' : '') + f.name + '" in the tables of this query.' + (inCond && !f.table ? ' If ' + f.name + ' is a value to search for, put it in single quotes: \'' + f.name + '\'.' : '') + ' The fields are: ' + tabs.map(tb => tb.key + ' (' + tb.t.cols.map(c => c.n).join(', ') + ')').join('; ') + '.');
       if (hits.length > 1) fail('The field "' + f.name + '" is in more than one table. Write the table name first, for example ' + tabs[hits[0][0]].key + '.' + f.name + '.');
       return { ti: hits[0][0], ci: hits[0][1], type: tabs[hits[0][0]].t.cols[hits[0][1]].type };
     }
@@ -414,7 +415,9 @@
 
     // Prepare the rest of the query
     const last = tabs.length - 1;
+    inCond = true;
     const where = prep(q.where, last, false, null);
+    inCond = false;
     sel = [];
     q.select.forEach(s => {
       if (s.star) {
@@ -441,7 +444,9 @@
     sel.forEach(s => { if (!s.label) { s.e = prep(s.e, last, true, null); s.label = s.alias || (s.e.k === 'field' ? tabs[s.e.r.ti].t.cols[s.e.r.ci].n : show(s.e)); s.type = typeOf(s.e); } });
     const aliases = sel.map(s => s.alias || null);
     const group = q.group.map(g => prep(g, last, false, aliases));
+    inCond = true;
     const having = prep(q.having, last, true, aliases);
+    inCond = false;
     const order = q.order.map(o => ({ e: prep(o.e, last, true, aliases), dir: o.dir }));
     const grouped = group.length > 0 || sel.some(s => hasAgg(s.e)) || hasAgg(having) || order.some(o => hasAgg(o.e));
 
@@ -683,7 +688,7 @@
       if (a.length !== b.length) {
         let msg = 'Your query returned ' + a.length + (a.length === 1 ? ' row' : ' rows') + ', but the expected result has ' + b.length + '. ';
         if (res.from > 1 && a.length > b.length) msg += 'When two tables are listed in FROM, WHERE must match their key fields (for example Table1.Field = Table2.Field), otherwise every row is paired with every row.';
-        else msg += a.length > b.length ? 'Your search criteria are too loose: check the WHERE clause.' : 'Your search criteria are too strict: check the WHERE clause.';
+        else msg += (a.length > b.length ? 'Your search criteria are too loose: check the WHERE clause' : 'Your search criteria are too strict: check the WHERE clause') + (/\bLIMIT\b/i.test(t.answer || '') ? ' and the number after LIMIT.' : '.');
         return ['is-warn', msg];
       }
       const same = a.every((v, i) => v === b[i]);
