@@ -1317,6 +1317,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && !pop.hidden) close(true);
     });
+    // Tabbing away from an open definition closes it, so it never hangs over unrelated content
+    document.addEventListener('focusin', e => {
+      if (!pop.hidden && !pop.contains(e.target) && e.target !== opener) close(false);
+    });
     window.addEventListener('resize', () => { if (opener) place(opener); });
   })();
 
